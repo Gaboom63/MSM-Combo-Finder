@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="favicon.txt" type="image/png">
+    <link rel="icon" type="image/x-icon" href="images/important/mammoticon.png">
+    <title>MSM Combo Finder</title>
+</head>
+<body style="background-image: url(images/backgrounds/My-Singing-Monsters-Live-Background.jpg); background-size: cover;">
+    <div id="blurOverlay"></div> <!-- Blur overlay element -->
+    <div id="blurMessage">Press ESC to go back</div> <!-- Message element -->
+    <div id="iconContainer">
+        <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
+        <div id="textContainer">
+            <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The Github Or Fandom!</div>
+        </div>
+    </div>
+
+    <b><h1 id="title">My Singing Monsters <br> Combo Finder</h1>    </b>
+    <div id="inputContainer">
+        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">First Monster:</label><br>
+        <input id="First_Monster" autocomplete="off"><br><br>
+        
+        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">Second Monster:</label><br>
+        <input id="Second_Monster" autocomplete="off"><br><br>
+        
+        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">Search A Monster:</label><br>
+        <input id="Search_Monster" autocomplete="off"><br><br>
+
+        <button id="breedButton">Breed Or Search</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    
+    <div id="suggestions1" class="suggestions"></div>
+    <div id="suggestions2" class="suggestions"></div>
+    <div id="suggestions3" class="suggestions"></div>
+
+    <div id="resultContainer">
+        <div id="imageContainer">
+            <div id="tabsContainer" class="tabs-container"></div>
+            <!-- Add breedContainer in the center -->
+            <!-- <div id="breedContainer" class="breed-image"></div> -->
+            <!-- This is for the monster image -->
+            <div id="monsterImage" class="monster-image"></div>
+        </div>
+        <div id="statsContainer" style="color: rgb(182, 6, 6);"></div>
+    </div>
+    
+
+    <script src="monster.js"></script>
+</body>
+
+
+
+
+</html>

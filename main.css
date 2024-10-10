@@ -1,0 +1,343 @@
+/* General Styles */
+* {
+    font-family: 'Monster Font';
+}
+
+body {
+    text-align: center;
+    position: relative;
+    background-color: #E9E2D3;
+    color: rgb(33, 35, 146);
+    
+}
+
+/* Font Face */
+@font-face {
+    font-family: 'Monster Font';
+    src: url('CooperFiveOpti-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Title Styles */
+#title {
+    text-align: center;
+    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input Styles */
+#First_Monster, #Second_Monster, #Search_Monster {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+    z-index: 10;
+    background: rgb(255, 109, 109);
+
+}
+
+#Search_Monster:disabled,
+input:disabled {
+    background-color: #d3d3d3;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* Suggestion Box */
+.suggestions {
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    background: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 121;
+    width: 200px;
+}
+
+/* Result Container */
+#resultContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+/* Image and Stats Containers */
+#imageContainer, #statsContainer, .suggestions {
+    flex: 1;
+    text-align: center;
+}
+
+.monster-image {
+    width: 300px;
+    height: auto;
+    margin-right: 10px;
+    position: left;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slide-up 0.5s forwards;
+}
+
+/* Result Text Styles */
+.result-container {
+    position: relative;
+    margin-bottom: 0;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.result-text {
+    position: relative;
+    z-index: 1;
+    padding: 1px;
+    text-align: center;
+}
+
+.black-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
+    z-index: 0;
+    border-radius: 7px;
+    opacity: 0.7;
+}
+
+/* Tab Styles */
+.tabs-container {
+    display: flex;
+    margin-bottom: 10px;
+    position: relative; /* Allows for controlled placement */
+    z-index: 10; /* Ensure it stays on top */
+}
+
+.tab-button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.tab-button:hover {
+    background-color: darkgray;
+}
+
+/* Content Area */
+.content-area {
+    margin-top: 10px;
+}
+
+/* No Monster Styles */
+#noMonster {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    position: absolute; /* Allows for centering in relation to the screen */
+    top: 50%; /* Positions from the top */
+    left: 30%; /* Positions from the left */
+    transform: translate(-50%, -50%); /* Centers the element */
+    text-align: center; /* Centers text inside */
+    max-width: 550px;
+    transform: translateY(100px);
+    animation: slide-up 0.5s forwards;
+}
+
+#noMonsternoslide {
+    max-width: 350px;
+    width: 350px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Keyframes */
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#inputContainer {
+    position: relative; /* Allows for controlled placement */
+    z-index: 10; /* Ensure it stays on top */
+}
+
+#resultContainer {
+    margin-top: 20px; /* Space between input and results */
+}
+
+#breedButton:hover, #resetButton:hover {
+    background-color: lightblue;
+
+}
+
+#iconContainer {
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    left: 10px; /* Adjust as necessary */
+    display: flex;
+    align-items: center;
+}
+
+#icon {
+    width: 50px; /* Adjust the icon size as needed */
+    height: 50px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+
+}
+
+#textContainer {
+    color: red;
+    display: none; /* Initially hide the text container */
+    margin-left: 10px; /* Space between icon and text */
+    padding: 5px;
+    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Position relative for sliding */
+    animation: slideIn 0.5s forwards; /* Animation for sliding in */
+    z-index: 10; /* Ensure the icon and text are above the background */
+    max-width: 300px;
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start as invisible */
+    }
+    to {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1; /* Fade in */
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0); /* Start from its original position */
+        opacity: 1; /* Start visible */
+    }
+    to {
+        transform: translateX(-100%); /* Slide out to the left */
+        opacity: 0; /* Fade out */
+    }
+}
+
+#iconContainer:hover #textContainer {
+    display: block; /* Show the text container when hovering over the icon */
+    animation: slideIn 0.5s forwards; /* Start sliding in animation */
+}
+
+/* Hide the text container when not hovering */
+#iconContainer:not(:hover) #textContainer {
+    display: none; /* Ensure it is hidden when not hovering */
+}
+
+/* Ensure the container slides out smoothly */
+#iconContainer:not(:hover) #textContainer {
+    animation: slideOut 0.5s forwards; /* Slide out animation */
+    display: block; /* Keep it visible during animation */
+}
+
+
+
+/* Fog overlay styles */
+#blurOverlay {
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    display: none; /* Initially hidden */
+    z-index: 100; /* Below the input elements */
+}
+
+/* Fog message styles */
+#blurMessage {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Position from the top */
+    left: 20px; /* Position from the left */
+    color: white; /* Text color */
+    background-color: rgba(80, 80, 80, 0.301); /* Semi-transparent background */
+    padding: 10px; /* Padding for some spacing */
+    border-radius: 5px; /* Rounded corners */
+    display: none; /* Initially hidden */
+    z-index: 122; /* Above other elements */
+    animation: slideIn 0.5s forwards; /* Animation for sliding in */
+
+}
+
+/* Ensure inputContainer, inputs, and buttons are positioned normally */
+#inputContainer,
+input,
+button {
+    position: relative; /* Relative positioning */
+    z-index: 121; /* Higher z-index for input and button */
+}
+
+/* Hide inputs and buttons when fog is active */
+#inputContainer.hidden,
+input.hidden,
+button.hidden {
+    z-index: 120; /* Set to 0 initially */
+    display: none; /* Hide the elements */
+}
+
+/* Ensure the resultContainer and imageContainer are above the fog */
+#resultContainer,
+#imageContainer,
+#statsContainer {
+    z-index: 120; /* Set to 0 initially */
+}
+
+
+/* Hide resultContainer when fog is active */
+#resultContainer.hidden {
+    display: none; /* Hide the result container */
+}
+
+/* Hide blur when fog is not active */
+#blurOverlay.hidden {
+    display: none; /* Hide the blur overlay */
+}
+
+/* Hide blur message when fog is not active */
+#blurMessage.hidden {
+    display: none; /* Hide the blur message */
+}
+
+#suggestions3.hidden {
+    display: none;
+}
+
+.breed-image {
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    position: absolute; /* Allows for centering in relation to the screen */
+    top: 50%; /* Positions from the top */
+    left: 50%; /* Positions from the left */
+    transform: translate(-50%, -50%); /* Centers the element */
+    text-align: center; /* Centers text inside */
+    max-width: 300px;
+  }
+  
+ 
