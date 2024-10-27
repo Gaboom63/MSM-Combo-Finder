@@ -2398,6 +2398,14 @@ const monsters = [
       epic: ""
     }
   },
+  {
+    name: "Gnarls",
+    image: {
+       normal: "images/bm/Gnarls.png",
+      rare: "images/bm/Rare Gnarls.png",
+      epic: "images/bm/Epic Gnarls.png",
+    }
+  }
 ];
 
 const epicBreedingCombinations = {
