@@ -3251,6 +3251,24 @@ const breedingCombinations = {
   "G'day + Floot Fly": ["Enchantling"],
   "Frondley + Clackula": ["Enchantling"],
   "Larvaluss + Fluoress": ["Enchantling"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
+  "Plasma Meeb + Shadow Meeb + Crystal Meeb": ["Meebkin"],
+  "Plasma Meeb + Shadow Meeb + Poison Meeb": ["Blarret"],
+  "Plasma Meeb + Mech Meeb + Crystal Meeb": ["Gaddzooks"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
+  "Plasma Meeb + Mech Meeb + Poison Meeb": ["Auglur"],
+  "Plasma Meeb + Crystal Meeb + Poison Meeb": ["Flasque"],
+  "Shadow Meeb + Mech Meeb + Crystal Meeb": ["Nitebear"],
+  "Shadow Meeb + Mech Meeb + Poison Meeb": ["Piplash"],
+  "Shadow Meeb + Crystal Meeb + Poison Meeb": ["X'rt"],
+  "Mech Meeb + Crystal Meeb + Poison Meeb": ["Teeter-Tauter"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb": ["Whaill"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Poison Meeb": ["Vhenshun"],
+  "Plasma Meeb + Shadow Meeb + Crystal Meeb + Poison Meeb": ["Pentumbra"],
+  "Plasma Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Rhysmuth"],
+  "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["BeMeebEth"],
+
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
