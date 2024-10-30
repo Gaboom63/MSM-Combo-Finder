@@ -509,6 +509,19 @@ const epicmonsters = [
       epic: ""
     }
   },
+    {
+    name: "Epic Shrubb",
+    image: {
+      normal: "images/bm/Epic Shrubb.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
   {
     name: "Epic PomPom",
     image: {
