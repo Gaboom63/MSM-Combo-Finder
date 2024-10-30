@@ -2570,19 +2570,6 @@ const monsters = [
    }
   },
   {
-    name: "Candelavra", 
-    image: {
-      normal: "images/bm/Candelavra.png",
-     rare: "images/bm/Rare Candelavra.png",
-     epic: "images/bm/Epic Candelavra.png",
-   },
-   stats: {
-     normal: "Buy From Shop: 500 Relics ",
-     rare: "Breeding Time: 3 days, 23 hr 30 mins",
-     epic: ""
-   }
-  },
-  {
     name: "Tuskski", 
     image: {
       normal: "images/bm/Tuskski.png",
