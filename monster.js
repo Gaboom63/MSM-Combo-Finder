@@ -2821,7 +2821,6 @@ const breedingCombinations = {
   "Reedling + Kayna": ["Tring"],
   "Floogull + Potbelly": ["Tring"],
   "Barrb + Noggin": ["Tring"],
-  "Repatillo": ["Tring"],
   "Quibble + Boskus": ["Sneyser"],
   "Pango + Phangler": ["Sneyser"],
   "Glowl + Maw": ["Sneyser"],
