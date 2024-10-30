@@ -2424,6 +2424,178 @@ const monsters = [
       epic: ""
     }
   },
+  {
+    name: "Bisonorus", 
+    image: {
+      normal: "images/bm/Bisonorus.png",
+     rare: "images/bm/Rare Bisonorus.png",
+     epic: "images/bm/Epic Bisonorus.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Yelmut", 
+    image: {
+      normal: "images/bm/Bisonorus.png",
+     rare: "images/bm/Rare Bisonorus.png",
+     epic: "images/bm/Epic Bisonorus.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Bisonorus", 
+    image: {
+      normal: "images/bm/Bisonorus.png",
+     rare: "images/bm/Rare Bisonorus.png",
+     epic: "images/bm/Epic Bisonorus.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Bisonorus", 
+    image: {
+      normal: "images/bm/Yelmut.png",
+     rare: "images/bm/Rare Yelmut.png",
+     epic: "images/bm/Epic Yelmut.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Flum Ox", 
+    image: {
+      normal: "images/bm/Flum Ox.png",
+     rare: "images/bm/Rare Flum Ox.png",
+     epic: "images/bm/Epic Flum Ox.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Krillby", 
+    image: {
+      normal: "images/bm/Krillby.png",
+     rare: "images/bm/Rare Krillby.png",
+     epic: "images/bm/Epic Krillby.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+
+
+  {
+    name: "Edamimi", 
+    image: {
+      normal: "images/bm/Edamimi.png",
+     rare: "images/bm/Rare Edamimi.png",
+     epic: "images/bm/Epic Edamimi.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Tiawa", 
+    image: {
+      normal: "images/bm/Tiawa.png",
+     rare: "images/bm/Rare Tiawa.png",
+     epic: "images/bm/Epic Tiawa.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 2 days, 4 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Candelavra", 
+    image: {
+      normal: "images/bm/Candelavra.png",
+     rare: "images/bm/Rare Candelavra.png",
+     epic: "images/bm/Epic Candelavra.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 500 Relics ",
+     rare: "Breeding Time: 3 days, 23 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Drummidary", 
+    image: {
+      normal: "images/bm/Drummidary.png",
+     rare: "images/bm/Rare Drummidary.png",
+     epic: "images/bm/Epic Drummidary.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 500 Relics ",
+     rare: "Breeding Time: 3 days, 23 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Bowhead", 
+    image: {
+      normal: "images/bm/Bowhead.png",
+     rare: "images/bm/Rare Bowhead.png",
+     epic: "images/bm/Epic Bowhead.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 500 Relics ",
+     rare: "Breeding Time: 3 days, 23 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Candelavra", 
+    image: {
+      normal: "images/bm/Candelavra.png",
+     rare: "images/bm/Rare Candelavra.png",
+     epic: "images/bm/Epic Candelavra.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 500 Relics ",
+     rare: "Breeding Time: 3 days, 23 hr 30 mins",
+     epic: ""
+   }
+  },
+  {
+    name: "Tuskski", 
+    image: {
+      normal: "images/bm/Tuskski.png",
+     rare: "images/bm/Rare Tuskski.png",
+     epic: "images/bm/Epic Tuskski.png",
+   },
+   stats: {
+     normal: "Buy From Shop: 300 Relics ",
+     rare: "Breeding Time: 3 days, 23 hr 30 mins",
+     epic: ""
+   }
+  },
+
 ];
 
 const epicBreedingCombinations = {
@@ -2494,7 +2666,7 @@ const epicBreedingCombinations = {
   "Gobbleygourd": [`Tring + Flowah <br> Sneyser + Boskus <br> Jam Boree + Clavavera`],
   "Clavavera": [`Plinkajou + Hallow <br> Viveine + Whiz-bang`],
   "Viveine": [`Shugabush + PomPom <br> Ffidyll + Monculus`],
-  "Jam Boree": [`Enchantling + Roarick <br> Whiz-bang + Monculus`],
+  "Jam Boree": [`Gobbleygourd +  Boo'qwurm`],
   "Whiz-bang": [`Blow't + Bulbo <br> Boo'qwurm + Spurrit`],
   "Monculus": [`Whisp + Humbug <br> Ffidyll + Carillong`],
   "Ffidyll": [`Pladdie + HippityHop <br> Viveine + Spurrit`],
