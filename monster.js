@@ -698,7 +698,7 @@ const monsters = [
     image: {
       normal: "images/bm/Shrubb.png",
       rare: "images/bm/Rare Shrubb.png",
-      epic: "images/bm/Rare Shrubb.png",
+      epic: "images/bm/Epic Shrubb.png",
     },
     stats: {
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
