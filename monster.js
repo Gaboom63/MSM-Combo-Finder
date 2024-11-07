@@ -494,6 +494,19 @@ const raremonsters = [
       epic: ""
     }
   },
+  {
+    name: "Rare Uuduk",
+    image: {
+     normal: "images/bm/Rare Uuduk",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 const epicmonsters = [
   {
@@ -1432,7 +1445,7 @@ const monsters = [
     stats: {
      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: ""
+      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
     }
   },
   {
@@ -2342,7 +2355,7 @@ const monsters = [
     },
     stats: {
      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       epic: ""
     }
   },
