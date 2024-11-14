@@ -4041,6 +4041,44 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+function searchMonsters() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const resultsContainer = document.getElementById('resultsContainer');
+  resultsContainer.innerHTML = '';
+
+  const normalResults = monsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
+  const rareResults = raremonsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
+  const epicResults = epicmonsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
+
+  if (normalResults.length === 0 && rareResults.length === 0 && epicResults.length === 0) {
+    resultsContainer.innerHTML = '<p>No results found.</p>';
+    return;
+  }
+
+  normalResults.forEach(monster => displayMonster(monster, 'normal'));
+  rareResults.forEach(monster => displayMonster(monster, 'rare'));
+  epicResults.forEach(monster => displayMonster(monster, 'epic'));
+}
+
+function displayMonster(monster, type) {
+  const resultsContainer = document.getElementById('resultsContainer');
+  const monsterDiv = document.createElement('div');
+  monsterDiv.className = 'monster-result';
+
+  const name = type === 'normal' ? monster.name : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
+  monsterDiv.innerHTML = `
+    <h3>${name}</h3>
+    <img src="${monster.image.normal}" alt="${name}" />
+    <p>Breeding Time: ${monster.stats.normal}</p>
+  `;
+
+  if (epicBreedingCombinations[name]) {
+    monsterDiv.innerHTML += `<p>Epic Breeding: ${epicBreedingCombinations[name]}</p>`;
+  }
+
+  resultsContainer.appendChild(monsterDiv);
+}
+
 // Call hideBlur on page load to ensure it starts hidden
 hideBlur();
 
