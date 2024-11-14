@@ -507,6 +507,19 @@ const raremonsters = [
       epic: ""
     }
   },
+  {
+    name: "Rare Fiddlement",
+    image: {
+     normal: "images/bm/Rare Fiddlement.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 const epicmonsters = [
   {
@@ -639,6 +652,20 @@ const epicmonsters = [
       epic: ""
     }
   },
+  {
+    name: "Epic Floogull",
+    image: {
+      normal: "images/bm/Epic Floogull.png",
+      reare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: "",
+    }
+  },
+  
 ]
 const monsters = [
   {
