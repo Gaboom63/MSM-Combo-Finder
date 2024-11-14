@@ -4041,6 +4041,7 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+//Searching Epic Monsters 
 function searchMonsters() {
   const searchTerm = document.getElementById('searchInput').value.toLowerCase();
   const resultsContainer = document.getElementById('resultsContainer');
