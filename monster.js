@@ -3362,37 +3362,33 @@ resetButton.addEventListener('click', resetAll);
 // Function to show suggestions
 let currentSuggestions = []; // Array to hold current suggestions
 
-const showSuggestions = (input, suggestionsBox) => {
+function showSuggestions(input, suggestionsBox) {
   const query = input.value.toLowerCase();
-  suggestionsBox.innerHTML = ''; // Clear previous suggestions
-  currentSuggestions = []; // Reset current suggestions
-  if (query) {
-    const filteredSuggestions = suggestionsList.filter(item => item.toLowerCase().includes(query));
-    if (filteredSuggestions.length > 0) {
-      suggestionsBox.style.display = 'block';
-      const rect = input.getBoundingClientRect();
-      suggestionsBox.style.left = `${rect.left}px`;
-      suggestionsBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
+  suggestionsBox.innerHTML = '';
+  suggestionsBox.style.display = 'none';
 
-      filteredSuggestions.forEach(suggestion => {
-        currentSuggestions.push(suggestion); // Store current suggestions
-        const div = document.createElement('div');
-        div.textContent = suggestion;
-        div.classList.add('suggestion-item');
-        div.addEventListener('click', () => {
-          input.value = suggestion;
-          suggestionsBox.innerHTML = '';
-          suggestionsBox.style.display = 'none';
-        });
-        suggestionsBox.appendChild(div);
+  if (query.length < 2) return;
+
+  const allMonsters = [...monsters, ...raremonsters, ...epicmonsters];
+  const matches = allMonsters.filter(monster => 
+    monster.name.toLowerCase().includes(query)
+  );
+
+  if (matches.length > 0) {
+    suggestionsBox.style.display = 'block';
+    matches.forEach(monster => {
+      const div = document.createElement('div');
+      div.textContent = monster.name;
+      div.classList.add('suggestion-item');
+      div.addEventListener('click', () => {
+        input.value = monster.name;
+        suggestionsBox.innerHTML = '';
+        suggestionsBox.style.display = 'none';
       });
-    } else {
-      suggestionsBox.style.display = 'none';
-    }
-  } else {
-    suggestionsBox.style.display = 'none';
+      suggestionsBox.appendChild(div);
+    });
   }
-};
+}
 
 // Add keydown event listener for selecting the first suggestion
 firstMonsterInput.addEventListener('keydown', (event) => {
