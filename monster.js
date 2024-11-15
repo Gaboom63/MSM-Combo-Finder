@@ -3362,33 +3362,37 @@ resetButton.addEventListener('click', resetAll);
 // Function to show suggestions
 let currentSuggestions = []; // Array to hold current suggestions
 
-function showSuggestions(input, suggestionsBox) {
+const showSuggestions = (input, suggestionsBox) => {
   const query = input.value.toLowerCase();
-  suggestionsBox.innerHTML = '';
-  suggestionsBox.style.display = 'none';
+  suggestionsBox.innerHTML = ''; // Clear previous suggestions
+  currentSuggestions = []; // Reset current suggestions
+  if (query) {
+    const filteredSuggestions = suggestionsList.filter(item => item.toLowerCase().includes(query));
+    if (filteredSuggestions.length > 0) {
+      suggestionsBox.style.display = 'block';
+      const rect = input.getBoundingClientRect();
+      suggestionsBox.style.left = `${rect.left}px`;
+      suggestionsBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
 
-  if (query.length < 2) return;
-
-  const allMonsters = [...monsters, ...raremonsters, ...epicmonsters];
-  const matches = allMonsters.filter(monster => 
-    monster.name.toLowerCase().includes(query)
-  );
-
-  if (matches.length > 0) {
-    suggestionsBox.style.display = 'block';
-    matches.forEach(monster => {
-      const div = document.createElement('div');
-      div.textContent = monster.name;
-      div.classList.add('suggestion-item');
-      div.addEventListener('click', () => {
-        input.value = monster.name;
-        suggestionsBox.innerHTML = '';
-        suggestionsBox.style.display = 'none';
+      filteredSuggestions.forEach(suggestion => {
+        currentSuggestions.push(suggestion); // Store current suggestions
+        const div = document.createElement('div');
+        div.textContent = suggestion;
+        div.classList.add('suggestion-item');
+        div.addEventListener('click', () => {
+          input.value = suggestion;
+          suggestionsBox.innerHTML = '';
+          suggestionsBox.style.display = 'none';
+        });
+        suggestionsBox.appendChild(div);
       });
-      suggestionsBox.appendChild(div);
-    });
+    } else {
+      suggestionsBox.style.display = 'none';
+    }
+  } else {
+    suggestionsBox.style.display = 'none';
   }
-}
+};
 
 // Add keydown event listener for selecting the first suggestion
 firstMonsterInput.addEventListener('keydown', (event) => {
@@ -3671,211 +3675,48 @@ function getBreedingCombinationsForMonster(monsterName) {
 breedButton.addEventListener('click', () => {
   const monster1 = firstMonsterInput.value.trim();
   const monster2 = secondMonsterInput.value.trim();
-  const searchMonster = searchMonsterInput.value.trim();
 
-  imageContainer.innerHTML = ''; // Clear previous images
-  statsContainer.innerHTML = ''; // Clear previous stats
+  imageContainer.innerHTML = '';
+  statsContainer.innerHTML = '';
 
-  // Function to insert the breeding image between monster and stats
-  // const insertBreedImage = () => {
-  //   const breedImage = document.createElement('img');
-  //   breedImage.src = 'images/important/Breeder.png'; // Replace with actual image source
-  //   breedImage.alt = 'Breed Image';
-  //   breedImage.classList.add('breed-image'); // Add class for styling
-  //   imageContainer.appendChild(breedImage); // Append it after monster image but before stats
-  // };
-
-  // If Search_Monster has content, look it up
-  if (searchMonster) {
-    const monsterInfo =
-      monsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase()) ||
-      epicmonsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase()) ||
-      raremonsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase());
-
-    if (monsterInfo) {
-      // Display the monster image (default to Normal)
-      const img = document.createElement('img');
-      img.src = monsterInfo.image.normal; // Default image
-      img.alt = searchMonster;
-      img.classList.add('monster-image'); // Add class for styling
-      imageContainer.appendChild(img);
-
-      // Insert the breed image between monster and stats
-      // insertBreedImage();
-
-      // Create tabs for Normal, Rare, and Epic
-      const tabs = ['Normal', 'Rare', 'Epic'];
-      const tabContainer = document.createElement('div');
-      tabContainer.classList.add('tab-container');
-      const tabContentContainer = document.createElement('div');
-      tabContentContainer.classList.add('tab-content-container');
-
-      tabs.forEach((tabName) => {
-        const tab = document.createElement('button');
-        tab.classList.add('tab-button');
-        tab.textContent = tabName;
-
-        // Handle click event for each tab
-        tab.addEventListener('click', () => {
-          tabContentContainer.innerHTML = ''; // Clear previous content
-          statsContainer.innerHTML = ''; // Clear previous stats
-
-          const monsterStats = monsterInfo.stats[tabName.toLowerCase()] || "No stats available"; // Access correct stats
-          img.src = monsterInfo.image[tabName.toLowerCase()] || monsterInfo.image.normal; // Change image based on selected tab
-
-          const resultContainer = document.createElement('div');
-          resultContainer.classList.add('result-container'); // Add class for styling
-
-          const blackBox = document.createElement('div');
-          blackBox.classList.add('black-box'); // Black box for stats
-
-          const resultText = document.createElement('div');
-          resultText.classList.add('result-text'); // Text class
-          resultText.innerHTML = `<h3>${tabName} Version of ${searchMonster}!</h3><p>${monsterStats}</p>`;
-
-          resultContainer.appendChild(blackBox); // Append black box to result container
-          resultContainer.appendChild(resultText); // Append text to result container
-          statsContainer.appendChild(resultContainer); // Append result to statsContainer
-
-          // Find breeding combinations for Normal and Rare
-          let breedingCombinationText = '';
-          if (tabName !== 'Epic') { // For Normal and Rare
-            for (let combo in breedingCombinations) {
-              if (breedingCombinations[combo].includes(searchMonster)) {
-                breedingCombinationText += `<p>${combo}</p>`;
-              }
-            }
-          } else { // For Epic
-            if (epicBreedingCombinations[`${searchMonster}`]) {
-              breedingCombinationText += `<p>${epicBreedingCombinations[`${searchMonster}`].join(', ')}</p>`;
-            }
-          }
-
-          // Add breeding combinations if found
-          if (breedingCombinationText) {
-            resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
-          }
-
-          tabContentContainer.appendChild(img); // Update the content in the tab area
-        });
-
-        tabContainer.appendChild(tab);
-      });
-
-      imageContainer.appendChild(tabContainer);
-      imageContainer.appendChild(tabContentContainer);
-      // Automatically click the first tab (Normal) on page load
-      tabContainer.firstChild.click();
-    } else {
-      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-    }
-    return; // Exit to prevent further processing
-  }
-
-  // If both monster inputs have content, check breeding combinations
   if (monster1 && monster2) {
     const resultingMonsters = getResultingMonsters(monster1, monster2);
 
     if (resultingMonsters.length > 0) {
-      // Multiple results logic
-      if (resultingMonsters.length === 1) {
-        // Single result, no tabs needed
-        const resultingMonsterName = resultingMonsters[0];
-        let monsterInfo =
-          monsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase()) ||
-          epicmonsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase()) ||
-          raremonsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase());
+      resultingMonsters.forEach(resultingMonster => {
+        let monsterInfo;
+        if (Object.keys(epicBreedingCombinations).includes(resultingMonster)) {
+          // It's an epic monster
+          monsterInfo = epicmonsters.find(monster => monster.name === resultingMonster);
+        } else {
+          // It's a normal or rare monster
+          monsterInfo = monsters.find(monster => monster.name === resultingMonster) ||
+                        raremonsters.find(monster => monster.name === resultingMonster);
+        }
 
         if (monsterInfo) {
-          // Display the monster image (not inside the black box)
           const img = document.createElement('img');
-          img.src = monsterInfo.image.normal; // Default image
-          img.alt = resultingMonsterName;
-          img.classList.add('monster-image'); // Add class for styling
+          img.src = monsterInfo.image.normal;
+          img.alt = resultingMonster;
+          img.classList.add('monster-image');
           imageContainer.appendChild(img);
 
-          // Insert the breed image between monster and stats
-          // insertBreedImage();
-
           const resultContainer = document.createElement('div');
-          resultContainer.classList.add('result-container'); // Add class for styling
+          resultContainer.classList.add('result-container');
 
           const blackBox = document.createElement('div');
-          blackBox.classList.add('black-box'); // Class for black box (only for stats)
+          blackBox.classList.add('black-box');
 
           const resultText = document.createElement('div');
-          resultText.classList.add('result-text'); // Class for text
-          resultText.innerHTML = `<h3>You Bred A: <br><h3 id="search_monster_result">${resultingMonsterName}!</h3></h3><p>${monsterInfo.stats.normal}</p>`;
+          resultText.classList.add('result-text');
+          resultText.innerHTML = `<h3>You Bred A: <br><h3 id="search_monster_result">${resultingMonster}!</h3></h3>
+                                  <p>${monsterInfo.stats.normal}</p>`;
 
-          resultContainer.appendChild(blackBox); // Append black box to result container
-          resultContainer.appendChild(resultText); // Append result text to result container
-          statsContainer.appendChild(resultContainer); // Append result container to statsContainer
-        } else {
-          statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+          resultContainer.appendChild(blackBox);
+          resultContainer.appendChild(resultText);
+          statsContainer.appendChild(resultContainer);
         }
-      } else {
-        // Multiple results, create tabs for each result
-        const tabContainer = document.createElement('div');
-        tabContainer.classList.add('tab-container');
-        const tabContentContainer = document.createElement('div');
-        tabContentContainer.classList.add('tab-content-container');
-
-        resultingMonsters.forEach((resultingMonster, index) => {
-          const tab = document.createElement('button');
-          tab.classList.add('tab-button');
-          tab.textContent = resultingMonster;
-
-          tab.addEventListener('click', () => {
-            tabContentContainer.innerHTML = ''; // Clear previous content
-            statsContainer.innerHTML = ''; // Clear previous stats
-
-            let monsterInfo =
-              monsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase()) ||
-              epicmonsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase()) ||
-              raremonsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase());
-
-            if (monsterInfo) {
-              // Display the monster image (not inside the black box)
-              const img = document.createElement('img');
-              img.src = monsterInfo.image.normal; // Default image
-              img.alt = resultingMonster;
-              img.classList.add('monster-image'); // Add class for styling
-              imageContainer.appendChild(img);
-
-              // Insert the breed image between monster and stats
-              insertBreedImage();
-
-              const resultContainer = document.createElement('div');
-              resultContainer.classList.add('result-container'); // Add class for styling
-
-              const blackBox = document.createElement('div');
-              blackBox.classList.add('black-box'); // Class for black box (only for stats)
-
-              const resultText = document.createElement('div');
-              resultText.classList.add('result-text'); // Class for text
-              resultText.innerHTML = `<h3>You Bred A: <br><h3 id="search_monster_result">${resultingMonster}!</h3></h3><p>${monsterInfo.stats.normal}</p>`;
-
-              resultContainer.appendChild(blackBox); // Append black box to result container
-              resultContainer.appendChild(resultText); // Append result text to result container
-              statsContainer.appendChild(resultContainer); // Append result container to statsContainer
-
-              tabContentContainer.appendChild(img); // Update the content in the tab area
-            } else {
-              statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-            }
-          });
-
-          // Set the first tab as active by default
-          if (index === 0) {
-            tab.click();
-          }
-
-          tabContainer.appendChild(tab);
-        });
-
-        imageContainer.appendChild(tabContainer);
-        imageContainer.appendChild(tabContentContainer);
-      }
+      });
     } else {
       statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
     }
