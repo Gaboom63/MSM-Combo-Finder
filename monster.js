@@ -520,6 +520,19 @@ const raremonsters = [
       epic: ""
     }
   },
+   {
+    name: "Rare Clavi Gnat",
+    image: {
+     normal: "images/bm/Rare Clavi Gnat.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 const epicmonsters = [
   {
@@ -2356,7 +2369,7 @@ const monsters = [
     },
     stats: {
      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       epic: ""
     }
   },
