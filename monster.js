@@ -534,6 +534,7 @@ const raremonsters = [
     }
   },
 ]
+
 const epicmonsters = [
   {
     name: "Epic Furcorn",
@@ -3487,84 +3488,8 @@ const searchBreedingCombinations = (monsterName) => {
 };
 
 
-// Function to search for monsters, including epic monsters
-// Function to search for monsters, including epic monsters
-const searchForMonster = (monsterName) => {
-  const monsterInfo = monsters.find(monster => monster.name.toLowerCase() === monsterName.toLowerCase()) ||
-    epicmonsters.find(monster => monster.name.toLowerCase() === monsterName.toLowerCase());
 
-  if (monsterInfo) {
-    // Display the monster image (default based on type)
-    const img = document.createElement('img');
-    img.alt = monsterInfo.name;
-    img.classList.add('monster-image');
-
-    // Set the image based on the rarity
-    if (epicmonsters.includes(monsterInfo)) {
-      img.src = monsterInfo.image.epic; // Use epic image
-      defaultTab = 'Epic'; // Set default tab to Epic
-    } else if (monsterInfo.name.startsWith("Rare ")) {
-      img.src = monsterInfo.image.rare; // Use rare image
-      defaultTab = 'Rare'; // Set default tab to Rare
-    } else {
-      img.src = monsterInfo.image.normal; // Use normal image
-      defaultTab = 'Normal'; // Set default tab to Normal
-    }
-
-    // Clear previous content and append new image
-    imageContainer.innerHTML = '';
-    imageContainer.appendChild(img);
-
-    // Create tabs for Normal, Rare, and Epic
-    const tabs = ['Normal', 'Rare', 'Epic'];
-    const tabContainer = document.createElement('div');
-    tabContainer.classList.add('tab-container');
-    const tabContentContainer = document.createElement('div');
-    tabContentContainer.classList.add('tab-content-container');
-
-    tabs.forEach((tabName) => {
-      const tab = document.createElement('button');
-      tab.classList.add('tab-button');
-      tab.textContent = tabName;
-
-      tab.addEventListener('click', () => {
-        tabContentContainer.innerHTML = ''; // Clear previous content
-        statsContainer.innerHTML = ''; // Clear previous stats
-
-        // Change image and fetch stats based on selected tab
-        img.src = monsterInfo.image[tabName.toLowerCase()] || monsterInfo.image.normal; // Access correct image
-        const monsterStats = monsterInfo.stats[tabName.toLowerCase()] || "No stats available"; // Access correct stats
-
-        const resultContainer = document.createElement('div');
-        resultContainer.classList.add('result-container');
-        const blackBox = document.createElement('div');
-        blackBox.classList.add('black-box');
-        const resultText = document.createElement('div');
-        resultText.classList.add('result-text');
-        resultText.innerHTML = `<h3>${tabName} Version of ${monsterInfo.name}!</h3><p>${monsterStats}</p>`;
-
-        resultContainer.appendChild(blackBox);
-        resultContainer.appendChild(resultText);
-        statsContainer.appendChild(resultContainer);
-        tabContentContainer.appendChild(img); // Update the content in the tab area
-      });
-
-      tabContainer.appendChild(tab); // Add the tab to the tab container
-    });
-
-    imageContainer.appendChild(tabContainer); // Append tabs to image container
-    imageContainer.appendChild(tabContentContainer); // Append content area to image container
-
-    // Automatically click the determined default tab based on the monster's rarity
-    const defaultTabButton = Array.from(tabContainer.children).find(tab => tab.textContent === defaultTab);
-    if (defaultTabButton) {
-      defaultTabButton.click();
-    }
-  } else {
-    statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-  }
-};
-
+//!This is what makes the automatic search work 
 searchMonsterInput.addEventListener('input', () => {
   const query = searchMonsterInput.value.trim();
 
@@ -3680,10 +3605,6 @@ searchMonsterInput.addEventListener('input', () => {
   }
 });
 
-// Function to get the breeding combinations for the current monster
-function getBreedingCombinationsForMonster(monsterName) {
-  return breedingCombinations[monsterName] || null;
-}
 
 breedButton.addEventListener('click', () => {
   const monster1 = firstMonsterInput.value.trim();
@@ -3692,15 +3613,6 @@ breedButton.addEventListener('click', () => {
 
   imageContainer.innerHTML = ''; // Clear previous images
   statsContainer.innerHTML = ''; // Clear previous stats
-
-  // Function to insert the breeding image between monster and stats
-  // const insertBreedImage = () => {
-  //   const breedImage = document.createElement('img');
-  //   breedImage.src = 'images/important/Breeder.png'; // Replace with actual image source
-  //   breedImage.alt = 'Breed Image';
-  //   breedImage.classList.add('breed-image'); // Add class for styling
-  //   imageContainer.appendChild(breedImage); // Append it after monster image but before stats
-  // };
 
   // If Search_Monster has content, look it up
   if (searchMonster) {
@@ -3716,9 +3628,6 @@ breedButton.addEventListener('click', () => {
       img.alt = searchMonster;
       img.classList.add('monster-image'); // Add class for styling
       imageContainer.appendChild(img);
-
-      // Insert the breed image between monster and stats
-      // insertBreedImage();
 
       // Create tabs for Normal, Rare, and Epic
       const tabs = ['Normal', 'Rare', 'Epic'];
@@ -3903,6 +3812,7 @@ breedButton.addEventListener('click', () => {
 
 
 // Function to check breeding combinations
+//!This IS what you have been looking for! :D 
 const getResultingMonsters = (monster1, monster2) => {
   const comboKey = `${monster1} + ${monster2}`;
   const reverseComboKey = `${monster2} + ${monster1}`;
