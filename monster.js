@@ -211,7 +211,7 @@ const raremonsters = [
     {
     name: "Rare Knurv",
     image: {
-     normal: "images/bm/Rare G_jooRare Knurv.png",
+     normal: "images/bm/Rare Knurv.png",
       rare: "",
       epic: "",
     },
