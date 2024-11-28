@@ -13,6 +13,19 @@ const raremonsters = [
       epic: ""
     }
   },
+    {
+    name: "Epic Buzzinga",
+    image: {
+     normal: "images/bm/Epic Buzzinga.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
   {
     name: "Shugavox",
     image: {
