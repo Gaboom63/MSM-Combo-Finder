@@ -208,6 +208,19 @@ const raremonsters = [
       epic: ""
     }
   },
+    {
+    name: "Rare Knurv",
+    image: {
+     normal: "images/bm/Rare G_jooRare Knurv.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
   {
     name: "Rare Strombonin",
     image: {
@@ -657,6 +670,19 @@ const epicmonsters = [
     name: "Epic Yawstrich",
     image: {
      normal: "images/bm/Epic Yawstrich.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+    {
+    name: "Epic Buzzinga",
+    image: {
+     normal: "images/bm/Epic Buzzinga.png",
       rare: "",
       epic: "",
     },
@@ -1655,7 +1681,7 @@ const monsters = [
     stats: {
      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
-      epic: ""
+      epic: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds"
     }
   },
   {
@@ -3218,7 +3244,8 @@ const breedingCombinations = {
   "Cataliszt + Yawstrich": ["Sporerow"],
   "Cataliszt + Anglow": ["Pinghound"],
   "Cataliszt + Hyehehe": ["Wheezel"],
-  "Cataliszt + Buzzinga": ["Knurv"],
+  "Cataliszt + Buzzinga": ["Knurv", "Rare Knurv"],
+  "Tring + Glowl": ["Epic Buzzinga"],
   "Cataliszt + Cherubble": ["shLep"],
   "Bowgart + T-Rox": ["Punkleton", "Rare Punkleton"],
   "Thumpies + Congle": ["Yool", "Rare Yool"],
