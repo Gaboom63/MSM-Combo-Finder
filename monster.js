@@ -13,19 +13,19 @@ const raremonsters = [
       epic: ""
     }
   },
-    {
-    name: "Epic Buzzinga",
-    image: {
-     normal: "images/bm/Epic Buzzinga.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-     normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
-      rare: "",
-      epic: ""
-    }
-  },
+  // {
+  //   name: "Epic Buzzinga",
+  //   image: {
+  //    normal: "images/bm/Epic Buzzinga.png",
+  //     rare: "",
+  //     epic: "",
+  //   },
+  //   stats: {
+  //    normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
+  //     rare: "",
+  //     epic: ""
+  //   }
+  // },
   {
     name: "Shugavox",
     image: {
@@ -661,7 +661,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-     normal: "",
+     normal: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
       rare: "",
       epic: ""
     }
@@ -674,7 +674,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-     normal: "",
+     normal: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
       rare: "",
       epic: ""
     }
@@ -692,6 +692,7 @@ const epicmonsters = [
       epic: ""
     }
   },
+  //!This is where we define the epic monster breading! 
     {
     name: "Epic Buzzinga",
     image: {
@@ -3247,6 +3248,7 @@ const breedingCombinations = {
   "Reebro + Humbug": ["Dragong"],
   "Jeeode + Humbug": ["Fung Pray"],
   "T-Rox + Pummel": ["G'joob", "Rare G'joob"],
+  "Entbrat + Maw": ["Epic G'joob"], //Heres another example of how to define epic monsters 
   "Bowgart + Spunge": ["Strombonin", "Rare Strombonin"],
   "T-Rox + Scups": ["Yawstrich", "Rare Yawstrich"],
   "Scups + Pummel": ["Anglow", "Rare Anglow"],
