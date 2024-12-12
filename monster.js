@@ -546,6 +546,19 @@ const raremonsters = [
       epic: ""
     }
   },
+    {
+    name: "Rare Drummidary",
+    image: {
+     normal: "images/bm/Rare Drummidary.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 
 const epicmonsters = [
@@ -2676,6 +2689,7 @@ const monsters = [
      epic: ""
    }
   },
+  
   {
     name: "Bowhead", 
     image: {
