@@ -13,19 +13,6 @@ const raremonsters = [
       epic: ""
     }
   },
-  // {
-  //   name: "Epic Buzzinga",
-  //   image: {
-  //    normal: "images/bm/Epic Buzzinga.png",
-  //     rare: "",
-  //     epic: "",
-  //   },
-  //   stats: {
-  //    normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
-  //     rare: "",
-  //     epic: ""
-  //   }
-  // },
   {
     name: "Shugavox",
     image: {
@@ -692,9 +679,22 @@ const epicmonsters = [
       epic: ""
     }
   },
+   {
+    name: "Epic Strombonin",
+    image: {
+     normal: "images/bm/Epic Strombonin.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+     normal: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
   //!This is where we define the epic monster breading! 
     {
-    name: "Epic Buzzinga",
+    name: "",
     image: {
      normal: "images/bm/Epic Buzzinga.png",
       rare: "",
@@ -1369,6 +1369,32 @@ const monsters = [
     stats: {
      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 18 hr 30 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
+      epic: ""
+    }
+  },
+  {
+    name: "Hairionette (Major)",
+    image: {
+       normal: "images/bm/Hairionette (Major).png",
+      rare: "images/bm/Rare Hairionette (Major).png",
+      epic: "images/bm/Epic Hairionette (Major).png",
+    },
+    stats: {
+     normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
+      epic: ""
+    }
+  },
+    {
+    name: "Hairionette (Minor)",
+    image: {
+       normal: "images/bm/Hairionette (Minor).png",
+      rare: "images/bm/Rare Hairionette (Minor).png",
+      epic: "images/bm/Epic Hairionette (Minor).png",
+    },
+    stats: {
+     normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
       epic: ""
     }
   },
@@ -3249,6 +3275,10 @@ const breedingCombinations = {
   "Jeeode + Humbug": ["Fung Pray"],
   "T-Rox + Pummel": ["G'joob", "Rare G'joob"],
   "Entbrat + Maw": ["Epic G'joob"], //Heres another example of how to define epic monsters 
+  "Gloptic + Rootitoot": ["Hairionette (Major)"],
+  "Gloptic + Tapricorn": ["Hairionette (Major)"],
+  "Gloptic + Rooba": ["Hairionette (Major)"],
+  "Gloptic + Periscorp": ["Hairionette (Major)"],
   "Bowgart + Spunge": ["Strombonin", "Rare Strombonin"],
   "T-Rox + Scups": ["Yawstrich", "Rare Yawstrich"],
   "Scups + Pummel": ["Anglow", "Rare Anglow"],
@@ -3261,6 +3291,7 @@ const breedingCombinations = {
   "Cataliszt + Hyehehe": ["Wheezel"],
   "Cataliszt + Buzzinga": ["Knurv", "Rare Knurv"],
   "Tring + Glowl": ["Epic Buzzinga"],
+  "Deedge + Furcorn": ["Epic Strombonin"],
   "Cataliszt + Cherubble": ["shLep"],
   "Bowgart + T-Rox": ["Punkleton", "Rare Punkleton"],
   "Thumpies + Congle": ["Yool", "Rare Yool"],
