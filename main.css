@@ -14,7 +14,7 @@ body {
 /* Font Face */
 @font-face {
     font-family: 'Monster Font';
-    src: url('CooperFiveOpti-Black.otf') format('opentype');
+    src: url('OpenDyslexic-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
