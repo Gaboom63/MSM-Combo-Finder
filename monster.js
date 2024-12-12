@@ -549,12 +549,12 @@ const raremonsters = [
     {
     name: "Rare Drummidary",
     image: {
-     normal: "images/bm/Rare Drummidary.png",
+     normal: "images/bm/Rare midary.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+     normal: "Breeding Time: 3 days, 23 hr 30 mins",
       rare: "",
       epic: ""
     }
