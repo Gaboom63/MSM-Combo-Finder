@@ -5,4 +5,4 @@ A easy to use, but packed with information monster breeding tool.  This is still
 <br><br>
 (This will be updated frequently as of right now)
 <br><br>
-As of now it has been updated to include the Feast Ember V2 2024 update! 
+As of now it has been updated to include the Festival Of Yay 2024 update! 
