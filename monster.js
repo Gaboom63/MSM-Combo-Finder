@@ -3810,9 +3810,6 @@ breedButton.addEventListener('click', () => {
           img.classList.add('monster-image'); // Add class for styling
           imageContainer.appendChild(img);
 
-          // Insert the breed image between monster and stats
-          // insertBreedImage();
-
           const resultContainer = document.createElement('div');
           resultContainer.classList.add('result-container'); // Add class for styling
 
@@ -3858,9 +3855,6 @@ breedButton.addEventListener('click', () => {
               img.classList.add('monster-image'); // Add class for styling
               imageContainer.appendChild(img);
 
-              // Insert the breed image between monster and stats
-              insertBreedImage();
-
               const resultContainer = document.createElement('div');
               resultContainer.classList.add('result-container'); // Add class for styling
 
@@ -3899,6 +3893,7 @@ breedButton.addEventListener('click', () => {
     statsContainer.innerHTML = '<img src="images/important/Enterrightmonster.png" id="noMonster">';
   }
 });
+
 
 
 // Function to check breeding combinations
