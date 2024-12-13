@@ -1682,7 +1682,7 @@ const monsters = [
     stats: {
      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
-      epic: ""
+      epic: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>"
     }
   },
   {
@@ -3306,6 +3306,7 @@ const breedingCombinations = {
   "Cataliszt + Buzzinga": ["Knurv", "Rare Knurv"],
   "Tring + Glowl": ["Epic Buzzinga"],
   "Deedge + Furcorn": ["Epic Strombonin"],
+  "Cataliszt + G'joob": ["Epic Strombonin"],
   "Cataliszt + Cherubble": ["shLep"],
   "Bowgart + T-Rox": ["Punkleton", "Rare Punkleton"],
   "Thumpies + Congle": ["Yool", "Rare Yool"],
