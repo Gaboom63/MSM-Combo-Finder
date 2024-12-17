@@ -3,12 +3,12 @@ const raremonsters = [
   {
     name: "Shugarock",
     image: {
-     normal: "images/bm/Shugarock.png",
+      normal: "images/bm/Shugarock.png",
       rare: "images/bm/Rare Shugarock.png",
       epic: "images/bm/Epic Shugarock.png",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -16,12 +16,12 @@ const raremonsters = [
   {
     name: "Shugavox",
     image: {
-     normal: "images/bm/Shugavox.png",
+      normal: "images/bm/Shugavox.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -29,12 +29,12 @@ const raremonsters = [
   {
     name: "Shugabass",
     image: {
-     normal: "images/bm/Shugabass.png",
+      normal: "images/bm/Shugabass.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -42,12 +42,12 @@ const raremonsters = [
   {
     name: "Shugajo",
     image: {
-     normal: "images/bm/Shugajo.png",
+      normal: "images/bm/Shugajo.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -55,12 +55,12 @@ const raremonsters = [
   {
     name: "Shugabeats",
     image: {
-     normal: "images/bm/Shugabeats.png",
+      normal: "images/bm/Shugabeats.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -68,12 +68,12 @@ const raremonsters = [
   {
     name: "Shugitar",
     image: {
-     normal: "images/bm/Shugitar.png",
+      normal: "images/bm/Shugitar.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -81,12 +81,12 @@ const raremonsters = [
   {
     name: "Shugabuzz",
     image: {
-     normal: "images/bm/Shugabuzz.png",
+      normal: "images/bm/Shugabuzz.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
       epic: ""
     }
@@ -94,12 +94,12 @@ const raremonsters = [
   {
     name: "Rare Mammott",
     image: {
-     normal: "images/bm/Rare Mammott.png",
+      normal: "images/bm/Rare Mammott.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -107,12 +107,12 @@ const raremonsters = [
   {
     name: "Rare Deedge",
     image: {
-     normal: "images/bm/Rare Deedge.png",
+      normal: "images/bm/Rare Deedge.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
+      normal: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       rare: "",
       epic: ""
     }
@@ -120,12 +120,12 @@ const raremonsters = [
   {
     name: "Rare Potbelly",
     image: {
-     normal: "images/bm/Rare Potbelly.png",
+      normal: "images/bm/Rare Potbelly.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -133,12 +133,12 @@ const raremonsters = [
   {
     name: "Rare Oaktopus",
     image: {
-     normal: "images/bm/Rare Oaktopus.png",
+      normal: "images/bm/Rare Oaktopus.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -146,12 +146,12 @@ const raremonsters = [
   {
     name: "Rare Viveine",
     image: {
-     normal: "images/bm/Rare Viveine.png",
+      normal: "images/bm/Rare Viveine.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -159,12 +159,12 @@ const raremonsters = [
   {
     name: "Rare Furcorn",
     image: {
-     normal: "images/bm/Rare Furcorn.png",
+      normal: "images/bm/Rare Furcorn.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -172,12 +172,12 @@ const raremonsters = [
   {
     name: "Rare Quibble",
     image: {
-     normal: "images/bm/Rare Quibble.png",
+      normal: "images/bm/Rare Quibble.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -185,12 +185,12 @@ const raremonsters = [
   {
     name: "Rare PomPom",
     image: {
-     normal: "images/bm/Rare PomPom.png",
+      normal: "images/bm/Rare PomPom.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -198,25 +198,25 @@ const raremonsters = [
   {
     name: "Rare G'joob",
     image: {
-     normal: "images/bm/Rare G_joob.png",
+      normal: "images/bm/Rare G_joob.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   },
-    {
+  {
     name: "Rare Knurv",
     image: {
-     normal: "images/bm/Rare Knurv.png",
+      normal: "images/bm/Rare Knurv.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -224,12 +224,12 @@ const raremonsters = [
   {
     name: "Rare Strombonin",
     image: {
-     normal: "images/bm/Rare Strombonin.png",
+      normal: "images/bm/Rare Strombonin.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -237,12 +237,12 @@ const raremonsters = [
   {
     name: "Rare Yawstrich",
     image: {
-     normal: "images/bm/Rare Yawstrich.png",
+      normal: "images/bm/Rare Yawstrich.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -250,12 +250,12 @@ const raremonsters = [
   {
     name: "Rare Anglow",
     image: {
-     normal: "images/bm/Rare Anglow.png",
+      normal: "images/bm/Rare Anglow.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -263,12 +263,12 @@ const raremonsters = [
   {
     name: "Rare Hyehehe",
     image: {
-     normal: "images/bm/Rare Hyehehe.png",
+      normal: "images/bm/Rare Hyehehe.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -276,12 +276,12 @@ const raremonsters = [
   {
     name: "Rare Buzzinga",
     image: {
-     normal: "images/bm/Rare Buzzinga.png",
+      normal: "images/bm/Rare Buzzinga.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -289,12 +289,12 @@ const raremonsters = [
   {
     name: "Rare Cherubble",
     image: {
-     normal: "images/bm/Rare Cherubble.png",
+      normal: "images/bm/Rare Cherubble.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -302,12 +302,12 @@ const raremonsters = [
   {
     name: "Rare Cataliszt",
     image: {
-     normal: "images/bm/Rare Cataliszt.png",
+      normal: "images/bm/Rare Cataliszt.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -315,168 +315,168 @@ const raremonsters = [
   {
     name: "Rare Punkleton",
     image: {
-     normal: "images/bm/Rare Punkleton.png",
+      normal: "images/bm/Rare Punkleton.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Yool",
     image: {
-     normal: "images/bm/Rare Yool.png",
+      normal: "images/bm/Rare Yool.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Schmoochle",
     image: {
-     normal: "images/bm/Rare Schmoochle.png",
+      normal: "images/bm/Rare Schmoochle.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Blabbit",
     image: {
-     normal: "images/bm/Rare Blabbit.png",
+      normal: "images/bm/Rare Blabbit.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Hoola",
     image: {
-     normal: "images/bm/Rare Hoola.png",
+      normal: "images/bm/Rare Hoola.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Viveine",
     image: {
-     normal: "images/bm/Rare Viveine.png",
+      normal: "images/bm/Rare Viveine.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Monculus",
     image: {
-     normal: "images/bm/Rare Monculus.png",
+      normal: "images/bm/Rare Monculus.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Gobbleygourd",
     image: {
-     normal: "images/bm/Rare Gobbleygourd.png",
+      normal: "images/bm/Rare Gobbleygourd.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Spurrit",
     image: {
-     normal: "images/bm/Rare Spurrit.png",
+      normal: "images/bm/Rare Spurrit.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Whiz-bang",
     image: {
-     normal: "images/bm/Rare Whiz-bang.png",
+      normal: "images/bm/Rare Whiz-bang.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Boo'qwurm",
     image: {
-     normal: "images/bm/Rare Boo_qwurm.png",
+      normal: "images/bm/Rare Boo_qwurm.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Ffidyll",
     image: {
-     normal: "images/bm/Rare Ffidyll.png",
+      normal: "images/bm/Rare Ffidyll.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Clavavera",
     image: {
-     normal: "images/bm/Rare Clavavera.png",
+      normal: "images/bm/Rare Clavavera.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   }, {
     name: "Rare Carillong",
     image: {
-     normal: "images/bm/Rare Carillong.png",
+      normal: "images/bm/Rare Carillong.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -484,12 +484,12 @@ const raremonsters = [
   {
     name: "Rare Jam Boree",
     image: {
-     normal: "images/bm/Rare Jam Boree - Year 11.png",
+      normal: "images/bm/Rare Jam Boree - Year 11.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -497,12 +497,12 @@ const raremonsters = [
   {
     name: "Rare Gloptic",
     image: {
-     normal: "images/bm/Rare Gloptic",
+      normal: "images/bm/Rare Gloptic",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -510,12 +510,12 @@ const raremonsters = [
   {
     name: "Rare Uuduk",
     image: {
-     normal: "images/bm/Rare Uuduk",
+      normal: "images/bm/Rare Uuduk",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
@@ -523,38 +523,38 @@ const raremonsters = [
   {
     name: "Rare Fiddlement",
     image: {
-     normal: "images/bm/Rare Fiddlement.png",
+      normal: "images/bm/Rare Fiddlement.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   },
-   {
+  {
     name: "Rare Clavi Gnat",
     image: {
-     normal: "images/bm/Rare Clavi Gnat.png",
+      normal: "images/bm/Rare Clavi Gnat.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "",
       rare: "",
       epic: ""
     }
   },
-    {
+  {
     name: "Rare Drummidary",
     image: {
-     normal: "images/bm/Rare midary.png",
+      normal: "images/bm/Rare midary.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal: "Breeding Time: 3 days, 23 hr 30 mins",
       rare: "",
       epic: ""
     }
@@ -563,66 +563,14 @@ const raremonsters = [
 
 const epicmonsters = [
   {
-    name: "Epic Furcorn",
+    name: "Epic Tweedle",
     image: {
-     normal: "images/bm/Epic Furcorn.png",
+      normal: "images/bm/Epic Tweedle.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-      rare: "",
-      epic: ""
-    }
-  },
-    {
-    name: "Epic Shrubb",
-    image: {
-     normal: "images/bm/Epic Shrubb.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-     normal: "",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Epic PomPom",
-    image: {
-     normal: "images/bm/Epic PomPom.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-     normal: "",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Epic Deedge",
-    image: {
-     normal: "images/bm/Epic Deedge.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-     normal: "",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Epic Mammott",
-    image: {
-     normal: "images/bm/Epic Mammott.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-     normal: "",
+      normal: "Epic Breeding Time: 11 hr, <br> <br> Enhanced Time: 8 hr 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -630,12 +578,129 @@ const epicmonsters = [
   {
     name: "Epic Potbelly",
     image: {
-     normal: "images/bm/Epic Potbelly.png",
+      normal: "images/bm/Epic Potbelly.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Noggin",
+    image: {
+      normal: "images/bm/Epic .png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Toe Jammer",
+    image: {
+      normal: "images/bm/Epic Toe Jammer.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Mammott",
+    image: {
+      normal: "images/bm/Epic Mammott.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>"
+    }
+  },
+  {
+    name: "Epic Kayna",
+    image: {
+      normal: "images/bm/Epic Kayna.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Dandidoo",
+    image: {
+      normal: "images/bm/Epic Dandidoo.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Cybop",
+    image: {
+      normal: "images/bm/Epic Cybop.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Quibble",
+    image: {
+      normal: "images/bm/Epic Quibble.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Pango",
+    image: {
+      normal: "images/bm/Epic Pango.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Shrubb",
+    image: {
+      normal: "images/bm/Epic Shrubb.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -643,78 +708,273 @@ const epicmonsters = [
   {
     name: "Epic Oaktopus",
     image: {
-     normal: "images/bm/Epic Oaktopus.png",
+      normal: "images/bm/Epic Oaktopus.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
       rare: "",
       epic: ""
     }
   },
   {
-    name: "Epic Viveine",
+    name: "Epic Furcorn",
     image: {
-     normal: "images/bm/Epic Viveine.png",
+      normal: "images/bm/Epic Furcorn.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
+      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
       rare: "",
       epic: ""
     }
   },
   {
-    name: "Epic G'joob",
+    name: "Epic Fwog",
     image: {
-     normal: "images/bm/Epic G_joob.png",
+      normal: "images/bm/Epic Fwog.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
+      normal: "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
       rare: "",
       epic: ""
     }
   },
   {
-    name: "Epic Yawstrich",
+    name: "Epic Drumpler",
     image: {
-     normal: "images/bm/Epic Yawstrich.png",
+      normal: "images/bm/Epic Drumpler.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "",
+      normal: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
       rare: "",
       epic: ""
     }
   },
-   {
-    name: "Epic Strombonin",
+  {
+    name: "Epic Maw",
     image: {
-     normal: "images/bm/Epic Strombonin.png",
+      normal: "images/bm/Epic Maw.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
+      normal: "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
       rare: "",
       epic: ""
     }
   },
-  //!This is where we define the epic monster breading! 
-    {
-    name: "",
+  {
+    name: "Epic Glowl",
     image: {
-     normal: "images/bm/Epic Buzzinga.png",
+      normal: "images/bm/Epic Glowl.png",
       rare: "",
       epic: "",
     },
     stats: {
-     normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
+      normal: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Flowah",
+    image: {
+      normal: "images/bm/Epic Flowah.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Stogg",
+    image: {
+      normal: "images/bm/Epic Stogg.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Phangler",
+    image: {
+      normal: "images/bm/Epic .png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Boskus",
+    image: {
+      normal: "images/bm/Epic Boskus.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Reedling",
+    image: {
+      normal: "images/bm/Epic Reedling.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Spunge",
+    image: {
+      normal: "images/bm/Epic Spunge.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Thumpies",
+    image: {
+      normal: "images/bm/Epic Thumpies.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Scups",
+    image: {
+      normal: "images/bm/Epic Scups.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic PomPom",
+    image: {
+      normal: "images/bm/Epic PomPom.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>"
+    }
+  },
+  {
+    name: "Epic Congle",
+    image: {
+      normal: "images/bm/Epic Congle.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Pummel",
+    image: {
+      normal: "images/bm/Epic Pummel.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Clamble",
+    image: {
+      normal: "images/bm/Epic Clamble.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Epic Bowgart",
+    image: {
+      normal: "images/bm/Epic Bowgart.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic T-Rox",
+    image: {
+      normal: "images/bm/Epic T-Rox.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Barrb",
+    image: {
+      normal: "images/bm/Epic Barrb.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
       rare: "",
       epic: ""
     }
@@ -723,27 +983,640 @@ const epicmonsters = [
     name: "Epic Floogull",
     image: {
       normal: "images/bm/Epic Floogull.png",
-      reare: "",
+      rare: "",
       epic: "",
     },
     stats: {
-      normal: "",
+      normal: "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>",
       rare: "",
-      epic: "",
+      epic: ""
     }
   },
-  
+  {
+    name: "Epic Whaddle",
+    image: {
+      normal: "images/bm/Epic Whaddle.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Woolabee",
+    image: {
+      normal: "images/bm/Epic Woolabee.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Repatillo",
+    image: {
+      normal: "images/bm/Epic Repatillo.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Epic Rootitoot",
+    image: {
+      normal: "images/bm/Epic Rootitoot.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Sooza",
+    image: {
+      normal: "images/bm/Epic Sooza.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Thrumble",
+    image: {
+      normal: "images/bm/Epic Thrumble.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Ziggurab",
+    image: {
+      normal: "images/bm/Epic Ziggurab.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wynq",
+    image: {
+      normal: "images/bm/Epic Wynq.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Shellbeat",
+    image: {
+      normal: "images/bm/Epic Shellbeat.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Epic Quarrister",
+    image: {
+      normal: "images/bm/Epic Quarrister.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Deedge",
+    image: {
+      normal: "images/bm/Epic Deedge.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Riff",
+    image: {
+      normal: "images/bm/Epic Riff.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Entbrat",
+    image: {
+      normal: "images/bm/Epic Entbrat.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Tring",
+    image: {
+      normal: "images/bm/Epic Tring.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Sneyser",
+    image: {
+      normal: "images/bm/Epic Sneyser.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Ghazt",
+    image: {
+      normal: "images/bm/Epic Ghazt.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Grumpyre",
+    image: {
+      normal: "images/bm/Epic Grumpyre.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Reebro",
+    image: {
+      normal: "images/bm/Epic Reebro.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Jeeode",
+    image: {
+      normal: "images/bm/Epic Jeeode.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Humbug",
+    image: {
+      normal: "images/bm/Epic Humbug.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Whisp",
+    image: {
+      normal: "images/bm/Epic Whisp.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Nebulob",
+    image: {
+      normal: "images/bm/Epic Nebulob.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Sox",
+    image: {
+      normal: "images/bm/Epic Sox.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Jellbilly",
+    image: {
+      normal: "images/bm/Epic Jellbilly.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Arackulele",
+    image: {
+      normal: "images/bm/Epic Arackulele.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Boodoo",
+    image: {
+      normal: "images/bm/Epic Boodoo.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Kazilleon",
+    image: {
+      normal: "images/bm/Epic Kazilleon.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Bellowfish",
+    image: {
+      normal: "images/bm/Epic Bellowfish.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  }, 
+  {
+    name: "Epic Punkleton",
+    image: {
+      normal: "images/bm/Epic Punkleton.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Yool",
+    image: {
+      normal: "images/bm/Epic Yool.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Schmoochle",
+    image: {
+      normal: "images/bm/Epic Schmoochle.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Blabbit",
+    image: {
+      normal: "images/bm/Epic Blabbit.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Hoola",
+    image: {
+      normal: "images/bm/Epic Hoola.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Gobbleygourd",
+    image: {
+      normal: "images/bm/Epic Gobbleygourd.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Clavavera",
+    image: {
+      normal: "images/bm/Epic Clavavera.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Viveine",
+    image: {
+      normal: "images/bm/Epic Viveine.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Jam Boree",
+    image: {
+      normal: "images/bm/Epic Jam Boree - Year 11.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Carillong",
+    image: {
+      normal: "images/bm/Epic Carillong.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Whiz-bang",
+    image: {
+      normal: "images/bm/Epic Whiz-bang.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Monculus",
+    image: {
+      normal: "images/bm/Epic Monculus.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Ffidyll",
+    image: {
+      normal: "images/bm/Epic Ffidyll.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Boo'qwurm",
+    image: {
+      normal: "images/bm/Epic Boo_qwurm.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Spurrit",
+    image: {
+      normal: "images/bm/Epic Spurrit.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic G'joob",
+    image: {
+      normal: "images/bm/Epic G_joob.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Yawstrich",
+    image: {
+      normal: "images/bm/Epic Yawstrich.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Strombonin",
+    image: {
+      normal: "images/bm/Epic Strombonin.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Buzzinga",
+    image: {
+      normal: "images/bm/Epic Buzzinga.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
+      rare: "",
+      epic: ""
+    }
+  },
+
 ]
 const monsters = [
   {
     name: "Tweedle",
     image: {
-     normal: "images/bm/Tweedle.png",
+      normal: "images/bm/Tweedle.png",
       rare: "images/bm/Rare Tweedle.png",
       epic: "images/bm/Epic Tweedle.png",
     },
     stats: {
-     normal: `Breeding Time: 4 hr <br> Enhanced Time: 3 hr`,
+      normal: `Breeding Time: 4 hr <br> Enhanced Time: 3 hr`,
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 11 hr , <br> <br> Enhanced Time: 8 hr 15 min <br>",
     }
@@ -751,12 +1624,12 @@ const monsters = [
   {
     name: "Potbelly",
     image: {
-     normal: "images/bm/Potbelly.png",
+      normal: "images/bm/Potbelly.png",
       rare: "images/bm/Rare Potbelly.png",
       epic: "images/bm/Epic Potbelly.png",
     },
     stats: {
-     normal: `Breeding Time: 2 hr <br> Enhanced: 1 hr 30 min`,
+      normal: `Breeding Time: 2 hr <br> Enhanced: 1 hr 30 min`,
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
     }
@@ -764,25 +1637,25 @@ const monsters = [
   {
     name: "Noggin",
     image: {
-     normal: "images/bm/Noggin.png",
+      normal: "images/bm/Noggin.png",
       rare: "images/bm/Rare Noggin.png",
       epic: "images/bm/Epic Noggin.png",
     },
     stats: {
-     normal: "Breeding Time: 5 sec <br> Enhanced Time: 3 sec",
+      normal: "Breeding Time: 5 sec <br> Enhanced Time: 3 sec",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
-      epic: "Epic Breeding Time: 1 hr, <br> <br> Enhanced Time: 45 min <br>",
+      epic: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
     }
   },
   {
     name: "Toe Jammer",
     image: {
-     normal: "images/bm/Toe Jammer.png",
+      normal: "images/bm/Toe Jammer.png",
       rare: "images/bm/Rare Toe Jammer.png",
       epic: "images/bm/Epic Toe Jammer.png",
     },
     stats: {
-     normal: "Breeding Time: 1 min <br> Enhanced Time: 45 sec",
+      normal: "Breeding Time: 1 min <br> Enhanced Time: 45 sec",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
     }
@@ -790,12 +1663,12 @@ const monsters = [
   {
     name: "Mammott",
     image: {
-     normal: "images/bm/Mammott.png",
+      normal: "images/bm/Mammott.png",
       rare: "images/bm/Rare Mammott.png",
       epic: "images/bm/Epic Mammott.png",
     },
     stats: {
-     normal: "Breeding Time: 2 min <br> Enhanced Time: 1 min 30 sec ",
+      normal: "Breeding Time: 2 min <br> Enhanced Time: 1 min 30 sec ",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
     }
@@ -803,12 +1676,12 @@ const monsters = [
   {
     name: "Kayna",
     image: {
-     normal: "images/bm/Kayna.png",
+      normal: "images/bm/Kayna.png",
       rare: "images/bm/Rare Kayna.png",
       epic: "images/bm/Epic Kayna.png",
     },
     stats: {
-     normal: "Breeding Time: 7 hr <br> Enhanced Time: 5 hr 15 min, ",
+      normal: "Breeding Time: 7 hr <br> Enhanced Time: 5 hr 15 min, ",
       rare: "Rare Breeding Time: 8 hr , <br> <br> Enhanced Time: 6 hr <br>",
       epic: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
     }
@@ -816,12 +1689,12 @@ const monsters = [
   {
     name: "Shrubb",
     image: {
-     normal: "images/bm/Shrubb.png",
+      normal: "images/bm/Shrubb.png",
       rare: "images/bm/Rare Shrubb.png",
       epic: "images/bm/Epic Shrubb.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
     }
@@ -829,12 +1702,12 @@ const monsters = [
   {
     name: "Oaktopus",
     image: {
-     normal: "images/bm/Oaktopus.png",
+      normal: "images/bm/Oaktopus.png",
       rare: "images/bm/Rare Oaktopus.png",
       epic: "images/bm/Epic Oaktopus.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
     }
@@ -842,12 +1715,12 @@ const monsters = [
   {
     name: "Furcorn",
     image: {
-     normal: "images/bm/Furcorn.png",
+      normal: "images/bm/Furcorn.png",
       rare: "images/bm/Rare Furcorn.png",
       epic: "images/bm/Epic Furcorn.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
     }
@@ -855,12 +1728,12 @@ const monsters = [
   {
     name: "Fwog",
     image: {
-     normal: "images/bm/Fwog.png",
+      normal: "images/bm/Fwog.png",
       rare: "images/bm/Rare Fwog.png",
       epic: "images/bm/Epic Fwog.png",
     },
     stats: {
-     normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min, 30 sec <br>",
+      normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min, 30 sec <br>",
       rare: "Rare Breeding Time: 1 hr 15 min, <br> <br> Enhanced Time: 56 min 15 sec <br>",
       epic: "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
     }
@@ -868,12 +1741,12 @@ const monsters = [
   {
     name: "Drumpler",
     image: {
-     normal: "images/bm/Drumpler.png",
+      normal: "images/bm/Drumpler.png",
       rare: "images/bm/Rare Drumpler.png",
       epic: "images/bm/Epic Drumpler.png",
     },
     stats: {
-     normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min 30 sec <br>",
+      normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 hr 7 min 30 sec, <br> <br> Enhanced Time: 50 min 37 sec <br>",
       epic: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
     }
@@ -881,12 +1754,12 @@ const monsters = [
   {
     name: "Maw",
     image: {
-     normal: "images/bm/Maw.png",
+      normal: "images/bm/Maw.png",
       rare: "images/bm/Rare Maw.png",
       epic: "images/bm/Epic Maw.png",
     },
     stats: {
-     normal: "Breeding Time: 30 min, ",
+      normal: "Breeding Time: 30 min, ",
       rare: "Rare Breeding Time: 1 hr 7 min 30 sec, <br> <br> Enhanced Time: 50 min 37 sec <br>",
       epic: "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
     }
@@ -894,12 +1767,12 @@ const monsters = [
   {
     name: "Dandidoo",
     image: {
-     normal: "images/bm/Dandidoo.png",
+      normal: "images/bm/Dandidoo.png",
       rare: "images/bm/Rare Dandidoo.png",
       epic: "images/bm/Epic Dandidoo.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
     }
@@ -907,12 +1780,12 @@ const monsters = [
   {
     name: "Quibble",
     image: {
-     normal: "images/bm/Quibble.png",
+      normal: "images/bm/Quibble.png",
       rare: "images/bm/Rare Quibble.png",
       epic: "images/bm/Epic Quibble.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
     }
@@ -920,12 +1793,12 @@ const monsters = [
   {
     name: "Pango",
     image: {
-     normal: "images/bm/Pango.png",
+      normal: "images/bm/Pango.png",
       rare: "images/bm/Rare Pango.png",
       epic: "images/bm/Epic Pango.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
     }
@@ -933,12 +1806,12 @@ const monsters = [
   {
     name: "Cybop",
     image: {
-     normal: "images/bm/Cybop.png",
+      normal: "images/bm/Cybop.png",
       rare: "images/bm/Rare Cybop.png",
       epic: "images/bm/Epic Cybop.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
     }
@@ -946,12 +1819,12 @@ const monsters = [
   {
     name: "Glowl",
     image: {
-     normal: "images/bm/Glowl.png",
+      normal: "images/bm/Glowl.png",
       rare: "images/bm/Rare Glowl.png",
       epic: "images/bm/Epic Glowl.png",
     },
     stats: {
-     normal: "Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
+      normal: "Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       rare: "Rare Breeding Time: 13 hr 30 min, <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
     }
@@ -959,12 +1832,12 @@ const monsters = [
   {
     name: "Flowah",
     image: {
-     normal: "images/bm/Flowah.png",
+      normal: "images/bm/Flowah.png",
       rare: "images/bm/Rare Flowah.png",
       epic: "images/bm/Epic Flowah.png",
     },
     stats: {
-     normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
+      normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
     }
@@ -972,12 +1845,12 @@ const monsters = [
   {
     name: "Stogg",
     image: {
-     normal: "images/bm/Stogg.png",
+      normal: "images/bm/Stogg.png",
       rare: "images/bm/Rare Stogg.png",
       epic: "images/bm/Epic Stogg.png",
     },
     stats: {
-     normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
+      normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
     }
@@ -985,12 +1858,12 @@ const monsters = [
   {
     name: "Phangler",
     image: {
-     normal: "images/bm/Phangler.png",
+      normal: "images/bm/Phangler.png",
       rare: "images/bm/Rare Phangler.png",
       epic: "images/bm/Epic Phangler.png",
     },
     stats: {
-     normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
+      normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
     }
@@ -998,12 +1871,12 @@ const monsters = [
   {
     name: "Boskus",
     image: {
-     normal: "images/bm/Boskus.png",
+      normal: "images/bm/Boskus.png",
       rare: "images/bm/Rare Boskus.png",
       epic: "images/bm/Epic Boskus.png",
     },
     stats: {
-     normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
+      normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
     }
@@ -1011,12 +1884,12 @@ const monsters = [
   {
     name: "Pummel",
     image: {
-     normal: "images/bm/Pummel.png",
+      normal: "images/bm/Pummel.png",
       rare: "images/bm/Rare Pummel.png",
       epic: "images/bm/Epic Pummel.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
     }
@@ -1024,12 +1897,12 @@ const monsters = [
   {
     name: "Clamble",
     image: {
-     normal: "images/bm/Clamble.png",
+      normal: "images/bm/Clamble.png",
       rare: "images/bm/Rare Clamble.png",
       epic: "images/bm/Epic Clamble.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
     }
@@ -1037,12 +1910,12 @@ const monsters = [
   {
     name: "Bowgart",
     image: {
-     normal: "images/bm/Bowgart.png",
+      normal: "images/bm/Bowgart.png",
       rare: "images/bm/Rare Bowgart.png",
       epic: "images/bm/Epic Bowgart.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
     }
@@ -1050,12 +1923,12 @@ const monsters = [
   {
     name: "T-Rox",
     image: {
-     normal: "images/bm/T-Rox.png",
+      normal: "images/bm/T-Rox.png",
       rare: "images/bm/Rare T-Rox.png",
       epic: "images/bm/Epic T-Rox.png",
     },
     stats: {
-     normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
+      normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min , <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
     }
@@ -1063,12 +1936,12 @@ const monsters = [
   {
     name: "Entbrat",
     image: {
-     normal: "images/bm/Entbrat.png",
+      normal: "images/bm/Entbrat.png",
       rare: "images/bm/Rare Entbrat.png",
       epic: "images/bm/Epic Entbrat.png",
     },
     stats: {
-     normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
     }
@@ -1076,12 +1949,12 @@ const monsters = [
   {
     name: "Shellbeat",
     image: {
-     normal: "images/bm/Shellbeat.png",
+      normal: "images/bm/Shellbeat.png",
       rare: "images/bm/Rare Shellbeat.png",
       epic: "images/bm/Epic Shellbeat.png",
     },
     stats: {
-     normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
     }
@@ -1089,12 +1962,12 @@ const monsters = [
   {
     name: "Quarrister",
     image: {
-     normal: "images/bm/Quarrister.png",
+      normal: "images/bm/Quarrister.png",
       rare: "images/bm/Rare Quarrister.png",
       epic: "images/bm/Epic Quarrister.png",
     },
     stats: {
-     normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
     }
@@ -1102,12 +1975,12 @@ const monsters = [
   {
     name: "Deedge",
     image: {
-     normal: "images/bm/Deedge.png",
+      normal: "images/bm/Deedge.png",
       rare: "images/bm/Rare Deedge.png",
       epic: "images/bm/Epic Deedge.png",
     },
     stats: {
-     normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
     }
@@ -1115,12 +1988,12 @@ const monsters = [
   {
     name: "Riff",
     image: {
-     normal: "images/bm/Riff.png",
+      normal: "images/bm/Riff.png",
       rare: "images/bm/Rare Riff.png",
       epic: "images/bm/Epic Riff.png",
     },
     stats: {
-     normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
     }
@@ -1128,12 +2001,12 @@ const monsters = [
   {
     name: "Spunge",
     image: {
-     normal: "images/bm/Spunge.png",
+      normal: "images/bm/Spunge.png",
       rare: "images/bm/Rare Spunge.png",
       epic: "images/bm/Epic Spunge.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
     }
@@ -1141,12 +2014,12 @@ const monsters = [
   {
     name: "Thumpies",
     image: {
-     normal: "images/bm/Thumpies.png",
+      normal: "images/bm/Thumpies.png",
       rare: "images/bm/Rare Thumpies.png",
       epic: "images/bm/Epic Thumpies.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
     }
@@ -1154,12 +2027,12 @@ const monsters = [
   {
     name: "Congle",
     image: {
-     normal: "images/bm/Congle.png",
+      normal: "images/bm/Congle.png",
       rare: "images/bm/Rare Congle.png",
       epic: "images/bm/Epic Congle.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
     }
@@ -1167,12 +2040,12 @@ const monsters = [
   {
     name: "Sneyser",
     image: {
-     normal: "images/bm/Sneyser.png",
+      normal: "images/bm/Sneyser.png",
       rare: "images/bm/Rare Sneyser.png",
       epic: "images/bm/Epic Sneyser.png",
     },
     stats: {
-     normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
+      normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
       rare: "Rare Breeding Time: 2 days 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
     }
@@ -1180,12 +2053,12 @@ const monsters = [
   {
     name: "Scups",
     image: {
-     normal: "images/bm/Scups.png",
+      normal: "images/bm/Scups.png",
       rare: "images/bm/Rare Scups.png",
       epic: "images/bm/Epic Scups.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
     }
@@ -1193,12 +2066,12 @@ const monsters = [
   {
     name: "PomPom",
     image: {
-     normal: "images/bm/PomPom.png",
+      normal: "images/bm/PomPom.png",
       rare: "images/bm/Rare PomPom.png",
       epic: "images/bm/Epic PomPom.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min, <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
     }
@@ -1206,12 +2079,12 @@ const monsters = [
   {
     name: "Reedling",
     image: {
-     normal: "images/bm/Reedling.png",
+      normal: "images/bm/Reedling.png",
       rare: "images/bm/Rare Reedling.png",
       epic: "images/bm/Epic Reedling.png",
     },
     stats: {
-     normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
+      normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
     }
@@ -1219,12 +2092,12 @@ const monsters = [
   {
     name: "Tring",
     image: {
-     normal: "images/bm/Tring.png",
+      normal: "images/bm/Tring.png",
       rare: "images/bm/Rare Tring.png",
       epic: "images/bm/Epic Tring.png",
     },
     stats: {
-     normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
+      normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
       rare: "Rare Breeding Time: 2 days 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
     }
@@ -1232,12 +2105,12 @@ const monsters = [
   {
     name: "Barrb",
     image: {
-     normal: "images/bm/Barrb.png",
+      normal: "images/bm/Barrb.png",
       rare: "images/bm/Rare Barrb.png",
       epic: "images/bm/Epic Barrb.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
     }
@@ -1245,12 +2118,12 @@ const monsters = [
   {
     name: "Floogull",
     image: {
-     normal: "images/bm/Floogull.png",
+      normal: "images/bm/Floogull.png",
       rare: "images/bm/Rare Floogull.png",
       epic: "images/bm/Epic Floogull.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>"
     }
@@ -1258,12 +2131,12 @@ const monsters = [
   {
     name: "Repatillo",
     image: {
-     normal: "images/bm/Repatillo.png",
+      normal: "images/bm/Repatillo.png",
       rare: "images/bm/Rare Repatillo.png",
       epic: "images/bm/Epic Repatillo.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
     }
@@ -1271,12 +2144,12 @@ const monsters = [
   {
     name: "Whaddle",
     image: {
-     normal: "images/bm/Whaddle.png",
+      normal: "images/bm/Whaddle.png",
       rare: "images/bm/Rare Whaddle.png",
       epic: "images/bm/Epic Whaddle.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
     }
@@ -1284,12 +2157,12 @@ const monsters = [
   {
     name: "Woolabee",
     image: {
-     normal: "images/bm/Woolabee.png",
+      normal: "images/bm/Woolabee.png",
       rare: "images/bm/Rare Woolabee.png",
       epic: "images/bm/Epic Woolabee.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
     }
@@ -1297,12 +2170,12 @@ const monsters = [
   {
     name: "Wynq",
     image: {
-     normal: "images/bm/Wynq.png",
+      normal: "images/bm/Wynq.png",
       rare: "images/bm/Rare Wynq.png",
       epic: "images/bm/Epic Wynq.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
     }
@@ -1310,12 +2183,12 @@ const monsters = [
   {
     name: "Thrumble",
     image: {
-     normal: "images/bm/Thrumble.png",
+      normal: "images/bm/Thrumble.png",
       rare: "images/bm/Rare Thrumble.png",
       epic: "images/bm/Epic Thrumble.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
     }
@@ -1323,12 +2196,12 @@ const monsters = [
   {
     name: "Rootitoot",
     image: {
-     normal: "images/bm/Rootitoot.png",
+      normal: "images/bm/Rootitoot.png",
       rare: "images/bm/Rare Rootitoot.png",
       epic: "images/bm/Epic Rootitoot.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
     }
@@ -1336,12 +2209,12 @@ const monsters = [
   {
     name: "Sooza",
     image: {
-     normal: "images/bm/Sooza.png",
+      normal: "images/bm/Sooza.png",
       rare: "images/bm/Rare Sooza.png",
       epic: "images/bm/Epic Sooza.png"
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
     }
@@ -1349,12 +2222,12 @@ const monsters = [
   {
     name: "Ziggurab",
     image: {
-     normal: "images/bm/Ziggurab.png",
+      normal: "images/bm/Ziggurab.png",
       rare: "images/bm/Rare Ziggurab.png",
       epic: "images/bm/Epic Ziggurab.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
     }
@@ -1362,12 +2235,12 @@ const monsters = [
   {
     name: "Blow't",
     image: {
-     normal: "images/bm/Blow_t.png",
+      normal: "images/bm/Blow_t.png",
       rare: "images/bm/Rare Blow_t.png",
       epic: "images/bm/Epic Blow_t.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "",
       epic: ""
     }
@@ -1375,12 +2248,12 @@ const monsters = [
   {
     name: "Gloptic",
     image: {
-     normal: "images/bm/Gloptic.png",
+      normal: "images/bm/Gloptic.png",
       rare: "images/bm/Rare Gloptic.png",
       epic: "images/bm/Epic Gloptic.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 18 hr 30 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
       epic: ""
     }
@@ -1388,25 +2261,25 @@ const monsters = [
   {
     name: "Hairionette (Major)",
     image: {
-       normal: "images/bm/Hairionette (Major).png",
+      normal: "images/bm/Hairionette (Major).png",
       rare: "images/bm/Rare Hairionette (Major).png",
       epic: "images/bm/Epic Hairionette (Major).png",
     },
     stats: {
-     normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
       epic: ""
     }
   },
-    {
+  {
     name: "Hairionette (Minor)",
     image: {
-       normal: "images/bm/Hairionette (Minor).png",
+      normal: "images/bm/Hairionette (Minor).png",
       rare: "images/bm/Rare Hairionette (Minor).png",
       epic: "images/bm/Epic Hairionette (Minor).png",
     },
     stats: {
-     normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
       epic: ""
     }
@@ -1414,12 +2287,12 @@ const monsters = [
   {
     name: "Pladdie",
     image: {
-     normal: "images/bm/Pladdie.png",
+      normal: "images/bm/Pladdie.png",
       rare: "images/bm/Rare Pladdie.png",
       epic: "images/bm/Epic Pladdie.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "",
       epic: ""
     }
@@ -1427,12 +2300,12 @@ const monsters = [
   {
     name: "Plinkajou",
     image: {
-     normal: "images/bm/Plinkajou.png",
+      normal: "images/bm/Plinkajou.png",
       rare: "images/bm/Rare Olinkajou.png",
       epic: "images/bm/Epic Plinkajou.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "",
       epic: ""
     }
@@ -1440,12 +2313,12 @@ const monsters = [
   {
     name: "Enchantling",
     image: {
-     normal: "images/bm/Enchantling.png",
+      normal: "images/bm/Enchantling.png",
       rare: "images/bm/Rare Enchantling.png",
       epic: "images/bm/Epic Enchantling.png",
     },
     stats: {
-     normal: "Breeding Time: 50 hr, <br> <br> Enhanced Time: 37 hr 30 min <br>",
+      normal: "Breeding Time: 50 hr, <br> <br> Enhanced Time: 37 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -1453,12 +2326,12 @@ const monsters = [
   {
     name: "Shugabush",
     image: {
-     normal: "images/bm/Shugabush.png",
+      normal: "images/bm/Shugabush.png",
       rare: "images/bm/Rare Shugabush.png",
       epic: "images/bm/Epic Shugabush.png",
     },
     stats: {
-     normal: "Breeding Time: 35 hr, <br> <br> Enhanced Time: 26 hr 15 min <br>",
+      normal: "Breeding Time: 35 hr, <br> <br> Enhanced Time: 26 hr 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -1467,12 +2340,12 @@ const monsters = [
   {
     name: "Ghazt",
     image: {
-     normal: "images/bm/Ghazt.png",
+      normal: "images/bm/Ghazt.png",
       rare: "images/bm/Rare Ghazt.png",
       epic: "images/bm/Epic Ghazt.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
     }
@@ -1480,12 +2353,12 @@ const monsters = [
   {
     name: "Grumpyre",
     image: {
-     normal: "images/bm/Grumpyre.png",
+      normal: "images/bm/Grumpyre.png",
       rare: "images/bm/Rare Grumpyre.png",
       epic: "images/bm/Epic Grumpyre.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
     }
@@ -1493,12 +2366,12 @@ const monsters = [
   {
     name: "Reebro",
     image: {
-     normal: "images/bm/Reebro.png",
+      normal: "images/bm/Reebro.png",
       rare: "images/bm/Rare Reebro.png",
       epic: "images/bm/Epic Reebro.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
     }
@@ -1506,12 +2379,12 @@ const monsters = [
   {
     name: "Jeeode",
     image: {
-     normal: "images/bm/Jeeode.png",
+      normal: "images/bm/Jeeode.png",
       rare: "images/bm/Rare Jeeode.png",
       epic: "images/bm/Epic Jeeode.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
     }
@@ -1519,12 +2392,12 @@ const monsters = [
   {
     name: "Humbug",
     image: {
-     normal: "images/bm/Humbug.png",
+      normal: "images/bm/Humbug.png",
       rare: "images/bm/Rare Humbug.png",
       epic: "images/bm/Epic Humbug.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
     }
@@ -1532,12 +2405,12 @@ const monsters = [
   {
     name: "Whisp",
     image: {
-     normal: "images/bm/Whisp.png",
+      normal: "images/bm/Whisp.png",
       rare: "images/bm/Rare Whisp.png",
       epic: "images/bm/Epic Whisp.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
     }
@@ -1545,12 +2418,12 @@ const monsters = [
   {
     name: "Nebulob",
     image: {
-     normal: "images/bm/Nebulob.png",
+      normal: "images/bm/Nebulob.png",
       rare: "images/bm/Rare Nebulob.png",
       epic: "images/bm/Epic Nebulob.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
     }
@@ -1558,12 +2431,12 @@ const monsters = [
   {
     name: "Arackulele",
     image: {
-     normal: "images/bm/Arackulele.png",
+      normal: "images/bm/Arackulele.png",
       rare: "images/bm/Rare Arackulele.png",
       epic: "images/bm/Epic Arackulele.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
     }
@@ -1571,12 +2444,12 @@ const monsters = [
   {
     name: "Sox",
     image: {
-     normal: "images/bm/Sox.png",
+      normal: "images/bm/Sox.png",
       rare: "images/bm/Rare Sox.png",
       epic: "images/bm/Epic Sox.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
     }
@@ -1584,12 +2457,12 @@ const monsters = [
   {
     name: "Boodoo",
     image: {
-     normal: "images/bm/Boodoo.png",
+      normal: "images/bm/Boodoo.png",
       rare: "images/bm/Rare Boodoo.png",
       epic: "images/bm/Epic Boodoo.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
     }
@@ -1597,12 +2470,12 @@ const monsters = [
   {
     name: "Bellowfish",
     image: {
-     normal: "images/bm/Bellowfish.png",
+      normal: "images/bm/Bellowfish.png",
       rare: "images/bm/Rare Bellowfish.png",
       epic: "images/bm/Epic Bellowfish.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
     }
@@ -1610,12 +2483,12 @@ const monsters = [
   {
     name: "Jellbilly",
     image: {
-     normal: "images/bm/Jellbilly.png",
+      normal: "images/bm/Jellbilly.png",
       rare: "images/bm/Rare Jellbilly.png",
       epic: "images/bm/Epic Jellbilly.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
     }
@@ -1623,12 +2496,12 @@ const monsters = [
   {
     name: "Kazilleon",
     image: {
-     normal: "images/bm/Kazilleon.png",
+      normal: "images/bm/Kazilleon.png",
       rare: "images/bm/Rare Kazilleon.png",
       epic: "images/bm/Epic Kazilleon.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
     }
@@ -1636,12 +2509,12 @@ const monsters = [
   {
     name: "Dragong",
     image: {
-     normal: "images/bm/Dragong.png",
+      normal: "images/bm/Dragong.png",
       rare: "images/bm/Rare Dragong.png",
       epic: "images/bm/Epic Dragong.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: ""
     }
@@ -1649,12 +2522,12 @@ const monsters = [
   {
     name: "Fung Pray",
     image: {
-     normal: "images/bm/Fung Pray.png",
+      normal: "images/bm/Fung Pray.png",
       rare: "images/bm/Rare Fung Pray.png",
       epic: "images/bm/Epic Fung Pray.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: ""
     }
@@ -1662,12 +2535,12 @@ const monsters = [
   {
     name: "G'joob",
     image: {
-     normal: "images/bm/G_joob.png",
+      normal: "images/bm/G_joob.png",
       rare: "images/bm/Rare G_joob.png",
       epic: "images/bm/Epic G_joob.png",
     },
     stats: {
-     normal: "Breeding Time: 18hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
+      normal: "Breeding Time: 18hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
     }
@@ -1675,12 +2548,12 @@ const monsters = [
   {
     name: "Strombonin",
     image: {
-     normal: "images/bm/Strombonin.png",
+      normal: "images/bm/Strombonin.png",
       rare: "images/bm/Rare Strombonin.png",
       epic: "images/bm/Epic Strombonin.png",
     },
     stats: {
-     normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
       epic: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>"
     }
@@ -1688,12 +2561,12 @@ const monsters = [
   {
     name: "Yawstrich",
     image: {
-     normal: "images/bm/Yawstrich.png",
+      normal: "images/bm/Yawstrich.png",
       rare: "images/bm/Rare Yawstrich.png",
       epic: "images/bm/Epic Yawstrich.png",
     },
     stats: {
-     normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
+      normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
       epic: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
     }
@@ -1701,12 +2574,12 @@ const monsters = [
   {
     name: "Anglow",
     image: {
-     normal: "images/bm/Anglow.png",
+      normal: "images/bm/Anglow.png",
       rare: "images/bm/Rare Anglow.png",
       epic: "images/bm/Epic Anglow.png",
     },
     stats: {
-     normal: "Breeding Time: 33 hr, <br> <br> Enhanced Time: 24 hr 45 min <br>",
+      normal: "Breeding Time: 33 hr, <br> <br> Enhanced Time: 24 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 17 hr 15 min, <br> <br> Enhanced Time: 1 day 6 hr 56 min 15 sec <br>",
       epic: ""
     }
@@ -1714,12 +2587,12 @@ const monsters = [
   {
     name: "Hyehehe",
     image: {
-     normal: "images/bm/Hyehehe.png",
+      normal: "images/bm/Hyehehe.png",
       rare: "images/bm/Rare Hyehehe.png",
       epic: "images/bm/Epic Hyehehe.png",
     },
     stats: {
-     normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
+      normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
       epic: ""
     }
@@ -1727,12 +2600,12 @@ const monsters = [
   {
     name: "Buzzinga",
     image: {
-     normal: "images/bm/Buzzinga.png",
+      normal: "images/bm/Buzzinga.png",
       rare: "images/bm/Rare Buzzinga.png",
       epic: "images/bm/Epic Buzzinga.png",
     },
     stats: {
-     normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr <br>",
+      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
       epic: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds"
     }
@@ -1740,12 +2613,12 @@ const monsters = [
   {
     name: "Cherubble",
     image: {
-     normal: "images/bm/Cherubble.png",
+      normal: "images/bm/Cherubble.png",
       rare: "images/bm/Rare Cherubble.png",
       epic: "images/bm/Epic Cherubble.png",
     },
     stats: {
-     normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
+      normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
       epic: ""
     }
@@ -1753,12 +2626,12 @@ const monsters = [
   {
     name: "Cataliszt",
     image: {
-     normal: "images/bm/Cataliszt.png",
+      normal: "images/bm/Cataliszt.png",
       rare: "images/bm/Rare Cataliszt.png",
       epic: "images/bm/Epic Cataliszt.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 11 hr 15 min, <br> <br> Enhanced Time: 8 hr 26 min 15 sec <br>",
       epic: ""
     }
@@ -1766,12 +2639,12 @@ const monsters = [
   {
     name: "Bleatnik",
     image: {
-     normal: "images/bm/Bleatnik.png",
+      normal: "images/bm/Bleatnik.png",
       rare: "images/bm/Rare Bleatnik.png",
       epic: "images/bm/Epic Bleatnik.png",
     },
     stats: {
-     normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -1779,12 +2652,12 @@ const monsters = [
   {
     name: "Cranchee",
     image: {
-     normal: "images/bm/Cranchee.png",
+      normal: "images/bm/Cranchee.png",
       rare: "images/bm/Rare Cranchee.png",
       epic: "images/bm/Epic Cranchee.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "",
       epic: ""
     }
@@ -1792,12 +2665,12 @@ const monsters = [
   {
     name: "Sporerow",
     image: {
-     normal: "images/bm/Sporerow.png",
+      normal: "images/bm/Sporerow.png",
       rare: "images/bm/Rare Sporerow.png",
       epic: "images/bm/Epic Sporerow.png",
     },
     stats: {
-     normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
+      normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -1805,12 +2678,12 @@ const monsters = [
   {
     name: "Pinghound",
     image: {
-     normal: "images/bm/Pinghound.png",
+      normal: "images/bm/Pinghound.png",
       rare: "images/bm/Rare Pinghound.png",
       epic: "images/bm/Epic Pinghound.png",
     },
     stats: {
-     normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -1818,12 +2691,12 @@ const monsters = [
   {
     name: "Wheezel",
     image: {
-     normal: "images/bm/Wheezel.png",
+      normal: "images/bm/Wheezel.png",
       rare: "images/bm/Rare Wheezel.png",
       epic: "images/bm/Epic Wheezel.png",
     },
     stats: {
-     normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
+      normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -1831,12 +2704,12 @@ const monsters = [
   {
     name: "Knurv",
     image: {
-     normal: "images/bm/Knurv.png",
+      normal: "images/bm/Knurv.png",
       rare: "images/bm/Rare Knurv.png",
       epic: "images/bm/Epic Knurv.png",
     },
     stats: {
-     normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
       epic: ""
     }
@@ -1844,12 +2717,12 @@ const monsters = [
   {
     name: "shLep",
     image: {
-     normal: "images/bm/shLep.png",
+      normal: "images/bm/shLep.png",
       rare: "images/bm/Rare shLep.png",
       epic: "images/bm/Epic shLep.png",
     },
     stats: {
-     normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -1857,12 +2730,12 @@ const monsters = [
   {
     name: "Punkleton",
     image: {
-     normal: "images/bm/Punkleton.png",
+      normal: "images/bm/Punkleton.png",
       rare: "images/bm/Rare Punkleton.png",
       epic: "images/bm/Epic Punkleton.png",
     },
     stats: {
-     normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
+      normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
     }
@@ -1870,12 +2743,12 @@ const monsters = [
   {
     name: "Yool",
     image: {
-     normal: "images/bm/Yool.png",
+      normal: "images/bm/Yool.png",
       rare: "images/bm/Rare Yool.png",
       epic: "images/bm/Epic Yool.png",
     },
     stats: {
-     normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 1 day 3 hr <br>",
+      normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 1 day 3 hr <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
     }
@@ -1883,12 +2756,12 @@ const monsters = [
   {
     name: "Schmoochle",
     image: {
-     normal: "images/bm/Schmoochle.png",
+      normal: "images/bm/Schmoochle.png",
       rare: "images/bm/Rare Schmoochle.png",
       epic: "images/bm/Epic Schmoochle.png",
     },
     stats: {
-     normal: "Breeding Time: 31 hr 6 min 30 sec, <br> <br> Enhanced Time: 23 hr 19 min 52 sec <br>",
+      normal: "Breeding Time: 31 hr 6 min 30 sec, <br> <br> Enhanced Time: 23 hr 19 min 52 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
     }
@@ -1896,12 +2769,12 @@ const monsters = [
   {
     name: "Blabbit",
     image: {
-     normal: "images/bm/Blabbit.png",
+      normal: "images/bm/Blabbit.png",
       rare: "images/bm/Rare Blabbit.png",
       epic: "images/bm/Epic Blabbit.png",
     },
     stats: {
-     normal: "Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      normal: "Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
     }
@@ -1909,12 +2782,12 @@ const monsters = [
   {
     name: "Hoola",
     image: {
-     normal: "images/bm/Hoola.png",
+      normal: "images/bm/Hoola.png",
       rare: "images/bm/Rare Hoola.png",
       epic: "images/bm/Epic Hoola.png",
     },
     stats: {
-     normal: "Breeding Time: 25 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      normal: "Breeding Time: 25 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
     }
@@ -1922,12 +2795,12 @@ const monsters = [
   {
     name: "Viveine",
     image: {
-     normal: "images/bm/Viveine.png",
+      normal: "images/bm/Viveine.png",
       rare: "images/bm/Rare Viveine.png",
       epic: "images/bm/Epic Viveine.png",
     },
     stats: {
-     normal: "Breeding Time: 26 hr 5 min 20 sec, <br> <br> Enhanced Time: 19 hr 34 min <br>",
+      normal: "Breeding Time: 26 hr 5 min 20 sec, <br> <br> Enhanced Time: 19 hr 34 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
     }
@@ -1935,12 +2808,12 @@ const monsters = [
   {
     name: "Monculus",
     image: {
-     normal: "images/bm/Monculus.png",
+      normal: "images/bm/Monculus.png",
       rare: "images/bm/Rare Monculus.png",
       epic: "images/bm/Epic Monculus.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr 4 min, <br> <br> Enhanced Time: 15 hr 3 min <br>",
+      normal: "Breeding Time: 20 hr 4 min, <br> <br> Enhanced Time: 15 hr 3 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
     }
@@ -1948,12 +2821,12 @@ const monsters = [
   {
     name: "Gobbleygourd",
     image: {
-     normal: "images/bm/Gobbleygourd.png",
+      normal: "images/bm/Gobbleygourd.png",
       rare: "images/bm/Rare Gobbleygourd.png",
       epic: "images/bm/Epic Gobbleygourd.png",
     },
     stats: {
-     normal: "Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      normal: "Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
     }
@@ -1961,12 +2834,12 @@ const monsters = [
   {
     name: "Spurrit",
     image: {
-     normal: "images/bm/Spurrit.png",
+      normal: "images/bm/Spurrit.png",
       rare: "images/bm/Rare Spurrit.png",
       epic: "images/bm/Epic Spurrit.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr 18 min, <br> <br> Enhanced Time: 15 hr 13 min 30 sec <br>",
+      normal: "Breeding Time: 20 hr 18 min, <br> <br> Enhanced Time: 15 hr 13 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
     }
@@ -1975,12 +2848,12 @@ const monsters = [
   {
     name: "Whiz-bang",
     image: {
-     normal: "images/bm/Whiz-bang.png",
+      normal: "images/bm/Whiz-bang.png",
       rare: "images/bm/Rare Whiz-bang.png",
       epic: "images/bm/Epic Whiz-bang.png",
     },
     stats: {
-     normal: "Breeding Time: 28 hr 6 min, <br> <br> Enhanced Time: 21 hr 4 min 30 sec <br>",
+      normal: "Breeding Time: 28 hr 6 min, <br> <br> Enhanced Time: 21 hr 4 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
     }
@@ -1988,12 +2861,12 @@ const monsters = [
   {
     name: "Boo'qwurm",
     image: {
-     normal: "images/bm/Boo_qwurm.png",
+      normal: "images/bm/Boo_qwurm.png",
       rare: "images/bm/Rare Boo_qwurm.png",
       epic: "images/bm/Epic Boo_qwurm.png",
     },
     stats: {
-     normal: "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
+      normal: "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
     }
@@ -2001,12 +2874,12 @@ const monsters = [
   {
     name: "Ffidyll",
     image: {
-     normal: "images/bm/Ffidyll.png",
+      normal: "images/bm/Ffidyll.png",
       rare: "images/bm/Rare Ffidyll.png",
       epic: "images/bm/Epic Ffidyll.png",
     },
     stats: {
-     normal: "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
+      normal: "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
     }
@@ -2014,12 +2887,12 @@ const monsters = [
   {
     name: "Clavavera",
     image: {
-     normal: "images/bm/Clavavera.png",
+      normal: "images/bm/Clavavera.png",
       rare: "images/bm/Rare Clavavera.png",
       epic: "images/bm/Epic Clavavera.png",
     },
     stats: {
-     normal: "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
+      normal: "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
     }
@@ -2027,12 +2900,12 @@ const monsters = [
   {
     name: "Carillong",
     image: {
-     normal: "images/bm/Carillong.png",
+      normal: "images/bm/Carillong.png",
       rare: "images/bm/Rare Carillong.png",
       epic: "images/bm/Epic Carillong.png",
     },
     stats: {
-     normal: "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
+      normal: "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
     }
@@ -2040,12 +2913,12 @@ const monsters = [
   {
     name: "Jam Boree",
     image: {
-     normal: "images/bm/Jam Boree - Year 11.png",
+      normal: "images/bm/Jam Boree - Year 11.png",
       rare: "images/bm/Rare Jam Boree - Year 11.png",
       epic: "images/bm/Epic Jam Boree - Year 11.png",
     },
     stats: {
-     normal: "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
+      normal: "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
       rare: "Rare Breeding Time: 2 day 2 hr, <br> <br> Enhanced Time: 1 day 13 hr 30 min<br>",
       epic: "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
     }
@@ -2053,12 +2926,12 @@ const monsters = [
   {
     name: "Fluoress",
     image: {
-     normal: "images/bm/Fluoress.png",
+      normal: "images/bm/Fluoress.png",
       rare: "images/bm/Rare Fluoress.png",
       epic: "images/bm/Epic Fluoress.png",
     },
     stats: {
-     normal: "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
+      normal: "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
       rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
       epic: ""
     }
@@ -2066,12 +2939,12 @@ const monsters = [
   {
     name: "Theremind",
     image: {
-     normal: "images/bm/Theremind.png",
+      normal: "images/bm/Theremind.png",
       rare: "images/bm/Rare Theremind.png",
       epic: "images/bm/Epic Theremind.png",
     },
     stats: {
-     normal: "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
+      normal: "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
       rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
       epic: ""
     }
@@ -2079,12 +2952,12 @@ const monsters = [
   {
     name: "Floot Fly",
     image: {
-     normal: "images/bm/Floot Fly.png",
+      normal: "images/bm/Floot Fly.png",
       rare: "images/bm/Rare Floot Fly.png",
       epic: "images/bm/Epic Floot Fly.png",
     },
     stats: {
-     normal: "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
+      normal: "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
       rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
       epic: ""
     }
@@ -2092,12 +2965,12 @@ const monsters = [
   {
     name: "Clackula",
     image: {
-     normal: "images/bm/Clackula.png",
+      normal: "images/bm/Clackula.png",
       rare: "images/bm/Rare Clackula.png",
       epic: "images/bm/Epic Clackula.png",
     },
     stats: {
-     normal: "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
+      normal: "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
       rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
       epic: ""
     }
@@ -2105,12 +2978,12 @@ const monsters = [
   {
     name: "Gob",
     image: {
-     normal: "images/bm/Gob.png",
+      normal: "images/bm/Gob.png",
       rare: "images/bm/Rare Gob.png",
       epic: "images/bm/Epic Gob.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2118,12 +2991,12 @@ const monsters = [
   {
     name: "Bulbo",
     image: {
-     normal: "images/bm/Bulbo.png",
+      normal: "images/bm/Bulbo.png",
       rare: "images/bm/Rare Bulbo.png",
       epic: "images/bm/Epic Bulbo.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -2131,12 +3004,12 @@ const monsters = [
   {
     name: "Pluckbill",
     image: {
-     normal: "images/bm/Pluckbill.png",
+      normal: "images/bm/Pluckbill.png",
       rare: "images/bm/Rare Pluckbill.png",
       epic: "images/bm/Epic Pluckbill.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2144,12 +3017,12 @@ const monsters = [
   {
     name: "Bonkers",
     image: {
-     normal: "images/bm/Bonkers.png",
+      normal: "images/bm/Bonkers.png",
       rare: "images/bm/Rare Bonkers.png",
       epic: "images/bm/Epic Bonkers.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2157,12 +3030,12 @@ const monsters = [
   {
     name: "Poppette",
     image: {
-     normal: "images/bm/Poppette.png",
+      normal: "images/bm/Poppette.png",
       rare: "images/bm/Rare Poppette.png",
       epic: "images/bm/Epic Poppette.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -2170,12 +3043,12 @@ const monsters = [
   {
     name: "Yuggler",
     image: {
-     normal: "images/bm/Yuggler.png",
+      normal: "images/bm/Yuggler.png",
       rare: "images/bm/Rare Yuggler.png",
       epic: "images/bm/Epic Yuggler.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2183,12 +3056,12 @@ const monsters = [
   {
     name: "HippityHop",
     image: {
-     normal: "images/bm/HippityHop.png",
+      normal: "images/bm/HippityHop.png",
       rare: "images/bm/Rare HippityHop.png",
       epic: "images/bm/Epic HippityHop.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2196,12 +3069,12 @@ const monsters = [
   {
     name: "Squot",
     image: {
-     normal: "images/bm/Squot.png",
+      normal: "images/bm/Squot.png",
       rare: "images/bm/Rare Squot.png",
       epic: "images/bm/Epic Squot.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -2209,12 +3082,12 @@ const monsters = [
   {
     name: "Wimmzies",
     image: {
-     normal: "images/bm/Wimmzies.png",
+      normal: "images/bm/Wimmzies.png",
       rare: "images/bm/Rare Wimmzies.png",
       epic: "images/bm/Epic Wimmzies.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2222,12 +3095,12 @@ const monsters = [
   {
     name: "Peckidna",
     image: {
-     normal: "images/bm/Peckidna.png",
+      normal: "images/bm/Peckidna.png",
       rare: "images/bm/Rare Peckidna.png",
       epic: "images/bm/Epic Peckidna.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -2235,12 +3108,12 @@ const monsters = [
   {
     name: "Denchuhs",
     image: {
-     normal: "images/bm/Denchuhs.png",
+      normal: "images/bm/Denchuhs.png",
       rare: "images/bm/Rare Denchuhs.png",
       epic: "images/bm/Epic Denchuhs.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
       epic: ""
     }
@@ -2248,12 +3121,12 @@ const monsters = [
   {
     name: "Hawlo",
     image: {
-     normal: "images/bm/Hawlo.png",
+      normal: "images/bm/Hawlo.png",
       rare: "images/bm/Rare Hawlo.png",
       epic: "images/bm/Epic Hawlo.png",
     },
     stats: {
-     normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
@@ -2261,12 +3134,12 @@ const monsters = [
   {
     name: "Xyster",
     image: {
-     normal: "images/bm/Xyster.png",
+      normal: "images/bm/Xyster.png",
       rare: "images/bm/Rare Xyster.png",
       epic: "images/bm/Epic Xyster.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec<br>",
       epic: ""
     }
@@ -2274,12 +3147,12 @@ const monsters = [
   {
     name: "Cahoot",
     image: {
-     normal: "images/bm/Cahoot.png",
+      normal: "images/bm/Cahoot.png",
       rare: "images/bm/Rare Cahoot.png",
       epic: "images/bm/Epic Cahoot.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "",
       epic: ""
     }
@@ -2287,12 +3160,12 @@ const monsters = [
   {
     name: "Deja-Jin",
     image: {
-     normal: "images/bm/Déjà-Jin.png",
+      normal: "images/bm/Déjà-Jin.png",
       rare: "images/bm/Rare Déjà-Jin.png",
       epic: "images/bm/Epic Déjà-Jin.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "",
       epic: ""
     }
@@ -2300,12 +3173,12 @@ const monsters = [
   {
     name: "Roarick",
     image: {
-     normal: "images/bm/Roarick.png",
+      normal: "images/bm/Roarick.png",
       rare: "images/bm/Rare Roarick.png",
       epic: "images/bm/Epic Roarick.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "",
       epic: ""
     }
@@ -2313,12 +3186,12 @@ const monsters = [
   {
     name: "Osstax",
     image: {
-     normal: "images/bm/Osstax.png",
+      normal: "images/bm/Osstax.png",
       rare: "images/bm/Rare Osstax.png",
       epic: "images/bm/Epic Osstax.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "",
       epic: ""
     }
@@ -2326,12 +3199,12 @@ const monsters = [
   {
     name: "Knucklehead",
     image: {
-     normal: "images/bm/Knucklehead.png",
+      normal: "images/bm/Knucklehead.png",
       rare: "images/bm/Rare Knucklehead.png",
       epic: "images/bm/Epic Knucklehead.png",
     },
     stats: {
-     normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "",
       epic: ""
     }
@@ -2339,12 +3212,12 @@ const monsters = [
   {
     name: "Spytrap",
     image: {
-     normal: "images/bm/Spytrap.png",
+      normal: "images/bm/Spytrap.png",
       rare: "images/bm/Rare Spytrap.png",
       epic: "images/bm/Epic Spytrap.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "",
       epic: ""
     }
@@ -2352,12 +3225,12 @@ const monsters = [
   {
     name: "TooToo",
     image: {
-     normal: "images/bm/TooToo.png",
+      normal: "images/bm/TooToo.png",
       rare: "images/bm/Rare TooToo.png",
       epic: "images/bm/Epic TooToo.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
@@ -2365,12 +3238,12 @@ const monsters = [
   {
     name: "Fiddlement",
     image: {
-     normal: "images/bm/Fiddlement.png",
+      normal: "images/bm/Fiddlement.png",
       rare: "images/bm/Rare Fiddlement.png",
       epic: "images/bm/Epic Fiddlement.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
       rare: "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       epic: ""
     }
@@ -2378,12 +3251,12 @@ const monsters = [
   {
     name: "Tapricorn",
     image: {
-     normal: "images/bm/Tapricorn.png",
+      normal: "images/bm/Tapricorn.png",
       rare: "images/bm/Rare Tapricorn.png",
       epic: "images/bm/Epic Tapricorn.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "",
       epic: ""
     }
@@ -2391,12 +3264,12 @@ const monsters = [
   {
     name: "Rooba",
     image: {
-     normal: "images/bm/Rooba.png",
+      normal: "images/bm/Rooba.png",
       rare: "images/bm/Rare Rooba.png",
       epic: "images/bm/Epic Rooba.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
@@ -2404,12 +3277,12 @@ const monsters = [
   {
     name: "Periscorp",
     image: {
-     normal: "images/bm/Periscorp.png",
+      normal: "images/bm/Periscorp.png",
       rare: "images/bm/Rare Periscorp.png",
       epic: "images/bm/Epic Periscorp.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "",
       epic: ""
     }
@@ -2417,12 +3290,12 @@ const monsters = [
   {
     name: "Cantorell",
     image: {
-     normal: "images/bm/Cantorell.png",
+      normal: "images/bm/Cantorell.png",
       rare: "images/bm/Rare Cantorell.png",
       epic: "images/bm/Epic Cantorell.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "",
       epic: ""
     }
@@ -2430,12 +3303,12 @@ const monsters = [
   {
     name: "Bridg-it",
     image: {
-     normal: "images/bm/Bridg-it.png",
+      normal: "images/bm/Bridg-it.png",
       rare: "images/bm/Rare Bridg-it.png",
       epic: "images/bm/Epic Bridg-it.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
@@ -2443,12 +3316,12 @@ const monsters = [
   {
     name: "Clavi Gnat",
     image: {
-     normal: "images/bm/Clavi Gnat.png",
+      normal: "images/bm/Clavi Gnat.png",
       rare: "images/bm/Rare Clavi Gnat.png",
       epic: "images/bm/Epic Clavi Gnat.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       epic: ""
     }
@@ -2456,12 +3329,12 @@ const monsters = [
   {
     name: "Withur",
     image: {
-     normal: "images/bm/Withur.png",
+      normal: "images/bm/Withur.png",
       rare: "images/bm/Rare Withur.png",
       epic: "images/bm/Epic Withur.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
@@ -2469,12 +3342,12 @@ const monsters = [
   {
     name: "Uuduk",
     image: {
-     normal: "images/bm/Uuduk.png",
+      normal: "images/bm/Uuduk.png",
       rare: "images/bm/Rare Uuduk.png",
       epic: "images/bm/Epic Uuduk.png",
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       epic: ""
     }
@@ -2482,12 +3355,12 @@ const monsters = [
   {
     name: "Banjaw",
     image: {
-     normal: "images/bm/Banjaw.png",
+      normal: "images/bm/Banjaw.png",
       rare: "images/bm/Rare Banjaw.png",
       epic: "images/bm/Epic Banjaw.png"
     },
     stats: {
-     normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
       rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
@@ -2495,12 +3368,12 @@ const monsters = [
   {
     name: "G'day",
     image: {
-     normal: "images/bm/G_day.png",
+      normal: "images/bm/G_day.png",
       rare: "images/bm/Rare G_day.png",
       epic: "images/bm/Epic G_day.png",
     },
     stats: {
-     normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -2508,12 +3381,12 @@ const monsters = [
   {
     name: "Larvaluss",
     image: {
-     normal: "images/bm/Larvaluss.png",
+      normal: "images/bm/Larvaluss.png",
       rare: "images/bm/Rare Larvaluss.png",
       epic: "images/bm/Epic Larvaluss.png",
     },
     stats: {
-     normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -2521,12 +3394,12 @@ const monsters = [
   {
     name: "Frondley",
     image: {
-     normal: "images/bm/Frondley.png",
+      normal: "images/bm/Frondley.png",
       rare: "images/bm/Rare Frondley.png",
       epic: "images/bm/Epic Frondley.png",
     },
     stats: {
-     normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -2534,12 +3407,12 @@ const monsters = [
   {
     name: "Mushaboom",
     image: {
-     normal: "images/bm/Mushaboom.png",
+      normal: "images/bm/Mushaboom.png",
       rare: "images/bm/Rare Mushaboom.png",
       epic: "images/bm/Epic Mushaboom.png",
     },
     stats: {
-     normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
       rare: "",
       epic: ""
     }
@@ -2552,457 +3425,457 @@ const monsters = [
       epic: "images/bm/Epic Gnarls.png",
     },
     stats: {
-     normal: "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
+      normal: "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
       rare: "Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
       epic: ""
     }
   },
   {
-    name: "Bisonorus", 
+    name: "Bisonorus",
     image: {
-     normal: "images/bm/Bisonorus.png",
-     rare: "images/bm/Rare Bisonorus.png",
-     epic: "images/bm/Epic Bisonorus.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Bisonorus.png",
+      rare: "images/bm/Rare Bisonorus.png",
+      epic: "images/bm/Epic Bisonorus.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Yelmut", 
+    name: "Yelmut",
     image: {
-     normal: "images/bm/Bisonorus.png",
-     rare: "images/bm/Rare Bisonorus.png",
-     epic: "images/bm/Epic Bisonorus.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Bisonorus.png",
+      rare: "images/bm/Rare Bisonorus.png",
+      epic: "images/bm/Epic Bisonorus.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Bisonorus", 
+    name: "Bisonorus",
     image: {
-     normal: "images/bm/Bisonorus.png",
-     rare: "images/bm/Rare Bisonorus.png",
-     epic: "images/bm/Epic Bisonorus.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Bisonorus.png",
+      rare: "images/bm/Rare Bisonorus.png",
+      epic: "images/bm/Epic Bisonorus.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Bisonorus", 
+    name: "Bisonorus",
     image: {
-     normal: "images/bm/Yelmut.png",
-     rare: "images/bm/Rare Yelmut.png",
-     epic: "images/bm/Epic Yelmut.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Yelmut.png",
+      rare: "images/bm/Rare Yelmut.png",
+      epic: "images/bm/Epic Yelmut.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Flum Ox", 
+    name: "Flum Ox",
     image: {
-     normal: "images/bm/Flum Ox.png",
-     rare: "images/bm/Rare Flum Ox.png",
-     epic: "images/bm/Epic Flum Ox.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Flum Ox.png",
+      rare: "images/bm/Rare Flum Ox.png",
+      epic: "images/bm/Epic Flum Ox.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Krillby", 
+    name: "Krillby",
     image: {
-     normal: "images/bm/Krillby.png",
-     rare: "images/bm/Rare Krillby.png",
-     epic: "images/bm/Epic Krillby.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Krillby.png",
+      rare: "images/bm/Rare Krillby.png",
+      epic: "images/bm/Epic Krillby.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
 
 
   {
-    name: "Edamimi", 
+    name: "Edamimi",
     image: {
-     normal: "images/bm/Edamimi.png",
-     rare: "images/bm/Rare Edamimi.png",
-     epic: "images/bm/Epic Edamimi.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Edamimi.png",
+      rare: "images/bm/Rare Edamimi.png",
+      epic: "images/bm/Epic Edamimi.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Tiawa", 
+    name: "Tiawa",
     image: {
-     normal: "images/bm/Tiawa.png",
-     rare: "images/bm/Rare Tiawa.png",
-     epic: "images/bm/Epic Tiawa.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 2 days, 4 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Tiawa.png",
+      rare: "images/bm/Rare Tiawa.png",
+      epic: "images/bm/Epic Tiawa.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Candelavra", 
+    name: "Candelavra",
     image: {
-     normal: "images/bm/Candelavra.png",
-     rare: "images/bm/Rare Candelavra.png",
-     epic: "images/bm/Epic Candelavra.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 500 Relics ",
-     rare: "Breeding Time: 3 days, 23 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Candelavra.png",
+      rare: "images/bm/Rare Candelavra.png",
+      epic: "images/bm/Epic Candelavra.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 500 Relics ",
+      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Drummidary", 
+    name: "Drummidary",
     image: {
-     normal: "images/bm/Drummidary.png",
-     rare: "images/bm/Rare Drummidary.png",
-     epic: "images/bm/Epic Drummidary.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 500 Relics ",
-     rare: "Breeding Time: 3 days, 23 hr 30 mins",
-     epic: ""
-   }
-  },
-  
-  {
-    name: "Bowhead", 
-    image: {
-     normal: "images/bm/Bowhead.png",
-     rare: "images/bm/Rare Bowhead.png",
-     epic: "images/bm/Epic Bowhead.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 500 Relics ",
-     rare: "Breeding Time: 3 days, 23 hr 30 mins",
-     epic: ""
-   }
-  },
-  {
-    name: "Tuskski", 
-    image: {
-     normal: "images/bm/Tuskski.png",
-     rare: "images/bm/Rare Tuskski.png",
-     epic: "images/bm/Epic Tuskski.png",
-   },
-   stats: {
-    normal: "Buy From Shop: 300 Relics ",
-     rare: "Breeding Time: 3 days, 23 hr 30 mins",
-     epic: ""
-   }
+      normal: "images/bm/Drummidary.png",
+      rare: "images/bm/Rare Drummidary.png",
+      epic: "images/bm/Epic Drummidary.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 500 Relics ",
+      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      epic: ""
+    }
   },
 
   {
-    name: "Yooreek", 
+    name: "Bowhead",
     image: {
-     normal: "images/bm/Yooreek.png",
-     rare: "images/bm/Rare Yooreek.png",
-     epic: "images/bm/Epic Yooreek.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Bowhead.png",
+      rare: "images/bm/Rare Bowhead.png",
+      epic: "images/bm/Epic Bowhead.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 500 Relics ",
+      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      epic: ""
+    }
   },
   {
-    name: "Meebkin", 
+    name: "Tuskski",
     image: {
-     normal: "images/bm/Meebkin.png",
-     rare: "images/bm/Rare Meebkin.png",
-     epic: "images/bm/Epic Meebkin.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Blarret", 
-    image: {
-     normal: "images/bm/Blarret.png",
-     rare: "images/bm/Rare Blarret.png",
-     epic: "images/bm/Epic Blarret.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Gaddzooks", 
-    image: {
-     normal: "images/bm/Gaddzooks.png",
-     rare: "images/bm/Rare Gaddzooks.png",
-     epic: "images/bm/Epic Gaddzooks.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Auglur", 
-    image: {
-     normal: "images/bm/Auglur.png",
-     rare: "images/bm/Rare Auglur.png",
-     epic: "images/bm/Epic Auglur.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Flasque", 
-    image: {
-     normal: "images/bm/Flasque.png",
-     rare: "images/bm/Rare Auglur.png",
-     epic: "images/bm/Epic Flasque.png",
-   },
-   stats: {
-     normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Nitebear", 
-    image: {
-     normal: "images/bm/Nitebear.png",
-     rare: "images/bm/Rare Nitebear.png",
-     epic: "images/bm/Epic Nitebear.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Piplash", 
-    image: {
-     normal: "images/bm/Piplash.png",
-     rare: "images/bm/Rare Piplash.png",
-     epic: "images/bm/Epic Piplash.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "X'rt", 
-    image: {
-     normal: "images/bm/X_rt.png",
-     rare: "images/bm/Rare X_rt.png",
-     epic: "images/bm/Epic X_rt.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Teeter-Tauter", 
-    image: {
-     normal: "images/bm/Teeter-Tauter.png",
-     rare: "images/bm/Rare Teeter-Tauter.png",
-     epic: "images/bm/Epic Teeter-Tauter.png",
-   },
-   stats: {
-    normal: "Success: 1 day 6 hr Failure: 10 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Whaill", 
-    image: {
-     normal: "images/bm/Whaill.png",
-     rare: "images/bm/Rare Whaill.png",
-     epic: "images/bm/Epic Whaill.png",
-   },
-   stats: {
-    normal: "Success: 1 day 18 hr Failure: 17 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Vhenshun", 
-    image: {
-     normal: "images/bm/Vhenshun.png",
-     rare: "images/bm/Rare Vhenshun.png",
-     epic: "images/bm/Epic Vhenshun.png",
-   },
-   stats: {
-    normal: "Success: 1 day 18 hr Failure: 17 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Pentumbra", 
-    image: {
-     normal: "images/bm/Pentumbra.png",
-     rare: "images/bm/Rare Pentumbra.png",
-     epic: "images/bm/Epic Pentumbra.png",
-   },
-   stats: {
-    normal: "Success: 1 day 18 hr Failure: 17 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Rhysmuth", 
-    image: {
-     normal: "images/bm/Rhysmuth.png",
-     rare: "images/bm/Rare Rhysmuth.png",
-     epic: "images/bm/Epic Rhysmuth.png",
-   },
-   stats: {
-    normal: "Success: 1 day 18 hr Failure: 17 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "Oogiddy", 
-    image: {
-     normal: "images/bm/Oogiddy.png",
-     rare: "images/bm/Rare Oogiddy.png",
-     epic: "images/bm/Epic Oogiddy.png",
-   },
-   stats: {
-    normal: "Success: 1 day 18 hr Failure: 17 hr",
-     rare: "",
-     epic: ""
-   }
-  },
-  {
-    name: "BeMeebEth", 
-    image: {
-     normal: "images/bm/BeMeebEth.png",
-     rare: "images/bm/Rare BeMeebEth.png",
-     epic: "images/bm/Epic BeMeebEth.png",
-   },
-   stats: {
-    normal: "Success: 2 day 7 hr Failure: 22 hr",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Tuskski.png",
+      rare: "images/bm/Rare Tuskski.png",
+      epic: "images/bm/Epic Tuskski.png",
+    },
+    stats: {
+      normal: "Buy From Shop: 300 Relics ",
+      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      epic: ""
+    }
   },
 
   {
-    name: "Meeb", 
+    name: "Yooreek",
     image: {
-     normal: "images/bm/Meeb.png",
-     rare: "images/bm/Rare Meeb.png",
-     epic: "images/bm/Epic Meeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
-  },
-   {
-    name: "Plasma Meeb", 
-    image: {
-     normal: "images/bm/PlasmaMeeb.png",
-     rare: "images/bm/Rare PlasmaMeeb.png",
-     epic: "images/bm/Epic PlasmaMeeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Yooreek.png",
+      rare: "images/bm/Rare Yooreek.png",
+      epic: "images/bm/Epic Yooreek.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
   },
   {
-    name: "Shadow Meeb", 
+    name: "Meebkin",
     image: {
-     normal: "images/bm/ShadowMeeb.png",
-     rare: "images/bm/Rare ShadowMeeb.png",
-     epic: "images/bm/Epic ShadowMeeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Meebkin.png",
+      rare: "images/bm/Rare Meebkin.png",
+      epic: "images/bm/Epic Meebkin.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
   },
   {
-    name: "Crystal Meeb", 
+    name: "Blarret",
     image: {
-     normal: "images/bm/CrystalMeeb.png",
-     rare: "images/bm/Rare CrystalMeeb.png",
-     epic: "images/bm/Epic CrystalMeeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Blarret.png",
+      rare: "images/bm/Rare Blarret.png",
+      epic: "images/bm/Epic Blarret.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
   },
   {
-    name: "Mech Meeb", 
+    name: "Gaddzooks",
     image: {
-     normal: "images/bm/MechMeeb.png",
-     rare: "images/bm/Rare MechMeeb.png",
-     epic: "images/bm/Epic MechMeeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Gaddzooks.png",
+      rare: "images/bm/Rare Gaddzooks.png",
+      epic: "images/bm/Epic Gaddzooks.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
   },
   {
-    name: "Poison Meeb", 
+    name: "Auglur",
     image: {
-     normal: "images/bm/PoisonMeeb.png",
-     rare: "images/bm/Rare PoisonMeeb.png",
-     epic: "images/bm/Epic PoisonMeeb.png",
-   },
-   stats: {
-    normal: "Oh Me? Just Floatin Around",
-     rare: "",
-     epic: ""
-   }
+      normal: "images/bm/Auglur.png",
+      rare: "images/bm/Rare Auglur.png",
+      epic: "images/bm/Epic Auglur.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Flasque",
+    image: {
+      normal: "images/bm/Flasque.png",
+      rare: "images/bm/Rare Auglur.png",
+      epic: "images/bm/Epic Flasque.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Nitebear",
+    image: {
+      normal: "images/bm/Nitebear.png",
+      rare: "images/bm/Rare Nitebear.png",
+      epic: "images/bm/Epic Nitebear.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Piplash",
+    image: {
+      normal: "images/bm/Piplash.png",
+      rare: "images/bm/Rare Piplash.png",
+      epic: "images/bm/Epic Piplash.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "X'rt",
+    image: {
+      normal: "images/bm/X_rt.png",
+      rare: "images/bm/Rare X_rt.png",
+      epic: "images/bm/Epic X_rt.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Teeter-Tauter",
+    image: {
+      normal: "images/bm/Teeter-Tauter.png",
+      rare: "images/bm/Rare Teeter-Tauter.png",
+      epic: "images/bm/Epic Teeter-Tauter.png",
+    },
+    stats: {
+      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Whaill",
+    image: {
+      normal: "images/bm/Whaill.png",
+      rare: "images/bm/Rare Whaill.png",
+      epic: "images/bm/Epic Whaill.png",
+    },
+    stats: {
+      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Vhenshun",
+    image: {
+      normal: "images/bm/Vhenshun.png",
+      rare: "images/bm/Rare Vhenshun.png",
+      epic: "images/bm/Epic Vhenshun.png",
+    },
+    stats: {
+      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Pentumbra",
+    image: {
+      normal: "images/bm/Pentumbra.png",
+      rare: "images/bm/Rare Pentumbra.png",
+      epic: "images/bm/Epic Pentumbra.png",
+    },
+    stats: {
+      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rhysmuth",
+    image: {
+      normal: "images/bm/Rhysmuth.png",
+      rare: "images/bm/Rare Rhysmuth.png",
+      epic: "images/bm/Epic Rhysmuth.png",
+    },
+    stats: {
+      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Oogiddy",
+    image: {
+      normal: "images/bm/Oogiddy.png",
+      rare: "images/bm/Rare Oogiddy.png",
+      epic: "images/bm/Epic Oogiddy.png",
+    },
+    stats: {
+      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "BeMeebEth",
+    image: {
+      normal: "images/bm/BeMeebEth.png",
+      rare: "images/bm/Rare BeMeebEth.png",
+      epic: "images/bm/Epic BeMeebEth.png",
+    },
+    stats: {
+      normal: "Success: 2 day 7 hr Failure: 22 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Meeb",
+    image: {
+      normal: "images/bm/Meeb.png",
+      rare: "images/bm/Rare Meeb.png",
+      epic: "images/bm/Epic Meeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Plasma Meeb",
+    image: {
+      normal: "images/bm/PlasmaMeeb.png",
+      rare: "images/bm/Rare PlasmaMeeb.png",
+      epic: "images/bm/Epic PlasmaMeeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Shadow Meeb",
+    image: {
+      normal: "images/bm/ShadowMeeb.png",
+      rare: "images/bm/Rare ShadowMeeb.png",
+      epic: "images/bm/Epic ShadowMeeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Crystal Meeb",
+    image: {
+      normal: "images/bm/CrystalMeeb.png",
+      rare: "images/bm/Rare CrystalMeeb.png",
+      epic: "images/bm/Epic CrystalMeeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Mech Meeb",
+    image: {
+      normal: "images/bm/MechMeeb.png",
+      rare: "images/bm/Rare MechMeeb.png",
+      epic: "images/bm/Epic MechMeeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Poison Meeb",
+    image: {
+      normal: "images/bm/PoisonMeeb.png",
+      rare: "images/bm/Rare PoisonMeeb.png",
+      epic: "images/bm/Epic PoisonMeeb.png",
+    },
+    stats: {
+      normal: "Oh Me? Just Floatin Around",
+      rare: "",
+      epic: ""
+    }
   },
 ];
 
@@ -3084,7 +3957,7 @@ const epicBreedingCombinations = {
   "Yawstrich": [`Riff + Fwog <br> Cataliszt + Strombonin`],
   "Floogull": [`Reedling + Glowl`],
   "Strombonin": [`Deedge + Furcorn <br> Cataliszt + G'joob`],
-  
+
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
@@ -3290,7 +4163,6 @@ const breedingCombinations = {
   "Reebro + Humbug": ["Dragong"],
   "Jeeode + Humbug": ["Fung Pray"],
   "T-Rox + Pummel": ["G'joob", "Rare G'joob"],
-  "Entbrat + Maw": ["Epic G'joob"], //Heres another example of how to define epic monsters 
   "Gloptic + Rootitoot": ["Hairionette (Major)"],
   "Gloptic + Tapricorn": ["Hairionette (Major)"],
   "Gloptic + Rooba": ["Hairionette (Major)"],
@@ -3300,15 +4172,12 @@ const breedingCombinations = {
   "Scups + Pummel": ["Anglow", "Rare Anglow"],
   "Thumpies + PomPom": ["Hyehehe", "Rare Hyehehe"],
   "Congle + Woolabee": ["Cherubble", "Rare Cherubble"],
-  "Cataliszt + G'joob": ["Bleatnik"],
-  "Cataliszt + Strombonin": ["Cranchee"],
-  "Cataliszt + Yawstrich": ["Sporerow"],
-  "Cataliszt + Anglow": ["Pinghound"],
+  "Cataliszt + G'joob": ["Bleatnik","Epic Strombonin"],
+  "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
+  "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob"],
+  "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
   "Cataliszt + Hyehehe": ["Wheezel"],
   "Cataliszt + Buzzinga": ["Knurv", "Rare Knurv"],
-  "Tring + Glowl": ["Epic Buzzinga"],
-  "Deedge + Furcorn": ["Epic Strombonin"],
-  "Cataliszt + G'joob": ["Epic Strombonin"],
   "Cataliszt + Cherubble": ["shLep"],
   "Bowgart + T-Rox": ["Punkleton", "Rare Punkleton"],
   "Thumpies + Congle": ["Yool", "Rare Yool"],
@@ -3413,6 +4282,202 @@ const breedingCombinations = {
   "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
   "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["BeMeebEth"],
 
+
+
+  //Epic Breeding Combos! 
+  "Entbrat + Maw": ["Epic G'joob"], //Heres the main method to breed epic monsters in the two boxes
+  "Deedge + Dandidoo": ["Epic Tweedle"],
+  "Riff + Cybop": ["Epic Tweedle"],
+  "Shellbeat + Quibble": ["Epic Tweedle"],
+  "Quarrister + Pango": ["Epic Tweedle"],
+  "Tring + Shrubb": ["Epic Tweedle"],
+  "Sneyser + Maw": ["Epic Tweedle"],
+  "Entbrat + Shrubb": ["Epic Potbelly"],
+  "Deedge + Oaktopus": ["Epic Potbelly"],
+  "Shellbeat + Dandidoo": ["Epic Potbelly"],
+  "Quarrister + Furcorn": ["Epic Potbelly"],
+  "Tring + Cybop": ["Epic Potbelly"],
+  "Blow't + Boskus": ["Epic Potbelly"],
+  "Gloptic + Phangler": ["Epic Potbelly"],
+  "Shugabush + Furcorn": ["Epic Potbelly"],
+  "Entbrat + Fwog": ["Epic Noggin"],
+  "Riff + Drumpler": ["Epic Noggin"],
+  "Shellbeat + Shrubb": ["Epic Noggin"],
+  "Quarrister + Cybop": ["Epic Noggin"],
+  "Tring + Dandidoo": ["Epic Noggin"],
+  "Pladdie + Boskus": ["Epic Noggin"],
+  "Plinkajou + Phangler": ["Epic Noggin"],
+  "Entbrat + Oaktopus": ["Epic Toe Jammer"],
+  "Deedge + Quibble": ["Epic Toe Jammer"],
+  "Riff + Maw": ["Epic Toe Jammer"],
+  "Shellbeat + Fwog": ["Epic Toe Jammer"],
+  "Sneyser + Pango": ["Epic Toe Jammer"],
+  "Gloptic + Flowah": ["Epic Toe Jammer"],
+  "Plinkajou + Stogg": ["Epic Toe Jammer"],
+  "Entbrat + Furcorn": ["Epic Mammott"],
+  "Deedge + Maw": ["Epic Mammott"],
+  "Riff + Pango": ["Epic Mammott"],
+  "Quarrister + Drumpler": ["Epic Mammott"],
+  "Sneyser + Quibble": ["Epic Mammott"],
+  "Blow't + Flowah": ["Epic Mammott"],
+  "Pladdie + Stogg": ["Epic Mammott"],
+  "Shugabush + Oaktopus": ["Epic Mammott"],
+  "Tring + Stogg": ["Epic Kayna"],
+  "Sneyser + Phangler": ["Epic Kayna"],
+  "Blow't + Furcorn": ["Epic Kayna"],
+  "Gloptic + Oaktopus": ["Epic Kayna"],
+  "Pladdie + Drumpler": ["Epic Kayna"],
+  "Plinkajou + Fwog": ["Epic Kayna"],
+  "Bowgart + Quibble": ["Epic Dandidoo"],
+  "Pummel + Cybop": ["Epic Dandidoo"],
+  "Clamble + Pango": ["Epic Dandidoo"],
+  "Reedling + Flowah": ["Epic Dandidoo"],
+  "Congle + Drumpler": ["Epic Cybop"],
+  "Scups + Dandidoo": ["Epic Cybop"],
+  "PomPom + Shrubb": ["Epic Cybop"],
+  "Reedling + Stogg": ["Epic Cybop"],
+  "Congle + Dandidoo": ["Epic Quibble"],
+  "Scups + Maw": ["Epic Quibble"],
+  "Spunge + Shrubb": ["Epic Quibble"],
+  "Wynq + Pango": ["Epic Quibble"],
+  "Shugabush + PomPom": ["Epic Quibble"],
+  "Thumpie + Oaktopus": ["Epic Pango"],
+  "Congle + Cybop": ["Epic Pango"],
+  "Reedling + Furcorn": ["Epic Pango"],
+  "Whaddle + Maw": ["Epic Pango"],
+  "T-Rox + Oaktopus": ["Epic Shrubb"],
+  "Reedling + Quibble": ["Epic Shrubb"],
+  "PomPom + Dandidoo": ["Epic Shrubb"],
+  "Barrb + Cybop": ["Epic Shrubb"],
+  "Bowgart + Shrubb": ["Epic Oaktopus"],
+  "Spunge + Pango": ["Epic Oaktopus"],
+  "Reedling + Fwog": ["Epic Oaktopus"],
+  "Rootitoot + Bonkers": ["Epic Oaktopus"],
+  "Shugabush + Quibble": ["Epic Oaktopus"],
+  "Clamble + Fwog": ["Epic Furcorn"],
+  "Spunge + Maw": ["Epic Furcorn"],
+  "Thumpies + Drumpler": ["Epic Furcorn"],
+  "Sooza + Pluckbill": ["Epic Furcorn"],
+  // "Shugabush + Deedge": ["Epic Furcorn"], Here but commented out bc already defined
+  "Pummel + Furcorn": ["Epic Fwog"],
+  "Scups + Furcorn": ["Epic Fwog"],
+  "Reedling + Oaktopus": ["Epic Fwog"],
+  "Thrumble + Denchuhs": ["Epic Fwog"],
+  "Clamble + Maw": ["Epic Drumpler"],
+  "PomPom + Fwog": ["Epic Drumpler"],
+  "Thumpies + Cybop": ["Epic Drumpler"],
+  "Ziggurab + HippityHop": ["Epic Drumpler"],
+  "Bowgart + Drumpler": ["Epic Maw"],
+  "Spunge + Furcorn": ["Epic Maw"],
+  "T-Rox + Quibble": ["Epic Maw"],
+  "Whaddle + Pango": ["Epic Maw"],
+  "Floogull + Dandidoo": ["Epic Glowl"],
+  "Wynq + Quibble": ["Epic Glowl"],
+  "Barrb + Shrubb": ["Epic Flowah"],
+  "Fiddlement + Gob": ["Epic Flowah"],
+  "Rooba + Poppette": ["Epic Flowah"],
+  "Repatillo + Glowl": ["Epic Stogg"],
+  "Bridg-it + Squot": ["Epic Stogg"],
+  "Withur + Phangler": ["Epic Stogg"],
+  "Congle + Glowl": ["Epic Phangler"],
+  "Tapricorn + Yuggler": ["Epic Phangler"],
+  "Banjaw + Peckidna": ["Epic Phangler"],
+  "Woolabee + Maw": ["Epic Boskus"],
+  "TooToo + Bulbo": ["Epic Boskus"],
+  "Cantorell + Wimmzies": ["Epic Boskus"],
+  "Spunge + Fwog": ["Epic Reedling"],
+  "Thumpies + Shrubb": ["Epic Reedling"],
+  "Repatillo + Cybop": ["Epic Reedling"],
+  "Thumpies + Quibble": ["Epic Spunge"],
+  "Scups + Oaktopus": ["Epic Spunge"],
+  "Congle + Oaktopus": ["Epic Thumpies"],
+  "Reedling + Pango": ["Epic Thumpies"],//Next is Scups! 
+  "PomPom + Maw": ["Epic Scups"],
+  "Pummel + Dandidoo": ["Epic Scups"],
+  "T-Rox + Cybop": ["Epic PomPom"],
+  "Reedling + Drumpler": ["Epic PomPom"],
+  "Shugabush + Mammott": ["Epic PomPom"],
+  "Thumpies + Maw": ["Epic Congle"],
+  "Scups + Drumpler": ["Epic Congle"],
+  "Woolabee + Quibble": ["Epic Congle"],
+  "Bowgart + Fwog": ["Epic Pummel"],
+  "Scups + Shrubb": ["Epic Pummel"],
+  "Pummel + Maw": ["Epic Clamble"],
+  "PomPom + Furcorn": ["Epic Clamble"],
+  "Clamble + Oaktopus": ["Epic Bowgart"],
+  "Congle + Furcorn": ["Epic Bowgart"],
+  "Pummel + Drumpler": ["Epic T-Rox"],
+  "Congle + Fwog": ["Epic T-Rox"],
+  "Floogull + Shrubb": ["Epic Barrb"],
+  "Reedling + Glowl": ["Epic Floogull"],
+  "Congle + Phangler": ["Epic Whaddle"],
+  "Whaddle + Boskus": ["Epic Woolabee"],
+  "Floogull + Flowah": ["Epic Repatillo"],
+  "Rooba + Oaktopus": ["Epic Rootitoot"],
+  "TooToo + Boskus": ["Epic Sooza"],
+  "Uuduk + Denchuhs": ["Epic Thrumble"],
+  "Bridg-it + Drumpler": ["Epic Ziggurab"],
+  "Congle + Boskus": ["Epic Wynq"],
+  "Spunge + Cybop": ["Epic Shellbeat"],
+  "Clamble + Dandidoo": ["Epic Quarrister"],
+  "Pango + Bowgart": ["Epic Deedge"], 
+  "PomPom + Quibble": ["Epic Riff"],
+  "T-Rox + Shrubb": ["Epic Entbrat"],
+  "Barrb + Stogg": ["Epic Tring"],
+  "Woolabee + Phangler": ["Epic Sneyser"],
+  "T-Rox + Furcorn": ["Epic Ghazt"],
+  "Boodoo + Dragong": ["Epic Ghazt"],
+  "Bowgart + Dandidoo": ["Epic Grumpyre"],
+  "Nebulob + Fung Pray": ["Epic Grumpyre"],
+  "T-Rox + Pango": ["Epic Reebro"],
+  "Sox + Kazilleon": ["Epic Reebro"],
+  "Pummel + Quibble": ["Epic Jeeode"],
+  "Jellbilly + Arackulele": ["Epic Jeeode"],
+  "Clamble + Cybop": ["Epic Humbug"],
+  "Whisp + Bellowfish": ["Epic Humbug"],
+  "Nebulob + Kazilleon": ["Epic Whisp"],
+  "Boodoo + Jellbilly": ["Epic Nebulob"],
+  "Jellbilly + Bellowfish": ["Epic Sox"],
+  "Arackulele + Fung Pray": ["Epic Jellbilly"],
+  "Sox + Dragong": ["Epic Arackulele"],
+  "Kazilleon + Bellowfish": ["Epic Boodoo"],
+  "Sox + Arackulele": ["Epic Kazilleon"],
+  "Whisp + Dragong": ["Epic Bellowfish"],
+  "Entbrat +  Drumpler": ["Epic Punkleton"],
+  "Schmoochle + Blabbit": ["Epic Punkleton"],
+  "Deedge + Pango": ["Epic Yool"],
+  "Hoola + Blabbit": ["Epic Yool"],
+  "Riff + Quibble": ["Epic Schmoochle"],
+  "Punkleton + Hoola": ["Epic Schmoochle"],
+  "Shellbeat + Oaktopus": ["Epic Blabbit"],
+  "Punkelton + Yool": ["Epic Blabbit"],
+  "Riff + Fwog": ["Epic Hoola"],
+  "Quarrister + Dandidoo": ["Epic Hoola"],
+  "Yool + Schmoochle": ["Epic Hoola"],
+  "Tring + Flowah": ["Epic Gobbleygourd"],
+  "Sneyser + Boskus": ["Epic Gobbleygourd"],
+  "Jam Boree + Clavavera": ["Epic Gobbleygourd"],
+  "Plinkajou + Hawlo": ["Epic Clavavera"],
+  "Viveine + Whiz-bang": ["Epic Clavavera"],
+  "Shugabush + PomPom": ["Epic Viveine"],
+  "Ffidyll + Monculus": ["Epic Viveine"],
+  "Gobbleygourd + Boo'qwurm": ["Epic Jam Boree"],
+  "Enchantling + Roarick": ["Epic Carillong"],
+  "Whiz-bang + Monculus": ["Epic Carillong"],
+  "Blow't + Bulbo": ["Epic Whiz-bang"],
+  "Boo'qwurm + Spurrit": ["Epic Whiz-bang"],
+  "Whisp + Humbug": ["Epic Monculus"],
+  "Ffidyll + Carillong": ["Epic Monculus"],
+  "Pladdie + HippityHop": ["Epic Ffidyll"],
+  "Viveine + Spurrit": ["Epic Ffidyll"],
+  "Gloptic + Bonkers": ["Epic Boo'qwurm"],
+  "Gobbleygourd + Clavavera": ["Epic Boo'qwurm"],
+  "Sneyser + Glowl": ["Epic Spurrit"],
+  "Jam Boree + Carillong": ["Epic Spurrit"],
+  "Entbrat + Maw": ["Epic G'joob"],
+  "Riff + Fwog": ["Epic Yawstrich"],
+  "Deedge + Furcorn": ["Epic Strombonin"],
+  "Tring + Glowl": ["Epic Buzzinga"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
@@ -3607,7 +4672,7 @@ searchMonsterInput.addEventListener('input', () => {
         img.src = monsterInfo.image.normal; // Use normal image
         defaultTab = 'Normal'; // Set default tab to Normal
         showBlur(); // Show the blur overlay
-       
+
       }
 
       // Clear previous content
@@ -3998,12 +5063,12 @@ function showBlur() {
   // Hide all suggestion items (custom)
   const suggestionItems = document.querySelectorAll('.suggestion-item');
   suggestionItems.forEach(item => {
-      item.style.display = 'none'; // Hide each suggestion item
+    item.style.display = 'none'; // Hide each suggestion item
   });
 
   // Optionally, hide the autocomplete suggestions from the browser
   inputs.forEach(input => {
-      input.setAttribute('autocomplete', 'off'); // Disable autocomplete
+    input.setAttribute('autocomplete', 'off'); // Disable autocomplete
   });
 
   // Set z-index for image and stats container above fog
@@ -4020,8 +5085,8 @@ function hideBlur() {
   document.getElementById('inputContainer').classList.remove('hidden'); // Show the input container
   const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3'); // Select input fields and buttons
   inputs.forEach(input => {
-      input.classList.remove('hidden'); // Show each input/button
-      input.setAttribute('autocomplete', 'on'); // Re-enable autocomplete
+    input.classList.remove('hidden'); // Show each input/button
+    input.setAttribute('autocomplete', 'on'); // Re-enable autocomplete
   });
 
   // Reset z-index for image and stats container
@@ -4030,22 +5095,22 @@ function hideBlur() {
 }
 
 // Example of how you might handle finding a combination
-document.getElementById('breedButton').addEventListener('click', function() {
+document.getElementById('breedButton').addEventListener('click', function () {
   // Simulate finding a combination
   const combinationFound = true; // Set this based on your logic
 
   if (combinationFound) {
-      showBlur(); // Show the blur overlay
+    showBlur(); // Show the blur overlay
   } else {
-      hideBlur(); // Hide if no combination is found (optional)
+    hideBlur(); // Hide if no combination is found (optional)
   }
 });
 
 // Add event listener for keydown event
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') { // Check if the key pressed is Escape
-      hideBlur(); // Hide the blur overlay
-      resetAll();
+    hideBlur(); // Hide the blur overlay
+    resetAll();
   }
 });
 
@@ -4090,4 +5155,3 @@ function displayMonster(monster, type) {
 
 // Call hideBlur on page load to ensure it starts hidden
 hideBlur();
-
