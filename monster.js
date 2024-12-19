@@ -2996,8 +2996,8 @@ const monsters = [
       epic: "images/bm/Epic Bulbo.png",
     },
     stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
+      normal: "Breding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min Enchanced Time: 9 hr 22 min 30 sec",
       epic: ""
     }
   },
