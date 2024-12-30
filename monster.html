@@ -10,7 +10,7 @@
 </head>
 <body style="background-image: url(images/backgrounds/SwetiSettlementSky.jpg); background-size: cover;">
     <div id="blurOverlay"></div> <!-- Blur overlay element -->
-    <div id="blurMessage">Press ESC to go back</div> <!-- Message element -->
+    <div id="blurMessage" onclick="closeMenu()">Press ESC to go back</div> <!-- Message element -->
     <div id="iconContainer">
         <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
         <div id="textContainer">
@@ -20,14 +20,11 @@
 
     <b><h1 id="title">My Singing Monsters <br> Combo Finder</h1>    </b>
     <div id="inputContainer">
-        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">First Monster:</label><br>
-        <input id="First_Monster" autocomplete="off"><br><br>
-        
-        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">Second Monster:</label><br>
-        <input id="Second_Monster" autocomplete="off"><br><br>
-        
-        <label style="  text-shadow: 0 0 10px white; /* Creates a 2px black outline around the text */">Search A Monster:</label><br>
-        <input id="Search_Monster" autocomplete="off"><br><br>
+            <input id="First_Monster" autocomplete="off" placeholder="First Monster"><br><br>
+            
+            <input id="Second_Monster" autocomplete="off" placeholder="Second Monster"><br><br>
+            
+            <input id="Search_Monster" autocomplete="off" placeholder="Search for a Monster"><br><br>
 
         <button id="breedButton">Breed Or Search</button>
         <button id="resetButton">Reset</button>
@@ -47,8 +44,6 @@
         </div>
         <div id="statsContainer" style="color: rgb(182, 6, 6);"></div>
     </div>
-    
-
     <script src="monster.js"></script>
 </body>
 
