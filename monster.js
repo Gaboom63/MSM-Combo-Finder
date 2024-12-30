@@ -4769,6 +4769,11 @@ breedButton.addEventListener('click', () => {
   imageContainer.innerHTML = ''; // Clear previous images
   statsContainer.innerHTML = ''; // Clear previous stats
 
+  // Hide the suggestion boxes
+  document.getElementById('suggestions1').style.display = 'none';
+  document.getElementById('suggestions2').style.display = 'none';
+  document.getElementById('suggestions3').style.display = 'none';
+
   // If Search_Monster has content, look it up
   if (searchMonster) {
     const monsterInfo =
@@ -4961,6 +4966,7 @@ breedButton.addEventListener('click', () => {
 
 
 
+
 // Function to check breeding combinations
 //!This IS what you have been looking for! :D 
 const getResultingMonsters = (monster1, monster2) => {
@@ -5036,8 +5042,10 @@ document.addEventListener('click', (event) => {
   }
 });
 
-
-// Function to show the blur overlay and message
+function closeMenu() {
+  hideBlur(); // Hide the blur overlay
+  resetAll();
+  }
 // Function to show the blur overlay and message
 function showBlur() {
   document.getElementById('blurOverlay').style.display = 'block';
