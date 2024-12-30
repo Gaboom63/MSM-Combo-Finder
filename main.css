@@ -33,12 +33,23 @@ body {
 /* Input Styles */
 #First_Monster, #Second_Monster, #Search_Monster {
     width: 200px;
-    padding: 8px;
-    margin-bottom: 10px;
-    z-index: 10;
-    background: rgb(255, 109, 109);
-
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    margin-bottom: 15px; /* Increased margin for better spacing between elements */
+    background: rgb(255, 109, 109); /* Keep the original background color */
+    border: 2px solid #f7b7b7; /* Add a soft border for definition */
+    border-radius: 8px; /* Rounded corners for a more modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: 14px; /* Adjust font size for better readability */
+    color: #333; /* Dark text color for better contrast */
+    transition: all 0.3s ease; /* Smooth transition for interactive effects */
 }
+
+#First_Monster:focus, #Second_Monster:focus, #Search_Monster:focus {
+    border-color: rgb(255, 109, 109); /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(255, 109, 109, 0.5); /* Highlight input box on focus */
+    outline: none; /* Remove the default outline on focus */
+}
+
 
 #Search_Monster:disabled,
 input:disabled {
@@ -57,6 +68,7 @@ input:disabled {
     overflow-y: auto;
     z-index: 121;
     width: 200px;
+    border-radius: 10%;
 }
 
 /* Result Container */
@@ -124,14 +136,18 @@ input:disabled {
 
 .tab-button {
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 8px 5px; /* Slightly adjusted padding for better fit */
     cursor: pointer;
-    background-color: lightgray;
     border-radius: 5px;
+    min-width: 100px; /* Minimum width to keep buttons consistent */
+    max-width: 80px; /* Maximum width to prevent excessive growth */
+    width: 100%; /* Allow width to adjust to available space within container */
+    box-sizing: border-box; /* Prevent padding from affecting width */
 }
 
 .tab-button:hover {
-    background-color: darkgray;
+    background-color: darkblue;
+    color: white; /* Ensure text color changes on hover for visibility */
 }
 
 /* Content Area */
@@ -183,9 +199,12 @@ input:disabled {
 #resultContainer {
     margin-top: 20px; /* Space between input and results */
 }
-
+#breedButton, #resetButton {
+    color:black; 
+}
 #breedButton:hover, #resetButton:hover {
-    background-color: lightblue;
+    background-color: darkblue;
+    color: white;
 
 }
 
@@ -326,6 +345,7 @@ button.hidden {
     display: none; /* Hide the blur message */
 }
 
+
 #suggestions3.hidden {
     display: none;
 }
@@ -344,3 +364,46 @@ button.hidden {
   }
   
  
+
+  button {
+    width: 10%; /* Slightly smaller button width */
+    padding: 8px;
+    margin: 5px 2%;
+    font-size: 12px; /* Smaller font size for buttons */
+    font-weight: bold;
+    color: white;
+    background: rgb(255, 109, 109);
+    border: 2px solid #f7b7b7;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgb(255, 79, 79); /* Darker hover background */
+    box-shadow: 0 0 8px rgba(255, 79, 79, 0.3);
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow on click */
+}
+
+button:focus {
+    outline: none;
+}
+
+
+input::placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5); /* Set text color with transparency (50% opacity) */
+    font-size: 14px; /* Adjust the font size */
+    font-style: italic; /* Italicize the placeholder text */
+    font-weight: 300; /* Lighter font weight for a soft look */
+    letter-spacing: 1px; /* Add slight space between characters */
+    opacity: 1; /* Ensure placeholder text is fully visible */
+}
+
+input:focus::placeholder {
+    color: #ff6d6d; /* Change the placeholder color on focus */
+    font-style: normal; /* Remove italic style when focused */
+}
