@@ -8,8 +8,11 @@ body {
     position: relative;
     background-color: #E9E2D3;
     color: rgb(33, 35, 146);
-    
+    background-repeat: no-repeat;  /* Prevent background repeat */
+    background-size: cover;  /* Ensure the background covers the entire screen */
+    background-attachment: fixed; /* Make background fixed when scrolling */
 }
+
 
 /* Font Face */
 @font-face {
