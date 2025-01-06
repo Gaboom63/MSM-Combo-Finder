@@ -42,6 +42,7 @@ body {
     font-size: 14px; /* Adjust font size for better readability */
     color: #333; /* Dark text color for better contrast */
     transition: all 0.3s ease; /* Smooth transition for interactive effects */
+    text-align: center;
 }
 
 #First_Monster:focus, #Second_Monster:focus, #Search_Monster:focus {
