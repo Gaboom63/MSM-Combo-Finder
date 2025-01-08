@@ -8,4 +8,4 @@ A easy to use, but packed with information monster breeding tool.  This is still
 <br><br>
 (This will be updated frequently as of right now)
 <br><br>
-As of now it has been updated to include... Well currently theres really nothing to include! So for now its updated to 2025! 
+As of now it has been updated to include... Well currently theres really nothing going on! So for now its updated to 2025! 
