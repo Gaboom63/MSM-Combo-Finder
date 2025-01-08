@@ -3036,7 +3036,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
       epic: ""
     }
   },
@@ -3446,14 +3446,14 @@ const monsters = [
   {
     name: "Yelmut",
     image: {
-      normal: "images/bm/Bisonorus.png",
-      rare: "images/bm/Rare Bisonorus.png",
-      epic: "images/bm/Epic Bisonorus.png",
+      normal: "images/bm/Yelmut.png",
+      rare: "images/bm/Rare Yelmut.png",
+      epic: "images/bm/Epic Yelmut.png",
     },
     stats: {
       normal: "Buy From Shop: 300 Relics ",
       rare: "Breeding Time: 2 days, 4 hr 30 mins",
-      epic: ""
+      epic: "Breeding Time: 1 day, 15 hr	Enhanced Breeding Time: 1 day, 5 hr, 15 min"
     }
   },
   {
