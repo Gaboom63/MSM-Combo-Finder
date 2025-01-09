@@ -4453,7 +4453,6 @@ const breedingCombinations = {
   "Punkelton + Yool": ["Epic Blabbit"],
   "Riff + Fwog": ["Epic Hoola"],
   "Quarrister + Dandidoo": ["Epic Hoola"],
-  "Yool + Schmoochle": ["Epic Hoola"],
   "Tring + Flowah": ["Epic Gobbleygourd"],
   "Sneyser + Boskus": ["Epic Gobbleygourd"],
   "Jam Boree + Clavavera": ["Epic Gobbleygourd"],
@@ -4478,6 +4477,18 @@ const breedingCombinations = {
   "Riff + Fwog": ["Epic Yawstrich"],
   "Deedge + Furcorn": ["Epic Strombonin"],
   "Tring + Glowl": ["Epic Buzzinga"],
+
+  //Update V3 ~Seasonal Fix :)
+  "Withur + Clackula": ["Clavavera"],
+  "Shugabush + Oaktopus": ["Viveine","Epic Mammott"],
+  "Punkleton + Hoola": ["Jam Boree","Epic Schmoochle"],
+  "Schmoochle + Yool": ["Carillong"],
+  "Mushaboom + Roarick": ["Carillong"],
+  "Blow't + Spytrap": ["Whiz-bang"],
+  "Nebulob + Jeeode": ["Monculus"],
+  "Pladdie + Floot Fly": ["Ffidyll"],
+  "Periscorp + Bonkers": ["Boo'qwurm"],
+  "Wynq + Maw": ["Spurrit"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
