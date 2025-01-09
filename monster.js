@@ -8,7 +8,7 @@ const raremonsters = [
       epic: "images/bm/Epic Shugarock.png",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -21,7 +21,7 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -34,7 +34,7 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -47,7 +47,7 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -60,7 +60,7 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -73,7 +73,7 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: ""
     }
@@ -81,7 +81,7 @@ const raremonsters = [
   {
     name: "Shugabuzz",
     image: {
-      normal: "images/bm/Shugabuzz.png",
+      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: "",
     },
