@@ -68,9 +68,10 @@ input:disabled {
     background: white;
     max-height: 150px;
     overflow-y: auto;
-    z-index: 121;
+    z-index: 99;
     width: 200px;
     border-radius: 10%;
+    opacity: 0.8;
 }
 
 /* Result Container */
@@ -313,7 +314,7 @@ input:disabled {
 input,
 button {
     position: relative; /* Relative positioning */
-    z-index: 121; /* Higher z-index for input and button */
+    z-index: 98; /* Higher z-index for input and button */
 }
 
 /* Hide inputs and buttons when fog is active */
@@ -348,9 +349,7 @@ button.hidden {
 }
 
 
-#suggestions3.hidden {
-    display: none;
-}
+
 
 .breed-image {
     display: flex;
