@@ -3452,8 +3452,8 @@ const monsters = [
     },
     stats: {
       normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
-      epic: "Breeding Time: 1 day, 15 hr	Enhanced Breeding Time: 1 day, 5 hr, 15 min"
+      rare: "Breeding Time: 2 days, 4 hr 30 mins <br>",
+      epic: "Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min"
     }
   },
   {
