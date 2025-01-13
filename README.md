@@ -9,3 +9,5 @@ A easy to use, but packed with information monster breeding tool.  This is still
 (This will be updated frequently as of right now)
 <br><br>
 As of now it has been updated to include Rare Poppette and Epic Yelmut! 
+
+Aux Seasonals Fixed! 
