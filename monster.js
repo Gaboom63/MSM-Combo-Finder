@@ -3451,8 +3451,8 @@ const monsters = [
       epic: "images/bm/Epic Yelmut.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins <br>",
+      normal: "Breeding Time: 1 day, 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br> Buy From Shop: 300 Relics ",
+      rare: "10,000 Starpower <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br><br> Enhanced Time: 1 days 15 hr 22 min 30 sec",
       epic: "Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min"
     }
   },
