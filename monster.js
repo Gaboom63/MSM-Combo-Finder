@@ -3471,32 +3471,6 @@ const monsters = [
     }
   },
   {
-    name: "Bisonorus",
-    image: {
-      normal: "images/bm/Bisonorus.png",
-      rare: "images/bm/Rare Bisonorus.png",
-      epic: "images/bm/Epic Bisonorus.png",
-    },
-    stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
-      epic: ""
-    }
-  },
-  {
-    name: "Bisonorus",
-    image: {
-      normal: "images/bm/Yelmut.png",
-      rare: "images/bm/Rare Yelmut.png",
-      epic: "images/bm/Epic Yelmut.png",
-    },
-    stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
-      epic: ""
-    }
-  },
-  {
     name: "Flum Ox",
     image: {
       normal: "images/bm/Flum Ox.png",
