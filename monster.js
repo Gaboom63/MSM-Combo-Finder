@@ -1614,7 +1614,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "",
+      normal: "Epic Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min<br>",
       rare: "",
       epic: ""
     }
@@ -3945,7 +3945,7 @@ const epicBreedingCombinations = {
   "Yawstrich": [`Riff + Fwog <br> Cataliszt + Strombonin`],
   "Floogull": [`Reedling + Glowl`],
   "Strombonin": [`Deedge + Furcorn <br> Cataliszt + G'joob`],
-
+  "Yelmut": [`Kayna + Barrb <br>`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
@@ -4465,8 +4465,10 @@ const breedingCombinations = {
   "Riff + Fwog": ["Epic Yawstrich"],
   "Deedge + Furcorn": ["Epic Strombonin"],
   "Tring + Glowl": ["Epic Buzzinga"],
+  "Blow't + Kayna": ["Epic Yelmut"],
 
   //Update V3 ~Seasonal Fix :)
+  "Kayna + Barrb": ["Buzzinga"],
   "Withur + Clackula": ["Clavavera"],
   "Shugabush + Oaktopus": ["Viveine","Epic Mammott"],
   "Punkleton + Hoola": ["Jam Boree","Epic Schmoochle"],
@@ -4477,7 +4479,6 @@ const breedingCombinations = {
   "Pladdie + Floot Fly": ["Ffidyll"],
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
-  "Blow't + Kayna": ["Epic Yelmut"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
@@ -5163,3 +5164,4 @@ function displayMonster(monster, type) {
 
 // Call hideBlur on page load to ensure it starts hidden
 hideBlur();
+
