@@ -3452,8 +3452,8 @@ const monsters = [
       epic: "images/bm/Epic Bisonorus.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
       epic: ""
     }
   },
@@ -3478,8 +3478,8 @@ const monsters = [
       epic: "images/bm/Epic Flum Ox.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
       epic: ""
     }
   },
@@ -3491,8 +3491,8 @@ const monsters = [
       epic: "images/bm/Epic Krillby.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
       epic: ""
     }
   },
@@ -3506,8 +3506,8 @@ const monsters = [
       epic: "images/bm/Epic Edamimi.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
       epic: ""
     }
   },
@@ -3519,8 +3519,8 @@ const monsters = [
       epic: "images/bm/Epic Tiawa.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 2 days, 4 hr 30 mins",
+      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
       epic: ""
     }
   },
@@ -3532,8 +3532,8 @@ const monsters = [
       epic: "images/bm/Epic Candelavra.png",
     },
     stats: {
-      normal: "Buy From Shop: 500 Relics ",
-      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
@@ -3545,8 +3545,8 @@ const monsters = [
       epic: "images/bm/Epic Drummidary.png",
     },
     stats: {
-      normal: "Buy From Shop: 500 Relics ",
-      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
@@ -3559,8 +3559,8 @@ const monsters = [
       epic: "images/bm/Epic Bowhead.png",
     },
     stats: {
-      normal: "Buy From Shop: 500 Relics ",
-      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
@@ -3572,8 +3572,8 @@ const monsters = [
       epic: "images/bm/Epic Tuskski.png",
     },
     stats: {
-      normal: "Buy From Shop: 300 Relics ",
-      rare: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
