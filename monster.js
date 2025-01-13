@@ -575,6 +575,7 @@ const epicmonsters = [
       epic: ""
     }
   },
+  
   {
     name: "Epic Potbelly",
     image: {
@@ -1601,6 +1602,19 @@ const epicmonsters = [
     },
     stats: {
       normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Yelmut",
+    image: {
+      normal: "images/bm/Epic Yelmut.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
       rare: "",
       epic: ""
     }
