@@ -3440,7 +3440,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
-      rare: "Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
+      rare: "15,000 Starpower <br> <br> Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
       epic: ""
     }
   },
