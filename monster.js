@@ -4489,6 +4489,7 @@ const breedingCombinations = {
   "Pladdie + Floot Fly": ["Ffidyll"],
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
+  "Blow't + Kayna": ["Epic Yelmut"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
