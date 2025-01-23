@@ -3388,7 +3388,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 13 hr 30 min <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec ",
       epic: ""
     }
   },
