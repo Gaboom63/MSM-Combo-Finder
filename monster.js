@@ -3383,7 +3383,7 @@ const monsters = [
     name: "G'day",
     image: {
       normal: "images/bm/G_day.png",
-      rare: "images/bm/Rare G_day.png",
+      rare: "images/bm/Rare G'day.png",
       epic: "images/bm/Epic G_day.png",
     },
     stats: {
