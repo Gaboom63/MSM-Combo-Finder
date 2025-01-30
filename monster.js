@@ -2530,7 +2530,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: ""
+      epic: "Epic Breeding Time: 1 day 12 hr <br> <br> Enhanced Time:   1 day 3 hr "
     }
   },
   {
@@ -3945,7 +3945,8 @@ const epicBreedingCombinations = {
   "Yawstrich": [`Riff + Fwog <br> Cataliszt + Strombonin`],
   "Floogull": [`Reedling + Glowl`],
   "Strombonin": [`Deedge + Furcorn <br> Cataliszt + G'joob`],
-  "Yelmut": [`Kayna + Barrb <br>`]
+  "Yelmut": [`Kayna + Barrb <br>`],
+  "Dragong": [`Whisp + Fung Pray <br>`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
