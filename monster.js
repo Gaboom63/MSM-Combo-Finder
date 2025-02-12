@@ -3305,12 +3305,12 @@ const monsters = [
     name: "Cantorell",
     image: {
       normal: "images/bm/Cantorell.png",
-      rare: "images/bm/Rare Cantorell.png",
+      rare: "images/bm/Rare Cantorell.jpg",
       epic: "images/bm/Epic Cantorell.png",
     },
     stats: {
       normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
       epic: ""
     }
   },
