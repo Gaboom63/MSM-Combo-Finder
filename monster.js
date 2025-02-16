@@ -2538,12 +2538,12 @@ const monsters = [
     image: {
       normal: "images/bm/Fung Pray.png",
       rare: "images/bm/Rare Fung Pray.png",
-      epic: "images/bm/Epic Fung Pray.png",
+      epic: "images/bm/Epic_Fung_Pray.jpg",
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: ""
+      epic: "? (Will Be In Soon :) )"
     }
   },
   {
