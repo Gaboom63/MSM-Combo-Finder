@@ -3947,7 +3947,8 @@ const epicBreedingCombinations = {
   "Strombonin": [`Deedge + Furcorn <br> Cataliszt + G'joob`],
   "Yelmut": [`Kayna + Barrb <br>`],
   "Dragong": [`Whisp + Fung Pray <br>`],
-  "Krillby": [`Pladdie + Kayna <br>`]
+  "Krillby": [`Pladdie + Kayna <br>`],
+  "Fung Pray": [`? Coming Soon :)`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
