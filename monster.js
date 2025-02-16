@@ -3305,7 +3305,7 @@ const monsters = [
     name: "Cantorell",
     image: {
       normal: "images/bm/Cantorell.png",
-      rare: "images/bm/Rare Cantorell.jpg",
+      rare: "images/bm/Rare_Cantorell.jpg",
       epic: "images/bm/Epic Cantorell.png",
     },
     stats: {
