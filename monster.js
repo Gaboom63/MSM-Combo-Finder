@@ -560,7 +560,7 @@ const raremonsters = [
     }
   },
   {
-    name: "  Rare Sporerow",
+    name: "Rare Sporerow",
     image: {
       normal: "images/bm/Rare Sporerow.png",
       rare: "",
