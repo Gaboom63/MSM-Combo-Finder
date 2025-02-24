@@ -3899,7 +3899,7 @@ const monsters = [
       epic: "images/bm/Epic Lowb.png",
     },
     stats: {
-      normal: "2 days 2 hr",
+      normal: "Breeding Time: 2 days 2 hr",
       rare: "",
       epic: ""
     }
