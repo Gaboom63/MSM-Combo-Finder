@@ -549,12 +549,25 @@ const raremonsters = [
   {
     name: "Rare Drummidary",
     image: {
-      normal: "images/bm/Rare midary.png",
+      normal: "images/bm/Rare Drummidary.png",
       rare: "",
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 3 days, 23 hr 30 mins",
+      normal: "Breeding Time: 3 days 23 hr 30 mins",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "  Rare Sporerow",
+    image: {
+      normal: "images/bm/Rare Sporerow.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 22 hr <br>  <br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
       rare: "",
       epic: ""
     }
@@ -1619,6 +1632,19 @@ const epicmonsters = [
       epic: ""
     }
   },
+  {
+    name: "Fung Pray",
+    image: {
+      normal: "images/bm/Epic_Fung_Pray.jpg",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr",
+      rare: "",
+      epic: ""
+    }
+  }
 
 ]
 const monsters = [
@@ -2543,7 +2569,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "? (Will Be In Soon :) )"
+      epic: "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr"
     }
   },
   {
@@ -2685,7 +2711,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
-      rare: "",
+      rare: "Rare Breeding Time: 1 day 22 hr 15 min <br><br> Enhanced Time: 1 day 10 hr 41 min 15 sec",
       epic: ""
     }
   },
@@ -3865,6 +3891,20 @@ const monsters = [
       epic: ""
     }
   },
+  {
+    name: "Lowb",
+    image: {
+      normal: "images/bm/Lowb.png",
+      rare: "images/bm/Rare Lowb.png",
+      epic: "images/bm/Epic Lowb.png",
+    },
+    stats: {
+      normal: "2 days 2 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  
 ];
 
 const epicBreedingCombinations = {
@@ -3948,7 +3988,7 @@ const epicBreedingCombinations = {
   "Yelmut": [`Kayna + Barrb <br>`],
   "Dragong": [`Whisp + Fung Pray <br>`],
   "Krillby": [`Pladdie + Kayna <br>`],
-  "Fung Pray": [`? Coming Soon :)`]
+  "Fung Pray": [`Nebulob + Boodoo <br>`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
@@ -4165,7 +4205,7 @@ const breedingCombinations = {
   "Congle + Woolabee": ["Cherubble"],
   "Cataliszt + G'joob": ["Bleatnik","Epic Strombonin"],
   "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
-  "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob"],
+  "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob", "Rare Sporerow"],
   "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
   "Cataliszt + Hyehehe": ["Wheezel"],
   "Cataliszt + Buzzinga": ["Knurv"],
