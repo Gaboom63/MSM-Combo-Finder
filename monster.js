@@ -1,5 +1,6 @@
 // Array of monster data
 const raremonsters = [
+
   {
     name: "Shugarock",
     image: {
@@ -3154,7 +3155,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
+      rare: "Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec <br>",
       epic: ""
     }
   },
@@ -3904,7 +3905,19 @@ const monsters = [
       epic: ""
     }
   },
-  
+  {
+    name: "Owlesque",
+    image: {
+      normal: "images/bm/Owlesque (Major).png",
+      rare: "images/bm/Rare Owlesque (Major).png",
+      epic: "images/bm/Epic Owlesque (Major).png",
+    },
+    stats: {
+      normal: "Breeding Time: 1 days 10 hr <br><br> Enhanced Time: 1 day 1 hr 30 min",
+      rare: "",
+      epic: ""
+    }
+  }
 ];
 
 const epicBreedingCombinations = {
@@ -4312,7 +4325,10 @@ const breedingCombinations = {
   "Plasma Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Rhysmuth"],
   "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
   "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["BeMeebEth"],
-
+  "Pladdie + Ziggurab": ["Owlesque"],
+  "Pladdie + Cantorell": ["Owlesque"],
+  "Pladdie + Bridg-it": ["Owlesque"],
+  "Pladdie + Clavi Gnat": ["Owlesque"],
 
 
   //Epic Breeding Combos! 
