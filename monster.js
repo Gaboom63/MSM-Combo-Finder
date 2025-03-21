@@ -611,7 +611,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal: "Epic Breeding Time: 44 min, <br> <br> Enhanced Time: 1 hr <br>",
       rare: "",
       epic: ""
     }
