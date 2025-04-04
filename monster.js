@@ -1634,6 +1634,19 @@ const epicmonsters = [
     }
   },
   {
+    name: "Epic PongPing",
+    image: {
+      normal: "images/bm/Epic PongPing.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
     name: "Fung Pray",
     image: {
       normal: "images/bm/Epic Fung Pray.png",
@@ -3940,8 +3953,8 @@ const monsters = [
     },
     stats: {
       normal: "300 Relics <br><br> Breeding Time: 1 days 16 hr <br><br> Enhanced Time: 1 day 6 hr",
-      rare: "",
-      epic: ""
+      rare: "10,000 <br><br> Breeding Time: 2 days 4 hr 30 min <br><br> Enhanced Time: 1 day 15 hr 30 sec",
+      epic: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min"
     }
   }
 ];
@@ -4027,7 +4040,8 @@ const epicBreedingCombinations = {
   "Yelmut": [`Kayna + Barrb <br>`],
   "Dragong": [`Whisp + Fung Pray <br>`],
   "Krillby": [`Pladdie + Kayna <br>`],
-  "Fung Pray": [`Nebulob + Boodoo <br>`]
+  "Fung Pray": [`Nebulob + Boodoo <br>`],
+  "PongPing": [`Pladdie + Floot Fly<br>`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
@@ -4561,7 +4575,7 @@ const breedingCombinations = {
   "Mushaboom + Roarick": ["Carillong"],
   "Blow't + Spytrap": ["Whiz-bang"],
   "Nebulob + Jeeode": ["Monculus"],
-  "Pladdie + Floot Fly": ["Ffidyll"],
+  "Pladdie + Floot Fly": ["Ffidyll", "Epic PongPing"],
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
 };
