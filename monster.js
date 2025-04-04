@@ -1645,7 +1645,20 @@ const epicmonsters = [
       rare: "",
       epic: ""
     }
-  }
+  },
+   {
+    name: "Epic Edamimi",
+    image: {
+      normal: "images/bm/Epic Edamimi.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>",
+      rare: "",
+      epic: ""
+    }
+  },
 
 ]
 const monsters = [
@@ -3535,7 +3548,7 @@ const monsters = [
     stats: {
       normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: ""
+      epic: "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>"
     }
   },
   {
@@ -3914,6 +3927,19 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 1 days 10 hr <br><br> Enhanced Time: 1 day 1 hr 30 min",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "PongPing",
+    image: {
+      normal: "images/bm/PongPing.png",
+      rare: "images/bm/Rare PongPing.png",
+      epic: "images/bm/Epic PongPing.png"
+    },
+    stats: {
+      normal: "300 Relics <br><br> Breeding Time: 1 days 16 hr <br><br> Enhanced Time: 1 day 6 hr",
       rare: "",
       epic: ""
     }
