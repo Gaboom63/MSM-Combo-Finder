@@ -625,6 +625,19 @@ const raremonsters = [
       epic: ""
     }
   },
+  {
+    name: "Rare Pladdie",
+    image: {
+      normal: "images/bm/Rare Pladdie.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 
 const epicmonsters = [
@@ -2442,7 +2455,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
       epic: ""
     }
   },
