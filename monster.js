@@ -2463,7 +2463,7 @@ const monsters = [
     name: "Plinkajou",
     image: {
       normal: "images/bm/Plinkajou.png",
-      rare: "images/bm/Rare Olinkajou.png",
+      rare: "images/bm/Rare Plinkajou.png",
       epic: "images/bm/Epic Plinkajou.png",
     },
     stats: {
