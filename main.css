@@ -227,12 +227,12 @@ input:disabled {
 }
 
 #textContainer {
-    color: red;
+    color: black;
     display: none; /* Initially hide the text container */
     margin-left: 10px; /* Space between icon and text */
     padding: 5px;
-    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
-    border: 1px solid #ccc; /* Optional border */
+    background: rgb(255, 109, 109);
+    border: 2px solid #ccc; /* Optional border */
     border-radius: 5px; /* Rounded corners */
     position: relative; /* Position relative for sliding */
     animation: slideIn 0.5s forwards; /* Animation for sliding in */
