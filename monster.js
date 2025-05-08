@@ -654,7 +654,7 @@ const epicmonsters = [
       epic: ""
     }
   },
-  
+
   {
     name: "Epic Potbelly",
     image: {
@@ -1437,7 +1437,7 @@ const epicmonsters = [
       rare: "",
       epic: ""
     }
-  }, 
+  },
   {
     name: "Epic Punkleton",
     image: {
@@ -1724,7 +1724,7 @@ const epicmonsters = [
       epic: ""
     }
   },
-   {
+  {
     name: "Epic Edamimi",
     image: {
       normal: "images/bm/Epic Edamimi.png",
@@ -1772,6 +1772,7 @@ const epicmonsters = [
 const monsters = [
   {
     name: "Tweedle",
+    audio: "sounds/Tweedle_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Tweedle.png",
       rare: "images/bm/Rare Tweedle.png",
@@ -1785,6 +1786,7 @@ const monsters = [
   },
   {
     name: "Potbelly",
+    audio: "sounds/Potbelly_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Potbelly.png",
       rare: "images/bm/Rare Potbelly.png",
@@ -1798,6 +1800,7 @@ const monsters = [
   },
   {
     name: "Noggin",
+    audio: "sounds/Noggin_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Noggin.png",
       rare: "images/bm/Rare Noggin.png",
@@ -1811,6 +1814,7 @@ const monsters = [
   },
   {
     name: "Toe Jammer",
+    audio: "sounds/Toe_Jammer_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Toe Jammer.png",
       rare: "images/bm/Rare Toe Jammer.png",
@@ -1824,6 +1828,7 @@ const monsters = [
   },
   {
     name: "Mammott",
+    audio: "sounds/Mammott_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Mammott.png",
       rare: "images/bm/Rare Mammott.png",
@@ -1837,6 +1842,7 @@ const monsters = [
   },
   {
     name: "Kayna",
+    audio: "sounds/Kayna_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Kayna.png",
       rare: "images/bm/Rare Kayna.png",
@@ -1850,6 +1856,7 @@ const monsters = [
   },
   {
     name: "Shrubb",
+    audio: "sounds/Shrubb_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Shrubb.png",
       rare: "images/bm/Rare Shrubb.png",
@@ -1863,6 +1870,7 @@ const monsters = [
   },
   {
     name: "Oaktopus",
+    audio: "sounds/Oaktopus_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Oaktopus.png",
       rare: "images/bm/Rare Oaktopus.png",
@@ -1876,6 +1884,7 @@ const monsters = [
   },
   {
     name: "Furcorn",
+    audio: "sounds/Furcorn_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Furcorn.png",
       rare: "images/bm/Rare Furcorn.png",
@@ -1889,6 +1898,7 @@ const monsters = [
   },
   {
     name: "Fwog",
+    audio: "sounds/Fwog_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Fwog.png",
       rare: "images/bm/Rare Fwog.png",
@@ -1902,6 +1912,7 @@ const monsters = [
   },
   {
     name: "Drumpler",
+    audio: "sounds/Drumpler_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Drumpler.png",
       rare: "images/bm/Rare Drumpler.png",
@@ -1915,6 +1926,7 @@ const monsters = [
   },
   {
     name: "Maw",
+    audio: "sounds/Maw_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Maw.png",
       rare: "images/bm/Rare Maw.png",
@@ -1928,6 +1940,7 @@ const monsters = [
   },
   {
     name: "Dandidoo",
+    audio: "sounds/Dandidoo_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Dandidoo.png",
       rare: "images/bm/Rare Dandidoo.png",
@@ -1941,6 +1954,7 @@ const monsters = [
   },
   {
     name: "Quibble",
+    audio: "sounds/Quibble_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Quibble.png",
       rare: "images/bm/Rare Quibble.png",
@@ -1954,6 +1968,7 @@ const monsters = [
   },
   {
     name: "Pango",
+    audio: "sounds/Pango_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Pango.png",
       rare: "images/bm/Rare Pango.png",
@@ -1967,6 +1982,7 @@ const monsters = [
   },
   {
     name: "Cybop",
+    audio: "sounds/Cybop_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Cybop.png",
       rare: "images/bm/Rare Cybop.png",
@@ -1980,6 +1996,7 @@ const monsters = [
   },
   {
     name: "Glowl",
+    audio: "sounds/Glowl_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Glowl.png",
       rare: "images/bm/Rare Glowl.png",
@@ -1993,6 +2010,7 @@ const monsters = [
   },
   {
     name: "Flowah",
+    audio: "sounds/Flowah_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Flowah.png",
       rare: "images/bm/Rare Flowah.png",
@@ -2006,6 +2024,7 @@ const monsters = [
   },
   {
     name: "Stogg",
+    audio: "sounds/Stogg_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Stogg.png",
       rare: "images/bm/Rare Stogg.png",
@@ -2019,6 +2038,7 @@ const monsters = [
   },
   {
     name: "Phangler",
+    audio: "sounds/Phangler_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Phangler.png",
       rare: "images/bm/Rare Phangler.png",
@@ -2032,6 +2052,7 @@ const monsters = [
   },
   {
     name: "Boskus",
+    audio: "sounds/Boskus_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Boskus.png",
       rare: "images/bm/Rare Boskus.png",
@@ -2045,6 +2066,7 @@ const monsters = [
   },
   {
     name: "Pummel",
+    audio: "sounds/Pummel_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Pummel.png",
       rare: "images/bm/Rare Pummel.png",
@@ -2058,6 +2080,7 @@ const monsters = [
   },
   {
     name: "Clamble",
+    audio: "sounds/Clamble_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Clamble.png",
       rare: "images/bm/Rare Clamble.png",
@@ -2071,6 +2094,7 @@ const monsters = [
   },
   {
     name: "Bowgart",
+    audio: "sounds/Bowgart_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Bowgart.png",
       rare: "images/bm/Rare Bowgart.png",
@@ -2084,6 +2108,7 @@ const monsters = [
   },
   {
     name: "T-Rox",
+    audio: "sounds/T-Rox_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/T-Rox.png",
       rare: "images/bm/Rare T-Rox.png",
@@ -2097,6 +2122,7 @@ const monsters = [
   },
   {
     name: "Entbrat",
+    audio: "sounds/Entbrat_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Entbrat.png",
       rare: "images/bm/Rare Entbrat.png",
@@ -2110,6 +2136,7 @@ const monsters = [
   },
   {
     name: "Shellbeat",
+    audio: "sounds/Shellbeat_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Shellbeat.png",
       rare: "images/bm/Rare Shellbeat.png",
@@ -2123,6 +2150,7 @@ const monsters = [
   },
   {
     name: "Quarrister",
+    audio: "sounds/Quarrister_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Quarrister.png",
       rare: "images/bm/Rare Quarrister.png",
@@ -2136,6 +2164,7 @@ const monsters = [
   },
   {
     name: "Deedge",
+    audio: "sounds/Deedge_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Deedge.png",
       rare: "images/bm/Rare Deedge.png",
@@ -2148,20 +2177,8 @@ const monsters = [
     }
   },
   {
-    name: "Riff",
-    image: {
-      normal: "images/bm/Riff.png",
-      rare: "images/bm/Rare Riff.png",
-      epic: "images/bm/Epic Riff.png",
-    },
-    stats: {
-      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
-      rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
-    }
-  },
-  {
     name: "Spunge",
+    audio: "sounds/Spunge_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Spunge.png",
       rare: "images/bm/Rare Spunge.png",
@@ -2175,6 +2192,7 @@ const monsters = [
   },
   {
     name: "Thumpies",
+    audio: "sounds/Thumpies_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Thumpies.png",
       rare: "images/bm/Rare Thumpies.png",
@@ -2188,6 +2206,7 @@ const monsters = [
   },
   {
     name: "Congle",
+    audio: "sounds/Congle_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Congle.png",
       rare: "images/bm/Rare Congle.png",
@@ -2201,6 +2220,7 @@ const monsters = [
   },
   {
     name: "Sneyser",
+    audio: "sounds/Sneyser_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Sneyser.png",
       rare: "images/bm/Rare Sneyser.png",
@@ -2214,6 +2234,7 @@ const monsters = [
   },
   {
     name: "Scups",
+    audio: "sounds/Scups_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Scups.png",
       rare: "images/bm/Rare Scups.png",
@@ -2227,6 +2248,7 @@ const monsters = [
   },
   {
     name: "PomPom",
+    audio: "sounds/PomPom_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/PomPom.png",
       rare: "images/bm/Rare PomPom.png",
@@ -2240,6 +2262,7 @@ const monsters = [
   },
   {
     name: "Reedling",
+    audio: "sounds/Reedling_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Reedling.png",
       rare: "images/bm/Rare Reedling.png",
@@ -2253,6 +2276,7 @@ const monsters = [
   },
   {
     name: "Tring",
+    audio: "sounds/Tring_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Tring.png",
       rare: "images/bm/Rare Tring.png",
@@ -2266,6 +2290,7 @@ const monsters = [
   },
   {
     name: "Barrb",
+    audio: "sounds/Barrb_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Barrb.png",
       rare: "images/bm/Rare Barrb.png",
@@ -2279,6 +2304,7 @@ const monsters = [
   },
   {
     name: "Floogull",
+    audio: "sounds/Floogull_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Floogull.png",
       rare: "images/bm/Rare Floogull.png",
@@ -2292,6 +2318,7 @@ const monsters = [
   },
   {
     name: "Repatillo",
+    audio: "sounds/Repatillo_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Repatillo.png",
       rare: "images/bm/Rare Repatillo.png",
@@ -2305,6 +2332,7 @@ const monsters = [
   },
   {
     name: "Whaddle",
+    audio: "sounds/Whaddle_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Whaddle.png",
       rare: "images/bm/Rare Whaddle.png",
@@ -2318,6 +2346,7 @@ const monsters = [
   },
   {
     name: "Woolabee",
+    audio: "sounds/Woolabee_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Woolabee.png",
       rare: "images/bm/Rare Woolabee.png",
@@ -2331,6 +2360,7 @@ const monsters = [
   },
   {
     name: "Wynq",
+    audio: "sounds/Wynq_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Wynq.png",
       rare: "images/bm/Rare Wynq.png",
@@ -2344,6 +2374,7 @@ const monsters = [
   },
   {
     name: "Thrumble",
+    audio: "sounds/Thrumble_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Thrumble.png",
       rare: "images/bm/Rare Thrumble.png",
@@ -2357,6 +2388,7 @@ const monsters = [
   },
   {
     name: "Rootitoot",
+    audio: "sounds/Rootitoot_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Rootitoot.png",
       rare: "images/bm/Rare Rootitoot.png",
@@ -2370,6 +2402,7 @@ const monsters = [
   },
   {
     name: "Sooza",
+    audio: "sounds/Sooza_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Sooza.png",
       rare: "images/bm/Rare Sooza.png",
@@ -2383,6 +2416,7 @@ const monsters = [
   },
   {
     name: "Ziggurab",
+    audio: "sounds/Ziggurab_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Ziggurab.png",
       rare: "images/bm/Rare Ziggurab.png",
@@ -2396,6 +2430,7 @@ const monsters = [
   },
   {
     name: "Blow't",
+    audio: "sounds/Blow't_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Blow_t.png",
       rare: "images/bm/Rare Blow_t.png",
@@ -2409,6 +2444,7 @@ const monsters = [
   },
   {
     name: "Gloptic",
+    audio: "sounds/Gloptic_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Gloptic.png",
       rare: "images/bm/Rare Gloptic.png",
@@ -2422,6 +2458,7 @@ const monsters = [
   },
   {
     name: "Hairionette (Major)",
+    audio: "sounds/Hairionette_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Hairionette (Major).png",
       rare: "images/bm/Rare Hairionette (Major).png",
@@ -2435,6 +2472,7 @@ const monsters = [
   },
   {
     name: "Hairionette (Minor)",
+    audio: "sounds/Hairionette_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Hairionette (Minor).png",
       rare: "images/bm/Rare Hairionette (Minor).png",
@@ -2448,6 +2486,7 @@ const monsters = [
   },
   {
     name: "Pladdie",
+    audio: "sounds/Pladdie_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Pladdie.png",
       rare: "images/bm/Rare Pladdie.png",
@@ -2461,6 +2500,7 @@ const monsters = [
   },
   {
     name: "Plinkajou",
+    audio: "sounds/Plinkajou_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Plinkajou.png",
       rare: "images/bm/Rare Plinkajou.png",
@@ -2474,6 +2514,7 @@ const monsters = [
   },
   {
     name: "Enchantling",
+    audio: "sounds/Enchantling_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Enchantling.png",
       rare: "images/bm/Rare Enchantling.png",
@@ -2487,6 +2528,7 @@ const monsters = [
   },
   {
     name: "Shugabush",
+    audio: "sounds/Shugabush_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Shugabush.png",
       rare: "images/bm/Rare Shugabush.png",
@@ -2498,9 +2540,9 @@ const monsters = [
       epic: ""
     }
   },
-
   {
     name: "Ghazt",
+    audio: "sounds/Ghazt_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Ghazt.png",
       rare: "images/bm/Rare Ghazt.png",
@@ -2514,6 +2556,7 @@ const monsters = [
   },
   {
     name: "Grumpyre",
+    audio: "sounds/Grumpyre_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Grumpyre.png",
       rare: "images/bm/Rare Grumpyre.png",
@@ -2527,6 +2570,7 @@ const monsters = [
   },
   {
     name: "Reebro",
+    audio: "sounds/Reebro_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Reebro.png",
       rare: "images/bm/Rare Reebro.png",
@@ -2540,6 +2584,7 @@ const monsters = [
   },
   {
     name: "Jeeode",
+    audio: "sounds/Jeeode_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Jeeode.png",
       rare: "images/bm/Rare Jeeode.png",
@@ -2553,140 +2598,151 @@ const monsters = [
   },
   {
     name: "Humbug",
+    audio: "sounds/Humbug_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Humbug.png",
       rare: "images/bm/Rare Humbug.png",
-      epic: "images/bm/Epic Humbug.png",
+      epic: "images/bm/Epic Humbug.png"
     },
     stats: {
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
+      epic: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>"
     }
   },
   {
     name: "Whisp",
+    audio: "sounds/Whisp_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Whisp.png",
       rare: "images/bm/Rare Whisp.png",
-      epic: "images/bm/Epic Whisp.png",
+      epic: "images/bm/Epic Whisp.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
+      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>"
     }
   },
   {
     name: "Nebulob",
+    audio: "sounds/Nebulob_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Nebulob.png",
       rare: "images/bm/Rare Nebulob.png",
-      epic: "images/bm/Epic Nebulob.png",
+      epic: "images/bm/Epic Nebulob.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
+      epic: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>"
     }
   },
   {
     name: "Arackulele",
+    audio: "sounds/Arackulele_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Arackulele.png",
       rare: "images/bm/Rare Arackulele.png",
-      epic: "images/bm/Epic Arackulele.png",
+      epic: "images/bm/Epic Arackulele.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
+      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>"
     }
   },
   {
     name: "Sox",
+    audio: "sounds/Sox_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Sox.png",
       rare: "images/bm/Rare Sox.png",
-      epic: "images/bm/Epic Sox.png",
+      epic: "images/bm/Epic Sox.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
+      epic: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>"
     }
   },
   {
     name: "Boodoo",
+    audio: "sounds/Boodoo_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Boodoo.png",
       rare: "images/bm/Rare Boodoo.png",
-      epic: "images/bm/Epic Boodoo.png",
+      epic: "images/bm/Epic Boodoo.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
+      epic: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>"
     }
   },
   {
     name: "Bellowfish",
+    audio: "sounds/Bellowfish_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Bellowfish.png",
       rare: "images/bm/Rare Bellowfish.png",
-      epic: "images/bm/Epic Bellowfish.png",
+      epic: "images/bm/Epic Bellowfish.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
+      epic: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>"
     }
   },
   {
     name: "Jellbilly",
+    audio: "sounds/Jellbilly_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Jellbilly.png",
       rare: "images/bm/Rare Jellbilly.png",
-      epic: "images/bm/Epic Jellbilly.png",
+      epic: "images/bm/Epic Jellbilly.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
     }
   },
   {
     name: "Kazilleon",
+    audio: "sounds/Kazilleon_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Kazilleon.png",
       rare: "images/bm/Rare Kazilleon.png",
-      epic: "images/bm/Epic Kazilleon.png",
+      epic: "images/bm/Epic Kazilleon.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
     }
   },
   {
     name: "Dragong",
+    audio: "sounds/Dragong_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Dragong.png",
       rare: "images/bm/Rare Dragong.png",
-      epic: "images/bm/Epic Dragong.png",
+      epic: "images/bm/Epic Dragong.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 12 hr <br> <br> Enhanced Time:   1 day 3 hr "
+      epic: "Epic Breeding Time: 1 day 12 hr <br> <br> Enhanced Time: 1 day 3 hr"
     }
   },
   {
     name: "Fung Pray",
+    audio: "sounds/Fung Pray_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Fung Pray.png",
       rare: "images/bm/Rare Fung Pray.png",
-      epic: "images/bm/Epic Fung Pray.png",
+      epic: "images/bm/Epic Fung Pray.png"
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
@@ -2696,23 +2752,25 @@ const monsters = [
   },
   {
     name: "G'joob",
+    audio: "sounds/G'joob_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/G_joob.png",
       rare: "images/bm/Rare G_joob.png",
-      epic: "images/bm/Epic G_joob.png",
+      epic: "images/bm/Epic G_joob.png"
     },
     stats: {
       normal: "Breeding Time: 18hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
+      epic: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>"
     }
   },
   {
     name: "Strombonin",
+    audio: "sounds/Strombonin_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Strombonin.png",
       rare: "images/bm/Rare Strombonin.png",
-      epic: "images/bm/Epic Strombonin.png",
+      epic: "images/bm/Epic Strombonin.png"
     },
     stats: {
       normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
@@ -2722,23 +2780,25 @@ const monsters = [
   },
   {
     name: "Yawstrich",
+    audio: "sounds/Yawstrich_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Yawstrich.png",
       rare: "images/bm/Rare Yawstrich.png",
-      epic: "images/bm/Epic Yawstrich.png",
+      epic: "images/bm/Epic Yawstrich.png"
     },
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      epic: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
     }
   },
   {
     name: "Anglow",
+    audio: "sounds/Anglow_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Anglow.png",
       rare: "images/bm/Rare Anglow.png",
-      epic: "images/bm/Epic Anglow.png",
+      epic: "images/bm/Epic Anglow.png"
     },
     stats: {
       normal: "Breeding Time: 33 hr, <br> <br> Enhanced Time: 24 hr 45 min <br>",
@@ -2748,10 +2808,11 @@ const monsters = [
   },
   {
     name: "Hyehehe",
+    audio: "sounds/Hyehehe_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Hyehehe.png",
       rare: "images/bm/Rare Hyehehe.png",
-      epic: "images/bm/Epic Hyehehe.png",
+      epic: "images/bm/Epic Hyehehe.png"
     },
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
@@ -2761,19 +2822,21 @@ const monsters = [
   },
   {
     name: "Buzzinga",
+    audio: "sounds/Buzzinga_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Buzzinga.png",
       rare: "images/bm/Rare Buzzinga.png",
-      epic: "images/bm/Epic Buzzinga.png",
+      epic: "images/bm/Epic Buzzinga.png"
     },
     stats: {
-      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr <br>",
-      rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
-      epic: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds"
+      normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
+      rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
+      epic: "Epic Breeding Time: 1 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 2 hr 30 min<br>"
     }
   },
   {
     name: "Cherubble",
+    audio: "sounds/Cherubble_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Cherubble.png",
       rare: "images/bm/Rare Cherubble.png",
@@ -2787,6 +2850,7 @@ const monsters = [
   },
   {
     name: "Cataliszt",
+    audio: "sounds/Cataliszt_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Cataliszt.png",
       rare: "images/bm/Rare Cataliszt.png",
@@ -2800,6 +2864,7 @@ const monsters = [
   },
   {
     name: "Bleatnik",
+    audio: "sounds/Bleatnik_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Bleatnik.png",
       rare: "images/bm/Rare Bleatnik.png",
@@ -2813,6 +2878,7 @@ const monsters = [
   },
   {
     name: "Cranchee",
+    audio: "sounds/Cranchee_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Cranchee.png",
       rare: "images/bm/Rare Cranchee.png",
@@ -2826,6 +2892,7 @@ const monsters = [
   },
   {
     name: "Sporerow",
+    audio: "sounds/Sporerow_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Sporerow.png",
       rare: "images/bm/Rare Sporerow.png",
@@ -2839,6 +2906,7 @@ const monsters = [
   },
   {
     name: "Pinghound",
+    audio: "sounds/Pinghound_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Pinghound.png",
       rare: "images/bm/Rare Pinghound.png",
@@ -2852,6 +2920,7 @@ const monsters = [
   },
   {
     name: "Wheezel",
+    audio: "sounds/Wheezel_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Wheezel.png",
       rare: "images/bm/Rare Wheezel.png",
@@ -2865,6 +2934,7 @@ const monsters = [
   },
   {
     name: "Knurv",
+    audio: "sounds/Knurv_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Knurv.png",
       rare: "images/bm/Rare Knurv.png",
@@ -2878,6 +2948,7 @@ const monsters = [
   },
   {
     name: "shLep",
+    audio: "sounds/shLep_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/shLep.png",
       rare: "images/bm/Rare shLep.png",
@@ -2891,6 +2962,7 @@ const monsters = [
   },
   {
     name: "Punkleton",
+    audio: "sounds/Punkleton_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Punkleton.png",
       rare: "images/bm/Rare Punkleton.png",
@@ -2904,6 +2976,7 @@ const monsters = [
   },
   {
     name: "Yool",
+    audio: "sounds/Yool_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Yool.png",
       rare: "images/bm/Rare Yool.png",
@@ -2917,6 +2990,7 @@ const monsters = [
   },
   {
     name: "Schmoochle",
+    audio: "sounds/Schmoochle_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Schmoochle.png",
       rare: "images/bm/Rare Schmoochle.png",
@@ -2930,6 +3004,7 @@ const monsters = [
   },
   {
     name: "Blabbit",
+    audio: "sounds/Blabbit_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Blabbit.png",
       rare: "images/bm/Rare Blabbit.png",
@@ -2943,6 +3018,7 @@ const monsters = [
   },
   {
     name: "Hoola",
+    audio: "sounds/Hoola_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Hoola.png",
       rare: "images/bm/Rare Hoola.png",
@@ -2956,6 +3032,7 @@ const monsters = [
   },
   {
     name: "Viveine",
+    audio: "sounds/Viveine_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Viveine.png",
       rare: "images/bm/Rare Viveine.png",
@@ -2969,6 +3046,7 @@ const monsters = [
   },
   {
     name: "Monculus",
+    audio: "sounds/Monculus_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Monculus.png",
       rare: "images/bm/Rare Monculus.png",
@@ -2982,6 +3060,7 @@ const monsters = [
   },
   {
     name: "Gobbleygourd",
+    audio: "sounds/Gobbleygourd_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Gobbleygourd.png",
       rare: "images/bm/Rare Gobbleygourd.png",
@@ -2995,6 +3074,7 @@ const monsters = [
   },
   {
     name: "Spurrit",
+    audio: "sounds/Spurrit_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Spurrit.png",
       rare: "images/bm/Rare Spurrit.png",
@@ -3006,9 +3086,9 @@ const monsters = [
       epic: "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
     }
   },
-
   {
     name: "Whiz-bang",
+    audio: "sounds/Whiz-bang_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Whiz-bang.png",
       rare: "images/bm/Rare Whiz-bang.png",
@@ -3021,592 +3101,638 @@ const monsters = [
     }
   },
   {
-    name: "Boo'qwurm",
-    image: {
-      normal: "images/bm/Boo_qwurm.png",
-      rare: "images/bm/Rare Boo_qwurm.png",
-      epic: "images/bm/Epic Boo_qwurm.png",
+    "name": "Boo'qwurm",
+    "audio": "sounds/Boo_qwurm_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Boo_qwurm.png",
+      "rare": "images/bm/Rare Boo_qwurm.png",
+      "epic": "images/bm/Epic Boo_qwurm.png"
     },
-    stats: {
-      normal: "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
-      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      epic: "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
+    "stats": {
+      "normal": "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
+      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      "epic": "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>"
     }
   },
   {
-    name: "Ffidyll",
-    image: {
-      normal: "images/bm/Ffidyll.png",
-      rare: "images/bm/Rare Ffidyll.png",
-      epic: "images/bm/Epic Ffidyll.png",
+    "name": "Ffidyll",
+    "audio": "sounds/Ffidyll_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Ffidyll.png",
+      "rare": "images/bm/Rare Ffidyll.png",
+      "epic": "images/bm/Epic Ffidyll.png"
     },
-    stats: {
-      normal: "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
-      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      epic: "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
+    "stats": {
+      "normal": "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
+      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      "epic": "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>"
     }
   },
   {
-    name: "Clavavera",
-    image: {
-      normal: "images/bm/Clavavera.png",
-      rare: "images/bm/Rare Clavavera.png",
-      epic: "images/bm/Epic Clavavera.png",
+    "name": "Clavavera",
+    "audio": "sounds/Clavavera_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Clavavera.png",
+      "rare": "images/bm/Rare Clavavera.png",
+      "epic": "images/bm/Epic Clavavera.png"
     },
-    stats: {
-      normal: "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
-      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      epic: "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
+    "stats": {
+      "normal": "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
+      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      "epic": "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>"
     }
   },
   {
-    name: "Carillong",
-    image: {
-      normal: "images/bm/Carillong.png",
-      rare: "images/bm/Rare Carillong.png",
-      epic: "images/bm/Epic Carillong.png",
+    "name": "Carillong",
+    "audio": "sounds/Carillong_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Carillong.png",
+      "rare": "images/bm/Rare Carillong.png",
+      "epic": "images/bm/Epic Carillong.png"
     },
-    stats: {
-      normal: "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
-      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      epic: "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
+    "stats": {
+      "normal": "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
+      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      "epic": "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>"
     }
   },
   {
-    name: "Jam Boree",
-    image: {
-      normal: "images/bm/Jam Boree - Year 11.png",
-      rare: "images/bm/Rare Jam Boree - Year 11.png",
-      epic: "images/bm/Epic Jam Boree - Year 11.png",
+    "name": "Jam Boree",
+    "audio": "sounds/Jam_Boree_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Jam Boree - Year 11.png",
+      "rare": "images/bm/Rare Jam Boree - Year 11.png",
+      "epic": "images/bm/Epic Jam Boree - Year 11.png"
     },
-    stats: {
-      normal: "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
-      rare: "Rare Breeding Time: 2 day 2 hr, <br> <br> Enhanced Time: 1 day 13 hr 30 min<br>",
-      epic: "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
+    "stats": {
+      "normal": "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
+      "rare": "Rare Breeding Time: 2 day 2 hr, <br> <br> Enhanced Time: 1 day 13 hr 30 min<br>",
+      "epic": "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>"
     }
   },
   {
-    name: "Fluoress",
-    image: {
-      normal: "images/bm/Fluoress.png",
-      rare: "images/bm/Rare Fluoress.png",
-      epic: "images/bm/Epic Fluoress.png",
+    "name": "Fluoress",
+    "audio": "sounds/Fluoress_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Fluoress.png",
+      "rare": "images/bm/Rare Fluoress.png",
+      "epic": "images/bm/Epic Fluoress.png"
     },
-    stats: {
-      normal: "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
-      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
+      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      "epic": ""
     }
   },
   {
-    name: "Theremind",
-    image: {
-      normal: "images/bm/Theremind.png",
-      rare: "images/bm/Rare Theremind.png",
-      epic: "images/bm/Epic Theremind.png",
+    "name": "Theremind",
+    "audio": "sounds/Theremind_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Theremind.png",
+      "rare": "images/bm/Rare Theremind.png",
+      "epic": "images/bm/Epic Theremind.png"
     },
-    stats: {
-      normal: "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
-      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
+      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      "epic": ""
     }
   },
   {
-    name: "Floot Fly",
-    image: {
-      normal: "images/bm/Floot Fly.png",
-      rare: "images/bm/Rare Floot Fly.png",
-      epic: "images/bm/Epic Floot Fly.png",
+    "name": "Floot Fly",
+    "audio": "sounds/Floot_Fly_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Floot Fly.png",
+      "rare": "images/bm/Rare Floot Fly.png",
+      "epic": "images/bm/Epic Floot Fly.png"
     },
-    stats: {
-      normal: "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
-      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
+      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      "epic": ""
     }
   },
   {
-    name: "Clackula",
-    image: {
-      normal: "images/bm/Clackula.png",
-      rare: "images/bm/Rare Clackula.png",
-      epic: "images/bm/Epic Clackula.png",
+    "name": "Clackula",
+    "audio": "sounds/Clackula_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Clackula.png",
+      "rare": "images/bm/Rare Clackula.png",
+      "epic": "images/bm/Epic Clackula.png"
     },
-    stats: {
-      normal: "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
-      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      "epic": ""
     }
   },
   {
-    name: "Gob",
-    image: {
-      normal: "images/bm/Gob.png",
-      rare: "images/bm/Rare Gob.png",
-      epic: "images/bm/Epic Gob.png",
+    "name": "Gob",
+    "audio": "sounds/Gob_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Gob.png",
+      "rare": "images/bm/Rare Gob.png",
+      "epic": "images/bm/Epic Gob.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Bulbo",
-    image: {
-      normal: "images/bm/Bulbo.png",
-      rare: "images/bm/Rare Bulbo.png",
-      epic: "images/bm/Epic Bulbo.png",
+    "name": "Bulbo",
+    "audio": "sounds/Bulbo_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Bulbo.png",
+      "rare": "images/bm/Rare Bulbo.png",
+      "epic": "images/bm/Epic Bulbo.png"
     },
-    stats: {
-      normal: "Breding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min <br> <br> Enchanced Time: 9 hr 22 min 30 sec <br>",
-      epic: ""
+    "stats": {
+      "normal": "Breding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min <br> <br> Enchanced Time: 9 hr 22 min 30 sec <br>",
+      "epic": ""
     }
   },
   {
-    name: "Pluckbill",
-    image: {
-      normal: "images/bm/Pluckbill.png",
-      rare: "images/bm/Rare Pluckbill.png",
-      epic: "images/bm/Epic Pluckbill.png",
+    "name": "Pluckbill",
+    "audio": "sounds/Pluckbill_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Pluckbill.png",
+      "rare": "images/bm/Rare Pluckbill.png",
+      "epic": "images/bm/Epic Pluckbill.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Bonkers",
-    image: {
-      normal: "images/bm/Bonkers.png",
-      rare: "images/bm/Rare Bonkers.png",
-      epic: "images/bm/Epic Bonkers.png",
+    "name": "Bonkers",
+    "audio": "sounds/Bonkers_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Bonkers.png",
+      "rare": "images/bm/Rare Bonkers.png",
+      "epic": "images/bm/Epic Bonkers.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Poppette",
-    image: {
-      normal: "images/bm/Poppette.png",
-      rare: "images/bm/Rare Poppette.png",
-      epic: "images/bm/Epic Poppette.png",
+    "name": "Poppette",
+    "audio": "sounds/Poppette_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Poppette.png",
+      "rare": "images/bm/Rare Poppette.png",
+      "epic": "images/bm/Epic Poppette.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Yuggler",
-    image: {
-      normal: "images/bm/Yuggler.png",
-      rare: "images/bm/Rare Yuggler.png",
-      epic: "images/bm/Epic Yuggler.png",
+    "name": "Yuggler",
+    "audio": "sounds/Yuggler_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Yuggler.png",
+      "rare": "images/bm/Rare Yuggler.png",
+      "epic": "images/bm/Epic Yuggler.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "HippityHop",
-    image: {
-      normal: "images/bm/HippityHop.png",
-      rare: "images/bm/Rare HippityHop.png",
-      epic: "images/bm/Epic HippityHop.png",
+    "name": "HippityHop",
+    "audio": "sounds/HippityHop_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/HippityHop.png",
+      "rare": "images/bm/Rare HippityHop.png",
+      "epic": "images/bm/Epic HippityHop.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Squot",
-    image: {
-      normal: "images/bm/Squot.png",
-      rare: "images/bm/Rare Squot.png",
-      epic: "images/bm/Epic Squot.png",
+    "name": "Squot",
+    "audio": "sounds/Squot_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Squot.png",
+      "rare": "images/bm/Rare Squot.png",
+      "epic": "images/bm/Epic Squot.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Wimmzies",
-    image: {
-      normal: "images/bm/Wimmzies.png",
-      rare: "images/bm/Rare Wimmzies.png",
-      epic: "images/bm/Epic Wimmzies.png",
+    "name": "Wimmzies",
+    "audio": "sounds/Wimmzies_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Wimmzies.png",
+      "rare": "images/bm/Rare Wimmzies.png",
+      "epic": "images/bm/Epic Wimmzies.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Peckidna",
-    image: {
-      normal: "images/bm/Peckidna.png",
-      rare: "images/bm/Rare Peckidna.png",
-      epic: "images/bm/Epic Peckidna.png",
+    "name": "Peckidna",
+    "audio": "sounds/Peckidna_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Peckidna.png",
+      "rare": "images/bm/Rare Peckidna.png",
+      "epic": "images/bm/Epic Peckidna.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Denchuhs",
-    image: {
-      normal: "images/bm/Denchuhs.png",
-      rare: "images/bm/Rare Denchuhs.png",
-      epic: "images/bm/Epic Denchuhs.png",
+    "name": "Denchuhs",
+    "audio": "sounds/Denchuhs_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Denchuhs.png",
+      "rare": "images/bm/Rare Denchuhs.png",
+      "epic": "images/bm/Epic Denchuhs.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec <br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec <br>",
+      "epic": ""
     }
   },
   {
-    name: "Hawlo",
-    image: {
-      normal: "images/bm/Hawlo.png",
-      rare: "images/bm/Rare Hawlo.png",
-      epic: "images/bm/Epic Hawlo.png",
+    "name": "Hawlo",
+    "audio": "sounds/Hawlo_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Hawlo.png",
+      "rare": "images/bm/Rare Hawlo.png",
+      "epic": "images/bm/Epic Hawlo.png"
     },
-    stats: {
-      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Xyster",
-    image: {
-      normal: "images/bm/Xyster.png",
-      rare: "images/bm/Rare Xyster.png",
-      epic: "images/bm/Epic Xyster.png",
+    "name": "Xyster",
+    "audio": "sounds/Xyster_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Xyster.png",
+      "rare": "images/bm/Rare Xyster.png",
+      "epic": "images/bm/Epic Xyster.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Cahoot",
-    image: {
-      normal: "images/bm/Cahoot.png",
-      rare: "images/bm/Rare Cahoot.png",
-      epic: "images/bm/Epic Cahoot.png",
+    "name": "Cahoot",
+    "audio": "sounds/Cahoot_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Cahoot.png",
+      "rare": "images/bm/Rare Cahoot.png",
+      "epic": "images/bm/Epic Cahoot.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Deja-Jin",
-    image: {
-      normal: "images/bm/Déjà-Jin.png",
-      rare: "images/bm/Rare Déjà-Jin.png",
-      epic: "images/bm/Epic Déjà-Jin.png",
+    "name": "Deja-Jin",
+    "audio": "sounds/Deja-Jin_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Déjà-Jin.png",
+      "rare": "images/bm/Rare Déjà-Jin.png",
+      "epic": "images/bm/Epic Déjà-Jin.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Roarick",
-    image: {
-      normal: "images/bm/Roarick.png",
-      rare: "images/bm/Rare Roarick.png",
-      epic: "images/bm/Epic Roarick.png",
+    "name": "Roarick",
+    "audio": "sounds/Roarick_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Roarick.png",
+      "rare": "images/bm/Rare Roarick.png",
+      "epic": "images/bm/Epic Roarick.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "1 day 2 hr 30 min <br> <br> 19 hr 52 min 30 sec",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "1 day 2 hr 30 min <br> <br> 19 hr 52 min 30 sec",
+      "epic": ""
     }
   },
   {
-    name: "Osstax",
-    image: {
-      normal: "images/bm/Osstax.png",
-      rare: "images/bm/Rare Osstax.png",
-      epic: "images/bm/Epic Osstax.png",
+    "name": "Osstax",
+    "audio": "sounds/Osstax_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Osstax.png",
+      "rare": "images/bm/Rare Osstax.png",
+      "epic": "images/bm/Epic Osstax.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Knucklehead",
-    image: {
-      normal: "images/bm/Knucklehead.png",
-      rare: "images/bm/Rare Knucklehead.png",
-      epic: "images/bm/Epic Knucklehead.png",
+    "name": "Knucklehead",
+    "audio": "sounds/Knucklehead_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Knucklehead.png",
+      "rare": "images/bm/Rare Knucklehead.png",
+      "epic": "images/bm/Epic Knucklehead.png"
     },
-    stats: {
-      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Spytrap",
-    image: {
-      normal: "images/bm/Spytrap.png",
-      rare: "images/bm/Rare Spytrap.png",
-      epic: "images/bm/Epic Spytrap.png",
+    "name": "Spytrap",
+    "audio": "sounds/Spytrap_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Spytrap.png",
+      "rare": "images/bm/Rare Spytrap.png",
+      "epic": "images/bm/Epic Spytrap.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
+      "epic": ""
     }
   },
   {
-    name: "TooToo",
-    image: {
-      normal: "images/bm/TooToo.png",
-      rare: "images/bm/Rare TooToo.png",
-      epic: "images/bm/Epic TooToo.png",
+    "name": "TooToo",
+    "audio": "sounds/TooToo_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/TooToo.png",
+      "rare": "images/bm/Rare TooToo.png",
+      "epic": "images/bm/Epic TooToo.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Fiddlement",
-    image: {
-      normal: "images/bm/Fiddlement.png",
-      rare: "images/bm/Rare Fiddlement.png",
-      epic: "images/bm/Epic Fiddlement.png",
+    "name": "Fiddlement",
+    "audio": "sounds/Fiddlement_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Fiddlement.png",
+      "rare": "images/bm/Rare Fiddlement.png",
+      "epic": "images/bm/Epic Fiddlement.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
-      rare: "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
+      "rare": "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      "epic": ""
     }
   },
   {
-    name: "Tapricorn",
-    image: {
-      normal: "images/bm/Tapricorn.png",
-      rare: "images/bm/Rare Tapricorn.png",
-      epic: "images/bm/Epic Tapricorn.png",
+    "name": "Tapricorn",
+    "audio": "sounds/Tapricorn_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Tapricorn.png",
+      "rare": "images/bm/Rare Tapricorn.png",
+      "epic": "images/bm/Epic Tapricorn.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Rooba",
-    image: {
-      normal: "images/bm/Rooba.png",
-      rare: "images/bm/Rare Rooba.png",
-      epic: "images/bm/Epic Rooba.png",
+    "name": "Rooba",
+    "audio": "sounds/Rooba_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Rooba.png",
+      "rare": "images/bm/Rare Rooba.png",
+      "epic": "images/bm/Epic Rooba.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Periscorp",
-    image: {
-      normal: "images/bm/Periscorp.png",
-      rare: "images/bm/Rare Periscorp.png",
-      epic: "images/bm/Epic Periscorp.png",
+    "name": "Periscorp",
+    "audio": "sounds/Periscorp_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Periscorp.png",
+      "rare": "images/bm/Rare Periscorp.png",
+      "epic": "images/bm/Epic Periscorp.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Cantorell",
-    image: {
-      normal: "images/bm/Cantorell.png",
-      rare: "images/bm/Rare_Cantorell.jpg",
-      epic: "images/bm/Epic Cantorell.png",
+    "name": "Cantorell",
+    "audio": "sounds/Cantorell_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Cantorell.png",
+      "rare": "images/bm/Rare_Cantorell.jpg",
+      "epic": "images/bm/Epic Cantorell.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Bridg-it",
-    image: {
-      normal: "images/bm/Bridg-it.png",
-      rare: "images/bm/Rare Bridg-it.png",
-      epic: "images/bm/Epic Bridg-it.png",
+    "name": "Bridg-it",
+    "audio": "sounds/Bridg-it_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Bridg-it.png",
+      "rare": "images/bm/Rare Bridg-it.png",
+      "epic": "images/bm/Epic Bridg-it.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Clavi Gnat",
-    image: {
-      normal: "images/bm/Clavi Gnat.png",
-      rare: "images/bm/Rare Clavi Gnat.png",
-      epic: "images/bm/Epic Clavi Gnat.png",
+    "name": "Clavi Gnat",
+    "audio": "sounds/Clavi_Gnat_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Clavi Gnat.png",
+      "rare": "images/bm/Rare Clavi Gnat.png",
+      "epic": "images/bm/Epic Clavi Gnat.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      "epic": ""
     }
   },
   {
-    name: "Withur",
-    image: {
-      normal: "images/bm/Withur.png",
-      rare: "images/bm/Rare Withur.png",
-      epic: "images/bm/Epic Withur.png",
+    "name": "Withur",
+    "audio": "sounds/Withur_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Withur.png",
+      "rare": "images/bm/Rare Withur.png",
+      "epic": "images/bm/Epic Withur.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "Uuduk",
-    image: {
-      normal: "images/bm/Uuduk.png",
-      rare: "images/bm/Rare Uuduk.png",
-      epic: "images/bm/Epic Uuduk.png",
+    "name": "Uuduk",
+    "audio": "sounds/Uuduk_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Uuduk.png",
+      "rare": "images/bm/Rare Uuduk.png",
+      "epic": "images/bm/Epic Uuduk.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      "epic": ""
     }
   },
   {
-    name: "Banjaw",
-    image: {
-      normal: "images/bm/Banjaw.png",
-      rare: "images/bm/Rare Banjaw.png",
-      epic: "images/bm/Epic Banjaw.png"
+    "name": "Banjaw",
+    "audio": "sounds/Banjaw_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Banjaw.png",
+      "rare": "images/bm/Rare Banjaw.png",
+      "epic": "images/bm/Epic Banjaw.png"
     },
-    stats: {
-      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      "epic": ""
     }
   },
   {
-    name: "G'day",
-    image: {
-      normal: "images/bm/G_day.png",
-      rare: "images/bm/Rare G'day.png",
-      epic: "images/bm/Epic G_day.png",
+    "name": "G'day",
+    "audio": "sounds/G_day_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/G_day.png",
+      "rare": "images/bm/Rare G'day.png",
+      "epic": "images/bm/Epic G_day.png"
     },
-    stats: {
-      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "Breeding Time: 1 day 13 hr 30 min <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec ",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      "rare": "Breeding Time: 1 day 13 hr 30 min <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec ",
+      "epic": ""
     }
   },
   {
-    name: "Larvaluss",
-    image: {
-      normal: "images/bm/Larvaluss.png",
-      rare: "images/bm/Rare Larvaluss.png",
-      epic: "images/bm/Epic Larvaluss.png",
+    "name": "Larvaluss",
+    "audio": "sounds/Larvaluss_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Larvaluss.png",
+      "rare": "images/bm/Rare Larvaluss.png",
+      "epic": "images/bm/Epic Larvaluss.png"
     },
-    stats: {
-      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Frondley",
-    image: {
-      normal: "images/bm/Frondley.png",
-      rare: "images/bm/Rare Frondley.png",
-      epic: "images/bm/Epic Frondley.png",
+    "name": "Frondley",
+    "audio": "sounds/Frondley_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Frondley.png",
+      "rare": "images/bm/Rare Frondley.png",
+      "epic": "images/bm/Epic Frondley.png"
     },
-    stats: {
-      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      "rare": "",
+      "epic": ""
     }
   },
   {
-    name: "Mushaboom",
-    image: {
-      normal: "images/bm/Mushaboom.png",
-      rare: "images/bm/Rare Mushaboom.png",
-      epic: "images/bm/Epic Mushaboom.png",
+    "name": "Mushaboom",
+    "audio": "sounds/Mushaboom_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Mushaboom.png",
+      "rare": "images/bm/Rare Mushaboom.png",
+      "epic": "images/bm/Epic Mushaboom.png"
     },
-    stats: {
-      normal: "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      "rare": "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
+      "epic": ""
     }
   },
   {
-    name: "Gnarls",
-    image: {
-      normal: "images/bm/Gnarls.png",
-      rare: "images/bm/Rare Gnarls.png",
-      epic: "images/bm/Epic Gnarls.png",
+    "name": "Gnarls",
+    "audio": "sounds/Gnarls_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Gnarls.png",
+      "rare": "images/bm/Rare Gnarls.png",
+      "epic": "images/bm/Epic Gnarls.png"
     },
-    stats: {
-      normal: "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
-      rare: "15,000 Starpower <br> <br> Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
-      epic: ""
+    "stats": {
+      "normal": "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
+      "rare": "15,000 Starpower <br> <br> Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
+      "epic": ""
     }
   },
   {
-    name: "Bisonorus",
-    image: {
-      normal: "images/bm/Bisonorus.png",
-      rare: "images/bm/Rare Bisonorus.png",
-      epic: "images/bm/Epic Bisonorus.png",
+    "name": "Bisonorus",
+    "audio": "sounds/Bisonorus_Memory_Sample.mp3.mpeg",
+    "image": {
+      "normal": "images/bm/Bisonorus.png",
+      "rare": "images/bm/Rare Bisonorus.png",
+      "epic": "images/bm/Epic Bisonorus.png"
     },
-    stats: {
-      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
-      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: ""
+    "stats": {
+      "normal": "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      "rare": "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
+      "epic": ""
     }
   },
   {
     name: "Yelmut",
+    audio: "sounds/Yelmut_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Yelmut.png",
       rare: "images/bm/Rare Yelmut.png",
@@ -3620,6 +3746,7 @@ const monsters = [
   },
   {
     name: "Flum Ox",
+    audio: "sounds/Flum Ox_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Flum Ox.png",
       rare: "images/bm/Rare Flum Ox.png",
@@ -3633,6 +3760,7 @@ const monsters = [
   },
   {
     name: "Krillby",
+    audio: "sounds/Krillby_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Krillby.png",
       rare: "images/bm/Rare Krillby.png",
@@ -3644,10 +3772,9 @@ const monsters = [
       epic: "1 day 19 hr <br> <br> Enhanced Time: 1 day 8 hr 15 min <br> <br> Evolution Success: 1 day 19 hr <br> <br> Fail: 20 hours"
     }
   },
-
-
   {
     name: "Edamimi",
+    audio: "sounds/Edamimi_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Edamimi.png",
       rare: "images/bm/Rare Edamimi.png",
@@ -3661,6 +3788,7 @@ const monsters = [
   },
   {
     name: "Tiawa",
+    audio: "sounds/Tiawa_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Tiawa.png",
       rare: "images/bm/Rare Tiawa.png",
@@ -3674,267 +3802,284 @@ const monsters = [
   },
   {
     name: "Candelavra",
+    audio: "sounds/Candelavra_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Candelavra.png",
       rare: "images/bm/Rare Candelavra.png",
       epic: "images/bm/Epic Candelavra.png",
     },
     stats: {
-      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
   {
     name: "Drummidary",
+    audio: "sounds/Drummidary_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Drummidary.png",
       rare: "images/bm/Rare Drummidary.png",
       epic: "images/bm/Epic Drummidary.png",
     },
     stats: {
-      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
-
   {
     name: "Bowhead",
+    audio: "sounds/Bowhead_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Bowhead.png",
       rare: "images/bm/Rare Bowhead.png",
       epic: "images/bm/Epic Bowhead.png",
     },
     stats: {
-      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
   {
     name: "Tuskski",
+    audio: "sounds/Tuskski_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Tuskski.png",
       rare: "images/bm/Rare Tuskski.png",
       epic: "images/bm/Epic Tuskski.png",
     },
     stats: {
-      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
-
   {
     name: "Yooreek",
+    audio: "sounds/Yooreek_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Yooreek.png",
       rare: "images/bm/Rare Yooreek.png",
       epic: "images/bm/Epic Yooreek.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Meebkin",
+    audio: "sounds/Meebkin_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Meebkin.png",
       rare: "images/bm/Rare Meebkin.png",
       epic: "images/bm/Epic Meebkin.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Blarret",
+    audio: "sounds/Blarret_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Blarret.png",
       rare: "images/bm/Rare Blarret.png",
       epic: "images/bm/Epic Blarret.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Gaddzooks",
+    audio: "sounds/Gaddzooks_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Gaddzooks.png",
       rare: "images/bm/Rare Gaddzooks.png",
       epic: "images/bm/Epic Gaddzooks.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Auglur",
+    audio: "sounds/Auglur_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Auglur.png",
       rare: "images/bm/Rare Auglur.png",
       epic: "images/bm/Epic Auglur.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Flasque",
+    audio: "sounds/Flasque_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Flasque.png",
       rare: "images/bm/Rare Auglur.png",
       epic: "images/bm/Epic Flasque.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Nitebear",
+    audio: "sounds/Nitebear_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Nitebear.png",
       rare: "images/bm/Rare Nitebear.png",
       epic: "images/bm/Epic Nitebear.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Piplash",
+    audio: "sounds/Piplash_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Piplash.png",
       rare: "images/bm/Rare Piplash.png",
       epic: "images/bm/Epic Piplash.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "X'rt",
+    audio: "sounds/X_rt_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/X_rt.png",
       rare: "images/bm/Rare X_rt.png",
       epic: "images/bm/Epic X_rt.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Teeter-Tauter",
+    audio: "sounds/Teeter-Tauter_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Teeter-Tauter.png",
       rare: "images/bm/Rare Teeter-Tauter.png",
       epic: "images/bm/Epic Teeter-Tauter.png",
     },
     stats: {
-      normal: "Success: 1 day 6 hr Failure: 10 hr",
+      normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Whaill",
+    audio: "sounds/Whaill_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Whaill.png",
       rare: "images/bm/Rare Whaill.png",
       epic: "images/bm/Epic Whaill.png",
     },
     stats: {
-      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Vhenshun",
+    audio: "sounds/Vhenshun_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Vhenshun.png",
       rare: "images/bm/Rare Vhenshun.png",
       epic: "images/bm/Epic Vhenshun.png",
     },
     stats: {
-      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Pentumbra",
+    audio: "sounds/Pentumbra_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Pentumbra.png",
       rare: "images/bm/Rare Pentumbra.png",
       epic: "images/bm/Epic Pentumbra.png",
     },
     stats: {
-      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Rhysmuth",
+    audio: "sounds/Rhysmuth_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Rhysmuth.png",
       rare: "images/bm/Rare Rhysmuth.png",
       epic: "images/bm/Epic Rhysmuth.png",
     },
     stats: {
-      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "Oogiddy",
+    audio: "sounds/Oogiddy_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Oogiddy.png",
       rare: "images/bm/Rare Oogiddy.png",
       epic: "images/bm/Epic Oogiddy.png",
     },
     stats: {
-      normal: "Success: 1 day 18 hr Failure: 17 hr",
+      normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
       epic: ""
     }
   },
   {
     name: "BeMeebEth",
+    audio: "sounds/BeMeebEth_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/BeMeebEth.png",
       rare: "images/bm/Rare BeMeebEth.png",
       epic: "images/bm/Epic BeMeebEth.png",
     },
     stats: {
-      normal: "Success: 2 day 7 hr Failure: 22 hr",
+      normal: "Success: 2 day 7 hr <br><br> Failure: 22 hr",
       rare: "",
       epic: ""
     }
   },
-
   {
     name: "Meeb",
     image: {
@@ -4015,6 +4160,7 @@ const monsters = [
   },
   {
     name: "Lowb",
+    audio: "sounds/Lowb_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Lowb.png",
       rare: "images/bm/Rare Lowb.png",
@@ -4028,6 +4174,7 @@ const monsters = [
   },
   {
     name: "Owlesque",
+    audio: "sounds/Owlesque_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Owlesque (Major).png",
       rare: "images/bm/Rare Owlesque (Major).png",
@@ -4041,6 +4188,7 @@ const monsters = [
   },
   {
     name: "PongPing",
+    audio: "sounds/PongPing_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/PongPing.png",
       rare: "images/bm/Rare PongPing.png",
@@ -4051,9 +4199,10 @@ const monsters = [
       rare: "10,000 <br><br> Breeding Time: 2 days 4 hr 30 min <br><br> Enhanced Time: 1 day 15 hr 30 sec",
       epic: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min"
     }
-  }, 
+  },
   {
     name: "Mimic",
+    audio: "sounds/Mimic_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Mimic.png",
       rare: "images/bm/Rare Mimic.png",
@@ -4064,8 +4213,452 @@ const monsters = [
       rare: "",
       epic: ""
     }
-  }, 
+  },
+
+  // ADDING WUBLINS + `WUBBOX`'S (Normal + Rare + Epic :))
+  {
+    name: "Brump",
+    audio: "sounds/Brump_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Brump.png",
+      rare: "images/bm/Rare Brump.png",
+      epic: "images/bm/Epic Brump.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Zynth",
+    audio: "sounds/Zynth_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Zynth.png",
+      rare: "images/bm/Rare Zynth.png",
+      epic: "images/bm/Epic Zynth.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Poewk",
+    audio: "sounds/Poewk_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Poewk.png",
+      rare: "images/bm/Rare Poewk.png",
+      epic: "images/bm/Epic Poewk.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Thwok",
+    audio: "sounds/Thwok_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Thwok.png",
+      rare: "images/bm/Rare Thwok.png",
+      epic: "images/bm/Epic Thwok.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Dwumrohl",
+    audio: "sounds/Dwumrohl_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Dwumrohl.png",
+      rare: "images/bm/Rare Dwumrohl.png",
+      epic: "images/bm/Epic Dwumrohl.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Zuuker",
+    audio: "sounds/Zuuker_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Zuuker.png",
+      rare: "images/bm/Rare Zuuker.png",
+      epic: "images/bm/Epic Zuuker.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Screemu",
+    audio: "sounds/Screemu_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Screemu.png",
+      rare: "images/bm/Rare Screemu.png",
+      epic: "images/bm/Epic Screemu.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Tympa",
+    audio: "sounds/Tympa_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Tympa.png",
+      rare: "images/bm/Rare Tympa.png",
+      epic: "images/bm/Epic Tympa.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "",
+    audio: "sounds/Dermit_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Dermit.png",
+      rare: "images/bm/Rare Dermit.png",
+      epic: "images/bm/Epic Dermit.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Gheegur",
+    audio: "sounds/Gheegur_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Gheegur.png",
+      rare: "images/bm/Rare Gheegur.png",
+      epic: "images/bm/Epic Gheegur.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Whajje",
+    audio: "sounds/Whajje_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Whajje.png",
+      rare: "images/bm/Rare Whajje.png",
+      epic: "images/bm/Epic Whajje.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Creepuscule",
+    audio: "sounds/Creepuscule_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Creepuscule.png",
+      rare: "images/bm/Rare Creepuscule.png",
+      epic: "images/bm/Epic Creepuscule.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Blipsqueak",
+    audio: "sounds/Blipsqueak_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Blipsqueak.png",
+      rare: "images/bm/Rare Blipsqueak.png",
+      epic: "images/bm/Epic Blipsqueak.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Scargo",
+    audio: "sounds/Scargo_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Scargo.png",
+      rare: "images/bm/Rare Scargo.png",
+      epic: "images/bm/Epic Scargo.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Astropod",
+    audio: "sounds/_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Astropod.png",
+      rare: "images/bm/Rare Astropod.png",
+      epic: "images/bm/Epic Astropod.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Pixolotl",
+    audio: "sounds/Pixolotl_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Pixolotl.png",
+      rare: "images/bm/Rare Pixolotl.png",
+      epic: "images/bm/Epic Pixolotl.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+
+
+  {
+    name: "Bona-Petite",
+    audio: "sounds/Bona-Petite_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Bona-Petite.png",
+      rare: "images/bm/Rare Bona-Petite.png",
+      epic: "images/bm/Epic Bona-Petite.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Maulch",
+    audio: "sounds/Maulch_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Maulch.png",
+      rare: "images/bm/Rare Maulch.png",
+      epic: "images/bm/Epic Maulch.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Fleechwurm",
+    audio: "sounds/Fleechwurm_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Fleechwurm.png",
+      rare: "images/bm/Rare Fleechwurm.png",
+      epic: "images/bm/Epic Fleechwurm.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Wubbox",
+    audio: "sounds/Wubbox_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Wubbox.png",
+      rare: "images/bm/Rare Wubbox.png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Wubbox",
+    audio: "sounds/Rare_Wubbox_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Rare Wubbox.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Plant)",
+    audio: "sounds/Epic_Wubbox_(Plant)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Plant.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Cold)",
+    audio: "sounds/Epic_Wubbox_(Cold)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Cold.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Air)",
+    audio: "sounds/Epic_Wubbox_(Air)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Air.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+
+  {
+    name: "Epic Wubbox (Water)",
+    audio: "sounds/Epic_Wubbox_(Water)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Water.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Earth)",
+    audio: "sounds/Epic_Wubbox_(Earth)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Earth.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Haven)",
+    audio: "sounds/Epic_Wubbox_(Haven)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Haven.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Oasis)",
+    audio: "sounds/Epic_Wubbox_(Oasis)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Oasis.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Ethereal)",
+    audio: "sounds/Epic_Wubbox_(Ethereal)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Ethereal.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Epic Wubbox (Gold)",
+    audio: "sounds/Epic_Wubbox_(Gold-Earth)_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Gold (Neutral).png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+
 ];
+
+/**
+  {
+    name: "",
+    audio: "sounds/_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+ */
 
 const epicBreedingCombinations = {
   "Tweedle": [`Deedge + Dandidoo <br> Riff + Cybop <br> Shellbeat + Quibble <br> Quarrister + Pango <br> Tring + Shrubb <br> Sneyser + Maw`],
@@ -4154,15 +4747,15 @@ const epicBreedingCombinations = {
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
 const monsterData = Object.fromEntries(
-  monsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats }])
+  monsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
 );
 
 const epicMonsterData = Object.fromEntries(
-  epicmonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats }])
+  epicmonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
 );
 
 const rareMonsterData = Object.fromEntries(
-  raremonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats }])
+  raremonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
 );
 
 // Valid breeding combinations
@@ -4364,7 +4957,7 @@ const breedingCombinations = {
   "Scups + Pummel": ["Anglow"],
   "Thumpies + PomPom": ["Hyehehe"],
   "Congle + Woolabee": ["Cherubble"],
-  "Cataliszt + G'joob": ["Bleatnik","Epic Strombonin"],
+  "Cataliszt + G'joob": ["Bleatnik", "Epic Strombonin"],
   "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
   "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob", "Rare Sporerow"],
   "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
@@ -4615,7 +5208,7 @@ const breedingCombinations = {
   "Congle + Boskus": ["Epic Wynq"],
   "Spunge + Cybop": ["Epic Shellbeat"],
   "Clamble + Dandidoo": ["Epic Quarrister"],
-  "Pango + Bowgart": ["Epic Deedge"], 
+  "Pango + Bowgart": ["Epic Deedge"],
   "PomPom + Quibble": ["Epic Riff"],
   "T-Rox + Shrubb": ["Epic Entbrat"],
   "Barrb + Stogg": ["Epic Tring"],
@@ -4677,8 +5270,8 @@ const breedingCombinations = {
   //Update V3 ~Seasonal Fix :)
   "Kayna + Barrb": ["Buzzinga"],
   "Withur + Clackula": ["Clavavera"],
-  "Shugabush + Oaktopus": ["Viveine","Epic Mammott"],
-  "Punkleton + Hoola": ["Jam Boree","Epic Schmoochle"],
+  "Shugabush + Oaktopus": ["Viveine", "Epic Mammott"],
+  "Punkleton + Hoola": ["Jam Boree", "Epic Schmoochle"],
   "Schmoochle + Yool": ["Carillong"],
   "Mushaboom + Roarick": ["Carillong"],
   "Blow't + Spytrap": ["Whiz-bang"],
@@ -4687,7 +5280,7 @@ const breedingCombinations = {
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
 
-  "500 Relics": ["Mimic"], 
+  "500 Relics": ["Mimic"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
@@ -4953,6 +5546,27 @@ searchMonsterInput.addEventListener('input', () => {
 
         tabContainer.appendChild(tab); // Add the tab to the tab container
       });
+      function playMonsterSound(monsterName) {
+        const monster = monsterData[monsterName];
+        if (monster && monster.audio) {
+          const audio = new Audio(monsterInfo.audio);
+          audio.play().catch(err => console.error('Playback error:', err));
+        } else {
+          console.warn('No audio found for monster:', monsterName);
+        }
+      }
+      // After creating tabContainer
+      const volumeButton = document.createElement('button');
+      volumeButton.classList.add('volume-button');
+      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+      volumeButton.title = 'Play Sound';
+      let monsterAudio = monsterInfo.audio;
+      volumeButton.addEventListener('click', () => {
+        console.log(monsterAudio);
+        console.log('Play sound for', query.audio);
+        playMonsterSound(query); // assuming `query` is the selected monster's name
+      });
+      tabContainer.appendChild(volumeButton);
 
       imageContainer.appendChild(tabContainer); // Append tabs to image container
       imageContainer.appendChild(tabContentContainer); // Append content area to image container
@@ -4969,6 +5583,7 @@ searchMonsterInput.addEventListener('input', () => {
     combinationsContainer.innerHTML = ''; // Clear results if input is empty
   }
 });
+
 
 
 breedButton.addEventListener('click', () => {
@@ -5057,6 +5672,34 @@ breedButton.addEventListener('click', () => {
 
         tabContainer.appendChild(tab);
       });
+      function playMonsterSound(monsterName) {
+        const monster = monsterData[monsterName];
+        if (monster && monster.audio) {
+          const audio = new Audio(monsterInfo.audio);
+          audio.play().catch(err => console.error('Playback error:', err));
+        } else {
+          console.warn('No audio found for monster:', monsterName);
+        }
+      }
+      // After creating tabContainer
+      const volumeButton = document.createElement('button');
+      volumeButton.classList.add('volume-button');
+      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+      volumeButton.title = 'Play Sound';
+      let monsterAudio = monsterInfo.audio;
+      const query = searchMonsterInput.value.trim();
+      volumeButton.addEventListener('click', () => {
+        console.log(query);
+        if (query === "Hairionette (Minor)" || query === "Hairionette (Major)") {
+          console.log("Hairionette");
+          query === "Hairionette";
+          playMonsterSound(query); // assuming `query` is the selected monster's name
+        } else {
+          // console.log(monsterAudio);
+          playMonsterSound(query); // assuming `query` is the selected monster's name
+        }
+      });
+      tabContainer.appendChild(volumeButton);
 
       imageContainer.appendChild(tabContainer);
       imageContainer.appendChild(tabContentContainer);
@@ -5255,7 +5898,7 @@ document.addEventListener('click', (event) => {
 function closeMenu() {
   hideBlur(); // Hide the blur overlay
   resetAll();
-  }
+}
 // Function to show the blur overlay and message
 function showBlur() {
   document.getElementById('blurOverlay').style.display = 'block';
