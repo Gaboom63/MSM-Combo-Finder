@@ -1,6 +1,6 @@
 # MSM-Combo-Finder
-UPDATE V2:
-You can now breed all epic monsters! Just type the combination and get results!
+UPDATE V3 (5/8/25):
+When Searching For A Monster You Can Now Hear It's Song (Snippet)!
 -------------------
 A easy to use, but packed with information monster breeding tool.  This is still in progress please give me feedback by adding an issue! <br> <br>
 **FOR ONLINE USE**<br><br> Use the link on the right side!<br><br>
@@ -10,4 +10,3 @@ A easy to use, but packed with information monster breeding tool.  This is still
 <br><br>
 As of now it has been updated to include 4.8.0 Update (4/30/25)! 
 
-Aux Seasonals Fixed! 
