@@ -4415,7 +4415,7 @@ const monsters = [
   },
   {
     name: "Astropod",
-    audio: "sounds/_Memory_Sample.mp3.mpeg",
+    audio: "sounds/Astropod_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Astropod.png",
       rare: "images/bm/Rare Astropod.png",
