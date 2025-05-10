@@ -5293,7 +5293,7 @@ const suggestionsBox3 = document.getElementById('suggestions3');
 const breedButton = document.getElementById('breedButton');
 const imageContainer = document.getElementById('imageContainer');
 const statsContainer = document.getElementById('statsContainer');
-const combinationsContainer = document.getElementById('combinationsContainer');
+const combinationsContainer = document.getElementById('Search_Monster');
 const resetButton = document.getElementById('resetButton');
 
 
@@ -5455,7 +5455,7 @@ searchMonsterInput.addEventListener('input', () => {
     // Check in monsterData, epicMonsterData, and rareMonsterData
     const monsterInfo =
       monsterData[query] ||
-      epicMonsterData[query] ||
+      // epicMonsterData[query] ||
       rareMonsterData[query];
 
     if (monsterInfo) {
