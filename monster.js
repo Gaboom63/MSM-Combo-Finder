@@ -2177,6 +2177,20 @@ const monsters = [
     }
   },
   {
+    name: "Riff",
+    audio: "sounds/Riff_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Riff.png",
+      rare: "images/bm/Rare Riff.png",
+      epic: "images/bm/Epic Riff.png",
+    },
+    stats: {
+      normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
+      rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
+      epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
+    }
+  },
+  {
     name: "Spunge",
     audio: "sounds/Spunge_Memory_Sample.mp3.mpeg",
     image: {
