@@ -573,6 +573,19 @@ const raremonsters = [
       epic: ""
     }
   },
+   {
+    name: "Rare Pinghound",
+    image: {
+      normal: "images/bm/Rare Pinghound.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 2 day 4 hr 30 min <br>  <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
   {
     name: "Rare Mushaboom",
     image: {
@@ -2928,7 +2941,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
-      rare: "",
+      rare: "Breeding TIme: 2 days 4 hr 30 min <br><br> Enhanced Time: 1 day 15 hr 22 min 30 sec ",
       epic: ""
     }
   },
