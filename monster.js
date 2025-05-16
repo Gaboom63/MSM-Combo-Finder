@@ -651,6 +651,19 @@ const raremonsters = [
       epic: ""
     }
   },
+   {
+    name: "Rare Mimic",
+    image: {
+      normal: "images/bm/Rare Mimic.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
 ]
 
 const epicmonsters = [
@@ -1751,14 +1764,14 @@ const epicmonsters = [
     }
   },
   {
-    name: "",
+    name: "Epic Cherubble",
     image: {
-      normal: "images/bm/",
+      normal: "images/bm/Epic Cherubble.png",
       rare: "",
       epic: "",
     },
     stats: {
-      normal: "",
+      normal: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
       rare: "",
       epic: ""
     }
@@ -2872,7 +2885,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
-      epic: ""
+      epic: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec "
     }
   },
   {
@@ -4237,7 +4250,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 3 days 8 hr <br> <br> Enhanced Breeding Time: 2 days 12 hr",
-      rare: "",
+      rare: "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
       epic: ""
     }
   },
@@ -4667,7 +4680,22 @@ const monsters = [
       epic: ""
     }
   },
-
+  //Adding 4.8.2 Update :)
+{
+    name: "Cruv'laaphtian Crocus",
+    audio: "sounds/Cruv'laaphtian_Crocus_Memory_Sample.mp3",
+    image: {
+      normal: "images/bm/Cruv'laaphtian Crocus.png",
+      rare: "images/bm/Rare Cruv'laaphtian Crocus.png",
+      epic: "images/bm/Epic Cruv'laaphtian Crocus.png"
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+  },
+  
 ];
 
 /**
