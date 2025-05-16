@@ -4690,7 +4690,7 @@ const monsters = [
       epic: "images/bm/Epic Cruv'laaphtian Crocus.png"
     },
     stats: {
-      normal: "",
+      normal: "Breeding Time: 12 hr <br> <br> Enhanced Breeding Time: 8 hr",
       rare: "",
       epic: ""
     }
@@ -5334,8 +5334,9 @@ const breedingCombinations = {
   "Pladdie + Floot Fly": ["Ffidyll", "Epic PongPing"],
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
-
   "500 Relics": ["Mimic"],
+ "Sneyser + Boskus": ["Epic Cherubble"],
+ "Cataliszt + Hyehehe": ["Epic Cherubble"],
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
