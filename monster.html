@@ -18,7 +18,100 @@
             <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The <a href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
         </div>
     </div>
+<div id="slideButton">
+    <i class="fas fa-arrow-left"></i>
+</div>
+<div id="slidePanel">
+    <div id="panelContent">
+    <b><h1 id="title">My Singing Monsters <br> Checklist</h1></b>
+    <div>
+        <h1 id="islandName">Plant Island</h1>
+        <img id="islandImg" src="images/islands/Plant Island.png">
+        <select id="islandDropdown">
+                <option value="plant">Plant Island</option>
+                <option value="cold">Cold Island</option>
+                <option value="air">Air Island</option>
+                <option value="water">Water Island</option>
+                <option value="earth">Earth Island</option>
+        </select>
+    </div>
 
+   <div id="checklist">
+    <h1 id="monsterNameList">Monster List:</h1>
+
+    <select id="monsterTypeDropdown">
+        <option value="">-- Choose a type --</option>
+        <option value="common">Common</option>
+        <option value="rare">Rare</option>
+        <option value="epic">Epic</option>
+    </select>
+
+    <!-- Reveal sections -->
+    <div id="commonSection" class="sliding-panel">
+        <select id="monsterSelection">
+            //EVERYTHING IS ADDED IN MONSTER.JS :)
+        </select>
+        <img id="monsterImage" src="" alt="Monster Image">
+           <div id="monsterStats">
+         <div style="display: flex;">
+             <div id="Diamonds" style="display: flex; align-items: center;">
+                 <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                 <p id="diamonds" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
+             </div>
+            <div style="display: flex; align-items: center;">
+                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                <p id="coins" style="position: relative; left: 180%; text-align: right;">10</p>
+            </div>
+         </div>
+               <p id="monsterDescription">Description will go here.</p>
+               <label><input type="checkbox" id="monsterCollected"> Collected</label>
+           </div>
+    </div>
+
+    <div id="rareSection" class="sliding-panel">
+      <select id="monsterSelection">
+            //EVERYTHING IS ADDED IN MONSTER.JS :)
+        </select>
+        <img id="monsterImageRare" src="" alt="Monster Image">
+           <div id="monsterStatsRare">
+             <div style="display: flex;">
+             <div id="Diamonds" style="display: flex; align-items: center;">
+                 <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                 <p id="diamondsRare" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
+             </div>
+            <div style="display: flex; align-items: center;">
+                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                <p id="coinsRare" style="position: relative; left: 180%; text-align: right;">10</p>
+            </div>
+         </div>
+               <p id="monsterDescriptionRare">Description will go here.</p>
+               <label><input type="checkbox" id="monsterCollected"> Collected</label>
+           </div>
+    </div>
+
+    <div id="epicSection" class="sliding-panel">
+        <select id="monsterSelection">
+            //EVERYTHING IS ADDED IN MONSTER.JS :)
+        </select>
+        <img id="monsterImageEpic" src="" alt="Monster Image">
+           <div id="monsterStatsEpic">
+            <div style="display: flex;">
+                <div id="Diamonds" style="display: flex; align-items: center;">
+                    <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                    <p id="diamondsEpic" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
+                </div>
+               <div style="display: flex; align-items: center;">
+                   <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                   <p id="coinsEpic" style="position: relative; left: 180%; text-align: right;">10</p>
+               </div>
+            </div>
+               <p id="monsterDescriptionEpic">Description will go here.</p>
+               <label><input type="checkbox" id="monsterCollected"> Collected</label>
+           </div>
+    </div>
+</div>
+</div>
+</div>
     <b><h1 id="title">My Singing Monsters <br> Combo Finder</h1>    </b>
     <div id="inputContainer">
             <input id="First_Monster" autocomplete="off" placeholder="First Monster"><br><br>

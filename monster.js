@@ -573,7 +573,7 @@ const raremonsters = [
       epic: ""
     }
   },
-   {
+  {
     name: "Rare Pinghound",
     image: {
       normal: "images/bm/Rare Pinghound.png",
@@ -651,7 +651,7 @@ const raremonsters = [
       epic: ""
     }
   },
-   {
+  {
     name: "Rare Mimic",
     image: {
       normal: "images/bm/Rare Mimic.png",
@@ -4681,7 +4681,7 @@ const monsters = [
     }
   },
   //Adding 4.8.2 Update :)
-{
+  {
     name: "Cruv'laaphtian Crocus",
     audio: "sounds/Cruv'laaphtian_Crocus_Memory_Sample.mp3",
     image: {
@@ -4695,7 +4695,161 @@ const monsters = [
       epic: ""
     }
   },
-  
+  {
+    name: "Tawkerr",
+    audio: "sounds/Tawkerr_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Tawkerr.png",
+      rare: "images/bm/Rare Tawkerr.png",
+      epic: "images/bm/Epic Tawkerr.png"
+    },
+    stats: {
+      normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Parlsona",
+    audio: "sounds/Parlsona_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Parlsona.png",
+      rare: "images/bm/Rare Parlsona.png",
+      epic: "images/bm/Epic Parlsona.png"
+    },
+    stats: {
+      normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Do (CLICK ON ME)",
+    audio: "sounds/Do_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Do.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Re (CLICK ON ME)",
+    audio: "sounds/Re_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Re.png",
+      rare: "images/bm/Rare Re.png",
+      epic: "images/bm/Epic Re.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Mi (CLICK ON ME)",
+    audio: "sounds/Mi_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Mi.png",
+      rare: "images/bm/Rare Mi.png",
+      epic: "images/bm/Epic Mi.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Fa (CLICK ON ME)",
+    audio: "sounds/Fa_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Fa.png",
+      rare: "images/bm/Rare Fa.png",
+      epic: "images/bm/Epic Fa.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Sol (CLICK ON ME)",
+    audio: "sounds/Sol_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Sol.png",
+      rare: "images/bm/Rare Sol.png",
+      epic: "images/bm/Epic Sol.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "La (CLICK ON ME)",
+    audio: "sounds/La_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/La.png",
+      rare: "images/bm/Rare La.png",
+      epic: "images/bm/Epic La.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Ti(CLICK ON ME)",
+    audio: "sounds/Ti_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Ti.png",
+      rare: "images/bm/Rare Ti.png",
+      epic: "images/bm/Epic Ti.png"
+    },
+    stats: {
+      normal: "Buy From Shop via Keys (Number varry per island)",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Maggpi",
+    audio: "sounds/Maggpi_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Maggpi.png",
+      rare: "images/bm/Rare Maggpi.png",
+      epic: "images/bm/Epic Maggpi.png"
+    },
+    stats: {
+      normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Stoowarb",
+    audio: "sounds/Stoowarb_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Stoowarb.png",
+      rare: "images/bm/Rare Stoowarb.png",
+      epic: "images/bm/Epic Stoowarb.png"
+    },
+    stats: {
+      normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+
 ];
 
 /**
@@ -5335,8 +5489,9 @@ const breedingCombinations = {
   "Periscorp + Bonkers": ["Boo'qwurm"],
   "Wynq + Maw": ["Spurrit"],
   "500 Relics": ["Mimic"],
- "Sneyser + Boskus": ["Epic Cherubble"],
- "Cataliszt + Hyehehe": ["Epic Cherubble"],
+  "Sneyser + Boskus": ["Epic Cherubble"],
+  "Cataliszt + Hyehehe": ["Epic Cherubble"],
+  "Buy From Store For 100 Relics": ["Stoowarb", "Parlsona", "Tawkerr", "Maggpi"]
 };
 // Suggestions list
 const suggestionsList = monsters.map(monster => monster.name);
@@ -5505,40 +5660,33 @@ const searchBreedingCombinations = (monsterName) => {
 
 //!This is what makes the automatic search work 
 searchMonsterInput.addEventListener('input', () => {
-  const query = searchMonsterInput.value.trim();
+  let query = searchMonsterInput.value.trim();
+  let defaultTab = 'Normal';
+
+  // Check for "Rare " or "Epic " prefix
+  if (query.toLowerCase().startsWith('rare ')) {
+    query = query.slice(5); // Remove prefix
+    defaultTab = 'Rare';
+  } else if (query.toLowerCase().startsWith('epic ')) {
+    query = query.slice(5);
+    defaultTab = 'Epic';
+  }
 
   if (query) {
-    // Check in monsterData, epicMonsterData, and rareMonsterData
-    const monsterInfo =
-      monsterData[query] ||
-      // epicMonsterData[query] ||
-      rareMonsterData[query];
+    const monsterInfo = monsterData[query];
 
     if (monsterInfo) {
-      // Display the monster image (default based on type)
       const img = document.createElement('img');
       img.alt = query;
       img.classList.add('monster-image');
+      img.src = monsterInfo.image[defaultTab.toLowerCase()] || monsterInfo.image.normal;
 
-      let defaultTab = 'Normal';
-      if (epicMonsterData[query]) {
-        img.src = monsterInfo.image.epic; // Use epic image
-        defaultTab = 'Epic'; // Set default tab to Epic
-      } else if (rareMonsterData[query]) {
-        img.src = monsterInfo.image.rare; // Use rare image
-        defaultTab = 'Rare'; // Set default tab to Rare
-      } else {
-        img.src = monsterInfo.image.normal; // Use normal image
-        defaultTab = 'Normal'; // Set default tab to Normal
-        showBlur(); // Show the blur overlay
-
-      }
+      showBlur(); // Always show blur if we find a monster
 
       // Clear previous content
       imageContainer.innerHTML = '';
-      imageContainer.appendChild(img); // Add the image
+      imageContainer.appendChild(img);
 
-      // Create tabs for Normal, Rare, and Epic
       const tabs = ['Normal', 'Rare', 'Epic'];
       const tabContainer = document.createElement('div');
       tabContainer.classList.add('tab-container');
@@ -5550,16 +5698,13 @@ searchMonsterInput.addEventListener('input', () => {
         tab.classList.add('tab-button');
         tab.textContent = tabName;
 
-        // Handle click event for each tab
         tab.addEventListener('click', () => {
-          tabContentContainer.innerHTML = ''; // Clear previous content
-          statsContainer.innerHTML = ''; // Clear previous stats
+          tabContentContainer.innerHTML = '';
+          statsContainer.innerHTML = '';
 
-          // Change image and fetch stats based on selected tab
           img.src = monsterInfo.image[tabName.toLowerCase()] || monsterInfo.image.normal;
           const monsterStats = monsterInfo.stats[tabName.toLowerCase()] || "No stats available";
 
-          // Create a container for stats and combinations
           const resultContainer = document.createElement('div');
           resultContainer.classList.add('result-container');
 
@@ -5570,17 +5715,11 @@ searchMonsterInput.addEventListener('input', () => {
           resultText.classList.add('result-text');
           resultText.innerHTML = `<h3>${tabName} Version of ${query}!</h3><p>${monsterStats}</p>`;
 
-          // Append original stats
-          resultContainer.appendChild(blackBox);
-          resultContainer.appendChild(resultText);
-
-          // Retrieve breeding combinations based on the tab selected
+          // Breeding combinations
           let breedingCombinationText = '';
           if (tabName === 'Epic' && epicBreedingCombinations[query]) {
-            // Get breeding combinations specific to the epic monster
             breedingCombinationText += `<p>${epicBreedingCombinations[query].join(', ')}</p>`;
           } else if (tabName !== 'Epic') {
-            // For normal and rare monsters, check the regular breeding combinations
             for (let combo in breedingCombinations) {
               if (breedingCombinations[combo].includes(query)) {
                 breedingCombinationText += `<p>${combo}</p>`;
@@ -5588,57 +5727,55 @@ searchMonsterInput.addEventListener('input', () => {
             }
           }
 
-          // Add breeding combination if found
           if (breedingCombinationText) {
             resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
           }
 
-          // Append the entire content to the statsContainer
+          resultContainer.appendChild(blackBox);
+          resultContainer.appendChild(resultText);
           statsContainer.appendChild(resultContainer);
-
-          // Update the content in the tab area
           tabContentContainer.appendChild(img);
         });
 
-        tabContainer.appendChild(tab); // Add the tab to the tab container
+        tabContainer.appendChild(tab);
       });
+
+      // Volume button
       function playMonsterSound(monsterName) {
         const monster = monsterData[monsterName];
         if (monster && monster.audio) {
-          const audio = new Audio(monsterInfo.audio);
+          const audio = new Audio(monster.audio);
           audio.play().catch(err => console.error('Playback error:', err));
         } else {
           console.warn('No audio found for monster:', monsterName);
         }
       }
-      // After creating tabContainer
+
       const volumeButton = document.createElement('button');
       volumeButton.classList.add('volume-button');
       volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
       volumeButton.title = 'Play Sound';
-      let monsterAudio = monsterInfo.audio;
       volumeButton.addEventListener('click', () => {
-        console.log(monsterAudio);
-        console.log('Play sound for', query.audio);
-        playMonsterSound(query); // assuming `query` is the selected monster's name
+        playMonsterSound(query);
       });
+
       tabContainer.appendChild(volumeButton);
+      imageContainer.appendChild(tabContainer);
+      imageContainer.appendChild(tabContentContainer);
 
-      imageContainer.appendChild(tabContainer); // Append tabs to image container
-      imageContainer.appendChild(tabContentContainer); // Append content area to image container
-
-      // Automatically click the determined default tab based on the monster's rarity
       const defaultTabButton = Array.from(tabContainer.children).find(tab => tab.textContent === defaultTab);
       if (defaultTabButton) {
         defaultTabButton.click();
       }
     } else {
+      // Optionally handle "monster not found"
       // statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonsternoslide">';
     }
   } else {
-    combinationsContainer.innerHTML = ''; // Clear results if input is empty
+    combinationsContainer.innerHTML = '';
   }
 });
+
 
 
 
@@ -5647,231 +5784,155 @@ breedButton.addEventListener('click', () => {
   const monster2 = secondMonsterInput.value.trim();
   const searchMonster = searchMonsterInput.value.trim();
 
-  imageContainer.innerHTML = ''; // Clear previous images
-  statsContainer.innerHTML = ''; // Clear previous stats
+  imageContainer.innerHTML = '';
+  statsContainer.innerHTML = '';
 
-  // Hide the suggestion boxes
   document.getElementById('suggestions1').style.display = 'none';
   document.getElementById('suggestions2').style.display = 'none';
   document.getElementById('suggestions3').style.display = 'none';
 
-  // If Search_Monster has content, look it up
-  if (searchMonster) {
-    const monsterInfo =
-      monsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase()) ||
-      epicmonsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase()) ||
-      raremonsters.find(monster => monster.name.toLowerCase() === searchMonster.toLowerCase());
+  const getMonsterInfo = name => (
+    monsters.find(m => m.name.toLowerCase() === name.toLowerCase()) ||
+    epicmonsters.find(m => m.name.toLowerCase() === name.toLowerCase()) ||
+    raremonsters.find(m => m.name.toLowerCase() === name.toLowerCase())
+  );
 
-    if (monsterInfo) {
-      // Display the monster image (default to Normal)
-      const img = document.createElement('img');
-      img.src = monsterInfo.image.normal; // Default image
-      img.alt = searchMonster;
-      img.classList.add('monster-image'); // Add class for styling
-      imageContainer.appendChild(img);
+  const playMonsterSound = name => {
+    const actualName = name.includes("Hairionette") ? "Hairionette" : name;
+    const monster = monsterData[actualName];
+    if (monster && monster.audio) {
+      new Audio(monster.audio).play().catch(err => console.error('Playback error:', err));
+    } else {
+      console.warn('No audio found for:', actualName);
+    }
+  };
 
-      // Create tabs for Normal, Rare, and Epic
-      const tabs = ['Normal', 'Rare', 'Epic'];
-      const tabContainer = document.createElement('div');
-      tabContainer.classList.add('tab-container');
-      const tabContentContainer = document.createElement('div');
-      tabContentContainer.classList.add('tab-content-container');
+  const renderStats = (monsterInfo, monsterName, form) => {
+    const resultContainer = document.createElement('div');
+    resultContainer.classList.add('result-container');
 
-      tabs.forEach((tabName) => {
-        const tab = document.createElement('button');
-        tab.classList.add('tab-button');
-        tab.textContent = tabName;
+    const blackBox = document.createElement('div');
+    blackBox.classList.add('black-box');
 
-        // Handle click event for each tab
-        tab.addEventListener('click', () => {
-          tabContentContainer.innerHTML = ''; // Clear previous content
-          statsContainer.innerHTML = ''; // Clear previous stats
+    const resultText = document.createElement('div');
+    resultText.classList.add('result-text');
 
-          const monsterStats = monsterInfo.stats[tabName.toLowerCase()] || "No stats available"; // Access correct stats
-          img.src = monsterInfo.image[tabName.toLowerCase()] || monsterInfo.image.normal; // Change image based on selected tab
+    const stats = monsterInfo.stats?.[form] || "No stats available";
+    resultText.innerHTML = `<h3>${form === 'normal' ? "You Bred A:" : form + " Version of"}<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
 
-          const resultContainer = document.createElement('div');
-          resultContainer.classList.add('result-container'); // Add class for styling
-
-          const blackBox = document.createElement('div');
-          blackBox.classList.add('black-box'); // Black box for stats
-
-          const resultText = document.createElement('div');
-          resultText.classList.add('result-text'); // Text class
-          resultText.innerHTML = `<h3>${tabName} Version of ${searchMonster}!</h3><p>${monsterStats}</p>`;
-
-          resultContainer.appendChild(blackBox); // Append black box to result container
-          resultContainer.appendChild(resultText); // Append text to result container
-          statsContainer.appendChild(resultContainer); // Append result to statsContainer
-
-          // Find breeding combinations for Normal and Rare
-          let breedingCombinationText = '';
-          if (tabName !== 'Epic') { // For Normal and Rare
-            for (let combo in breedingCombinations) {
-              if (breedingCombinations[combo].includes(searchMonster)) {
-                breedingCombinationText += `<p>${combo}</p>`;
-              }
-            }
-          } else { // For Epic
-            if (epicBreedingCombinations[`${searchMonster}`]) {
-              breedingCombinationText += `<p>${epicBreedingCombinations[`${searchMonster}`].join(', ')}</p>`;
-            }
-          }
-
-          // Add breeding combinations if found
-          if (breedingCombinationText) {
-            resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
-          }
-
-          tabContentContainer.appendChild(img); // Update the content in the tab area
-        });
-
-        tabContainer.appendChild(tab);
-      });
-      function playMonsterSound(monsterName) {
-        const monster = monsterData[monsterName];
-        if (monster && monster.audio) {
-          const audio = new Audio(monsterInfo.audio);
-          audio.play().catch(err => console.error('Playback error:', err));
-        } else {
-          console.warn('No audio found for monster:', monsterName);
+    // Breeding combo logic
+    let breedingCombinationText = '';
+    if (form !== 'epic') {
+      for (let combo in breedingCombinations) {
+        if (breedingCombinations[combo].includes(monsterName)) {
+          breedingCombinationText += `<p>${combo}</p>`;
         }
       }
-      // After creating tabContainer
-      const volumeButton = document.createElement('button');
-      volumeButton.classList.add('volume-button');
-      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-      volumeButton.title = 'Play Sound';
-      let monsterAudio = monsterInfo.audio;
-      const query = searchMonsterInput.value.trim();
-      volumeButton.addEventListener('click', () => {
-        console.log(query);
-        if (query === "Hairionette (Minor)" || query === "Hairionette (Major)") {
-          console.log("Hairionette");
-          query === "Hairionette";
-          playMonsterSound(query); // assuming `query` is the selected monster's name
-        } else {
-          // console.log(monsterAudio);
-          playMonsterSound(query); // assuming `query` is the selected monster's name
-        }
-      });
-      tabContainer.appendChild(volumeButton);
-
-      imageContainer.appendChild(tabContainer);
-      imageContainer.appendChild(tabContentContainer);
-      // Automatically click the first tab (Normal) on page load
-      tabContainer.firstChild.click();
-    } else {
-      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+    } else if (epicBreedingCombinations[monsterName]) {
+      breedingCombinationText += `<p>${epicBreedingCombinations[monsterName].join(', ')}</p>`;
     }
-    return; // Exit to prevent further processing
+
+    if (breedingCombinationText) {
+      resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
+    }
+
+    resultContainer.appendChild(blackBox);
+    resultContainer.appendChild(resultText);
+    statsContainer.appendChild(resultContainer);
+  };
+
+  const createTabButton = (label, onClick) => {
+    const btn = document.createElement('button');
+    btn.classList.add('tab-button');
+    btn.textContent = label;
+    btn.addEventListener('click', onClick);
+    return btn;
+  };
+
+  if (searchMonster) {
+    const monsterInfo = getMonsterInfo(searchMonster);
+    if (!monsterInfo) {
+      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      return;
+    }
+
+    const img = document.createElement('img');
+    img.src = monsterInfo.image.normal;
+    img.alt = searchMonster;
+    img.classList.add('monster-image');
+    imageContainer.appendChild(img);
+
+    const tabContainer = document.createElement('div');
+    tabContainer.classList.add('tab-container');
+
+    const tabContentContainer = document.createElement('div');
+    tabContentContainer.classList.add('tab-content-container');
+
+    ['Normal', 'Rare', 'Epic'].forEach(tabName => {
+      tabContainer.appendChild(createTabButton(tabName, () => {
+        tabContentContainer.innerHTML = '';
+        statsContainer.innerHTML = '';
+        const lowerTab = tabName.toLowerCase();
+
+        img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
+        tabContentContainer.appendChild(img);
+        renderStats(monsterInfo, searchMonster, lowerTab);
+      }));
+    });
+
+    const volumeButton = document.createElement('button');
+    volumeButton.classList.add('volume-button');
+    volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+    volumeButton.title = 'Play Sound';
+    volumeButton.addEventListener('click', () => playMonsterSound(searchMonster));
+    tabContainer.appendChild(volumeButton);
+
+    imageContainer.appendChild(tabContainer);
+    imageContainer.appendChild(tabContentContainer);
+    tabContainer.querySelector('.tab-button').click(); // Auto click Normal
+    return;
   }
 
-  // If both monster inputs have content, check breeding combinations
   if (monster1 && monster2) {
-    const resultingMonsters = getResultingMonsters(monster1, monster2);
+    const results = getResultingMonsters(monster1, monster2);
+    if (!results.length) {
+      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      return;
+    }
 
-    if (resultingMonsters.length > 0) {
-      // Multiple results logic
-      if (resultingMonsters.length === 1) {
-        // Single result, no tabs needed
-        const resultingMonsterName = resultingMonsters[0];
-        let monsterInfo =
-          monsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase()) ||
-          epicmonsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase()) ||
-          raremonsters.find(monster => monster.name.toLowerCase() === resultingMonsterName.toLowerCase());
+    const tabContainer = document.createElement('div');
+    tabContainer.classList.add('tab-container');
+    const tabContentContainer = document.createElement('div');
+    tabContentContainer.classList.add('tab-content-container');
 
-        if (monsterInfo) {
-          // Display the monster image (not inside the black box)
+    results.forEach((name, index) => {
+      const tab = createTabButton(name, () => {
+        tabContentContainer.innerHTML = '';
+        statsContainer.innerHTML = '';
+
+        const info = getMonsterInfo(name);
+        if (info) {
           const img = document.createElement('img');
-          img.src = monsterInfo.image.normal; // Default image
-          img.alt = resultingMonsterName;
-          img.classList.add('monster-image'); // Add class for styling
-          imageContainer.appendChild(img);
-
-          const resultContainer = document.createElement('div');
-          resultContainer.classList.add('result-container'); // Add class for styling
-
-          const blackBox = document.createElement('div');
-          blackBox.classList.add('black-box'); // Class for black box (only for stats)
-
-          const resultText = document.createElement('div');
-          resultText.classList.add('result-text'); // Class for text
-          resultText.innerHTML = `<h3>You Bred A: <br><h3 id="search_monster_result">${resultingMonsterName}!</h3></h3><p>${monsterInfo.stats.normal}</p>`;
-
-          resultContainer.appendChild(blackBox); // Append black box to result container
-          resultContainer.appendChild(resultText); // Append result text to result container
-          statsContainer.appendChild(resultContainer); // Append result container to statsContainer
+          img.src = info.image.normal;
+          img.alt = name;
+          img.classList.add('monster-image');
+          tabContentContainer.appendChild(img);
+          renderStats(info, name, 'normal');
         } else {
           statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
         }
-      } else {
-        // Multiple results, create tabs for each result
-        const tabContainer = document.createElement('div');
-        tabContainer.classList.add('tab-container');
-        const tabContentContainer = document.createElement('div');
-        tabContentContainer.classList.add('tab-content-container');
+      });
+      tabContainer.appendChild(tab);
+      if (index === 0) tab.click();
+    });
 
-        resultingMonsters.forEach((resultingMonster, index) => {
-          const tab = document.createElement('button');
-          tab.classList.add('tab-button');
-          tab.textContent = resultingMonster;
-
-          tab.addEventListener('click', () => {
-            tabContentContainer.innerHTML = ''; // Clear previous content
-            statsContainer.innerHTML = ''; // Clear previous stats
-
-            let monsterInfo =
-              monsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase()) ||
-              epicmonsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase()) ||
-              raremonsters.find(monster => monster.name.toLowerCase() === resultingMonster.toLowerCase());
-
-            if (monsterInfo) {
-              // Display the monster image (not inside the black box)
-              const img = document.createElement('img');
-              img.src = monsterInfo.image.normal; // Default image
-              img.alt = resultingMonster;
-              img.classList.add('monster-image'); // Add class for styling
-              imageContainer.appendChild(img);
-
-              const resultContainer = document.createElement('div');
-              resultContainer.classList.add('result-container'); // Add class for styling
-
-              const blackBox = document.createElement('div');
-              blackBox.classList.add('black-box'); // Class for black box (only for stats)
-
-              const resultText = document.createElement('div');
-              resultText.classList.add('result-text'); // Class for text
-              resultText.innerHTML = `<h3>You Bred A: <br><h3 id="search_monster_result">${resultingMonster}!</h3></h3><p>${monsterInfo.stats.normal}</p>`;
-
-              resultContainer.appendChild(blackBox); // Append black box to result container
-              resultContainer.appendChild(resultText); // Append result text to result container
-              statsContainer.appendChild(resultContainer); // Append result container to statsContainer
-
-              tabContentContainer.appendChild(img); // Update the content in the tab area
-            } else {
-              statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-            }
-          });
-
-          // Set the first tab as active by default
-          if (index === 0) {
-            tab.click();
-          }
-
-          tabContainer.appendChild(tab);
-        });
-
-        imageContainer.appendChild(tabContainer);
-        imageContainer.appendChild(tabContentContainer);
-      }
-    } else {
-      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-    }
+    imageContainer.appendChild(tabContainer);
+    imageContainer.appendChild(tabContentContainer);
   } else {
     statsContainer.innerHTML = '<img src="images/important/Enterrightmonster.png" id="noMonster">';
   }
 });
+
 
 
 
@@ -5962,7 +6023,7 @@ function showBlur() {
 
   // Hide input elements and buttons
   document.getElementById('inputContainer').classList.add('hidden'); // Hide the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions .suggestions'); // Select input fields and buttons
+  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton'); // Select input fields and buttons
   inputs.forEach(input => input.classList.add('hidden')); // Hide each input/button
 
   // Hide suggestion boxes
@@ -6000,7 +6061,7 @@ function hideBlur() {
 
   // Show input elements and buttons
   document.getElementById('inputContainer').classList.remove('hidden'); // Show the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3'); // Select input fields and buttons
+  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton'); // Select input fields and buttons
   inputs.forEach(input => {
     input.classList.remove('hidden'); // Show each input/button
     input.setAttribute('autocomplete', 'on'); // Re-enable autocomplete
@@ -6038,7 +6099,7 @@ function searchMonsters() {
   resultsContainer.innerHTML = '';
 
   const normalResults = monsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
-  const rareResults = raremonsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
+  const rareResults = monsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
   const epicResults = epicmonsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
 
   if (normalResults.length === 0 && rareResults.length === 0 && epicResults.length === 0) {
@@ -6072,4 +6133,617 @@ function displayMonster(monster, type) {
 
 // Call hideBlur on page load to ensure it starts hidden
 hideBlur();
+
+const slideButton = document.getElementById('slideButton');
+const slidePanel = document.getElementById('slidePanel');
+
+slideButton.addEventListener('click', () => {
+  slidePanel.classList.toggle('open');
+  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
+    slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
+    slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
+  } else {
+    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`
+    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
+  }
+});
+
+// function closePanel() {
+//     slidePanel.classList.remove('open');
+// }
+
+document.getElementById('islandDropdown').addEventListener('change', function () {
+  const value = this.value;
+  const islandNameElement = document.getElementById('islandName');
+  const islandImg = document.getElementById('islandImg');
+
+  // Capitalize first letter for display
+  const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
+
+  // Update the name and image
+  islandNameElement.textContent = `${capitalized} Island`;
+  islandImg.src = `images/islands/${capitalized} Island.png`;
+});
+
+document.getElementById('monsterTypeDropdown').addEventListener('change', function () {
+  const value = this.value;
+
+  const commonPanel = document.getElementById('commonSection');
+  const rarePanel = document.getElementById('rareSection');
+  const epicPanel = document.getElementById('epicSection')
+  // Collapse all
+  commonPanel.classList.remove('active');
+  rarePanel.classList.remove('active');
+  epicPanel.classList.remove('active');
+
+  // Expand selected
+  if (value === 'common') {
+    commonPanel.classList.add('active');
+  } else if (value === 'rare') {
+    rarePanel.classList.add('active');
+  } else if (value === 'epic') {
+    epicPanel.classList.add('active');
+  }
+});
+
+const islandData = {
+  plant: {
+    common: ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T Rox", "Entbrat", "Ghazt", "Wubbox", "Shugabush", "Tawkerr", "Parlsona", "Punkleton", "G joob", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
+    rare: ["Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Mammott", "Rare Shrubb", "Rare Oaktopus", "Rare Furcorn", "Rare Fwog", "Rare Drumpler", "Rare Maw", "Rare Pummel", "Rare Clamble", "Rare Bowgart", "Rare T Rox", "Rare Entbrat", "Rare Ghazt", "Rare Wubbox", "Rare G joob"],
+    epic: ["Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Shrubb", "Epic Oaktopus", "Epic Furcorn", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Pummel", "Epic Clamble", "Epic Bowgart", "Epic T Rox", "Epic Entbrat", "Epic Ghazt", "Epic Plant Wubbox"]
+  },
+  cold: {
+    common: ["Toe Jammer", "Mammott", "Fwog", "Maw", "Deedge"],
+    rare: ["Rare Toe Jammer", "Rare Mammott", "Rare Fwog", "Rare Maw", "Rare Deedge"],
+    epic: ["Epic Toe Jammer", "Epic Mammott", "Epic Fwog", "Epic Maw", "Epic Deedge"]
+  },
+  air: {
+
+  }
+};
+/** 
+ *  "": {
+     name: "",
+     image: "images/Monster_Avatars/.png",
+     diamonds: ,
+     coins: ,
+       description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button>`,
+   },
+*/
+
+
+
+const monsterInfo = {
+  "potbelly": {
+    name: "Potbelly",
+    image: "images/Monster_Avatars/Potbelly.png",
+    diamonds: 0,
+    coins: 250,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('potbelly'); })();">Breeding Combo</button>`,
+  },
+  "noggin": {
+    name: "Noggin",
+    image: "images/Monster_Avatars/Noggin.png",
+    diamonds: 0,
+    coins: 300,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('noggin'); })();">Breeding Combo</button>`,
+  },
+  "toe_jammer": {
+    name: "Toe Jammer",
+    diamonds: 0,
+    coins: 250,
+    image: "images/Monster_Avatars/Toe Jammer.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('toe_jammer'); })();">Breeding Combo</button>`,
+  },
+  "fwog": {
+    name: "Fwog",
+    image: "images/Monster_Avatars/Fwog.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button>`,
+  },
+  "mammott": {
+    name: "Mammott",
+    diamonds: 0,
+    coins: 300,
+    image: "images/Monster_Avatars/Mammott.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button>`,
+  },
+  "shrubb": {
+    name: "Shrubb",
+    image: "images/Monster_Avatars/Shrubb.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shrubb'); })();">Breeding Combo</button>`,
+  },
+  "oaktopus": {
+    name: "Oaktopus",
+    image: "images/Monster_Avatars/Oaktopus.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('Oaktopus'); })();">Breeding Combo</button>`,
+  },
+  "furcorn": {
+    name: "Furcorn",
+    image: "images/Monster_Avatars/Furcorn.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button>`,
+  },
+
+  "drumpler": {
+    name: "Drumpler",
+    image: "images/Monster_Avatars/Drumpler.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('drumpler'); })();">Breeding Combo</button>`,
+  },
+  "maw": {
+    name: "Maw",
+    image: "images/Monster_Avatars/Maw.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maw'); })();">Breeding Combo</button>`,
+  },
+  "pummel": {
+    name: "Pummel",
+    image: "images/Monster_Avatars/Pummel.png",
+    diamonds: 50,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pummel'); })();">Breeding Combo</button>`,
+  },
+  "clamble": {
+    name: "Clamble",
+    image: "images/Monster_Avatars/Clamble.png",
+    diamonds: 50,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('clamble'); })();">Breeding Combo</button>`,
+  },
+  "bowgart": {
+    name: "Bowgart",
+    image: "images/Monster_Avatars/Bowgart.png",
+    diamonds: 50,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bowgart'); })();">Breeding Combo</button>`,
+  },
+  "t_rox": {
+    name: "T-Rox",
+    image: "images/Monster_Avatars/T-Rox.png",
+    diamonds: 50,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('t_rox'); })();">Breeding Combo</button>`,
+  },
+  "entbrat": {
+    name: "Entbrat",
+    image: "images/Monster_Avatars/Entbrat.png",
+    diamonds: 150,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('entbrat'); })();">Breeding Combo</button>`,
+  },
+  "ghazt": {
+    name: "Ghazt",
+    image: "images/Monster_Avatars/Ghazt.png",
+    diamonds: 1000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ghazt'); })();">Breeding Combo</button>`,
+  },
+  "wubbox": {
+    name: "",
+    image: "images/Monster_Avatars/Wubbox.png",
+    diamonds: 0,
+    coins: 75 + 'M',
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('wubbox'); })();">Breeding Combo</button>`,
+  },
+  "shugabush": {
+    name: "Shugabush",
+    image: "images/Monster_Avatars/Shugabush.png",
+    diamonds: 200,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shugabush'); })();">Breeding Combo</button>`,
+  },
+  "punkleton": {
+    name: "Punkleton",
+    image: "images/Monster_Avatars/Punkleton.png",
+    diamonds: 225,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('punkleton'); })();">Breeding Combo</button>`,
+  },
+  "g_joob": {
+    name: "G joob",
+    image: "images/Monster_Avatars/G_joob.png",
+    diamonds: 225,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('g_joob'); })();">Breeding Combo</button>`,
+  },
+
+  // Rare versions
+  "rare_potbelly": {
+    name: "Rare Potbelly",
+    diamonds: 75,
+    coins: 0,
+    image: "images/Monster_Avatars/Potbelly - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_potbelly');">Breeding Combo</button>`
+  },
+  "rare_noggin": {
+    name: "Rare Noggin",
+    diamonds: 75,
+    coins: 0,
+    image: "images/Monster_Avatars/Noggin - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_noggin');">Breeding Combo</button>`
+  },
+  "rare_toe_jammer": {
+    name: "Rare Toe Jammer",
+    diamonds: 75,
+    coins: 0,
+    image: "images/Monster_Avatars/Toe Jammer - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_toe_jammer');">Breeding Combo</button>`
+  },
+  "rare_mammott": {
+    name: "Rare Mammott",
+    diamonds: 75,
+    coins: 0,
+    image: "images/Monster_Avatars/Mammott - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_mammott');">Breeding Combo</button>`
+  },
+
+  "rare_fwog": {
+    name: "Rare Fwog",
+    diamonds: 40,
+    coins: 0,
+    image: "images/Monster_Avatars/Fwog - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_fwog');">Breeding Combo</button>`
+  },
+  "rare_furcorn": {
+    name: "Rare Furcorn",
+    diamonds: 40,
+    coins: 0,
+    image: "images/Monster_Avatars/Furcorn - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_furcorn');">Breeding Combo</button>`
+  },
+  "rare_drumpler": {
+    name: "Rare Drumpler",
+    image: "images/Monster_Avatars/Drumpler - Rare.png",
+    diamonds: 40,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_drumpler'); })();">Breeding Combo</button>`,
+  },
+  "rare_maw": {
+    name: "Rare Maw",
+    diamonds: 40,
+    coins: 0,
+    image: "images/Monster_Avatars/Maw - Rare.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_maw');">Breeding Combo</button>`
+  },
+
+  "rare_pummel": {
+    name: "Rare Pummel",
+    image: "images/Monster_Avatars/Pummel - Rare.png",
+    diamonds: 65,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pummel'); })();">Breeding Combo</button>`,
+  },
+
+  "rare_oaktopus": {
+    name: "Rare Oaktopus",
+    image: "images/Monster_Avatars/Oaktopus - Rare.png",
+    diamonds: 40,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_oaktopus'); })();">Breeding Combo</button>`,
+  },
+   "rare_shrubb": {
+    name: "Rare Shurbb",
+    image: "images/Monster_Avatars/Shrubb - Rare.png",
+    diamonds: 40,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shrubb'); })();">Breeding Combo</button>`,
+  },
+
+  "rare_clamble": {
+    name: "Rare Clamble",
+    image: "images/Monster_Avatars/Clamble - Rare.png",
+    diamonds: 65,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_clamble'); })();">Breeding Combo</button>`,
+  },
+  "rare_bowgart": {
+    name: "Rare Bowgart",
+    image: "images/Monster_Avatars/Bowgart - Rare.png",
+    diamonds: 65,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_bowgart'); })();">Breeding Combo</button>`,
+  },
+  "rare_t_rox": {
+    name: "Rare T Rox",
+    image: "images/Monster_Avatars/T-Rox - Rare.png",
+    diamonds: 65,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_t_rox'); })();">Breeding Combo</button>`,
+  },
+  "rare_entbrat": {
+    name: "Rare Entbrat",
+    image: "images/Monster_Avatars/Entbrat - Rare.png",
+    diamonds: 200,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_entbrat'); })();">Breeding Combo</button>`,
+  },
+  "rare_ghazt": {
+    name: "Rare Ghazt",
+    image: "images/Monster_Avatars/Ghazt - Rare.png",
+    diamonds: 1500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_ghazt'); })();">Breeding Combo</button>`,
+  },
+  "rare_wubbox": {
+    name: "Rare Wubbox",
+    image: "images/Monster_Avatars/Wubbox - Rare.png",
+    diamonds: 0,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_wubbox'); })();">Breeding Combo</button>`,
+  },
+
+  "rare_punkleton": {
+    name: "Rare Punkleton",
+    image: "images/Monster_Avatars/Punkleton - Rare.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_punkleton'); })();">Breeding Combo</button>`,
+  },
+  "rare_g_joob": {
+    name: "Rare G joob",
+    image: "images/Monster_Avatars/G_joob - Rare.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_g_joob'); })();">Breeding Combo</button>`,
+  },
+
+
+
+ 
+
+  // Epic versions
+  "epic_potbelly": {
+    name: "Epic Potbelly",
+    diamonds: 250,
+    coins: 0,
+    image: "images/Monster_Avatars/Potbelly - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_potbelly');">Breeding Combo</button>`
+  },
+  "epic_noggin": {
+    name: "Epic Noggin",
+    diamonds: 250,
+    coins: 0,
+    image: "images/Monster_Avatars/Noggin - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_noggin');">Breeding Combo</button>`
+  },
+  "epic_toe_jammer": {
+    name: "Epic Toe Jammer",
+    diamonds: 250,
+    coins: 0,
+    image: "images/Monster_Avatars/Toe Jammer - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_toe_jammer');">Breeding Combo</button>`
+  },
+  "epic_mammott": {
+    name: "Epic Mammott",
+    diamonds: 250,
+    coins: 0,
+    image: "images/Monster_Avatars/Mammott - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_mammott');">Breeding Combo</button>`
+  },
+
+  "epic_fwog": {
+    name: "Epic Fwog",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Fwog - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_fwog');">Breeding Combo</button>`
+  },
+  "epic_furcorn": {
+    name: "Epic Furcorn",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Furcorn - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_furcorn');">Breeding Combo</button>`
+  },
+  "epic_drumpler": {
+    name: "Epic Drumpler",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Drumpler - Epic.png",
+    diamonds: 40,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_drumpler'); })();">Breeding Combo</button>`,
+  },
+  "epic_maw": {
+    name: "Epic Maw",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Maw - Epic.png",
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_maw');">Breeding Combo</button>`
+  },
+
+  "epic_pummel": {
+    name: "Epic Pummel",
+    diamonds: 500,
+    coins: 0,
+    image: "images/Monster_Avatars/Pummel - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pummel'); })();">Breeding Combo</button>`,
+  },
+
+  "epic_oaktopus": {
+    name: "Epic Oaktopus",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Oaktopus - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_oaktopus'); })();">Breeding Combo</button>`,
+  },
+   "epic_shrubb": {
+    name: "Rare Shurbb",
+    diamonds: 150,
+    coins: 0,
+    image: "images/Monster_Avatars/Shrubb - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shrubb'); })();">Breeding Combo</button>`,
+  },
+
+  "epic_clamble": {
+    name: "Epic Clamble",
+    diamonds: 500,
+    coins: 0,
+    image: "images/Monster_Avatars/Clamble - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_clamble'); })();">Breeding Combo</button>`,
+  },
+  "epic_bowgart": {
+    name: "Epic Bowgart",
+    diamonds: 500,
+    coins: 0,
+    image: "images/Monster_Avatars/Bowgart - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_bowgart'); })();">Breeding Combo</button>`,
+  },
+  "epic_t_rox": {
+    name: "Epic T Rox",
+    diamonds: 500,
+    coins: 0,
+    image: "images/Monster_Avatars/T-Rox - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_t_rox'); })();">Breeding Combo</button>`,
+  },
+  "epic_entbrat": {
+    name: "Epic Entbrat",
+    diamonds: 750,
+    coins: 0,
+    image: "images/Monster_Avatars/Entbrat - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_entbrat'); })();">Breeding Combo</button>`,
+  },
+  "epic_ghazt": {
+    name: "Epic Ghazt",
+    diamonds: 2250,
+    coins: 0,
+    image: "images/Monster_Avatars/Ghazt - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_ghazt'); })();">Breeding Combo</button>`,
+  },
+  "epic_plant_wubbox": {
+    name: "Epic Wubbox",
+    image: "images/Monster_Avatars/Wubbox - Epic (Plant).png",
+    diamonds: 1,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+  },
+
+  "epic_punkleton": {
+    name: "Epic Punkleton",
+    image: "images/Monster_Avatars/Punkleton - Epic.png",
+    diamonds: 1000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_punkleton'); })();">Breeding Combo</button>`,
+  },
+  "epic_g_joob": {
+    name: "Epic G joob",
+    image: "images/Monster_Avatars/G_joob - Epic.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_g_joob'); })();">Breeding Combo</button>`,
+  },
+
+ };
+
+
+function populateMonsterSections(islandKey) {
+  const island = islandData[islandKey];
+  if (!island) return;
+
+  const sections = {
+    common: document.querySelector('#commonSection select'),
+    rare: document.querySelector('#rareSection select'),
+    epic: document.querySelector('#epicSection select')
+  };
+
+  for (const [rarity, monsters] of Object.entries(island)) {
+    const select = sections[rarity];
+    select.innerHTML = '';
+
+    monsters.forEach(monster => {
+      const option = document.createElement('option');
+      option.textContent = monster;
+      option.value = monster.toLowerCase().replace(/\s+/g, '_');
+      select.appendChild(option);
+    });
+  }
+}
+
+const defaultSelectedIsland = 'plant';
+populateMonsterSections(defaultSelectedIsland);
+
+document.getElementById('islandDropdown').addEventListener('change', function () {
+  const selectedIsland = this.value; // e.g., "plant", "cold"
+  populateMonsterSections(selectedIsland);
+});
+
+
+
+document.querySelector('#commonSection select').addEventListener('change', function () {
+  const selected = this.value;
+  const info = monsterInfo[selected];
+
+  const img = document.getElementById('monsterImage');
+  const desc = document.getElementById('monsterDescription');
+  const checkbox = document.getElementById('monsterCollected');
+  const diamonds = document.getElementById('diamonds');
+  const coins = document.getElementById('coins');
+
+  if (info) {
+    img.src = info.image;
+    desc.innerHTML = info.description;
+    diamonds.innerHTML = info.diamonds;
+    coins.innerHTML = info.coins;
+    checkbox.checked = false;
+  }
+});
+
+// Event listener for the rare section
+document.querySelector('#rareSection select').addEventListener('change', function () {
+  const selected = this.value;
+  const info = monsterInfo[selected];
+  console.log(selected);
+  console.log(info);
+  const img = document.getElementById('monsterImageRare');
+  const desc = document.getElementById('monsterDescriptionRare');
+  const checkbox = document.getElementById('monsterCollectedRare');
+  const diamonds = document.getElementById('diamondsRare');
+  const coins = document.getElementById('coinsRare');
+
+  if (info) {
+    console.log(info.image);
+    img.src = info.image;
+    desc.innerHTML = info.description;
+    diamonds.innerHTML = info.diamonds;
+    coins.innerHTML = info.coins;
+    checkbox.checked = false;
+  }
+});
+
+// Event listener for the epic section
+document.querySelector('#epicSection select').addEventListener('change', function () {
+  const selected = this.value;
+  const info = monsterInfo[selected];
+
+  const img = document.getElementById('monsterImageEpic');
+  const desc = document.getElementById('monsterDescriptionEpic');
+  const checkbox = document.getElementById('monsterCollectedEpic');
+  const diamonds = document.getElementById('diamondsEpic');
+  const coins = document.getElementById('coinsEpic');
+
+  if (info) {
+    img.src = info.image;
+    desc.innerHTML = info.description;
+    diamonds.innerHTML = info.diamonds;
+    coins.innerHTML = info.coins;
+    checkbox.checked = false;
+  }
+});
+
+
+function simulateMonsterSearch(monsterName) {
+  console.log(monsterName);
+  searchMonsterInput.value = monsterInfo[monsterName].name;
+  console.log(searchMonsterInput.value);
+  searchMonsterInput.dispatchEvent(new Event('input'));
+}
 
