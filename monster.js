@@ -6193,9 +6193,9 @@ const islandData = {
     epic: ["Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Shrubb", "Epic Oaktopus", "Epic Furcorn", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Pummel", "Epic Clamble", "Epic Bowgart", "Epic T Rox", "Epic Entbrat", "Epic Ghazt", "Epic Plant Wubbox"]
   },
   cold: {
-    common: ["Toe Jammer", "Mammott", "Fwog", "Maw", "Deedge"],
-    rare: ["Rare Toe Jammer", "Rare Mammott", "Rare Fwog", "Rare Maw", "Rare Deedge"],
-    epic: ["Epic Toe Jammer", "Epic Mammott", "Epic Fwog", "Epic Maw", "Epic Deedge"]
+    common: ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Qubble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Wubbox", "Twakerr", "Maggpi", "Yool", "Strombonin", "G joob", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
+    rare: ["Rare Tweedle", "Rare Potbelly", "Rare Toe Jammer", "Rare Mammott", "Rare Dandidoo", "Rare Qubble", "Rare Pango", "Rare Oaktopus", "Rare Furcorn", "Rare Maw", "Rare Spunge", "Rare Thumpies", "Rare Congle", "Rare Bowgart", "Rare Deedge", "Rare Grumpyre", "Rare Wubbox", "Rare Yool", "Rare Strombonin"],
+    epic: ["Epic Tweedle", "Epic Potbelly", "Epic Toe Jammer", "Epic Mammott", "Epic Dandidoo", "Epic Qubble", "Rare Pango", "Epic Oaktopus", "Epic Furcorn", "Epic Maw", "Epic Spunge", "Epic Thumpies", "Epic Congle", "Epic Bowgart", "Epic Deedge", "Epic Grumpyre", "Epic Cold Wubbox", "Epic Yool", "Epic Strombonin"]
   },
   air: {
 
@@ -6248,6 +6248,13 @@ const monsterInfo = {
     coins: 300,
     image: "images/Monster_Avatars/Mammott.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button>`,
+  },
+   "tweedle": {
+    name: "Tweedle",
+    diamonds: 0,
+    coins: 300,
+    image: "images/Monster_Avatars/Tweedle.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tweedle'); })();">Breeding Combo</button>`,
   },
   "shrubb": {
     name: "Shrubb",
@@ -6645,7 +6652,8 @@ const monsterInfo = {
  };
 
 
-function populateMonsterSections(islandKey) {
+
+ function populateMonsterSections(islandKey) {
   const island = islandData[islandKey];
   if (!island) return;
 
@@ -6678,23 +6686,22 @@ document.getElementById('islandDropdown').addEventListener('change', function ()
 
 
 
+
 document.querySelector('#commonSection select').addEventListener('change', function () {
   const selected = this.value;
   const info = monsterInfo[selected];
-
   const img = document.getElementById('monsterImage');
   const desc = document.getElementById('monsterDescription');
   const checkbox = document.getElementById('monsterCollected');
   const diamonds = document.getElementById('diamonds');
   const coins = document.getElementById('coins');
-
   if (info) {
     img.src = info.image;
     desc.innerHTML = info.description;
     diamonds.innerHTML = info.diamonds;
     coins.innerHTML = info.coins;
     checkbox.checked = false;
-  }
+  } 
 });
 
 // Event listener for the rare section
@@ -6708,7 +6715,7 @@ document.querySelector('#rareSection select').addEventListener('change', functio
   const checkbox = document.getElementById('monsterCollectedRare');
   const diamonds = document.getElementById('diamondsRare');
   const coins = document.getElementById('coinsRare');
-
+  
   if (info) {
     console.log(info.image);
     img.src = info.image;
@@ -6747,3 +6754,29 @@ function simulateMonsterSearch(monsterName) {
   searchMonsterInput.dispatchEvent(new Event('input'));
 }
 
+function loadInitImg() {
+    const img = document.getElementById('monsterImage');
+    const imgRare = document.getElementById('monsterImageRare');
+    const imgEpic = document.getElementById('monsterImageEpic');
+    const defaultMonsterImg = 'images/Monster_Avatars/Potbelly.png';
+    const defaultMonsterImgRare = 'images/Monster_Avatars/Potbelly - Rare.png';
+    const defaultMonsterImgEpic = 'images/Monster_Avatars/Potbelly - Epic.png';
+    const diamonds = document.getElementById('diamonds');
+    const coins = document.getElementById('coins');
+    const diamondsRare = document.getElementById('diamondsRare');
+    const coinsRare = document.getElementById('coinsRare');
+    const diamondsEpic = document.getElementById('diamondsEpic');
+    const coinsEpic = document.getElementById('coinsEpic');
+
+    img.src = defaultMonsterImg; 
+    diamonds.innerHTML = '0';
+    coins.innerHTML = '250'; 
+    imgRare.src = defaultMonsterImgRare; 
+    diamondsRare.innerHTML = '75';
+    coinsRare.innerHTML = '0'; 
+    imgEpic.src = defaultMonsterImgEpic; 
+    diamondsEpic.innerHTML = '250';
+    coinsEpic.innerHTML = '0'; 
+}
+
+loadInitImg();
