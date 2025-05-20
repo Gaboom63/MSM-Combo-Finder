@@ -6175,8 +6175,14 @@ document.getElementById('islandDropdown').addEventListener('change', function ()
   const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
 
   // Update the name and image
+  if(value === "Plasma Islet" || value === "Ethereal Workshop") {
+  islandNameElement.textContent = `${capitalized}`;
+  islandImg.src = `images/islands/${capitalized} Island.png`;
+
+  } else if (value !== "Plasma Islet" && value !== "Ethereal Workshop"){
   islandNameElement.textContent = `${capitalized} Island`;
   islandImg.src = `images/islands/${capitalized} Island.png`;
+}
 });
 
 document.getElementById('monsterTypeDropdown').addEventListener('change', function () {
@@ -6228,8 +6234,7 @@ const islandData = {
   ["Rare Tweedle", "Rare Potbelly", "Rare Noggin", "Rare Mammott", "Rare Dandidoo", "Rare Cybop", "Rare Pango", "Rare Shrubb", "Rare Furcorn", "Rare Drumpler", "Rare Reedling", "Rare Thumpies", "Rare PomPom", "Rare Clamble", "Rare Quarrister", "Rare Humbug", "Rare Hoola", "Rare Hyehehe", "Rare Wubbox"],
   epic: 
   ["Epic Tweedle", "Epic Potbelly", "Epic Noggin", "Epic Mammott", "Epic Dandidoo", "Epic Cybop", "Epic Pango", "Epic Shrubb", "Epic Furcorn", "Epic Drumpler", "Epic Reedling", "Epic Thumpies", "Epic PomPom", "Epic Clamble", "Epic Quarrister", "Epic Humbug", "Epic Hoola", "Epic Hyehehe", "Epic Earth Wubbox"]
-}
-
+  }, 
 };
 /** 
  *  "": {
@@ -7455,3 +7460,116 @@ function loadInitImg() {
 }
 
 loadInitImg();
+
+
+const islandDropdown = document.getElementById('islandDropdown');
+const prevButton = document.getElementById('prevPage');
+const nextButton = document.getElementById('nextPage');
+
+// The full list of islands (this is necessary for pagination)
+const allIslands = [
+    { value: "plant", text: "Plant Island" },
+    { value: "cold", text: "Cold Island" },
+    { value: "air", text: "Air Island" },
+    { value: "water", text: "Water Island" },
+    { value: "earth", text: "Earth Island" },
+    { value: "fire Haven", text: "Fire Haven" },
+    { value: "fire Oasis", text: "Fire Oasis" },
+    { value: "light", text: "Light Island" },
+    { value: "psychic", text: "Psychic Island" },
+    { value: "faerie", text: "Faerie Island" },
+    { value: "bone", text: "Bone Island" },
+    { value: "shugabush", text: "Shugabush Island" },
+    { value: "ethereal", text: "Ethereal Island" },
+    { value: "mythical", text: "Mythical Island" },
+    { value: "magical sanctum", text: "Magical Sanctum" },
+    { value: "seasonal shanty", text: "Seasonal Shanty" },
+    { value: "amber", text: "Amber Island" },
+    { value: "wublin", text: "Wublin Island" },
+    { value: "celestial", text: "Celestial Island" },
+    { value: "Ethereal Workshop", text: "Ethereal Workshop" },
+    { value: "Plasma Islet", text: "Plasma Islet" }
+];
+
+const islandsPerPage = 5;
+let currentPage = 0; // Starts at the first "page" of islands
+const ITEMS_PER_PAGE = 5;
+
+function renderIslands() {
+    // Clear existing options
+    islandDropdown.innerHTML = '';
+
+    const startIndex = currentPage * islandsPerPage;
+    const endIndex = Math.min(startIndex + islandsPerPage, allIslands.length);
+
+    // Add options for the current page
+    for (let i = startIndex; i < endIndex; i++) {
+        const option = document.createElement('option');
+        option.value = allIslands[i].value;
+        option.textContent = allIslands[i].text;
+        islandDropdown.appendChild(option);
+    }
+
+    // Update button states
+    updateButtons();
+}
+
+function updateButtons() {
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = (currentPage + 1) * islandsPerPage >= allIslands.length;
+}
+
+    prevButton.addEventListener('click', () => {
+    let islandImage = document.getElementById('islandImg'); 
+    if (currentPage > 0) {
+        currentPage--;
+        renderIslands();
+        islandDropdown.selectedIndex = 0; 
+
+        if(islandDropdown[0].innerHTML === 'Fire Haven') {
+          const defaultSelectedIsland = 'fire Haven';
+          populateMonsterSections(defaultSelectedIsland);
+        } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
+          const defaultSelectedIsland = 'seasonal shanty';
+          populateMonsterSections(defaultSelectedIsland);
+        } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
+          const defaultSelectedIsland = 'Plasma Islet';
+          populateMonsterSections(defaultSelectedIsland);
+        }
+        
+        if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
+          islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`; 
+        } else {
+          islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`; 
+        }
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    let islandImage = document.getElementById('islandImg'); 
+    const totalPages = Math.ceil(allIslands.length / ITEMS_PER_PAGE);
+    if (currentPage < totalPages - 1) {
+        currentPage++;
+        renderIslands();
+        islandDropdown.selectedIndex = 0; 
+
+        if(islandDropdown[0].innerHTML === 'Fire Haven') {
+          const defaultSelectedIsland = 'fire Haven';
+          populateMonsterSections(defaultSelectedIsland);
+        } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
+          const defaultSelectedIsland = 'seasonal shanty';
+          populateMonsterSections(defaultSelectedIsland);
+        } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
+          const defaultSelectedIsland = 'Plasma Islet';
+          populateMonsterSections(defaultSelectedIsland);
+        }
+
+        if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
+          islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`; 
+        } else {
+          islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`; 
+        }
+    }
+});
+// Initial render when the page loads
+renderIslands();
