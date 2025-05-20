@@ -1771,7 +1771,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
+      normal: "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
       rare: "",
       epic: ""
     }
@@ -1784,7 +1784,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
+      normal: "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
       rare: "",
       epic: ""
     }
@@ -5503,6 +5503,8 @@ const breedingCombinations = {
   "500 Relics": ["Mimic"],
   "Sneyser + Boskus": ["Epic Cherubble"],
   "Cataliszt + Hyehehe": ["Epic Cherubble"],
+  "Shellbeat + Cybop": ["Epic Anglow"], 
+  "Cataliszt + Cherubble": ["Epic Anglow"], 
   "Buy From Store For 100 Relics": ["Stoowarb", "Parlsona", "Tawkerr", "Maggpi"]
 };
 // Suggestions list
@@ -6218,7 +6220,16 @@ const islandData = {
     common: ["Tweedle", "Potbelly", "Noggin", "Toe Jammer", "Dandidoo", "Cybop", "Quibble", "Shrubb", "Oaktopus", "Fwog", "Reedling", "Spunge", "Scups", "Pummel", "Shellbeat", "Jeeode", "Wubbox", "Maggpi", "Parlsona", "Blabbit", "Anglow", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
     rare: ["Rare Tweedle", "Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Dandidoo", "Rare Cybop", "Rare Quibble", "Rare Shrubb", "Rare Oaktopus", "Rare Fwog", "Rare Reedling", "Rare Spunge", "Rare Scups", "Rare Pummel", "Rare Shellbeat", "Rare Jeeode", "Rare Wubbox", "Rare Maggpi", "Rare Parlsona", "Rare Blabbit", "Rare Anglow"],
     epic: ["Epic Tweedle", "Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Dandidoo", "Epic Cybop", "Epic Quibble", "Epic Shrubb", "Epic Oaktopus", "Epic Fwog", "Epic Reedling", "Epic Spunge", "Epic Scups", "Epic Pummel", "Epic Shellbeat", "Epic Jeeode", "Epic Water Wubbox", "Epic Maggpi", "Epic Parlsona", "Epic Blabbit", "Epic Anglow"]
-  }
+  },
+  earth: {
+  common: 
+  ["Tweedle", "Potbelly", "Noggin", "Mammott", "Dandidoo", "Cybop", "Pango", "Shrubb", "Furcorn", "Drumpler", "Reedling", "Thumpies", "PomPom", "Clamble", "Quarrister", "Humbug", "Wubbox", "Tawkerr", "Stoowarb", "Hoola", "Hyehehe"],
+  rare: 
+  ["Rare Tweedle", "Rare Potbelly", "Rare Noggin", "Rare Mammott", "Rare Dandidoo", "Rare Cybop", "Rare Pango", "Rare Shrubb", "Rare Furcorn", "Rare Drumpler", "Rare Reedling", "Rare Thumpies", "Rare PomPom", "Rare Clamble", "Rare Quarrister", "Rare Humbug", "Rare Hoola", "Rare Hyehehe", "Rare Wubbox"],
+  epic: 
+  ["Epic Tweedle", "Epic Potbelly", "Epic Noggin", "Epic Mammott", "Epic Dandidoo", "Epic Cybop", "Epic Pango", "Epic Shrubb", "Epic Furcorn", "Epic Drumpler", "Epic Reedling", "Epic Thumpies", "Epic PomPom", "Epic Clamble", "Epic Quarrister", "Epic Humbug", "Epic Hoola", "Epic Hyehehe", "Epic Earth Wubbox"]
+}
+
 };
 /** 
  *  "": {
@@ -6432,6 +6443,13 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shellbeat'); })();">Breeding Combo</button>`,
   },
+  "quarrister": {
+    name: "Quarrister",
+    image: "images/Monster_Avatars/Quarrister.png",
+    diamonds: 150,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quarrister'); })();">Breeding Combo</button>`,
+  },
   "ghazt": {
     name: "Ghazt",
     image: "images/Monster_Avatars/Ghazt.png",
@@ -6459,6 +6477,13 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jeeode'); })();">Breeding Combo</button>`,
+  },
+  "humbug": {
+    name: "Humbug",
+    image: "images/Monster_Avatars/Humbug.png",
+    diamonds: 1000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('humbug'); })();">Breeding Combo</button>`,
   },
   "wubbox": {
     name: "",
@@ -6537,7 +6562,13 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('anglow'); })();">Breeding Combo</button>`,
   },
-
+  "hyehehe": {
+    name: "Hyehehe",
+    image: "images/Monster_Avatars/hyehehe.png",
+    diamonds: 225,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hyehehe'); })();">Breeding Combo</button>`,
+  },
   "tawkerr": {
     name: "Tawkerr",
     image: "images/Monster_Avatars/Tawkerr.png",
@@ -6823,6 +6854,13 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shellbeat'); })();">Breeding Combo</button>`,
   },
+  "rare_quarrister": {
+    name: "Rare Quarrister",
+    image: "images/Monster_Avatars/Quarrister - Rare.png",
+    diamonds: 200,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quarrister'); })();">Breeding Combo</button>`,
+  },
   "rare_ghazt": {
     name: "Rare Ghazt",
     image: "images/Monster_Avatars/Ghazt - Rare.png",
@@ -6850,6 +6888,13 @@ const monsterInfo = {
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_jeeode'); })();">Breeding Combo</button>`,
+  },
+  "rare_humbug": {
+    name: "Rare Humbug",
+    image: "images/Monster_Avatars/Humbug - Rare.png",
+    diamonds: 1500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_humbug'); })();">Breeding Combo</button>`,
   },
   "rare_wubbox": {
     name: "Rare Wubbox",
@@ -6921,6 +6966,13 @@ const monsterInfo = {
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_anglow'); })();">Breeding Combo</button>`,
+  },
+  "rare_hyehehe": {
+    name: "Rare Hyehehe",
+    image: "images/Monster_Avatars/Hyehehe - Rare.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hyehehe'); })();">Breeding Combo</button>`,
   },
 
   // Epic versions
@@ -7131,6 +7183,13 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Shellbeat - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shellbeat'); })();">Breeding Combo</button>`,
   },
+  "epic_quarrister": {
+    name: "Epic Quarrister",
+    diamonds: 750,
+    coins: 0,
+    image: "images/Monster_Avatars/Quarrister - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_quarrister'); })();">Breeding Combo</button>`,
+  },
   "epic_ghazt": {
     name: "Epic Ghazt",
     diamonds: 2250,
@@ -7151,6 +7210,13 @@ const monsterInfo = {
     coins: 0,
     image: "images/Monster_Avatars/Reebro - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reebro'); })();">Breeding Combo</button>`,
+  },
+  "epic_humbug": {
+    name: "Epic Reebro",
+    diamonds: 2250,
+    coins: 0,
+    image: "images/Monster_Avatars/Humbug - Epic.png",
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_humbug'); })();">Breeding Combo</button>`,
   },
   "epic_plant_wubbox": {
     name: "Epic Wubbox",
@@ -7180,7 +7246,13 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
   },
-
+  "epic_earth_wubbox": {
+    name: "Epic Wubbox",
+    image: "images/Monster_Avatars/Wubbox - Epic (Earth).png",
+    diamonds: 1,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+  },
 
   "epic_punkleton": {
     name: "Epic Punkleton",
@@ -7245,7 +7317,13 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_anglow'); })();">Breeding Combo</button>`,
   },
-
+  "epic_hyehehe": {
+    name: "Epic Hyehehe",
+    image: "images/Monster_Avatars/Hyehehe - Epic.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hyehehe'); })();">Breeding Combo</button>`,
+  },
  };
 
 
