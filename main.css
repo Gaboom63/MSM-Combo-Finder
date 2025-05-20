@@ -590,3 +590,29 @@ input:focus::placeholder {
     color: black;
     border: black 2px solid;
 }
+
+#prevPage {
+    position: absolute;
+    top: 77%;
+    right: 85%;
+    background-color: mediumpurple;
+    text-shadow: -1px -1px 0 #8C00E3,
+    1px -1px 0 #8C00E3,
+    -1px 1px 0 #8C00E3,
+    1px 1px 0 #8C00E3;
+    border: #391759 1px solid;
+    color: black;
+}
+
+#nextPage {
+    position: absolute;
+    top: 77%;
+    right: 70%;
+    background-color: mediumpurple;
+    text-shadow: -1px -1px 0 #8C00E3,
+    1px -1px 0 #8C00E3,
+    -1px 1px 0 #8C00E3,
+    1px 1px 0 #8C00E3;
+    border: #391759 1px solid;
+    color: black;
+}
