@@ -6564,7 +6564,7 @@ const monsterInfo = {
   },
   "hyehehe": {
     name: "Hyehehe",
-    image: "images/Monster_Avatars/hyehehe.png",
+    image: "images/Monster_Avatars/Hyehehe.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hyehehe'); })();">Breeding Combo</button>`,
