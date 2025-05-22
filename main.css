@@ -616,3 +616,22 @@ input:focus::placeholder {
     border: #391759 1px solid;
     color: black;
 }
+
+#slideButtonForChecklist {
+     position: absolute;
+    bottom: 40%;
+/*    left: 0%;*/
+    right: 100%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 109, 109, 0.7);
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: right 0.3s ease, transform 0.3s ease;
+    background-color: mediumpurple;
+    width: 25px;
+/*    display: none;*/
+}

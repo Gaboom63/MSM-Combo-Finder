@@ -6150,16 +6150,22 @@ hideBlur();
 
 const slideButton = document.getElementById('slideButton');
 const slidePanel = document.getElementById('slidePanel');
+const checklistButton = document.getElementById('slideButtonForChecklist');
 
 slideButton.addEventListener('click', () => {
-  slidePanel.classList.toggle('open');
-  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
+  slidePanel.classList.toggle('open'); 
+  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"><i>`) {
     slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
     slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
   } else {
     slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`
     slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
   }
+});
+
+checklistButton.addEventListener('click', () => {
+  checklistButton.classList.toggle('open');
+  
 });
 
 // function closePanel() {
@@ -7529,12 +7535,23 @@ function updateButtons() {
         if(islandDropdown[0].innerHTML === 'Fire Haven') {
           const defaultSelectedIsland = 'fire Haven';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Fire Haven'
         } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
           const defaultSelectedIsland = 'seasonal shanty';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Seasonal Shanty'
         } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
           const defaultSelectedIsland = 'Plasma Islet';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Plasma Islet'
+        } else if (islandDropdown[0].innerHTML === 'Bone Island') {
+          const defaultSelectedIsland = 'bone';
+          populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Bone Island'
+        } else if(islandDropdown[0].innerHTML === 'Plant Island') {
+          const defaultSelectedIsland = 'plant';
+          populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Plant Island'
         }
         
         if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
@@ -7547,6 +7564,7 @@ function updateButtons() {
 
 nextButton.addEventListener('click', () => {
     let islandImage = document.getElementById('islandImg'); 
+    let islandName = document.getElementById('islandName');
     const totalPages = Math.ceil(allIslands.length / ITEMS_PER_PAGE);
     if (currentPage < totalPages - 1) {
         currentPage++;
@@ -7556,12 +7574,23 @@ nextButton.addEventListener('click', () => {
         if(islandDropdown[0].innerHTML === 'Fire Haven') {
           const defaultSelectedIsland = 'fire Haven';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Fire Haven'
         } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
           const defaultSelectedIsland = 'seasonal shanty';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Seasonal Shanty'
         } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
           const defaultSelectedIsland = 'Plasma Islet';
           populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Plasma Islet'
+        } else if (islandDropdown[0].innerHTML === 'Bone Island') {
+          const defaultSelectedIsland = 'bone';
+          populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Bone Island'
+        } else if(islandDropdown[0].innerHTML === 'Plant Island') {
+          const defaultSelectedIsland = 'plant';
+          populateMonsterSections(defaultSelectedIsland);
+          islandName.innerHTML = 'Plant Island'
         }
 
         if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
