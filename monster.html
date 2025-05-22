@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,153 +10,171 @@
     <link rel="icon" type="image/x-icon" href="images/important/mammoticon.png">
     <title>MSM Combo Finder</title>
 </head>
+
 <body style="background-image: url(images/backgrounds/NoEventShellbeat.jpg); background-size: cover;">
+
     <div id="blurOverlay"></div> <!-- Blur overlay element -->
     <div id="blurMessage" onclick="closeMenu()">Press ESC to go back</div> <!-- Message element -->
     <div id="iconContainer">
         <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
         <div id="textContainer">
-            <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The <a href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
+            <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The <a
+                    href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a
+                    href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
         </div>
     </div>
-<div id="slideButton">
-    <i class="fas fa-arrow-left"></i>
+    <div id="slideButton">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    <div id="slidePanel">
+       <div id="checklistMenu">
+    <p id="islandNameChecklist">Plant Island</p>
+    <ul id="monsterChecklist"></ul>
 </div>
-<div id="slidePanel">
-    <div id="iconContainer">
-        <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
-        <div id="textContainer" style="background-color: mediumpurple">
-            <div id="hoverText">This part specifically is <b>NOT FINISHED!</b> yet. It is still being worked on, so if things aren't fully working or monsters are missing don't be alarmed.</a></div>
+
+        <div id="iconContainer">
+            <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
+            <div id="textContainer" style="background-color: mediumpurple">
+                <div id="hoverText">This part specifically is <b>NOT FINISHED!</b> yet. It is still being worked on, so
+                    if things aren't fully working or monsters are missing don't be alarmed.</a></div>
+            </div>
         </div>
-    </div>
-    <div id="panelContent">
+        <div id="panelContent">
 
-    <b><h1 id="title">My Singing Monsters <br> Checklist</h1></b>
-    <div>
-        <h1 id="islandName">Plant Island</h1>
-        <img id="islandImg" src="images/islands/Plant Island.png">
-        <button id="prevPage">Previous</button>
-        <select id="islandDropdown">
-                <option value="plant">Plant Island</option>
-                <option value="cold">Cold Island</option>
-                <option value="air">Air Island</option>
-                <option value="water">Water Island</option>
-                <option value="earth">Earth Island</option>
-                <option value="fire Haven">Fire Haven</option>
-                <option value="fire Oasis">Fire Oasis</option>
-                <option value="light">Light Island</option>
-                <option value="psychic">Psychic Island</option>
-                <option value="faerie">Faerie Island</option>
-                <option value="bone">Bone Island</option>
-                <option value="shugabush">Shugabush Island</option>
-                <option value="ethereal">Ethereal Island</option>
-                <option value="mythical">Mythical Island</option>
-                <option value="magical sanctum">Magical Sanctum</option>
-                <option value="seasonal shanty">Seasonal Shanty</option>
-                <option value="amber">Amber Island</option>
-                <option value="wublin">Wublin Island</option>
-                <option value="celestial">Celestial Island</option>
-                <option value="Ethereal Workshop">Ethereal Workshop</option>
-                <option value="Plasma Islet">Plasma Islet</option>
-                //No Colossingum Nor Gold Nor Nexus For Obvious Reasons. 
-        </select>
-        <button id="nextPage">Next</button>
-    </div>
-
-
-   <div id="checklist">
-
-    <h1 id="monsterNameList">Monster List:</h1>
-    <select id="monsterTypeDropdown">
-        <option value="">-- Choose a type --</option>
-        <option value="common">Common</option>
-        <option value="rare">Rare</option>
-        <option value="epic">Epic</option>
-    </select>
-
-    <!-- Reveal sections -->
-    <div id="commonSection" class="sliding-panel">
-        <select id="monsterSelection">
-            //EVERYTHING IS ADDED IN MONSTER.JS :)
-        </select>
-        <img id="monsterImage" src="" alt="Monster Image">
-           <div id="monsterStats">
-         <div style="display: flex;">
-             <div id="Diamonds" style="display: flex; align-items: center;">
-                 <img src="images/important/Diamonds.png" style="vertical-align: middle;">
-                 <p id="diamonds" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
-             </div>
-            <div style="display: flex; align-items: center;">
-                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
-                <p id="coins" style="position: relative; left: 180%; text-align: right;">10</p>
+            <b>
+                <h1 id="title">My Singing Monsters <br> Checklist</h1>
+            </b>
+            <div>
+                <h1 id="islandName">Plant Island</h1>
+                <img id="islandImg" src="images/islands/Plant Island.png">
+                <button id="prevPage">Previous</button>
+                <select id="islandDropdown">
+                    <option value="plant">Plant Island</option>
+                    <option value="cold">Cold Island</option>
+                    <option value="air">Air Island</option>
+                    <option value="water">Water Island</option>
+                    <option value="earth">Earth Island</option>
+                    <option value="fire Haven">Fire Haven</option>
+                    <option value="fire Oasis">Fire Oasis</option>
+                    <option value="light">Light Island</option>
+                    <option value="psychic">Psychic Island</option>
+                    <option value="faerie">Faerie Island</option>
+                    <option value="bone">Bone Island</option>
+                    <option value="shugabush">Shugabush Island</option>
+                    <option value="ethereal">Ethereal Island</option>
+                    <option value="mythical">Mythical Island</option>
+                    <option value="magical sanctum">Magical Sanctum</option>
+                    <option value="seasonal shanty">Seasonal Shanty</option>
+                    <option value="amber">Amber Island</option>
+                    <option value="wublin">Wublin Island</option>
+                    <option value="celestial">Celestial Island</option>
+                    <option value="Ethereal Workshop">Ethereal Workshop</option>
+                    <option value="Plasma Islet">Plasma Islet</option>
+                    //No Colossingum Nor Gold Nor Nexus For Obvious Reasons.
+                </select>
+                <button id="nextPage">Next</button>
             </div>
-         </div>
-               <p id="monsterDescription">Description will go here.</p>
-               <label><input type="checkbox" id="monsterCollected"> Collected</label>
-           </div>
-    </div>
 
-    <div id="rareSection" class="sliding-panel">
-      <select id="monsterSelection">
-            //EVERYTHING IS ADDED IN MONSTER.JS :)
-        </select>
-        <img id="monsterImageRare" src="" alt="Monster Image">
-           <div id="monsterStatsRare">
-             <div style="display: flex;">
-             <div id="Diamonds" style="display: flex; align-items: center;">
-                 <img src="images/important/Diamonds.png" style="vertical-align: middle;">
-                 <p id="diamondsRare" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
-             </div>
-            <div style="display: flex; align-items: center;">
-                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
-                <p id="coinsRare" style="position: relative; left: 180%; text-align: right;">10</p>
-            </div>
-         </div>
-               <p id="monsterDescriptionRare">Description will go here.</p>
-               <label><input type="checkbox" id="monsterCollected"> Collected</label>
-           </div>
-    </div>
 
-    <div id="epicSection" class="sliding-panel">
-        <select id="monsterSelection">
-            //EVERYTHING IS ADDED IN MONSTER.JS :)
-        </select>
-        <img id="monsterImageEpic" src="" alt="Monster Image">
-           <div id="monsterStatsEpic">
-            <div style="display: flex;">
-                <div id="Diamonds" style="display: flex; align-items: center;">
-                    <img src="images/important/Diamonds.png" style="vertical-align: middle;">
-                    <p id="diamondsEpic" style="display: inline; margin-left: 5px; vertical-align: middle;">10</p>
+            <div id="checklist">
+
+                <h1 id="monsterNameList">Monster List:</h1>
+                <select id="monsterTypeDropdown">
+                    <option value="">-- Choose a type --</option>
+                    <option value="common">Common</option>
+                    <option value="rare">Rare</option>
+                    <option value="epic">Epic</option>
+                </select>
+
+                <!-- Reveal sections -->
+                <div id="commonSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImage" src="" alt="Monster Image">
+                    <div id="monsterStats">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamonds" style="display: inline; margin-left: 5px; vertical-align: middle;">10
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                                <p id="coins" style="position: relative; left: 180%; text-align: right;">10</p>
+                            </div>
+                        </div>
+                        <p id="monsterDescription">Description will go here.</p>
+                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
+                    </div>
                 </div>
-               <div style="display: flex; align-items: center;">
-                   <img src="images/important/Coins.png" style="position: relative; left: 170%;">
-                   <p id="coinsEpic" style="position: relative; left: 180%; text-align: right;">10</p>
-               </div>
+
+                <div id="rareSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImageRare" src="" alt="Monster Image">
+                    <div id="monsterStatsRare">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamondsRare" style="display: inline; margin-left: 5px; vertical-align: middle;">
+                                    10</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                                <p id="coinsRare" style="position: relative; left: 180%; text-align: right;">10</p>
+                            </div>
+                        </div>
+                        <p id="monsterDescriptionRare">Description will go here.</p>
+                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
+                    </div>
+                </div>
+
+                <div id="epicSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImageEpic" src="" alt="Monster Image">
+                    <div id="monsterStatsEpic">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamondsEpic" style="display: inline; margin-left: 5px; vertical-align: middle;">
+                                    10</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img src="images/important/Coins.png" style="position: relative; left: 170%;">
+                                <p id="coinsEpic" style="position: relative; left: 180%; text-align: right;">10</p>
+                            </div>
+                        </div>
+                        <p id="monsterDescriptionEpic">Description will go here.</p>
+                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
+                    </div>
+                </div>
+                <div id="slideButtonForChecklist">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
             </div>
-               <p id="monsterDescriptionEpic">Description will go here.</p>
-               <label><input type="checkbox" id="monsterCollected"> Collected</label>
-           </div>
+
+        </div>
     </div>
-<div id="slideButtonForChecklist">
-    <i class="fas fa-arrow-left"></i>
-</div>
-</div>
 
-</div>
-</div>
-
-    <b><h1 id="title">My Singing Monsters <br> Combo Finder</h1>    </b>
+    <b>
+        <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
+    </b>
     <div id="inputContainer">
-            <input id="First_Monster" autocomplete="off" placeholder="First Monster"><br><br>
-            
-            <input id="Second_Monster" autocomplete="off" placeholder="Second Monster"><br><br>
-            
-            <input id="Search_Monster" autocomplete="off" placeholder="Search for a Monster"><br><br>
+        <input id="First_Monster" autocomplete="off" placeholder="First Monster"><br><br>
+
+        <input id="Second_Monster" autocomplete="off" placeholder="Second Monster"><br><br>
+
+        <input id="Search_Monster" autocomplete="off" placeholder="Search for a Monster"><br><br>
 
         <button id="breedButton">Breed Or Search</button>
         <button id="resetButton">Reset</button>
     </div>
-    
+
     <div id="suggestions1" class="suggestions"></div>
     <div id="suggestions2" class="suggestions"></div>
     <div id="suggestions3" class="suggestions"></div>
@@ -170,6 +189,7 @@
         </div>
         <div id="statsContainer" style="color: rgb(182, 6, 6);"></div>
     </div>
+
     <script src="monster.js"></script>
 </body>
 

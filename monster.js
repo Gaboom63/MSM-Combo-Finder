@@ -6037,7 +6037,7 @@ function showBlur() {
 
   // Hide input elements and buttons
   document.getElementById('inputContainer').classList.add('hidden'); // Hide the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton'); // Select input fields and buttons
+  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist'); // Select input fields and buttons
   inputs.forEach(input => input.classList.add('hidden')); // Hide each input/button
 
   // Hide suggestion boxes
@@ -6075,7 +6075,7 @@ function hideBlur() {
 
   // Show input elements and buttons
   document.getElementById('inputContainer').classList.remove('hidden'); // Show the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton'); // Select input fields and buttons
+  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist'); // Select input fields and buttons
   inputs.forEach(input => {
     input.classList.remove('hidden'); // Show each input/button
     input.setAttribute('autocomplete', 'on'); // Re-enable autocomplete
@@ -6150,11 +6150,10 @@ hideBlur();
 
 const slideButton = document.getElementById('slideButton');
 const slidePanel = document.getElementById('slidePanel');
-const checklistButton = document.getElementById('slideButtonForChecklist');
 
 slideButton.addEventListener('click', () => {
   slidePanel.classList.toggle('open'); 
-  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"><i>`) {
+  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
     slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
     slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
   } else {
@@ -6163,30 +6162,30 @@ slideButton.addEventListener('click', () => {
   }
 });
 
-checklistButton.addEventListener('click', () => {
-  checklistButton.classList.toggle('open');
-  
-});
 
 // function closePanel() {
 //     slidePanel.classList.remove('open');
 // }
 
+
+
 document.getElementById('islandDropdown').addEventListener('change', function () {
   const value = this.value;
   const islandNameElement = document.getElementById('islandName');
   const islandImg = document.getElementById('islandImg');
-
+  const islandNameChecklist = document.getElementById('islandNameChecklist');
   // Capitalize first letter for display
   const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
 
   // Update the name and image
   if(value === "Plasma Islet" || value === "Ethereal Workshop") {
   islandNameElement.textContent = `${capitalized}`;
+  islandNameChecklist.textContent = `${capitalized}`;
   islandImg.src = `images/islands/${capitalized} Island.png`;
 
   } else if (value !== "Plasma Islet" && value !== "Ethereal Workshop"){
   islandNameElement.textContent = `${capitalized} Island`;
+    islandNameChecklist.textContent = `${capitalized} Island`;
   islandImg.src = `images/islands/${capitalized} Island.png`;
 }
 });
@@ -7602,3 +7601,75 @@ nextButton.addEventListener('click', () => {
 });
 // Initial render when the page loads
 renderIslands();
+
+const slideButtonChecklist = document.getElementById('slideButtonForChecklist');
+const checklistMenu = document.getElementById('checklistMenu');
+
+slideButtonChecklist.addEventListener('click', () => {
+    // Toggle the 'open' class to slide in/out the menu
+    checklistMenu.classList.toggle('open');
+  
+    // Toggle the button's icon and background color based on the state
+    if (slideButtonChecklist.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
+        slideButtonChecklist.innerHTML = `<i class="fas fa-arrow-left"></i>`;
+    } else {
+        slideButtonChecklist.innerHTML = `<i class="fas fa-arrow-right"></i>`;
+    }
+
+    // Adjust the button's position based on whether the menu is open
+    if (checklistMenu.classList.contains('open')) {
+        slideButtonChecklist.style.right = '300px';  // Move the button to the left by the menu width
+    } else {
+        slideButtonChecklist.style.right = '100%';  // Reset to the right
+    }
+});
+
+
+/*
+const slideButton = document.getElementById('slideButton');
+const slidePanel = document.getElementById('slidePanel');
+
+slideButton.addEventListener('click', () => {
+  slidePanel.classList.toggle('open'); 
+  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
+    slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
+    slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
+  } else {
+    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`
+    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
+  }
+});
+
+*/
+
+function createIslandChecklist(island) {
+  const checklistElement = document.getElementById('monsterChecklist');
+  checklistElement.innerHTML = ''; // Clear previous content
+  
+  // Loop through the common, rare, and epic monsters
+  ['common', 'rare', 'epic'].forEach(type => {
+    islandData[island][type].forEach(monster => {
+      // Convert monster name to lowercase for matching keys in monsterInfo
+      const monsterKey = monster.toLowerCase().replace(' ', '_'); 
+
+      if (monsterInfo[monsterKey]) {
+        const monsterData = monsterInfo[monsterKey];
+        const listItem = document.createElement('li');
+        
+        listItem.innerHTML = `
+          <label>
+            <input type="checkbox">
+            <img src="${monsterData.image}" alt="${monsterData.name}" style="width: 50px; height: 50px;">
+            ${monsterData.name}
+          </label>
+          <div>${monsterData.description}</div>
+        `;
+        
+        checklistElement.appendChild(listItem);
+      }
+    });
+  });
+}
+
+// Call the function for the "plant" island
+createIslandChecklist('air');

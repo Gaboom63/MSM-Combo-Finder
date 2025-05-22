@@ -618,20 +618,90 @@ input:focus::placeholder {
 }
 
 #slideButtonForChecklist {
-     position: absolute;
+    position: absolute;
     bottom: 40%;
-/*    left: 0%;*/
-    right: 100%;
+    right: 100%; /* Initially, the button is off-screen */
     transform: translateY(-50%);
-    background-color: rgb(255, 109, 109, 0.7);
     color: white;
     padding: 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1000;  /* Ensure it's on top of the checklist menu */
     transition: right 0.3s ease, transform 0.3s ease;
-    background-color: mediumpurple;
+    background-color: rgba(147, 112, 219, 0.7);  /* Use rgba for better transparency */
     width: 25px;
-/*    display: none;*/
+}
+
+#checklistMenu {
+    position: fixed;
+    top: 45%;
+    left: -100%;  /* Start off-screen */
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 60%;
+    background-size: cover;
+    background-color: rgba(72, 3, 148, 0.7);  /* Use rgba for better transparency */
+    box-shadow: -3px 0 10px rgb(92, 9, 112);
+    transition: left 0.5s ease;
+    z-index: 999;  /* Keep the menu behind the button */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow of the entire menu */
+    color: white;
+    scrollbar-color: mediumpurple;
+}
+
+#monsterChecklist {
+    max-height: 100%; /* Ensures the checklist takes up all available space */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 10px; /* To prevent clipping when scrollbar appears */
+}
+
+/* Styling for checklist items */
+#monsterChecklist li {
+    margin-bottom: 10px;
+    list-style-type: none; /* Remove default bullet points */
+}
+
+#monsterChecklist img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+/* Optional: Add some padding for scrollable area */
+#monsterChecklist div {
+    margin-top: 10px;
+}
+
+#checklistMenu.open {
+    left: 47%;  /* Slide the menu into view */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+#monsterChecklist::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+#monsterChecklist::-webkit-scrollbar-thumb {
+    background-color: #800080;  /* Medium purple color */
+    border-radius: 10px;  /* Optional: rounds the edges of the scrollbar thumb */
+    border: 2px solid #4b0082;  /* Optional: adds a border around the thumb for contrast */
+}
+
+#monsterChecklist::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);  /* Light background for the track */
+    border-radius: 10px;  /* Optional: rounds the edges of the scrollbar track */
+}
+
+/* For Firefox */
+#monsterChecklist {
+    scrollbar-width: thin;  /* Makes the scrollbar thinner */
+    scrollbar-color: #800080 #4b0082;  /* Medium purple for the thumb and darker purple for the track */
 }
