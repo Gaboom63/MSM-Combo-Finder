@@ -3008,7 +3008,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 9 hr 45 min <br><br> Enhanced Breeding Time: 1 day 1 hr 18 min 45 sec",
       epic: ""
     }
   },
@@ -3582,7 +3582,7 @@ const monsters = [
     },
     "stats": {
       "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "",
+      "rare": "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
       "epic": ""
     }
   },
@@ -6214,8 +6214,8 @@ document.getElementById('monsterTypeDropdown').addEventListener('change', functi
 const islandData = {
   plant: {
     common: ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T Rox", "Entbrat", "Ghazt", "Wubbox", "Shugabush", "Tawkerr", "Parlsona", "Punkleton", "G joob", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
-    rare: ["Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Mammott", "Rare Shrubb", "Rare Oaktopus", "Rare Furcorn", "Rare Fwog", "Rare Drumpler", "Rare Maw", "Rare Pummel", "Rare Clamble", "Rare Bowgart", "Rare T Rox", "Rare Entbrat", "Rare Ghazt", "Rare Wubbox", "Rare G joob"],
-    epic: ["Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Shrubb", "Epic Oaktopus", "Epic Furcorn", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Pummel", "Epic Clamble", "Epic Bowgart", "Epic T Rox", "Epic Entbrat", "Epic Ghazt", "Epic Plant Wubbox"]
+    rare: ["Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Mammott", "Rare Shrubb", "Rare Oaktopus", "Rare Furcorn", "Rare Fwog", "Rare Drumpler", "Rare Maw", "Rare Pummel", "Rare Clamble", "Rare Bowgart", "Rare T Rox", "Rare Entbrat", "Rare Ghazt", "Rare Wubbox", "Rare G joob", "Rare Punkleton"],
+    epic: ["Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Shrubb", "Epic Oaktopus", "Epic Furcorn", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Pummel", "Epic Clamble", "Epic Bowgart", "Epic T Rox", "Epic Entbrat", "Epic Ghazt", "Epic Plant Wubbox", "Epic Punkleton"]
   },
   cold: {
     common: ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Qubble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Wubbox", "Twakerr", "Maggpi", "Yool", "Strombonin", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
@@ -6247,7 +6247,7 @@ const islandData = {
      image: "images/Monster_Avatars/.png",
      diamonds: ,
      coins: ,
-       description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button>`,
+       description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
    },
 */
 
@@ -6259,63 +6259,63 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Potbelly.png",
     diamonds: 0,
     coins: 250,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('potbelly'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('potbelly'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "noggin": {
     name: "Noggin",
     image: "images/Monster_Avatars/Noggin.png",
     diamonds: 0,
     coins: 300,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('noggin'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('noggin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "toe_jammer": {
     name: "Toe Jammer",
     diamonds: 0,
     coins: 250,
     image: "images/Monster_Avatars/Toe Jammer.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('toe_jammer'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('toe_jammer'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "fwog": {
     name: "Fwog",
     image: "images/Monster_Avatars/Fwog.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "mammott": {
     name: "Mammott",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Mammott.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "tweedle": {
     name: "Tweedle",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Tweedle.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tweedle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tweedle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "shrubb": {
     name: "Shrubb",
     image: "images/Monster_Avatars/Shrubb.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shrubb'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "oaktopus": {
     name: "Oaktopus",
     image: "images/Monster_Avatars/Oaktopus.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('Oaktopus'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('Oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "furcorn": {
     name: "Furcorn",
     image: "images/Monster_Avatars/Furcorn.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "drumpler": {
@@ -6323,105 +6323,105 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Drumpler.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('drumpler'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "maw": {
     name: "Maw",
     image: "images/Monster_Avatars/Maw.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maw'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maw'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "dandidoo": {
     name: "Dandidoo",
     image: "images/Monster_Avatars/Dandidoo.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('dandidoo'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('dandidoo'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "quibble": {
     name: "Quibble",
     image: "images/Monster_Avatars/Quibble.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quibble'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quibble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "pango": {
     name: "Pango",
     image: "images/Monster_Avatars/Pango.png",
     diamonds: 30,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pango'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pango'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "spunge": {
     name: "Spunge",
     image: "images/Monster_Avatars/Spunge.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('spunge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "reedling": {
     name: "Reedling",
     image: "images/Monster_Avatars/Reedling.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reedling'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "thumpies": {
     name: "Thumpies",
     image: "images/Monster_Avatars/Thumpies.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('thumpies'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "congle": {
     name: "Congle",
     image: "images/Monster_Avatars/Congle.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('congle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "pummel": {
     name: "Pummel",
     image: "images/Monster_Avatars/Pummel.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pummel'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "clamble": {
     name: "Clamble",
     image: "images/Monster_Avatars/Clamble.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('clamble'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "bowgart": {
     name: "Bowgart",
     image: "images/Monster_Avatars/Bowgart.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bowgart'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "t_rox": {
     name: "T-Rox",
     image: "images/Monster_Avatars/T-Rox.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('t_rox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "scups": {
     name: "Scups",
     image: "images/Monster_Avatars/Scups.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('scups'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "pompom": {
     name: "PomPom",
     image: "images/Monster_Avatars/PomPom.png",
     diamonds: 50,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pompom'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   //4 Elements  
@@ -6430,231 +6430,231 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Entbrat.png",
     diamonds: 150,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('entbrat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "deedge": {
     name: "Deedge",
     image: "images/Monster_Avatars/Deedge.png",
     diamonds: 150,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('deedge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "riff": {
     name: "Riff",
     image: "images/Monster_Avatars/Riff.png",
     diamonds: 150,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('riff'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "shellbeat": {
     name: "Shellbeat",
     image: "images/Monster_Avatars/Shellbeat.png",
     diamonds: 150,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shellbeat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "quarrister": {
     name: "Quarrister",
     image: "images/Monster_Avatars/Quarrister.png",
     diamonds: 150,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quarrister'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "ghazt": {
     name: "Ghazt",
     image: "images/Monster_Avatars/Ghazt.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ghazt'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "grumpyre": {
     name: "Grumpyre",
     image: "images/Monster_Avatars/Grumpyre.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('grumpyre'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "reebro": {
     name: "Reebro",
     image: "images/Monster_Avatars/Reebro.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reebro'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "jeeode": {
     name: "Jeeode",
     image: "images/Monster_Avatars/Jeeode.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jeeode'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jeeode'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "humbug": {
     name: "Humbug",
     image: "images/Monster_Avatars/Humbug.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('humbug'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "wubbox": {
-    name: "",
+    name: "Wubbox",
     image: "images/Monster_Avatars/Wubbox.png",
     diamonds: 0,
     coins: 75 + 'M',
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "shugabush": {
     name: "Shugabush",
     image: "images/Monster_Avatars/Shugabush.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shugabush'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shugabush'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "punkleton": {
     name: "Punkleton",
     image: "images/Monster_Avatars/Punkleton.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('punkleton'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "yool": {
     name: "Yool",
     image: "images/Monster_Avatars/Yool.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yool'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "schmoochle": {
     name: "Schmoochle",
     image: "images/Monster_Avatars/Schmoochle.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('schmoochle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "hoola": {
     name: "Hoola",
     image: "images/Monster_Avatars/Hoola.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hoola'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "blabbit": {
     name: "Blabbit",
     image: "images/Monster_Avatars/Blabbit.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('blabbit'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "g_joob": {
     name: "G joob",
     image: "images/Monster_Avatars/G_joob.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('g_joob'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "strombonin": {
     name: "Strombonin",
     image: "images/Monster_Avatars/Strombonin.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('strombonin'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "yawstrich": {
     name: "Yawstrich",
     image: "images/Monster_Avatars/Yawstrich.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yawstrich'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "anglow": {
     name: "Anglow",
     image: "images/Monster_Avatars/Anglow.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('anglow'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "hyehehe": {
     name: "Hyehehe",
     image: "images/Monster_Avatars/Hyehehe.png",
     diamonds: 225,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hyehehe'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "tawkerr": {
     name: "Tawkerr",
     image: "images/Monster_Avatars/Tawkerr.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tawkerr'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tawkerr'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "maggpi": {
     name: "Maggpi",
-    image: "images/Monster_Avatars/Tawkerr.png",
+    image: "images/Monster_Avatars/Maggpi.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maggpi'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maggpi'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "parlsona": {
     name: "Parlsona",
     image: "images/Monster_Avatars/Parlsona.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('parlsona'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('parlsona'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "stoowarb": {
     name: "Stoowarb",
     image: "images/Monster_Avatars/Stoowarb.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('stoowarb'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('stoowarb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 "do": {
     name: "Do",
     image: "images/Monster_Avatars/Dipster - Do.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('do'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('do'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "re": {
     name: "Re",
     image: "images/Monster_Avatars/Dipster - Re.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('re'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('re'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "mi": {
     name: "Mi",
     image: "images/Monster_Avatars/Dipster - Mi.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mi'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mi'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "fa": {
     name: "Fa",
     image: "images/Monster_Avatars/Dipster - Fa.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fa'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fa'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "sol": {
     name: "Sol",
     image: "images/Monster_Avatars/Dipster - Sol.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('sol'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('sol'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "la": {
     name: "La",
     image: "images/Monster_Avatars/Dipster - La.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('la'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('la'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "ti": {
     name: "Ti",
     image: "images/Monster_Avatars/Dipster - Ti.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ti'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ti'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
  
   // Rare versions
@@ -6663,56 +6663,56 @@ const monsterInfo = {
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Potbelly - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_potbelly');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_noggin": {
     name: "Rare Noggin",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Noggin - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_noggin');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_toe_jammer": {
     name: "Rare Toe Jammer",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Toe Jammer - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_toe_jammer');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_mammott": {
     name: "Rare Mammott",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Mammott - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_mammott');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_tweedle": {
     name: "Rare Tweedle",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Tweedle - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_tweedle');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_fwog": {
     name: "Rare Fwog",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_fwog');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_furcorn": {
     name: "Rare Furcorn",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Furcorn - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_furcorn');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_cybop": {
     name: "Rare Cybop",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Cybop - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_cybop');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
 
   "rare_drumpler": {
@@ -6720,42 +6720,42 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Drumpler - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_drumpler'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_maw": {
     name: "Rare Maw",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Maw - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_maw');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "rare_dandidoo": {
     name: "Rare Dandidoo",
     image: "images/Monster_Avatars/Dandidoo - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_dandidoo'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_dandidoo'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_quibble": {
     name: "Rare Quibble",
     image: "images/Monster_Avatars/Quibble - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quibble'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quibble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_pango": {
     name: "Rare Pango",
     image: "images/Monster_Avatars/Pango - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pango'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pango'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_pummel": {
     name: "Rare Pummel",
     image: "images/Monster_Avatars/Pummel - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pummel'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "rare_oaktopus": {
@@ -6763,14 +6763,14 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Oaktopus - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_oaktopus'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "rare_shrubb": {
     name: "Rare Shurbb",
     image: "images/Monster_Avatars/Shrubb - Rare.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shrubb'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "rare_clamble": {
@@ -6778,140 +6778,140 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Clamble - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_clamble'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_bowgart": {
     name: "Rare Bowgart",
     image: "images/Monster_Avatars/Bowgart - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_bowgart'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_spunge": {
     name: "Rare Spunge",
     image: "images/Monster_Avatars/Spunge - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_spunge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_reedling": {
     name: "Rare Reedling",
     image: "images/Monster_Avatars/Reedling - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reedling'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_scups": {
     name: "Rare Scups",
     image: "images/Monster_Avatars/Spunge - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_scups'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_pompom": {
     name: "Rare PomPom",
     image: "images/Monster_Avatars/PomPom - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pompom'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_thumpies": {
     name: "Rare Thumpies",
     image: "images/Monster_Avatars/Thumpies - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_thumpies'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_congle": {
     name: "Rare Congle",
     image: "images/Monster_Avatars/Congle - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_congle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_t_rox": {
     name: "Rare T Rox",
     image: "images/Monster_Avatars/T-Rox - Rare.png",
     diamonds: 65,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_t_rox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_entbrat": {
     name: "Rare Entbrat",
     image: "images/Monster_Avatars/Entbrat - Rare.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_entbrat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_deedge": {
     name: "Rare Deedge",
     image: "images/Monster_Avatars/Deedge - Rare.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_deedge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_riff": {
     name: "Rare Riff",
     image: "images/Monster_Avatars/Riff - Rare.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_riff'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_shellbeat": {
     name: "Rare Shellbeat",
     image: "images/Monster_Avatars/Shellbeat - Rare.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shellbeat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_quarrister": {
     name: "Rare Quarrister",
     image: "images/Monster_Avatars/Quarrister - Rare.png",
     diamonds: 200,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quarrister'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_ghazt": {
     name: "Rare Ghazt",
     image: "images/Monster_Avatars/Ghazt - Rare.png",
     diamonds: 1500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_ghazt'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_grumpyre": {
     name: "Rare Grumpyre",
     image: "images/Monster_Avatars/Grumpyre - Rare.png",
     diamonds: 1500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_grumpyre'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_reebro": {
     name: "Rare Reebro",
     image: "images/Monster_Avatars/Reebro - Rare.png",
     diamonds: 1500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reebro'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_jeeode": {
     name: "Rare Jeeode",
     image: "images/Monster_Avatars/Jeeode - Rare.png",
     diamonds: 1500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_jeeode'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_jeeode'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_humbug": {
     name: "Rare Humbug",
     image: "images/Monster_Avatars/Humbug - Rare.png",
     diamonds: 1500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_humbug'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_wubbox": {
     name: "Rare Wubbox",
     image: "images/Monster_Avatars/Wubbox - Rare.png",
     diamonds: 0,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "rare_punkleton": {
@@ -6919,70 +6919,70 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Punkleton - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_punkleton'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_yool": {
     name: "Rare Yool",
     image: "images/Monster_Avatars/Yool - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yool'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_schmoochle": {
     name: "Rare Schmoochle",
     image: "images/Monster_Avatars/Schmoochle - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_schmoochle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_hoola": {
     name: "Rare Hoola",
     image: "images/Monster_Avatars/Hoola - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hoola'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_blabbit": {
     name: "Rare Blabbit",
     image: "images/Monster_Avatars/Blabbit - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_blabbit'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_g_joob": {
     name: "Rare G joob",
     image: "images/Monster_Avatars/G_joob - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_g_joob'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_strombonin": {
     name: "Rare Strombonin",
     image: "images/Monster_Avatars/Strombonin - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_strombonin'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_yawstrich": {
     name: "Rare Yawstrich",
     image: "images/Monster_Avatars/Yawstrich - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yawstrich'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_anglow": {
     name: "Rare Anglow",
     image: "images/Monster_Avatars/Anglow - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_anglow'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "rare_hyehehe": {
     name: "Rare Hyehehe",
     image: "images/Monster_Avatars/Hyehehe - Rare.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hyehehe'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   // Epic versions
@@ -6991,35 +6991,35 @@ const monsterInfo = {
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Potbelly - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_potbelly');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_noggin": {
     name: "Epic Noggin",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Noggin - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_noggin');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_toe_jammer": {
     name: "Epic Toe Jammer",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Toe Jammer - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_toe_jammer');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_mammott": {
     name: "Epic Mammott",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Mammott - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_mammott');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_tweedle": {
     name: "Epic Tweedle",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Tweedle - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_tweedle');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
 
   "epic_fwog": {
@@ -7027,14 +7027,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_fwog');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_furcorn": {
     name: "Epic Furcorn",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Furcorn - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_furcorn');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_drumpler": {
     name: "Epic Drumpler",
@@ -7043,56 +7043,56 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Drumpler - Epic.png",
     diamonds: 40,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_drumpler'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_maw": {
     name: "Epic Maw",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Maw - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_maw');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_cybop": {
     name: "Epic Cybop",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Cybop - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_cybop');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_dandidoo": {
     name: "Epic Fwog",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_dandidoo');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_dandidoo');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_quibble": {
     name: "Epic Quibble",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Quibble - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_quibble');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_quibble');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_pango": {
     name: "Epic Pango",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Pango - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_pango');">Breeding Combo</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_pango');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
   },
   "epic_oaktopus": {
     name: "Epic Oaktopus",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Oaktopus - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_oaktopus'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
    "epic_shrubb": {
     name: "Epic Shurbb",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Shrubb - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shrubb'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "epic_pummel": {
@@ -7100,168 +7100,168 @@ const monsterInfo = {
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Pummel - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pummel'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_spunge": {
     name: "Epic Spunge",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Spunge - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_spunge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_reedling": {
     name: "Epic Spunge",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Reedling - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reedling'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_scups": {
     name: "Epic Scups",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Scups - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_scups'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_pompom": {
     name: "Epic PomPom",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/PomPom - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pompom'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_thumpies": {
     name: "Epic Thumpies",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Thumpies - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_thumpies'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_congle": {
     name: "Epic Congle",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Thumpies - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_congle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_clamble": {
     name: "Epic Clamble",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Clamble - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_clamble'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_bowgart": {
     name: "Epic Bowgart",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Bowgart - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_bowgart'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_t_rox": {
     name: "Epic T Rox",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/T-Rox - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_t_rox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_entbrat": {
     name: "Epic Entbrat",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Entbrat - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_entbrat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_deedge": {
     name: "Epic Deedge",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Deedge - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_deedge'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_riff": {
     name: "Epic Riff",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Riff - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_riff'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_shellbeat": {
     name: "Epic Shellbeat",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Shellbeat - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shellbeat'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_quarrister": {
     name: "Epic Quarrister",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Quarrister - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_quarrister'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_ghazt": {
     name: "Epic Ghazt",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Ghazt - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_ghazt'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_grumpyre": {
     name: "Epic Grumpyre",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Grumpyre - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_grumpyre'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_reebro": {
     name: "Epic Reebro",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Reebro - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reebro'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_humbug": {
-    name: "Epic Reebro",
+    name: "Epic Humbug",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Humbug - Epic.png",
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_humbug'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_plant_wubbox": {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Plant).png",
     diamonds: 1,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_cold_wubbox": {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Cold).png",
     diamonds: 1,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_air_wubbox": {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Air).png",
     diamonds: 1,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_water_wubbox": {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Water).png",
     diamonds: 1,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_earth_wubbox": {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Earth).png",
     diamonds: 1,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
   "epic_punkleton": {
@@ -7269,70 +7269,70 @@ const monsterInfo = {
     image: "images/Monster_Avatars/Punkleton - Epic.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_punkleton'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_yool": {
     name: "Epic Yool",
     image: "images/Monster_Avatars/Yool - Epic.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yool'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_schmoochle": {
     name: "Epic Schmoochle",
     image: "images/Monster_Avatars/Schmoochle - Epic.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_schmoochle'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_hoola": {
     name: "Epic Hoola",
     image: "images/Monster_Avatars/Hoola - Epic.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hoola'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_blabbit": {
     name: "Epic Blabbit",
     image: "images/Monster_Avatars/Blabbit - Epic.png",
     diamonds: 1000,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_blabbit'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_g_joob": {
     name: "Epic G joob",
     image: "images/Monster_Avatars/G_joob - Epic.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_g_joob'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_strombonin": {
     name: "Epic Strombonin",
     image: "images/Monster_Avatars/Strombonin - Epic.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_strombonin'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_yawstrich": {
     name: "Epic Yawstrich",
     image: "images/Monster_Avatars/Yawstrich - Epic.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yawstrich'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_anglow": {
     name: "Epic Anglow",
     image: "images/Monster_Avatars/Anglow - Epic.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_anglow'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   "epic_hyehehe": {
     name: "Epic Hyehehe",
     image: "images/Monster_Avatars/Hyehehe - Epic.png",
     diamonds: 500,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hyehehe'); })();">Breeding Combo</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
  };
 
@@ -7377,7 +7377,6 @@ document.querySelector('#commonSection select').addEventListener('change', funct
   const info = monsterInfo[selected];
   const img = document.getElementById('monsterImage');
   const desc = document.getElementById('monsterDescription');
-  const checkbox = document.getElementById('monsterCollected');
   const diamonds = document.getElementById('diamonds');
   const coins = document.getElementById('coins');
   if (info) {
@@ -7385,7 +7384,6 @@ document.querySelector('#commonSection select').addEventListener('change', funct
     desc.innerHTML = info.description;
     diamonds.innerHTML = info.diamonds;
     coins.innerHTML = info.coins;
-    checkbox.checked = false;
   } 
 });
 
@@ -7397,7 +7395,6 @@ document.querySelector('#rareSection select').addEventListener('change', functio
   console.log(info);
   const img = document.getElementById('monsterImageRare');
   const desc = document.getElementById('monsterDescriptionRare');
-  const checkbox = document.getElementById('monsterCollectedRare');
   const diamonds = document.getElementById('diamondsRare');
   const coins = document.getElementById('coinsRare');
   
@@ -7407,7 +7404,6 @@ document.querySelector('#rareSection select').addEventListener('change', functio
     desc.innerHTML = info.description;
     diamonds.innerHTML = info.diamonds;
     coins.innerHTML = info.coins;
-    checkbox.checked = false;
   }
 });
 
@@ -7418,7 +7414,6 @@ document.querySelector('#epicSection select').addEventListener('change', functio
 
   const img = document.getElementById('monsterImageEpic');
   const desc = document.getElementById('monsterDescriptionEpic');
-  const checkbox = document.getElementById('monsterCollectedEpic');
   const diamonds = document.getElementById('diamondsEpic');
   const coins = document.getElementById('coinsEpic');
 
@@ -7427,7 +7422,6 @@ document.querySelector('#epicSection select').addEventListener('change', functio
     desc.innerHTML = info.description;
     diamonds.innerHTML = info.diamonds;
     coins.innerHTML = info.coins;
-    checkbox.checked = false;
   }
 });
 
@@ -7602,74 +7596,253 @@ nextButton.addEventListener('click', () => {
 // Initial render when the page loads
 renderIslands();
 
-const slideButtonChecklist = document.getElementById('slideButtonForChecklist');
-const checklistMenu = document.getElementById('checklistMenu');
+// const slideButtonChecklist = document.getElementById('openChecklistButton');
 
-slideButtonChecklist.addEventListener('click', () => {
-    // Toggle the 'open' class to slide in/out the menu
-    checklistMenu.classList.toggle('open');
-  
-    // Toggle the button's icon and background color based on the state
-    if (slideButtonChecklist.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
-        slideButtonChecklist.innerHTML = `<i class="fas fa-arrow-left"></i>`;
-    } else {
-        slideButtonChecklist.innerHTML = `<i class="fas fa-arrow-right"></i>`;
-    }
+function openChecklist() {
+  const checklistMenu = document.getElementById('checklistMenu');
+  checklistMenu.classList.toggle('open');
+}
 
-    // Adjust the button's position based on whether the menu is open
-    if (checklistMenu.classList.contains('open')) {
-        slideButtonChecklist.style.right = '300px';  // Move the button to the left by the menu width
-    } else {
-        slideButtonChecklist.style.right = '100%';  // Reset to the right
-    }
-});
+const allIslandsNames = ["Plant Island", "Cold Island", "Air Island", "Water Island", "Earth Island", "Fire Haven", "Light Island", "Faerie Island"]; // Expand as needed
+const islandColors = {
+  "Plant Island": "#a8d5a3",    // Softer medium green
+  "Cold Island": "#a9d0ff",    // Calm light blue
+  "Air Island": "#f7f3b3",     // Gentle pastel yellow
+  "Water Island": "#70c8d6",   // Crisp aqua blue
+  "Earth Island": "#d9b38c",   // Warm sandy brown
+  "Fire Haven": "#ffb085",     // Warm coral orange
+  "Light Island": "#fff3b0",   // Soft buttery yellow
+  "Faerie Island": "#cda4e8"   // Muted lavender purple
+};
 
+let visibleIslands = allIslandsNames.slice(0, 5); // First 5 shown
+let startIndex = 0;
+const checkboxStates = {}; // { "monsterName|islandName": true/false }
 
-/*
-const slideButton = document.getElementById('slideButton');
-const slidePanel = document.getElementById('slidePanel');
+function renderChecklist() {
+  const headerRow = document.getElementById("header-row");
+  const monsterRows = document.getElementById("monster-rows");
 
-slideButton.addEventListener('click', () => {
-  slidePanel.classList.toggle('open'); 
-  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
-    slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
-    slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
-  } else {
-    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`
-    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
-  }
-});
+  // Clear previous content
+  headerRow.innerHTML = '';
+  monsterRows.innerHTML = '';
 
-*/
+  // Set CSS variable for grid columns count
+  document.documentElement.style.setProperty('--visible-islands-count', visibleIslands.length);
 
-function createIslandChecklist(island) {
-  const checklistElement = document.getElementById('monsterChecklist');
-  checklistElement.innerHTML = ''; // Clear previous content
-  
-  // Loop through the common, rare, and epic monsters
-  ['common', 'rare', 'epic'].forEach(type => {
-    islandData[island][type].forEach(monster => {
-      // Convert monster name to lowercase for matching keys in monsterInfo
-      const monsterKey = monster.toLowerCase().replace(' ', '_'); 
+  // Add "Island Names:" label cell in header row
+  const labelCell = document.createElement("div");
+  labelCell.className = "cell label";
+  labelCell.textContent = "Island Names:";
+  labelCell.style.backgroundColor = "rgb(72, 3, 148,0.7)";
+  headerRow.appendChild(labelCell);
 
-      if (monsterInfo[monsterKey]) {
-        const monsterData = monsterInfo[monsterKey];
-        const listItem = document.createElement('li');
-        
-        listItem.innerHTML = `
-          <label>
-            <input type="checkbox">
-            <img src="${monsterData.image}" alt="${monsterData.name}" style="width: 50px; height: 50px;">
-            ${monsterData.name}
-          </label>
-          <div>${monsterData.description}</div>
-        `;
-        
-        checklistElement.appendChild(listItem);
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  // Add visible island headers with progress rings and text
+  visibleIslands.forEach(island => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.style.backgroundColor = islandColors[island] || "#fff";
+
+    const title = document.createElement("div");
+    title.textContent = island;
+    title.style.marginBottom = "4px";
+    cell.appendChild(title);
+
+    // Create SVG progress ring
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 36 36");
+    svg.classList.add("progress-ring");
+
+    const circleBackground = document.createElementNS(svgNS, "circle");
+    circleBackground.setAttribute("class", "progress-ring__background");
+    circleBackground.setAttribute("cx", "18");
+    circleBackground.setAttribute("cy", "18");
+    circleBackground.setAttribute("r", "16");
+    circleBackground.setAttribute("fill", "none");
+    circleBackground.setAttribute("stroke", "#eee");
+    circleBackground.setAttribute("stroke-width", "4");
+    svg.appendChild(circleBackground);
+
+    const circle = document.createElementNS(svgNS, "circle");
+    circle.setAttribute("class", "progress-ring__circle");
+    circle.setAttribute("cx", "18");
+    circle.setAttribute("cy", "18");
+    circle.setAttribute("r", "16");
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", "#4caf50");
+    circle.setAttribute("stroke-width", "4");
+    circle.setAttribute("stroke-linecap", "round");
+    circle.setAttribute("stroke-dasharray", "100");
+    circle.setAttribute("stroke-dashoffset", "100");
+    svg.appendChild(circle);
+
+    // Add percentage text inside the circle
+    const text = document.createElementNS(svgNS, "text");
+    text.setAttribute("class", "progress-ring__text");
+    text.setAttribute("x", "18");
+    text.setAttribute("y", "22"); // vertically center approx
+    text.setAttribute("text-anchor", "middle");
+    text.setAttribute("font-size", "8");
+    text.setAttribute("fill", "#4caf50");
+    text.textContent = "0%";
+    svg.appendChild(text);
+
+    cell.appendChild(svg);
+
+    // Store references to update progress later
+    cell.progressCircle = circle;
+    cell.progressText = text;
+
+    headerRow.appendChild(cell);
+  });
+
+  // Build a set of monsters visible on the visible islands
+  const visibleMonsters = new Set();
+  visibleIslands.forEach(islandName => {
+    const key = islandName.toLowerCase().split(" ")[0];
+    const data = islandData[key];
+    if (!data) return;
+
+    ["common", "rare", "epic"].forEach(rarity => {
+      if (data[rarity]) {
+        data[rarity].forEach(monster => visibleMonsters.add(monster));
       }
     });
   });
+
+  // Render each monster row
+  Object.values(monsterInfo).forEach(monster => {
+    if (!visibleMonsters.has(monster.name)) return;
+
+    const row = document.createElement("div");
+    row.className = "row";
+
+    // Monster cell (image + name)
+    const monsterCell = document.createElement("div");
+    monsterCell.className = "cell monster";
+    monsterCell.innerHTML = `<img src="${monster.image}" alt="${monster.name}"><span>${monster.name}</span>`;
+    row.appendChild(monsterCell);
+
+    // For each visible island, add checkbox or "Not Available" text
+    visibleIslands.forEach(island => {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      cell.style.backgroundColor = islandColors[island] || "#fff";
+
+      const islandKey = island.toLowerCase().split(" ")[0];
+      const islandDataEntry = islandData[islandKey];
+      let monsterPresent = false;
+      if (islandDataEntry) {
+        monsterPresent = ["common", "rare", "epic"].some(rarity =>
+          islandDataEntry[rarity] && islandDataEntry[rarity].includes(monster.name)
+        );
+      }
+
+      if (monsterPresent) {
+        const key = `${monster.name}|${island}`;
+        const checked = checkboxStates[key] || false;
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = checked;
+        checkbox.addEventListener("change", () => {
+          checkboxStates[key] = checkbox.checked;
+          updateProgress();
+        });
+
+        cell.appendChild(checkbox);
+      } else {
+        cell.textContent = "Not Available On This Island";
+        cell.classList.add("unavailable");
+      }
+
+      row.appendChild(cell);
+    });
+
+    monsterRows.appendChild(row);
+  });
+
+  // Calculate and update progress rings per island
+  function updateProgress() {
+    // Calculate total monsters per island (only monsters present)
+    const islandTotals = {};
+    visibleIslands.forEach(island => {
+      const key = island.toLowerCase().split(" ")[0];
+      const data = islandData[key];
+      if (!data) {
+        islandTotals[island] = 0;
+        return;
+      }
+      let count = 0;
+      ["common", "rare", "epic"].forEach(rarity => {
+        if (data[rarity]) count += data[rarity].length;
+      });
+      islandTotals[island] = count;
+    });
+
+    // Calculate checked monsters per island
+    const islandCheckedCounts = {};
+    visibleIslands.forEach(island => {
+      islandCheckedCounts[island] = 0;
+    });
+
+    Object.entries(checkboxStates).forEach(([key, checked]) => {
+      if (!checked) return;
+      // key format: "monsterName|islandName"
+      const parts = key.split("|");
+      if (parts.length !== 2) return;
+      const island = parts[1];
+      if (visibleIslands.includes(island)) {
+        islandCheckedCounts[island] = (islandCheckedCounts[island] || 0) + 1;
+      }
+    });
+
+    // Update each island's progress ring and text
+    visibleIslands.forEach((island, idx) => {
+      const headerCell = headerRow.children[idx + 1]; // +1 for label cell
+      if (headerCell && headerCell.progressCircle && headerCell.progressText) {
+        const total = islandTotals[island];
+        const checked = islandCheckedCounts[island] || 0;
+        const percent = total > 0 ? (checked / total) * 100 : 0;
+
+        // Update stroke dashoffset for progress circle
+        const circumference = 2 * Math.PI * 16; // r=16
+        const offset = circumference * (1 - percent / 100);
+        headerCell.progressCircle.style.strokeDashoffset = offset;
+
+        // Update text
+        headerCell.progressText.textContent = Math.round(percent) + "%";
+      }
+    });
+  }
+
+  // Initial update of progress rings
+  updateProgress();
 }
 
-// Call the function for the "plant" island
-createIslandChecklist('air');
+
+// Advance islands
+document.getElementById("next-island").addEventListener("click", () => {
+  startIndex = (startIndex + 1) % allIslandsNames.length;
+  const end = startIndex + 5;
+  if (end <= allIslandsNames.length) {
+    visibleIslands = allIslandsNames.slice(startIndex, end);
+  } else {
+    visibleIslands = allIslandsNames.slice(startIndex).concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+  }
+  renderChecklist();
+});
+
+document.getElementById("previous-island").addEventListener("click", () => {
+  startIndex = (startIndex - 1 + allIslandsNames.length) % allIslandsNames.length;
+  const end = startIndex + 5;
+  visibleIslands = end <= allIslandsNames.length
+    ? allIslandsNames.slice(startIndex, end)
+    : allIslandsNames.slice(startIndex).concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+  renderChecklist();
+});
+
+// Initial render
+renderChecklist();
