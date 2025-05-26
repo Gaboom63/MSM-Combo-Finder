@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;  /* Prevent background repeat */
     background-size: cover;  /* Ensure the background covers the entire screen */
     background-attachment: fixed; /* Make background fixed when scrolling */
+    overflow-x: hidden;
 }
 
 
@@ -584,7 +585,7 @@ input:focus::placeholder {
     margin-bottom: 10px;
 }
 
-#monsterListButton {
+#monsterListButton,#openChecklistButton{
     width: 100%;
     background-color: mediumpurple;
     color: black;
@@ -635,73 +636,346 @@ input:focus::placeholder {
 
 #checklistMenu {
     position: fixed;
-    top: 45%;
-    left: -100%;  /* Start off-screen */
-    transform: translate(-50%, -50%);
-    width: 45%;
-    height: 60%;
-    background-size: cover;
-    background-color: rgba(72, 3, 148, 0.7);  /* Use rgba for better transparency */
-    box-shadow: -3px 0 10px rgb(92, 9, 112);
-    transition: left 0.5s ease;
-    z-index: 999;  /* Keep the menu behind the button */
-    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(72, 3, 148, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(92, 9, 112, 0.6);
+    z-index: 999;
+    padding: 40px;
     box-sizing: border-box;
-    overflow: hidden; /* Hide overflow of the entire menu */
     color: white;
-    scrollbar-color: mediumpurple;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.5s ease;
+    transform: translateX(100%); /* hidden by default */
+}
+
+#checklistMenu.open {
+    transform: translateX(0); /* slide in when open */
+}
+
+#checklistMenu h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    color: #e0d6ff;
+    text-shadow: 1px 1px 4px #000;
 }
 
 #monsterChecklist {
-    max-height: 100%; /* Ensures the checklist takes up all available space */
-    overflow-y: auto; /* Enables vertical scrolling */
-    padding-right: 10px; /* To prevent clipping when scrollbar appears */
+    flex-grow: 1;
+    width: 100%;
+    max-width: 800px;
+    overflow-y: auto;
+    padding-right: 12px;
+    border-radius: 10px;
 }
 
-/* Styling for checklist items */
 #monsterChecklist li {
-    margin-bottom: 10px;
-    list-style-type: none; /* Remove default bullet points */
+    margin-bottom: 15px;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+#monsterChecklist li:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #monsterChecklist img {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 label {
     display: flex;
     align-items: center;
+    font-size: 1.1em;
 }
 
-/* Optional: Add some padding for scrollable area */
-#monsterChecklist div {
-    margin-top: 10px;
-}
-
-#checklistMenu.open {
-    left: 47%;  /* Slide the menu into view */
-}
-
-/* For Webkit browsers (Chrome, Safari, Edge) */
+/* Scrollbar styles */
 #monsterChecklist::-webkit-scrollbar {
-    width: 10px;  /* Width of the scrollbar */
+    width: 10px;
 }
-
 #monsterChecklist::-webkit-scrollbar-thumb {
-    background-color: #800080;  /* Medium purple color */
-    border-radius: 10px;  /* Optional: rounds the edges of the scrollbar thumb */
-    border: 2px solid #4b0082;  /* Optional: adds a border around the thumb for contrast */
+    background-color: #800080;
+    border-radius: 10px;
+    border: 2px solid #4b0082;
 }
-
 #monsterChecklist::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.2);  /* Light background for the track */
-    border-radius: 10px;  /* Optional: rounds the edges of the scrollbar track */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+#monsterChecklist {
+    scrollbar-width: thin;
+    scrollbar-color: #800080 #4b0082;
 }
 
-/* For Firefox */
-#monsterChecklist {
-    scrollbar-width: thin;  /* Makes the scrollbar thinner */
-    scrollbar-color: #800080 #4b0082;  /* Medium purple for the thumb and darker purple for the track */
+#exitChecklist {
+    background-color: mediumpurple;
+    color: white;
+    border: 2px black solid;
 }
+#monsterChecklist h2 {
+    width: 100%;
+    font-size: 1.5em;
+    border-bottom: 2px solid #e0d6ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.container {
+  background: mediumpurple;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 0 20px #00000080;
+  scale: 0.9;
+}
+
+#h1-checklist {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px #9b59b6;
+  margin-bottom: 20px;
+}
+
+.checklist {
+  overflow-x: auto;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+
+.cell {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  min-width: 120px;
+  text-align: center;
+  background: #eae0ff;
+  color: #333;
+}
+
+.header .cell {
+  font-weight: bold;
+  background: #3d0066;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.cell img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin: 0 auto 4px;
+  border-radius: 10px;
+  border: 2px solid #6e00c8;
+}
+
+.monster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#monster-rows {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #9e79f3 #2e004f;
+}
+
+/* For Webkit browsers like Chrome */
+#monster-rows::-webkit-scrollbar {
+  width: 8px;
+}
+#monster-rows::-webkit-scrollbar-track {
+  background: #2e004f;
+}
+#monster-rows::-webkit-scrollbar-thumb {
+  background-color: #9e79f3;
+  border-radius: 8px;
+}
+
+#monster-rows {
+  max-height: 400px; /* You can adjust this */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #9e79f3 #2e004f;
+}
+
+.controls {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.controls button {
+  background-color: #6e00c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 6px 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 6px #aa66ff;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background-color: #8f2fff;
+  transform: scale(1.05);
+}
+
+
+#checklist-container {
+  display: inline-block; /* shrink to fit content */
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 180px repeat(var(--visible-islands-count), 140px);
+  border-bottom: 1px solid #ddd;
+}
+
+#header-row .cell {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-row .label {
+  text-align: left;
+  padding-left: 12px;
+  background-color: #eee;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 180px repeat(var(--visible-islands-count), 140px);
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.cell {
+  border-right: 1px solid #eee;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  overflow-wrap: break-word;
+}
+
+.cell.monster {
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(72, 3, 148,0.7);
+}
+
+.cell.monster img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.cell.unavailable {
+  font-size: 0.75em;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  padding: 6px 8px;
+}
+
+.progress-ring {
+  width: 36px;
+  height: 36px;
+  display: block;
+  margin: 0 auto;
+}
+
+.progress-ring__background {
+  stroke: #eee;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring__text {
+  font-weight: bold;
+  dominant-baseline: middle;
+}
+
+
+#escMenu {
+    background-color: rgb(63, 6, 82, 0.7);
+      padding: 10px; /* Padding for some spacing */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 122; /* Above other elements */
+    animation: slideIn 0.5s forwards; /* Animation for sliding in */
+}
+
+#checklist-container {
+  position: relative;
+}
+
+.column-backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto repeat(var(--visible-islands-count), 1fr);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.column-backgrounds .column-bg {
+  height: 100%;
+}
+
+#header-row {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #7f50cd; /* Match base purple */
+}
+.cell.current-island {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+.monster-name-cell {
+  background: linear-gradient(135deg, #6a0dad, #9c4dcc);
+  border-radius: 10px;
+  padding: 6px;
+}
+

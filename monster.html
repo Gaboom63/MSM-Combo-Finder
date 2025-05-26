@@ -28,9 +28,26 @@
     </div>
     <div id="slidePanel">
        <div id="checklistMenu">
-    <p id="islandNameChecklist">Plant Island</p>
-    <ul id="monsterChecklist"></ul>
-</div>
+          <div class="container">
+    <h1 id="h1-checklist">Monster Checklist</h1>
+
+    <div class="checklist">
+      <div class="row header" id="header-row">
+        
+        <div class="cell label">Island Names:</div>
+
+        <!-- JS will insert island names here -->
+      </div>
+      <div class="controls">
+        <button id="previous-island"><<</button>
+        <button id="next-island">>></button>
+      </div>
+      <div id="monster-rows">
+        <!-- JS will insert monster rows here -->
+      </div>
+    </div>
+  </div>
+        </div>
 
         <div id="iconContainer">
             <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
@@ -105,7 +122,6 @@
                             </div>
                         </div>
                         <p id="monsterDescription">Description will go here.</p>
-                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
                     </div>
                 </div>
 
@@ -127,7 +143,6 @@
                             </div>
                         </div>
                         <p id="monsterDescriptionRare">Description will go here.</p>
-                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
                     </div>
                 </div>
 
@@ -149,13 +164,8 @@
                             </div>
                         </div>
                         <p id="monsterDescriptionEpic">Description will go here.</p>
-                        <label><input type="checkbox" id="monsterCollected"> Collected</label>
                     </div>
                 </div>
-                <div id="slideButtonForChecklist">
-                    <i class="fas fa-arrow-left"></i>
-                </div>
-
             </div>
 
         </div>
