@@ -2490,7 +2490,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 18 hr 30 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
       epic: ""
     }
   },
@@ -3468,6 +3468,7 @@ const monsters = [
       "rare": "images/bm/Rare Cahoot.png",
       "epic": "images/bm/Epic Cahoot.png"
     },
+
     "stats": {
       "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       "rare": "",
@@ -3484,7 +3485,7 @@ const monsters = [
     },
     "stats": {
       "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "",
+      "rare": "Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       "epic": ""
     }
   },
@@ -3722,7 +3723,7 @@ const monsters = [
     },
     "stats": {
       "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      "rare": "",
+      "rare": "Breeding Time: 1 day 13 hr 30 min, <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec <br>",
       "epic": ""
     }
   },
@@ -3849,7 +3850,7 @@ const monsters = [
     stats: {
       normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: ""
+      epic: "Breeding Time: 2 days 1 hr <br><br> Enhanced Time: 1 day 12 hr 45 min"
     }
   },
   {
@@ -4857,6 +4858,20 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+{
+    name: "Bogle",
+    audio: "sounds/_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Boogle.png",
+      rare: "images/bm/Rare Boogle.png",
+      epic: "images/bm/Epic Boogle.png"
+    },
+    stats: {
+      normal: "Breeding Time: 2 day 2 hr",
       rare: "",
       epic: ""
     }
