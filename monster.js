@@ -5164,8 +5164,8 @@ const monsters = [
     name: "Bogle",
     audio: "sounds/Bogle_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Boogle.png",
-      rare: "images/bm/Rare Boogle.png",
+      normal: "images/bm/Bogle.png",
+      rare: "images/bm/Rare Bogle.png",
       epic: "images/bm/Epic Boogle.png",
     },
     stats: {
