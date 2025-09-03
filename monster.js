@@ -745,19 +745,6 @@ const raremonsters = [
     }
   },
   {
-    name: "Rare Cahoot",
-    image: {
-      normal: "images/bm/Rare Cahoot.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 2 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
     name: "Rare Wheezel",
     image: {
       normal: "images/bm/Rare Wheezel.png",
@@ -782,6 +769,20 @@ const raremonsters = [
       rare: "",
       epic: ""
     }
+  },
+  {
+    name: "Rare Incisaur",
+    image: {
+      normal: "images/bm/Rare Incisaur.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal:
+        "Breeding Time: 2 day 4 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
+      rare: "",
+      epic: "",
+    },
   },
 ];
 
@@ -1999,8 +2000,7 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal:
-        "Breeding Time: 2 day 3 hr <br> <br> Enhanced Breeding Time: 1 day 14 hr 15 min",
+      normal: "Breeding Time: 2 day 3 hr <br> <br> Enhanced Breeding Time: 1 day 14 hr 15 min",
       rare: "",
       epic: "",
     },
@@ -3129,7 +3129,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
-      epic: "",
+      epic: "Epic Breeding Time: 1 day 9 hr 28 min <br> <br> Enhanced Breeding Time: 1 day 1 hr 6 min",
     },
   },
   {
@@ -3245,7 +3245,7 @@ const monsters = [
     stats: {
       normal:
         "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 22 hr 15 min <br><br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
       epic: "",
     },
   },
@@ -3667,7 +3667,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
+      rare: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
       epic: "",
     },
   },
@@ -3695,7 +3695,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
+      rare: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
       epic: "",
     },
   },
@@ -3752,7 +3752,7 @@ const monsters = [
 
     stats: {
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 2 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
       epic: "",
     },
   },
@@ -3892,7 +3892,7 @@ const monsters = [
     },
     stats: {
       normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 1 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 7 min 30 sec",
       epic: "",
     },
   },
@@ -4021,7 +4021,7 @@ const monsters = [
     stats: {
       normal:
         "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      rare: "",
+      rare: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
       epic: "",
     },
   },
@@ -4067,7 +4067,7 @@ const monsters = [
       normal:
         "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: "",
+      epic: "Breeding Time: 2 day 3 hr <br> <br> Enhanced Breeding Time: 1 day 14 hr 15 min",
     },
   },
   {
@@ -5189,6 +5189,19 @@ const monsters = [
       epic: "",
     },
   },
+  {
+    name: "Incisaur",
+    image: {
+      normal: "images/bm/Incisaur.png",
+      rare: "images/bm/Rare Incisaur.png",
+      epic: "images/bm/Epic Incisaur.png",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 16 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr",
+      rare: "10,000 Starpower <br> <br> Breeding Time: 2 day 4 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
+      epic: "Breeding Time: 1 day 17 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr 45 min",
+    },
+  },
 ];
 
 /**
@@ -5325,6 +5338,7 @@ const epicBreedingCombinations = {
   Krillby: [`Pladdie + Kayna <br>`],
   "Fung Pray": [`Nebulob + Boodoo <br>`],
   PongPing: [`Pladdie + Floot Fly<br>`],
+  Hyehehe: [`Cataliszt + Buzzinga`]
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
@@ -6236,10 +6250,9 @@ breedButton.addEventListener("click", () => {
     resultText.classList.add("result-text");
 
     const stats = monsterInfo.stats?.[form] || "No stats available";
-    resultText.innerHTML = `<h3>${
-      form === "normal" ? "You Bred A:" : form + " Version of"
-    }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
-
+    resultText.innerHTML = `<h3>${form === "normal" ? "You Bred A:" : form + " Version of"
+      }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
+      console.log(monsterInfo, monsterName, form)
     // Breeding combo logic
     let breedingCombinationText = "";
     if (form !== "epic") {
@@ -8651,8 +8664,8 @@ document.getElementById("previous-island").addEventListener("click", () => {
     end <= allIslandsNames.length
       ? allIslandsNames.slice(startIndex, end)
       : allIslandsNames
-          .slice(startIndex)
-          .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+        .slice(startIndex)
+        .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
   renderChecklist();
 });
 
