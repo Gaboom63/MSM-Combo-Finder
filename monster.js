@@ -1,6 +1,5 @@
 // Array of monster data
 const raremonsters = [
-
   {
     name: "Shugarock",
     image: {
@@ -9,10 +8,11 @@ const raremonsters = [
       epic: "images/bm/Epic Shugarock.png",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugavox",
@@ -22,10 +22,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugabass",
@@ -35,10 +36,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugajo",
@@ -48,10 +50,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugabeats",
@@ -61,10 +64,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugitar",
@@ -74,23 +78,25 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugabuzz",
     image: {
-      normal: "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
+      normal:
+        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
       rare: "",
       epic: "",
     },
     stats: {
       normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Mammott",
@@ -102,8 +108,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Deedge",
@@ -113,10 +119,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
+      normal:
+        "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Potbelly",
@@ -128,8 +135,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Oaktopus",
@@ -141,8 +148,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Viveine",
@@ -154,8 +161,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Furcorn",
@@ -167,8 +174,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Quibble",
@@ -180,8 +187,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare PomPom",
@@ -193,8 +200,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare G'joob",
@@ -206,8 +213,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Knurv",
@@ -219,8 +226,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Strombonin",
@@ -232,8 +239,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Yawstrich",
@@ -245,8 +252,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Anglow",
@@ -258,8 +265,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Hyehehe",
@@ -271,8 +278,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Buzzinga",
@@ -284,8 +291,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Cherubble",
@@ -297,8 +304,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Cataliszt",
@@ -310,8 +317,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Punkleton",
@@ -323,9 +330,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Yool",
     image: {
       normal: "images/bm/Rare Yool.png",
@@ -335,9 +343,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Schmoochle",
     image: {
       normal: "images/bm/Rare Schmoochle.png",
@@ -347,9 +356,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Blabbit",
     image: {
       normal: "images/bm/Rare Blabbit.png",
@@ -359,9 +369,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Hoola",
     image: {
       normal: "images/bm/Rare Hoola.png",
@@ -371,9 +382,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Viveine",
     image: {
       normal: "images/bm/Rare Viveine.png",
@@ -383,9 +395,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Monculus",
     image: {
       normal: "images/bm/Rare Monculus.png",
@@ -395,9 +408,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Gobbleygourd",
     image: {
       normal: "images/bm/Rare Gobbleygourd.png",
@@ -407,9 +421,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Spurrit",
     image: {
       normal: "images/bm/Rare Spurrit.png",
@@ -419,9 +434,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Whiz-bang",
     image: {
       normal: "images/bm/Rare Whiz-bang.png",
@@ -431,9 +447,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Boo'qwurm",
     image: {
       normal: "images/bm/Rare Boo_qwurm.png",
@@ -443,9 +460,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Ffidyll",
     image: {
       normal: "images/bm/Rare Ffidyll.png",
@@ -455,9 +473,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Clavavera",
     image: {
       normal: "images/bm/Rare Clavavera.png",
@@ -467,9 +486,10 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
-  }, {
+      epic: "",
+    },
+  },
+  {
     name: "Rare Carillong",
     image: {
       normal: "images/bm/Rare Carillong.png",
@@ -479,8 +499,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Jam Boree",
@@ -492,8 +512,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Gloptic",
@@ -505,8 +525,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Uuduk",
@@ -518,8 +538,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Fiddlement",
@@ -531,8 +551,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Clavi Gnat",
@@ -544,8 +564,8 @@ const raremonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Drummidary",
@@ -557,8 +577,8 @@ const raremonsters = [
     stats: {
       normal: "Breeding Time: 3 days 23 hr 30 mins",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Sporerow",
@@ -568,10 +588,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 22 hr <br>  <br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
+      normal:
+        "Breeding Time: 1 day 22 hr <br>  <br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Pinghound",
@@ -581,10 +602,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 2 day 4 hr 30 min <br>  <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
+      normal:
+        "Breeding Time: 2 day 4 hr 30 min <br>  <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Mushaboom",
@@ -594,10 +616,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
+      normal:
+        "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Plinkajou",
@@ -607,10 +630,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
+      normal:
+        "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Roarick",
@@ -620,10 +644,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 2 hr 30 min <br> <br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
+      normal:
+        "Breeding Time: 1 day 2 hr 30 min <br> <br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Spytrap",
@@ -633,10 +658,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
+      normal:
+        "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Pladdie",
@@ -646,10 +672,11 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
+      normal:
+        "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Mimic",
@@ -659,12 +686,104 @@ const raremonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
+      normal:
+        "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Rare Frondley",
+    image: {
+      normal: "images/bm/Rare Frondley.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
       rare: "",
       epic: ""
     }
   },
-]
+  {
+    name: "Rare Periscorp",
+    image: {
+      normal: "images/bm/Rare Periscorp.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 1 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 7 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Peckidna",
+    image: {
+      normal: "images/bm/Rare Peckidna.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Cahoot",
+    image: {
+      normal: "images/bm/Rare Cahoot.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 2 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Cahoot",
+    image: {
+      normal: "images/bm/Rare Cahoot.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 2 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Wheezel",
+    image: {
+      normal: "images/bm/Rare Wheezel.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 22 hr 15 min <br><br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Squot",
+    image: {
+      normal: "images/bm/Rare Squot.png",
+      rare: "",
+      epic: ""
+    },
+    stats: {
+      normal: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
+      rare: "",
+      epic: ""
+    }
+  },
+];
 
 const epicmonsters = [
   {
@@ -675,10 +794,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 11 hr, <br> <br> Enhanced Time: 8 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 11 hr, <br> <br> Enhanced Time: 8 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -689,10 +809,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Noggin",
@@ -704,8 +825,8 @@ const epicmonsters = [
     stats: {
       normal: "Epic Breeding Time: 44 min, <br> <br> Enhanced Time: 1 hr <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Toe Jammer",
@@ -715,10 +836,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Mammott",
@@ -728,10 +850,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Kayna",
@@ -741,10 +864,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Dandidoo",
@@ -754,10 +878,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Cybop",
@@ -767,10 +892,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Quibble",
@@ -780,10 +906,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Pango",
@@ -793,10 +920,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Shrubb",
@@ -806,10 +934,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Oaktopus",
@@ -819,10 +948,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Furcorn",
@@ -832,10 +962,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Fwog",
@@ -845,10 +976,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Drumpler",
@@ -858,10 +990,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Maw",
@@ -871,10 +1004,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Glowl",
@@ -884,10 +1018,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Flowah",
@@ -897,10 +1032,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Stogg",
@@ -910,10 +1046,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Phangler",
@@ -923,10 +1060,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Boskus",
@@ -936,10 +1074,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Reedling",
@@ -951,8 +1090,8 @@ const epicmonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Spunge",
@@ -962,10 +1101,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Thumpies",
@@ -975,10 +1115,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Scups",
@@ -988,10 +1129,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic PomPom",
@@ -1003,8 +1145,8 @@ const epicmonsters = [
     stats: {
       normal: "",
       rare: "",
-      epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>"
-    }
+      epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+    },
   },
   {
     name: "Epic Congle",
@@ -1014,10 +1156,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Pummel",
@@ -1027,10 +1170,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Clamble",
@@ -1040,10 +1184,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -1054,10 +1199,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic T-Rox",
@@ -1067,10 +1213,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Barrb",
@@ -1080,10 +1227,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Floogull",
@@ -1093,10 +1241,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Whaddle",
@@ -1106,10 +1255,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Woolabee",
@@ -1119,10 +1269,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Repatillo",
@@ -1132,10 +1283,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -1146,10 +1298,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Sooza",
@@ -1159,10 +1312,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Thrumble",
@@ -1172,10 +1326,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Ziggurab",
@@ -1185,10 +1340,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wynq",
@@ -1198,10 +1354,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
+      normal:
+        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Shellbeat",
@@ -1211,10 +1368,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -1225,10 +1383,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Deedge",
@@ -1238,10 +1397,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Riff",
@@ -1251,10 +1411,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Entbrat",
@@ -1264,10 +1425,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Tring",
@@ -1277,10 +1439,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Sneyser",
@@ -1290,10 +1453,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Ghazt",
@@ -1303,10 +1467,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Grumpyre",
@@ -1316,10 +1481,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
+      normal:
+        "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Reebro",
@@ -1329,10 +1495,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Jeeode",
@@ -1342,10 +1509,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Humbug",
@@ -1355,10 +1523,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
+      normal:
+        "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Whisp",
@@ -1368,10 +1537,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
+      normal:
+        "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Nebulob",
@@ -1381,10 +1551,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
+      normal:
+        "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Sox",
@@ -1394,10 +1565,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
+      normal:
+        "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Jellbilly",
@@ -1407,10 +1579,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Arackulele",
@@ -1420,10 +1593,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
+      normal:
+        "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Boodoo",
@@ -1433,10 +1607,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Kazilleon",
@@ -1446,10 +1621,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Bellowfish",
@@ -1459,10 +1635,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
+      normal:
+        "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Punkleton",
@@ -1472,10 +1649,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Yool",
@@ -1485,10 +1663,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Schmoochle",
@@ -1498,10 +1677,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Blabbit",
@@ -1511,10 +1691,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Hoola",
@@ -1524,10 +1705,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
+      normal:
+        "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Gobbleygourd",
@@ -1537,10 +1719,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Clavavera",
@@ -1550,10 +1733,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
+      normal:
+        "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Viveine",
@@ -1563,10 +1747,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Jam Boree",
@@ -1576,10 +1761,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Carillong",
@@ -1589,10 +1775,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Whiz-bang",
@@ -1602,10 +1789,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Monculus",
@@ -1615,10 +1803,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
+      normal:
+        "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Ffidyll",
@@ -1628,10 +1817,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Boo'qwurm",
@@ -1641,10 +1831,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Spurrit",
@@ -1654,10 +1845,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic G'joob",
@@ -1667,10 +1859,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Yawstrich",
@@ -1680,10 +1873,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Strombonin",
@@ -1693,10 +1887,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
+      normal:
+        "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Buzzinga",
@@ -1706,10 +1901,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
+      normal:
+        "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Yelmut",
@@ -1719,10 +1915,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic PongPing",
@@ -1732,10 +1929,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min",
+      normal:
+        "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Fung Pray",
@@ -1745,10 +1943,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr",
+      normal:
+        "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Edamimi",
@@ -1758,10 +1957,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>",
+      normal:
+        "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Cherubble",
@@ -1771,10 +1971,11 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
+      normal:
+        "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Anglow",
@@ -1784,13 +1985,55 @@ const epicmonsters = [
       epic: "",
     },
     stats: {
-      normal: "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
+      normal:
+        "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
-
-]
+  {
+    name: "Epic Bisonorus",
+    image: {
+      normal: "images/bm/Epic Bisonorus.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal:
+        "Breeding Time: 2 day 3 hr <br> <br> Enhanced Breeding Time: 1 day 14 hr 15 min",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Epic Incisaur",
+    image: {
+      normal: "images/bm/Epic Incisaur.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal:
+        "Breeding Time: 1 day 17 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr 45 min",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Epic Hyehehe",
+    image: {
+      normal: "images/bm/Epic Hyehehe.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal:
+        "Breeding Time: 1 day 9 hr 28 min <br> <br> Enhanced Breeding Time: 1 day 1 hr 6 min",
+      rare: "",
+      epic: "",
+    },
+  },
+];
 
 /*
    {
@@ -1820,7 +2063,7 @@ const monsters = [
       normal: `Breeding Time: 4 hr <br> Enhanced Time: 3 hr`,
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 11 hr , <br> <br> Enhanced Time: 8 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Potbelly",
@@ -1834,7 +2077,7 @@ const monsters = [
       normal: `Breeding Time: 2 hr <br> Enhanced: 1 hr 30 min`,
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Noggin",
@@ -1848,7 +2091,7 @@ const monsters = [
       normal: "Breeding Time: 5 sec <br> Enhanced Time: 3 sec",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Toe Jammer",
@@ -1862,7 +2105,7 @@ const monsters = [
       normal: "Breeding Time: 1 min <br> Enhanced Time: 45 sec",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Mammott",
@@ -1876,7 +2119,7 @@ const monsters = [
       normal: "Breeding Time: 2 min <br> Enhanced Time: 1 min 30 sec ",
       rare: "Rare Breeding Time: 6 hr , <br> <br> Enhanced Time: 4 hr 30 min <br>",
       epic: "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Kayna",
@@ -1890,7 +2133,7 @@ const monsters = [
       normal: "Breeding Time: 7 hr <br> Enhanced Time: 5 hr 15 min, ",
       rare: "Rare Breeding Time: 8 hr , <br> <br> Enhanced Time: 6 hr <br>",
       epic: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Shrubb",
@@ -1904,7 +2147,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Oaktopus",
@@ -1918,7 +2161,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Furcorn",
@@ -1932,7 +2175,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Fwog",
@@ -1943,10 +2186,11 @@ const monsters = [
       epic: "images/bm/Epic Fwog.png",
     },
     stats: {
-      normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min, 30 sec <br>",
+      normal:
+        "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min, 30 sec <br>",
       rare: "Rare Breeding Time: 1 hr 15 min, <br> <br> Enhanced Time: 56 min 15 sec <br>",
       epic: "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Drumpler",
@@ -1957,10 +2201,11 @@ const monsters = [
       epic: "images/bm/Epic Drumpler.png",
     },
     stats: {
-      normal: "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min 30 sec <br>",
+      normal:
+        "Breeding Time: 30 min, <br> <br> Enhanced Time: 22 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 hr 7 min 30 sec, <br> <br> Enhanced Time: 50 min 37 sec <br>",
       epic: "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Maw",
@@ -1974,7 +2219,7 @@ const monsters = [
       normal: "Breeding Time: 30 min, ",
       rare: "Rare Breeding Time: 1 hr 7 min 30 sec, <br> <br> Enhanced Time: 50 min 37 sec <br>",
       epic: "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Dandidoo",
@@ -1988,7 +2233,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Quibble",
@@ -2002,7 +2247,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Pango",
@@ -2016,7 +2261,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Cybop",
@@ -2030,7 +2275,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min, <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Glowl",
@@ -2041,10 +2286,11 @@ const monsters = [
       epic: "images/bm/Epic Glowl.png",
     },
     stats: {
-      normal: "Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
+      normal:
+        "Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       rare: "Rare Breeding Time: 13 hr 30 min, <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Flowah",
@@ -2058,7 +2304,7 @@ const monsters = [
       normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Stogg",
@@ -2072,7 +2318,7 @@ const monsters = [
       normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Phangler",
@@ -2086,7 +2332,7 @@ const monsters = [
       normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Boskus",
@@ -2100,7 +2346,7 @@ const monsters = [
       normal: "Breeding Time: 10 hr, <br> <br> Enhanced Time: 7 hr 30 min <br>",
       rare: "Rare Breeding Time: 13 hr 30 min , <br> <br> Enhanced Time: 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Pummel",
@@ -2114,7 +2360,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Clamble",
@@ -2128,7 +2374,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Bowgart",
@@ -2142,7 +2388,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "T-Rox",
@@ -2156,7 +2402,7 @@ const monsters = [
       normal: "Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr <br>",
       rare: "Rare Breeding Time: 10 hr 30 min , <br> <br> Enhanced Time: 7 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Entbrat",
@@ -2170,7 +2416,7 @@ const monsters = [
       normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "Shellbeat",
@@ -2184,7 +2430,7 @@ const monsters = [
       normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Quarrister",
@@ -2198,7 +2444,7 @@ const monsters = [
       normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Deedge",
@@ -2212,7 +2458,7 @@ const monsters = [
       normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "Riff",
@@ -2226,7 +2472,7 @@ const monsters = [
       normal: "Breeding Time: 24 hr, <br> <br> Enhanced Time: 18 hr <br>",
       rare: "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "Spunge",
@@ -2240,7 +2486,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Thumpies",
@@ -2254,7 +2500,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
-    }
+    },
   },
   {
     name: "Congle",
@@ -2268,7 +2514,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Sneyser",
@@ -2282,7 +2528,7 @@ const monsters = [
       normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
       rare: "Rare Breeding Time: 2 days 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "Scups",
@@ -2296,7 +2542,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "PomPom",
@@ -2310,7 +2556,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time: 15 hr 30 min, <br> <br> Enhanced Time: 11 hr 37 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Reedling",
@@ -2324,7 +2570,7 @@ const monsters = [
       normal: "Breeding Time: 12 hr, <br> <br> Enhanced Time: 9 hr <br>",
       rare: "Rare Breeding Time:15 hr 30 min , <br> <br> Enhanced Time: 11 hr 37 min <br>",
       epic: "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Tring",
@@ -2338,7 +2584,7 @@ const monsters = [
       normal: "Breeding Time: 40 hr, <br> <br> Enhanced Time: 30 hr <br>",
       rare: "Rare Breeding Time: 2 days 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
-    }
+    },
   },
   {
     name: "Barrb",
@@ -2352,7 +2598,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Floogull",
@@ -2365,8 +2611,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>"
-    }
+      epic: "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>",
+    },
   },
   {
     name: "Repatillo",
@@ -2380,7 +2626,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
-    }
+    },
   },
   {
     name: "Whaddle",
@@ -2394,7 +2640,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Woolabee",
@@ -2408,7 +2654,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Wynq",
@@ -2422,7 +2668,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-    }
+    },
   },
   {
     name: "Thrumble",
@@ -2436,7 +2682,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Rootitoot",
@@ -2450,7 +2696,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Sooza",
@@ -2458,13 +2704,13 @@ const monsters = [
     image: {
       normal: "images/bm/Sooza.png",
       rare: "images/bm/Rare Sooza.png",
-      epic: "images/bm/Epic Sooza.png"
+      epic: "images/bm/Epic Sooza.png",
     },
     stats: {
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-    }
+    },
   },
   {
     name: "Ziggurab",
@@ -2478,7 +2724,7 @@ const monsters = [
       normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
       rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-    }
+    },
   },
   {
     name: "Blow't",
@@ -2491,8 +2737,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Breeding Time: 1 day 18 hr 30 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Gloptic",
@@ -2505,8 +2751,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 18 hr 30 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Hairionette (Major)",
@@ -2519,8 +2765,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Hairionette (Minor)",
@@ -2533,8 +2779,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Pladdie",
@@ -2547,8 +2793,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Plinkajou",
@@ -2561,8 +2807,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Enchantling",
@@ -2573,10 +2819,11 @@ const monsters = [
       epic: "images/bm/Epic Enchantling.png",
     },
     stats: {
-      normal: "Breeding Time: 50 hr, <br> <br> Enhanced Time: 37 hr 30 min <br>",
+      normal:
+        "Breeding Time: 50 hr, <br> <br> Enhanced Time: 37 hr 30 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shugabush",
@@ -2587,10 +2834,11 @@ const monsters = [
       epic: "images/bm/Epic Shugabush.png",
     },
     stats: {
-      normal: "Breeding Time: 35 hr, <br> <br> Enhanced Time: 26 hr 15 min <br>",
+      normal:
+        "Breeding Time: 35 hr, <br> <br> Enhanced Time: 26 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Ghazt",
@@ -2604,7 +2852,7 @@ const monsters = [
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
-    }
+    },
   },
   {
     name: "Grumpyre",
@@ -2618,7 +2866,7 @@ const monsters = [
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
-    }
+    },
   },
   {
     name: "Reebro",
@@ -2632,7 +2880,7 @@ const monsters = [
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
-    }
+    },
   },
   {
     name: "Jeeode",
@@ -2646,7 +2894,7 @@ const monsters = [
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
       epic: "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
-    }
+    },
   },
   {
     name: "Humbug",
@@ -2654,13 +2902,13 @@ const monsters = [
     image: {
       normal: "images/bm/Humbug.png",
       rare: "images/bm/Rare Humbug.png",
-      epic: "images/bm/Epic Humbug.png"
+      epic: "images/bm/Epic Humbug.png",
     },
     stats: {
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 27 hr <br>",
       rare: "Rare Breeding Time: 1 day 21 hr 30 min, <br> <br> Enhanced Time: 1 day 10 hr 7 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
+    },
   },
   {
     name: "Whisp",
@@ -2668,13 +2916,14 @@ const monsters = [
     image: {
       normal: "images/bm/Whisp.png",
       rare: "images/bm/Rare Whisp.png",
-      epic: "images/bm/Epic Whisp.png"
+      epic: "images/bm/Epic Whisp.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
+    },
   },
   {
     name: "Nebulob",
@@ -2682,13 +2931,14 @@ const monsters = [
     image: {
       normal: "images/bm/Nebulob.png",
       rare: "images/bm/Rare Nebulob.png",
-      epic: "images/bm/Epic Nebulob.png"
+      epic: "images/bm/Epic Nebulob.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
+    },
   },
   {
     name: "Arackulele",
@@ -2696,13 +2946,14 @@ const monsters = [
     image: {
       normal: "images/bm/Arackulele.png",
       rare: "images/bm/Rare Arackulele.png",
-      epic: "images/bm/Epic Arackulele.png"
+      epic: "images/bm/Epic Arackulele.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>"
-    }
+      epic: "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
+    },
   },
   {
     name: "Sox",
@@ -2710,13 +2961,14 @@ const monsters = [
     image: {
       normal: "images/bm/Sox.png",
       rare: "images/bm/Rare Sox.png",
-      epic: "images/bm/Epic Sox.png"
+      epic: "images/bm/Epic Sox.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
+    },
   },
   {
     name: "Boodoo",
@@ -2724,13 +2976,14 @@ const monsters = [
     image: {
       normal: "images/bm/Boodoo.png",
       rare: "images/bm/Rare Boodoo.png",
-      epic: "images/bm/Epic Boodoo.png"
+      epic: "images/bm/Epic Boodoo.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
+    },
   },
   {
     name: "Bellowfish",
@@ -2738,13 +2991,14 @@ const monsters = [
     image: {
       normal: "images/bm/Bellowfish.png",
       rare: "images/bm/Rare Bellowfish.png",
-      epic: "images/bm/Epic Bellowfish.png"
+      epic: "images/bm/Epic Bellowfish.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>"
-    }
+      epic: "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
+    },
   },
   {
     name: "Jellbilly",
@@ -2752,13 +3006,14 @@ const monsters = [
     image: {
       normal: "images/bm/Jellbilly.png",
       rare: "images/bm/Rare Jellbilly.png",
-      epic: "images/bm/Epic Jellbilly.png"
+      epic: "images/bm/Epic Jellbilly.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+    },
   },
   {
     name: "Kazilleon",
@@ -2766,13 +3021,14 @@ const monsters = [
     image: {
       normal: "images/bm/Kazilleon.png",
       rare: "images/bm/Rare Kazilleon.png",
-      epic: "images/bm/Epic Kazilleon.png"
+      epic: "images/bm/Epic Kazilleon.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+    },
   },
   {
     name: "Dragong",
@@ -2780,13 +3036,14 @@ const monsters = [
     image: {
       normal: "images/bm/Dragong.png",
       rare: "images/bm/Rare Dragong.png",
-      epic: "images/bm/Epic Dragong.png"
+      epic: "images/bm/Epic Dragong.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 12 hr <br> <br> Enhanced Time: 1 day 3 hr"
-    }
+      epic: "Epic Breeding Time: 1 day 12 hr <br> <br> Enhanced Time: 1 day 3 hr",
+    },
   },
   {
     name: "Fung Pray",
@@ -2794,13 +3051,14 @@ const monsters = [
     image: {
       normal: "images/bm/Fung Pray.png",
       rare: "images/bm/Rare Fung Pray.png",
-      epic: "images/bm/Epic Fung Pray.png"
+      epic: "images/bm/Epic Fung Pray.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Rare Breeding Time: 2 day 4 hr 30 min, <br> <br> Enhanced Time: 1 day 15 hr 22 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr"
-    }
+      epic: "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr",
+    },
   },
   {
     name: "G'joob",
@@ -2808,13 +3066,13 @@ const monsters = [
     image: {
       normal: "images/bm/G_joob.png",
       rare: "images/bm/Rare G_joob.png",
-      epic: "images/bm/Epic G_joob.png"
+      epic: "images/bm/Epic G_joob.png",
     },
     stats: {
       normal: "Breeding Time: 18hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
-      epic: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
+    },
   },
   {
     name: "Strombonin",
@@ -2822,13 +3080,14 @@ const monsters = [
     image: {
       normal: "images/bm/Strombonin.png",
       rare: "images/bm/Rare Strombonin.png",
-      epic: "images/bm/Epic Strombonin.png"
+      epic: "images/bm/Epic Strombonin.png",
     },
     stats: {
-      normal: "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
+      normal:
+        "Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
       rare: "Rare Breeding Time: 1 day 4 hr 45 min, <br> <br> Enhanced Time: 21 hr 33 min 45 sec <br>",
-      epic: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
+    },
   },
   {
     name: "Yawstrich",
@@ -2836,13 +3095,13 @@ const monsters = [
     image: {
       normal: "images/bm/Yawstrich.png",
       rare: "images/bm/Rare Yawstrich.png",
-      epic: "images/bm/Epic Yawstrich.png"
+      epic: "images/bm/Epic Yawstrich.png",
     },
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
-      epic: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
+    },
   },
   {
     name: "Anglow",
@@ -2850,13 +3109,14 @@ const monsters = [
     image: {
       normal: "images/bm/Anglow.png",
       rare: "images/bm/Rare Anglow.png",
-      epic: "images/bm/Epic Anglow.png"
+      epic: "images/bm/Epic Anglow.png",
     },
     stats: {
-      normal: "Breeding Time: 33 hr, <br> <br> Enhanced Time: 24 hr 45 min <br>",
+      normal:
+        "Breeding Time: 33 hr, <br> <br> Enhanced Time: 24 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 17 hr 15 min, <br> <br> Enhanced Time: 1 day 6 hr 56 min 15 sec <br>",
-      epic: "Epic Breeding Time: 1 day 17 hr 13 min, <br><br> Enchanced Time: 1 day 6 hr 54 min 45 sec<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 17 hr 13 min, <br><br> Enchanced Time: 1 day 6 hr 54 min 45 sec<br>",
+    },
   },
   {
     name: "Hyehehe",
@@ -2864,13 +3124,13 @@ const monsters = [
     image: {
       normal: "images/bm/Hyehehe.png",
       rare: "images/bm/Rare Hyehehe.png",
-      epic: "images/bm/Epic Hyehehe.png"
+      epic: "images/bm/Epic Hyehehe.png",
     },
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Buzzinga",
@@ -2878,13 +3138,13 @@ const monsters = [
     image: {
       normal: "images/bm/Buzzinga.png",
       rare: "images/bm/Rare Buzzinga.png",
-      epic: "images/bm/Epic Buzzinga.png"
+      epic: "images/bm/Epic Buzzinga.png",
     },
     stats: {
       normal: "Breeding Time: 28 hr, <br> <br> Enhanced Time: 21 hr <br>",
       rare: "Rare Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min 45 sec <br>",
-      epic: "Epic Breeding Time: 1 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 2 hr 30 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 2 hr 30 min<br>",
+    },
   },
   {
     name: "Cherubble",
@@ -2895,10 +3155,11 @@ const monsters = [
       epic: "images/bm/Epic Cherubble.png",
     },
     stats: {
-      normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
+      normal:
+        "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 22 hr 30 min, <br> <br> Enhanced Time: 16 hr 52 min 30 sec <br>",
-      epic: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec "
-    }
+      epic: "Breeding TIme: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec ",
+    },
   },
   {
     name: "Cataliszt",
@@ -2911,8 +3172,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
       rare: "Rare Breeding Time: 11 hr 15 min, <br> <br> Enhanced Time: 8 hr 26 min 15 sec <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Bleatnik",
@@ -2923,10 +3184,11 @@ const monsters = [
       epic: "images/bm/Epic Bleatnik.png",
     },
     stats: {
-      normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal:
+        "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Cranchee",
@@ -2939,8 +3201,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Sporerow",
@@ -2951,10 +3213,11 @@ const monsters = [
       epic: "images/bm/Epic Sporerow.png",
     },
     stats: {
-      normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
+      normal:
+        "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 22 hr 15 min <br><br> Enhanced Time: 1 day 10 hr 41 min 15 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Pinghound",
@@ -2965,10 +3228,11 @@ const monsters = [
       epic: "images/bm/Epic Pinghound.png",
     },
     stats: {
-      normal: "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
+      normal:
+        "Breeding Time: 42 hr, <br> <br> Enhanced Time: 31 hr 30 min <br>",
       rare: "Breeding TIme: 2 days 4 hr 30 min <br><br> Enhanced Time: 1 day 15 hr 22 min 30 sec ",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Wheezel",
@@ -2979,10 +3243,11 @@ const monsters = [
       epic: "images/bm/Epic Wheezel.png",
     },
     stats: {
-      normal: "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
+      normal:
+        "Breeding Time: 37 hr, <br> <br> Enhanced Time: 27 hr 45 min <br>",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Knurv",
@@ -2995,8 +3260,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
       rare: "Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "shLep",
@@ -3007,10 +3272,11 @@ const monsters = [
       epic: "images/bm/Epic shLep.png",
     },
     stats: {
-      normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      normal:
+        "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "Breeding Time: 1 day 9 hr 45 min <br><br> Enhanced Breeding Time: 1 day 1 hr 18 min 45 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Punkleton",
@@ -3021,10 +3287,11 @@ const monsters = [
       epic: "images/bm/Epic Punkleton.png",
     },
     stats: {
-      normal: "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
+      normal:
+        "Breeding Time: 18 hr, <br> <br> Enhanced Time: 13 hr 30 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
-    }
+    },
   },
   {
     name: "Yool",
@@ -3038,7 +3305,7 @@ const monsters = [
       normal: "Breeding Time: 36 hr, <br> <br> Enhanced Time: 1 day 3 hr <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
-    }
+    },
   },
   {
     name: "Schmoochle",
@@ -3049,10 +3316,11 @@ const monsters = [
       epic: "images/bm/Epic Schmoochle.png",
     },
     stats: {
-      normal: "Breeding Time: 31 hr 6 min 30 sec, <br> <br> Enhanced Time: 23 hr 19 min 52 sec <br>",
+      normal:
+        "Breeding Time: 31 hr 6 min 30 sec, <br> <br> Enhanced Time: 23 hr 19 min 52 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
-    }
+    },
   },
   {
     name: "Blabbit",
@@ -3063,10 +3331,11 @@ const monsters = [
       epic: "images/bm/Epic Blabbit.png",
     },
     stats: {
-      normal: "Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
+      normal:
+        "Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
-    }
+    },
   },
   {
     name: "Hoola",
@@ -3077,10 +3346,11 @@ const monsters = [
       epic: "images/bm/Epic Hoola.png",
     },
     stats: {
-      normal: "Breeding Time: 25 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
+      normal:
+        "Breeding Time: 25 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
-    }
+    },
   },
   {
     name: "Viveine",
@@ -3091,10 +3361,11 @@ const monsters = [
       epic: "images/bm/Epic Viveine.png",
     },
     stats: {
-      normal: "Breeding Time: 26 hr 5 min 20 sec, <br> <br> Enhanced Time: 19 hr 34 min <br>",
+      normal:
+        "Breeding Time: 26 hr 5 min 20 sec, <br> <br> Enhanced Time: 19 hr 34 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
-    }
+    },
   },
   {
     name: "Monculus",
@@ -3105,10 +3376,11 @@ const monsters = [
       epic: "images/bm/Epic Monculus.png",
     },
     stats: {
-      normal: "Breeding Time: 20 hr 4 min, <br> <br> Enhanced Time: 15 hr 3 min <br>",
+      normal:
+        "Breeding Time: 20 hr 4 min, <br> <br> Enhanced Time: 15 hr 3 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
-    }
+    },
   },
   {
     name: "Gobbleygourd",
@@ -3119,10 +3391,11 @@ const monsters = [
       epic: "images/bm/Epic Gobbleygourd.png",
     },
     stats: {
-      normal: "Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
+      normal:
+        "Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
-    }
+    },
   },
   {
     name: "Spurrit",
@@ -3133,10 +3406,11 @@ const monsters = [
       epic: "images/bm/Epic Spurrit.png",
     },
     stats: {
-      normal: "Breeding Time: 20 hr 18 min, <br> <br> Enhanced Time: 15 hr 13 min 30 sec <br>",
+      normal:
+        "Breeding Time: 20 hr 18 min, <br> <br> Enhanced Time: 15 hr 13 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
-    }
+    },
   },
   {
     name: "Whiz-bang",
@@ -3147,641 +3421,654 @@ const monsters = [
       epic: "images/bm/Epic Whiz-bang.png",
     },
     stats: {
-      normal: "Breeding Time: 28 hr 6 min, <br> <br> Enhanced Time: 21 hr 4 min 30 sec <br>",
+      normal:
+        "Breeding Time: 28 hr 6 min, <br> <br> Enhanced Time: 21 hr 4 min 30 sec <br>",
       rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
       epic: "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
-    }
-  },
-  {
-    "name": "Boo'qwurm",
-    "audio": "sounds/Boo_qwurm_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Boo_qwurm.png",
-      "rare": "images/bm/Rare Boo_qwurm.png",
-      "epic": "images/bm/Epic Boo_qwurm.png"
     },
-    "stats": {
-      "normal": "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
-      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      "epic": "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>"
-    }
   },
   {
-    "name": "Ffidyll",
-    "audio": "sounds/Ffidyll_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Ffidyll.png",
-      "rare": "images/bm/Rare Ffidyll.png",
-      "epic": "images/bm/Epic Ffidyll.png"
+    name: "Boo'qwurm",
+    audio: "sounds/Boo_qwurm_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Boo_qwurm.png",
+      rare: "images/bm/Rare Boo_qwurm.png",
+      epic: "images/bm/Epic Boo_qwurm.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
-      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      "epic": "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>"
-    }
-  },
-  {
-    "name": "Clavavera",
-    "audio": "sounds/Clavavera_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Clavavera.png",
-      "rare": "images/bm/Rare Clavavera.png",
-      "epic": "images/bm/Epic Clavavera.png"
+    stats: {
+      normal:
+        "Breeding Time: 1 day 6 min 24 sec, <br> <br> Enhanced Time: 18 hr 4 min 48 sec <br>",
+      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      epic: "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
     },
-    "stats": {
-      "normal": "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
-      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      "epic": "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>"
-    }
   },
   {
-    "name": "Carillong",
-    "audio": "sounds/Carillong_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Carillong.png",
-      "rare": "images/bm/Rare Carillong.png",
-      "epic": "images/bm/Epic Carillong.png"
+    name: "Ffidyll",
+    audio: "sounds/Ffidyll_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Ffidyll.png",
+      rare: "images/bm/Rare Ffidyll.png",
+      epic: "images/bm/Epic Ffidyll.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
-      "rare": "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
-      "epic": "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>"
-    }
-  },
-  {
-    "name": "Jam Boree",
-    "audio": "sounds/Jam_Boree_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Jam Boree - Year 11.png",
-      "rare": "images/bm/Rare Jam Boree - Year 11.png",
-      "epic": "images/bm/Epic Jam Boree - Year 11.png"
+    stats: {
+      normal:
+        "Breeding Time: 22 hr 44 min, <br> <br> Enhanced Time: 17 hr 3 min <br>",
+      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      epic: "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
     },
-    "stats": {
-      "normal": "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
-      "rare": "Rare Breeding Time: 2 day 2 hr, <br> <br> Enhanced Time: 1 day 13 hr 30 min<br>",
-      "epic": "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>"
-    }
   },
   {
-    "name": "Fluoress",
-    "audio": "sounds/Fluoress_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Fluoress.png",
-      "rare": "images/bm/Rare Fluoress.png",
-      "epic": "images/bm/Epic Fluoress.png"
+    name: "Clavavera",
+    audio: "sounds/Clavavera_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Clavavera.png",
+      rare: "images/bm/Rare Clavavera.png",
+      epic: "images/bm/Epic Clavavera.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
-      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Theremind",
-    "audio": "sounds/Theremind_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Theremind.png",
-      "rare": "images/bm/Rare Theremind.png",
-      "epic": "images/bm/Epic Theremind.png"
+    stats: {
+      normal:
+        "Breeding Time: 22 hr 11 min, <br> <br> Enhanced Time: 16 hr 38 min 15 sec <br>",
+      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      epic: "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
     },
-    "stats": {
-      "normal": "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
-      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      "epic": ""
-    }
   },
   {
-    "name": "Floot Fly",
-    "audio": "sounds/Floot_Fly_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Floot Fly.png",
-      "rare": "images/bm/Rare Floot Fly.png",
-      "epic": "images/bm/Epic Floot Fly.png"
+    name: "Carillong",
+    audio: "sounds/Carillong_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Carillong.png",
+      rare: "images/bm/Rare Carillong.png",
+      epic: "images/bm/Epic Carillong.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
-      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Clackula",
-    "audio": "sounds/Clackula_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Clackula.png",
-      "rare": "images/bm/Rare Clackula.png",
-      "epic": "images/bm/Epic Clackula.png"
+    stats: {
+      normal:
+        "Breeding Time: 27 hr 9 min 32 sec, <br> <br> Enhanced Time: 20 hr 22 min 9 sec <br>",
+      rare: "Rare Breeding Time: 1 day 7 hr 45 min, <br> <br> Enhanced Time: 23 hr 48 min 45 sec<br>",
+      epic: "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
     },
-    "stats": {
-      "normal": "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      "epic": ""
-    }
   },
   {
-    "name": "Gob",
-    "audio": "sounds/Gob_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Gob.png",
-      "rare": "images/bm/Rare Gob.png",
-      "epic": "images/bm/Epic Gob.png"
+    name: "Jam Boree",
+    audio: "sounds/Jam_Boree_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Jam Boree - Year 11.png",
+      rare: "images/bm/Rare Jam Boree - Year 11.png",
+      epic: "images/bm/Epic Jam Boree - Year 11.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Bulbo",
-    "audio": "sounds/Bulbo_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Bulbo.png",
-      "rare": "images/bm/Rare Bulbo.png",
-      "epic": "images/bm/Epic Bulbo.png"
+    stats: {
+      normal:
+        "Breeding Time: 40 hr 24 min, <br> <br> Enhanced Time: 1 day 6 hr 18 min <br>",
+      rare: "Rare Breeding Time: 2 day 2 hr, <br> <br> Enhanced Time: 1 day 13 hr 30 min<br>",
+      epic: "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
     },
-    "stats": {
-      "normal": "Breding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min <br> <br> Enchanced Time: 9 hr 22 min 30 sec <br>",
-      "epic": ""
-    }
   },
   {
-    "name": "Pluckbill",
-    "audio": "sounds/Pluckbill_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Pluckbill.png",
-      "rare": "images/bm/Rare Pluckbill.png",
-      "epic": "images/bm/Epic Pluckbill.png"
+    name: "Fluoress",
+    audio: "sounds/Fluoress_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Fluoress.png",
+      rare: "images/bm/Rare Fluoress.png",
+      epic: "images/bm/Epic Fluoress.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Bonkers",
-    "audio": "sounds/Bonkers_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Bonkers.png",
-      "rare": "images/bm/Rare Bonkers.png",
-      "epic": "images/bm/Epic Bonkers.png"
+    stats: {
+      normal:
+        "Breeding Time: 1 hr 48 min, <br> <br> Enhanced Time: 1 hr 18 min <br>",
+      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      epic: "",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
   },
   {
-    "name": "Poppette",
-    "audio": "sounds/Poppette_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Poppette.png",
-      "rare": "images/bm/Rare Poppette.png",
-      "epic": "images/bm/Epic Poppette.png"
+    name: "Theremind",
+    audio: "sounds/Theremind_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Theremind.png",
+      rare: "images/bm/Rare Theremind.png",
+      epic: "images/bm/Epic Theremind.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Yuggler",
-    "audio": "sounds/Yuggler_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Yuggler.png",
-      "rare": "images/bm/Rare Yuggler.png",
-      "epic": "images/bm/Epic Yuggler.png"
+    stats: {
+      normal: "Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
+      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      epic: "",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
   },
   {
-    "name": "HippityHop",
-    "audio": "sounds/HippityHop_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/HippityHop.png",
-      "rare": "images/bm/Rare HippityHop.png",
-      "epic": "images/bm/Epic HippityHop.png"
+    name: "Floot Fly",
+    audio: "sounds/Floot_Fly_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Floot Fly.png",
+      rare: "images/bm/Rare Floot Fly.png",
+      epic: "images/bm/Epic Floot Fly.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Squot",
-    "audio": "sounds/Squot_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Squot.png",
-      "rare": "images/bm/Rare Squot.png",
-      "epic": "images/bm/Epic Squot.png"
+    stats: {
+      normal: "Breeding Time: 4 hr, <br> <br> Enhanced Time: 3 hr <br>",
+      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      epic: "",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "",
-      "epic": ""
-    }
   },
   {
-    "name": "Wimmzies",
-    "audio": "sounds/Wimmzies_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Wimmzies.png",
-      "rare": "images/bm/Rare Wimmzies.png",
-      "epic": "images/bm/Epic Wimmzies.png"
+    name: "Clackula",
+    audio: "sounds/Clackula_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Clackula.png",
+      rare: "images/bm/Rare Clackula.png",
+      epic: "images/bm/Epic Clackula.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Peckidna",
-    "audio": "sounds/Peckidna_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Peckidna.png",
-      "rare": "images/bm/Rare Peckidna.png",
-      "epic": "images/bm/Epic Peckidna.png"
+    stats: {
+      normal: "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
+      rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
+      epic: "",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "",
-      "epic": ""
-    }
   },
   {
-    "name": "Denchuhs",
-    "audio": "sounds/Denchuhs_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Denchuhs.png",
-      "rare": "images/bm/Rare Denchuhs.png",
-      "epic": "images/bm/Epic Denchuhs.png"
+    name: "Gob",
+    audio: "sounds/Gob_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Gob.png",
+      rare: "images/bm/Rare Gob.png",
+      epic: "images/bm/Epic Gob.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec <br>",
-      "epic": ""
-    }
-  },
-  {
-    "name": "Hawlo",
-    "audio": "sounds/Hawlo_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Hawlo.png",
-      "rare": "images/bm/Rare Hawlo.png",
-      "epic": "images/bm/Epic Hawlo.png"
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
     },
-    "stats": {
-      "normal": "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      "rare": "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
-      "epic": ""
-    }
   },
   {
-    "name": "Xyster",
-    "audio": "sounds/Xyster_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Xyster.png",
-      "rare": "images/bm/Rare Xyster.png",
-      "epic": "images/bm/Epic Xyster.png"
+    name: "Bulbo",
+    audio: "sounds/Bulbo_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Bulbo.png",
+      rare: "images/bm/Rare Bulbo.png",
+      epic: "images/bm/Epic Bulbo.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min <br> <br> Enchanced Time: 9 hr 22 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Cahoot",
-    "audio": "sounds/Cahoot_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Cahoot.png",
-      "rare": "images/bm/Rare Cahoot.png",
-      "epic": "images/bm/Epic Cahoot.png"
+    name: "Pluckbill",
+    audio: "sounds/Pluckbill_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Pluckbill.png",
+      rare: "images/bm/Rare Pluckbill.png",
+      epic: "images/bm/Epic Pluckbill.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Bonkers",
+    audio: "sounds/Bonkers_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Bonkers.png",
+      rare: "images/bm/Rare Bonkers.png",
+      epic: "images/bm/Epic Bonkers.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Poppette",
+    audio: "sounds/Poppette_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Poppette.png",
+      rare: "images/bm/Rare Poppette.png",
+      epic: "images/bm/Epic Poppette.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Yuggler",
+    audio: "sounds/Yuggler_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Yuggler.png",
+      rare: "images/bm/Rare Yuggler.png",
+      epic: "images/bm/Epic Yuggler.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "HippityHop",
+    audio: "sounds/HippityHop_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/HippityHop.png",
+      rare: "images/bm/Rare HippityHop.png",
+      epic: "images/bm/Epic HippityHop.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Squot",
+    audio: "sounds/Squot_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Squot.png",
+      rare: "images/bm/Rare Squot.png",
+      epic: "images/bm/Epic Squot.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Wimmzies",
+    audio: "sounds/Wimmzies_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Wimmzies.png",
+      rare: "images/bm/Rare Wimmzies.png",
+      epic: "images/bm/Epic Wimmzies.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Peckidna",
+    audio: "sounds/Peckidna_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Peckidna.png",
+      rare: "images/bm/Rare Peckidna.png",
+      epic: "images/bm/Epic Peckidna.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Denchuhs",
+    audio: "sounds/Denchuhs_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Denchuhs.png",
+      rare: "images/bm/Rare Denchuhs.png",
+      epic: "images/bm/Epic Denchuhs.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec <br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Hawlo",
+    audio: "sounds/Hawlo_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Hawlo.png",
+      rare: "images/bm/Rare Hawlo.png",
+      epic: "images/bm/Epic Hawlo.png",
+    },
+    stats: {
+      normal: "Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
+      rare: "Rare Breeding Time: 12 hr 30 min, <br> <br> Enhanced Time: 9 hr 22 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Xyster",
+    audio: "sounds/Xyster_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Xyster.png",
+      rare: "images/bm/Rare Xyster.png",
+      epic: "images/bm/Epic Xyster.png",
+    },
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "Rare Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec<br>",
+      epic: "",
+    },
+  },
+  {
+    name: "Cahoot",
+    audio: "sounds/Cahoot_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Cahoot.png",
+      rare: "images/bm/Rare Cahoot.png",
+      epic: "images/bm/Epic Cahoot.png",
     },
 
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "",
+      epic: "",
+    },
   },
   {
-    "name": "Deja-Jin",
-    "audio": "sounds/Deja-Jin_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Déjà-Jin.png",
-      "rare": "images/bm/Rare Déjà-Jin.png",
-      "epic": "images/bm/Epic Déjà-Jin.png"
+    name: "Deja-Jin",
+    audio: "sounds/Deja-Jin_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Déjà-Jin.png",
+      rare: "images/bm/Rare Déjà-Jin.png",
+      epic: "images/bm/Epic Déjà-Jin.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "Breeding Time: 1 day 2 hr 30 min, <br> <br> Enhanced Time: 19 hr 52 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Roarick",
-    "audio": "sounds/Roarick_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Roarick.png",
-      "rare": "images/bm/Rare Roarick.png",
-      "epic": "images/bm/Epic Roarick.png"
+    name: "Roarick",
+    audio: "sounds/Roarick_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Roarick.png",
+      rare: "images/bm/Rare Roarick.png",
+      epic: "images/bm/Epic Roarick.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "1 day 2 hr 30 min <br> <br> 19 hr 52 min 30 sec",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "1 day 2 hr 30 min <br> <br> 19 hr 52 min 30 sec",
+      epic: "",
+    },
   },
   {
-    "name": "Osstax",
-    "audio": "sounds/Osstax_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Osstax.png",
-      "rare": "images/bm/Rare Osstax.png",
-      "epic": "images/bm/Epic Osstax.png"
+    name: "Osstax",
+    audio: "sounds/Osstax_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Osstax.png",
+      rare: "images/bm/Rare Osstax.png",
+      epic: "images/bm/Epic Osstax.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "",
+      epic: "",
+    },
   },
   {
-    "name": "Knucklehead",
-    "audio": "sounds/Knucklehead_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Knucklehead.png",
-      "rare": "images/bm/Rare Knucklehead.png",
-      "epic": "images/bm/Epic Knucklehead.png"
+    name: "Knucklehead",
+    audio: "sounds/Knucklehead_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Knucklehead.png",
+      rare: "images/bm/Rare Knucklehead.png",
+      epic: "images/bm/Epic Knucklehead.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
-      "rare": "",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 20 hr, <br> <br> Enhanced Time: 15 hr <br>",
+      rare: "",
+      epic: "",
+    },
   },
   {
-    "name": "Spytrap",
-    "audio": "sounds/Spytrap_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Spytrap.png",
-      "rare": "images/bm/Rare Spytrap.png",
-      "epic": "images/bm/Epic Spytrap.png"
+    name: "Spytrap",
+    audio: "sounds/Spytrap_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Spytrap.png",
+      rare: "images/bm/Rare Spytrap.png",
+      epic: "images/bm/Epic Spytrap.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
+      epic: "",
+    },
   },
   {
-    "name": "TooToo",
-    "audio": "sounds/TooToo_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/TooToo.png",
-      "rare": "images/bm/Rare TooToo.png",
-      "epic": "images/bm/Epic TooToo.png"
+    name: "TooToo",
+    audio: "sounds/TooToo_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/TooToo.png",
+      rare: "images/bm/Rare TooToo.png",
+      epic: "images/bm/Epic TooToo.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Fiddlement",
-    "audio": "sounds/Fiddlement_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Fiddlement.png",
-      "rare": "images/bm/Rare Fiddlement.png",
-      "epic": "images/bm/Epic Fiddlement.png"
+    name: "Fiddlement",
+    audio: "sounds/Fiddlement_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Fiddlement.png",
+      rare: "images/bm/Rare Fiddlement.png",
+      epic: "images/bm/Epic Fiddlement.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
-      "rare": "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 hr <br>",
+      rare: "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Tapricorn",
-    "audio": "sounds/Tapricorn_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Tapricorn.png",
-      "rare": "images/bm/Rare Tapricorn.png",
-      "epic": "images/bm/Epic Tapricorn.png"
+    name: "Tapricorn",
+    audio: "sounds/Tapricorn_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Tapricorn.png",
+      rare: "images/bm/Rare Tapricorn.png",
+      epic: "images/bm/Epic Tapricorn.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Breeding Time: 1 day 1 hr 30 sec, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Rooba",
-    "audio": "sounds/Rooba_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Rooba.png",
-      "rare": "images/bm/Rare Rooba.png",
-      "epic": "images/bm/Epic Rooba.png"
+    name: "Rooba",
+    audio: "sounds/Rooba_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Rooba.png",
+      rare: "images/bm/Rare Rooba.png",
+      epic: "images/bm/Epic Rooba.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Periscorp",
-    "audio": "sounds/Periscorp_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Periscorp.png",
-      "rare": "images/bm/Rare Periscorp.png",
-      "epic": "images/bm/Epic Periscorp.png"
+    name: "Periscorp",
+    audio: "sounds/Periscorp_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Periscorp.png",
+      rare: "images/bm/Rare Periscorp.png",
+      epic: "images/bm/Epic Periscorp.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "",
+      epic: "",
+    },
   },
   {
-    "name": "Cantorell",
-    "audio": "sounds/Cantorell_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Cantorell.png",
-      "rare": "images/bm/Rare_Cantorell.jpg",
-      "epic": "images/bm/Epic Cantorell.png"
+    name: "Cantorell",
+    audio: "sounds/Cantorell_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Cantorell.png",
+      rare: "images/bm/Rare_Cantorell.jpg",
+      epic: "images/bm/Epic Cantorell.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Bridg-it",
-    "audio": "sounds/Bridg-it_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Bridg-it.png",
-      "rare": "images/bm/Rare Bridg-it.png",
-      "epic": "images/bm/Epic Bridg-it.png"
+    name: "Bridg-it",
+    audio: "sounds/Bridg-it_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Bridg-it.png",
+      rare: "images/bm/Rare Bridg-it.png",
+      epic: "images/bm/Epic Bridg-it.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Clavi Gnat",
-    "audio": "sounds/Clavi_Gnat_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Clavi Gnat.png",
-      "rare": "images/bm/Rare Clavi Gnat.png",
-      "epic": "images/bm/Epic Clavi Gnat.png"
+    name: "Clavi Gnat",
+    audio: "sounds/Clavi_Gnat_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Clavi Gnat.png",
+      rare: "images/bm/Rare Clavi Gnat.png",
+      epic: "images/bm/Epic Clavi Gnat.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Withur",
-    "audio": "sounds/Withur_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Withur.png",
-      "rare": "images/bm/Rare Withur.png",
-      "epic": "images/bm/Epic Withur.png"
+    name: "Withur",
+    audio: "sounds/Withur_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Withur.png",
+      rare: "images/bm/Rare Withur.png",
+      epic: "images/bm/Epic Withur.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Uuduk",
-    "audio": "sounds/Uuduk_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Uuduk.png",
-      "rare": "images/bm/Rare Uuduk.png",
-      "epic": "images/bm/Epic Uuduk.png"
+    name: "Uuduk",
+    audio: "sounds/Uuduk_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Uuduk.png",
+      rare: "images/bm/Rare Uuduk.png",
+      epic: "images/bm/Epic Uuduk.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Banjaw",
-    "audio": "sounds/Banjaw_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Banjaw.png",
-      "rare": "images/bm/Rare Banjaw.png",
-      "epic": "images/bm/Epic Banjaw.png"
+    name: "Banjaw",
+    audio: "sounds/Banjaw_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Banjaw.png",
+      rare: "images/bm/Rare Banjaw.png",
+      epic: "images/bm/Epic Banjaw.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
-      "rare": "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
-      "epic": ""
-    }
+    stats: {
+      normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
+      rare: "Rare Breeding Time: 1 day 1 hr 30 min, <br> <br> Enhanced Time: 19 hr 7 min 30 sec<br>",
+      epic: "",
+    },
   },
   {
-    "name": "G'day",
-    "audio": "sounds/G_day_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/G_day.png",
-      "rare": "images/bm/Rare G'day.png",
-      "epic": "images/bm/Epic G_day.png"
+    name: "G'day",
+    audio: "sounds/G_day_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/G_day.png",
+      rare: "images/bm/Rare G'day.png",
+      epic: "images/bm/Epic G_day.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      "rare": "Breeding Time: 1 day 13 hr 30 min <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec ",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      rare: "Breeding Time: 1 day 13 hr 30 min <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec ",
+      epic: "",
+    },
   },
   {
-    "name": "Larvaluss",
-    "audio": "sounds/Larvaluss_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Larvaluss.png",
-      "rare": "images/bm/Rare Larvaluss.png",
-      "epic": "images/bm/Epic Larvaluss.png"
+    name: "Larvaluss",
+    audio: "sounds/Larvaluss_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Larvaluss.png",
+      rare: "images/bm/Rare Larvaluss.png",
+      epic: "images/bm/Epic Larvaluss.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      "rare": "Breeding Time: 1 day 13 hr 30 min, <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec <br>",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      rare: "Breeding Time: 1 day 13 hr 30 min, <br> <br> Enhanced Time: 1 day 4 hr 7 min 30 sec <br>",
+      epic: "",
+    },
   },
   {
-    "name": "Frondley",
-    "audio": "sounds/Frondley_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Frondley.png",
-      "rare": "images/bm/Rare Frondley.png",
-      "epic": "images/bm/Epic Frondley.png"
+    name: "Frondley",
+    audio: "sounds/Frondley_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Frondley.png",
+      rare: "images/bm/Rare Frondley.png",
+      epic: "images/bm/Epic Frondley.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      "rare": "",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      rare: "",
+      epic: "",
+    },
   },
   {
-    "name": "Mushaboom",
-    "audio": "sounds/Mushaboom_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Mushaboom.png",
-      "rare": "images/bm/Rare Mushaboom.png",
-      "epic": "images/bm/Epic Mushaboom.png"
+    name: "Mushaboom",
+    audio: "sounds/Mushaboom_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Mushaboom.png",
+      rare: "images/bm/Rare Mushaboom.png",
+      epic: "images/bm/Epic Mushaboom.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
-      "rare": "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "Breeding Time: 30 hr, <br> <br> Enhanced Time: 22 hr 30 min <br>",
+      rare: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
+      epic: "",
+    },
   },
   {
-    "name": "Gnarls",
-    "audio": "sounds/Gnarls_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Gnarls.png",
-      "rare": "images/bm/Rare Gnarls.png",
-      "epic": "images/bm/Epic Gnarls.png"
+    name: "Gnarls",
+    audio: "sounds/Gnarls_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Gnarls.png",
+      rare: "images/bm/Rare Gnarls.png",
+      epic: "images/bm/Epic Gnarls.png",
     },
-    "stats": {
-      "normal": "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
-      "rare": "15,000 Starpower <br> <br> Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "Breeding Time: 3 days, 8 hr, <br> <br> Enhanced Time: 2 days 12 hr <br>",
+      rare: "15,000 Starpower <br> <br> Breeding Time: 3 days 23 hr 30 min, <br> <br> Enhanced Time: 2 days,  23 hr 37 min 30 sec <br> Success: 3 days 23 hr 30 min <br><br> Failure: 1 day 16 hr<br>",
+      epic: "",
+    },
   },
   {
-    "name": "Bisonorus",
-    "audio": "sounds/Bisonorus_Memory_Sample.mp3.mpeg",
-    "image": {
-      "normal": "images/bm/Bisonorus.png",
-      "rare": "images/bm/Rare Bisonorus.png",
-      "epic": "images/bm/Epic Bisonorus.png"
+    name: "Bisonorus",
+    audio: "sounds/Bisonorus_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Bisonorus.png",
+      rare: "images/bm/Rare Bisonorus.png",
+      epic: "images/bm/Epic Bisonorus.png",
     },
-    "stats": {
-      "normal": "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
-      "rare": "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      "epic": ""
-    }
+    stats: {
+      normal:
+        "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
+      epic: "",
+    },
   },
   {
     name: "Yelmut",
@@ -3792,10 +4079,11 @@ const monsters = [
       epic: "images/bm/Epic Yelmut.png",
     },
     stats: {
-      normal: "Breeding Time: 1 day, 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br> Buy From Shop: 300 Relics ",
+      normal:
+        "Breeding Time: 1 day, 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br> Buy From Shop: 300 Relics ",
       rare: "10,000 Starpower <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br><br> Enhanced Time: 1 days 15 hr 22 min 30 sec",
-      epic: "Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min"
-    }
+      epic: "Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min",
+    },
   },
   {
     name: "Flum Ox",
@@ -3806,10 +4094,11 @@ const monsters = [
       epic: "images/bm/Epic Flum Ox.png",
     },
     stats: {
-      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      normal:
+        "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Krillby",
@@ -3820,10 +4109,11 @@ const monsters = [
       epic: "images/bm/Epic Krillby.png",
     },
     stats: {
-      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      normal:
+        "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: "1 day 19 hr <br> <br> Enhanced Time: 1 day 8 hr 15 min <br> <br> Evolution Success: 1 day 19 hr <br> <br> Fail: 20 hours"
-    }
+      epic: "1 day 19 hr <br> <br> Enhanced Time: 1 day 8 hr 15 min <br> <br> Evolution Success: 1 day 19 hr <br> <br> Fail: 20 hours",
+    },
   },
   {
     name: "Edamimi",
@@ -3834,10 +4124,11 @@ const monsters = [
       epic: "images/bm/Epic Edamimi.png",
     },
     stats: {
-      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      normal:
+        "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>"
-    }
+      epic: "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>",
+    },
   },
   {
     name: "Tiawa",
@@ -3848,10 +4139,11 @@ const monsters = [
       epic: "images/bm/Epic Tiawa.png",
     },
     stats: {
-      normal: "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
+      normal:
+        "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: "Breeding Time: 2 days 1 hr <br><br> Enhanced Time: 1 day 12 hr 45 min"
-    }
+      epic: "Breeding Time: 2 days 1 hr <br><br> Enhanced Time: 1 day 12 hr 45 min",
+    },
   },
   {
     name: "Candelavra",
@@ -3862,10 +4154,11 @@ const monsters = [
       epic: "images/bm/Epic Candelavra.png",
     },
     stats: {
-      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal:
+        "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Drummidary",
@@ -3876,10 +4169,11 @@ const monsters = [
       epic: "images/bm/Epic Drummidary.png",
     },
     stats: {
-      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal:
+        "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Bowhead",
@@ -3890,10 +4184,11 @@ const monsters = [
       epic: "images/bm/Epic Bowhead.png",
     },
     stats: {
-      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal:
+        "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Tuskski",
@@ -3904,10 +4199,11 @@ const monsters = [
       epic: "images/bm/Epic Tuskski.png",
     },
     stats: {
-      normal: "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal:
+        "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Yooreek",
@@ -3920,8 +4216,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Meebkin",
@@ -3934,8 +4230,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Blarret",
@@ -3948,8 +4244,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Gaddzooks",
@@ -3962,8 +4258,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Auglur",
@@ -3976,8 +4272,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Flasque",
@@ -3990,8 +4286,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Nitebear",
@@ -4004,8 +4300,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Piplash",
@@ -4018,8 +4314,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "X'rt",
@@ -4032,8 +4328,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Teeter-Tauter",
@@ -4046,8 +4342,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Whaill",
@@ -4060,8 +4356,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Vhenshun",
@@ -4074,8 +4370,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Pentumbra",
@@ -4088,8 +4384,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rhysmuth",
@@ -4102,8 +4398,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Oogiddy",
@@ -4116,8 +4412,8 @@ const monsters = [
     stats: {
       normal: "Success: 1 day 18 hr <br><br> Failure: 17 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "BeMeebEth",
@@ -4130,8 +4426,8 @@ const monsters = [
     stats: {
       normal: "Success: 2 day 7 hr <br><br> Failure: 22 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Meeb",
@@ -4143,8 +4439,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Plasma Meeb",
@@ -4156,8 +4452,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Shadow Meeb",
@@ -4169,8 +4465,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Crystal Meeb",
@@ -4182,8 +4478,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Mech Meeb",
@@ -4195,8 +4491,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Poison Meeb",
@@ -4208,8 +4504,8 @@ const monsters = [
     stats: {
       normal: "Oh Me? Just Floatin Around",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Lowb",
@@ -4222,8 +4518,8 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 2 days 2 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Owlesque",
@@ -4234,10 +4530,11 @@ const monsters = [
       epic: "images/bm/Epic Owlesque (Major).png",
     },
     stats: {
-      normal: "Breeding Time: 1 days 10 hr <br><br> Enhanced Time: 1 day 1 hr 30 min",
+      normal:
+        "Breeding Time: 1 days 10 hr <br><br> Enhanced Time: 1 day 1 hr 30 min",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "PongPing",
@@ -4245,13 +4542,14 @@ const monsters = [
     image: {
       normal: "images/bm/PongPing.png",
       rare: "images/bm/Rare PongPing.png",
-      epic: "images/bm/Epic PongPing.png"
+      epic: "images/bm/Epic PongPing.png",
     },
     stats: {
-      normal: "300 Relics <br><br> Breeding Time: 1 days 16 hr <br><br> Enhanced Time: 1 day 6 hr",
+      normal:
+        "300 Relics <br><br> Breeding Time: 1 days 16 hr <br><br> Enhanced Time: 1 day 6 hr",
       rare: "10,000 <br><br> Breeding Time: 2 days 4 hr 30 min <br><br> Enhanced Time: 1 day 15 hr 30 sec",
-      epic: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min"
-    }
+      epic: "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min",
+    },
   },
   {
     name: "Mimic",
@@ -4259,13 +4557,14 @@ const monsters = [
     image: {
       normal: "images/bm/Mimic.png",
       rare: "images/bm/Rare Mimic.png",
-      epic: "images/bm/Epic Mimic.png"
+      epic: "images/bm/Epic Mimic.png",
     },
     stats: {
-      normal: "Breeding Time: 3 days 8 hr <br> <br> Enhanced Breeding Time: 2 days 12 hr",
+      normal:
+        "Breeding Time: 3 days 8 hr <br> <br> Enhanced Breeding Time: 2 days 12 hr",
       rare: "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   // ADDING WUBLINS + `WUBBOX`'S (Normal + Rare + Epic :))
@@ -4275,13 +4574,13 @@ const monsters = [
     image: {
       normal: "images/bm/Brump.png",
       rare: "images/bm/Rare Brump.png",
-      epic: "images/bm/Epic Brump.png"
+      epic: "images/bm/Epic Brump.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Zynth",
@@ -4289,13 +4588,13 @@ const monsters = [
     image: {
       normal: "images/bm/Zynth.png",
       rare: "images/bm/Rare Zynth.png",
-      epic: "images/bm/Epic Zynth.png"
+      epic: "images/bm/Epic Zynth.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Poewk",
@@ -4303,13 +4602,13 @@ const monsters = [
     image: {
       normal: "images/bm/Poewk.png",
       rare: "images/bm/Rare Poewk.png",
-      epic: "images/bm/Epic Poewk.png"
+      epic: "images/bm/Epic Poewk.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Thwok",
@@ -4317,13 +4616,13 @@ const monsters = [
     image: {
       normal: "images/bm/Thwok.png",
       rare: "images/bm/Rare Thwok.png",
-      epic: "images/bm/Epic Thwok.png"
+      epic: "images/bm/Epic Thwok.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Dwumrohl",
@@ -4331,13 +4630,13 @@ const monsters = [
     image: {
       normal: "images/bm/Dwumrohl.png",
       rare: "images/bm/Rare Dwumrohl.png",
-      epic: "images/bm/Epic Dwumrohl.png"
+      epic: "images/bm/Epic Dwumrohl.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Zuuker",
@@ -4345,13 +4644,13 @@ const monsters = [
     image: {
       normal: "images/bm/Zuuker.png",
       rare: "images/bm/Rare Zuuker.png",
-      epic: "images/bm/Epic Zuuker.png"
+      epic: "images/bm/Epic Zuuker.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Screemu",
@@ -4359,13 +4658,13 @@ const monsters = [
     image: {
       normal: "images/bm/Screemu.png",
       rare: "images/bm/Rare Screemu.png",
-      epic: "images/bm/Epic Screemu.png"
+      epic: "images/bm/Epic Screemu.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Tympa",
@@ -4373,13 +4672,13 @@ const monsters = [
     image: {
       normal: "images/bm/Tympa.png",
       rare: "images/bm/Rare Tympa.png",
-      epic: "images/bm/Epic Tympa.png"
+      epic: "images/bm/Epic Tympa.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "",
@@ -4387,13 +4686,13 @@ const monsters = [
     image: {
       normal: "images/bm/Dermit.png",
       rare: "images/bm/Rare Dermit.png",
-      epic: "images/bm/Epic Dermit.png"
+      epic: "images/bm/Epic Dermit.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Gheegur",
@@ -4401,13 +4700,13 @@ const monsters = [
     image: {
       normal: "images/bm/Gheegur.png",
       rare: "images/bm/Rare Gheegur.png",
-      epic: "images/bm/Epic Gheegur.png"
+      epic: "images/bm/Epic Gheegur.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Whajje",
@@ -4415,13 +4714,13 @@ const monsters = [
     image: {
       normal: "images/bm/Whajje.png",
       rare: "images/bm/Rare Whajje.png",
-      epic: "images/bm/Epic Whajje.png"
+      epic: "images/bm/Epic Whajje.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Creepuscule",
@@ -4429,13 +4728,13 @@ const monsters = [
     image: {
       normal: "images/bm/Creepuscule.png",
       rare: "images/bm/Rare Creepuscule.png",
-      epic: "images/bm/Epic Creepuscule.png"
+      epic: "images/bm/Epic Creepuscule.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Blipsqueak",
@@ -4443,13 +4742,13 @@ const monsters = [
     image: {
       normal: "images/bm/Blipsqueak.png",
       rare: "images/bm/Rare Blipsqueak.png",
-      epic: "images/bm/Epic Blipsqueak.png"
+      epic: "images/bm/Epic Blipsqueak.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -4458,13 +4757,13 @@ const monsters = [
     image: {
       normal: "images/bm/Scargo.png",
       rare: "images/bm/Rare Scargo.png",
-      epic: "images/bm/Epic Scargo.png"
+      epic: "images/bm/Epic Scargo.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Astropod",
@@ -4472,13 +4771,13 @@ const monsters = [
     image: {
       normal: "images/bm/Astropod.png",
       rare: "images/bm/Rare Astropod.png",
-      epic: "images/bm/Epic Astropod.png"
+      epic: "images/bm/Epic Astropod.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Pixolotl",
@@ -4486,15 +4785,14 @@ const monsters = [
     image: {
       normal: "images/bm/Pixolotl.png",
       rare: "images/bm/Rare Pixolotl.png",
-      epic: "images/bm/Epic Pixolotl.png"
+      epic: "images/bm/Epic Pixolotl.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
-
 
   {
     name: "Bona-Petite",
@@ -4502,13 +4800,13 @@ const monsters = [
     image: {
       normal: "images/bm/Bona-Petite.png",
       rare: "images/bm/Rare Bona-Petite.png",
-      epic: "images/bm/Epic Bona-Petite.png"
+      epic: "images/bm/Epic Bona-Petite.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Maulch",
@@ -4516,13 +4814,13 @@ const monsters = [
     image: {
       normal: "images/bm/Maulch.png",
       rare: "images/bm/Rare Maulch.png",
-      epic: "images/bm/Epic Maulch.png"
+      epic: "images/bm/Epic Maulch.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Fleechwurm",
@@ -4530,13 +4828,13 @@ const monsters = [
     image: {
       normal: "images/bm/Fleechwurm.png",
       rare: "images/bm/Rare Fleechwurm.png",
-      epic: "images/bm/Epic Fleechwurm.png"
+      epic: "images/bm/Epic Fleechwurm.png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Wubbox",
@@ -4544,13 +4842,13 @@ const monsters = [
     image: {
       normal: "images/bm/Wubbox.png",
       rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Rare Wubbox",
@@ -4558,13 +4856,13 @@ const monsters = [
     image: {
       normal: "images/bm/Rare Wubbox.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Plant)",
@@ -4572,13 +4870,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Plant.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Cold)",
@@ -4586,13 +4884,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Cold.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Air)",
@@ -4600,13 +4898,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Air.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
 
   {
@@ -4615,13 +4913,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Water.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Earth)",
@@ -4629,13 +4927,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Earth.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Haven)",
@@ -4643,13 +4941,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Haven.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Oasis)",
@@ -4657,13 +4955,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Oasis.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Ethereal)",
@@ -4671,13 +4969,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Ethereal.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Epic Wubbox (Gold)",
@@ -4685,13 +4983,13 @@ const monsters = [
     image: {
       normal: "images/bm/Epic Wubbox Gold (Neutral).png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   //Adding 4.8.2 Update :)
   {
@@ -4700,13 +4998,13 @@ const monsters = [
     image: {
       normal: "images/bm/Cruv'laaphtian Crocus.png",
       rare: "images/bm/Rare Cruv'laaphtian Crocus.png",
-      epic: "images/bm/Epic Cruv'laaphtian Crocus.png"
+      epic: "images/bm/Epic Cruv'laaphtian Crocus.png",
     },
     stats: {
       normal: "Breeding Time: 12 hr <br> <br> Enhanced Breeding Time: 8 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Tawkerr",
@@ -4714,13 +5012,13 @@ const monsters = [
     image: {
       normal: "images/bm/Tawkerr.png",
       rare: "images/bm/Rare Tawkerr.png",
-      epic: "images/bm/Epic Tawkerr.png"
+      epic: "images/bm/Epic Tawkerr.png",
     },
     stats: {
       normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Parlsona",
@@ -4728,13 +5026,13 @@ const monsters = [
     image: {
       normal: "images/bm/Parlsona.png",
       rare: "images/bm/Rare Parlsona.png",
-      epic: "images/bm/Epic Parlsona.png"
+      epic: "images/bm/Epic Parlsona.png",
     },
     stats: {
       normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Do (CLICK ON ME)",
@@ -4742,13 +5040,13 @@ const monsters = [
     image: {
       normal: "images/bm/Do.png",
       rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
+      epic: "images/bm/Epic .png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Re (CLICK ON ME)",
@@ -4756,13 +5054,13 @@ const monsters = [
     image: {
       normal: "images/bm/Re.png",
       rare: "images/bm/Rare Re.png",
-      epic: "images/bm/Epic Re.png"
+      epic: "images/bm/Epic Re.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Mi (CLICK ON ME)",
@@ -4770,13 +5068,13 @@ const monsters = [
     image: {
       normal: "images/bm/Mi.png",
       rare: "images/bm/Rare Mi.png",
-      epic: "images/bm/Epic Mi.png"
+      epic: "images/bm/Epic Mi.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Fa (CLICK ON ME)",
@@ -4784,13 +5082,13 @@ const monsters = [
     image: {
       normal: "images/bm/Fa.png",
       rare: "images/bm/Rare Fa.png",
-      epic: "images/bm/Epic Fa.png"
+      epic: "images/bm/Epic Fa.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Sol (CLICK ON ME)",
@@ -4798,13 +5096,13 @@ const monsters = [
     image: {
       normal: "images/bm/Sol.png",
       rare: "images/bm/Rare Sol.png",
-      epic: "images/bm/Epic Sol.png"
+      epic: "images/bm/Epic Sol.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "La (CLICK ON ME)",
@@ -4812,13 +5110,13 @@ const monsters = [
     image: {
       normal: "images/bm/La.png",
       rare: "images/bm/Rare La.png",
-      epic: "images/bm/Epic La.png"
+      epic: "images/bm/Epic La.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Ti(CLICK ON ME)",
@@ -4826,13 +5124,13 @@ const monsters = [
     image: {
       normal: "images/bm/Ti.png",
       rare: "images/bm/Rare Ti.png",
-      epic: "images/bm/Epic Ti.png"
+      epic: "images/bm/Epic Ti.png",
     },
     stats: {
       normal: "Buy From Shop via Keys (Number varry per island)",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Maggpi",
@@ -4840,13 +5138,13 @@ const monsters = [
     image: {
       normal: "images/bm/Maggpi.png",
       rare: "images/bm/Rare Maggpi.png",
-      epic: "images/bm/Epic Maggpi.png"
+      epic: "images/bm/Epic Maggpi.png",
     },
     stats: {
       normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
   {
     name: "Stoowarb",
@@ -4854,29 +5152,43 @@ const monsters = [
     image: {
       normal: "images/bm/Stoowarb.png",
       rare: "images/bm/Rare Stoowarb.png",
-      epic: "images/bm/Epic Stoowarb.png"
+      epic: "images/bm/Epic Stoowarb.png",
     },
     stats: {
       normal: "Breeding Time: 8 hr <br><br> Enhanced Breeding Time: 6 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
-{
+  {
     name: "Bogle",
-    audio: "sounds/_Memory_Sample.mp3.mpeg",
+    audio: "sounds/Bogle_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Boogle.png",
       rare: "images/bm/Rare Boogle.png",
-      epic: "images/bm/Epic Boogle.png"
+      epic: "images/bm/Epic Boogle.png",
     },
     stats: {
       normal: "Breeding Time: 2 day 2 hr",
       rare: "",
-      epic: ""
-    }
+      epic: "",
+    },
   },
-
+  {
+    name: "Arcorina",
+    audio: "sounds/Arcorina_(Major)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Arcorina (Major).png",
+      rare: "images/bm/Rare Arcorina (Major).png",
+      epic: "images/bm/Epic Arcorina (Major).png",
+    },
+    stats: {
+      normal:
+        "Breeding Time: 1 days 12 hr <br><br> Enhanced Time: 1 day 3 hr",
+      rare: "",
+      epic: "",
+    },
+  },
 ];
 
 /**
@@ -4897,101 +5209,144 @@ const monsters = [
  */
 
 const epicBreedingCombinations = {
-  "Tweedle": [`Deedge + Dandidoo <br> Riff + Cybop <br> Shellbeat + Quibble <br> Quarrister + Pango <br> Tring + Shrubb <br> Sneyser + Maw`],
-  "Potbelly": [`Entbrat + Shrubb <br> Deedge + Oaktopus <br> Shellbeat + Dandidoo <br> Quarrister + Furcorn <br> Tring + Cybop <br> Blow't + Boskus <br> Gloptic + Phangler <br> Shugabush + Furcorn`],
-  "Mammott": [`Entbrat + Furcorn <br> Deedge + Maw <br> Riff + Pango <br> Quarrister + Drumpler <br> Sneyser + Quibble <br> Blow't + Flowah <br> Pladdie + Stogg <br> Shugabush + Oaktopus`],
-  "Noggin": [`Entbrat + Fwog <br> Riff + Drumpler <br> Shellbeat + Shrubb <br> Quarrister + Cybop <br> Tring + Dandidoo <br> Pladdie + Boskus <br> Plinkajou + Phangler`],
-  "Toe Jammer": [`Entbrat + Oaktopus <br> Deedge + Quibble <br> Riff + Maw <br> Shellbeat + Fwog <br> Sneyser + Pango <br> Gloptic + Flowah <br> Plinkajou + Stogg`],
-  "Kayna": [`Tring + Stogg <br> Sneyser + Phangler <br> Blow't + Furcorn <br> Gloptic + Oaktopus <br> Pladdie + Drumpler <br> Plinkajou + Fwog`],
-  "Dandidoo": [`Bowgart + Quibble <br> Pummel + Cybop <br> Clamble + Pango <br> Reedling + Flowah`],
-  "Cybop": [`Congle + Drumpler <br> Scups + Dandidoo <br> PomPom + Shrubb <br> Reedling + Stogg`],
-  "Quibble": [`Congle + Dandidoo <br> Scups + Maw <br> Spunge + Shrubb <br> Wynq + Pango <br> Shugabush + PomPom`],
-  "Pango": [`Thumpies + Oaktopus <br> Congle + Cybop <br> Reedling + Furcorn <br> Whaddle + Maw`],
-  "Shrubb": [`T-Rox + Oaktopus <br> Reedling + Quibble <br> PomPom + Dandidoo <br> Barrb + Cybop`],
-  "Oaktopus": [`Bowgart + Shrubb <br> Spunge + Pango <br> Reedling + Fwog <br> Rootitoot + Bonkers <br> Shugabush + Quibble`],
-  "Furcorn": [`Clamble + Fwog <br> Spunge + Maw <br> Thumpies + Drumpler <br> Sooza + Pluckbill <br> Shugabush + Deedge`],
-  "Fwog": [`Pummel + Furcorn <br> Scups + Pango <br> Reedling + Oaktopus <br> Thrumble + Denchuhs`],
-  "Drumpler": [`Clamble + Maw <br> PomPom + Fwog <br> Thumpies + Cybop <br> Ziggurab + HippityHop`],
-  "Maw": [`Bowgart + Drumpler <br> Spunge + Furcorn <br> T-Rox + Quibble <br> Whaddle + Pango`],
-  "Glowl": [`Floogull + Dandidoo <br> Wynq + Quibble`],
-  "Flowah": [`Barrb + Shrubb <br> Fiddlement + Gob <br> Rooba + Poppette`],
-  "Stogg": [`Repatillo + Glowl <br> Bridg-it + Squot <br> Withur + Phangler`],
-  "Phangler": [`Congle + Glowl <br> Tapricorn + Yuggler <br> Banjaw + Peckidna`],
-  "Boskus": [`Woolabee + Maw <br> TooToo + Bulbo <br> Cantorell + Wimmzies`],
-  "Reedling": [`Spunge + Fwog <br> Thumpies + Shrubb <br> Repatillo + Cybop`],
-  "Spunge": [`Thumpies + Quibble <br> Scups + Oaktopus`],
-  "Thumpies": [`Congle + Oaktopus <br> Reedling + Pango`],
-  "Scups": [`PomPom + Maw <br> Pummel + Dandidoo`],
-  "PomPom": [`T-Rox + Cybop <br> Reedling + Drumpler <br> Shugabush + Mammott`],
-  "Congle": [`Thumpies + Maw <br> Scups + Drumpler <br> Woolabee + Quibble`],
-  "Pummel": [`Bowgart + Fwog <br> Scups + Shrubb`],
-  "Clamble": [`Pummel + Maw <br> PomPom + Furcorn`],
-  "Bowgart": [`Clamble + Oaktopus <br> Congle + Furcorn`],
+  Tweedle: [
+    `Deedge + Dandidoo <br> Riff + Cybop <br> Shellbeat + Quibble <br> Quarrister + Pango <br> Tring + Shrubb <br> Sneyser + Maw`,
+  ],
+  Potbelly: [
+    `Entbrat + Shrubb <br> Deedge + Oaktopus <br> Shellbeat + Dandidoo <br> Quarrister + Furcorn <br> Tring + Cybop <br> Blow't + Boskus <br> Gloptic + Phangler <br> Shugabush + Furcorn`,
+  ],
+  Mammott: [
+    `Entbrat + Furcorn <br> Deedge + Maw <br> Riff + Pango <br> Quarrister + Drumpler <br> Sneyser + Quibble <br> Blow't + Flowah <br> Pladdie + Stogg <br> Shugabush + Oaktopus`,
+  ],
+  Noggin: [
+    `Entbrat + Fwog <br> Riff + Drumpler <br> Shellbeat + Shrubb <br> Quarrister + Cybop <br> Tring + Dandidoo <br> Pladdie + Boskus <br> Plinkajou + Phangler`,
+  ],
+  "Toe Jammer": [
+    `Entbrat + Oaktopus <br> Deedge + Quibble <br> Riff + Maw <br> Shellbeat + Fwog <br> Sneyser + Pango <br> Gloptic + Flowah <br> Plinkajou + Stogg`,
+  ],
+  Kayna: [
+    `Tring + Stogg <br> Sneyser + Phangler <br> Blow't + Furcorn <br> Gloptic + Oaktopus <br> Pladdie + Drumpler <br> Plinkajou + Fwog`,
+  ],
+  Dandidoo: [
+    `Bowgart + Quibble <br> Pummel + Cybop <br> Clamble + Pango <br> Reedling + Flowah`,
+  ],
+  Cybop: [
+    `Congle + Drumpler <br> Scups + Dandidoo <br> PomPom + Shrubb <br> Reedling + Stogg`,
+  ],
+  Quibble: [
+    `Congle + Dandidoo <br> Scups + Maw <br> Spunge + Shrubb <br> Wynq + Pango <br> Shugabush + PomPom`,
+  ],
+  Pango: [
+    `Thumpies + Oaktopus <br> Congle + Cybop <br> Reedling + Furcorn <br> Whaddle + Maw`,
+  ],
+  Shrubb: [
+    `T-Rox + Oaktopus <br> Reedling + Quibble <br> PomPom + Dandidoo <br> Barrb + Cybop`,
+  ],
+  Oaktopus: [
+    `Bowgart + Shrubb <br> Spunge + Pango <br> Reedling + Fwog <br> Rootitoot + Bonkers <br> Shugabush + Quibble`,
+  ],
+  Furcorn: [
+    `Clamble + Fwog <br> Spunge + Maw <br> Thumpies + Drumpler <br> Sooza + Pluckbill <br> Shugabush + Deedge`,
+  ],
+  Fwog: [
+    `Pummel + Furcorn <br> Scups + Pango <br> Reedling + Oaktopus <br> Thrumble + Denchuhs`,
+  ],
+  Drumpler: [
+    `Clamble + Maw <br> PomPom + Fwog <br> Thumpies + Cybop <br> Ziggurab + HippityHop`,
+  ],
+  Maw: [
+    `Bowgart + Drumpler <br> Spunge + Furcorn <br> T-Rox + Quibble <br> Whaddle + Pango`,
+  ],
+  Glowl: [`Floogull + Dandidoo <br> Wynq + Quibble`],
+  Flowah: [`Barrb + Shrubb <br> Fiddlement + Gob <br> Rooba + Poppette`],
+  Stogg: [`Repatillo + Glowl <br> Bridg-it + Squot <br> Withur + Phangler`],
+  Phangler: [`Congle + Glowl <br> Tapricorn + Yuggler <br> Banjaw + Peckidna`],
+  Boskus: [`Woolabee + Maw <br> TooToo + Bulbo <br> Cantorell + Wimmzies`],
+  Reedling: [`Spunge + Fwog <br> Thumpies + Shrubb <br> Repatillo + Cybop`],
+  Spunge: [`Thumpies + Quibble <br> Scups + Oaktopus`],
+  Thumpies: [`Congle + Oaktopus <br> Reedling + Pango`],
+  Scups: [`PomPom + Maw <br> Pummel + Dandidoo`],
+  PomPom: [`T-Rox + Cybop <br> Reedling + Drumpler <br> Shugabush + Mammott`],
+  Congle: [`Thumpies + Maw <br> Scups + Drumpler <br> Woolabee + Quibble`],
+  Pummel: [`Bowgart + Fwog <br> Scups + Shrubb`],
+  Clamble: [`Pummel + Maw <br> PomPom + Furcorn`],
+  Bowgart: [`Clamble + Oaktopus <br> Congle + Furcorn`],
   "T-Rox": [`Pummel + Drumpler <br> Congle + Fwog`],
-  "Barrb": [`Floogull + Shrubb`],
-  "Whaddle": [`Congle + Phangler`],
-  "Woolabee": [`Whaddle + Boskus`],
-  "Repatillo": [`Floogull + Flowah`],
-  "Rootitoot": [`Rooba + Oaktopus`],
-  "Sooza": [`TooToo + Boskus`],
-  "Thrumble": [`Uuduk + Denchuhs`],
-  "Ziggurab": [`Bridg-it + Drumpler`],
-  "Wynq": [`Congle + Boskus`],
-  "Shellbeat": [`Spunge + Cybop`],
-  "Quarrister": [`Clamble + Dandidoo`],
-  "Deedge": [`Pango + Bowgart <br> Shugabush + Potbelly`],
-  "Riff": [`PomPom + Quibble`],
-  "Entbrat": [`T-Rox + Shrubb`],
-  "Tring": [`Barrb + Stogg`],
-  "Sneyser": [`Woolabee + Phangler`],
-  "Ghazt": [`T-Rox + Furcorn <br> Boodoo + Dragong`],
-  "Grumpyre": [`Bowgart + Dandidoo <br> Nebulob + Fung Pray`],
-  "Reebro": [`T-Rox + Pango <br> Sox + Kazilleon`],
-  "Jeeode": [`Pummel + Quibble <br> Jellbilly + Arackulele`],
-  "Humbug": [`Clamble + Cybop <br> Whisp + Bellowfish`],
-  "Whisp": [`Nebulob + Kazilleon`],
-  "Nebulob": [`Boodoo + Jellbilly`],
-  "Sox": [`Jellbilly + Bellowfish`],
-  "Jellbilly": [`Arackulele + Fung Pray`],
-  "Boodoo": [`Kazilleon + Bellowfish`],
-  "Kazilleon": [`Sox + Arackulele`],
-  "Bellowfish": [`Whisp + Dragong`],
-  "Punkleton": [`Entbrat + Drumpler <br> Schmoochle + Blabbit`],
-  "Yool": [`Deedge + Pango <br> Hoola + Blabbit`],
-  "Schmoochle": [`Shellbeat + Oaktopus <br> Punkleton + Hoola`],
-  "Blabbit": [`Shellbeat + Oaktopus <br> Punkleton + Yool`],
-  "Hoola": [`Riff + Fwog <br> Quarrister + Dandidoo <br> Yool + Schmoochle`],
-  "Gobbleygourd": [`Tring + Flowah <br> Sneyser + Boskus <br> Jam Boree + Clavavera`],
-  "Clavavera": [`Plinkajou + Hallow <br> Viveine + Whiz-bang`],
-  "Viveine": [`Shugabush + PomPom <br> Ffidyll + Monculus`],
+  Barrb: [`Floogull + Shrubb`],
+  Whaddle: [`Congle + Phangler`],
+  Woolabee: [`Whaddle + Boskus`],
+  Repatillo: [`Floogull + Flowah`],
+  Rootitoot: [`Rooba + Oaktopus`],
+  Sooza: [`TooToo + Boskus`],
+  Thrumble: [`Uuduk + Denchuhs`],
+  Ziggurab: [`Bridg-it + Drumpler`],
+  Wynq: [`Congle + Boskus`],
+  Shellbeat: [`Spunge + Cybop`],
+  Quarrister: [`Clamble + Dandidoo`],
+  Deedge: [`Pango + Bowgart <br> Shugabush + Potbelly`],
+  Riff: [`PomPom + Quibble`],
+  Entbrat: [`T-Rox + Shrubb`],
+  Tring: [`Barrb + Stogg`],
+  Sneyser: [`Woolabee + Phangler`],
+  Ghazt: [`T-Rox + Furcorn <br> Boodoo + Dragong`],
+  Grumpyre: [`Bowgart + Dandidoo <br> Nebulob + Fung Pray`],
+  Reebro: [`T-Rox + Pango <br> Sox + Kazilleon`],
+  Jeeode: [`Pummel + Quibble <br> Jellbilly + Arackulele`],
+  Humbug: [`Clamble + Cybop <br> Whisp + Bellowfish`],
+  Whisp: [`Nebulob + Kazilleon`],
+  Nebulob: [`Boodoo + Jellbilly`],
+  Sox: [`Jellbilly + Bellowfish`],
+  Jellbilly: [`Arackulele + Fung Pray`],
+  Boodoo: [`Kazilleon + Bellowfish`],
+  Kazilleon: [`Sox + Arackulele`],
+  Bellowfish: [`Whisp + Dragong`],
+  Punkleton: [`Entbrat + Drumpler <br> Schmoochle + Blabbit`],
+  Yool: [`Deedge + Pango <br> Hoola + Blabbit`],
+  Schmoochle: [`Shellbeat + Oaktopus <br> Punkleton + Hoola`],
+  Blabbit: [`Shellbeat + Oaktopus <br> Punkleton + Yool`],
+  Hoola: [`Riff + Fwog <br> Quarrister + Dandidoo <br> Yool + Schmoochle`],
+  Gobbleygourd: [
+    `Tring + Flowah <br> Sneyser + Boskus <br> Jam Boree + Clavavera`,
+  ],
+  Clavavera: [`Plinkajou + Hallow <br> Viveine + Whiz-bang`],
+  Viveine: [`Shugabush + PomPom <br> Ffidyll + Monculus`],
   "Jam Boree": [`Gobbleygourd +  Boo'qwurm`],
   "Whiz-bang": [`Blow't + Bulbo <br> Boo'qwurm + Spurrit`],
-  "Monculus": [`Whisp + Humbug <br> Ffidyll + Carillong`],
-  "Ffidyll": [`Pladdie + HippityHop <br> Viveine + Spurrit`],
+  Monculus: [`Whisp + Humbug <br> Ffidyll + Carillong`],
+  Ffidyll: [`Pladdie + HippityHop <br> Viveine + Spurrit`],
   "Boo'qwurm": [`Gloptic + Bonkers <br> Gobbleygourd + Clavavera`],
-  "Spurrit": [`Sneyser + Glowl <br>Jam Boree + Carillong`],
+  Spurrit: [`Sneyser + Glowl <br>Jam Boree + Carillong`],
   "G'joob": [`Entbrat + Maw <br> Cataliszt + Yawstrich`],
-  "Yawstrich": [`Riff + Fwog <br> Cataliszt + Strombonin`],
-  "Floogull": [`Reedling + Glowl`],
-  "Strombonin": [`Deedge + Furcorn <br> Cataliszt + G'joob`],
-  "Yelmut": [`Kayna + Barrb <br>`],
-  "Dragong": [`Whisp + Fung Pray <br>`],
-  "Krillby": [`Pladdie + Kayna <br>`],
+  Yawstrich: [`Riff + Fwog <br> Cataliszt + Strombonin`],
+  Floogull: [`Reedling + Glowl`],
+  Strombonin: [`Deedge + Furcorn <br> Cataliszt + G'joob`],
+  Yelmut: [`Kayna + Barrb <br>`],
+  Dragong: [`Whisp + Fung Pray <br>`],
+  Krillby: [`Pladdie + Kayna <br>`],
   "Fung Pray": [`Nebulob + Boodoo <br>`],
-  "PongPing": [`Pladdie + Floot Fly<br>`]
+  PongPing: [`Pladdie + Floot Fly<br>`],
 };
 // Create monster data map for easy access
 // Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
 const monsterData = Object.fromEntries(
-  monsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
+  monsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
 );
 
 const epicMonsterData = Object.fromEntries(
-  epicmonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
+  epicmonsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
 );
 
 const rareMonsterData = Object.fromEntries(
-  raremonsters.map(monster => [monster.name, { image: monster.image, stats: monster.stats, audio: monster.audio }])
+  raremonsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
 );
 
 // Valid breeding combinations
@@ -5191,14 +5546,14 @@ const breedingCombinations = {
   "Bowgart + Spunge": ["Strombonin"],
   "T-Rox + Scups": ["Yawstrich"],
   "Scups + Pummel": ["Anglow"],
-  "Thumpies + PomPom": ["Hyehehe"],
+  "Thumpies + PomPom": ["Hyehehe", "Rare Hyehehe"],
   "Congle + Woolabee": ["Cherubble"],
   "Cataliszt + G'joob": ["Bleatnik", "Epic Strombonin"],
   "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
   "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob", "Rare Sporerow"],
   "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
-  "Cataliszt + Hyehehe": ["Wheezel"],
-  "Cataliszt + Buzzinga": ["Knurv"],
+  "Cataliszt + Hyehehe": ["Wheezel", "Rare Wheezel"],
+  "Cataliszt + Buzzinga": ["Knurv", "Epic Hyehehe"],
   "Cataliszt + Cherubble": ["shLep"],
   "Bowgart + T-Rox": ["Punkleton"],
   "Thumpies + Congle": ["Yool"],
@@ -5222,13 +5577,13 @@ const breedingCombinations = {
   "Toe Jammer + Theremind": ["Poppette"],
   "Kayna + Theremind": ["Yuggler"],
   "Noggin + Floot Fly": ["HippityHop"],
-  "Mammott + Floot Fly": ["Squot"],
+  "Mammott + Floot Fly": ["Squot", "Rare Squot"],
   "Kayna + Floot Fly": ["Wimmzies"],
-  "Noggin + Clackula": ["Peckidna"],
+  "Noggin + Clackula": ["Peckidna", "Rare Peckidna"],
   "Toe Jammer + Clackula": ["Denchuhs"],
   "Kayna + Clackula": ["Hawlo"],
   "Theremind + Clackula": ["Xyster"],
-  "Theremind + Fluoress": ["Cahoot"],
+  "Theremind + Fluoress": ["Cahoot", "Rare Cahoot"],
   "Theremind + Floot Fly": ["Deja-Jin"],
   "Clackula + Fluoress": ["Roarick"],
   "Floot Fly + Clackula": ["Osstax"],
@@ -5238,7 +5593,7 @@ const breedingCombinations = {
   "Pluckbill + Mammott": ["Fiddlement"],
   "Bonkers + Toe Jammer": ["Tapricorn"],
   "Yuggler + Potbelly": ["Rooba"],
-  "Yuggler + Toe Jammer": ["Periscorp"],
+  "Yuggler + Toe Jammer": ["Periscorp", "Rare Periscorp"],
   "Squot + Noggin": ["Cantorell"],
   "Wimmzies + Noggin": ["Bridg-it"],
   "Wimmzies + Mammott": ["Clavi Gnat"],
@@ -5246,7 +5601,7 @@ const breedingCombinations = {
   "Hawlo + Noggin": ["Banjaw"],
   "Xyster + Fluoress": ["G'day"],
   "Osstax + Theremind": ["Larvaluss"],
-  "Deja + Fluoress": ["Frondley"],
+  "Deja + Fluoress": ["Frondley", "Rare Frondley"],
   "Osstax + Fluoress": ["Mushaboom"],
   "Furcorn + Pluckbill": ["Blow't"],
   "Flowah + Bulbo": ["Blow't"],
@@ -5301,14 +5656,15 @@ const breedingCombinations = {
   "Plasma Meeb + Shadow Meeb + Crystal Meeb + Poison Meeb": ["Pentumbra"],
   "Plasma Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Rhysmuth"],
   "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["BeMeebEth"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": [
+    "BeMeebEth",
+  ],
   "Pladdie + Ziggurab": ["Owlesque"],
   "Pladdie + Cantorell": ["Owlesque"],
   "Pladdie + Bridg-it": ["Owlesque"],
   "Pladdie + Clavi Gnat": ["Owlesque"],
 
-
-  //Epic Breeding Combos! 
+  //Epic Breeding Combos!
   "Entbrat + Maw": ["Epic G'joob"], //Heres the main method to breed epic monsters in the two boxes
   "Deedge + Dandidoo": ["Epic Tweedle"],
   "Riff + Cybop": ["Epic Tweedle"],
@@ -5415,7 +5771,7 @@ const breedingCombinations = {
   "Thumpies + Quibble": ["Epic Spunge"],
   "Scups + Oaktopus": ["Epic Spunge"],
   "Congle + Oaktopus": ["Epic Thumpies"],
-  "Reedling + Pango": ["Epic Thumpies"],//Next is Scups! 
+  "Reedling + Pango": ["Epic Thumpies"], //Next is Scups!
   "PomPom + Maw": ["Epic Scups"],
   "Pummel + Dandidoo": ["Epic Scups"],
   "T-Rox + Cybop": ["Epic PomPom"],
@@ -5518,44 +5874,48 @@ const breedingCombinations = {
   "500 Relics": ["Mimic"],
   "Sneyser + Boskus": ["Epic Cherubble"],
   "Cataliszt + Hyehehe": ["Epic Cherubble"],
-  "Shellbeat + Cybop": ["Epic Anglow"], 
-  "Cataliszt + Cherubble": ["Epic Anglow"], 
-  "Buy From Store For 100 Relics": ["Stoowarb", "Parlsona", "Tawkerr", "Maggpi"]
+  "Shellbeat + Cybop": ["Epic Anglow"],
+  "Cataliszt + Cherubble": ["Epic Anglow"],
+  "Buy From Store For 100 Relics": [
+    "Stoowarb",
+    "Parlsona",
+    "Tawkerr",
+    "Maggpi",
+  ],
+  "Quarrister + Shrubb": ["Epic Hyehehe"],
 };
 // Suggestions list
-const suggestionsList = monsters.map(monster => monster.name);
-const searchMonsterInput = document.getElementById('Search_Monster');
-const firstMonsterInput = document.getElementById('First_Monster');
-const secondMonsterInput = document.getElementById('Second_Monster');
-const suggestionsBox1 = document.getElementById('suggestions1');
-const suggestionsBox2 = document.getElementById('suggestions2');
-const suggestionsBox3 = document.getElementById('suggestions3');
-const breedButton = document.getElementById('breedButton');
-const imageContainer = document.getElementById('imageContainer');
-const statsContainer = document.getElementById('statsContainer');
-const combinationsContainer = document.getElementById('Search_Monster');
-const resetButton = document.getElementById('resetButton');
-
-
+const suggestionsList = monsters.map((monster) => monster.name);
+const searchMonsterInput = document.getElementById("Search_Monster");
+const firstMonsterInput = document.getElementById("First_Monster");
+const secondMonsterInput = document.getElementById("Second_Monster");
+const suggestionsBox1 = document.getElementById("suggestions1");
+const suggestionsBox2 = document.getElementById("suggestions2");
+const suggestionsBox3 = document.getElementById("suggestions3");
+const breedButton = document.getElementById("breedButton");
+const imageContainer = document.getElementById("imageContainer");
+const statsContainer = document.getElementById("statsContainer");
+const combinationsContainer = document.getElementById("Search_Monster");
+const resetButton = document.getElementById("resetButton");
 
 // Function to clear all inputs and results
 const resetAll = () => {
   // Clear input fields
-  searchMonsterInput.value = '';
-  firstMonsterInput.value = '';
-  secondMonsterInput.value = '';
+  searchMonsterInput.value = "";
+  firstMonsterInput.value = "";
+  secondMonsterInput.value = "";
 
   // Clear suggestions
-  suggestionsBox1.innerHTML = '';
-  suggestionsBox1.style.display = 'none';
-  suggestionsBox2.innerHTML = '';
-  suggestionsBox2.style.display = 'none';
-  suggestionsBox3.innerHTML = '';
-  suggestionsBox3.style.display = 'none';
+  suggestionsBox1.innerHTML = "";
+  suggestionsBox1.style.display = "none";
+  suggestionsBox2.innerHTML = "";
+  suggestionsBox2.style.display = "none";
+  suggestionsBox3.innerHTML = "";
+  suggestionsBox3.style.display = "none";
 
   // Clear results containers
-  imageContainer.innerHTML = ''; // Clear previous images
-  statsContainer.innerHTML = ''; // Clear previous stats
+  imageContainer.innerHTML = ""; // Clear previous images
+  statsContainer.innerHTML = ""; // Clear previous stats
 
   // Enable all inputs
   firstMonsterInput.disabled = false;
@@ -5563,192 +5923,221 @@ const resetAll = () => {
   searchMonsterInput.disabled = false;
 
   // Reset input styles
-  firstMonsterInput.style.backgroundColor = '';
-  secondMonsterInput.style.backgroundColor = '';
-  searchMonsterInput.style.backgroundColor = '';
+  firstMonsterInput.style.backgroundColor = "";
+  secondMonsterInput.style.backgroundColor = "";
+  searchMonsterInput.style.backgroundColor = "";
 };
 
 // Add event listener to the reset button
-resetButton.addEventListener('click', resetAll);
+resetButton.addEventListener("click", resetAll);
 
 // Function to show suggestions
 let currentSuggestions = []; // Array to hold current suggestions
 
 const showSuggestions = (input, suggestionsBox) => {
   const query = input.value.toLowerCase();
-  suggestionsBox.innerHTML = ''; // Clear previous suggestions
+  suggestionsBox.innerHTML = ""; // Clear previous suggestions
   currentSuggestions = []; // Reset current suggestions
   if (query) {
-    const filteredSuggestions = suggestionsList.filter(item => item.toLowerCase().includes(query));
+    const filteredSuggestions = suggestionsList.filter((item) =>
+      item.toLowerCase().includes(query)
+    );
     if (filteredSuggestions.length > 0) {
-      suggestionsBox.style.display = 'block';
+      suggestionsBox.style.display = "block";
       const rect = input.getBoundingClientRect();
       suggestionsBox.style.left = `${rect.left}px`;
       suggestionsBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
 
-      filteredSuggestions.forEach(suggestion => {
+      filteredSuggestions.forEach((suggestion) => {
         currentSuggestions.push(suggestion); // Store current suggestions
-        const div = document.createElement('div');
+        const div = document.createElement("div");
         div.textContent = suggestion;
-        div.classList.add('suggestion-item');
-        div.addEventListener('click', () => {
+        div.classList.add("suggestion-item");
+        div.addEventListener("click", () => {
           input.value = suggestion;
-          suggestionsBox.innerHTML = '';
-          suggestionsBox.style.display = 'none';
+          suggestionsBox.innerHTML = "";
+          suggestionsBox.style.display = "none";
         });
         suggestionsBox.appendChild(div);
       });
     } else {
-      suggestionsBox.style.display = 'none';
+      suggestionsBox.style.display = "none";
     }
   } else {
-    suggestionsBox.style.display = 'none';
+    suggestionsBox.style.display = "none";
   }
 };
 
 // Add keydown event listener for selecting the first suggestion
-firstMonsterInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && currentSuggestions.length > 0) {
+firstMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
     firstMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox1.innerHTML = '';
-    suggestionsBox1.style.display = 'none'; // Hide suggestions
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none"; // Hide suggestions
     event.preventDefault(); // Prevent default form submission if inside a form
   }
 });
 
-secondMonsterInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && currentSuggestions.length > 0) {
+secondMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
     secondMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox2.innerHTML = '';
-    suggestionsBox2.style.display = 'none'; // Hide suggestions
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none"; // Hide suggestions
     event.preventDefault(); // Prevent default form submission if inside a form
   }
 });
 
-searchMonsterInput.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && currentSuggestions.length > 0) {
+searchMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
     searchMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox3.innerHTML = '';
-    suggestionsBox3.style.display = 'none'; // Hide suggestions
+    suggestionsBox3.innerHTML = "";
+    suggestionsBox3.style.display = "none"; // Hide suggestions
     event.preventDefault(); // Prevent default form submission if inside a form
   }
 });
-
 
 // Event listeners for suggestion boxes
-firstMonsterInput.addEventListener('input', () => showSuggestions(firstMonsterInput, suggestionsBox1));
-secondMonsterInput.addEventListener('input', () => showSuggestions(secondMonsterInput, suggestionsBox2));
-searchMonsterInput.addEventListener('input', () => showSuggestions(searchMonsterInput, suggestionsBox3));
+firstMonsterInput.addEventListener("input", () =>
+  showSuggestions(firstMonsterInput, suggestionsBox1)
+);
+secondMonsterInput.addEventListener("input", () =>
+  showSuggestions(secondMonsterInput, suggestionsBox2)
+);
+searchMonsterInput.addEventListener("input", () =>
+  showSuggestions(searchMonsterInput, suggestionsBox3)
+);
 
 // Hide suggestions when clicking outside
-document.addEventListener('click', (event) => {
-  if (!suggestionsBox1.contains(event.target) && event.target !== firstMonsterInput) {
-    suggestionsBox1.innerHTML = '';
-    suggestionsBox1.style.display = 'none';
+document.addEventListener("click", (event) => {
+  if (
+    !suggestionsBox1.contains(event.target) &&
+    event.target !== firstMonsterInput
+  ) {
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none";
   }
-  if (!suggestionsBox2.contains(event.target) && event.target !== secondMonsterInput) {
-    suggestionsBox2.innerHTML = '';
-    suggestionsBox2.style.display = 'none';
+  if (
+    !suggestionsBox2.contains(event.target) &&
+    event.target !== secondMonsterInput
+  ) {
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none";
   }
-  if (!suggestionsBox3.contains(event.target) && event.target !== searchMonsterInput) {
-    suggestionsBox3.innerHTML = '';
-    suggestionsBox3.style.display = 'none';
+  if (
+    !suggestionsBox3.contains(event.target) &&
+    event.target !== searchMonsterInput
+  ) {
+    suggestionsBox3.innerHTML = "";
+    suggestionsBox3.style.display = "none";
   }
 });
 
-firstMonsterInput.addEventListener('input', () => showSuggestions(firstMonsterInput, suggestionsBox1));
-secondMonsterInput.addEventListener('input', () => showSuggestions(secondMonsterInput, suggestionsBox2));
-
+firstMonsterInput.addEventListener("input", () =>
+  showSuggestions(firstMonsterInput, suggestionsBox1)
+);
+secondMonsterInput.addEventListener("input", () =>
+  showSuggestions(secondMonsterInput, suggestionsBox2)
+);
 
 // New function to display results with tabs
 const searchBreedingCombinations = (monsterName) => {
-  const combinations = Object.entries(breedingCombinations).filter(([key, value]) => {
-    return value.includes(monsterName);
-  });
+  const combinations = Object.entries(breedingCombinations).filter(
+    ([key, value]) => {
+      return value.includes(monsterName);
+    }
+  );
 
   if (combinations.length > 0) {
-    combinationsContainer.innerHTML = ''; // Clear previous results
+    combinationsContainer.innerHTML = ""; // Clear previous results
     combinations.forEach(([combination, results]) => {
-      const div = document.createElement('div');
-      const monsterInfo = monsters.find(monster => monster.name === results[0]);
+      const div = document.createElement("div");
+      const monsterInfo = monsters.find(
+        (monster) => monster.name === results[0]
+      );
 
       let breedingTimeText = "Breeding Time not available";
       if (monsterInfo) {
         breedingTimeText = monsterInfo.stats.normal;
       }
 
-      div.innerHTML = `${combination}: ${results.join(', ')} - ${breedingTimeText}`;
+      div.innerHTML = `${combination}: ${results.join(
+        ", "
+      )} - ${breedingTimeText}`;
       combinationsContainer.appendChild(div);
     });
   } else {
-    combinationsContainer.innerHTML = 'No breeding combinations found.';
+    combinationsContainer.innerHTML = "No breeding combinations found.";
   }
 };
 
-
-
-//!This is what makes the automatic search work 
-searchMonsterInput.addEventListener('input', () => {
+//!This is what makes the automatic search work
+searchMonsterInput.addEventListener("input", () => {
   let query = searchMonsterInput.value.trim();
-  let defaultTab = 'Normal';
+  let defaultTab = "Normal";
 
   // Check for "Rare " or "Epic " prefix
-  if (query.toLowerCase().startsWith('rare ')) {
+  if (query.toLowerCase().startsWith("rare ")) {
     query = query.slice(5); // Remove prefix
-    defaultTab = 'Rare';
-  } else if (query.toLowerCase().startsWith('epic ')) {
+    defaultTab = "Rare";
+  } else if (query.toLowerCase().startsWith("epic ")) {
     query = query.slice(5);
-    defaultTab = 'Epic';
+    defaultTab = "Epic";
   }
 
   if (query) {
     const monsterInfo = monsterData[query];
 
     if (monsterInfo) {
-      const img = document.createElement('img');
+      const img = document.createElement("img");
       img.alt = query;
-      img.classList.add('monster-image');
-      img.src = monsterInfo.image[defaultTab.toLowerCase()] || monsterInfo.image.normal;
+      img.classList.add("monster-image");
+      img.src =
+        monsterInfo.image[defaultTab.toLowerCase()] || monsterInfo.image.normal;
 
       showBlur(); // Always show blur if we find a monster
 
       // Clear previous content
-      imageContainer.innerHTML = '';
+      imageContainer.innerHTML = "";
       imageContainer.appendChild(img);
 
-      const tabs = ['Normal', 'Rare', 'Epic'];
-      const tabContainer = document.createElement('div');
-      tabContainer.classList.add('tab-container');
-      const tabContentContainer = document.createElement('div');
-      tabContentContainer.classList.add('tab-content-container');
+      const tabs = ["Normal", "Rare", "Epic"];
+      const tabContainer = document.createElement("div");
+      tabContainer.classList.add("tab-container");
+      const tabContentContainer = document.createElement("div");
+      tabContentContainer.classList.add("tab-content-container");
 
       tabs.forEach((tabName) => {
-        const tab = document.createElement('button');
-        tab.classList.add('tab-button');
+        const tab = document.createElement("button");
+        tab.classList.add("tab-button");
         tab.textContent = tabName;
 
-        tab.addEventListener('click', () => {
-          tabContentContainer.innerHTML = '';
-          statsContainer.innerHTML = '';
+        tab.addEventListener("click", () => {
+          tabContentContainer.innerHTML = "";
+          statsContainer.innerHTML = "";
 
-          img.src = monsterInfo.image[tabName.toLowerCase()] || monsterInfo.image.normal;
-          const monsterStats = monsterInfo.stats[tabName.toLowerCase()] || "No stats available";
+          img.src =
+            monsterInfo.image[tabName.toLowerCase()] ||
+            monsterInfo.image.normal;
+          const monsterStats =
+            monsterInfo.stats[tabName.toLowerCase()] || "No stats available";
 
-          const resultContainer = document.createElement('div');
-          resultContainer.classList.add('result-container');
+          const resultContainer = document.createElement("div");
+          resultContainer.classList.add("result-container");
 
-          const blackBox = document.createElement('div');
-          blackBox.classList.add('black-box');
+          const blackBox = document.createElement("div");
+          blackBox.classList.add("black-box");
 
-          const resultText = document.createElement('div');
-          resultText.classList.add('result-text');
+          const resultText = document.createElement("div");
+          resultText.classList.add("result-text");
           resultText.innerHTML = `<h3>${tabName} Version of ${query}!</h3><p>${monsterStats}</p>`;
 
           // Breeding combinations
-          let breedingCombinationText = '';
-          if (tabName === 'Epic' && epicBreedingCombinations[query]) {
-            breedingCombinationText += `<p>${epicBreedingCombinations[query].join(', ')}</p>`;
-          } else if (tabName !== 'Epic') {
+          let breedingCombinationText = "";
+          if (tabName === "Epic" && epicBreedingCombinations[query]) {
+            breedingCombinationText += `<p>${epicBreedingCombinations[
+              query
+            ].join(", ")}</p>`;
+          } else if (tabName !== "Epic") {
             for (let combo in breedingCombinations) {
               if (breedingCombinations[combo].includes(query)) {
                 breedingCombinationText += `<p>${combo}</p>`;
@@ -5774,17 +6163,17 @@ searchMonsterInput.addEventListener('input', () => {
         const monster = monsterData[monsterName];
         if (monster && monster.audio) {
           const audio = new Audio(monster.audio);
-          audio.play().catch(err => console.error('Playback error:', err));
+          audio.play().catch((err) => console.error("Playback error:", err));
         } else {
-          console.warn('No audio found for monster:', monsterName);
+          console.warn("No audio found for monster:", monsterName);
         }
       }
 
-      const volumeButton = document.createElement('button');
-      volumeButton.classList.add('volume-button');
+      const volumeButton = document.createElement("button");
+      volumeButton.classList.add("volume-button");
       volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-      volumeButton.title = 'Play Sound';
-      volumeButton.addEventListener('click', () => {
+      volumeButton.title = "Play Sound";
+      volumeButton.addEventListener("click", () => {
         playMonsterSound(query);
       });
 
@@ -5792,7 +6181,9 @@ searchMonsterInput.addEventListener('input', () => {
       imageContainer.appendChild(tabContainer);
       imageContainer.appendChild(tabContentContainer);
 
-      const defaultTabButton = Array.from(tabContainer.children).find(tab => tab.textContent === defaultTab);
+      const defaultTabButton = Array.from(tabContainer.children).find(
+        (tab) => tab.textContent === defaultTab
+      );
       if (defaultTabButton) {
         defaultTabButton.click();
       }
@@ -5801,64 +6192,66 @@ searchMonsterInput.addEventListener('input', () => {
       // statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonsternoslide">';
     }
   } else {
-    combinationsContainer.innerHTML = '';
+    combinationsContainer.innerHTML = "";
   }
 });
 
-
-
-
-breedButton.addEventListener('click', () => {
+breedButton.addEventListener("click", () => {
   const monster1 = firstMonsterInput.value.trim();
   const monster2 = secondMonsterInput.value.trim();
   const searchMonster = searchMonsterInput.value.trim();
 
-  imageContainer.innerHTML = '';
-  statsContainer.innerHTML = '';
+  imageContainer.innerHTML = "";
+  statsContainer.innerHTML = "";
 
-  document.getElementById('suggestions1').style.display = 'none';
-  document.getElementById('suggestions2').style.display = 'none';
-  document.getElementById('suggestions3').style.display = 'none';
+  document.getElementById("suggestions1").style.display = "none";
+  document.getElementById("suggestions2").style.display = "none";
+  document.getElementById("suggestions3").style.display = "none";
 
-  const getMonsterInfo = name => (
-    monsters.find(m => m.name.toLowerCase() === name.toLowerCase()) ||
-    epicmonsters.find(m => m.name.toLowerCase() === name.toLowerCase()) ||
-    raremonsters.find(m => m.name.toLowerCase() === name.toLowerCase())
-  );
+  const getMonsterInfo = (name) =>
+    monsters.find((m) => m.name.toLowerCase() === name.toLowerCase()) ||
+    epicmonsters.find((m) => m.name.toLowerCase() === name.toLowerCase()) ||
+    raremonsters.find((m) => m.name.toLowerCase() === name.toLowerCase());
 
-  const playMonsterSound = name => {
+  const playMonsterSound = (name) => {
     const actualName = name.includes("Hairionette") ? "Hairionette" : name;
     const monster = monsterData[actualName];
     if (monster && monster.audio) {
-      new Audio(monster.audio).play().catch(err => console.error('Playback error:', err));
+      new Audio(monster.audio)
+        .play()
+        .catch((err) => console.error("Playback error:", err));
     } else {
-      console.warn('No audio found for:', actualName);
+      console.warn("No audio found for:", actualName);
     }
   };
 
   const renderStats = (monsterInfo, monsterName, form) => {
-    const resultContainer = document.createElement('div');
-    resultContainer.classList.add('result-container');
+    const resultContainer = document.createElement("div");
+    resultContainer.classList.add("result-container");
 
-    const blackBox = document.createElement('div');
-    blackBox.classList.add('black-box');
+    const blackBox = document.createElement("div");
+    blackBox.classList.add("black-box");
 
-    const resultText = document.createElement('div');
-    resultText.classList.add('result-text');
+    const resultText = document.createElement("div");
+    resultText.classList.add("result-text");
 
     const stats = monsterInfo.stats?.[form] || "No stats available";
-    resultText.innerHTML = `<h3>${form === 'normal' ? "You Bred A:" : form + " Version of"}<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
+    resultText.innerHTML = `<h3>${
+      form === "normal" ? "You Bred A:" : form + " Version of"
+    }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
 
     // Breeding combo logic
-    let breedingCombinationText = '';
-    if (form !== 'epic') {
+    let breedingCombinationText = "";
+    if (form !== "epic") {
       for (let combo in breedingCombinations) {
         if (breedingCombinations[combo].includes(monsterName)) {
           breedingCombinationText += `<p>${combo}</p>`;
         }
       }
     } else if (epicBreedingCombinations[monsterName]) {
-      breedingCombinationText += `<p>${epicBreedingCombinations[monsterName].join(', ')}</p>`;
+      breedingCombinationText += `<p>${epicBreedingCombinations[
+        monsterName
+      ].join(", ")}</p>`;
     }
 
     if (breedingCombinationText) {
@@ -5871,84 +6264,91 @@ breedButton.addEventListener('click', () => {
   };
 
   const createTabButton = (label, onClick) => {
-    const btn = document.createElement('button');
-    btn.classList.add('tab-button');
+    const btn = document.createElement("button");
+    btn.classList.add("tab-button");
     btn.textContent = label;
-    btn.addEventListener('click', onClick);
+    btn.addEventListener("click", onClick);
     return btn;
   };
 
   if (searchMonster) {
     const monsterInfo = getMonsterInfo(searchMonster);
     if (!monsterInfo) {
-      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      statsContainer.innerHTML =
+        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
       return;
     }
 
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = monsterInfo.image.normal;
     img.alt = searchMonster;
-    img.classList.add('monster-image');
+    img.classList.add("monster-image");
     imageContainer.appendChild(img);
 
-    const tabContainer = document.createElement('div');
-    tabContainer.classList.add('tab-container');
+    const tabContainer = document.createElement("div");
+    tabContainer.classList.add("tab-container");
 
-    const tabContentContainer = document.createElement('div');
-    tabContentContainer.classList.add('tab-content-container');
+    const tabContentContainer = document.createElement("div");
+    tabContentContainer.classList.add("tab-content-container");
 
-    ['Normal', 'Rare', 'Epic'].forEach(tabName => {
-      tabContainer.appendChild(createTabButton(tabName, () => {
-        tabContentContainer.innerHTML = '';
-        statsContainer.innerHTML = '';
-        const lowerTab = tabName.toLowerCase();
+    ["Normal", "Rare", "Epic"].forEach((tabName) => {
+      tabContainer.appendChild(
+        createTabButton(tabName, () => {
+          tabContentContainer.innerHTML = "";
+          statsContainer.innerHTML = "";
+          const lowerTab = tabName.toLowerCase();
 
-        img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
-        tabContentContainer.appendChild(img);
-        renderStats(monsterInfo, searchMonster, lowerTab);
-      }));
+          img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
+          tabContentContainer.appendChild(img);
+          renderStats(monsterInfo, searchMonster, lowerTab);
+        })
+      );
     });
 
-    const volumeButton = document.createElement('button');
-    volumeButton.classList.add('volume-button');
+    const volumeButton = document.createElement("button");
+    volumeButton.classList.add("volume-button");
     volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-    volumeButton.title = 'Play Sound';
-    volumeButton.addEventListener('click', () => playMonsterSound(searchMonster));
+    volumeButton.title = "Play Sound";
+    volumeButton.addEventListener("click", () =>
+      playMonsterSound(searchMonster)
+    );
     tabContainer.appendChild(volumeButton);
 
     imageContainer.appendChild(tabContainer);
     imageContainer.appendChild(tabContentContainer);
-    tabContainer.querySelector('.tab-button').click(); // Auto click Normal
+    tabContainer.querySelector(".tab-button").click(); // Auto click Normal
     return;
   }
 
   if (monster1 && monster2) {
     const results = getResultingMonsters(monster1, monster2);
     if (!results.length) {
-      statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      statsContainer.innerHTML =
+        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
       return;
     }
 
-    const tabContainer = document.createElement('div');
-    tabContainer.classList.add('tab-container');
-    const tabContentContainer = document.createElement('div');
-    tabContentContainer.classList.add('tab-content-container');
+    const tabContainer = document.createElement("div");
+    tabContainer.classList.add("tab-container");
+    const tabContentContainer = document.createElement("div");
+    tabContentContainer.classList.add("tab-content-container");
 
     results.forEach((name, index) => {
       const tab = createTabButton(name, () => {
-        tabContentContainer.innerHTML = '';
-        statsContainer.innerHTML = '';
+        tabContentContainer.innerHTML = "";
+        statsContainer.innerHTML = "";
 
         const info = getMonsterInfo(name);
         if (info) {
-          const img = document.createElement('img');
+          const img = document.createElement("img");
           img.src = info.image.normal;
           img.alt = name;
-          img.classList.add('monster-image');
+          img.classList.add("monster-image");
           tabContentContainer.appendChild(img);
-          renderStats(info, name, 'normal');
+          renderStats(info, name, "normal");
         } else {
-          statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+          statsContainer.innerHTML =
+            '<img src="images/important/Nomonsterfound.png" id="noMonster">';
         }
       });
       tabContainer.appendChild(tab);
@@ -5958,38 +6358,39 @@ breedButton.addEventListener('click', () => {
     imageContainer.appendChild(tabContainer);
     imageContainer.appendChild(tabContentContainer);
   } else {
-    statsContainer.innerHTML = '<img src="images/important/Enterrightmonster.png" id="noMonster">';
+    statsContainer.innerHTML =
+      '<img src="images/important/Enterrightmonster.png" id="noMonster">';
   }
 });
 
-
-
-
-
 // Function to check breeding combinations
-//!This IS what you have been looking for! :D 
+//!This IS what you have been looking for! :D
 const getResultingMonsters = (monster1, monster2) => {
   const comboKey = `${monster1} + ${monster2}`;
   const reverseComboKey = `${monster2} + ${monster1}`;
-  return breedingCombinations[comboKey] || breedingCombinations[reverseComboKey] || [];
+  return (
+    breedingCombinations[comboKey] ||
+    breedingCombinations[reverseComboKey] ||
+    []
+  );
 };
 
 const toggleSearchMonsterInput = () => {
   if (firstMonsterInput.value.trim() || secondMonsterInput.value.trim()) {
     searchMonsterInput.disabled = true;
-    searchMonsterInput.value = ''; // Clear the input
+    searchMonsterInput.value = ""; // Clear the input
   } else {
     searchMonsterInput.disabled = false;
   }
 };
 
 // Add event listeners to toggle the Search_Monster input
-firstMonsterInput.addEventListener('input', () => {
+firstMonsterInput.addEventListener("input", () => {
   showSuggestions(firstMonsterInput, suggestionsBox1);
   toggleSearchMonsterInput();
 });
 
-secondMonsterInput.addEventListener('input', () => {
+secondMonsterInput.addEventListener("input", () => {
   showSuggestions(secondMonsterInput, suggestionsBox2);
   toggleSearchMonsterInput();
 });
@@ -5999,29 +6400,33 @@ toggleSearchMonsterInput();
 
 // Function to toggle graying out of inputs
 const toggleInputStyles = () => {
-  const isSearchActive = searchMonsterInput.value.trim() !== '';
+  const isSearchActive = searchMonsterInput.value.trim() !== "";
   firstMonsterInput.disabled = isSearchActive;
   secondMonsterInput.disabled = isSearchActive;
-  firstMonsterInput.style.backgroundColor = isSearchActive ? '#d3d3d3' : '';
-  secondMonsterInput.style.backgroundColor = isSearchActive ? '#d3d3d3' : '';
+  firstMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
+  secondMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
 
-  const isFirstOrSecondActive = firstMonsterInput.value.trim() !== '' || secondMonsterInput.value.trim() !== '';
+  const isFirstOrSecondActive =
+    firstMonsterInput.value.trim() !== "" ||
+    secondMonsterInput.value.trim() !== "";
   searchMonsterInput.disabled = isFirstOrSecondActive;
-  searchMonsterInput.style.backgroundColor = isFirstOrSecondActive ? '#d3d3d3' : '';
+  searchMonsterInput.style.backgroundColor = isFirstOrSecondActive
+    ? "#d3d3d3"
+    : "";
 };
 
 // Add event listeners to toggle the inputs
-firstMonsterInput.addEventListener('input', () => {
+firstMonsterInput.addEventListener("input", () => {
   showSuggestions(firstMonsterInput, suggestionsBox1);
   toggleInputStyles();
 });
 
-secondMonsterInput.addEventListener('input', () => {
+secondMonsterInput.addEventListener("input", () => {
   showSuggestions(secondMonsterInput, suggestionsBox2);
   toggleInputStyles();
 });
 
-searchMonsterInput.addEventListener('input', () => {
+searchMonsterInput.addEventListener("input", () => {
   showSuggestions(searchMonsterInput, suggestionsBox3);
   toggleInputStyles();
 });
@@ -6030,14 +6435,20 @@ searchMonsterInput.addEventListener('input', () => {
 toggleInputStyles();
 
 // Hide suggestions when clicking outside
-document.addEventListener('click', (event) => {
-  if (!suggestionsBox1.contains(event.target) && event.target !== firstMonsterInput) {
-    suggestionsBox1.innerHTML = '';
-    suggestionsBox1.style.display = 'none';
+document.addEventListener("click", (event) => {
+  if (
+    !suggestionsBox1.contains(event.target) &&
+    event.target !== firstMonsterInput
+  ) {
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none";
   }
-  if (!suggestionsBox2.contains(event.target) && event.target !== secondMonsterInput) {
-    suggestionsBox2.innerHTML = '';
-    suggestionsBox2.style.display = 'none';
+  if (
+    !suggestionsBox2.contains(event.target) &&
+    event.target !== secondMonsterInput
+  ) {
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none";
   }
 });
 
@@ -6047,62 +6458,66 @@ function closeMenu() {
 }
 // Function to show the blur overlay and message
 function showBlur() {
-  document.getElementById('blurOverlay').style.display = 'block';
-  document.getElementById('blurMessage').style.display = 'block'; // Show the message
+  document.getElementById("blurOverlay").style.display = "block";
+  document.getElementById("blurMessage").style.display = "block"; // Show the message
 
   // Hide input elements and buttons
-  document.getElementById('inputContainer').classList.add('hidden'); // Hide the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist'); // Select input fields and buttons
-  inputs.forEach(input => input.classList.add('hidden')); // Hide each input/button
+  document.getElementById("inputContainer").classList.add("hidden"); // Hide the input container
+  const inputs = document.querySelectorAll(
+    "#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist"
+  ); // Select input fields and buttons
+  inputs.forEach((input) => input.classList.add("hidden")); // Hide each input/button
 
   // Hide suggestion boxes
-  const suggestionsBox1 = document.getElementById('suggestions1');
-  const suggestionsBox2 = document.getElementById('suggestions2');
-  const suggestionsBox3 = document.getElementById('suggestions3');
+  const suggestionsBox1 = document.getElementById("suggestions1");
+  const suggestionsBox2 = document.getElementById("suggestions2");
+  const suggestionsBox3 = document.getElementById("suggestions3");
 
-  suggestionsBox1.innerHTML = ''; // Clear suggestions
-  suggestionsBox1.style.display = 'none'; // Hide suggestions box 1
-  suggestionsBox2.innerHTML = ''; // Clear suggestions
-  suggestionsBox2.style.display = 'none'; // Hide suggestions box 2
-  suggestionsBox3.innerHTML = ''; // Clear suggestions
-  suggestionsBox3.style.display = 'none'; // Hide suggestions box 3
+  suggestionsBox1.innerHTML = ""; // Clear suggestions
+  suggestionsBox1.style.display = "none"; // Hide suggestions box 1
+  suggestionsBox2.innerHTML = ""; // Clear suggestions
+  suggestionsBox2.style.display = "none"; // Hide suggestions box 2
+  suggestionsBox3.innerHTML = ""; // Clear suggestions
+  suggestionsBox3.style.display = "none"; // Hide suggestions box 3
 
   // Hide all suggestion items (custom)
-  const suggestionItems = document.querySelectorAll('.suggestion-item');
-  suggestionItems.forEach(item => {
-    item.style.display = 'none'; // Hide each suggestion item
+  const suggestionItems = document.querySelectorAll(".suggestion-item");
+  suggestionItems.forEach((item) => {
+    item.style.display = "none"; // Hide each suggestion item
   });
 
   // Optionally, hide the autocomplete suggestions from the browser
-  inputs.forEach(input => {
-    input.setAttribute('autocomplete', 'off'); // Disable autocomplete
+  inputs.forEach((input) => {
+    input.setAttribute("autocomplete", "off"); // Disable autocomplete
   });
 
   // Set z-index for image and stats container above fog
-  document.getElementById('imageContainer').style.zIndex = '102'; // Set z-index to 102
-  document.getElementById('statsContainer').style.zIndex = '102'; // Set z-index to 102
+  document.getElementById("imageContainer").style.zIndex = "102"; // Set z-index to 102
+  document.getElementById("statsContainer").style.zIndex = "102"; // Set z-index to 102
 }
 
 // Function to hide the blur overlay and message
 function hideBlur() {
-  document.getElementById('blurOverlay').style.display = 'none';
-  document.getElementById('blurMessage').style.display = 'none'; // Hide the message
+  document.getElementById("blurOverlay").style.display = "none";
+  document.getElementById("blurMessage").style.display = "none"; // Hide the message
 
   // Show input elements and buttons
-  document.getElementById('inputContainer').classList.remove('hidden'); // Show the input container
-  const inputs = document.querySelectorAll('#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist'); // Select input fields and buttons
-  inputs.forEach(input => {
-    input.classList.remove('hidden'); // Show each input/button
-    input.setAttribute('autocomplete', 'on'); // Re-enable autocomplete
+  document.getElementById("inputContainer").classList.remove("hidden"); // Show the input container
+  const inputs = document.querySelectorAll(
+    "#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist"
+  ); // Select input fields and buttons
+  inputs.forEach((input) => {
+    input.classList.remove("hidden"); // Show each input/button
+    input.setAttribute("autocomplete", "on"); // Re-enable autocomplete
   });
 
   // Reset z-index for image and stats container
-  document.getElementById('imageContainer').style.zIndex = '0'; // Reset z-index to 0
-  document.getElementById('statsContainer').style.zIndex = '0'; // Reset z-index to 0
+  document.getElementById("imageContainer").style.zIndex = "0"; // Reset z-index to 0
+  document.getElementById("statsContainer").style.zIndex = "0"; // Reset z-index to 0
 }
 
 // Example of how you might handle finding a combination
-document.getElementById('breedButton').addEventListener('click', function () {
+document.getElementById("breedButton").addEventListener("click", function () {
   // Simulate finding a combination
   const combinationFound = true; // Set this based on your logic
 
@@ -6114,39 +6529,53 @@ document.getElementById('breedButton').addEventListener('click', function () {
 });
 
 // Add event listener for keydown event
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') { // Check if the key pressed is Escape
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    // Check if the key pressed is Escape
     hideBlur(); // Hide the blur overlay
     resetAll();
   }
 });
 
-//Searching Epic Monsters 
+//Searching Epic Monsters
 function searchMonsters() {
-  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-  const resultsContainer = document.getElementById('resultsContainer');
-  resultsContainer.innerHTML = '';
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const resultsContainer = document.getElementById("resultsContainer");
+  resultsContainer.innerHTML = "";
 
-  const normalResults = monsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
-  const rareResults = monsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
-  const epicResults = epicmonsters.filter(monster => monster.name.toLowerCase().includes(searchTerm));
+  const normalResults = monsters.filter((monster) =>
+    monster.name.toLowerCase().includes(searchTerm)
+  );
+  const rareResults = monsters.filter((monster) =>
+    monster.name.toLowerCase().includes(searchTerm)
+  );
+  const epicResults = epicmonsters.filter((monster) =>
+    monster.name.toLowerCase().includes(searchTerm)
+  );
 
-  if (normalResults.length === 0 && rareResults.length === 0 && epicResults.length === 0) {
-    resultsContainer.innerHTML = '<p>No results found.</p>';
+  if (
+    normalResults.length === 0 &&
+    rareResults.length === 0 &&
+    epicResults.length === 0
+  ) {
+    resultsContainer.innerHTML = "<p>No results found.</p>";
     return;
   }
 
-  normalResults.forEach(monster => displayMonster(monster, 'normal'));
-  rareResults.forEach(monster => displayMonster(monster, 'rare'));
-  epicResults.forEach(monster => displayMonster(monster, 'epic'));
+  normalResults.forEach((monster) => displayMonster(monster, "normal"));
+  rareResults.forEach((monster) => displayMonster(monster, "rare"));
+  epicResults.forEach((monster) => displayMonster(monster, "epic"));
 }
 
 function displayMonster(monster, type) {
-  const resultsContainer = document.getElementById('resultsContainer');
-  const monsterDiv = document.createElement('div');
-  monsterDiv.className = 'monster-result';
+  const resultsContainer = document.getElementById("resultsContainer");
+  const monsterDiv = document.createElement("div");
+  monsterDiv.className = "monster-result";
 
-  const name = type === 'normal' ? monster.name : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
+  const name =
+    type === "normal"
+      ? monster.name
+      : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
   monsterDiv.innerHTML = `
     <h3>${name}</h3>
     <img src="${monster.image.normal}" alt="${name}" />
@@ -6163,98 +6592,440 @@ function displayMonster(monster, type) {
 // Call hideBlur on page load to ensure it starts hidden
 hideBlur();
 
-const slideButton = document.getElementById('slideButton');
-const slidePanel = document.getElementById('slidePanel');
+const slideButton = document.getElementById("slideButton");
+const slidePanel = document.getElementById("slidePanel");
 
-slideButton.addEventListener('click', () => {
-  slidePanel.classList.toggle('open'); 
+slideButton.addEventListener("click", () => {
+  slidePanel.classList.toggle("open");
   if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>`) {
     slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
     slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
   } else {
-    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`
+    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`;
     slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
   }
 });
-
 
 // function closePanel() {
 //     slidePanel.classList.remove('open');
 // }
 
+document
+  .getElementById("islandDropdown")
+  .addEventListener("change", function () {
+    const value = this.value;
+    const islandNameElement = document.getElementById("islandName");
+    const islandImg = document.getElementById("islandImg");
+    const islandNameChecklist = document.getElementById("islandNameChecklist");
+    // Capitalize first letter for display
+    const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
 
+    // Update the name and image
+    if (value === "Plasma Islet" || value === "Ethereal Workshop") {
+      islandNameElement.textContent = `${capitalized}`;
+      islandNameChecklist.textContent = `${capitalized}`;
+      islandImg.src = `images/islands/${capitalized} Island.png`;
+    } else if (value !== "Plasma Islet" && value !== "Ethereal Workshop") {
+      islandNameElement.textContent = `${capitalized} Island`;
+      islandNameChecklist.textContent = `${capitalized} Island`;
+      islandImg.src = `images/islands/${capitalized} Island.png`;
+    }
+  });
 
-document.getElementById('islandDropdown').addEventListener('change', function () {
-  const value = this.value;
-  const islandNameElement = document.getElementById('islandName');
-  const islandImg = document.getElementById('islandImg');
-  const islandNameChecklist = document.getElementById('islandNameChecklist');
-  // Capitalize first letter for display
-  const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
+document
+  .getElementById("monsterTypeDropdown")
+  .addEventListener("change", function () {
+    const value = this.value;
 
-  // Update the name and image
-  if(value === "Plasma Islet" || value === "Ethereal Workshop") {
-  islandNameElement.textContent = `${capitalized}`;
-  islandNameChecklist.textContent = `${capitalized}`;
-  islandImg.src = `images/islands/${capitalized} Island.png`;
+    const commonPanel = document.getElementById("commonSection");
+    const rarePanel = document.getElementById("rareSection");
+    const epicPanel = document.getElementById("epicSection");
+    // Collapse all
+    commonPanel.classList.remove("active");
+    rarePanel.classList.remove("active");
+    epicPanel.classList.remove("active");
 
-  } else if (value !== "Plasma Islet" && value !== "Ethereal Workshop"){
-  islandNameElement.textContent = `${capitalized} Island`;
-    islandNameChecklist.textContent = `${capitalized} Island`;
-  islandImg.src = `images/islands/${capitalized} Island.png`;
-}
-});
-
-document.getElementById('monsterTypeDropdown').addEventListener('change', function () {
-  const value = this.value;
-
-  const commonPanel = document.getElementById('commonSection');
-  const rarePanel = document.getElementById('rareSection');
-  const epicPanel = document.getElementById('epicSection')
-  // Collapse all
-  commonPanel.classList.remove('active');
-  rarePanel.classList.remove('active');
-  epicPanel.classList.remove('active');
-
-  // Expand selected
-  if (value === 'common') {
-    commonPanel.classList.add('active');
-  } else if (value === 'rare') {
-    rarePanel.classList.add('active');
-  } else if (value === 'epic') {
-    epicPanel.classList.add('active');
-  }
-});
+    // Expand selected
+    if (value === "common") {
+      commonPanel.classList.add("active");
+    } else if (value === "rare") {
+      rarePanel.classList.add("active");
+    } else if (value === "epic") {
+      epicPanel.classList.add("active");
+    }
+  });
 
 const islandData = {
   plant: {
-    common: ["Potbelly", "Noggin", "Toe Jammer", "Mammott", "Shrubb", "Oaktopus", "Furcorn", "Fwog", "Drumpler", "Maw", "Pummel", "Clamble", "Bowgart", "T Rox", "Entbrat", "Ghazt", "Wubbox", "Shugabush", "Tawkerr", "Parlsona", "Punkleton", "G joob", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
-    rare: ["Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Mammott", "Rare Shrubb", "Rare Oaktopus", "Rare Furcorn", "Rare Fwog", "Rare Drumpler", "Rare Maw", "Rare Pummel", "Rare Clamble", "Rare Bowgart", "Rare T Rox", "Rare Entbrat", "Rare Ghazt", "Rare Wubbox", "Rare G joob", "Rare Punkleton"],
-    epic: ["Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Shrubb", "Epic Oaktopus", "Epic Furcorn", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Pummel", "Epic Clamble", "Epic Bowgart", "Epic T Rox", "Epic Entbrat", "Epic Ghazt", "Epic Plant Wubbox", "Epic Punkleton"]
+    common: [
+      "Potbelly",
+      "Noggin",
+      "Toe Jammer",
+      "Mammott",
+      "Shrubb",
+      "Oaktopus",
+      "Furcorn",
+      "Fwog",
+      "Drumpler",
+      "Maw",
+      "Pummel",
+      "Clamble",
+      "Bowgart",
+      "T Rox",
+      "Entbrat",
+      "Ghazt",
+      "Wubbox",
+      "Shugabush",
+      "Tawkerr",
+      "Parlsona",
+      "Punkleton",
+      "G joob",
+      "Do",
+      "Re",
+      "Mi",
+      "Fa",
+      "Sol",
+      "La",
+      "Ti",
+    ],
+    rare: [
+      "Rare Potbelly",
+      "Rare Noggin",
+      "Rare Toe Jammer",
+      "Rare Mammott",
+      "Rare Shrubb",
+      "Rare Oaktopus",
+      "Rare Furcorn",
+      "Rare Fwog",
+      "Rare Drumpler",
+      "Rare Maw",
+      "Rare Pummel",
+      "Rare Clamble",
+      "Rare Bowgart",
+      "Rare T Rox",
+      "Rare Entbrat",
+      "Rare Ghazt",
+      "Rare Wubbox",
+      "Rare G joob",
+      "Rare Punkleton",
+    ],
+    epic: [
+      "Epic Potbelly",
+      "Epic Noggin",
+      "Epic Toe Jammer",
+      "Epic Mammott",
+      "Epic Shrubb",
+      "Epic Oaktopus",
+      "Epic Furcorn",
+      "Epic Fwog",
+      "Epic Drumpler",
+      "Epic Maw",
+      "Epic Pummel",
+      "Epic Clamble",
+      "Epic Bowgart",
+      "Epic T Rox",
+      "Epic Entbrat",
+      "Epic Ghazt",
+      "Epic Plant Wubbox",
+      "Epic Punkleton",
+    ],
   },
   cold: {
-    common: ["Tweedle", "Potbelly", "Toe Jammer", "Mammott", "Dandidoo", "Qubble", "Pango", "Oaktopus", "Furcorn", "Maw", "Spunge", "Thumpies", "Congle", "Bowgart", "Deedge", "Grumpyre", "Wubbox", "Twakerr", "Maggpi", "Yool", "Strombonin", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
-    rare: ["Rare Tweedle", "Rare Potbelly", "Rare Toe Jammer", "Rare Mammott", "Rare Dandidoo", "Rare Qubble", "Rare Pango", "Rare Oaktopus", "Rare Furcorn", "Rare Maw", "Rare Spunge", "Rare Thumpies", "Rare Congle", "Rare Bowgart", "Rare Deedge", "Rare Grumpyre", "Rare Wubbox", "Rare Yool", "Rare Strombonin"],
-    epic: ["Epic Tweedle", "Epic Potbelly", "Epic Toe Jammer", "Epic Mammott", "Epic Dandidoo", "Epic Qubble", "Rare Pango", "Epic Oaktopus", "Epic Furcorn", "Epic Maw", "Epic Spunge", "Epic Thumpies", "Epic Congle", "Epic Bowgart", "Epic Deedge", "Epic Grumpyre", "Epic Cold Wubbox", "Epic Yool", "Epic Strombonin"]
+    common: [
+      "Tweedle",
+      "Potbelly",
+      "Toe Jammer",
+      "Mammott",
+      "Dandidoo",
+      "Qubble",
+      "Pango",
+      "Oaktopus",
+      "Furcorn",
+      "Maw",
+      "Spunge",
+      "Thumpies",
+      "Congle",
+      "Bowgart",
+      "Deedge",
+      "Grumpyre",
+      "Wubbox",
+      "Twakerr",
+      "Maggpi",
+      "Yool",
+      "Strombonin",
+      "Do",
+      "Re",
+      "Mi",
+      "Fa",
+      "Sol",
+      "La",
+      "Ti",
+    ],
+    rare: [
+      "Rare Tweedle",
+      "Rare Potbelly",
+      "Rare Toe Jammer",
+      "Rare Mammott",
+      "Rare Dandidoo",
+      "Rare Qubble",
+      "Rare Pango",
+      "Rare Oaktopus",
+      "Rare Furcorn",
+      "Rare Maw",
+      "Rare Spunge",
+      "Rare Thumpies",
+      "Rare Congle",
+      "Rare Bowgart",
+      "Rare Deedge",
+      "Rare Grumpyre",
+      "Rare Wubbox",
+      "Rare Yool",
+      "Rare Strombonin",
+    ],
+    epic: [
+      "Epic Tweedle",
+      "Epic Potbelly",
+      "Epic Toe Jammer",
+      "Epic Mammott",
+      "Epic Dandidoo",
+      "Epic Qubble",
+      "Rare Pango",
+      "Epic Oaktopus",
+      "Epic Furcorn",
+      "Epic Maw",
+      "Epic Spunge",
+      "Epic Thumpies",
+      "Epic Congle",
+      "Epic Bowgart",
+      "Epic Deedge",
+      "Epic Grumpyre",
+      "Epic Cold Wubbox",
+      "Epic Yool",
+      "Epic Strombonin",
+    ],
   },
   air: {
-    common: ["Tweedle", "Noggin", "Toe Jammer", "Mammott", "Cybop", "Quibble", "Pango", "Fwog", "Drumpler", "Maw", "Scups", "PomPom", "Congle", "T Rox", "Riff", "Reebro", "Wubbox", "Parlsona", "Stoowarb", "Schmoochle", "Hoola", "Yawstrich", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
-    rare: ["Rare Tweedle", "Rare Noggin", "Rare Toe Jammer", "Rare Mammott", "Rare Cybop", "Rare Qubble", "Rare Pango", "Rare Fwog", "Rare Drumpler", "Rare Maw", "Rare Scups", "Rare PomPom", "Rare Congle", "Rare T Rox", "Rare Riff", "Rare Reebro", "Rare Wubbox", "Rare Schmoochle", "Rare Hoola", "Rare Yawstrich" ],
-    epic: ["Epic Tweedle", "Epic Noggin", "Epic Toe Jammer", "Epic Mammott", "Epic Cybop", "Epic Qubble", "Epic Pango", "Epic Fwog", "Epic Drumpler", "Epic Maw", "Epic Scups", "Epic PomPom", "Epic Congle", "Epic T Rox", "Epic Riff", "Epic Reebro", "Epic Air Wubbox", "Epic Schmoochle", "Epic Hoola", "Epic Yawstrich"]
+    common: [
+      "Tweedle",
+      "Noggin",
+      "Toe Jammer",
+      "Mammott",
+      "Cybop",
+      "Quibble",
+      "Pango",
+      "Fwog",
+      "Drumpler",
+      "Maw",
+      "Scups",
+      "PomPom",
+      "Congle",
+      "T Rox",
+      "Riff",
+      "Reebro",
+      "Wubbox",
+      "Parlsona",
+      "Stoowarb",
+      "Schmoochle",
+      "Hoola",
+      "Yawstrich",
+      "Do",
+      "Re",
+      "Mi",
+      "Fa",
+      "Sol",
+      "La",
+      "Ti",
+    ],
+    rare: [
+      "Rare Tweedle",
+      "Rare Noggin",
+      "Rare Toe Jammer",
+      "Rare Mammott",
+      "Rare Cybop",
+      "Rare Qubble",
+      "Rare Pango",
+      "Rare Fwog",
+      "Rare Drumpler",
+      "Rare Maw",
+      "Rare Scups",
+      "Rare PomPom",
+      "Rare Congle",
+      "Rare T Rox",
+      "Rare Riff",
+      "Rare Reebro",
+      "Rare Wubbox",
+      "Rare Schmoochle",
+      "Rare Hoola",
+      "Rare Yawstrich",
+    ],
+    epic: [
+      "Epic Tweedle",
+      "Epic Noggin",
+      "Epic Toe Jammer",
+      "Epic Mammott",
+      "Epic Cybop",
+      "Epic Qubble",
+      "Epic Pango",
+      "Epic Fwog",
+      "Epic Drumpler",
+      "Epic Maw",
+      "Epic Scups",
+      "Epic PomPom",
+      "Epic Congle",
+      "Epic T Rox",
+      "Epic Riff",
+      "Epic Reebro",
+      "Epic Air Wubbox",
+      "Epic Schmoochle",
+      "Epic Hoola",
+      "Epic Yawstrich",
+    ],
   },
   water: {
-    common: ["Tweedle", "Potbelly", "Noggin", "Toe Jammer", "Dandidoo", "Cybop", "Quibble", "Shrubb", "Oaktopus", "Fwog", "Reedling", "Spunge", "Scups", "Pummel", "Shellbeat", "Jeeode", "Wubbox", "Maggpi", "Parlsona", "Blabbit", "Anglow", "Do", "Re", "Mi", "Fa", "Sol", "La", "Ti"],
-    rare: ["Rare Tweedle", "Rare Potbelly", "Rare Noggin", "Rare Toe Jammer", "Rare Dandidoo", "Rare Cybop", "Rare Quibble", "Rare Shrubb", "Rare Oaktopus", "Rare Fwog", "Rare Reedling", "Rare Spunge", "Rare Scups", "Rare Pummel", "Rare Shellbeat", "Rare Jeeode", "Rare Wubbox", "Rare Maggpi", "Rare Parlsona", "Rare Blabbit", "Rare Anglow"],
-    epic: ["Epic Tweedle", "Epic Potbelly", "Epic Noggin", "Epic Toe Jammer", "Epic Dandidoo", "Epic Cybop", "Epic Quibble", "Epic Shrubb", "Epic Oaktopus", "Epic Fwog", "Epic Reedling", "Epic Spunge", "Epic Scups", "Epic Pummel", "Epic Shellbeat", "Epic Jeeode", "Epic Water Wubbox", "Epic Maggpi", "Epic Parlsona", "Epic Blabbit", "Epic Anglow"]
+    common: [
+      "Tweedle",
+      "Potbelly",
+      "Noggin",
+      "Toe Jammer",
+      "Dandidoo",
+      "Cybop",
+      "Quibble",
+      "Shrubb",
+      "Oaktopus",
+      "Fwog",
+      "Reedling",
+      "Spunge",
+      "Scups",
+      "Pummel",
+      "Shellbeat",
+      "Jeeode",
+      "Wubbox",
+      "Maggpi",
+      "Parlsona",
+      "Blabbit",
+      "Anglow",
+      "Do",
+      "Re",
+      "Mi",
+      "Fa",
+      "Sol",
+      "La",
+      "Ti",
+    ],
+    rare: [
+      "Rare Tweedle",
+      "Rare Potbelly",
+      "Rare Noggin",
+      "Rare Toe Jammer",
+      "Rare Dandidoo",
+      "Rare Cybop",
+      "Rare Quibble",
+      "Rare Shrubb",
+      "Rare Oaktopus",
+      "Rare Fwog",
+      "Rare Reedling",
+      "Rare Spunge",
+      "Rare Scups",
+      "Rare Pummel",
+      "Rare Shellbeat",
+      "Rare Jeeode",
+      "Rare Wubbox",
+      "Rare Maggpi",
+      "Rare Parlsona",
+      "Rare Blabbit",
+      "Rare Anglow",
+    ],
+    epic: [
+      "Epic Tweedle",
+      "Epic Potbelly",
+      "Epic Noggin",
+      "Epic Toe Jammer",
+      "Epic Dandidoo",
+      "Epic Cybop",
+      "Epic Quibble",
+      "Epic Shrubb",
+      "Epic Oaktopus",
+      "Epic Fwog",
+      "Epic Reedling",
+      "Epic Spunge",
+      "Epic Scups",
+      "Epic Pummel",
+      "Epic Shellbeat",
+      "Epic Jeeode",
+      "Epic Water Wubbox",
+      "Epic Maggpi",
+      "Epic Parlsona",
+      "Epic Blabbit",
+      "Epic Anglow",
+    ],
   },
   earth: {
-  common: 
-  ["Tweedle", "Potbelly", "Noggin", "Mammott", "Dandidoo", "Cybop", "Pango", "Shrubb", "Furcorn", "Drumpler", "Reedling", "Thumpies", "PomPom", "Clamble", "Quarrister", "Humbug", "Wubbox", "Tawkerr", "Stoowarb", "Hoola", "Hyehehe"],
-  rare: 
-  ["Rare Tweedle", "Rare Potbelly", "Rare Noggin", "Rare Mammott", "Rare Dandidoo", "Rare Cybop", "Rare Pango", "Rare Shrubb", "Rare Furcorn", "Rare Drumpler", "Rare Reedling", "Rare Thumpies", "Rare PomPom", "Rare Clamble", "Rare Quarrister", "Rare Humbug", "Rare Hoola", "Rare Hyehehe", "Rare Wubbox"],
-  epic: 
-  ["Epic Tweedle", "Epic Potbelly", "Epic Noggin", "Epic Mammott", "Epic Dandidoo", "Epic Cybop", "Epic Pango", "Epic Shrubb", "Epic Furcorn", "Epic Drumpler", "Epic Reedling", "Epic Thumpies", "Epic PomPom", "Epic Clamble", "Epic Quarrister", "Epic Humbug", "Epic Hoola", "Epic Hyehehe", "Epic Earth Wubbox"]
-  }, 
+    common: [
+      "Tweedle",
+      "Potbelly",
+      "Noggin",
+      "Mammott",
+      "Dandidoo",
+      "Cybop",
+      "Pango",
+      "Shrubb",
+      "Furcorn",
+      "Drumpler",
+      "Reedling",
+      "Thumpies",
+      "PomPom",
+      "Clamble",
+      "Quarrister",
+      "Humbug",
+      "Wubbox",
+      "Tawkerr",
+      "Stoowarb",
+      "Hoola",
+      "Hyehehe",
+    ],
+    rare: [
+      "Rare Tweedle",
+      "Rare Potbelly",
+      "Rare Noggin",
+      "Rare Mammott",
+      "Rare Dandidoo",
+      "Rare Cybop",
+      "Rare Pango",
+      "Rare Shrubb",
+      "Rare Furcorn",
+      "Rare Drumpler",
+      "Rare Reedling",
+      "Rare Thumpies",
+      "Rare PomPom",
+      "Rare Clamble",
+      "Rare Quarrister",
+      "Rare Humbug",
+      "Rare Hoola",
+      "Rare Hyehehe",
+      "Rare Wubbox",
+    ],
+    epic: [
+      "Epic Tweedle",
+      "Epic Potbelly",
+      "Epic Noggin",
+      "Epic Mammott",
+      "Epic Dandidoo",
+      "Epic Cybop",
+      "Epic Pango",
+      "Epic Shrubb",
+      "Epic Furcorn",
+      "Epic Drumpler",
+      "Epic Reedling",
+      "Epic Thumpies",
+      "Epic PomPom",
+      "Epic Clamble",
+      "Epic Quarrister",
+      "Epic Humbug",
+      "Epic Hoola",
+      "Epic Hyehehe",
+      "Epic Earth Wubbox",
+    ],
+  },
 };
 /** 
  *  "": {
@@ -6266,66 +7037,64 @@ const islandData = {
    },
 */
 
-
-
 const monsterInfo = {
-  "potbelly": {
+  potbelly: {
     name: "Potbelly",
     image: "images/Monster_Avatars/Potbelly.png",
     diamonds: 0,
     coins: 250,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('potbelly'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "noggin": {
+  noggin: {
     name: "Noggin",
     image: "images/Monster_Avatars/Noggin.png",
     diamonds: 0,
     coins: 300,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('noggin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "toe_jammer": {
+  toe_jammer: {
     name: "Toe Jammer",
     diamonds: 0,
     coins: 250,
     image: "images/Monster_Avatars/Toe Jammer.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('toe_jammer'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "fwog": {
+  fwog: {
     name: "Fwog",
     image: "images/Monster_Avatars/Fwog.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "mammott": {
+  mammott: {
     name: "Mammott",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Mammott.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "tweedle": {
+  tweedle: {
     name: "Tweedle",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Tweedle.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tweedle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "shrubb": {
+  shrubb: {
     name: "Shrubb",
     image: "images/Monster_Avatars/Shrubb.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "oaktopus": {
+  oaktopus: {
     name: "Oaktopus",
     image: "images/Monster_Avatars/Oaktopus.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('Oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "furcorn": {
+  furcorn: {
     name: "Furcorn",
     image: "images/Monster_Avatars/Furcorn.png",
     diamonds: 30,
@@ -6333,105 +7102,105 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "drumpler": {
+  drumpler: {
     name: "Drumpler",
     image: "images/Monster_Avatars/Drumpler.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "maw": {
+  maw: {
     name: "Maw",
     image: "images/Monster_Avatars/Maw.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maw'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "dandidoo": {
+  dandidoo: {
     name: "Dandidoo",
     image: "images/Monster_Avatars/Dandidoo.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('dandidoo'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "quibble": {
+  quibble: {
     name: "Quibble",
     image: "images/Monster_Avatars/Quibble.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quibble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "pango": {
+  pango: {
     name: "Pango",
     image: "images/Monster_Avatars/Pango.png",
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pango'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "spunge": {
+  spunge: {
     name: "Spunge",
     image: "images/Monster_Avatars/Spunge.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "reedling": {
+  reedling: {
     name: "Reedling",
     image: "images/Monster_Avatars/Reedling.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "thumpies": {
+  thumpies: {
     name: "Thumpies",
     image: "images/Monster_Avatars/Thumpies.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "congle": {
+  congle: {
     name: "Congle",
     image: "images/Monster_Avatars/Congle.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "pummel": {
+  pummel: {
     name: "Pummel",
     image: "images/Monster_Avatars/Pummel.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "clamble": {
+  clamble: {
     name: "Clamble",
     image: "images/Monster_Avatars/Clamble.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "bowgart": {
+  bowgart: {
     name: "Bowgart",
     image: "images/Monster_Avatars/Bowgart.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "t_rox": {
+  t_rox: {
     name: "T-Rox",
     image: "images/Monster_Avatars/T-Rox.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "scups": {
+  scups: {
     name: "Scups",
     image: "images/Monster_Avatars/Scups.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "pompom": {
+  pompom: {
     name: "PomPom",
     image: "images/Monster_Avatars/PomPom.png",
     diamonds: 50,
@@ -6439,333 +7208,333 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  //4 Elements  
-  "entbrat": {
+  //4 Elements
+  entbrat: {
     name: "Entbrat",
     image: "images/Monster_Avatars/Entbrat.png",
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "deedge": {
+  deedge: {
     name: "Deedge",
     image: "images/Monster_Avatars/Deedge.png",
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "riff": {
+  riff: {
     name: "Riff",
     image: "images/Monster_Avatars/Riff.png",
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "shellbeat": {
+  shellbeat: {
     name: "Shellbeat",
     image: "images/Monster_Avatars/Shellbeat.png",
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "quarrister": {
+  quarrister: {
     name: "Quarrister",
     image: "images/Monster_Avatars/Quarrister.png",
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "ghazt": {
+  ghazt: {
     name: "Ghazt",
     image: "images/Monster_Avatars/Ghazt.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "grumpyre": {
+  grumpyre: {
     name: "Grumpyre",
     image: "images/Monster_Avatars/Grumpyre.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "reebro": {
+  reebro: {
     name: "Reebro",
     image: "images/Monster_Avatars/Reebro.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "jeeode": {
+  jeeode: {
     name: "Jeeode",
     image: "images/Monster_Avatars/Jeeode.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jeeode'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "humbug": {
+  humbug: {
     name: "Humbug",
     image: "images/Monster_Avatars/Humbug.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "wubbox": {
+  wubbox: {
     name: "Wubbox",
     image: "images/Monster_Avatars/Wubbox.png",
     diamonds: 0,
-    coins: 75 + 'M',
+    coins: 75 + "M",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "shugabush": {
+  shugabush: {
     name: "Shugabush",
     image: "images/Monster_Avatars/Shugabush.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shugabush'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "punkleton": {
+  punkleton: {
     name: "Punkleton",
     image: "images/Monster_Avatars/Punkleton.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "yool": {
+  yool: {
     name: "Yool",
     image: "images/Monster_Avatars/Yool.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "schmoochle": {
+  schmoochle: {
     name: "Schmoochle",
     image: "images/Monster_Avatars/Schmoochle.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "hoola": {
+  hoola: {
     name: "Hoola",
     image: "images/Monster_Avatars/Hoola.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "blabbit": {
+  blabbit: {
     name: "Blabbit",
     image: "images/Monster_Avatars/Blabbit.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "g_joob": {
+  g_joob: {
     name: "G joob",
     image: "images/Monster_Avatars/G_joob.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "strombonin": {
+  strombonin: {
     name: "Strombonin",
     image: "images/Monster_Avatars/Strombonin.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "yawstrich": {
+  yawstrich: {
     name: "Yawstrich",
     image: "images/Monster_Avatars/Yawstrich.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "anglow": {
+  anglow: {
     name: "Anglow",
     image: "images/Monster_Avatars/Anglow.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "hyehehe": {
+  hyehehe: {
     name: "Hyehehe",
     image: "images/Monster_Avatars/Hyehehe.png",
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "tawkerr": {
+  tawkerr: {
     name: "Tawkerr",
     image: "images/Monster_Avatars/Tawkerr.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tawkerr'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "maggpi": {
+  maggpi: {
     name: "Maggpi",
     image: "images/Monster_Avatars/Maggpi.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maggpi'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "parlsona": {
+  parlsona: {
     name: "Parlsona",
     image: "images/Monster_Avatars/Parlsona.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('parlsona'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "stoowarb": {
+  stoowarb: {
     name: "Stoowarb",
     image: "images/Monster_Avatars/Stoowarb.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('stoowarb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-"do": {
+  do: {
     name: "Do",
     image: "images/Monster_Avatars/Dipster - Do.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('do'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "re": {
+  re: {
     name: "Re",
     image: "images/Monster_Avatars/Dipster - Re.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('re'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "mi": {
+  mi: {
     name: "Mi",
     image: "images/Monster_Avatars/Dipster - Mi.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mi'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "fa": {
+  fa: {
     name: "Fa",
     image: "images/Monster_Avatars/Dipster - Fa.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fa'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "sol": {
+  sol: {
     name: "Sol",
     image: "images/Monster_Avatars/Dipster - Sol.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('sol'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "la": {
+  la: {
     name: "La",
     image: "images/Monster_Avatars/Dipster - La.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('la'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "ti": {
+  ti: {
     name: "Ti",
     image: "images/Monster_Avatars/Dipster - Ti.png",
     diamonds: 0,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ti'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
- 
+
   // Rare versions
-  "rare_potbelly": {
+  rare_potbelly: {
     name: "Rare Potbelly",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Potbelly - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_noggin": {
+  rare_noggin: {
     name: "Rare Noggin",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Noggin - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_toe_jammer": {
+  rare_toe_jammer: {
     name: "Rare Toe Jammer",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Toe Jammer - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_mammott": {
+  rare_mammott: {
     name: "Rare Mammott",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Mammott - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_tweedle": {
+  rare_tweedle: {
     name: "Rare Tweedle",
     diamonds: 75,
     coins: 0,
     image: "images/Monster_Avatars/Tweedle - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_fwog": {
+  rare_fwog: {
     name: "Rare Fwog",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_furcorn": {
+  rare_furcorn: {
     name: "Rare Furcorn",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Furcorn - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_cybop": {
+  rare_cybop: {
     name: "Rare Cybop",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Cybop - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "rare_drumpler": {
+  rare_drumpler: {
     name: "Rare Drumpler",
     image: "images/Monster_Avatars/Drumpler - Rare.png",
     diamonds: 40,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_maw": {
+  rare_maw: {
     name: "Rare Maw",
     diamonds: 40,
     coins: 0,
     image: "images/Monster_Avatars/Maw - Rare.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('rare_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_dandidoo": {
+  rare_dandidoo: {
     name: "Rare Dandidoo",
     image: "images/Monster_Avatars/Dandidoo - Rare.png",
     diamonds: 40,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_dandidoo'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_quibble": {
+  rare_quibble: {
     name: "Rare Quibble",
     image: "images/Monster_Avatars/Quibble - Rare.png",
     diamonds: 40,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quibble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_pango": {
+  rare_pango: {
     name: "Rare Pango",
     image: "images/Monster_Avatars/Pango - Rare.png",
     diamonds: 40,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pango'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_pummel": {
+  rare_pummel: {
     name: "Rare Pummel",
     image: "images/Monster_Avatars/Pummel - Rare.png",
     diamonds: 65,
@@ -6773,14 +7542,14 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "rare_oaktopus": {
+  rare_oaktopus: {
     name: "Rare Oaktopus",
     image: "images/Monster_Avatars/Oaktopus - Rare.png",
     diamonds: 40,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "rare_shrubb": {
+  rare_shrubb: {
     name: "Rare Shurbb",
     image: "images/Monster_Avatars/Shrubb - Rare.png",
     diamonds: 40,
@@ -6788,140 +7557,140 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "rare_clamble": {
+  rare_clamble: {
     name: "Rare Clamble",
     image: "images/Monster_Avatars/Clamble - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_bowgart": {
+  rare_bowgart: {
     name: "Rare Bowgart",
     image: "images/Monster_Avatars/Bowgart - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_spunge": {
+  rare_spunge: {
     name: "Rare Spunge",
     image: "images/Monster_Avatars/Spunge - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_reedling": {
+  rare_reedling: {
     name: "Rare Reedling",
     image: "images/Monster_Avatars/Reedling - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_scups": {
+  rare_scups: {
     name: "Rare Scups",
     image: "images/Monster_Avatars/Spunge - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_pompom": {
+  rare_pompom: {
     name: "Rare PomPom",
     image: "images/Monster_Avatars/PomPom - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_thumpies": {
+  rare_thumpies: {
     name: "Rare Thumpies",
     image: "images/Monster_Avatars/Thumpies - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_congle": {
+  rare_congle: {
     name: "Rare Congle",
     image: "images/Monster_Avatars/Congle - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_t_rox": {
+  rare_t_rox: {
     name: "Rare T Rox",
     image: "images/Monster_Avatars/T-Rox - Rare.png",
     diamonds: 65,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_entbrat": {
+  rare_entbrat: {
     name: "Rare Entbrat",
     image: "images/Monster_Avatars/Entbrat - Rare.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_deedge": {
+  rare_deedge: {
     name: "Rare Deedge",
     image: "images/Monster_Avatars/Deedge - Rare.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_riff": {
+  rare_riff: {
     name: "Rare Riff",
     image: "images/Monster_Avatars/Riff - Rare.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_shellbeat": {
+  rare_shellbeat: {
     name: "Rare Shellbeat",
     image: "images/Monster_Avatars/Shellbeat - Rare.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_quarrister": {
+  rare_quarrister: {
     name: "Rare Quarrister",
     image: "images/Monster_Avatars/Quarrister - Rare.png",
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_ghazt": {
+  rare_ghazt: {
     name: "Rare Ghazt",
     image: "images/Monster_Avatars/Ghazt - Rare.png",
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_grumpyre": {
+  rare_grumpyre: {
     name: "Rare Grumpyre",
     image: "images/Monster_Avatars/Grumpyre - Rare.png",
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_reebro": {
+  rare_reebro: {
     name: "Rare Reebro",
     image: "images/Monster_Avatars/Reebro - Rare.png",
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_jeeode": {
+  rare_jeeode: {
     name: "Rare Jeeode",
     image: "images/Monster_Avatars/Jeeode - Rare.png",
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_jeeode'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_humbug": {
+  rare_humbug: {
     name: "Rare Humbug",
     image: "images/Monster_Avatars/Humbug - Rare.png",
     diamonds: 1500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_wubbox": {
+  rare_wubbox: {
     name: "Rare Wubbox",
     image: "images/Monster_Avatars/Wubbox - Rare.png",
     diamonds: 0,
@@ -6929,70 +7698,70 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "rare_punkleton": {
+  rare_punkleton: {
     name: "Rare Punkleton",
     image: "images/Monster_Avatars/Punkleton - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_yool": {
+  rare_yool: {
     name: "Rare Yool",
     image: "images/Monster_Avatars/Yool - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_schmoochle": {
+  rare_schmoochle: {
     name: "Rare Schmoochle",
     image: "images/Monster_Avatars/Schmoochle - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_hoola": {
+  rare_hoola: {
     name: "Rare Hoola",
     image: "images/Monster_Avatars/Hoola - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_blabbit": {
+  rare_blabbit: {
     name: "Rare Blabbit",
     image: "images/Monster_Avatars/Blabbit - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_g_joob": {
+  rare_g_joob: {
     name: "Rare G joob",
     image: "images/Monster_Avatars/G_joob - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_strombonin": {
+  rare_strombonin: {
     name: "Rare Strombonin",
     image: "images/Monster_Avatars/Strombonin - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_yawstrich": {
+  rare_yawstrich: {
     name: "Rare Yawstrich",
     image: "images/Monster_Avatars/Yawstrich - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_anglow": {
+  rare_anglow: {
     name: "Rare Anglow",
     image: "images/Monster_Avatars/Anglow - Rare.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "rare_hyehehe": {
+  rare_hyehehe: {
     name: "Rare Hyehehe",
     image: "images/Monster_Avatars/Hyehehe - Rare.png",
     diamonds: 500,
@@ -7001,57 +7770,57 @@ const monsterInfo = {
   },
 
   // Epic versions
-  "epic_potbelly": {
+  epic_potbelly: {
     name: "Epic Potbelly",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Potbelly - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_potbelly');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_noggin": {
+  epic_noggin: {
     name: "Epic Noggin",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Noggin - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_noggin');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_toe_jammer": {
+  epic_toe_jammer: {
     name: "Epic Toe Jammer",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Toe Jammer - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_toe_jammer');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_mammott": {
+  epic_mammott: {
     name: "Epic Mammott",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Mammott - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_mammott');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_tweedle": {
+  epic_tweedle: {
     name: "Epic Tweedle",
     diamonds: 250,
     coins: 0,
     image: "images/Monster_Avatars/Tweedle - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_tweedle');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "epic_fwog": {
+  epic_fwog: {
     name: "Epic Fwog",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_fwog');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_furcorn": {
+  epic_furcorn: {
     name: "Epic Furcorn",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Furcorn - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_furcorn');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_drumpler": {
+  epic_drumpler: {
     name: "Epic Drumpler",
     diamonds: 150,
     coins: 0,
@@ -7060,49 +7829,49 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_maw": {
+  epic_maw: {
     name: "Epic Maw",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Maw - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_maw');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_cybop": {
+  epic_cybop: {
     name: "Epic Cybop",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Cybop - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_dandidoo": {
+  epic_dandidoo: {
     name: "Epic Fwog",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Fwog - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_dandidoo');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_dandidoo');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_quibble": {
+  epic_quibble: {
     name: "Epic Quibble",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Quibble - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_quibble');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_quibble');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_pango": {
+  epic_pango: {
     name: "Epic Pango",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Pango - Epic.png",
-    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_pango');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`
+    description: `<button id="monsterListButton" onClick="simulateMonsterSearch('epic_pango');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_oaktopus": {
+  epic_oaktopus: {
     name: "Epic Oaktopus",
     diamonds: 150,
     coins: 0,
     image: "images/Monster_Avatars/Oaktopus - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-   "epic_shrubb": {
+  epic_shrubb: {
     name: "Epic Shurbb",
     diamonds: 150,
     coins: 0,
@@ -7110,168 +7879,168 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "epic_pummel": {
+  epic_pummel: {
     name: "Epic Pummel",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Pummel - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_spunge": {
+  epic_spunge: {
     name: "Epic Spunge",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Spunge - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_reedling": {
+  epic_reedling: {
     name: "Epic Spunge",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Reedling - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_scups": {
+  epic_scups: {
     name: "Epic Scups",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Scups - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_pompom": {
+  epic_pompom: {
     name: "Epic PomPom",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/PomPom - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_thumpies": {
+  epic_thumpies: {
     name: "Epic Thumpies",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Thumpies - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_congle": {
+  epic_congle: {
     name: "Epic Congle",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Thumpies - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_clamble": {
+  epic_clamble: {
     name: "Epic Clamble",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Clamble - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_bowgart": {
+  epic_bowgart: {
     name: "Epic Bowgart",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/Bowgart - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_t_rox": {
+  epic_t_rox: {
     name: "Epic T Rox",
     diamonds: 500,
     coins: 0,
     image: "images/Monster_Avatars/T-Rox - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_entbrat": {
+  epic_entbrat: {
     name: "Epic Entbrat",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Entbrat - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_deedge": {
+  epic_deedge: {
     name: "Epic Deedge",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Deedge - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_riff": {
+  epic_riff: {
     name: "Epic Riff",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Riff - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_shellbeat": {
+  epic_shellbeat: {
     name: "Epic Shellbeat",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Shellbeat - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_quarrister": {
+  epic_quarrister: {
     name: "Epic Quarrister",
     diamonds: 750,
     coins: 0,
     image: "images/Monster_Avatars/Quarrister - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_ghazt": {
+  epic_ghazt: {
     name: "Epic Ghazt",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Ghazt - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_grumpyre": {
+  epic_grumpyre: {
     name: "Epic Grumpyre",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Grumpyre - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_reebro": {
+  epic_reebro: {
     name: "Epic Reebro",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Reebro - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_humbug": {
+  epic_humbug: {
     name: "Epic Humbug",
     diamonds: 2250,
     coins: 0,
     image: "images/Monster_Avatars/Humbug - Epic.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_plant_wubbox": {
+  epic_plant_wubbox: {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Plant).png",
     diamonds: 1,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_cold_wubbox": {
+  epic_cold_wubbox: {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Cold).png",
     diamonds: 1,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_air_wubbox": {
+  epic_air_wubbox: {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Air).png",
     diamonds: 1,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_water_wubbox": {
+  epic_water_wubbox: {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Water).png",
     diamonds: 1,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_earth_wubbox": {
+  epic_earth_wubbox: {
     name: "Epic Wubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Earth).png",
     diamonds: 1,
@@ -7279,230 +8048,231 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
 
-  "epic_punkleton": {
+  epic_punkleton: {
     name: "Epic Punkleton",
     image: "images/Monster_Avatars/Punkleton - Epic.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_yool": {
+  epic_yool: {
     name: "Epic Yool",
     image: "images/Monster_Avatars/Yool - Epic.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_schmoochle": {
+  epic_schmoochle: {
     name: "Epic Schmoochle",
     image: "images/Monster_Avatars/Schmoochle - Epic.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_hoola": {
+  epic_hoola: {
     name: "Epic Hoola",
     image: "images/Monster_Avatars/Hoola - Epic.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_blabbit": {
+  epic_blabbit: {
     name: "Epic Blabbit",
     image: "images/Monster_Avatars/Blabbit - Epic.png",
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_g_joob": {
+  epic_g_joob: {
     name: "Epic G joob",
     image: "images/Monster_Avatars/G_joob - Epic.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_g_joob'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_strombonin": {
+  epic_strombonin: {
     name: "Epic Strombonin",
     image: "images/Monster_Avatars/Strombonin - Epic.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_strombonin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_yawstrich": {
+  epic_yawstrich: {
     name: "Epic Yawstrich",
     image: "images/Monster_Avatars/Yawstrich - Epic.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_yawstrich'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_anglow": {
+  epic_anglow: {
     name: "Epic Anglow",
     image: "images/Monster_Avatars/Anglow - Epic.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_anglow'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  "epic_hyehehe": {
+  epic_hyehehe: {
     name: "Epic Hyehehe",
     image: "images/Monster_Avatars/Hyehehe - Epic.png",
     diamonds: 500,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
- };
+};
 
-
-
- function populateMonsterSections(islandKey) {
+function populateMonsterSections(islandKey) {
   const island = islandData[islandKey];
   if (!island) return;
 
   const sections = {
-    common: document.querySelector('#commonSection select'),
-    rare: document.querySelector('#rareSection select'),
-    epic: document.querySelector('#epicSection select')
+    common: document.querySelector("#commonSection select"),
+    rare: document.querySelector("#rareSection select"),
+    epic: document.querySelector("#epicSection select"),
   };
 
   for (const [rarity, monsters] of Object.entries(island)) {
     const select = sections[rarity];
-    select.innerHTML = '';
+    select.innerHTML = "";
 
-    monsters.forEach(monster => {
-      const option = document.createElement('option');
+    monsters.forEach((monster) => {
+      const option = document.createElement("option");
       option.textContent = monster;
-      option.value = monster.toLowerCase().replace(/\s+/g, '_');
+      option.value = monster.toLowerCase().replace(/\s+/g, "_");
       select.appendChild(option);
     });
   }
 }
 
-const defaultSelectedIsland = 'plant';
+const defaultSelectedIsland = "plant";
 populateMonsterSections(defaultSelectedIsland);
 
-document.getElementById('islandDropdown').addEventListener('change', function () {
-  const selectedIsland = this.value; // e.g., "plant", "cold"
-  populateMonsterSections(selectedIsland);
-});
+document
+  .getElementById("islandDropdown")
+  .addEventListener("change", function () {
+    const selectedIsland = this.value; // e.g., "plant", "cold"
+    populateMonsterSections(selectedIsland);
+  });
 
-
-
-
-document.querySelector('#commonSection select').addEventListener('change', function () {
-  const selected = this.value;
-  const info = monsterInfo[selected];
-  const img = document.getElementById('monsterImage');
-  const desc = document.getElementById('monsterDescription');
-  const diamonds = document.getElementById('diamonds');
-  const coins = document.getElementById('coins');
-  if (info) {
-    img.src = info.image;
-    desc.innerHTML = info.description;
-    diamonds.innerHTML = info.diamonds;
-    coins.innerHTML = info.coins;
-  } 
-});
+document
+  .querySelector("#commonSection select")
+  .addEventListener("change", function () {
+    const selected = this.value;
+    const info = monsterInfo[selected];
+    const img = document.getElementById("monsterImage");
+    const desc = document.getElementById("monsterDescription");
+    const diamonds = document.getElementById("diamonds");
+    const coins = document.getElementById("coins");
+    if (info) {
+      img.src = info.image;
+      desc.innerHTML = info.description;
+      diamonds.innerHTML = info.diamonds;
+      coins.innerHTML = info.coins;
+    }
+  });
 
 // Event listener for the rare section
-document.querySelector('#rareSection select').addEventListener('change', function () {
-  const selected = this.value;
-  const info = monsterInfo[selected];
-  console.log(selected);
-  console.log(info);
-  const img = document.getElementById('monsterImageRare');
-  const desc = document.getElementById('monsterDescriptionRare');
-  const diamonds = document.getElementById('diamondsRare');
-  const coins = document.getElementById('coinsRare');
-  
-  if (info) {
-    console.log(info.image);
-    img.src = info.image;
-    desc.innerHTML = info.description;
-    diamonds.innerHTML = info.diamonds;
-    coins.innerHTML = info.coins;
-  }
-});
+document
+  .querySelector("#rareSection select")
+  .addEventListener("change", function () {
+    const selected = this.value;
+    const info = monsterInfo[selected];
+    console.log(selected);
+    console.log(info);
+    const img = document.getElementById("monsterImageRare");
+    const desc = document.getElementById("monsterDescriptionRare");
+    const diamonds = document.getElementById("diamondsRare");
+    const coins = document.getElementById("coinsRare");
+
+    if (info) {
+      console.log(info.image);
+      img.src = info.image;
+      desc.innerHTML = info.description;
+      diamonds.innerHTML = info.diamonds;
+      coins.innerHTML = info.coins;
+    }
+  });
 
 // Event listener for the epic section
-document.querySelector('#epicSection select').addEventListener('change', function () {
-  const selected = this.value;
-  const info = monsterInfo[selected];
+document
+  .querySelector("#epicSection select")
+  .addEventListener("change", function () {
+    const selected = this.value;
+    const info = monsterInfo[selected];
 
-  const img = document.getElementById('monsterImageEpic');
-  const desc = document.getElementById('monsterDescriptionEpic');
-  const diamonds = document.getElementById('diamondsEpic');
-  const coins = document.getElementById('coinsEpic');
+    const img = document.getElementById("monsterImageEpic");
+    const desc = document.getElementById("monsterDescriptionEpic");
+    const diamonds = document.getElementById("diamondsEpic");
+    const coins = document.getElementById("coinsEpic");
 
-  if (info) {
-    img.src = info.image;
-    desc.innerHTML = info.description;
-    diamonds.innerHTML = info.diamonds;
-    coins.innerHTML = info.coins;
-  }
-});
-
+    if (info) {
+      img.src = info.image;
+      desc.innerHTML = info.description;
+      diamonds.innerHTML = info.diamonds;
+      coins.innerHTML = info.coins;
+    }
+  });
 
 function simulateMonsterSearch(monsterName) {
   console.log(monsterName);
   searchMonsterInput.value = monsterInfo[monsterName].name;
   console.log(searchMonsterInput.value);
-  searchMonsterInput.dispatchEvent(new Event('input'));
+  searchMonsterInput.dispatchEvent(new Event("input"));
 }
 
 function loadInitImg() {
-    const img = document.getElementById('monsterImage');
-    const imgRare = document.getElementById('monsterImageRare');
-    const imgEpic = document.getElementById('monsterImageEpic');
-    const defaultMonsterImg = 'images/Monster_Avatars/Potbelly.png';
-    const defaultMonsterImgRare = 'images/Monster_Avatars/Potbelly - Rare.png';
-    const defaultMonsterImgEpic = 'images/Monster_Avatars/Potbelly - Epic.png';
-    const diamonds = document.getElementById('diamonds');
-    const coins = document.getElementById('coins');
-    const diamondsRare = document.getElementById('diamondsRare');
-    const coinsRare = document.getElementById('coinsRare');
-    const diamondsEpic = document.getElementById('diamondsEpic');
-    const coinsEpic = document.getElementById('coinsEpic');
+  const img = document.getElementById("monsterImage");
+  const imgRare = document.getElementById("monsterImageRare");
+  const imgEpic = document.getElementById("monsterImageEpic");
+  const defaultMonsterImg = "images/Monster_Avatars/Potbelly.png";
+  const defaultMonsterImgRare = "images/Monster_Avatars/Potbelly - Rare.png";
+  const defaultMonsterImgEpic = "images/Monster_Avatars/Potbelly - Epic.png";
+  const diamonds = document.getElementById("diamonds");
+  const coins = document.getElementById("coins");
+  const diamondsRare = document.getElementById("diamondsRare");
+  const coinsRare = document.getElementById("coinsRare");
+  const diamondsEpic = document.getElementById("diamondsEpic");
+  const coinsEpic = document.getElementById("coinsEpic");
 
-    img.src = defaultMonsterImg; 
-    diamonds.innerHTML = '0';
-    coins.innerHTML = '250'; 
-    imgRare.src = defaultMonsterImgRare; 
-    diamondsRare.innerHTML = '75';
-    coinsRare.innerHTML = '0'; 
-    imgEpic.src = defaultMonsterImgEpic; 
-    diamondsEpic.innerHTML = '250';
-    coinsEpic.innerHTML = '0'; 
+  img.src = defaultMonsterImg;
+  diamonds.innerHTML = "0";
+  coins.innerHTML = "250";
+  imgRare.src = defaultMonsterImgRare;
+  diamondsRare.innerHTML = "75";
+  coinsRare.innerHTML = "0";
+  imgEpic.src = defaultMonsterImgEpic;
+  diamondsEpic.innerHTML = "250";
+  coinsEpic.innerHTML = "0";
 }
 
 loadInitImg();
 
-
-const islandDropdown = document.getElementById('islandDropdown');
-const prevButton = document.getElementById('prevPage');
-const nextButton = document.getElementById('nextPage');
+const islandDropdown = document.getElementById("islandDropdown");
+const prevButton = document.getElementById("prevPage");
+const nextButton = document.getElementById("nextPage");
 
 // The full list of islands (this is necessary for pagination)
 const allIslands = [
-    { value: "plant", text: "Plant Island" },
-    { value: "cold", text: "Cold Island" },
-    { value: "air", text: "Air Island" },
-    { value: "water", text: "Water Island" },
-    { value: "earth", text: "Earth Island" },
-    { value: "fire Haven", text: "Fire Haven" },
-    { value: "fire Oasis", text: "Fire Oasis" },
-    { value: "light", text: "Light Island" },
-    { value: "psychic", text: "Psychic Island" },
-    { value: "faerie", text: "Faerie Island" },
-    { value: "bone", text: "Bone Island" },
-    { value: "shugabush", text: "Shugabush Island" },
-    { value: "ethereal", text: "Ethereal Island" },
-    { value: "mythical", text: "Mythical Island" },
-    { value: "magical sanctum", text: "Magical Sanctum" },
-    { value: "seasonal shanty", text: "Seasonal Shanty" },
-    { value: "amber", text: "Amber Island" },
-    { value: "wublin", text: "Wublin Island" },
-    { value: "celestial", text: "Celestial Island" },
-    { value: "Ethereal Workshop", text: "Ethereal Workshop" },
-    { value: "Plasma Islet", text: "Plasma Islet" }
+  { value: "plant", text: "Plant Island" },
+  { value: "cold", text: "Cold Island" },
+  { value: "air", text: "Air Island" },
+  { value: "water", text: "Water Island" },
+  { value: "earth", text: "Earth Island" },
+  { value: "fire Haven", text: "Fire Haven" },
+  { value: "fire Oasis", text: "Fire Oasis" },
+  { value: "light", text: "Light Island" },
+  { value: "psychic", text: "Psychic Island" },
+  { value: "faerie", text: "Faerie Island" },
+  { value: "bone", text: "Bone Island" },
+  { value: "shugabush", text: "Shugabush Island" },
+  { value: "ethereal", text: "Ethereal Island" },
+  { value: "mythical", text: "Mythical Island" },
+  { value: "magical sanctum", text: "Magical Sanctum" },
+  { value: "seasonal shanty", text: "Seasonal Shanty" },
+  { value: "amber", text: "Amber Island" },
+  { value: "wublin", text: "Wublin Island" },
+  { value: "celestial", text: "Celestial Island" },
+  { value: "Ethereal Workshop", text: "Ethereal Workshop" },
+  { value: "Plasma Islet", text: "Plasma Islet" },
 ];
 
 const islandsPerPage = 5;
@@ -7510,103 +8280,111 @@ let currentPage = 0; // Starts at the first "page" of islands
 const ITEMS_PER_PAGE = 5;
 
 function renderIslands() {
-    // Clear existing options
-    islandDropdown.innerHTML = '';
+  // Clear existing options
+  islandDropdown.innerHTML = "";
 
-    const startIndex = currentPage * islandsPerPage;
-    const endIndex = Math.min(startIndex + islandsPerPage, allIslands.length);
+  const startIndex = currentPage * islandsPerPage;
+  const endIndex = Math.min(startIndex + islandsPerPage, allIslands.length);
 
-    // Add options for the current page
-    for (let i = startIndex; i < endIndex; i++) {
-        const option = document.createElement('option');
-        option.value = allIslands[i].value;
-        option.textContent = allIslands[i].text;
-        islandDropdown.appendChild(option);
-    }
+  // Add options for the current page
+  for (let i = startIndex; i < endIndex; i++) {
+    const option = document.createElement("option");
+    option.value = allIslands[i].value;
+    option.textContent = allIslands[i].text;
+    islandDropdown.appendChild(option);
+  }
 
-    // Update button states
-    updateButtons();
+  // Update button states
+  updateButtons();
 }
 
 function updateButtons() {
-    prevButton.disabled = currentPage === 0;
-    nextButton.disabled = (currentPage + 1) * islandsPerPage >= allIslands.length;
+  prevButton.disabled = currentPage === 0;
+  nextButton.disabled = (currentPage + 1) * islandsPerPage >= allIslands.length;
 }
 
-    prevButton.addEventListener('click', () => {
-    let islandImage = document.getElementById('islandImg'); 
-    if (currentPage > 0) {
-        currentPage--;
-        renderIslands();
-        islandDropdown.selectedIndex = 0; 
+prevButton.addEventListener("click", () => {
+  let islandImage = document.getElementById("islandImg");
+  if (currentPage > 0) {
+    currentPage--;
+    renderIslands();
+    islandDropdown.selectedIndex = 0;
 
-        if(islandDropdown[0].innerHTML === 'Fire Haven') {
-          const defaultSelectedIsland = 'fire Haven';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Fire Haven'
-        } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
-          const defaultSelectedIsland = 'seasonal shanty';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Seasonal Shanty'
-        } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
-          const defaultSelectedIsland = 'Plasma Islet';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Plasma Islet'
-        } else if (islandDropdown[0].innerHTML === 'Bone Island') {
-          const defaultSelectedIsland = 'bone';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Bone Island'
-        } else if(islandDropdown[0].innerHTML === 'Plant Island') {
-          const defaultSelectedIsland = 'plant';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Plant Island'
-        }
-        
-        if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
-          islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`; 
-        } else {
-          islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`; 
-        }
+    if (islandDropdown[0].innerHTML === "Fire Haven") {
+      const defaultSelectedIsland = "fire Haven";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Fire Haven";
+    } else if (islandDropdown[0].innerHTML === "Seasonal Shanty") {
+      const defaultSelectedIsland = "seasonal shanty";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Seasonal Shanty";
+    } else if (islandDropdown[0].innerHTML === "Plasma Islet") {
+      const defaultSelectedIsland = "Plasma Islet";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Plasma Islet";
+    } else if (islandDropdown[0].innerHTML === "Bone Island") {
+      const defaultSelectedIsland = "bone";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Bone Island";
+    } else if (islandDropdown[0].innerHTML === "Plant Island") {
+      const defaultSelectedIsland = "plant";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Plant Island";
     }
+
+    if (
+      islandDropdown[0].innerHTML === "Fire Haven" ||
+      islandDropdown[0].innerHTML === "Seasonal Shanty" ||
+      islandDropdown[0].innerHTML === "Plasma Islet"
+    ) {
+      islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`;
+    } else {
+      islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`;
+    }
+  }
 });
 
-nextButton.addEventListener('click', () => {
-    let islandImage = document.getElementById('islandImg'); 
-    let islandName = document.getElementById('islandName');
-    const totalPages = Math.ceil(allIslands.length / ITEMS_PER_PAGE);
-    if (currentPage < totalPages - 1) {
-        currentPage++;
-        renderIslands();
-        islandDropdown.selectedIndex = 0; 
+nextButton.addEventListener("click", () => {
+  let islandImage = document.getElementById("islandImg");
+  let islandName = document.getElementById("islandName");
+  const totalPages = Math.ceil(allIslands.length / ITEMS_PER_PAGE);
+  if (currentPage < totalPages - 1) {
+    currentPage++;
+    renderIslands();
+    islandDropdown.selectedIndex = 0;
 
-        if(islandDropdown[0].innerHTML === 'Fire Haven') {
-          const defaultSelectedIsland = 'fire Haven';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Fire Haven'
-        } else if (islandDropdown[0].innerHTML === 'Seasonal Shanty') {
-          const defaultSelectedIsland = 'seasonal shanty';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Seasonal Shanty'
-        } else if (islandDropdown[0].innerHTML === 'Plasma Islet') {
-          const defaultSelectedIsland = 'Plasma Islet';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Plasma Islet'
-        } else if (islandDropdown[0].innerHTML === 'Bone Island') {
-          const defaultSelectedIsland = 'bone';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Bone Island'
-        } else if(islandDropdown[0].innerHTML === 'Plant Island') {
-          const defaultSelectedIsland = 'plant';
-          populateMonsterSections(defaultSelectedIsland);
-          islandName.innerHTML = 'Plant Island'
-        }
-
-        if(islandDropdown[0].innerHTML === 'Fire Haven' || islandDropdown[0].innerHTML === 'Seasonal Shanty' || islandDropdown[0].innerHTML === 'Plasma Islet') {
-          islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`; 
-        } else {
-          islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`; 
-        }
+    if (islandDropdown[0].innerHTML === "Fire Haven") {
+      const defaultSelectedIsland = "fire Haven";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Fire Haven";
+    } else if (islandDropdown[0].innerHTML === "Seasonal Shanty") {
+      const defaultSelectedIsland = "seasonal shanty";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Seasonal Shanty";
+    } else if (islandDropdown[0].innerHTML === "Plasma Islet") {
+      const defaultSelectedIsland = "Plasma Islet";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Plasma Islet";
+    } else if (islandDropdown[0].innerHTML === "Bone Island") {
+      const defaultSelectedIsland = "bone";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Bone Island";
+    } else if (islandDropdown[0].innerHTML === "Plant Island") {
+      const defaultSelectedIsland = "plant";
+      populateMonsterSections(defaultSelectedIsland);
+      islandName.innerHTML = "Plant Island";
     }
+
+    if (
+      islandDropdown[0].innerHTML === "Fire Haven" ||
+      islandDropdown[0].innerHTML === "Seasonal Shanty" ||
+      islandDropdown[0].innerHTML === "Plasma Islet"
+    ) {
+      islandImage.src = `images/islands/${islandDropdown[0].innerHTML} Island.png`;
+    } else {
+      islandImage.src = `images/islands/${islandDropdown[0].innerHTML}.png`;
+    }
+  }
 });
 // Initial render when the page loads
 renderIslands();
@@ -7614,20 +8392,29 @@ renderIslands();
 // const slideButtonChecklist = document.getElementById('openChecklistButton');
 
 function openChecklist() {
-  const checklistMenu = document.getElementById('checklistMenu');
-  checklistMenu.classList.toggle('open');
+  const checklistMenu = document.getElementById("checklistMenu");
+  checklistMenu.classList.toggle("open");
 }
 
-const allIslandsNames = ["Plant Island", "Cold Island", "Air Island", "Water Island", "Earth Island", "Fire Haven", "Light Island", "Faerie Island"]; // Expand as needed
+const allIslandsNames = [
+  "Plant Island",
+  "Cold Island",
+  "Air Island",
+  "Water Island",
+  "Earth Island",
+  "Fire Haven",
+  "Light Island",
+  "Faerie Island",
+]; // Expand as needed
 const islandColors = {
-  "Plant Island": "#a8d5a3",    // Softer medium green
-  "Cold Island": "#a9d0ff",    // Calm light blue
-  "Air Island": "#f7f3b3",     // Gentle pastel yellow
-  "Water Island": "#70c8d6",   // Crisp aqua blue
-  "Earth Island": "#d9b38c",   // Warm sandy brown
-  "Fire Haven": "#ffb085",     // Warm coral orange
-  "Light Island": "#fff3b0",   // Soft buttery yellow
-  "Faerie Island": "#cda4e8"   // Muted lavender purple
+  "Plant Island": "#a8d5a3", // Softer medium green
+  "Cold Island": "#a9d0ff", // Calm light blue
+  "Air Island": "#f7f3b3", // Gentle pastel yellow
+  "Water Island": "#70c8d6", // Crisp aqua blue
+  "Earth Island": "#d9b38c", // Warm sandy brown
+  "Fire Haven": "#ffb085", // Warm coral orange
+  "Light Island": "#fff3b0", // Soft buttery yellow
+  "Faerie Island": "#cda4e8", // Muted lavender purple
 };
 
 let visibleIslands = allIslandsNames.slice(0, 5); // First 5 shown
@@ -7639,11 +8426,14 @@ function renderChecklist() {
   const monsterRows = document.getElementById("monster-rows");
 
   // Clear previous content
-  headerRow.innerHTML = '';
-  monsterRows.innerHTML = '';
+  headerRow.innerHTML = "";
+  monsterRows.innerHTML = "";
 
   // Set CSS variable for grid columns count
-  document.documentElement.style.setProperty('--visible-islands-count', visibleIslands.length);
+  document.documentElement.style.setProperty(
+    "--visible-islands-count",
+    visibleIslands.length
+  );
 
   // Add "Island Names:" label cell in header row
   const labelCell = document.createElement("div");
@@ -7655,7 +8445,7 @@ function renderChecklist() {
   const svgNS = "http://www.w3.org/2000/svg";
 
   // Add visible island headers with progress rings and text
-  visibleIslands.forEach(island => {
+  visibleIslands.forEach((island) => {
     const cell = document.createElement("div");
     cell.className = "cell";
     cell.style.backgroundColor = islandColors[island] || "#fff";
@@ -7715,20 +8505,20 @@ function renderChecklist() {
 
   // Build a set of monsters visible on the visible islands
   const visibleMonsters = new Set();
-  visibleIslands.forEach(islandName => {
+  visibleIslands.forEach((islandName) => {
     const key = islandName.toLowerCase().split(" ")[0];
     const data = islandData[key];
     if (!data) return;
 
-    ["common", "rare", "epic"].forEach(rarity => {
+    ["common", "rare", "epic"].forEach((rarity) => {
       if (data[rarity]) {
-        data[rarity].forEach(monster => visibleMonsters.add(monster));
+        data[rarity].forEach((monster) => visibleMonsters.add(monster));
       }
     });
   });
 
   // Render each monster row
-  Object.values(monsterInfo).forEach(monster => {
+  Object.values(monsterInfo).forEach((monster) => {
     if (!visibleMonsters.has(monster.name)) return;
 
     const row = document.createElement("div");
@@ -7741,7 +8531,7 @@ function renderChecklist() {
     row.appendChild(monsterCell);
 
     // For each visible island, add checkbox or "Not Available" text
-    visibleIslands.forEach(island => {
+    visibleIslands.forEach((island) => {
       const cell = document.createElement("div");
       cell.className = "cell";
       cell.style.backgroundColor = islandColors[island] || "#fff";
@@ -7750,8 +8540,10 @@ function renderChecklist() {
       const islandDataEntry = islandData[islandKey];
       let monsterPresent = false;
       if (islandDataEntry) {
-        monsterPresent = ["common", "rare", "epic"].some(rarity =>
-          islandDataEntry[rarity] && islandDataEntry[rarity].includes(monster.name)
+        monsterPresent = ["common", "rare", "epic"].some(
+          (rarity) =>
+            islandDataEntry[rarity] &&
+            islandDataEntry[rarity].includes(monster.name)
         );
       }
 
@@ -7783,7 +8575,7 @@ function renderChecklist() {
   function updateProgress() {
     // Calculate total monsters per island (only monsters present)
     const islandTotals = {};
-    visibleIslands.forEach(island => {
+    visibleIslands.forEach((island) => {
       const key = island.toLowerCase().split(" ")[0];
       const data = islandData[key];
       if (!data) {
@@ -7791,7 +8583,7 @@ function renderChecklist() {
         return;
       }
       let count = 0;
-      ["common", "rare", "epic"].forEach(rarity => {
+      ["common", "rare", "epic"].forEach((rarity) => {
         if (data[rarity]) count += data[rarity].length;
       });
       islandTotals[island] = count;
@@ -7799,7 +8591,7 @@ function renderChecklist() {
 
     // Calculate checked monsters per island
     const islandCheckedCounts = {};
-    visibleIslands.forEach(island => {
+    visibleIslands.forEach((island) => {
       islandCheckedCounts[island] = 0;
     });
 
@@ -7837,7 +8629,6 @@ function renderChecklist() {
   updateProgress();
 }
 
-
 // Advance islands
 document.getElementById("next-island").addEventListener("click", () => {
   startIndex = (startIndex + 1) % allIslandsNames.length;
@@ -7845,17 +8636,23 @@ document.getElementById("next-island").addEventListener("click", () => {
   if (end <= allIslandsNames.length) {
     visibleIslands = allIslandsNames.slice(startIndex, end);
   } else {
-    visibleIslands = allIslandsNames.slice(startIndex).concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+    visibleIslands = allIslandsNames
+      .slice(startIndex)
+      .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
   }
   renderChecklist();
 });
 
 document.getElementById("previous-island").addEventListener("click", () => {
-  startIndex = (startIndex - 1 + allIslandsNames.length) % allIslandsNames.length;
+  startIndex =
+    (startIndex - 1 + allIslandsNames.length) % allIslandsNames.length;
   const end = startIndex + 5;
-  visibleIslands = end <= allIslandsNames.length
-    ? allIslandsNames.slice(startIndex, end)
-    : allIslandsNames.slice(startIndex).concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+  visibleIslands =
+    end <= allIslandsNames.length
+      ? allIslandsNames.slice(startIndex, end)
+      : allIslandsNames
+          .slice(startIndex)
+          .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
   renderChecklist();
 });
 
