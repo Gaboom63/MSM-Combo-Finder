@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="favicon.txt" type="image/png">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="ideas/favicon.txt" type="image/png">
     <link rel="icon" type="image/x-icon" href="images/important/mammoticon.png">
     <title>MSM Combo Finder</title>
 </head>
@@ -36,6 +36,171 @@
         <button id="breedButton">Breed Or Search</button>
         <button id="resetButton">Reset</button>
     </div>
+    <div id="slideButton">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <div id="slidePanel">
+        <div id="checklistMenu">
+            <div style="position:absolute; top: 10px;" class="container">
+
+                <h1 id="h1-checklist">Monster Checklist</h1>
+
+                <div class="checklist">
+                    <div class="row header" id="header-row">
+
+                        <div class="cell label">Island Names:</div>
+
+                        <!-- JS will insert island names here -->
+                    </div>
+                    <div class="controls">
+                    <button id="previous-island"><<</button>
+                    <button id="next-island">>></button>
+                    </div>
+                    <div id="monster-rows">
+                        <!-- JS will insert monster rows here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="iconContainer">
+            <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
+            <div id="textContainer" style="background-color: mediumpurple">
+                <div id="hoverText">This part specifically is <b>NOT FINISHED!</b> yet. It is still being worked on, so
+                    if things aren't fully working or monsters are missing don't be alarmed.</a></div>
+            </div>
+        </div>
+        <div id="panelContent">
+
+            <b>
+                <h1 id="title">My Singing Monsters <br> Checklist</h1>
+            </b>
+            <div>
+                <!-- <h1 id="islandName"></h1> -->
+                <div id="islandContainer">
+                    <img id="islandNameImg" src="images/Titles/Plant Island.png" style="position: absolute; width: 240px; height: 135px; top: 90px; left: 85px;">
+                    <img id="islandImg" src="images/islands/Plant Island.png">
+                    <select id="islandDropdown"></select>
+                    <button id="prevPage">Previous</button>
+                    <button id="nextPage">Next</button>
+                </div>
+            </div>
+
+
+            <div id="checklist">
+
+                <h1 id="monsterNameList">Monster List:</h1>
+                <select id="monsterTypeDropdown">
+                    <option value="">-- Choose a type --</option>
+                    <option value="common">Common</option>
+                    <option value="rare">Rare</option>
+                    <option value="epic">Epic</option>
+                </select>
+
+                <!-- Reveal sections -->
+                <div id="commonSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImage" src="" alt="Monster Image">
+                    <div id="monsterStats">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamonds" style="display: inline; margin-left: 5px; vertical-align: middle;">10
+                                </p>
+                            </div>
+                            <div id="Relic" style="display: flex; align-items: center;">
+                                <img id="relicImg" style="position: relative; left: 170%; width: 48.75px; height: 59px"
+                                    src="images/important/Relic.png" style="vertical-align: middle;">
+                                <p id="relics" style="position: relative; left: 180%; text-align: right;">0</p>
+                            </div>
+                            <div id="StarPower" style="display: flex; align-items: center;">
+                                <img id="starImg" style="position: relative; left: 50%; width: 67px; height: 62px"
+                                    src="images/important/Starpower.png" style="vertical-align: middle;">
+                                <p id="star_power" style="position: relative; left: 60%; text-align: right;">0</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img id="coinImg" src="images/important/Coins.png"
+                                    style="position: relative; left: 150%;">
+                                <p id="coins" style="position: relative; left: 160%; text-align: right;">10</p>
+                            </div>
+
+                        </div>
+                        <p id="monsterDescription">Description will go here.</p>
+                    </div>
+                </div>
+
+                <div id="rareSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImageRare" src="" alt="Monster Image">
+                    <div id="monsterStatsRare">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamondsRare" style="display: inline; margin-left: 5px; vertical-align: middle;">
+                                    10</p>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <img id="RarecoinImg" src="images/important/Coins.png"
+                                    style="position: relative; left: 170%;">
+                                <p id="coinsRare" style="position: relative; left: 180%; text-align: right;">10</p>
+                            </div>
+                            <div id="StarPower" style="display: flex; align-items: center;">
+                                <img id="RarestarImg" style="position: relative; left: 50%; width: 67px; height: 62px"
+                                    src="images/important/Starpower.png" style="vertical-align: middle;">
+                                <p id="rare_star_power" style="position: relative; left: 60%; text-align: right;">0</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img id="RarerelicImg" src="images/important/Relic.png"
+                                    style="position: relative; left: 170%; width: 48.75px; height: 59px">
+                                <p id="relicsRare" style="position: relative; left: 180%; text-align: right;">0</p>
+                            </div>
+                        </div>
+                        <p id="monsterDescriptionRare">Description will go here.</p>
+                    </div>
+                </div>
+
+                <div id="epicSection" class="sliding-panel">
+                    <select id="monsterSelection">
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
+                    </select>
+                    <img id="monsterImageEpic" src="" alt="Monster Image">
+                    <div id="monsterStatsEpic">
+                        <div style="display: flex;">
+                            <div id="Diamonds" style="display: flex; align-items: center;">
+                                <img src="images/important/Diamonds.png" style="vertical-align: middle;">
+                                <p id="diamondsEpic" style="display: inline; margin-left: 5px; vertical-align: middle;">
+                                    10</p>
+                            </div>
+                            <div id="StarPower" style="display: flex; align-items: center;">
+                                <img id="EpicstarImg" style="position: relative; left: 50%; width: 67px; height: 62px"
+                                    src="images/important/Starpower.png" style="vertical-align: middle;">
+                                <p id="epic_star_power" style="position: relative; left: 60%; text-align: right;">0</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img id="EpiccoinImg" src="images/important/Coins.png"
+                                    style="position: relative; left: 170%;">
+                                <p id="coinsEpic" style="position: relative; left: 180%; text-align: right;">10</p>
+                            </div>
+
+                            <div style="display: flex; align-items: center;">
+                                <img id="EpicrelicImg" src="images/important/Relic.png"
+                                    style="position: relative; left: 170%; width: 48.75px; height: 59px">
+                                <p id="relicsEpic" style="position: relative; left: 180%; text-align: right;">0</p>
+                            </div>
+                        </div>
+                        <p id="monsterDescriptionEpic">Description will go here.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <div id="suggestions1" class="suggestions"></div>
     <div id="suggestions2" class="suggestions"></div>
@@ -51,11 +216,8 @@
         </div>
         <div id="statsContainer" style="color: rgb(182, 6, 6);"></div>
     </div>
-
-    <script src="monster.js"></script>
+    <script src="JS/monster.js"></script>
+    <!-- <script src="JS/musicMenu.js"></script> -->
 </body>
-
-
-
 
 </html>
