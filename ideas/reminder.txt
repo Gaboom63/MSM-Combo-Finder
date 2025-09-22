@@ -14,3 +14,8 @@ Yes it has been fixed.
 //      coins: ,
 //        description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
     },
+
+How did I fix the images not correctly moving? 
+
+I switched back over to using ixels instead of percents, and vh / vw. Maybe not the most 
+practical soulution, but the fix needed for now :)
