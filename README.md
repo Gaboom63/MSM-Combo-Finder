@@ -1,6 +1,6 @@
 # MSM-Combo-Finder
-UPDATE V3 (5/8/25):
-When Searching For A Monster You Can Now Hear It's Song (Snippet)!
+UPDATE V4 (9/22/25):
+Added The Slide Menu To The Right With Checklist, Menus, Etc! :)
 -------------------
 A easy to use, but packed with information monster breeding tool.  This is still in progress please give me feedback by adding an issue! <br> <br>
 **FOR ONLINE USE**<br><br> Use the link on the right side!<br><br>
@@ -10,4 +10,4 @@ A easy to use, but packed with information monster breeding tool.  This is still
 <br><br>
 As of now it has been updated to include **Anniversary Month 2025**! 
 
-Currently Working On HUGE New Editions To This Tool, Should Be Done In A Few Days Tops! (9/9/25)
+New Updates Finally Published! Working on some new stuff so look out for that! Updated to: (9/22/25)
