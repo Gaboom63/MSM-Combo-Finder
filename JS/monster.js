@@ -13070,6 +13070,7 @@ function renderChecklist() {
         // Update state and progress when checkbox changes
         checkbox.addEventListener("change", () => {
           checkboxStates[key] = checkbox.checked;
+          saveCheckboxStates();   // <-- Save to localStorage
           updateProgress();
         });
 
@@ -13181,4 +13182,20 @@ document.getElementById("previous-island").addEventListener("click", () => updat
 
 renderChecklist();
 
-// New Content Here! 
+// ---------------- LOCAL STORAGE HELPERS ----------------
+function saveCheckboxStates() {
+  localStorage.setItem("checkboxStates", JSON.stringify(checkboxStates));
+}
+
+function loadCheckboxStates() {
+  const saved = localStorage.getItem("checkboxStates");
+  if (saved) {
+    Object.assign(checkboxStates, JSON.parse(saved));
+  }
+}
+
+// Load states immediately on page load
+loadCheckboxStates();
+
+// Now render checklist with restored states + rings
+renderChecklist();
