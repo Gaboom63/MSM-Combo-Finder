@@ -784,6 +784,71 @@ const raremonsters = [
       epic: "",
     },
   },
+  {
+    name: "Rare Yooreek",
+    image: {
+      normal: "images/bm/Rare Yooreek.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Success: 1 day 11 hr",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Meebkin",
+    image: {
+      normal: "images/bm/Rare Meebkin.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Success: 1 day,  11 hours",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Rare Blarret",
+    image: {
+      normal: "images/bm/Rare Blarret.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Success: 1 day 11 hr",
+      rare: "",
+      epic: ""
+    }
+},
+{
+    name: "Rare Gaddzooks",
+    image: {
+      normal: "images/bm/Rare Gaddzooks.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Success: 1 day 11 hr",
+      rare: "",
+      epic: ""
+    }
+},
+{
+    name: "Rare Auglur",
+    image: {
+      normal: "images/bm/Rare Auglur.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Success: 1 day 11 hr",
+      rare: "",
+      epic: ""
+    }
+},
 ];
 
 const epicmonsters = [
@@ -2103,7 +2168,7 @@ const epicmonsters = [
 ];
 
 /*
-   {
+{
     name: "",
     image: {
       normal: "images/bm/",
@@ -2115,7 +2180,7 @@ const epicmonsters = [
       rare: "",
       epic: ""
     }
-  },
+},
 */
 const monsters = [
   {
@@ -4282,7 +4347,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr",
       epic: "",
     },
   },
@@ -4296,7 +4361,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr",
       epic: "",
     },
   },
@@ -4310,7 +4375,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr",
       epic: "",
     },
   },
@@ -4324,7 +4389,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr",
       epic: "",
     },
   },
@@ -4338,7 +4403,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr",
       epic: "",
     },
   },
@@ -7125,11 +7190,11 @@ document
     if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus") {
       islandImg.src = `images/islands/${capitalized} Island.png`;
       islandTitleImg.src = `images/Titles/${capitalized}.png`;
-      
-      if(value === "oasis") {
+
+      if (value === "oasis") {
         islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
         islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
-      } else if(value === "haven") {
+      } else if (value === "haven") {
         islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
         islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
       } else if (value === "nexus") {
@@ -10890,6 +10955,34 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_yooreek') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
+  rare_meebkin: {
+    name: "Rare Meebkin",
+    image: "images/Monster_Avatars/Meebkin - Rare.png",
+    diamonds: 3100,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_meebkin') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  rare_blarret: {
+    name: "Rare Blarret",
+    image: "images/Monster_Avatars/Blarret - Rare.png",
+    diamonds: 3200,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_blarret') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  rare_gaddzooks: {
+    name: "Rare Gaddzooks",
+    image: "images/Monster_Avatars/Gaddzooks - Rare.png",
+    diamonds: 3300,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_gaddzooks') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  rare_auglur: {
+    name: "Rare Auglur",
+    image: "images/Monster_Avatars/Auglur - Rare.png",
+    diamonds: 3400,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_auglur') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
   lowb: {
     name: "Lowb",
     image: "images/Monster_Avatars/Lowb.png",
@@ -12247,6 +12340,13 @@ const islandData = {
       "Rhysmuth",
       "Oogiddy",
       "BeMeebEth"
+    ],
+    rare: [
+      "Rare Yooreek",
+      "Rare Meebkin",
+      "Rare Blarret",
+      "Rare Gaddzooks",
+      "Rare Auglur"
     ]
   },
   plasma: {
@@ -12801,7 +12901,7 @@ const allIslands = [
 ];
 
 const islandsPerPage = 5;
-let currentPage = 0; 
+let currentPage = 0;
 const ITEMS_PER_PAGE = 5;
 
 function renderIslands() {
@@ -12907,7 +13007,7 @@ const allIslandsNames = [
   "Mech Islet",
   "Gold Island",
   "Magical Nexus"
-]; 
+];
 
 const islandColors = {
   "Plant Island": "#a8d5a3",
@@ -12933,10 +13033,10 @@ const islandColors = {
   "Plasma Islet": "#d6aaff",
   "Mech Islet": "#b2cedcff",
   "Gold Island": "#bda71eff",
-  "Magical Nexus":  "#064f73ff"
+  "Magical Nexus": "#064f73ff"
 };
 
-let visibleIslands = allIslandsNames.slice(0, 5); 
+let visibleIslands = allIslandsNames.slice(0, 5);
 let startIndex = 0;
 const checkboxStates = {};
 
@@ -13145,7 +13245,7 @@ function renderChecklist() {
 // Advance islands
 function updateChecklistWithAnimation(direction = 1) {
   const container = document.getElementById("header-row");
-  
+
   // Trigger fade-out
   container.classList.add("fade-out");
 
@@ -13158,8 +13258,8 @@ function updateChecklistWithAnimation(direction = 1) {
       end <= allIslandsNames.length
         ? allIslandsNames.slice(startIndex, end)
         : allIslandsNames
-            .slice(startIndex)
-            .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
+          .slice(startIndex)
+          .concat(allIslandsNames.slice(0, end - allIslandsNames.length));
 
     // Replace contents AFTER old has faded out
     renderChecklist();

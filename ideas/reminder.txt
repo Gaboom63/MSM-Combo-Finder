@@ -5,7 +5,7 @@ Not sure what the top text means fully, but I believe this is false now.
 
 Yes it has been fixed. 
 
-	https://drive.google.com/drive/folders/0B7Dps0A2pdxWUVJfM1RQOGhUNE0?resourcekey=0-IFUSOOhRrpDGi3FTMvskag 
+https://drive.google.com/drive/folders/0B7Dps0A2pdxWUVJfM1RQOGhUNE0?resourcekey=0-IFUSOOhRrpDGi3FTMvskag 
 
 //    "": {
 //      name: "",

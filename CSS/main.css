@@ -522,6 +522,7 @@ input:focus::placeholder {
     background-color: rgba(72, 3, 148, 0.7);
     z-index: 1;
     border-radius: 5px;
+    scrollbar-width: none;
 }
 
 #monsterNameList {
