@@ -1,4 +1,8 @@
-  <div id="slideButton">
+THIS IS OUTDATED AS THIS IS NOW FULLY IMPLEMENTED! 
+
+Original code archived here:
+
+<div id="slideButton">
         <i class="fas fa-arrow-left"></i>
     </div>
     <div id="slidePanel">
@@ -144,4 +148,27 @@
             </div>
 
         </div>
+    </div>
+
+
+THIS IS STILL VALID: 
+
+    <div id="musicSlideButton">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+    <div id="musicSlidePanel">
+        <b>
+            <h1 id="title">My Singing Monsters <br>Music Player</h1>
+        </b>
+        <div class="record-player">
+            <div class="vinyl left">
+                <div class="label"></div>
+            </div>
+            <div class="vinyl right">
+                <div class="label"></div>
+            </div>
+        </div>
+
+        <!-- <audio id="musicPlayer" src="sounds/Anglow_Memory_Sample.mp3.mpeg"></audio> -->
+        <!-- <button id="playMusic">Play / Pause</button> -->
     </div>
