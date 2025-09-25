@@ -18,7 +18,7 @@
     <div id="iconContainer">
         <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
         <div id="textContainer">
-            <div id="hoverText">This Is Still In Progress / Being Updated! <br> Please Share Your Thoughts <br> On The <a
+            <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The <a
                     href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a
                     href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
         </div>
@@ -54,8 +54,9 @@
                         <!-- JS will insert island names here -->
                     </div>
                     <div class="controls">
-                    <button id="previous-island"><<</button>
-                    <button id="next-island">>></button>
+                        <button id="previous-island">
+                            <<</button>
+                                <button id="next-island">>></button>
                     </div>
                     <div id="monster-rows">
                         <!-- JS will insert monster rows here -->
@@ -67,7 +68,8 @@
         <div id="iconContainer">
             <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
             <div id="textContainer" style="background-color: mediumpurple">
-                <div id="hoverText">This is a <b>NEW</b> feature added by me. If there are UI Bugs please make a bug report on the <a href="https://github.com/Fighterhen63/MSM-Combo-Finder">github</a> <br> Have Fun! :)</div>
+                <div id="hoverText">This part specifically is <b>NOT FINISHED!</b> yet. It is still being worked on, so
+                    if things aren't fully working or monsters are missing don't be alarmed.</a></div>
             </div>
         </div>
         <div id="panelContent">
@@ -77,13 +79,13 @@
             </b>
             <div>
                 <!-- <h1 id="islandName"></h1> -->
-                <div id="islandContainer">
-                    <img id="islandNameImg" src="images/Titles/Plant Island.png" style="position: absolute; width: 240px; height: 135px; top: 90px; left: 85px;">
-                    <img id="islandImg" src="images/islands/Plant Island.png">
-                    <select id="islandDropdown"></select>
-                    <button id="prevPage">Previous</button>
-                    <button id="nextPage">Next</button>
-                </div>
+                <img style=" position: absolute; width: 240px; height: 135px; top: 90px; left: 85px;" id="islandNameImg"
+                    src="images/Titles/Plant Island.png">
+                <img id="islandImg" src="images/islands/Plant Island.png">
+                <button id="prevPage">Previous</button>
+                <select id="islandDropdown"></select>
+                <button id="nextPage">Next</button>
+                <button id="switchIsland" onclick="switchIslandSkin()">Switch Island Skin</button>
             </div>
 
 
@@ -100,10 +102,10 @@
                 <!-- Reveal sections -->
                 <div id="commonSection" class="sliding-panel">
                     <select id="monsterSelection">
-                        <!--EVERYTHING IS ADDED IN MONSTER.JS :)-->
+                        //EVERYTHING IS ADDED IN MONSTER.JS :)
                     </select>
                     <img id="monsterImage" src="" alt="Monster Image">
-                    <div id="monsterStats">
+ <div id="monsterStats">
                         <div style="display: flex;">
                             <div id="Diamonds" style="display: flex; align-items: center;">
                                 <img src="images/important/Diamonds.png" style="vertical-align: middle;">

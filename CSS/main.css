@@ -245,6 +245,7 @@ input:disabled {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -256,6 +257,7 @@ input:disabled {
         transform: translateX(0);
         opacity: 1;
     }
+
     to {
         transform: translateX(-100%);
         opacity: 0;
@@ -467,6 +469,7 @@ input:focus::placeholder {
 #slidePanel.open {
     right: 0;
 }
+
 #musicSlidePanel.open {
     right: 0;
 }
@@ -475,9 +478,11 @@ input:focus::placeholder {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -488,9 +493,9 @@ input:focus::placeholder {
     color: mediumpurple;
     text-decoration: underline;
     text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
     right: 77%;
 }
 
@@ -501,9 +506,9 @@ input:focus::placeholder {
     padding: 5px 10px;
     border-radius: 5px;
     text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
     background-color: mediumpurple;
     position: absolute;
     z-index: 1;
@@ -529,9 +534,9 @@ input:focus::placeholder {
     text-align: center;
     color: mediumpurple;
     text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
 }
 
 #monsterTypeDropdown {
@@ -540,9 +545,9 @@ input:focus::placeholder {
     font-size: 20px;
     background-color: mediumpurple;
     text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
 }
 
 .sliding-panel {
@@ -595,19 +600,6 @@ input:focus::placeholder {
     background-color: mediumpurple;
     color: black;
     border: black 2px solid;
-}
-
-#prevPage,
-#nextPage {
-    position: absolute;
-    top: 77%;
-    background-color: mediumpurple;
-    text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
-    border: #391759 1px solid;
-    color: black;
 }
 
 #prevPage {
@@ -978,11 +970,11 @@ label {
 .checkbox-wrapper-8 .tgl *,
 .checkbox-wrapper-8 .tgl *:after,
 .checkbox-wrapper-8 .tgl *:before,
-.checkbox-wrapper-8 .tgl + .tgl-btn {
+.checkbox-wrapper-8 .tgl+.tgl-btn {
     box-sizing: border-box;
 }
 
-.checkbox-wrapper-8 .tgl + .tgl-btn {
+.checkbox-wrapper-8 .tgl+.tgl-btn {
     outline: 0;
     display: block;
     width: 120px;
@@ -992,7 +984,7 @@ label {
     user-select: none;
 }
 
-.checkbox-wrapper-8 .tgl + .tgl-btn:after {
+.checkbox-wrapper-8 .tgl+.tgl-btn:after {
     left: 0;
     content: "";
     display: block;
@@ -1001,15 +993,15 @@ label {
     position: relative;
 }
 
-.checkbox-wrapper-8 .tgl + .tgl-btn:before {
+.checkbox-wrapper-8 .tgl+.tgl-btn:before {
     display: none;
 }
 
-.checkbox-wrapper-8 .tgl:checked + .tgl-btn:after {
+.checkbox-wrapper-8 .tgl:checked+.tgl-btn:after {
     left: 50%;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn {
     overflow: hidden;
     transform: skew(-10deg);
     transition: all 0.2s ease;
@@ -1017,8 +1009,8 @@ label {
     background: #888;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after,
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:after,
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:before {
     transform: skew(10deg);
     display: inline-block;
     transition: all 0.2s ease;
@@ -1032,37 +1024,37 @@ label {
     font-size: 0.9rem;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:after {
     left: 100%;
     content: attr(data-tg-on);
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:before {
     left: 0;
     content: attr(data-tg-off);
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:active {
     background: #888;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active:before {
+.checkbox-wrapper-8 .tgl-skewed+.tgl-btn:active:before {
     left: -10%;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn {
+.checkbox-wrapper-8 .tgl-skewed:checked+.tgl-btn {
     background: #86d993;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:before {
+.checkbox-wrapper-8 .tgl-skewed:checked+.tgl-btn:before {
     left: -100%;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:after {
+.checkbox-wrapper-8 .tgl-skewed:checked+.tgl-btn:after {
     left: 0;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
+.checkbox-wrapper-8 .tgl-skewed:checked+.tgl-btn:active:after {
     left: 10%;
 }
 
@@ -1077,9 +1069,12 @@ label {
     background-color: rgba(72, 3, 148, 0.7);
     z-index: 1;
     border-radius: 5px;
-    overflow-y: auto; /* Add vertical scrollbar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    padding: 20px; /* Add padding for content */
+    overflow-y: auto;
+    /* Add vertical scrollbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+    padding: 20px;
+    /* Add padding for content */
 }
 
 #checklistMenu {
@@ -1143,7 +1138,8 @@ label {
 
 #monsterTypeDropdown {
     width: 80%;
-    margin: 10px auto; /* Center the dropdown */
+    margin: 10px auto;
+    /* Center the dropdown */
     font-size: 16px;
     padding: 10px;
     border-radius: 8px;
@@ -1151,16 +1147,18 @@ label {
     color: white;
     text-align: center;
     text-shadow: -1px -1px 0 #8C00E3,
-                 1px -1px 0 #8C00E3,
-                 -1px 1px 0 #8C00E3,
-                 1px 1px 0 #8C00E3;
-    border: 2px solid #6e00c8; /* Add a border to define the dropdown */
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
+    border: 2px solid #6e00c8;
+    /* Add a border to define the dropdown */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
 #monsterTypeDropdown:hover {
-    background-color: #9c4dcc; /* Slight change on hover for effect */
+    background-color: #9c4dcc;
+    /* Slight change on hover for effect */
 }
 
 .commonSection,
@@ -1201,6 +1199,7 @@ label {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 /* General Sliding Panel Styles */
 .sliding-panel {
     overflow: hidden;
@@ -1216,19 +1215,22 @@ label {
 
 /* Specific styles for different rarity sections using shades of purple */
 #commonSection {
-    background: linear-gradient(135deg, #554266, #b39ddb); /* Lighter purples */
+    background: linear-gradient(135deg, #554266, #b39ddb);
+    /* Lighter purples */
     border: 2px solid #9575cd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #rareSection {
-    background: linear-gradient(135deg, #b39ddb, #454575); /* Medium purples */
+    background: linear-gradient(135deg, #b39ddb, #454575);
+    /* Medium purples */
     border: 2px solid #7e57c2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #epicSection {
-    background: linear-gradient(135deg, #3c3844, #7e57c2); /* Darker purples */
+    background: linear-gradient(135deg, #3c3844, #7e57c2);
+    /* Darker purples */
     border: 2px solid #673ab7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1273,7 +1275,7 @@ label {
     border-radius: 50%;
     background: radial-gradient(circle at center, #111 0%, #000 70%);
     position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6), inset 0 0 15px rgba(255,255,255,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.1);
     overflow: hidden;
     animation: spin 4s linear infinite;
     animation-play-state: paused;
@@ -1283,35 +1285,37 @@ label {
 .vinyl::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background: repeating-radial-gradient(
-        circle,
-        rgba(255,255,255,0.05) 0px,
-        rgba(255,255,255,0.05) 1px,
-        transparent 2px,
-        transparent 4px
-    );
+    background: repeating-radial-gradient(circle,
+            rgba(255, 255, 255, 0.05) 0px,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 2px,
+            transparent 4px);
 }
 
 /* Colored label in the middle */
 .vinyl .label {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background: radial-gradient(circle at center, crimson 0%, darkred 100%);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Vinyl hole in the center */
 .vinyl .label::before {
     content: "";
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
@@ -1319,87 +1323,118 @@ label {
     background: #000;
 }
 
-.vinyl.left { margin-right: 50px; }
-.vinyl.right { margin-left: 50px; }
+.vinyl.left {
+    margin-right: 50px;
+}
+
+.vinyl.right {
+    margin-left: 50px;
+}
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
 #header-row {
-  display: flex;
-  overflow: hidden; /* hide the overflowing islands */
+    display: flex;
+    overflow: hidden;
+    /* hide the overflowing islands */
 }
 
 #header-row .cell.island-name {
-  min-width: 120px; /* adjust width of each island */
-  text-align: center;
-  transition: transform 0.5s ease;
+    min-width: 120px;
+    /* adjust width of each island */
+    text-align: center;
+    transition: transform 0.5s ease;
 }
 
 #header-row {
-  transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #header-row.fade-out {
-  opacity: 0;
-  transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
 }
 
 #header-row.fade-in {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .cell div:first-child {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 120px; /* adjust as needed */
-  display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 120px;
+    /* adjust as needed */
+    display: inline-block;
 }
 
 #islandImg {
-  position: absolute;
-  top: 230px;  /* 30% of viewport height */
-  left: 50px;   /* 20% of viewport width */
-  animation: float 3s ease-in-out infinite;
+    position: absolute;
+    top: 230px;
+    /* 30% of viewport height */
+    left: 50px;
+    /* 20% of viewport width */
+    animation: float 3s ease-in-out infinite;
 }
 
 
 #prevPage {
-     position: absolute;
-  left: 0px;
-  top: 500px;   /* instead of % */
-  background-color: mediumpurple;
-  text-shadow: -1px -1px 0 #8C00E3,
-               1px -1px 0 #8C00E3,
-               -1px 1px 0 #8C00E3,
-               1px 1px 0 #8C00E3;
-  border: #391759 1px solid;
-  color: black;
-  /* padding: 0.8vh 1.2vw; */
+    position: absolute;
+    left: 0px;
+    top: 500px;
+    /* instead of % */
+    background-color: mediumpurple;
+    text-shadow: -1px -1px 0 #8C00E3,
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
+    border: #391759 1px solid;
+    color: black;
+    /* padding: 0.8vh 1.2vw; */
 }
+
 #nextPage {
-  position: absolute;
-  left: 230px;
-  top: 500px;   /* instead of % */
-  background-color: mediumpurple;
-  text-shadow: -1px -1px 0 #8C00E3,
-               1px -1px 0 #8C00E3,
-               -1px 1px 0 #8C00E3,
-               1px 1px 0 #8C00E3;
-  border: #391759 1px solid;
-  color: black;
-  /* padding: 0.8vh 1.2vw; */
+    position: absolute;
+    left: 230px;
+    top: 500px;
+    /* instead of % */
+    background-color: mediumpurple;
+    text-shadow: -1px -1px 0 #8C00E3,
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
+    border: #391759 1px solid;
+    color: black;
+    /* padding: 0.8vh 1.2vw; */
 }
 
-
+#switchIsland {
+    position: absolute;
+    left: 110px;
+    top: 550px;
+    background-color: mediumpurple;
+    text-shadow: -1px -1px 0 #8C00E3,
+        1px -1px 0 #8C00E3,
+        -1px 1px 0 #8C00E3,
+        1px 1px 0 #8C00E3;
+    border: #391759 1px solid;
+    color: black;
+}
 
 #islandDropdown {
-  position: absolute;
-  top: 450px;     /* instead of 70vh */
-  left: 50px;     /* instead of 5vw */
+    position: absolute;
+    top: 450px;
+    /* instead of 70vh */
+    left: 50px;
+    /* instead of 5vw */
 }
