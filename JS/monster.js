@@ -822,8 +822,8 @@ const raremonsters = [
       rare: "",
       epic: ""
     }
-},
-{
+  },
+  {
     name: "Rare Gaddzooks",
     image: {
       normal: "images/bm/Rare Gaddzooks.png",
@@ -835,8 +835,8 @@ const raremonsters = [
       rare: "",
       epic: ""
     }
-},
-{
+  },
+  {
     name: "Rare Auglur",
     image: {
       normal: "images/bm/Rare Auglur.png",
@@ -848,7 +848,7 @@ const raremonsters = [
       rare: "",
       epic: ""
     }
-},
+  },
 ];
 
 const epicmonsters = [
@@ -6795,6 +6795,7 @@ breedButton.addEventListener("click", () => {
     resultText.innerHTML = `<h3>${form === "normal" ? "Normal Version Of:" : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
       }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
     console.log(monsterInfo, monsterName, form)
+
     // Breeding combo logic
     let breedingCombinationText = "";
     if (form !== "epic") {
@@ -6901,6 +6902,17 @@ breedButton.addEventListener("click", () => {
           img.classList.add("monster-image");
           tabContentContainer.appendChild(img);
           renderStats(info, name, "normal");
+
+          const volumeButton = document.createElement("button");
+          volumeButton.classList.add("volume-button");
+          volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+          volumeButton.title = "Play Sound";
+          volumeButton.addEventListener("click", () =>
+            playMonsterSound(name)
+          );
+          if(!tabContainer.querySelector('.volume-button')) {
+            tabContainer.appendChild(volumeButton);
+          } 
         } else {
           statsContainer.innerHTML =
             '<img src="images/important/Nomonsterfound.png" id="noMonster">';
@@ -7080,6 +7092,7 @@ document.getElementById("breedButton").addEventListener("click", function () {
   } else {
     hideBlur(); // Hide if no combination is found (optional)
   }
+
 });
 
 // Add event listener for keydown event
@@ -7139,7 +7152,6 @@ function displayMonster(monster, type) {
   if (epicBreedingCombinations[name]) {
     monsterDiv.innerHTML += `<p>Epic Breeding: ${epicBreedingCombinations[name]}</p>`;
   }
-
   resultsContainer.appendChild(monsterDiv);
 }
 
@@ -7185,6 +7197,7 @@ document
     const islandNameChecklist = document.getElementById("islandNameChecklist");
     // Capitalize first letter for display
     const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
+    skinCounter = 0;
 
     // Update the name and image
     if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus") {
@@ -7208,6 +7221,8 @@ document
       islandTitleImg.src = `images/Titles/${capitalized} Island.png`;
       // console.log(islandTitleImg, value, capitalized)
     }
+
+    hideIslandSkin();
   });
 
 document
@@ -8325,6 +8340,7 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_air_wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
+
   epic_water_wubbox: {
     name: "Epic WWubbox",
     image: "images/Monster_Avatars/Wubbox - Epic (Water).png",
@@ -12672,18 +12688,20 @@ function showSection(rarity) {
 
   // Show the chosen one
   document.querySelector(`#${rarity}Section`).style.display = "block";
-
+  skinCounter = 0;
   // ✅ Trigger the select’s change event so the monster info updates right away
   const select = document.querySelector(`#${rarity}Section select`);
   if (select && select.value) {
     select.dispatchEvent(new Event("change"));
   }
+  hideIslandSkin();
 }
 
 document
   .getElementById("islandDropdown")
   .addEventListener("change", function () {
     let selectedIsland = this.value; // e.g., "plant", "cold"
+    skinCounter = 0;
 
     if (selectedIsland === "oasis") {
       selectedIsland = "oasis"; // THIS IS HOW YOU ASSIGN NEW ISLANDS WITHOUT CHANGING ID!!! 
@@ -12711,6 +12729,7 @@ document
       populateMonsterSections(selectedIsland);
       console.log("Other Islands", selectedIsland);
     }
+    hideIslandSkin();
   });
 
 document
@@ -12899,13 +12918,71 @@ const allIslands = [
   { value: "gold", text: "Gold Island" },
   { value: "nexus", text: "Magical Nexus" },
 ];
+// { value: "", text: "", titleSrc: "images/Titles/", src: "images/islands/" },
+const allIslandSkins = [
+  //Plant Islands
+  { value: "spooktacleplant", text: "Spooktacle", titleSrc: "images/Titles/Spooktacle.png", src: "images/islands/Plant Island (Spooktacle Skin).png" },
+  { value: "vegetableplant", text: "Vegetable Medley", titleSrc: "images/Titles/Plant Island.png", src: "images/islands/Plant Island (Vegetable Medley Skin).png" },
+  { value: "mirrorplant", text: "Plant Island Mirror", titleSrc: "images/Titles/Mirror Plant Island.png", src: "images/islands/Mirror Plant Island.png" },
+  //Cold Islands
+  { value: "festivalcold", text: "Festival Of Yay", titleSrc: "images/Titles/Festival of Yay (Horizontal).png", src: "images/islands/Cold Island (Festival of Yay Skin).png" },
+  { value: "sweticold", text: "Sweti Settlement", titleSrc: "images/Titles/Cold Island.png", src: "images/islands/Cold Island (Sweti Settlement Skin).png" },
+  { value: "mirrorcold", text: "Cold Island Mirror", titleSrc: "images/Titles/Mirror Cold Island.png", src: "images/islands/Mirror Cold Island.png" },
+  //Air Islands
+  { value: "loveair", text: "Season Of Love", titleSrc: "images/Titles/Season of Love (Horizontal).png", src: "images/islands/Air Island (Season of Love Skin).png" },
+  { value: "gigacheepair", text: "Gigacheap Nest Skin", titleSrc: "images/Titles/Air Island.png", src: "images/islands/Air Island (Gigacheep Nest Skin).png" },
+  { value: "mirrorair", text: "Air Island Mirror", titleSrc: "images/Titles/Mirror Air Island.png", src: "images/islands/Mirror Air Island.png" },
+  // //Water Island
+  { value: "eggwater", text: "Eggs Travaganza", titleSrc: "images/Titles/Eggs-Travaganza (Horizontal).png", src: "images/islands/Water Island (Eggs-Travaganza Skin).png" },
+  { value: "gluberwater", text: "Glubber Lagoon", titleSrc: "images/Titles/Water Island.png", src: "images/islands/Water Island (Glubber Lagoon Skin).png" },
+  { value: "mirrorwater", text: "Water Island Mirror", titleSrc: "images/Titles/Mirror Water Island.png", src: "images/islands/Mirror Water Island.png" },
+  // //Earth Island
+  { value: "summerearth", text: "Summer Song", titleSrc: "images/Titles/SummerSong.png", src: "images/islands/Earth Island (SummerSong Skin).png" },
+  { value: "hahooearth", text: "Temple Of Hahoo", titleSrc: "images/Titles/Earth Island.png", src: "images/islands/Earth Island (Temple of Hahoo Skin).png" },
+  { value: "mirrorearth", text: "Earth Island Mirror", titleSrc: "images/Titles/Mirror Earth Island.png", src: "images/islands/Mirror Earth Island.png" },
+
+  // Haven 
+  { value: "feasthave", text: "Feast Ember", titleSrc: "images/Titles/Feast-Ember.png", src: "images/islands/Fire Haven (Feast-Ember Skin).png" },
+
+  //Oasis
+  { value: "perplexoasis", text: "Perplexplore", titleSrc: "images/Titles/Perplexplore.png", src: "images/islands/Fire Oasis (Perplexplore Skin).png" },
+
+  //light
+  { value: "skylight", text: "SkyPainting", titleSrc: "images/Titles/SkyPainting.png", src: "images/islands/Light Island (SkyPainting Skin).png" },
+  { value: "mirrorlight", text: "Mirror Light", titleSrc: "images/Titles/Mirror Light Island.png", src: "images/islands/Mirror Light Island.png" },
+
+  //psychic
+  { value: "bogglepsychic", text: "", titleSrc: "images/Titles/MindBoggle.png", src: "images/islands/Psychic Island (MindBoggle Skin).png" },
+
+  //faerie
+  { value: "cloverfaerie", text: "Clover Spell", titleSrc: "images/Titles/Cloverspell.png", src: "images/islands/Faerie Island (Cloverspell Skin).png" },
+  { value: "mirrorfaerie", text: "Mirror Faerie", titleSrc: "images/Titles/Mirror Faerie Island.png", src: "images/islands/Mirror Faerie Island.png" },
+
+  //bone
+  { value: "hereafterbeat", text: "Beat Hereafter", titleSrc: "images/Titles/Beat Hereafter (Horizontal).png", src: "images/islands/Bone Island (Beat Hereafter Skin).png" },
+  { value: "mirrorbone", text: "Mirror Bone", titleSrc: "images/Titles/Mirror Bone Island.png", src: "images/islands/Mirror Bone Island.png" },
+
+  //ethereal 
+  { value: "formulaetheral", text: "Life Formula", titleSrc: "images/Titles/Life-Formula.png", src: "images/islands/Ethereal Island (Life-Formula Skin).png" },
+
+  //sanctum 
+  { value: "crescendosanctum", text: "Crescendo Moon", titleSrc: "images/Titles/Crescendo Moon.png", src: "images/islands/Magical Sanctum (Crescendo Moon Skin).png" },
+
+  //amber 
+  { value: "echoesamber", text: "Echoes of Eco", titleSrc: "images/Titles/Echoes of Eco (Horizontal).png", src: "images/islands/Amber Island (Echoes of Eco Skin).png" },
+
+  //gold 
+  { value: "anniversarygold", text: "Anniversary", titleSrc: "images/Titles/Anniversary Month.png", src: "images/islands/Gold Island (Anniversary Month Skin).png" },
+];
 
 const islandsPerPage = 5;
 let currentPage = 0;
 const ITEMS_PER_PAGE = 5;
+let skinCounter = 0;
 
 function renderIslands() {
   islandDropdown.innerHTML = "";
+  skinCounter = 0;
 
   const startIndex = currentPage * islandsPerPage;
   const endIndex = Math.min(startIndex + islandsPerPage, allIslands.length);
@@ -12914,7 +12991,9 @@ function renderIslands() {
     const option = document.createElement("option");
     option.value = allIslands[i].value;
     option.textContent = allIslands[i].text;
+    skinCounter = 0;
     islandDropdown.appendChild(option);
+    hideIslandSkin();
   }
 
   updateButtons();
@@ -12930,7 +13009,9 @@ prevButton.addEventListener("click", () => {
     currentPage--;
     renderIslands();
     islandDropdown.selectedIndex = 0;
+    skinCounter = 0;
     updateIslandDisplay();
+    hideIslandSkin();
   }
 });
 
@@ -12940,7 +13021,9 @@ nextButton.addEventListener("click", () => {
     currentPage++;
     renderIslands();
     islandDropdown.selectedIndex = 0;
+    skinCounter = 0;
     updateIslandDisplay();
+    hideIslandSkin();
   }
 });
 
@@ -12971,14 +13054,189 @@ function updateIslandDisplay() {
   }
 }
 
+let titleSkinCounter = 0;
+
+function switchIslandSkin() {
+  const islandImage = document.getElementById("islandImg");
+  let islandName = document.getElementById("islandNameImg");
+  const selectedIsland = islandDropdown.value;
+
+  // Define skin sets by island
+  const islandSkins = {
+    plant: [
+      allIslandSkins[0].src,
+      allIslandSkins[1].src,
+      allIslandSkins[2].src,
+      "images/islands/Plant Island.png"
+    ],
+    cold: [
+      allIslandSkins[3].src,
+      allIslandSkins[4].src,
+      allIslandSkins[5].src,
+      "images/islands/Cold Island.png"
+    ],
+    air: [
+      allIslandSkins[6].src,
+      allIslandSkins[7].src,
+      allIslandSkins[8].src,
+      "images/islands/Air Island.png"
+    ],
+    water: [
+      allIslandSkins[9].src,
+      allIslandSkins[10].src,
+      allIslandSkins[11].src,
+      "images/islands/Water Island.png"
+    ],
+    earth: [
+      allIslandSkins[12].src,
+      allIslandSkins[13].src,
+      allIslandSkins[14].src,
+      "images/islands/Earth Island.png"
+    ],
+    haven: [
+      allIslandSkins[15].src,
+      "images/islands/Fire Haven Island.png"
+    ],
+    oasis: [
+      allIslandSkins[16].src,
+      "images/islands/Fire Oasis Island.png"
+    ],
+    light: [
+      allIslandSkins[17].src,
+      allIslandSkins[18].src,
+      "images/islands/Light Island.png"
+    ],
+    psychic: [
+      allIslandSkins[19].src,
+      "images/islands/Psychic Island.png"
+    ],
+    faerie: [
+      allIslandSkins[20].src,
+      allIslandSkins[21].src,
+      "images/islands/Faerie Island.png"
+    ],
+    bone: [
+      allIslandSkins[22].src,
+      allIslandSkins[23].src,
+      "images/islands/Bone Island.png"
+    ],
+    ethereal: [
+      allIslandSkins[24].src,
+      "images/islands/Ethereal Island.png"
+    ],
+    "magical Sanctum": [
+      allIslandSkins[25].src,
+      "images/islands/Magical Sanctum Island.png"
+    ],
+    amber: [
+      allIslandSkins[26].src,
+      "images/islands/Amber Island.png"
+    ],
+    gold: [
+      allIslandSkins[27].src,
+      "images/islands/Gold Island.png"
+    ]
+  };
+
+  const islandTitles = {
+    plant: [
+      allIslandSkins[0].titleSrc,
+      allIslandSkins[1].titleSrc,
+      allIslandSkins[2].titleSrc,
+      "images/Titles/Plant Island.png"
+    ],
+    cold: [
+      allIslandSkins[3].titleSrc,
+      allIslandSkins[4].titleSrc,
+      allIslandSkins[5].titleSrc,
+      "images/Titles/Cold Island.png"
+    ],
+    air: [
+      allIslandSkins[6].titleSrc,
+      allIslandSkins[7].titleSrc,
+      allIslandSkins[8].titleSrc,
+      "images/Titles/Air Island.png"
+    ],
+    water: [
+      allIslandSkins[9].titleSrc,
+      allIslandSkins[10].titleSrc,
+      allIslandSkins[11].titleSrc,
+      "images/Titles/Water Island.png"
+    ],
+    earth: [
+      allIslandSkins[12].titleSrc,
+      allIslandSkins[13].titleSrc,
+      allIslandSkins[14].titleSrc,
+      "images/Titles/Earth Island.png"
+    ],
+    haven: [
+      allIslandSkins[15].titleSrc,
+      "images/Titles/Fire Haven.png"
+    ],
+    oasis: [
+      allIslandSkins[16].titleSrc,
+      "images/Titles/Fire Oasis.png"
+    ],
+    light: [
+      allIslandSkins[17].titleSrc,
+      allIslandSkins[18].titleSrc,
+      "images/Titles/Light Island.png"
+    ],
+    psychic: [
+      allIslandSkins[19].titleSrc,
+      "images/Titles/Psychic Island.png"
+    ],
+    faerie: [
+      allIslandSkins[20].titleSrc,
+      allIslandSkins[21].titleSrc,
+      "images/Titles/Faerie Island.png"
+    ],
+    bone: [
+      allIslandSkins[22].titleSrc,
+      allIslandSkins[23].titleSrc,
+      "images/Titles/Bone Island.png"
+    ],
+    ethereal: [
+      allIslandSkins[24].titleSrc,
+      "images/Titles/Ethereal Island.png"
+    ],
+    "magical Sanctum": [
+      allIslandSkins[25].titleSrc,
+      "images/Titles/Magical Sanctum.png"
+    ],
+    amber: [
+      allIslandSkins[26].titleSrc,
+      "images/Titles/Amber Island.png"
+    ],
+    gold: [
+      allIslandSkins[27].titleSrc,
+      "images/Titles/Gold Island.png"
+    ]
+  }
+
+  // If the selected island has skins
+  if (islandSkins[selectedIsland]) {
+    islandImage.src = islandSkins[selectedIsland][skinCounter];
+    islandName.src = islandTitles[selectedIsland][skinCounter];
+    titleSkinCounter = (titleSkinCounter + 1) % islandTitles[selectedIsland].length;
+    skinCounter = (skinCounter + 1) % islandSkins[selectedIsland].length;
+    // console.log(islandName); 
+  }
+}
+
+function hideIslandSkin() {
+  const islandButton = document.getElementById('switchIsland');
+  const selectedIsland = islandDropdown.value;
+  const SKIN_ISLANDS = ['plant', 'cold', 'air', 'water', 'earth', 'haven', 'oasis', 'light', 'psychic', 'faerie', 'bone', 'ethereal', 'magical Sanctum', 'amber', 'gold'];
+  if (SKIN_ISLANDS.includes(selectedIsland)) {
+    islandButton.style.display = 'block';
+  } else {
+    islandButton.style.display = 'none';
+  }
+}
 // Initial render
 renderIslands();
-
-function openChecklist() {
-  const checklistMenu = document.getElementById("checklistMenu");
-  checklistMenu.classList.toggle("open");
-  checklistMenu.classList.value = "open";
-}
+hideIslandSkin();
 
 // ------------------ CHECKLIST -------------------
 
@@ -13039,6 +13297,12 @@ const islandColors = {
 let visibleIslands = allIslandsNames.slice(0, 5);
 let startIndex = 0;
 const checkboxStates = {};
+
+function openChecklist() {
+  const checklistMenu = document.getElementById("checklistMenu");
+  checklistMenu.classList.toggle("open");
+  checklistMenu.classList.value = "open";
+}
 
 function renderChecklist() {
   const headerRow = document.getElementById("header-row");
