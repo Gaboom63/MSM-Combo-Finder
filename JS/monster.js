@@ -9366,12 +9366,12 @@ const monsterInfo = {
     relics: 300,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('krillby') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  pingPong: {
-    name: "PingPong",
-    image: "images/Monster_Avatars/PingPong.png",
+  pongping: {
+    name: "PongPing",
+    image: "images/Monster_Avatars/PongPing.png",
     diamonds: 0,
     relics: 300,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pingPong') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pongping') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   tuskski: {
     name: "Tuskski",
@@ -9465,12 +9465,12 @@ const monsterInfo = {
     stars: 10000,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_krillby') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  rare_pingPong: {
-    name: "PingPong",
-    image: "images/Monster_Avatars/PingPong - Rare.png",
+  rare_pongping: {
+    name: "Rare PongPing",
+    image: "images/Monster_Avatars/PongPing - Rare.png",
     diamonds: 0,
     stars: 10000,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pingPong') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_pongping') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   rare_tuskski: {
     name: "Rare Tuskski",
@@ -9502,12 +9502,12 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_ziggurab') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
-  epic_pingPong: {
-    name: "Epic PingPong",
-    image: "images/Monster_Avatars/PingPong - Epic.png",
+  epic_pongping: {
+    name: "Epic PongPing",
+    image: "images/Monster_Avatars/PongPing - Epic.png",
     diamonds: 1250,
     coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pingPong') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_pongping') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   epic_ffidyll: {
     name: "Epic Ffidyll",
@@ -11709,7 +11709,7 @@ const islandData = {
       "Clavi Gnat",
       "Pladdie",
       "Krillby",
-      "PongPing",
+      "Pongping",
       "Tuskski",
       "Owlesque",
       "Ffidyll",
@@ -12144,7 +12144,7 @@ const islandData = {
       "Krillby",
       "Sneyser",
       "Edamimi",
-      "PongPing",
+      "Pongping",
       "Incisaur",
       "Tiawa",
       "Candelavra",
