@@ -6733,6 +6733,16 @@ searchMonsterInput.addEventListener("input", () => {
         playMonsterSound(query);
       });
 
+      if (query === "Mammott") {
+        const switchMode = document.createElement("button");
+        switchMode.classList.add("change-mode");
+        switchMode.innerHTML = '<p>Minor</p>';
+        switchMode.title = "Change Mode";
+        switchMode.addEventListener("click", () => {
+          console.log("Hello");
+        });
+        tabContainer.appendChild(switchMode);
+      }
       tabContainer.appendChild(volumeButton);
       imageContainer.appendChild(tabContainer);
       imageContainer.appendChild(tabContentContainer);
@@ -6910,9 +6920,9 @@ breedButton.addEventListener("click", () => {
           volumeButton.addEventListener("click", () =>
             playMonsterSound(name)
           );
-          if(!tabContainer.querySelector('.volume-button')) {
+          if (!tabContainer.querySelector('.volume-button')) {
             tabContainer.appendChild(volumeButton);
-          } 
+          }
         } else {
           statsContainer.innerHTML =
             '<img src="images/important/Nomonsterfound.png" id="noMonster">';
