@@ -2901,20 +2901,6 @@ const monsters = [
     },
   },
   {
-    name: "Hairionette (Minor)",
-    audio: "sounds/Hairionette_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Hairionette (Minor).png",
-      rare: "images/bm/Rare Hairionette (Minor).png",
-      epic: "images/bm/Epic Hairionette (Minor).png",
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 24 hr <br>",
-      rare: "Rare Breeding Time: 1 day 4 hr 48 min, <br> <br> Enhanced Time: 1 day 7 hr 52 min 30 sec <br>",
-      epic: "",
-    },
-  },
-  {
     name: "Pladdie",
     audio: "sounds/Pladdie_Memory_Sample.mp3.mpeg",
     image: {
@@ -4813,7 +4799,7 @@ const monsters = [
     },
   },
   {
-    name: "",
+    name: "Dermit",
     audio: "sounds/Dermit_Memory_Sample.mp3.mpeg",
     image: {
       normal: "images/bm/Dermit.png",
@@ -5743,7 +5729,1625 @@ const monsters = [
       epic: ""
     }
   },
+  {
+    name: "Shhimmer",
+    audio: "sounds/Shhimmer_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Shhimmer (Major).png",
+      rare: "images/bm/Rare Shhimmer (Major).png",
+      epic: "images/bm/Epic Shhimmer (Major).png"
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 6 hr Enhanced Time: 22 hr 30 min",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Scallyrags",
+    audio: "sounds/Scallyrags_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Scallyrags.png",
+      rare: "images/bm/Rare Scallyrags.png",
+      epic: "images/bm/Epic Scallyrags.png"
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 21 hr <br><br> Enhanced Time: 1 day 9 hr 45 min",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Dakktyl",
+    audio: "sounds/Dakktyl_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Dakktyl.png",
+      rare: "images/bm/Rare Dakktyl.png",
+      epic: "images/bm/Epic Dakktyl.png"
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 21 hr <br><br> Enhanced Time: 1 day 9 hr 45 min",
+      rare: "",
+      epic: ""
+    }
+  },
+  {
+    name: "Jerm",
+    audio: "sounds/Jerm_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Jerm.png",
+      rare: "images/bm/Rare Jerm.png",
+      epic: "images/bm/Epic Jerm.png"
+    },
+    stats: {
+      normal: "Breeding Time: 2 day 8 hr <br><br> Enhanced Time: 1 day 18 hr",
+      rare: "",
+      epic: ""
+    }
+  },
 ];
+
+const monsterCostumes = [
+  {
+    "name": "Anglow",
+    "normal": {
+      "c1": "Anglow_(Little_Cosmic_Egg)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Arackulele",
+    "normal": {
+      "c1": "Arackulele_(Baseborn_Busker)",
+      "c2": "Arackulele_(Blimp_My_Ride)",
+      "c3": "Arackulele_(Fastest_Webslinger)",
+      "c4": "Arackulele_(Lionized)",
+      "c5": "Arackulele_(Pollinator_Poise)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Barrb",
+    "normal": {
+      "c1": "Barrb_(Gourdness_Gracious)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "BeMeebEth",
+    "normal": {
+      "c1": "BeMeebEth_(Planetarium_Voyager)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Bellowfish",
+    "normal": {
+      "c1": "Bellowfish_(Aquaslime_Spout)",
+      "c2": "Bellowfish_(Bellow-blerite_Belly)",
+      "c3": "Bellowfish_(Crystal_Habit)",
+      "c4": "Bellowfish_(Take_the_Plunge)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Bisonorus",
+    "normal": {
+      "c1": "Bisonorus_(Candy_Smorgasbord)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Blabbit",
+    "normal": {
+      "c1": "Blabbit_(Big_Shell-Out)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Blow t",
+    "normal": {
+      "c1": "Blow't_(Short_Fused)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Bonkers",
+    "normal": {
+      "c1": "Bonkers_(Hardcover_Hits)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Boodoo",
+    "normal": {
+      "c1": "Boodoo_(Private_Eyes)",
+      "c2": "Boodoo_(We_All_Scream)"
+    },
+    "rare": {
+      "c1": "Rare_Boodoo_(Speaking_in_Tongues)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Boskus",
+    "normal": {
+      "c1": "Boskus_(Trample_On)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Bowgart",
+    "normal": {
+      "c1": "Bowgart_(Bowzo_the_Clown)",
+      "c2": "Bowgart_(Jack_Eloper)",
+      "c3": "Bowgart_(Oh_Ossy!)",
+      "c4": "Bowgart_(Ushanka_Very_Much)",
+      "c5": "Bowgart_(Wintergreen_Vesture)",
+      "c6": "Bowgart_(Wood_You_Mind)",
+      "c7": "Bowgart_Spooktacle_2012",
+      "c8": "Bowgart_Spooktacle_2015",
+      "c9": "Bowgart_Spooktacle_2018"
+    },
+    "rare": {
+      "c1": "Rare_Bowgart_(Bolt-gart)",
+      "c2": "Rare_Bowgart_(Bolt-gart)",
+      "c3": "Rare_Bowgart_Spooktacle_2015",
+      "c4": "Rare_Bowgart_Xmas_2015"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Bowhead",
+    "normal": {
+      "c1": "Bowhead_(Tale_of_a_Whale)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Bulbo",
+    "normal": {
+      "c1": "Bulbo_(Merry_and_Bright)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Buzzinga",
+    "normal": {
+      "c1": "Buzzinga_(Orn_of_Plenty)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Candelavra",
+    "normal": {
+      "c1": "Candelavra_(Gobbley_Idolater)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Cantorell",
+    "normal": {
+      "c1": "Cantorell_(Buckled_Caps)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Cherubble",
+    "normal": {
+      "c1": "Cherubble_(Shape_of_Umm)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Clackula",
+    "normal": {
+      "c1": "Clackula_(Charming_Charro)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Clamble",
+    "normal": {
+      "c1": "Clamble_(Bough_Down)",
+      "c2": "Clamble_(Merch_Mogul)",
+      "c3": "Clamble_(Nevernoot)",
+      "c4": "Clamble_(Veggie_Burger)",
+      "c5": "Clamble_(Working_in_the_Lab)",
+      "c6": "Clamble_(You've_Got_Mail)"
+    },
+    "rare": {
+      "c1": "Rare_Clamble_(On_a_LARP)"
+    },
+    "epic": {
+      "c1": "Epic_Clamble_(D.I.Y.-zard)"
+    }
+  },
+  {
+    "name": "Congle",
+    "normal": {
+      "c1": "Congle_(Beat_Poet)",
+      "c2": "Congle_(Catch_of_the_Day)",
+      "c3": "Congle_(Chick_'n'_Chokk)",
+      "c4": "Congle_(Giddy_Giftwrap)",
+      "c5": "Congle_(Monster_Mothma)",
+      "c6": "Congle_(Playground_Calico)",
+      "c7": "Congle_(Playground_Snow_Crab)",
+      "c8": "Congle_(Ten_Gallon_Hat)",
+      "c9": "Congle_(Water-shellon)"
+    },
+    "rare": {
+      "c1": "Rare_Congle_(Gaudy_Giftwrap)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Cybop",
+    "normal": {
+      "c1": "Cybop_(Chitin_Mittens)",
+      "c2": "Cybop_(Parasol-ing)",
+      "c3": "Cybop_(Petal_Propeller)",
+      "c4": "Cybop_(Rag_Mop)",
+      "c5": "Cybop_(Talent_in_Spades)"
+    },
+    "rare": {},
+    "epic": {
+      "c1": "Epic_Cybop_(Thruster_Thorns)"
+    }
+  },
+  {
+    "name": "Dandidoo",
+    "normal": {
+      "c1": "Dandidoo_(Bubble_Whammy)",
+      "c2": "Dandidoo_(Fanciful_Florets)",
+      "c3": "Dandidoo_(GrillMonster)",
+      "c4": "Dandidoo_(Memories_of_Youth)",
+      "c5": "Dandidoo_(Orrery_Story)",
+      "c6": "Dandidoo_(Punk_Apparel)",
+      "c7": "Dandidoo_(Stocking_Cap)"
+    },
+    "rare": {
+      "c1": "Rare_Dandidoo_(Onesie_Twosie)",
+      "c2": "Rare_Dandidoo_Xmas_2015"
+    },
+    "epic": {
+      "c1": "Epic_Dandidoo_(Major_Egghead)"
+    }
+  },
+  {
+    "name": "Deedge",
+    "normal": {
+      "c1": "Deedge_(Beach_Bum)",
+      "c2": "Deedge_(Cousin_Steady)",
+      "c3": "Deedge_(Ore_So_Vein)",
+      "c4": "Deedge_(Skrooball)",
+      "c5": "Deedge_(Vintage_Speakers)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Deja Jin",
+    "normal": {
+      "c1": "D├йj├а-Jin_(Lucky_Mask)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Denchuhs",
+    "normal": {
+      "c1": "Denchuhs_Best_Cuspuds"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Do",
+    "normal": {
+      "c1": "Do_(Daffodil_Topper)",
+      "c2": "Do_(Heart_Box_Topper)",
+      "c3": "Do_(Palm_Tree_Topper)",
+      "c4": "Do_(Prezzie_Topper)",
+      "c5": "Do_(Undead_Hand_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Dragong",
+    "normal": {
+      "c1": "Dragong_(Archaeo_Rodeo)",
+      "c2": "Dragong_(Frill_Thrill)",
+      "c3": "Dragong_(Terracotta_Regalia)",
+      "c4": "Dragong_(Time_to_Pretend)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Drummidary",
+    "normal": {
+      "c1": "Drummidary_(Get_the_Hook)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Drumpler",
+    "normal": {
+      "c1": "Drumpler_(Bionic_Braces)",
+      "c2": "Drumpler_(Cherubic_Cheer)",
+      "c3": "Drumpler_(Foot_of_Furcorn_Helm)",
+      "c4": "Drumpler_(Forward_March)",
+      "c5": "Drumpler_(Lifeguard_Luxe)",
+      "c6": "Drumpler_(Lycan_Likeness)",
+      "c7": "Drumpler_(Thingia_Swag)",
+      "c8": "Drumpler_(Tomayto_Tomahto)",
+      "c9": "Drumpler_(Tune_Up_Mechanic)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Edamimi",
+    "normal": {
+      "c1": "Edamimi_(Fruit_Salad_Style)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Entbrat",
+    "normal": {
+      "c1": "Entbrat_(Brat-wurst)",
+      "c2": "Entbrat_(Gigacheep_Chic)",
+      "c3": "Entbrat_(He-Brat_Harness)",
+      "c4": "Entbrat_(Horn_Warmers)",
+      "c5": "Entbrat_(Playground_Hydrangea)",
+      "c6": "Entbrat_(Playground_Peony)",
+      "c7": "Entbrat_(Spiral_Engravings)"
+    },
+    "rare": {
+      "c1": "Rare_Entbrat_Halloween_2016"
+    },
+    "epic": {
+      "c1": "Epic_Entbrat_(Zombie-ie-ie)"
+    }
+  },
+  {
+    "name": "Fa",
+    "normal": {
+      "c1": "Fa_(Freesia_Topper)",
+      "c2": "Fa_(Headstone_Topper)",
+      "c3": "Fa_(Love_Letter_Topper)",
+      "c4": "Fa_(Snow_Cone_Topper)",
+      "c5": "Fa_(Tiki_Mask_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Floogull",
+    "normal": {
+      "c1": "Floogull_(Appetizing_Apron)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Floot Fly",
+    "normal": {
+      "c1": "Floot_Fly_(The_Green_Mon)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Flowah",
+    "normal": {
+      "c1": "Flowah_(Gobbley_Mascot)",
+      "c2": "Flowah_(Secondhand_Sunnies)"
+    },
+    "rare": {
+      "c1": "Rare_Flowah_(Beads_of_Sweat)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Flum Ox",
+    "normal": {
+      "c1": "Flum_Ox_(Bovine_Unicorn)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Fluoress",
+    "normal": {
+      "c1": "Fluoress_(Pride_and_Precious_Fits)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Frondley",
+    "normal": {
+      "c1": "Frondley_(Hot_Pot_Hum)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Fung Pray",
+    "normal": {
+      "c1": "Fung_Pray_(Awesome_Saucer)",
+      "c2": "Fung_Pray_(Burgomaster)",
+      "c3": "Fung_Pray_(Tip_Topiary)",
+      "c4": "Fung_Pray_(Under_my_Umbrella)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Furcorn",
+    "normal": {
+      "c1": "Furcorn_('Chaun_Job)",
+      "c2": "Furcorn_(Canuck_Stalk)",
+      "c3": "Furcorn_(Fandemonium_Frock)",
+      "c4": "Furcorn_(Fashion_Forward)",
+      "c5": "Furcorn_(Festive_Socks)",
+      "c6": "Furcorn_(Freshener-Faced)",
+      "c7": "Furcorn_(Lucky_Thirteen)",
+      "c8": "Furcorn_(Playground_Pourge)",
+      "c9": "Furcorn_(Playground_Strawberry)",
+      "c10": "Furcorn_(Spritely_Sheet)",
+      "c11": "Furcorn_(Voidcorn)",
+      "c12": "Furcorn_Spooktacle_2015",
+      "c13": "Furcorn_Spooktacle_2018",
+      "c14": "Furcorn_Spooktacle_2019"
+    },
+    "rare": {
+      "c1": "Rare_Furcorn_(Furcorn_the_13th)",
+      "c2": "Rare_Furcorn_(What's_the_Ti)",
+      "c3": "Rare_Furcorn_Halloween_2015",
+      "c4": "Rare_Furcorn_Yay_2014"
+    },
+    "epic": {
+      "c1": "Epic_Furcorn_(Big_Blue_Bauble)",
+      "c2": "Epic_Furcorn_Spooktacle_2019"
+    }
+  },
+  {
+    "name": "Fwog",
+    "normal": {
+      "c1": "Fwog_(All_Squashed_Up)",
+      "c2": "Fwog_(Bunny_Slippers)",
+      "c3": "Fwog_(Calaca_Coiffure)",
+      "c4": "Fwog_(Ironclad_Claws)",
+      "c5": "Fwog_(Lovestruck)",
+      "c6": "Fwog_(Mer-Meridian)",
+      "c7": "Fwog_(Narwhaaa_)"
+    },
+    "rare": {
+      "c1": "Rare_Fwog_Spooktacle_2018"
+    },
+    "epic": {
+      "c1": "Epic_Fwog_(See__No_Bite)"
+    }
+  },
+  {
+    "name": "G Joob",
+    "normal": {
+      "c1": "G'joob_(Sgt._Flipper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Ghazt",
+    "normal": {
+      "c1": "Ghazt_(Blinded_with_Science)",
+      "c2": "Ghazt_(GKO)",
+      "c3": "Ghazt_(Kinda_Sketchy)",
+      "c4": "Ghazt_(Med-Hiss-inal)",
+      "c5": "Ghazt_(Seus-spicious)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Gloptic",
+    "normal": {
+      "c1": "Gloptic_(Lang'strump)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Glowl",
+    "normal": {
+      "c1": "Glowl_(Airhart)",
+      "c2": "Glowl_(Gobbley_Tribute)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Gnarls",
+    "normal": {
+      "c1": "Gnarls_(Teddiberry_Trim)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Gob",
+    "normal": {
+      "c1": "Gob_(Blinky_Buddy)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Grumpyre",
+    "normal": {
+      "c1": "Grumpyre_(Dungeon_Master)",
+      "c2": "Grumpyre_(Garbed_in_Goth)",
+      "c3": "Grumpyre_(Holly-lujah)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Hawlo",
+    "normal": {
+      "c1": "Hawlo_(Hawlo_Knight)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "HippityHop",
+    "normal": {
+      "c1": "HippityHop_(Peanut_Gallery)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Hoola",
+    "normal": {
+      "c1": "Hoola_(DJ_Epic_Drip)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Humbug",
+    "normal": {
+      "c1": "Humbug_(Big_Fungus)",
+      "c2": "Humbug_(MailMon_Mike)",
+      "c3": "Humbug_(Straw_Hat_Disguise)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Hyehehe",
+    "normal": {
+      "c1": "Hyehehe_(Snicker_Snorkel)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Incisaur",
+    "normal": {
+      "c1": "Incisaur_(Amiable_Alebrije)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Jam Boree",
+    "normal": {
+      "c1": "Jam_Boree_(Say_Cherry_Cheese)"
+    },
+    "rare": {
+      "c1": "Rare_Jam_Boree_(Corporate_Cake)"
+    },
+    "epic": {
+      "c1": "Epic_Jam_Boree_(Almighty_Ambrosia)"
+    }
+  },
+  {
+    "name": "Jeeode",
+    "normal": {
+      "c1": "Jeeode_(Arctic_Armonica)",
+      "c2": "Jeeode_(Darlin'_Garlands)",
+      "c3": "Jeeode_(For_Soothsayer)",
+      "c4": "Jeeode_(Krystillium_Kouture)",
+      "c5": "Jeeode_(Tactile_Taproot)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Jellbilly",
+    "normal": {
+      "c1": "Jellbilly_(Propeller_Beanie)",
+      "c2": "Jellbilly_(Refrain_Conductor)",
+      "c3": "Jellbilly_(Revisionist_History)",
+      "c4": "Jellbilly_(Think_Tank)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Kayna",
+    "normal": {
+      "c1": "Kayna_(Gobbley_Get-Up)",
+      "c2": "Kayna_(Halleberry_Heat)",
+      "c3": "Kayna_(Light-Bright)",
+      "c4": "Kayna_(Playground_Frostbite)",
+      "c5": "Kayna_(Playground_Roseate)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Kazilleon",
+    "normal": {
+      "c1": "Kazilleon_(Ivy_League)",
+      "c2": "Kazilleon_(Lobster_Role)",
+      "c3": "Kazilleon_(Paleo_Diet)",
+      "c4": "Kazilleon_(Scale_Model)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Knurv",
+    "normal": {
+      "c1": "Knurv_(Cadaverous_Cryptid)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "La",
+    "normal": {
+      "c1": "La_(Frosty_Face_Topper)",
+      "c2": "La_(Hibiscus_Topper)",
+      "c3": "La_(Lily-of-the-Valley_Topper)",
+      "c4": "La_(Teddybear_Topper)",
+      "c5": "La_(Witch_Hat_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Maggpi",
+    "normal": {
+      "c1": "Maggpi_(Cane-Do_Attitude)",
+      "c2": "Maggpi_(Positively_Brimming)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Mammott",
+    "normal": {
+      "c1": "Mammott_Pirate",
+      "c2": "Halloween_Mammott",
+      "c3": "Mammott_(Automammotton)",
+      "c4": "Mammott_(Belt_of_Belting)",
+      "c5": "Mammott_(Bunce_Cap)",
+      "c6": "Mammott_(Fandemonium_Duds)",
+      "c7": "Mammott_(Father_Yay)",
+      "c8": "Mammott_(Mam-maillot)",
+      "c9": "Mammott_(Off_the_Cuffs)",
+      "c10": "Mammott_(Playground_Panda)",
+      "c11": "Mammott_(Playground_Sloth)",
+      "c12": "Mammott_(Sea_Sharp)",
+      "c13": "Mammott_(Stentorian_Skeleton)",
+      "c14": "Mammott_(Water_Buff-a-low)",
+      "c15": "Mammott_(_Bill_)",
+    },
+    "rare": {
+      "c1": "Rare_Mammott_(Kramp_My_Style)",
+      "c2": "Rare_Mammott_Halloween_2015"
+    },
+    "epic": {
+      "c1": "Epic_Mammott_Yay_2018",
+      "c2": "Spooktacle_Epic_Mammott"
+    }
+  },
+  {
+    "name": "Maw",
+    "normal": {
+      "c1": "Maw_(Antique_Antennae)",
+      "c2": "Maw_(Groucho_Slouch)",
+      "c3": "Maw_(Heart_Bopper)",
+      "c4": "Maw_(Honeycombover)",
+      "c5": "Maw_(No_Eyes_with_a_Vase)",
+      "c6": "Maw_(Portable_Maptop)",
+      "c7": "Maw_(Sensory_Furphones)",
+      "c8": "Maw_(Wreck_the_Halls)"
+    },
+    "rare": {
+      "c1": "Rare_Maw_(Smitten_Stritch)"
+    },
+    "epic": {
+      "c1": "Epic_Maw_(Guided_Mistletoe)",
+      "c2": "Epic_Maw_Spooktacle_2019"
+    }
+  },
+  {
+    "name": "Mi",
+    "normal": {
+      "c1": "Mi_(Boo-in-the-Box_Topper)",
+      "c2": "Mi_(Muscari_Topper)",
+      "c3": "Mi_(Pineapple_Topper)",
+      "c4": "Mi_(Stocking_Topper)",
+      "c5": "Mi_(Sweetheart_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Mimic",
+    "normal": {
+      "c1": "Mimic_(Festyvalgoer)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Mushaboom",
+    "normal": {
+      "c1": "Mushaboom_(Gift_Box_Goodies)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Nebulob",
+    "normal": {
+      "c1": "Nebulob_(Air_Purifier)",
+      "c2": "Nebulob_(Mega_Mon)",
+      "c3": "Nebulob_(Shake_'n'_Flake)",
+      "c4": "Nebulob_(Sticky_Handed)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Noggin",
+    "normal": {
+      "c1": "Noggin_(Ball_Bearing)",
+      "c2": "Noggin_(Chalk-full)",
+      "c3": "Noggin_(HELPful_Rings)",
+      "c4": "Noggin_(Kinetic_Kicks)",
+      "c5": "Noggin_(Rock_Candy)",
+      "c6": "Noggin_(Slideshow_Intern)",
+      "c7": "Noggin_(Two_to_Tango)"
+    },
+    "rare": {
+      "c1": "Rare_Noggin_(Rock_and_Dice_Roll)",
+      "c2": "Rare_Noggin_Spooktacle_2015"
+    },
+    "epic": {
+      "c1": "Epic_Noggin_Burning_Love"
+    }
+  },
+  {
+    "name": "Oaktopus",
+    "normal": {
+      "c1": "Oaktopus_(Bred_Delicious)",
+      "c2": "Oaktopus_(Cotton_Dandy)",
+      "c3": "Oaktopus_(Cushy_Curlers)",
+      "c4": "Oaktopus_(Eggy_Wiggs)",
+      "c5": "Oaktopus_(Gone_Commercial)",
+      "c6": "Oaktopus_(TP'd_Shoubadour)",
+      "c7": "Oaktopus_(Target_Practice)",
+      "c8": "Oaktopus_(Touch_of_Tromino)"
+    },
+    "rare": {},
+    "epic": {
+      "c1": "Epic_Oaktopus_Spooktacle_2019"
+    }
+  },
+  {
+    "name": "Osstax",
+    "normal": {
+      "c1": "Osstax_(Golden_Ginkgos)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Pango",
+    "normal": {
+      "c1": "Pango_(Rainbow_Raiment)",
+      "c2": "Pango_(Cozy_Winter_Wear)",
+      "c3": "Pango_(Downhome_Puffin)",
+      "c4": "Pango_(Dynamic_Dome)",
+      "c5": "Pango_(Lei_It_On_Me)",
+      "c6": "Pango_(Playground_Blue_Jay)",
+      "c7": "Pango_(Playground_Toucan)",
+      "c8": "Pango_(PosiTRONic)",
+      "c9": "Pango_(Prom_King)",
+      "c10": "Pango_(Rainbow_Raiment)",
+      "c11": "Pango_(Serving_of_Just_Ice)"
+    },
+    "rare": {
+      "c1": "Rare_Pango_Christmas.PNG"
+    },
+    "epic": {
+      "c1": "Epic_Pango_Yay_2020"
+    }
+  },
+  {
+    "name": "Parlsona",
+    "normal": {
+      "c1": "Parlsona_(Papercute)",
+      "c2": "Parlsona_(Witch_is_Which)",
+      "c3": "Parlsona_(Wondrous_Waistcoat)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Peckidna",
+    "normal": {
+      "c1": "Peckidna_(Calaverita_Cutie)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Periscorp",
+    "normal": {
+      "c1": "Periscorp_(Other_Monster)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Phangler",
+    "normal": {
+      "c1": "Phangler_(Sumpter_Net)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Pladdie",
+    "normal": {
+      "c1": "Pladdie_(Bullate_Bloomer)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Plinkajou",
+    "normal": {
+      "c1": "Plinkajou_(Monarch's_Rest)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "PomPom",
+    "normal": {
+      "c1": "PomPom_('Borg_Booties)",
+      "c2": "PomPom_(Drop-Dead_Gorg)",
+      "c3": "PomPom_(Fandemonium_Uniform)",
+      "c4": "PomPom_(Fantasy_Wings)",
+      "c5": "PomPom_(Homecoming_Queen)",
+      "c6": "PomPom_(Not_So_Mid_Summer)",
+      "c7": "PomPom_(Offworld_Outfit)",
+      "c8": "PomPom_(On_the_Bleachers)",
+      "c9": "PomPom_(Playground_Candy_Cane)",
+      "c10": "PomPom_(Playground_Moody)",
+      "c11": "PomPom_(Pom-Mohawk)"
+    },
+    "rare": {
+      "c1": "Rare_PomPom_Halloween_2015"
+    },
+    "epic": {}
+  },
+  {
+    "name": "PongPing",
+    "normal": {
+      "c1": "PongPing_(Luck_o'_the_Firish)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Potbelly",
+    "normal": {
+      "c1": "Potbelly_(Beauteous_Bloom)",
+      "c2": "Potbelly_(Bowl-Cuttings)",
+      "c3": "Potbelly_(Infamous_Mug_Pot)",
+      "c4": "Potbelly_(Lichenthrope)",
+      "c5": "Potbelly_(Mean_Green)",
+      "c6": "Potbelly_(Shopping_Spurge)",
+      "c7": "Potbelly_(Soils_of_Spore)"
+    },
+    "rare": {
+      "c1": "Rare_Potbelly_Xmas_2015"
+    },
+    "epic": {
+      "c1": "Epic_Potbelly_(Drake_the_Halls)"
+    }
+  },
+  {
+    "name": "Pummel",
+    "normal": {
+      "c1": "Pummel_(Baited_Breath)",
+      "c2": "Pummel_(Carotene_Bump)",
+      "c3": "Pummel_(Horned_Spangenhelm)",
+      "c4": "Pummel_(Ol'_1-2_Thump)",
+      "c5": "Pummel_(Rainbow_Shark)",
+      "c6": "Pummel_(Toque-n_Togs)",
+      "c7": "Pummel_(Trickster_Trappings)"
+    },
+    "rare": {
+      "c1": "Rare_Pummel_Yay_2016",
+      "c2": "Rare_Pummell_Halloween_2015"
+    },
+    "epic": {
+      "c1": "Epic_Pummel_(Bonnethead)"
+    }
+  },
+  {
+    "name": "Punkleton",
+    "normal": {
+      "c1": "Punkleton_(Mouth_Waterer)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Quarrister",
+    "normal": {
+      "c1": "Quarrister_(Rock_Pile_Rags)",
+      "c2": "Quarrister_(Sparring_Pads)",
+      "c3": "Quarrister_(Sweatbands)",
+      "c4": "Quarrister_(Teddy_Rocks-Pin)",
+      "c5": "Quarrister_(Tentacool)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Quibble",
+    "normal": {
+      "c1": "Quibble_(Beaky_Clean)",
+      "c2": "Quibble_(Chokkolit_Keys)",
+      "c3": "Quibble_(Dyad_Hatters)",
+      "c4": "Quibble_(Miner_Key)",
+      "c5": "Quibble_(Sakura_Corsage)",
+      "c6": "Quibble_(Torrtle_Doves)",
+      "c7": "Quibble_(Valiant_Visors)"
+    },
+    "rare": {
+      "c1": "Rare_Quibble_(Sunday_Best)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Re",
+    "normal": {
+      "c1": "Re_(Abnormal_Skull_Topper)",
+      "c2": "Re_(Choktruff_Topper)",
+      "c3": "Re_(Pull_Bow_Topper)",
+      "c4": "Re_(Ranunculus_Topper)",
+      "c5": "Re_(Volcano_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Reebro",
+    "normal": {
+      "c1": "Reebro_(Brain_on_Plugs)",
+      "c2": "Reebro_(Chiefly_Masterful)",
+      "c3": "Reebro_(Future_So_Bright)",
+      "c4": "Reebro_(Love_Machine)",
+      "c5": "Reebro_(Proof_of_Concept)"
+    },
+    "rare": {
+      "c1": "Rare_Reebro_Spooktacle_2018"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Reedling",
+    "normal": {
+      "c1": "Halloween_Rare_Reedling",
+      "c2": "Reedling_(Beetle_Bounce)",
+      "c3": "Reedling_(Breath_Tweeter)",
+      "c4": "Reedling_(Grassy_Gnoll)",
+      "c5": "Reedling_(In_It_To_Fin_It)",
+      "c6": "Reedling_(Oni-rous_Mask)",
+      "c7": "Reedling_(Smunkin_Mask)",
+      "c8": "Reedling_Spooktacle_2018"
+    },
+    "rare": {
+      "c1": "Rare_Reedling_Spooktacle_2018"
+    },
+    "epic": {
+      "c1": "Epic_Reedling_(Can't_Stand_the_Heat)"
+    }
+  },
+  {
+    "name": "Repatillo",
+    "normal": {
+      "c1": "Repatillo_(Gobbley_Homage)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Riff",
+    "normal": {
+      "c1": "Riff_(Heavymetal_Helmet)",
+      "c2": "Riff_(Power_of_Luff)",
+      "c3": "Riff_(Rockin'_Around_the_Yay_Tree)",
+      "c4": "Riff_(Seaweed_Wraps)",
+      "c5": "Riff_(Spiny_Six-String)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Rooba",
+    "normal": {},
+    "rare": {
+      "c1": "Rare_Rooba_('Picsie_Perfect)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Schmoochle",
+    "normal": {
+      "c1": "Schmoochle_(Dashing_Suitor)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Scups",
+    "normal": {
+      "c1": "Scups_(Aloof_Leaf)",
+      "c2": "Scups_(Nest_Egg)",
+      "c3": "Scups_(Plans_for_Nigel)",
+      "c4": "Scups_(Plug_Lyfe)",
+      "c5": "Scups_(Ruddy_Rednose)",
+      "c6": "Scups_(Shape_of_You)",
+      "c7": "Scups_(Space_Ploddity)"
+    },
+    "rare": {
+      "c1": "Rare_Scups_Yay_2015"
+    },
+    "epic": {
+      "c1": "Epic_Scups_(Dongle_the_Thing)"
+    }
+  },
+  {
+    "name": "Shellbeat",
+    "normal": {
+      "c1": "Shellbeat_(Call_of_Shellthulhu)",
+      "c2": "Shellbeat_(Cod_Topper)",
+      "c3": "Shellbeat_(Cooler_Head_Prevails)",
+      "c4": "Shellbeat_(Dirty_Work)",
+      "c5": "Shellbeat_(Driftwood_Drum)",
+      "c6": "Shellbeat_(Gene_Krabba)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Shrubb",
+    "normal": {
+      "c1": "Shrubb_(Conehead)",
+      "c2": "Shrubb_(Drool_Noodles)",
+      "c3": "Shrubb_(Ire_Hydrant)",
+      "c4": "Shrubb_(Shrubbles_the_Clown)",
+      "c5": "Shrubb_(Thumpiebait_Cap)",
+      "c6": "Shrubb_Yay_2015"
+    },
+    "rare": {
+      "c1": "Rare_Shrubb_Halloween_2016",
+      "c2": "Rare_Shrubb_Yay_2015"
+    },
+    "epic": {
+      "c1": "Epic_Shrubb_(Mage's_Cackleberry)",
+      "c2": "Epic_Shrubb_Yay_2020"
+    }
+  },
+  {
+    "name": "Sneyser",
+    "normal": {
+      "c1": "Sneyser_(Observatoribum)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Sol",
+    "normal": {
+      "c1": "Sol_(Chokstrawb_Topper)",
+      "c2": "Sol_(Coconut_Topper)",
+      "c3": "Sol_(Smunk-o-Lantern_Topper)",
+      "c4": "Sol_(Snowdrop_Topper)",
+      "c5": "Sol_(Two_Canes_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Sooza",
+    "normal": {
+      "c1": "Sooza_(Parade_Prepped)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Sox",
+    "normal": {
+      "c1": "Sox_(Business_Casual)",
+      "c2": "Sox_(Careless_Kit)",
+      "c3": "Sox_(Forest_Cloak)",
+      "c4": "Sox_(What_Big_Eyes)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Spunge",
+    "normal": {
+      "c1": "Spunge_(Holiday_Party)",
+      "c2": "Spunge_(Peep_Show)",
+      "c3": "Spunge_(Perfect_Hennin)",
+      "c4": "Spunge_(Starry_Eyes)",
+      "c5": "Spunge_(Umbrella_Hat)",
+      "c6": "Spunge_(Vampiric_Veneer)",
+      "c7": "Spunge_(Wetsuit_Whimsy)"
+    },
+    "rare": {
+      "c1": "Rare_Spunge_Halloween_2015"
+    },
+    "epic": {
+      "c1": "Epic_Spunge_(O_Spungy_Tree)"
+    }
+  },
+  {
+    "name": "Spurrit",
+    "normal": {
+      "c1": "Spurrit_(Badge_of_Honor)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Spytrap",
+    "normal": {
+      "c1": "Spytrap_(Prismatica_Ball)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Stogg",
+    "normal": {
+      "c1": "Stogg_(Drop_the_Myc)",
+      "c2": "Stogg_(Monkey_Business)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Stoowarb",
+    "normal": {
+      "c1": "Stoowarb_(Adorpheus)",
+      "c2": "Stoowarb_(Nutcracker_Sweetie)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Strombonin",
+    "normal": {
+      "c1": "Strombonin_(Peppermint_Swirl)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "T Rox",
+    "normal": {
+      "c1": "T-Rox_(Chain_Reaction)",
+      "c2": "T-Rox_(Cinderfella)",
+      "c3": "T-Rox_(Construction,_a_Head)",
+      "c4": "T-Rox_(Fossil_Faucet)",
+      "c5": "T-Rox_(Gamma_Guise)",
+      "c6": "T-Rox_(Gilded_Pauldrons)",
+      "c7": "T-Rox_(Pi├▒ata_T-Rox)",
+      "c8": "T-Rox_(Summer_Blockbuster)"
+    },
+    "rare": {},
+    "epic": {
+      "c1": "Epic_T-Rox_(Dino-morph)"
+    }
+  },
+  {
+    "name": "Tapricorn",
+    "normal": {
+      "c1": "Tapricorn_(Edge_of_the_Map)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Tawkerr",
+    "normal": {
+      "c1": "Tawkerr_(Detective_SherTawk)",
+      "c2": "Tawkerr_(I_Want_My_Mummy)",
+      "c3": "Tawkerr_(Stark_Raving)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Theremind",
+    "normal": {
+      "c1": "Theremind_(Believe_in_Magic)",
+      "c2": "Theremind_(Rhymes_with_Orange_)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Thrumble",
+    "normal": {
+      "c1": "Thrumble_(If_Looks_Could_Kill)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Thumpies",
+    "normal": {
+      "c1": "Thumpies_(Aug-mandibles)",
+      "c2": "Thumpies_(ChoMph_and_MoSH)",
+      "c3": "Thumpies_(Crash_Test_Gear)",
+      "c4": "Thumpies_(Fluffy_Snowballs)",
+      "c5": "Thumpies_(FwoOT_and_BuTter)",
+      "c6": "Thumpies_(KaL_and_Gooie)",
+      "c7": "Thumpies_(Odd-ball_Flavor)",
+      "c8": "Thumpies_(Take_Me_to_Thumpie_Town)",
+      "c9": "Thumpies_(Thump_and_Chase)",
+      "c10": "Thumpies_(sKetcHY_and_BeehAw)"
+    },
+    "rare": {
+      "c1": "Rare_Thumpies_(FLipPy_and_TawooO)",
+      "c2": "Rare_Thumpies_(Gahwg_and_Anyanka)",
+      "c3": "Rare_Thumpies_(SkwEE_and_ChesH)",
+      "c4": "Rare_Thumpies_Halloween_2015"
+    },
+    "epic": {
+      "c1": "Epic_Thumpies_(BoOoo_and_YucKLeS)",
+      "c2": "Epic_Thumpies_(MacE_and_KarrTooF)"
+    }
+  },
+  {
+    "name": "Ti",
+    "normal": {
+      "c1": "Ti_(Bouquet_Topper)",
+      "c2": "Ti_(Festive_Tree_Topper)",
+      "c3": "Ti_(Flora_Topper)",
+      "c4": "Ti_(Treat_Bag_Topper)",
+      "c5": "Ti_(Tulip_Topper)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Tiawa",
+    "normal": {
+      "c1": "Tiawa_(Flash_Prance)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Toe Jammer",
+    "normal": {
+      "c1": "Toe_Jammer_(Bow_Glamor)",
+      "c2": "Toe_Jammer_(Flair_Supply)",
+      "c3": "Toe_Jammer_(Floral_Fascinator)",
+      "c4": "Toe_Jammer_(Folly_Roger)",
+      "c5": "Toe_Jammer_(Frosty_the_Toe_Mon)",
+      "c6": "Toe_Jammer_(Pad_Hair_Day)",
+      "c7": "Toe_Jammer_(Slippery_when_Iced)",
+      "c8": "Toe_Jammer_(Socks_of_Splendor)"
+    },
+    "rare": {
+      "c1": "Rare_Toe_Jammer_(Bunny_Ears)"
+    },
+    "epic": {
+      "c1": "Epic_Toe_Jammer_(Medusa_Doozy)"
+    }
+  },
+  {
+    "name": "TooToo",
+    "normal": {
+      "c1": "TooToo_(CMYK_Cutie)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Tring",
+    "normal": {
+      "c1": "Tring_(Harvest_Basket)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Tweedle",
+    "normal": {
+      "c1": "Tweedle_(All-Seeing_Belly)",
+      "c2": "Tweedle_(Be_Like_the_Bluebird)",
+      "c3": "Tweedle_(Club_Box_Necklace)",
+      "c4": "Tweedle_(Growth_Spur-ts)",
+      "c5": "Tweedle_(Party_Hardy_Hat)",
+      "c6": "Tweedle_(Plaster_of_Power)",
+      "c7": "Tweedle_(Rose-Colored_Glasses)",
+      "c8": "Tweedle_(Tuxtweedo_Mask)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Uuduk",
+    "normal": {
+      "c1": "Uuduk_(Sugar_Skull)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Whaddle",
+    "normal": {
+      "c1": "Whaddle_(Great_Scaup!)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Whisp",
+    "normal": {
+      "c1": "Whisp_(Cute_Corsair)",
+      "c2": "Whisp_(Familiar_Phase)",
+      "c3": "Whisp_(Flaxen_Siren)",
+      "c4": "Whisp_(Fractal_Crown)"
+    },
+    "rare": {
+      "c1": "Rare_Whisp_Spooktacle_2018 (1)"
+    },
+    "epic": {}
+  },
+  {
+    "name": "Wimmizies",
+    "normal": {
+      "c1": "Wimmzies_(The_Jig_is_Up)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Woolabee",
+    "normal": {
+      "c1": "Woolabee_(Cartographer_Cud)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Wubbox",
+    "normal": {
+      "c1": "Wubbox_(In_Da_Club)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Wynq",
+    "normal": {
+      "c1": "Wynq_(Loopy_Loupes)",
+      "c2": "Wynq_(Ranch_Dressing)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "X rt",
+    "normal": {
+      "c1": "X'rt_(X'rt_Likes_Soup)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Xyster",
+    "normal": {
+      "c1": "Xyster_(Koi_With_Me)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Yawstrich",
+    "normal": {
+      "c1": "Yawstrich_(First_Date)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Yelmut",
+    "normal": {
+      "c1": "Yelmut_(Apt_Apriarist)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Yool",
+    "normal": {
+      "c1": "Yool_(Fir_Suit)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Yuggler",
+    "normal": {
+      "c1": "Yuggler_(Puzzle_Solver)"
+    },
+    "rare": {},
+    "epic": {}
+  },
+  {
+    "name": "Ziggurab",
+    "normal": {
+      "c1": "Ziggurab_(Heart_of_Gold)"
+    },
+    "rare": {},
+    "epic": {}
+  }
+];
+
+
+const search_box = document.getElementById("Search_Monster");
+
+function switchCostume(activeRarity) {
+  // console.log(">>> switchCostume called. raw activeRarity:", activeRarity, "raw search:", searchMonsterInput.value);
+
+  // Normalize search query like your input handler does
+  let query = searchMonsterInput.value.trim();
+  if (!query) {
+    console.warn("switchCostume: search box empty — aborting");
+    return;
+  }
+  if (query.toLowerCase().startsWith("rare ")) query = query.slice(5);
+  else if (query.toLowerCase().startsWith("epic ")) query = query.slice(5);
+  // console.log("switchCostume: normalized query:", query);
+
+  const monster = monsterCostumes.find(m => m.name === query);
+  // console.log("switchCostume: monster lookup:", monster && monster.name);
+
+  if (!monster) {
+    console.warn("No costume data found for:", query);
+    return;
+  }
+
+  const img = imageContainer.querySelector(".monster-image");
+  if (!img) {
+    console.warn("No monster image found in container.");
+    return;
+  }
+
+  // Try to infer rarity if missing
+  if (!activeRarity) {
+    activeRarity =
+      img.dataset.currentActiveRarity ||
+      imageContainer.dataset.currentActiveRarity ||
+      (document.querySelector(".tab-button.active") &&
+        document.querySelector(".tab-button.active").textContent.toLowerCase());
+    // console.log("switchCostume: inferred activeRarity:", activeRarity);
+  }
+
+  if (!activeRarity) {
+    console.warn("switchCostume: no activeRarity provided and could not infer it — aborting.");
+    return;
+  }
+
+  const rarity = monster[activeRarity];
+  console.log("switchCostume: rarity object:", rarity);
+
+  if (!rarity || Object.keys(rarity).length === 0) {
+    console.warn(`No costumes defined for ${activeRarity} of ${query}`);
+    return;
+  }
+
+  const keys = Object.keys(rarity);
+  const datasetKey = `currentCostumeIndex_${activeRarity}`;
+
+  // Default image state = -1
+  if (!img.dataset[datasetKey]) img.dataset[datasetKey] = "-1";
+  let currentIndex = parseInt(img.dataset[datasetKey], 10);
+  // console.log("switchCostume: currentIndex (before):", currentIndex, "available keys:", keys);
+
+  currentIndex++;
+
+  // Loop around (after last costume → back to default)
+  if (currentIndex > keys.length - 1) currentIndex = -1;
+
+  let newSrc;
+
+  if (currentIndex === -1) {
+    const baseFolder = "images/bm/";
+
+    if (activeRarity === "rare" || activeRarity === "epic") {
+      const rarityCapitalized = activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1);
+      newSrc = `${baseFolder}${rarityCapitalized} ${monster.name}.png`;
+    } else {
+      newSrc = `${baseFolder}${monster.name}.png`;
+    }
+
+    // console.log("switchCostume: reverted to default image ->", newSrc);
+  } else {
+    let folderPath = `images/Costumes/${monster.name}/`;
+    if (activeRarity === "rare" || activeRarity === "epic") {
+      folderPath += `${activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1)}/`;
+    }
+    newSrc = `${folderPath}${rarity[keys[currentIndex]]}.png`;
+    // console.log("switchCostume: setting img.src ->", newSrc);
+  }
+
+  img.src = newSrc;
+  img.dataset[datasetKey] = String(currentIndex);
+  img.dataset.currentActiveRarity = activeRarity;
+
+  // console.log("<<< switchCostume finished. new dataset:", img.dataset);
+}
 
 /**
   {
@@ -5760,7 +7364,7 @@ const monsters = [
       epic: ""
     }
   },
- */
+*/
 
 const epicBreedingCombinations = {
   Tweedle: [
@@ -6094,10 +7698,10 @@ const breedingCombinations = {
   "Reebro + Humbug": ["Dragong"],
   "Jeeode + Humbug": ["Fung Pray"],
   "T-Rox + Pummel": ["G'joob"],
-  "Gloptic + Rootitoot": ["Hairionette (Major)"],
-  "Gloptic + Tapricorn": ["Hairionette (Major)"],
-  "Gloptic + Rooba": ["Hairionette (Major)"],
-  "Gloptic + Periscorp": ["Hairionette (Major)"],
+  "Gloptic + Rootitoot": ["Hairionette"],
+  "Gloptic + Tapricorn": ["Hairionette"],
+  "Gloptic + Rooba": ["Hairionette"],
+  "Gloptic + Periscorp": ["Hairionette"],
   "Bowgart + Spunge": ["Strombonin"],
   "T-Rox + Scups": ["Yawstrich"],
   "Scups + Pummel": ["Anglow"],
@@ -6421,7 +8025,7 @@ const breedingCombinations = {
   "Punkleton + Hoola": ["Jam Boree", "Epic Schmoochle"],
   "Schmoochle + Yool": ["Carillong"],
   "Mushaboom + Roarick": ["Carillong"],
-  "Blow t + Spytrap": ["Whiz bang"],
+  "Blow t + Spytrap": ["Whiz bang", "Shhimmer"],
   "Nebulob + Jeeode": ["Monculus"],
   "Pladdie + Floot Fly": ["Ffidyll", "Epic PongPing"],
   "Periscorp + Bonkers": ["Boo'qwurm"],
@@ -6438,6 +8042,19 @@ const breedingCombinations = {
     "Maggpi",
   ],
   "Quarrister + Shrubb": ["Epic Hyehehe"],
+  "Plinkajou + Thrumble": ["Arcorina"],
+  "Plinkajou + Withur": ["Arcorina"],
+  "Plinkajou + Uuduk": ["Arcorina"],
+  "Plinkajou + Banjaw": ["Arcorina"],
+
+  // UPDATE 5.0! 
+  "Blow t + Sooza": ["Shhimmer"],
+  "Blow t + TooToo": ["Shhimmer"],
+  "Blow t + Fiddlement": ["Shhimmer"],
+  "Hairionette + Owlesque": ["Scallyrags"],
+  "Owlesque + Arcorina": ["Dakktyl"],
+  "Scallyrags + Arcorina": ["Jerm"],
+  "Dakktyl + Hairionette": ["Jerm"],
 };
 // Suggestions list
 const suggestionsList = monsters.map((monster) => monster.name);
@@ -6625,142 +8242,185 @@ const searchBreedingCombinations = (monsterName) => {
   }
 };
 
+
+
 //!This is what makes the automatic search work
 searchMonsterInput.addEventListener("input", () => {
-  let query = searchMonsterInput.value.trim();
+  let rawQuery = searchMonsterInput.value.trim();
+  let baseQuery = rawQuery;
   let defaultTab = "Normal";
 
-  // Check for "Rare " or "Epic " prefix
-  if (query.toLowerCase().startsWith("rare ")) {
-    query = query.slice(5); // Remove prefix
+  // Normalize prefixes like "Rare " or "Epic "
+  if (rawQuery.toLowerCase().startsWith("rare ")) {
+    baseQuery = rawQuery.slice(5);
     defaultTab = "Rare";
-  } else if (query.toLowerCase().startsWith("epic ")) {
-    query = query.slice(5);
+  } else if (rawQuery.toLowerCase().startsWith("epic ")) {
+    baseQuery = rawQuery.slice(5);
     defaultTab = "Epic";
   }
 
-  if (query) {
-    const monsterInfo = monsterData[query];
 
-    if (monsterInfo) {
-      const img = document.createElement("img");
-      img.alt = query;
-      img.classList.add("monster-image");
-      img.src =
-        monsterInfo.image[defaultTab.toLowerCase()] || monsterInfo.image.normal;
+  // Lookup monster using normalized name
+  const monsterInfo = monsterData[baseQuery];
 
-      showBlur(); // Always show blur if we find a monster
+  if (!monsterInfo) {
+    console.warn("No monster info found for:", baseQuery);
+    return;
+  }
 
-      // Clear previous content
-      imageContainer.innerHTML = "";
-      imageContainer.appendChild(img);
+  const img = document.createElement("img");
+  img.alt = baseQuery;
+  img.classList.add("monster-image");
+  img.src = monsterInfo.image.normal;
 
-      const tabs = ["Normal", "Rare", "Epic"];
-      const tabContainer = document.createElement("div");
-      tabContainer.classList.add("tab-container");
-      const tabContentContainer = document.createElement("div");
-      tabContentContainer.classList.add("tab-content-container");
+  showBlur();
 
-      tabs.forEach((tabName) => {
-        const tab = document.createElement("button");
-        tab.classList.add("tab-button");
-        tab.textContent = tabName;
+  // Clear previous content
+  imageContainer.innerHTML = "";
+  imageContainer.appendChild(img);
 
-        tab.addEventListener("click", () => {
-          tabContentContainer.innerHTML = "";
-          statsContainer.innerHTML = "";
+  const tabs = ["Normal", "Rare", "Epic"];
+  const tabContainer = document.createElement("div");
+  tabContainer.classList.add("tab-container");
+  const tabContentContainer = document.createElement("div");
+  tabContentContainer.classList.add("tab-content-container");
 
-          img.src =
-            monsterInfo.image[tabName.toLowerCase()] ||
-            monsterInfo.image.normal;
-          const monsterStats =
-            monsterInfo.stats[tabName.toLowerCase()] || "No stats available";
+  const switchCostumeButton = document.createElement("button");
+  switchCostumeButton.innerHTML = "<i>Switch Costume</i>";
+  switchCostumeButton.title = "Change Costume";
+  switchCostumeButton.classList.add("costume-button");
+  tabContainer.appendChild(switchCostumeButton);
 
-          const resultContainer = document.createElement("div");
-          resultContainer.classList.add("result-container");
+  // Handle tab clicks
+  tabs.forEach((tabName) => {
+    const tab = document.createElement("button");
+    tab.classList.add("tab-button");
+    tab.textContent = tabName;
 
-          const blackBox = document.createElement("div");
-          blackBox.classList.add("black-box");
+    tab.addEventListener("click", () => {
+      const activeRarity = tabName.toLowerCase();
+      imageContainer.dataset.currentActiveRarity = activeRarity;
+      switchCostumeButton.dataset.activeRarity = activeRarity;
 
-          const resultText = document.createElement("div");
-          resultText.classList.add("result-text");
-          resultText.innerHTML = `<h3>${tabName} Version of ${query}!</h3><p>${monsterStats}</p>`;
+      const monster = monsterCostumes.find((m) => m.name === baseQuery);
+      const img = imageContainer.querySelector(".monster-image");
 
-          // Breeding combinations
-          let breedingCombinationText = "";
-          if (tabName === "Epic" && epicBreedingCombinations[query]) {
-            breedingCombinationText += `<p>${epicBreedingCombinations[
-              query
-            ].join(", ")}</p>`;
-          } else if (tabName !== "Epic") {
-            for (let combo in breedingCombinations) {
-              if (breedingCombinations[combo].includes(query)) {
-                breedingCombinationText += `<p>${combo}</p>`;
-              }
-            }
+      // If the rarity has costumes, enable the button
+      if (monster && monster[activeRarity] && Object.keys(monster[activeRarity]).length > 0) {
+        switchCostumeButton.disabled = false;
+        switchCostumeButton.title = "Change Costume";
+      } else {
+        switchCostumeButton.disabled = true;
+        switchCostumeButton.title = "No costume available for this monster.";
+      }
+
+      // ✅ Set the image to the **base image for that rarity**, never a costume
+      if (activeRarity === "normal") {
+        img.src = monsterInfo.image.normal;
+      } else if (monsterInfo.image[activeRarity]) {
+        img.src = monsterInfo.image[activeRarity]; // base image for rare/epic
+      } else {
+        img.src = monsterInfo.image.normal; // fallback
+      }
+
+
+      // Show stats and breeding info
+      tabContentContainer.innerHTML = "";
+      statsContainer.innerHTML = "";
+
+      const monsterStats = monsterInfo.stats[activeRarity] || "No stats available";
+      const resultContainer = document.createElement("div");
+      resultContainer.classList.add("result-container");
+
+      const blackBox = document.createElement("div");
+      blackBox.classList.add("black-box");
+
+      const resultText = document.createElement("div");
+      resultText.classList.add("result-text");
+      resultText.innerHTML = `<h3>${tabName} Version of ${baseQuery}!</h3><p>${monsterStats}</p>`;
+
+      let breedingCombinationText = "";
+      if (tabName === "Epic" && epicBreedingCombinations[baseQuery]) {
+        breedingCombinationText += `<p>${epicBreedingCombinations[baseQuery].join(", ")}</p>`;
+      } else if (tabName !== "Epic") {
+        for (let combo in breedingCombinations) {
+          if (breedingCombinations[combo].includes(baseQuery)) {
+            breedingCombinationText += `<p>${combo}</p>`;
           }
-
-          if (breedingCombinationText) {
-            resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
-          }
-
-          resultContainer.appendChild(blackBox);
-          resultContainer.appendChild(resultText);
-          statsContainer.appendChild(resultContainer);
-          tabContentContainer.appendChild(img);
-        });
-
-        tabContainer.appendChild(tab);
-      });
-
-
-      // Volume button
-      function playMonsterSound(monsterName) {
-        const monster = monsterData[monsterName];
-        if (monster && monster.audio) {
-          const audio = new Audio(monster.audio);
-          audio.play().catch((err) => console.error("Playback error:", err));
-        } else {
-          console.warn("No audio found for monster:", monsterName);
         }
       }
 
-      const volumeButton = document.createElement("button");
-      volumeButton.classList.add("volume-button");
-      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-      volumeButton.title = "Play Sound";
-      volumeButton.addEventListener("click", () => {
-        playMonsterSound(query);
-      });
-
-      if (query === "Mammott") {
-        const switchMode = document.createElement("button");
-        switchMode.classList.add("change-mode");
-        switchMode.innerHTML = '<p>Minor</p>';
-        switchMode.title = "Change Mode";
-        switchMode.addEventListener("click", () => {
-          console.log("Hello");
-        });
-        tabContainer.appendChild(switchMode);
+      if (breedingCombinationText) {
+        resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
       }
-      tabContainer.appendChild(volumeButton);
-      imageContainer.appendChild(tabContainer);
-      imageContainer.appendChild(tabContentContainer);
 
-      const defaultTabButton = Array.from(tabContainer.children).find(
-        (tab) => tab.textContent === defaultTab
-      );
-      if (defaultTabButton) {
-        defaultTabButton.click();
-      }
+      resultContainer.appendChild(blackBox);
+      resultContainer.appendChild(resultText);
+      statsContainer.appendChild(resultContainer);
+      tabContentContainer.appendChild(img);
+    });
+
+    tabContainer.appendChild(tab);
+  });
+
+  // Costume switch button
+  switchCostumeButton.addEventListener("click", () => {
+    const ar = switchCostumeButton.dataset.activeRarity || imageContainer.dataset.currentActiveRarity;
+    console.log("Switch Costume button pressed for rarity:", ar);
+    switchCostume(ar);
+  });
+
+  // Volume button
+  function playMonsterSound(monsterName) {
+    const monster = monsterData[monsterName];
+    if (monster && monster.audio) {
+      const audio = new Audio(monster.audio);
+      audio.play().catch((err) => console.error("Playback error:", err));
     } else {
-      // Optionally handle "monster not found"
-      // statsContainer.innerHTML = '<img src="images/important/Nomonsterfound.png" id="noMonsternoslide">';
+      console.warn("No audio found for monster:", monsterName);
     }
-  } else {
-    combinationsContainer.innerHTML = "";
+  }
+  const volumeButton = document.createElement("button");
+  volumeButton.classList.add("volume-button");
+  volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+  volumeButton.title = "Play Sound";
+  volumeButton.addEventListener("click", () => {
+    playMonsterSound(baseQuery);
+  });
+  tabContainer.appendChild(volumeButton);
+
+  // Handle Primordials (unchanged)
+  if (["Hairionette", "Owlesque", "Arcorina", "Shhimmer"].includes(baseQuery)) {
+    const switchMode = document.createElement("button");
+    switchMode.innerHTML = "<i>Switch Form</i>";
+    switchMode.title = "Change Mode";
+    switchMode.classList.add("tab-button-minor");
+    let switchCheck = 0;
+    switchMode.addEventListener("click", () => {
+      const img = document.createElement("img");
+      img.classList.remove("monster-image");
+      imageContainer.innerHTML = "";
+      imageContainer.appendChild(tabContainer);
+      img.src = switchCheck === 0
+        ? `images/bm/${baseQuery} (Minor).png`
+        : `images/bm/${baseQuery} (Major).png`;
+      switchCheck = 1 - switchCheck;
+      img.classList.add("monster-image");
+      imageContainer.appendChild(img);
+    });
+    tabContainer.appendChild(switchMode);
+  }
+
+  imageContainer.appendChild(tabContainer);
+  imageContainer.appendChild(tabContentContainer);
+
+  // Click default tab automatically (uses defaultTab derived from prefix)
+  const defaultTabButton = Array.from(tabContainer.children).find((tab) => tab.textContent === defaultTab);
+  if (defaultTabButton) {
+    defaultTabButton.click();
   }
 });
+
 
 breedButton.addEventListener("click", () => {
   const monster1 = firstMonsterInput.value.trim();
@@ -6829,6 +8489,8 @@ breedButton.addEventListener("click", () => {
     statsContainer.appendChild(resultContainer);
   };
 
+
+
   const createTabButton = (label, onClick) => {
     const btn = document.createElement("button");
     btn.classList.add("tab-button");
@@ -6856,6 +8518,8 @@ breedButton.addEventListener("click", () => {
 
     const tabContentContainer = document.createElement("div");
     tabContentContainer.classList.add("tab-content-container");
+
+
 
     ["Normal", "Rare", "Epic"].forEach((tabName) => {
       tabContainer.appendChild(
@@ -7210,7 +8874,7 @@ document
     skinCounter = 0;
 
     // Update the name and image
-    if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus") {
+    if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus" || value === "paironormal") {
       islandImg.src = `images/islands/${capitalized} Island.png`;
       islandTitleImg.src = `images/Titles/${capitalized}.png`;
 
@@ -7223,6 +8887,9 @@ document
       } else if (value === "nexus") {
         islandImg.src = `images/islands/Magical ${capitalized}.png`;
         islandTitleImg.src = `images/Titles/Magical ${capitalized}.png`;
+      } else if (value === "paironormal") {
+        islandImg.src = `images/islands/Paironormal Carnival.png`;
+        islandTitleImg.src = `images/Titles/Paironormal Carnival.png`;
       }
 
       // console.log(islandTitleImg, value, capitalized)
@@ -7276,7 +8943,7 @@ document
    },
 */
 
-let million = "m";
+let million = "m"; // Never Used, needs fixing. 
 
 const monsterInfo = {
   potbelly: {
@@ -11023,6 +12690,34 @@ const monsterInfo = {
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bogle') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
+  shhimmer: {
+    name: "Shhimmer",
+    image: "images/Monster_Avatars/Shhimmer.png",
+    diamonds: 500,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shhimmer') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  dakktyl: {
+    name: "Dakktyl",
+    image: "images/Monster_Avatars/Dakktyl.png",
+    diamonds: 3000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('dakktyl') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  scallyrags: {
+    name: "Scallyrags",
+    image: "images/Monster_Avatars/Scallyrags.png",
+    diamonds: 3000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('scallyrags') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
+  jerm: {
+    name: "Jerm",
+    image: "images/Monster_Avatars/Jerm.png",
+    diamonds: 4000,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jerm') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+  },
 };
 
 /*
@@ -12624,10 +14319,43 @@ const islandData = {
       "Rare Plinkajou",
       "Rare Pladdie"
     ]
+  },
+  paironormal: {
+    common: [
+      "Hairionette",
+      "Owlesque",
+      "Arcorina",
+      "Shhimmer",
+      "Scallyrags",
+      "Dakktyl",
+      "Jerm"
+    ]
   }
-
 };
 
+const dropdown = document.getElementById("monsterTypeDropdown");
+
+function updateDropdown(islandName) {
+  const island = islandData[islandName];
+
+  const commonOpt = dropdown.querySelector('option[value="common"]');
+  const rareOpt = dropdown.querySelector('option[value="rare"]');
+  const epicOpt = dropdown.querySelector('option[value="epic"]');
+
+  // Disable options if that rarity list is empty/missing
+  commonOpt.disabled = !island?.common?.length;
+  rareOpt.disabled = !island?.rare?.length;
+  epicOpt.disabled = !island?.epic?.length;
+
+  // Pick first valid option if current one is disabled
+  if (dropdown.options[dropdown.selectedIndex].disabled) {
+    const firstEnabled = [...dropdown.options].find(opt => !opt.disabled);
+    if (firstEnabled) dropdown.value = firstEnabled.value;
+  }
+
+  // Trigger change so your panel logic updates
+  dropdown.dispatchEvent(new Event("change"));
+}
 const islandKeyMap = {
   "Plant Island": "plant",
   "Cold Island": "cold",
@@ -12652,7 +14380,8 @@ const islandKeyMap = {
   "Plasma Islet": "plasma",
   "Mech Islet": "mech",
   "Gold Island": "gold",
-  "Magical Nexus": "nexus"
+  "Magical Nexus": "nexus",
+  "Paironormal Carnival": "paironormal"
 };
 
 
@@ -12677,6 +14406,7 @@ function populateMonsterSections(islandKey) {
       select.appendChild(option);
     });
 
+    updateDropdown(islandKey);
     //Auto-select the first monster for each rarity
     if (monsters.length > 0) {
       select.value = monsters[0].toLowerCase().replace(/\s+/g, "_");
@@ -12784,10 +14514,6 @@ document
         starImg.style.display = 'none';
         stars.innerHTML = '';
       }
-
-
-
-
       // relics.innerHTML = info.relics; 
     }
   });
@@ -12927,6 +14653,7 @@ const allIslands = [
   { value: "Mech Islet", text: "Mech Islet" },
   { value: "gold", text: "Gold Island" },
   { value: "nexus", text: "Magical Nexus" },
+  { value: "paironormal", text: "Paironormal Carnival" }
 ];
 // { value: "", text: "", titleSrc: "images/Titles/", src: "images/islands/" },
 const allIslandSkins = [
@@ -13274,7 +15001,8 @@ const allIslandsNames = [
   "Plasma Islet",
   "Mech Islet",
   "Gold Island",
-  "Magical Nexus"
+  "Magical Nexus",
+  "Paironormal Carnival"
 ];
 
 const islandColors = {
@@ -13301,7 +15029,8 @@ const islandColors = {
   "Plasma Islet": "#d6aaff",
   "Mech Islet": "#b2cedcff",
   "Gold Island": "#bda71eff",
-  "Magical Nexus": "#064f73ff"
+  "Magical Nexus": "#064f73ff",
+  "Paironormal Carnival": "#8b2ca5ff"
 };
 
 let visibleIslands = allIslandsNames.slice(0, 5);
@@ -13360,7 +15089,7 @@ function renderChecklist() {
     circle.setAttribute("cy", "18");
     circle.setAttribute("r", "16");
     circle.setAttribute("fill", "none");
-    circle.setAttribute("stroke", "#4caf50");
+    circle.setAttribute("stroke", "#4caf50"); // Default green color
     circle.setAttribute("stroke-width", "4");
     circle.setAttribute("stroke-linecap", "round");
     circle.setAttribute("stroke-dasharray", "100");
@@ -13506,6 +15235,13 @@ function renderChecklist() {
       const circumference = 2 * Math.PI * 16; // Circle radius = 16
       const offset = circumference * (1 - percent / 100);
 
+      // Change stroke color based on progress
+      if (percent === 100) {
+        cell.progressCircle.style.stroke = "yellow";  // Change to yellow when 100%
+      } else {
+        cell.progressCircle.style.stroke = "#4caf50"; // Default green
+      }
+
       cell.progressCircle.style.strokeDashoffset = offset;
       cell.progressText.textContent = `${Math.round(percent)}%`;
     });
@@ -13514,7 +15250,6 @@ function renderChecklist() {
   // Initial progress update after rendering
   updateProgress();
 }
-
 
 // Advance islands
 function updateChecklistWithAnimation(direction = 1) {
