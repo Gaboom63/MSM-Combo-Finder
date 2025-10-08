@@ -152,7 +152,32 @@ input:disabled {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tab-button:hover {
+.tab-button-minor {
+    margin-right: 5px;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 100px;
+    max-width: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.costume-button {
+    margin-right: 5px;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 100px;
+    max-width: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.costume-button:hover,
+.tab-button:hover,
+.tab-button-minor:hover {
     background-color: darkblue;
     color: white;
 }
