@@ -849,6 +849,20 @@ const raremonsters = [
       epic: ""
     }
   },
+  {
+    name: "Rare Wubbox",
+    audio: "sounds/Rare_Wubbox_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Rare Wubbox.png",
+      rare: "images/bm/Rare .png",
+      epic: "images/bm/Epic .png",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: "",
+    },
+  },
 ];
 
 const epicmonsters = [
@@ -2165,6 +2179,19 @@ const epicmonsters = [
       epic: "",
     },
   },
+  {
+    name: "Epic Flum Ox",
+    image: {
+      normal: "images/bm/Epic Flum Ox.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 13 hr <br> <br> Enhanced Time: 1 day 3 hr 45 min <br><br> Success: 1 day 13 hr <br><br> Fail: 20 hr",
+      rare: "",
+      epic: ""
+    }
+  },
 ];
 
 /*
@@ -3302,9 +3329,8 @@ const monsters = [
       epic: "images/bm/Epic Bleatnik.png",
     },
     stats: {
-      normal:
-        "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-      rare: "",
+      normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
+      rare: "Breeding Time: 1 day 9 hr 45 min <br><br> Enhanced Time: 1 day 1 hr 18 min 45 sec",
       epic: "",
     },
   },
@@ -4215,7 +4241,7 @@ const monsters = [
       normal:
         "1 day 16 hr <br> <br> Enhanced Time: 1 day 6 hr <br> <br>Buy From Shop: 300 Relics ",
       rare: "Starpower 10,000 <br> <br> Breeding Time: 2 days, 4 hr 30 mins <br> <br>Enhanced Time: 1 day 15 hr 22 min 30 sec",
-      epic: "",
+      epic: "Breeding Time: 1 day 13 hr <br> <br> Enhanced Time: 1 day 3 hr 45 min <br><br> Success: 1 day 13 hr <br><br> Fail: 20 hr",
     },
   },
   {
@@ -4955,125 +4981,12 @@ const monsters = [
     },
   },
   {
-    name: "Rare Wubbox",
+    name: "Wubbox",
     audio: "sounds/Rare_Wubbox_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Rare Wubbox.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Cold)",
-    audio: "sounds/Epic_Wubbox_(Cold)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Cold.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Air)",
-    audio: "sounds/Epic_Wubbox_(Air)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Air.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-
-  {
-    name: "Epic Wubbox (Water)",
-    audio: "sounds/Epic_Wubbox_(Water)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Water.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Earth)",
-    audio: "sounds/Epic_Wubbox_(Earth)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Earth.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Haven)",
-    audio: "sounds/Epic_Wubbox_(Haven)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Haven.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Oasis)",
-    audio: "sounds/Epic_Wubbox_(Oasis)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Oasis.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Ethereal)",
-    audio: "sounds/Epic_Wubbox_(Ethereal)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Ethereal.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wubbox (Gold)",
-    audio: "sounds/Epic_Wubbox_(Gold-Earth)_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Epic Wubbox Gold (Neutral).png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
+      normal: "images/bm/Wubbox.png",
+      rare: "images/bm/Rare Wubbox.png",
+      epic: "images/bm/Epic Wubbox Plant.png",
     },
     stats: {
       normal: "",
@@ -5319,76 +5232,6 @@ const monsters = [
       normal: "Breeding Time: 1 day 16 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr",
       rare: "10,000 Starpower <br> <br> Breeding Time: 2 day 4 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
       epic: "Breeding Time: 1 day 17 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr 45 min",
-    },
-  },
-  {
-    name: "PWubbox",
-    audio: "sounds/Epic_Wubbox_(Plant)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Plant.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "CWubbox",
-    audio: "sounds/Epic_Wubbox_(Cold)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Cold.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "AWubbox",
-    audio: "sounds/Epic_Wubbox_(Air)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Air.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "WWubbox",
-    audio: "sounds/Epic_Wubbox_(Water)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Water.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "EWubbox",
-    audio: "sounds/Epic_Wubbox_(Earth)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Earth.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
     },
   },
   {
@@ -5786,6 +5629,80 @@ const monsters = [
     }
   },
 ];
+
+const wubboxs = [
+  {
+    name: "Plant Wubbox",
+    audio: "sounds/Epic_Wubbox_(Plant)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Plant.png",
+      rare: "images/bm/Epic Wubbox Plant.png",
+      epic: "images/bm/Epic Wubbox Plant.png",
+    },
+    stats: {
+      normal: "Buy From The Store For <b>1 Diamond</b>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Cold Wubbox",
+    audio: "sounds/Epic_Wubbox_(Cold)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Cold.png",
+      rare: "images/bm/Epic Wubbox Cold.png",
+      epic: "images/bm/Epic Wubbox Cold.png",
+    },
+    stats: {
+      normal: "Buy From The Store For <b>1 Diamond</b>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Air Wubbox",
+    audio: "sounds/Epic_Wubbox_(Air)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Air.png",
+      rare: "images/bm/Epic Wubbox Air.png",
+      epic: "images/bm/Epic Wubbox Air.png",
+    },
+    stats: {
+      normal: "Buy From The Store For <b>1 Diamond</b>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Water Wubbox",
+    audio: "sounds/Epic_Wubbox_(Water)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Water.png",
+      rare: "images/bm/Epic Wubbox Water.png",
+      epic: "images/bm/Epic Wubbox Water.png",
+    },
+    stats: {
+      normal: "Buy From The Store For <b>1 Diamond</b>",
+      rare: "",
+      epic: "",
+    },
+  },
+  {
+    name: "Earth Wubbox",
+    audio: "sounds/Epic_Wubbox_(Earth)_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/Epic Wubbox Earth.png",
+      rare: "images/bm/Epic Wubbox Earth.png",
+      epic: "images/bm/Epic Wubbox Earth.png",
+    },
+    stats: {
+      normal: "Buy From The Store For <b>1 Diamond</b>",
+      rare: "",
+      epic: "",
+    },
+  },
+]
+
 
 const monsterCostumes = [
   {
@@ -6254,7 +6171,7 @@ const monsterCostumes = [
     }
   },
   {
-    "name": "G Joob",
+    "name": "G'joob",
     "normal": {
       "c1": "G'joob_(Sgt._Flipper)"
     },
@@ -7182,7 +7099,8 @@ const monsterCostumes = [
   {
     "name": "Wubbox",
     "normal": {
-      "c1": "Wubbox_(In_Da_Club)"
+      "c1": "Wubbox_(In_Da_Club)",
+      "c2": "Wubbox (Boomerkrang)"
     },
     "rare": {},
     "epic": {}
@@ -7254,12 +7172,9 @@ const monsterCostumes = [
   }
 ];
 
-
 const search_box = document.getElementById("Search_Monster");
 
 function switchCostume(activeRarity) {
-  // console.log(">>> switchCostume called. raw activeRarity:", activeRarity, "raw search:", searchMonsterInput.value);
-
   // Normalize search query like your input handler does
   let query = searchMonsterInput.value.trim();
   if (!query) {
@@ -7272,11 +7187,6 @@ function switchCostume(activeRarity) {
 
   const monster = monsterCostumes.find(m => m.name === query);
   // console.log("switchCostume: monster lookup:", monster && monster.name);
-
-  if (!monster) {
-    console.warn("No costume data found for:", query);
-    return;
-  }
 
   const img = imageContainer.querySelector(".monster-image");
   if (!img) {
@@ -7485,29 +7395,6 @@ const epicBreedingCombinations = {
   PongPing: [`Pladdie + Floot Fly<br>`],
   Hyehehe: [`Cataliszt + Buzzinga`]
 };
-// Create monster data map for easy access
-// Assuming you already have arrays monsters, epicmonsters, and raremonsters defined
-const monsterData = Object.fromEntries(
-  monsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-
-const epicMonsterData = Object.fromEntries(
-  epicmonsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-
-const rareMonsterData = Object.fromEntries(
-  raremonsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-
 // Valid breeding combinations
 const breedingCombinations = {
   "Get From Shop!": ["Gnarls"],
@@ -8056,6 +7943,7 @@ const breedingCombinations = {
   "Scallyrags + Arcorina": ["Jerm"],
   "Dakktyl + Hairionette": ["Jerm"],
 };
+
 // Suggestions list
 const suggestionsList = monsters.map((monster) => monster.name);
 const searchMonsterInput = document.getElementById("Search_Monster");
@@ -8070,6 +7958,27 @@ const statsContainer = document.getElementById("statsContainer");
 const combinationsContainer = document.getElementById("Search_Monster");
 const resetButton = document.getElementById("resetButton");
 
+// Create monster data map for easy access
+const monsterData = Object.fromEntries(
+  monsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
+);
+
+const epicMonsterData = Object.fromEntries(
+  epicmonsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
+);
+
+const rareMonsterData = Object.fromEntries(
+  raremonsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
+);
 // Function to clear all inputs and results
 const resetAll = () => {
   // Clear input fields
@@ -8242,7 +8151,14 @@ const searchBreedingCombinations = (monsterName) => {
   }
 };
 
+const resultContainer = document.createElement("div");
+resultContainer.classList.add("result-container");
 
+const blackBox = document.createElement("div");
+blackBox.classList.add("black-box");
+
+const resultText = document.createElement("div");
+resultText.classList.add("result-text");
 
 //!This is what makes the automatic search work
 searchMonsterInput.addEventListener("input", () => {
@@ -8269,9 +8185,13 @@ searchMonsterInput.addEventListener("input", () => {
   }
 
   const img = document.createElement("img");
-  img.alt = baseQuery;
+  img.alt = "images/important/NoImageFound.png";
   img.classList.add("monster-image");
+
+  // set main image source
   img.src = monsterInfo.image.normal;
+  img.onerror = () => img.src = "images/important/NoImageFound.png";
+
 
   showBlur();
 
@@ -8289,7 +8209,34 @@ searchMonsterInput.addEventListener("input", () => {
   switchCostumeButton.innerHTML = "<i>Switch Costume</i>";
   switchCostumeButton.title = "Change Costume";
   switchCostumeButton.classList.add("costume-button");
-  tabContainer.appendChild(switchCostumeButton);
+
+  // Find the monster in the array
+  const determineMonsterCostume = monsterCostumes.find(m => m.name === baseQuery);
+
+  // Check if this monster has ANY costumes in any rarity
+  const hasCostume =
+    determineMonsterCostume &&
+    (
+      (determineMonsterCostume.normal && Object.keys(determineMonsterCostume.normal).length > 0) ||
+      (determineMonsterCostume.rare && Object.keys(determineMonsterCostume.rare).length > 0) ||
+      (determineMonsterCostume.epic && Object.keys(determineMonsterCostume.epic).length > 0)
+    );
+
+  if (hasCostume) {
+    tabContainer.appendChild(switchCostumeButton);
+
+    switchCostumeButton.addEventListener("click", () => {
+      const rarity = imageContainer.dataset.currentActiveRarity || "normal";
+      console.log(`Switching costume for ${baseQuery} (${rarity})`);
+      switchCostume(rarity);
+    });
+  }
+
+  const switchWubbox = document.createElement("button");
+  switchWubbox.innerHTML = "<i>Switch Epic Wubbox</i>";
+  switchWubbox.title = "Change Mode";
+  switchWubbox.classList.add("tab-button-minor");
+  let removeWubboxButton = 0;
 
   // Handle tab clicks
   tabs.forEach((tabName) => {
@@ -8314,7 +8261,6 @@ searchMonsterInput.addEventListener("input", () => {
         switchCostumeButton.title = "No costume available for this monster.";
       }
 
-      // ✅ Set the image to the **base image for that rarity**, never a costume
       if (activeRarity === "normal") {
         img.src = monsterInfo.image.normal;
       } else if (monsterInfo.image[activeRarity]) {
@@ -8323,12 +8269,30 @@ searchMonsterInput.addEventListener("input", () => {
         img.src = monsterInfo.image.normal; // fallback
       }
 
+      if (activeRarity === "normal" && baseQuery === "Wubbox") {
+        if (removeWubboxButton === 1) {
+          tabContainer.removeChild(switchWubbox);
+          tabContainer.appendChild(switchCostumeButton);
+          switchCostumeButton.addEventListener("click", () => {
+            const rarity =
+              imageContainer.dataset.currentActiveRarity || "normal";
+            switchCostume("normal");
+          });
+          removeWubboxButton = 0;
+        }
+      } else if (activeRarity === "epic" && baseQuery === "Wubbox") {
+        removeWubboxButton = 1;
+        tabContainer.removeChild(switchCostumeButton);
+        tabContainer.appendChild(switchWubbox);
+      }
+
+
 
       // Show stats and breeding info
       tabContentContainer.innerHTML = "";
       statsContainer.innerHTML = "";
 
-      const monsterStats = monsterInfo.stats[activeRarity] || "No stats available";
+      const monsterStats = monsterInfo.stats[activeRarity] || "Unknown Currently <br> Please Come Back Soon!";
       const resultContainer = document.createElement("div");
       resultContainer.classList.add("result-container");
 
@@ -8349,11 +8313,9 @@ searchMonsterInput.addEventListener("input", () => {
           }
         }
       }
-
       if (breedingCombinationText) {
         resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
       }
-
       resultContainer.appendChild(blackBox);
       resultContainer.appendChild(resultText);
       statsContainer.appendChild(resultContainer);
@@ -8396,11 +8358,9 @@ searchMonsterInput.addEventListener("input", () => {
     switchMode.title = "Change Mode";
     switchMode.classList.add("tab-button-minor");
     let switchCheck = 0;
+
     switchMode.addEventListener("click", () => {
-      const img = document.createElement("img");
-      img.classList.remove("monster-image");
-      imageContainer.innerHTML = "";
-      imageContainer.appendChild(tabContainer);
+      const img = imageContainer.querySelector(".monster-image") || document.createElement("img");
       img.src = switchCheck === 0
         ? `images/bm/${baseQuery} (Minor).png`
         : `images/bm/${baseQuery} (Major).png`;
@@ -8410,6 +8370,45 @@ searchMonsterInput.addEventListener("input", () => {
     });
     tabContainer.appendChild(switchMode);
   }
+  if (["Wubbox", "Rare Wubbox"].includes(baseQuery)) {
+    const epicForms = [
+      { name: "Cold", img: "images/bm/Epic Wubbox Cold.png" },
+      { name: "Air", img: "images/bm/Epic Wubbox Air.png" },
+      { name: "Water", img: "images/bm/Epic Wubbox Water.png" },
+      { name: "Earth", img: "images/bm/Epic Wubbox Earth.png" },
+      { name: "Fire Haven", img: "images/bm/Epic Wubbox Haven.png" },
+      { name: "Fire Oasis", img: "images/bm/Epic Wubbox Oasis.png" },
+      { name: "Ethereal", img: "images/bm/Epic Wubbox Ethereal.png" },
+      { name: "Plant", img: "images/bm/Epic Wubbox Plant.png" }
+    ];
+
+    let switchCheck = 0;
+
+    switchWubbox.addEventListener("click", () => {
+      const form = epicForms[switchCheck];
+      const img = imageContainer.querySelector(".monster-image") || document.createElement("img");
+
+      // Update image
+      img.src = form.img;
+      img.classList.add("monster-image");
+
+      // Update stats text
+      resultText.innerHTML = `
+      <h3>Epic Version of ${form.name} Wubbox!</h3>
+      <p>Buy From Shop For <b>1 Diamond</b></p>
+    `;
+
+      // Refresh stats panel
+      statsContainer.innerHTML = "";
+      resultContainer.appendChild(resultText);
+      resultContainer.appendChild(blackBox);
+      statsContainer.appendChild(resultContainer);
+
+      // Cycle to next form
+      switchCheck = (switchCheck + 1) % epicForms.length;
+    });
+  }
+
 
   imageContainer.appendChild(tabContainer);
   imageContainer.appendChild(tabContentContainer);
@@ -8452,16 +8451,8 @@ breedButton.addEventListener("click", () => {
   };
 
   const renderStats = (monsterInfo, monsterName, form) => {
-    const resultContainer = document.createElement("div");
-    resultContainer.classList.add("result-container");
 
-    const blackBox = document.createElement("div");
-    blackBox.classList.add("black-box");
-
-    const resultText = document.createElement("div");
-    resultText.classList.add("result-text");
-
-    const stats = monsterInfo.stats?.[form] || "No stats available";
+    const stats = monsterInfo.stats?.[form] || "Unknown Currently <br><br> Please Come Back Soon!";
     resultText.innerHTML = `<h3>${form === "normal" ? "Normal Version Of:" : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
       }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
     console.log(monsterInfo, monsterName, form)
@@ -8572,7 +8563,7 @@ breedButton.addEventListener("click", () => {
         if (info) {
           const img = document.createElement("img");
           img.src = info.image.normal;
-          img.alt = name;
+          img.alt = `<img src="image/important/NoImageFound.png">`;
           img.classList.add("monster-image");
           tabContentContainer.appendChild(img);
           renderStats(info, name, "normal");
@@ -8799,7 +8790,7 @@ function searchMonsters() {
     rareResults.length === 0 &&
     epicResults.length === 0
   ) {
-    resultsContainer.innerHTML = "<p>No results found.</p>";
+    resultsContainer.innerHTML = "<p>Unknown Currently <br><br> Please Come Back Soon!</p>";
     return;
   }
 
@@ -8819,7 +8810,7 @@ function displayMonster(monster, type) {
       : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
   monsterDiv.innerHTML = `
     <h3>${name}</h3>
-    <img src="${monster.image.normal}" alt="${name}" />
+    <img src="${monster.image.normal}" alt="<img src="image/important/NoImageFound.png">" />
     <p>Breeding Time: ${monster.stats.normal}</p>
   `;
 
