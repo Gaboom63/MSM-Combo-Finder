@@ -8268,6 +8268,7 @@ searchMonsterInput.addEventListener("input", () => {
       } else {
         img.src = monsterInfo.image.normal; // fallback
       }
+      img.onerror = () => img.src = "images/important/NoImageFound.png";
 
       if (activeRarity === "normal" && baseQuery === "Wubbox") {
         if (removeWubboxButton === 1) {
@@ -8500,7 +8501,7 @@ breedButton.addEventListener("click", () => {
 
     const img = document.createElement("img");
     img.src = monsterInfo.image.normal;
-    img.alt = searchMonster;
+    img.onerror = () => img.src = "images/important/NoImageFound.png";
     img.classList.add("monster-image");
     imageContainer.appendChild(img);
 
