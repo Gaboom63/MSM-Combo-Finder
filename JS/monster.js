@@ -3331,7 +3331,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 27 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
       rare: "Breeding Time: 1 day 9 hr 45 min <br><br> Enhanced Time: 1 day 1 hr 18 min 45 sec",
-      epic: "",
+      epic: "Breeding Time: 2 days 1 hr 13 min <br><br> Enhanced Time: 1 day 12 hr 54 min 45 sec",
     },
   },
   {
@@ -13706,7 +13706,7 @@ const islandData = {
       "Epic Hyehehe",
       "Epic Buzzinga",
       "Epic Cherubble",
-      // "Epic Bleatnik",
+      "Epic Bleatnik",
       // "Epic Cranchee",
       // "Epic Sporerow",
       // "Epic Pinghound",
