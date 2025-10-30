@@ -3700,7 +3700,7 @@ const monsters = [
     stats: {
       normal: "Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
       rare: "Rare Breeding Time: 8 hr, <br> <br> Enhanced Time: 6 hr<br>",
-      epic: "",
+      epic: "Epic Breeding Time: 20 hr 6 min <br><br> Enhanced Time: 15 hr 4 min 30 sec <br>",
     },
   },
   {
@@ -5590,7 +5590,7 @@ const monsters = [
     name: "Scallyrags",
     audio: "sounds/Scallyrags_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Scallyrags.png",
+      normal: "images/bm/Scallyrags (Major).png",
       rare: "images/bm/Rare Scallyrags.png",
       epic: "images/bm/Epic Scallyrags.png"
     },
@@ -5604,7 +5604,7 @@ const monsters = [
     name: "Dakktyl",
     audio: "sounds/Dakktyl_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Dakktyl.png",
+      normal: "images/bm/Dakktyl (Major).png",
       rare: "images/bm/Rare Dakktyl.png",
       epic: "images/bm/Epic Dakktyl.png"
     },
@@ -5618,7 +5618,7 @@ const monsters = [
     name: "Jerm",
     audio: "sounds/Jerm_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Jerm.png",
+      normal: "images/bm/Jerm (Major).png",
       rare: "images/bm/Rare Jerm.png",
       epic: "images/bm/Epic Jerm.png"
     },
