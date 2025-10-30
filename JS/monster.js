@@ -8353,7 +8353,7 @@ searchMonsterInput.addEventListener("input", () => {
   tabContainer.appendChild(volumeButton);
 
   // Handle Primordials (unchanged)
-  if (["Hairionette", "Owlesque", "Arcorina", "Shhimmer"].includes(baseQuery)) {
+  if (["Hairionette", "Owlesque", "Arcorina", "Shhimmer", "Scallyrags", "Dakktyl", "Jerm"].includes(baseQuery)) {
     const switchMode = document.createElement("button");
     switchMode.innerHTML = "<i>Switch Form</i>";
     switchMode.title = "Change Mode";
