@@ -2192,6 +2192,19 @@ const epicmonsters = [
       epic: ""
     }
   },
+  {
+    name: "Epic Clackula",
+    image: {
+      normal: "images/bm/Epic Clackula.png",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "Epic Breeding Time: 20 hr 6 min <br><br> Enhanced Time: 15 hr 4 min 30 sec <br>",
+      rare: "",
+      epic: ""
+    }
+},
 ];
 
 /*
@@ -2209,6 +2222,8 @@ const epicmonsters = [
     }
 },
 */
+
+
 const monsters = [
   {
     name: "Tweedle",
@@ -4058,9 +4073,9 @@ const monsters = [
     name: "Bridg it",
     audio: "sounds/Bridg-it_Memory_Sample.mp3.mpeg",
     image: {
-      normal: "images/bm/Bridg it.png",
-      rare: "images/bm/Rare Bridg it.png",
-      epic: "images/bm/Epic Bridg it.png",
+      normal: "images/bm/Bridg-it.png",
+      rare: "images/bm/Rare Bridg-it.png",
+      epic: "images/bm/Epic Bridg-it.png",
     },
     stats: {
       normal: "Breeding Time: 16 hr, <br> <br> Enhanced Time: 12 <br>",
@@ -5542,7 +5557,7 @@ const monsters = [
       normal: "31 Days",
       rare: "",
       epic: ""
-    }
+    },
   },
   {
     name: "Adult Plixie",
@@ -5702,7 +5717,6 @@ const wubboxs = [
     },
   },
 ]
-
 
 const monsterCostumes = [
   {
@@ -7393,7 +7407,8 @@ const epicBreedingCombinations = {
   Krillby: [`Pladdie + Kayna <br>`],
   "Fung Pray": [`Nebulob + Boodoo <br>`],
   PongPing: [`Pladdie + Floot Fly<br>`],
-  Hyehehe: [`Cataliszt + Buzzinga`]
+  Hyehehe: [`Cataliszt + Buzzinga`],
+  Clackula: [`Plinkajou + Denchuhs`]
 };
 // Valid breeding combinations
 const breedingCombinations = {
@@ -7437,7 +7452,6 @@ const breedingCombinations = {
   "Dandidoo + Mammott": ["Thumpies"],
   "Pango + Potbelly": ["Thumpies"],
   "Furcorn + Tweedle": ["Thumpies"],
-  "Thumpies + Mammott": ["Thumpies", "Mammott"],
   "Maw + Tweedle": ["Congle"],
   "Pango + Toe Jammer": ["Congle"],
   "Quibble + Mammott": ["Congle"],
@@ -7601,7 +7615,6 @@ const breedingCombinations = {
   "Cataliszt + Hyehehe": ["Wheezel", "Rare Wheezel"],
   "Cataliszt + Buzzinga": ["Knurv", "Epic Hyehehe"],
   "Cataliszt + Cherubble": ["shLep"],
-  "Bowgart + T-Rox": ["Punkleton"],
   "Thumpies + Congle": ["Yool"],
   "Riff + Tweedle": ["Schmoochle"],
   "Spunge + Scups": ["Blabbit"],
@@ -7821,6 +7834,7 @@ const breedingCombinations = {
   "PomPom + Maw": ["Epic Scups"],
   "Pummel + Dandidoo": ["Epic Scups"],
   "T-Rox + Cybop": ["Epic PomPom"],
+  "Thumpies + Mammott": ["Thumpies"],
   "Reedling + Drumpler": ["Epic PomPom"],
   "Shugabush + Mammott": ["Epic PomPom"],
   "Thumpies + Maw": ["Epic Congle"],
@@ -7942,6 +7956,61 @@ const breedingCombinations = {
   "Owlesque + Arcorina": ["Dakktyl"],
   "Scallyrags + Arcorina": ["Jerm"],
   "Dakktyl + Hairionette": ["Jerm"],
+
+  // "Clamble + Bowgart": ["Rare Mammott"],
+  // "Clamble + T Rox": ["Rare Mammott"], 
+  "Bowgart + T Rox": ["Punkleton", "Rare Mammott"],
+  "Thumpies +  Congle": ["Rare Mammott"],
+  // "Thumpies + Bowgart": ["Rare Mammott"],
+  // "Congle + Bowgart": ["Rare Mammott"],
+  // "PomPom + Congle": ["Rare Mammott"],
+  // "PomPom + T Rox": ["Rare Mammott"],
+  "Congle + T Rox": ["Rare Mammott"],
+  "Thumpies + PomPom": ["Rare Mammott"],
+  // "Thumpies + Clamble": ["Rare Mammott"],
+  // "Clamble + PomPom": ["Rare Mammott"],
+  // "Congle + Woolabee": ["Rare Mammott"],
+  "Congle + Wynq": ["Rare Mammott"],
+  // "Woolabee + Wynq": ["Rare Mammott"],
+  // "Sooza + Spytrap": ["Rare Mammott"],
+  // "Sooza + Fiddlement": ["Rare Mammott"],
+  "Spytrap + Fiddlement": ["Rare Mammott"],
+  // "Ziggurab + Cantorell": ["Rare Mammott"],
+  // "Ziggurab + Clavi Gnat": ["Rare Mammott"],
+  "Cantorell + Clavi Gnat": ["Rare Mammott"],
+  "Pummel + T Rox": ["Rare Noggin"],
+  "Scups + T Rox": ["Rare Noggin"],
+  "Reedling + Pummel": ["Rare Noggin"],
+  "Reedling + Clamble": ["Rare Noggin"],
+  "Reedling + Floogull": ["Rare Noggin", "Rare Tweedle"],
+  "Ziggurab + Bridg it": ["Rare Noggin"],
+  "Thrumble + Withur": ["Rare Noggin", "Rare Toe Jammer"],
+  "Pummel + Bowgart": ["Rare Potbelly", "Rare Toe Jammer"],
+  "Spunge + Bowgart": ["Rare Potbelly", "Rare Tweedle"],
+  "Reedling + Spunge": ["Rare Potbelly", "Rare Tweedle"],
+  "Reedling + Thumpies": ["Rare Potbelly"],
+  "Reedling + Barrb": ["Rare Potbelly"],
+  "Sooza + Spytrap": ["Rare Potbelly"],
+  "Rootitoot + Tapricorn": ["Rare Potbelly", "Rare Toe Jammer"],
+  "Spunge + Thumpies": ["Rare Tweedle"],
+  "Scups + PomPom": ["Rare Tweedle"],
+  "Congle + Whaddle": ["Rare Tweedle", "Rare Toe Jammer"],
+  "Spunge + Congle": ["Rare Toe Jammer"],
+  "Scups + Congle": ["Rare Toe Jammer"],
+  "Spunge + Scups": ["Rare Toe Jammer"],
+  "Barrb + Floogull": ["Rare Kayna"],
+  "Whaddle + Woolabbe": ["Rare Kayna"],
+  "Sooza + TooToo": ["Rare Kayna"],
+  "Rootitoot + Rooba": ["Rare Kayna"],
+  "Thrumble + Uuduk": ["Rare Kayna"],
+  "Spytrap + TooToo": ["Rare Fluoress"],
+  "G day + Frondley": ["Rare Fluoress", "Rare Theremind", "Rare Floot Fly", "Rare Clackula"],
+  "Tapricorn + Rooba": ["Rare Theremind"],
+  "Cantorell + Bridg it": ["Rare Floot Fly"],
+  "Withur + Uuduk": ["Rare Clackula"],
+  "Plinkajou + Denchuhs": ["Epic Clackula"],
+  
+  "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"]
 };
 
 // Suggestions list
@@ -8305,15 +8374,32 @@ searchMonsterInput.addEventListener("input", () => {
       resultText.innerHTML = `<h3>${tabName} Version of ${baseQuery}!</h3><p>${monsterStats}</p>`;
 
       let breedingCombinationText = "";
-      if (tabName === "Epic" && epicBreedingCombinations[baseQuery]) {
+
+ // List of monsters that have different Rare combos
+      const specialRareMonsters = ["Mammott", "Toe Jammer", "Potbelly", "Tweedle", "Noggin", "Floot Fly", "Clackula", "Fluoress", "Theremind"]; // Rare Element Single With Different Rare Combos :)
+
+      if (tabName === "Epic" && epicBreedingCombinations[baseQuery]) { 
         breedingCombinationText += `<p>${epicBreedingCombinations[baseQuery].join(", ")}</p>`;
-      } else if (tabName !== "Epic") {
+      } else if (tabName === "Rare" && specialRareMonsters.includes(baseQuery)) {
+        // Special Rare logic only for certain monsters
         for (let combo in breedingCombinations) {
-          if (breedingCombinations[combo].includes(baseQuery)) {
+          const results = breedingCombinations[combo];
+          if (results.includes(`Rare ${baseQuery}`)) {
+            breedingCombinationText += `<p>${combo}</p>`;
+          }
+        }
+      } else {
+        // Normal logic (works for Normal tab + most Rare tab monsters that aren't special)
+        for (let combo in breedingCombinations) {
+          if (
+            (tabName === "Normal" && breedingCombinations[combo].includes(baseQuery)) ||
+            (tabName === "Rare" && breedingCombinations[combo].includes(baseQuery))
+          ) {
             breedingCombinationText += `<p>${combo}</p>`;
           }
         }
       }
+
       if (breedingCombinationText) {
         resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
       }
@@ -8452,34 +8538,64 @@ breedButton.addEventListener("click", () => {
   };
 
   const renderStats = (monsterInfo, monsterName, form) => {
+    const stats =
+      monsterInfo.stats?.[form] ||
+      "Unknown Currently <br><br> Please Come Back Soon!";
 
-    const stats = monsterInfo.stats?.[form] || "Unknown Currently <br><br> Please Come Back Soon!";
-    resultText.innerHTML = `<h3>${form === "normal" ? "Normal Version Of:" : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
-      }<br><h3 id="search_monster_result">${monsterName}!</h3></h3><p>${stats}</p>`;
-    console.log(monsterInfo, monsterName, form)
+    resultText.innerHTML = `
+    <h3>${form === "normal"
+        ? "Normal Version Of:"
+        : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
+      }<br><h3 id="search_monster_result">${monsterName}!</h3></h3>
+    <p>${stats}</p>
+  `;
 
-    // Breeding combo logic
+    console.log(monsterInfo, monsterName, form);
+
+    // --- Updated Breeding Combo Logic (supports Rare & Epic results) ---
     let breedingCombinationText = "";
-    if (form !== "epic") {
-      for (let combo in breedingCombinations) {
-        if (breedingCombinations[combo].includes(monsterName)) {
-          breedingCombinationText += `<p>${combo}</p>`;
-        }
+
+    for (let combo in breedingCombinations) {
+      const results = breedingCombinations[combo];
+
+      // Normal version
+      if (results.includes(monsterName) && form === "normal") {
+        breedingCombinationText += `<p>${combo}</p>`;
       }
-    } else if (epicBreedingCombinations[monsterName]) {
+
+      // Rare version
+      if (results.includes(`Rare ${monsterName}`) && form === "rare") {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+
+      // Epic version
+      if (results.includes(`Epic ${monsterName}`) && form === "epic") {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+    }
+
+    // Add epic-specific combos if defined in epicBreedingCombinations
+    if (form === "epic" && epicBreedingCombinations[monsterName]) {
       breedingCombinationText += `<p>${epicBreedingCombinations[
         monsterName
       ].join(", ")}</p>`;
     }
 
+    // Display section if combos exist
     if (breedingCombinationText) {
-      resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
+      resultText.innerHTML += `
+      <h4><u>Breeding Combinations:</u></h4>
+      ${breedingCombinationText}
+    `;
     }
 
+    // Append to containers
     resultContainer.appendChild(blackBox);
     resultContainer.appendChild(resultText);
     statsContainer.appendChild(resultContainer);
   };
+
+
 
 
 
@@ -8937,6 +9053,17 @@ document
 
 let million = "m"; // Never Used, needs fixing. 
 
+/* 
+ulike: {
+  0: "",
+  1: "",
+  2: "",
+},
+likes: {
+  
+}
+*/
+
 const monsterInfo = {
   potbelly: {
     name: "Potbelly",
@@ -8944,48 +9071,146 @@ const monsterInfo = {
     diamonds: 0,
     coins: 250,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('potbelly'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Eerie Remains",
+      1: "Wild Bagpipe",
+      2: "Bloofi Tree",
+    },
+    likes: {
+      plant: ["T-Rox"],
+      cold: ["Furcorn"],
+      water: ["Reedling"],
+      earth: ["Reedling"],
+      haven: ["Reedling"],
+      light: ["Phangler"],
+      psychic: ["Spytrap"],
+      shugabush: ["Shugarock"]
+    }
   },
+
   noggin: {
     name: "Noggin",
     image: "images/Monster_Avatars/Noggin.png",
     diamonds: 0,
     coins: 300,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('noggin'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Wild Bagpipe",
+      1: "Bloofi Tree",
+      2: "Eerie Remains",
+    },
+    likes: {
+      plant: ["Drumpler"],
+      water: ["Shellbeat"],
+      haven: ["Kayna"],
+      faerie: ["Kayna"],
+      bone: ["Kayna"]
+    }
   },
+
   toe_jammer: {
     name: "Toe Jammer",
     diamonds: 0,
     coins: 250,
     image: "images/Monster_Avatars/Toe Jammer.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('toe_jammer'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Wild Bagpipe",
+      1: "Directions to Nowhere",
+      2: "Hollow Log",
+    },
+    likes: {
+      plant: ["Furcorn"],
+      cold: ["Furcorn"],
+      air: ["Riff"],
+      water: ["Pummel"],
+      oasis: ["Whaddle"],
+      psychic: ["Flowah"],
+      bone: ["Uuduk"]
+    }
   },
-  fwog: {
-    name: "Fwog",
-    image: "images/Monster_Avatars/Fwog.png",
-    diamonds: 30,
-    coins: 0,
-    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
-  },
+
   mammott: {
     name: "Mammott",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Mammott.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('mammott'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Meldablend",
+      1: "Stritch Skin",
+      2: "Bottomless Pit",
+    },
+    likes: {
+      plant: ["Entbrat"],
+      cold: ["Quibble"],
+      air: ["Fwog"],
+      earth: ["Quarrister"],
+      light: ["Pluckbill"],
+      faerie: ["Stogg"]
+    }
   },
+
   tweedle: {
     name: "Tweedle",
     diamonds: 0,
     coins: 300,
     image: "images/Monster_Avatars/Tweedle.png",
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('tweedle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Reflecting Pool",
+      1: "Razzli Tree",
+      2: "Harpsitree",
+    },
+    likes: {
+      cold: ["Bowgart"],
+      air: ["Cybop"],
+      water: ["Cybop"],
+      earth: ["Cybop"],
+      haven: ["Cybop"],
+      oasis: ["Wynq"]
+    }
   },
+
   kayna: {
     name: "Kayna",
     image: "images/Monster_Avatars/Kayna.png",
     diamonds: 0,
     relics: 30,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('kayna'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Directions to Nowhere",
+      1: "Dragoon Statue",
+      2: "Floofy Nest",
+    },
+    likes: {
+      haven: ["Floogull"],
+      oasis: ["Woolabee"],
+      light: ["TooToo"],
+      psychic: ["Oaktopus"],
+      faerie: ["Pladdie"],
+      bone: ["Peckidna"],
+      amber: ["Flum Ox"]
+    }
+  },
+
+  fwog: {
+    name: "Fwog",
+    image: "images/Monster_Avatars/Fwog.png",
+    diamonds: 30,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('fwog'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Reflecting Pool",
+      1: "Fire Bush",
+      2: "Spurrit Statue",
+    },
+    likes: {
+      plant: ["Mammott", "Oaktopus"],
+      air: ["Mammott", "PomPom"],
+      water: ["Oaktopus"],
+      bone: ["Banjaw"]
+    }
   },
   shrubb: {
     name: "Shrubb",
@@ -8993,6 +9218,17 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shrubb'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Fire Bush",
+      1: "Saggle Tree",
+      2: "Razzli Tree",
+    },
+    likes: {
+      plant: ["Bowgart"],
+      water: ["Reedling"],
+      earth: ["Reedling"],
+      haven: ["Reedling"]
+    }
   },
   oaktopus: {
     name: "Oaktopus",
@@ -9000,6 +9236,18 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('Oaktopus'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Reflecting Pool",
+      1: "Trumplite",
+      2: "Spurrit Statue",
+    },
+    likes: {
+      plant: ["Fwog"],
+      cold: ["Thumpies"],
+      water: ["Fwog"],
+      psychic: ["Rootitoot"],
+      shugabush: ["Shugabass"]
+    }
   },
   furcorn: {
     name: "Furcorn",
@@ -9007,6 +9255,18 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Eerie Remains",
+      1: "Leafy Sea Dragon",
+      2: "Smunkin Patch",
+    },
+    likes: {
+      plant: ["Toe Jammer"],
+      cold: ["Toe Jammer"],
+      earth: ["Thumpies"],
+      light: ["Boskus"],
+      shugabush: ["Shugavox"]
+    }
   },
 
   drumpler: {
@@ -9015,6 +9275,18 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('drumpler'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Eerie Remains",
+      1: "Stritch Skin",
+      2: "Smunkin Patch",
+    },
+    likes: {
+      plant: ["Noggin"],
+      air: ["Noggin"],
+      earth: ["Noggin"],
+      faerie: ["Noggin"]
+    }
+
   },
   maw: {
     name: "Maw",
@@ -9022,6 +9294,18 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('maw'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Wild Bagpipe",
+      1: "Pipes of Cicado",
+      2: "Dragoon Statue",
+    },
+    likes: {
+      plant: ["Pummel"],
+      cold: ["Pango"],
+      air: ["Pango"],
+      oasis: ["Pango"]
+    }
+
   },
   dandidoo: {
     name: "Dandidoo",
@@ -9029,6 +9313,17 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('dandidoo'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Yum Yum Tree",
+      1: "Hollow Log",
+      2: "Spurrit Statue",
+    },
+    likes: {
+      cold: ["Spunge"],
+      water: ["Spunge"],
+      earth: ["PomPom"],
+      haven: ["Glowl"]
+    }
   },
   cybop: {
     name: "Cybop",
@@ -9036,6 +9331,17 @@ const monsterInfo = {
     coins: 0,
     image: "images/Monster_Avatars/Cybop.png",
     description: `<button id="monsterListButton" onClick="simulateMonsterSearch('cybop');">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Cozee Cabin",
+      1: "Toob",
+      2: "Razzli Tree",
+    },
+    likes: {
+      air: ["Tweedle"],
+      water: ["Tweedle"],
+      earth: ["Tweedle"],
+      haven: ["Tweedle"]
+    }
   },
   quibble: {
     name: "Quibble",
@@ -9043,6 +9349,18 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quibble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Fossil-osaurus",
+      1: "Trumplite",
+      2: "Castanevine",
+    },
+    likes: {
+      cold: ["Mammott"],
+      air: ["Mammott", "Scups"],
+      water: ["Scups"],
+      oasis: ["Mammott"],
+      shugabush: ["Mammott"],
+    }
   },
   pango: {
     name: "Pango",
@@ -9050,6 +9368,17 @@ const monsterInfo = {
     diamonds: 30,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pango'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Digger",
+      1: "Hollow Log",
+      2: "Babayag Tower",
+    },
+    likes: {
+      cold: ["Maw"],
+      air: ["Maw"],
+      oasis: ["Maw"],
+      earth: ["Clamble"]
+    }
   },
   glowl: {
     name: "Glowl",
@@ -9057,6 +9386,16 @@ const monsterInfo = {
     diamonds: 0,
     relics: 50,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('glowl'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Dragon Tower",
+      1: "Smunkin Patch",
+      2: "Tree Hut",
+    },
+    likes: {
+      haven: ["Dandidoo"],
+      oasis: ["Sneyser"],
+      amber: ["Sneyser", "Ziggurab", "Rootitoot", "Drummidary"]
+    }
   },
   flowah: {
     name: "Flowah",
@@ -9064,6 +9403,17 @@ const monsterInfo = {
     diamonds: 0,
     relics: 50,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('flowah'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Tub Fountain",
+      1: "Bass String Bridge",
+      2: "Bottomless Pit",
+    },
+    likes: {
+      haven: ["Barrb"],
+      light: ["Fluoress"],
+      psychic: ["Toe Jammer"],
+      amber: ["Barrb", "Yelmut", "PongPing", "Bowhead"]
+    }
   },
   stogg: {
     name: "Stogg",
@@ -9071,6 +9421,17 @@ const monsterInfo = {
     diamonds: 0,
     relics: 50,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('stogg'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Stritch Skin",
+      1: "Digger",
+      2: "Eerie Remains",
+    },
+    likes: {
+      haven: ["Tring"],
+      faerie: ["Mammott"],
+      bone: ["Withur"],
+      amber: ["Tring", "Yelmut", "Drummidary", "Gnarls"]
+    }
   },
   spunge: {
     name: "Spunge",
@@ -9078,6 +9439,15 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('spunge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Stritch Skin",
+      1: "Barbloo Statue",
+      2: "Bloofi Tree",
+    },
+    likes: {
+      cold: ["Dandidoo"],
+      water: ["Dandidoo"]
+    }
   },
   reedling: {
     name: "Reedling",
@@ -9085,6 +9455,16 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reedling'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Beeyoot Tree",
+      1: "Pipes of Cicado",
+      2: "Squeed Statue",
+    },
+    likes: {
+      water: ["Potbelly"],
+      earth: ["Potbelly"],
+      haven: ["Potbelly"]
+    }
   },
   thumpies: {
     name: "Thumpies",
@@ -9092,6 +9472,15 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('thumpies'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Cozee Cabin",
+      1: "Fuzzle Tree",
+      2: "Dragoon Statue",
+    },
+    likes: {
+      cold: ["Oaktopus"],
+      earth: ["Furcorn"],
+    }
   },
   congle: {
     name: "Congle",
@@ -9099,6 +9488,16 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('congle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Fossil-osaurus",
+      1: "Guitree",
+      2: "Meldablend",
+    },
+    likes: {
+      cold: ["Potbelly"],
+      air: ["T-Rox"],
+      oasis: ["Boskus"]
+    }
   },
   pummel: {
     name: "Pummel",
@@ -9106,6 +9505,15 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pummel'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Fossil-osaurus",
+      1: "Flappy Flag",
+      2: "Fuzzle Tree",
+    },
+    likes: {
+      plant: ["Maw"],
+      water: ["Toe Jammer"]
+    }
   },
   clamble: {
     name: "Clamble",
@@ -9113,6 +9521,15 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('clamble'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Digger",
+      1: "Toob",
+      2: "Barbloo Statue",
+    },
+    likes: {
+      plant: ["Oaktopus"],
+      earth: ["Pango"]
+    }
   },
   bowgart: {
     name: "Bowgart",
@@ -9120,13 +9537,31 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('bowgart'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Traveler_s Sign",
+      1: "Toob",
+      2: "Eerie Remains",
+    },
+    likes: {
+      plant: ["Shrubb"],
+      cold: ["Tweedle"]
+    }
   },
   t_rox: {
-    name: "T-Rox",
+    name: "T Rox",
     image: "images/Monster_Avatars/T-Rox.png",
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('t_rox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Piney Tree",
+      1: "Bloofi Tree",
+      2: "Dragoon Statue",
+    },
+    likes: {
+      plant: ["Potbelly"],
+      air: ["Congle"]
+    }
   },
   scups: {
     name: "Scups",
@@ -9134,6 +9569,15 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('scups'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Harpsitree",
+      1: "Castanevine",
+      2: "Dragon Tower",
+    },
+    likes: {
+      air: ["Quibble"],
+      water: ["Quibble"]
+    }
   },
   pompom: {
     name: "PomPom",
@@ -9141,6 +9585,16 @@ const monsterInfo = {
     diamonds: 50,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('pompom'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Directions to Nowhere",
+      1: "Bottomless Pit",
+      2: "Toob",
+    },
+    likes: {
+      air: ["Fwog"],
+      earth: ["Dandidoo"],
+      shugabush: ["Shugarock"]
+    }
   },
   barrb: {
     name: "Barrb",
@@ -9148,6 +9602,15 @@ const monsterInfo = {
     diamonds: 0,
     relics: 100,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('id ('barrb')'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Barbloo Statue",
+      1: "Crumpler Tree",
+      2: "Puffle Tree",
+    },
+    likes: {
+      haven: ["Flowah"],
+      amber: ["Flowah", "Boskus", "Sneyser", "Gnarls"]
+    }
   },
   floogull: {
     name: "Floogull",
@@ -9155,6 +9618,15 @@ const monsterInfo = {
     diamonds: 0,
     relics: 100,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('id ('floogull')'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Tree Forte Tower",
+      1: "Bloofi Tree",
+      2: "Fossil-osaurus",
+    },
+    likes: {
+      haven: ["Repatillo"],
+      amber: ["Repatillo", "Yelmut", "Thrumble", "Incisaur"]
+    }
   },
   repatillo: {
     name: "Repatillo",
@@ -9162,6 +9634,15 @@ const monsterInfo = {
     diamonds: 0,
     relics: 100,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('id ('repatillo')'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Castanevine",
+      1: "Dragon Tower",
+      2: "Leafy Sea Dragon",
+    },
+    likes: {
+      haven: ["Kayna"],
+      amber: ["Kayna", "Thrumble", "PongPing", "Tiawa"]
+    }
   },
   //4 Elements
   entbrat: {
@@ -9170,6 +9651,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('entbrat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Flappy Flag",
+      1: "Babayag Tower",
+      2: "Guitree",
+    },
+    likes: {
+      plant: ["Mammott"]
+    }
   },
   deedge: {
     name: "Deedge",
@@ -9177,6 +9666,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('deedge'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Piney Tree",
+      1: "Spueed Statue",
+      2: "Leafy Sea Dragon",
+    },
+    likes: {
+      shugabush: ["Shugajo"]
+    }
   },
   riff: {
     name: "Riff",
@@ -9184,6 +9681,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('riff'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Crumpler Tree",
+      1: "Bass String Bridge",
+      2: "Leafy Sea Dragon",
+    },
+    likes: {
+      air: ["Toe Jammer"]
+    }
   },
   shellbeat: {
     name: "Shellbeat",
@@ -9191,6 +9696,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shellbeat'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Puffle Tree",
+      1: "Yum Yum Tree",
+      2: "Dragon Tower",
+    },
+    likes: {
+      water: ["Noggin"]
+    }
   },
   quarrister: {
     name: "Quarrister",
@@ -9198,6 +9711,14 @@ const monsterInfo = {
     diamonds: 150,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('quarrister'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Tree Hut",
+      1: "Bass String Bridge",
+      2: "Zuffle Tree",
+    },
+    likes: {
+      earth: ["Mammott"]
+    }
   },
   tring: {
     name: "Tring",
@@ -9205,6 +9726,15 @@ const monsterInfo = {
     diamonds: 0,
     relics: 200,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('id ('tring')'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Flappy Flag",
+      1: "Babayag Tower",
+      2: "Ambered Thing",
+    },
+    likes: {
+      haven: ["Stogg"],
+      amber: ["Stogg", "Sneyser", "Incisuar", "Drummidary"]
+    }
   },
   ghazt: {
     name: "Ghazt",
@@ -9212,6 +9742,16 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('ghazt'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Babayag Tower",
+      1: "Squeed Statue",
+      2: "Crumpler Tree",
+    },
+    likes: {
+      plant: ["Entbrat"],
+      ethereal: ["Whisp"],
+      plasma: ["Whisp", "Blarret", "Anglur", "Flasque"]
+    }
   },
   grumpyre: {
     name: "Grumpyre",
@@ -9219,6 +9759,15 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('grumpyre'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Saggle Tree",
+      1: "Bass String Bridge",
+      2: "Dragon Tree",
+    },
+    likes: {
+      cold: ["Maw"],
+      ethereal: ["Arackulele"]
+    }
   },
   reebro: {
     name: "Reebro",
@@ -9226,6 +9775,16 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('reebro'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Barbloo Statue",
+      1: "Fuzzle Tree",
+      2: "Bottomless Pit",
+    },
+    likes: {
+      air: ["Cybop"],
+      ethereal: ["Nebulob"],
+      mech: ["Nebulob", "Nitebear", "Teeter-Tauter", "Yooreek"]
+    }
   },
   jeeode: {
     name: "Jeeode",
@@ -9233,6 +9792,15 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('jeeode'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Reflecting Pool",
+      1: "Digger",
+      2: "Tub Fountain",
+    },
+    likes: {
+      water: ["Tweedle"],
+      ethereal: ["Boodoo"]
+    }
   },
   humbug: {
     name: "Humbug",
@@ -9240,13 +9808,30 @@ const monsterInfo = {
     diamonds: 1000,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('humbug'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Flappy Flag",
+      1: "Piney Tree",
+      2: "Floofy Nest",
+    },
+    likes: {
+      cold: ["Thumpies"],
+      ethereal: ["Kazilleon"]
+    }
   },
   wubbox: {
     name: "Wubbox",
     image: "images/Monster_Avatars/Wubbox.png",
     diamonds: 0,
-    coins: 75 + "M",
+    coins: 1000,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('wubbox'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Toob",
+      1: "Digger",
+      2: "Ambered Thing",
+    },
+    likes: {
+      plant: []
+    }
   },
   shugabush: {
     name: "Shugabush",
@@ -9254,6 +9839,15 @@ const monsterInfo = {
     diamonds: 200,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('shugabush'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Razzi Tree",
+      1: "Babayag Tower",
+      2: "Tree Hut",
+    },
+    likes: {
+      plant: ["Furcorn"],
+      shugabush: ["Furcorn"]
+    }
   },
   punkleton: {
     name: "Punkleton",
@@ -9261,6 +9855,15 @@ const monsterInfo = {
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('punkleton'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Beeyoot Tree",
+      1: "Smunkin Patch",
+      2: "Tree Forte Tower",
+    },
+    likes: {
+      plant: ["Shrubb"],
+      seasonal: ["Hoola"]
+    }
   },
   yool: {
     name: "Yool",
@@ -9268,6 +9871,15 @@ const monsterInfo = {
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('yool'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Piney Tree",
+      1: "Fuzzle Tree",
+      2: "Crumpler Tree",
+    },
+    likes: {
+      cold: ["Thrumpies", "Deegree"],
+      seasonal: ["Blabbit"]
+    }
   },
   schmoochle: {
     name: "Schmoochle",
@@ -9275,6 +9887,15 @@ const monsterInfo = {
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('schmoochle'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Barbloo Statue",
+      1: "Puffle Tree",
+      2: "Yum Yum Tree",
+    },
+    likes: {
+      air: ["PomPom"],
+      seasonal: ["Yool"]
+    }
   },
   hoola: {
     name: "Hoola",
@@ -9282,6 +9903,16 @@ const monsterInfo = {
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('hoola'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Tree Hut",
+      1: "Tree Forte Tower",
+      2: "Castanevine",
+    },
+    likes: {
+      air: ["Tweedle"],
+      earth: ["Tweedle"],
+      seasonal: ["Punkleton"]
+    }
   },
   blabbit: {
     name: "Blabbit",
@@ -9289,6 +9920,15 @@ const monsterInfo = {
     diamonds: 225,
     coins: 0,
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('blabbit'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    ulike: {
+      0: "Toob",
+      1: "Tree Forte Tower",
+      2: "Floofy Nest",
+    },
+    likes: {
+      water: ["Pummel"],
+      seasonal: ["Schmoochle"]
+    }
   },
   gobbleygourd: {
     name: "Gobbleygourd",
@@ -12713,7 +13353,6 @@ const monsterInfo = {
 };
 
 /*
-
   name: {
     name: "",
     image: "images/Monster_Avatars/.png",
@@ -14376,7 +15015,6 @@ const islandKeyMap = {
   "Paironormal Carnival": "paironormal"
 };
 
-
 function populateMonsterSections(islandKey) {
   const island = islandData[islandKey];
   if (!island) return;
@@ -14421,7 +15059,6 @@ function showSection(rarity) {
   // Show the chosen one
   document.querySelector(`#${rarity}Section`).style.display = "block";
   skinCounter = 0;
-  // ✅ Trigger the select’s change event so the monster info updates right away
   const select = document.querySelector(`#${rarity}Section select`);
   if (select && select.value) {
     select.dispatchEvent(new Event("change"));
@@ -14432,9 +15069,6 @@ function showSection(rarity) {
 document
   .getElementById("islandDropdown")
   .addEventListener("change", function () {
-    let selectedIsland = this.value; // e.g., "plant", "cold"
-    skinCounter = 0;
-
     if (selectedIsland === "oasis") {
       selectedIsland = "oasis"; // THIS IS HOW YOU ASSIGN NEW ISLANDS WITHOUT CHANGING ID!!! 
       populateMonsterSections(selectedIsland);
@@ -14469,6 +15103,7 @@ document
   .addEventListener("change", function () {
     const selected = this.value;
     const info = monsterInfo[selected];
+    console.log(info);
     const img = document.getElementById("monsterImage");
     const desc = document.getElementById("monsterDescription");
     const diamonds = document.getElementById("diamonds");
@@ -14681,7 +15316,7 @@ const allIslandSkins = [
   { value: "mirrorlight", text: "Mirror Light", titleSrc: "images/Titles/Mirror Light Island.png", src: "images/islands/Mirror Light Island.png" },
 
   //psychic
-  { value: "bogglepsychic", text: "", titleSrc: "images/Titles/MindBoggle.png", src: "images/islands/Psychic Island (MindBoggle Skin).png" },
+  { value: "bogglepsychic", text: "MindBoggle", titleSrc: "images/Titles/MindBoggle.png", src: "images/islands/Psychic Island (MindBoggle Skin).png" },
 
   //faerie
   { value: "cloverfaerie", text: "Clover Spell", titleSrc: "images/Titles/Cloverspell.png", src: "images/islands/Faerie Island (Cloverspell Skin).png" },
@@ -14760,7 +15395,6 @@ function updateIslandDisplay() {
   let islandImage = document.getElementById("islandImg");
   let islandName = document.getElementById("islandNameImg");
   const selectedIsland = islandDropdown[0].innerHTML;
-
   let defaultSelectedIsland = selectedIsland.toLowerCase().split(" ")[0];
 
   if (selectedIsland === "Fire Haven") defaultSelectedIsland = "haven";
@@ -14768,6 +15402,7 @@ function updateIslandDisplay() {
   if (selectedIsland === "Plasma Islet") defaultSelectedIsland = "plasma";
   if (selectedIsland === "Bone Island") defaultSelectedIsland = "bone";
   if (selectedIsland === "Plant Island") defaultSelectedIsland = "plant";
+  universalIsland = defaultSelectedIsland;
 
   populateMonsterSections(defaultSelectedIsland);
   islandName.src = `images/Titles/${selectedIsland}.png`;
@@ -15300,3 +15935,31 @@ loadCheckboxStates();
 
 // Now render checklist with restored states + rings
 renderChecklist();
+
+let flipped = false; // track flip state
+
+const checklist = document.getElementById('checklist');
+const checklistName = document.getElementById('monsterNameList');
+const monsterTypeDropdown = document.getElementById('monsterTypeDropdown');
+const commonSection = document.getElementById('commonSection');
+const rareSection = document.getElementById('rareSection');
+const epicSection = document.getElementById('epicSection');
+
+
+const diamonds = document.getElementById('Diamonds');
+const coins = document.getElementById('Coins');
+const relic = document.getElementById('Relic');
+const starPower = document.getElementById('StarPower');
+const monsterBreedingButtons = document.getElementById('monsterDescription');
+
+// const rare_diamonds = document.getElementById("diamondsRare");
+// const rare_coins = document.getElementById("coinsRare");
+// const rare_relics = document.getElementById("relicsRare");
+// const rare_stars = document.getElementById('rare_star_power');
+// const desc = document.getElementById("monsterDescriptionRare");
+
+// Come back to that after completing common lists :)
+
+const monsterLikesName = document.getElementById('monsterNameList');
+const monsterLikeContainer = document.getElementById('monsterLikeContainer');
+const monsterSelection = document.getElementById('monsterSelection');
