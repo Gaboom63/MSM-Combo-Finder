@@ -7431,24 +7431,24 @@ const breedingCombinations = {
   "Fwog + Potbelly": ["Pummel"],
   "Oaktopus + Noggin": ["Pummel"],
   "Shrubb + Toe Jammer": ["Pummel"],
-  "Pummel + Noggin": ["Pummel, Noggin"],
+  "Pummel + Noggin": ["Pummel"],
   "Furcorn + Noggin": ["Clamble"],
   "Drumpler + Potbelly": ["Clamble"],
   "Shrubb + Mammott": ["Clamble"],
-  "Clamble + Noggin": ["Clamble", "Noggin"],
+  "Clamble + Noggin": ["Clamble"],
   "Furcorn + Toe Jammer": ["Bowgart"],
   "Oaktopus + Mammott": ["Bowgart"],
   "Maw + Potbelly": ["Bowgart"],
-  "Bowgart + Toe Jammer": ["Bowgart", "Toe Jammer"],
+  "Bowgart + Toe Jammer": ["Bowgart"],
   "Maw + Noggin": ["T-Rox"],
   "Drumpler + Toe Jammer": ["T-Rox"],
   "Fwog + Mammott": ["T-Rox"],
   "T-Rox + Entbrat": ["T-Rox"],
-  "T-Rox + Noggin": ["T-Rox", "Noggin"],
+  "T-Rox + Noggin": ["T-Rox"],
   "Dandidoo + Toe Jammer": ["Spunge"],
   "Quibble + Potbelly": ["Spunge"],
   "Oaktopus + Tweedle": ["Spunge"],
-  "Spunge + Toe Jammer": ["Spunge", "Toe Jammer"],
+  "Spunge + Toe Jammer": ["Spunge"],
   "Dandidoo + Mammott": ["Thumpies"],
   "Pango + Potbelly": ["Thumpies"],
   "Furcorn + Tweedle": ["Thumpies"],
@@ -7456,19 +7456,19 @@ const breedingCombinations = {
   "Pango + Toe Jammer": ["Congle"],
   "Quibble + Mammott": ["Congle"],
   "Congle + Sneyser": ["Congle", "Sneyser"],
-  "Congle + Toe Jammer": ["Congle", "Toe Jammer"],
+  "Congle + Toe Jammer": ["Congle"],
   "Tweedle + Fwog": ["Scups"],
   "Quibble + Noggin": ["Scups"],
   "Cybop + Toe Jammer": ["Scups"],
-  "Scups + Noggin": ["Scups", "Noggin"],
+  "Scups + Noggin": ["Scups"],
   "Drumpler + Tweedle": ["PomPom"],
   "Pango + Noggin": ["PomPom"],
   "Cybop + Mammott": ["PomPom"],
-  "PomPom + Noggin": ["PomPom", "Noggin"],
+  "PomPom + Noggin": ["PomPom"],
   "Dandidoo + Noggin": ["Reedling"],
   "Cybop + Potbelly": ["Reedling"],
   "Shrubb + Tweedle": ["Reedling"],
-  "Reedling + Noggin": ["Reedling", "Noggin"],
+  "Reedling + Noggin": ["Reedling"],
   "Reedling + Tring": ["Reedling"],
   "Dandidoo + Kayna": ["Barrb"],
   "Flowah + Tweedle": ["Barrb"],
@@ -7482,7 +7482,7 @@ const breedingCombinations = {
   "Stogg + Potbelly": ["Repatillo"],
   "Flowah + Noggin": ["Repatillo"],
   "Repatillo + Tring": ["Repatillo", "Tring"],
-  "Repatillo + Noggin": ["Repatillo", "Noggin"],
+  "Repatillo + Noggin": ["Repatillo"],
   "Quibble + Kayna": ["Whaddle"],
   "Phangler + Tweedle": ["Whaddle"],
   "Glowl + Toe Jammer": ["Whaddle"],
@@ -8375,7 +8375,7 @@ searchMonsterInput.addEventListener("input", () => {
 
       let breedingCombinationText = "";
 
- // List of monsters that have different Rare combos
+      // List of monsters that have different Rare combos
       const specialRareMonsters = ["Mammott", "Toe Jammer", "Potbelly", "Tweedle", "Noggin", "Floot Fly", "Clackula", "Fluoress", "Theremind"]; // Rare Element Single With Different Rare Combos :)
 
       if (tabName === "Epic" && epicBreedingCombinations[baseQuery]) { 
@@ -8399,6 +8399,7 @@ searchMonsterInput.addEventListener("input", () => {
           }
         }
       }
+
 
       if (breedingCombinationText) {
         resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
@@ -14401,7 +14402,7 @@ const islandData = {
     ],
     epic: [
       // "Epic Theremind",
-      // "Epic Clackula",
+      "Epic Clackula",
       // "Epic Fluoress",
       // "Epic Floot Fly",
       // "Epic Xyster",
@@ -15066,9 +15067,26 @@ function showSection(rarity) {
   hideIslandSkin();
 }
 
+let universalMonster = '';
+let universalIsland = defaultSelectedIsland;
+
 document
   .getElementById("islandDropdown")
   .addEventListener("change", function () {
+    let selectedIsland = this.value; // e.g., "plant", "cold"
+    universalIsland = selectedIsland;
+    skinCounter = 0;
+
+    const monsterLikeImg = document.getElementById('monsterLikeName');
+    const monsterLike1 = document.getElementById('monsterLikeImage1');
+    const monsterLike2 = document.getElementById('monsterLikeImage2');
+    const monsterLike3 = document.getElementById('monsterLikeImage3');
+
+    monsterLikeImg.innerHTML = `<img src="images/bm/${monsterInfo[universalMonster].likes[universalIsland][0]}.png" style="width: 100px;">`;
+    monsterLike1.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[0]}.png" style="width: 50px;">`;
+    monsterLike2.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[1]}.png" style="width: 50px;">`;
+    monsterLike3.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[2]}.png" style="width: 50px;">`;
+
     if (selectedIsland === "oasis") {
       selectedIsland = "oasis"; // THIS IS HOW YOU ASSIGN NEW ISLANDS WITHOUT CHANGING ID!!! 
       populateMonsterSections(selectedIsland);
@@ -15114,10 +15132,20 @@ document
     const coinImg = document.getElementById('coinImg');
     const starImg = document.getElementById('starImg');
 
+    const monsterLikeImg = document.getElementById('monsterLikeName');
+    const monsterLike1 = document.getElementById('monsterLikeImage1');
+    const monsterLike2 = document.getElementById('monsterLikeImage2');
+    const monsterLike3 = document.getElementById('monsterLikeImage3');
+
+    universalMonster = info.name.toLowerCase().replace(/\s/g, '_');
     if (info) {
       img.src = info.image;
       desc.innerHTML = info.description;
       diamonds.innerHTML = info.diamonds;
+      monsterLikeImg.innerHTML = `<img src="images/bm/${monsterInfo[universalMonster].likes[universalIsland][0]}.png" style="width: 100px;">`;
+      monsterLike1.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[0]}.png" style="width: 50px;">`;
+      monsterLike2.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[1]}.png" style="width: 50px;">`;
+      monsterLike3.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[2]}.png" style="width: 50px;">`;
 
       if (info.coins >= 0) {
         relicImg.style.display = 'none';
@@ -15945,6 +15973,7 @@ const commonSection = document.getElementById('commonSection');
 const rareSection = document.getElementById('rareSection');
 const epicSection = document.getElementById('epicSection');
 
+const flipBtn = document.getElementById('flipChecklistBtn');
 
 const diamonds = document.getElementById('Diamonds');
 const coins = document.getElementById('Coins');
@@ -15963,3 +15992,39 @@ const monsterBreedingButtons = document.getElementById('monsterDescription');
 const monsterLikesName = document.getElementById('monsterNameList');
 const monsterLikeContainer = document.getElementById('monsterLikeContainer');
 const monsterSelection = document.getElementById('monsterSelection');
+
+flipBtn.addEventListener('click', () => {
+  flipped = !flipped; // toggle flip state
+
+  // Flip animation
+  checklist.classList.toggle('flip-view', flipped);
+  checklistName.classList.toggle('flip-view', flipped);
+  monsterTypeDropdown.classList.toggle('flip-view', flipped);
+  commonSection.classList.toggle('flip-view', flipped);
+  rareSection.classList.toggle('flip-view', flipped);
+  epicSection.classList.toggle('flip-view', flipped);
+  monsterSelection.classList.toggle('flip-view', flipped);
+  flipBtn.classList.toggle('flip-view', flipped);
+
+  // Hide or show resource elements
+  if (flipped) {
+    diamonds.style.display = 'none';
+    coins.style.display = 'none';
+    relic.style.display = 'none';
+    starPower.style.display = 'none';
+    monsterBreedingButtons.style.display = 'none';
+    monsterLikeContainer.style.display = 'flex';
+    monsterLikesName.innerHTML = `Monster Likes`;
+  } else {
+    checklist.style.transition = 'transform 0.6s'; // ensures smooth animation
+    diamonds.style.display = 'flex';
+    coins.style.display = 'flex';
+    relic.style.display = 'flex';
+    starPower.style.display = 'flex';
+    monsterLikeContainer.style.display = 'none';
+    monsterBreedingButtons.style.display = 'block';
+    monsterLikesName.innerHTML = `Monster List:`;
+  }
+
+  // console.log('Flipped:', flipped);
+});
