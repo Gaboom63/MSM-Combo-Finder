@@ -9002,8 +9002,8 @@ document
         islandImg.src = `images/islands/Magical ${capitalized}.png`;
         islandTitleImg.src = `images/Titles/Magical ${capitalized}.png`;
       } else if (value === "paironormal") {
-        islandImg.src = `images/islands/Paironormal Carnival.png`;
-        islandTitleImg.src = `images/Titles/Paironormal Carnival.png`;
+        islandImg.src = `images/islands/Paironormal Carnival - Major.png`;
+        islandTitleImg.src = `images/Titles/Paironormal Carnival - Major.png`;
       }
 
       // console.log(islandTitleImg, value, capitalized)
