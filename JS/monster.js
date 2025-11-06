@@ -8231,6 +8231,12 @@ resultText.classList.add("result-text");
 
 //!This is what makes the automatic search work
 searchMonsterInput.addEventListener("input", () => {
+  
+  switchSearch();
+
+  if (!restrictMonsterSearch()) return; // stops if no exact name
+
+    
   let rawQuery = searchMonsterInput.value.trim();
   let baseQuery = rawQuery;
   let defaultTab = "Normal";
@@ -15963,3 +15969,133 @@ const monsterBreedingButtons = document.getElementById('monsterDescription');
 const monsterLikesName = document.getElementById('monsterNameList');
 const monsterLikeContainer = document.getElementById('monsterLikeContainer');
 const monsterSelection = document.getElementById('monsterSelection');
+
+function switchSearch() {
+  const input = searchMonsterInput;
+  const start = input.selectionStart;
+  const end = input.selectionEnd;
+
+  let value = input.value;
+  if (value.trim().length === 0) return;
+
+  // Normalize the casing (first letters uppercase for readability)
+  let formatted = value
+    .toLowerCase()
+    .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
+
+  // Now we’ll check if any monster’s real name starts with this (case-insensitive)
+  const allMonsterNames = [
+    ...monsters.map(m => m.name),
+    ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
+    ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
+  ];
+
+  const possibleMatches = allMonsterNames.filter(name =>
+    name.toLowerCase().startsWith(formatted.toLowerCase())
+  );
+
+  // If there’s an exact or partial match, use the monster’s real capitalization pattern
+  if (possibleMatches.length > 0) {
+    // If user typed a partial, format to match what they’ve typed so far
+    const bestMatch = possibleMatches[0];
+
+    // Apply the proper casing for the part typed so far
+    const correctCasing =
+      bestMatch.slice(0, formatted.length);
+
+    formatted = correctCasing;
+  }
+
+  if (formatted !== value) {
+    input.value = formatted;
+    input.setSelectionRange(start, end);
+  }
+}
+
+
+function restrictMonsterSearch() {
+  const input = searchMonsterInput.value.trim();
+  if (input.length === 0) {
+    searchMonsterInput.style.border = "";
+    return true;
+  }
+
+  // Combine all monster names
+  const allMonsterNames = [
+    ...monsters.map(m => m.name),
+    ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
+    ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
+  ];
+
+  // Normalize capitalization (like your switchSearch)
+  const formattedInput = input
+    .toLowerCase()
+    .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
+
+  // Check if input matches the start of any valid name
+  const matches = allMonsterNames.filter(name =>
+    name.toLowerCase().startsWith(formattedInput.toLowerCase())
+  );
+
+  if (matches.length === 0) {
+    // No valid monster starts with this → reject input
+    searchMonsterInput.style.border = "2px solid red";
+
+    // Optional: erase last invalid character to prevent nonsense typing
+    searchMonsterInput.value = input.slice(0, -1);
+    return false;
+  } else {
+    searchMonsterInput.style.border = ""; // Looks normal
+    return true;
+  }
+}
+
+[firstMonsterInput, secondMonsterInput].forEach((input) => {
+  input.addEventListener("input", () => {
+    // Capitalization logic (PomPom, Toe Jammer, etc.)
+    const start = input.selectionStart;
+    const end = input.selectionEnd;
+
+    let value = input.value;
+    if (value.trim().length === 0) return;
+
+    const allMonsterNames = [
+      ...monsters.map(m => m.name),
+      ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
+      ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
+    ];
+
+    // Normalize basic capitalization
+    let formatted = value
+      .toLowerCase()
+      .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
+
+    // Match correct internal capitalization (PomPom, etc.)
+    const possibleMatches = allMonsterNames.filter(name =>
+      name.toLowerCase().startsWith(formatted.toLowerCase())
+    );
+
+    if (possibleMatches.length > 0) {
+      const bestMatch = possibleMatches[0];
+      formatted = bestMatch.slice(0, formatted.length);
+    }
+
+    if (formatted !== value) {
+      input.value = formatted;
+      input.setSelectionRange(start, end);
+    }
+
+    // Restrict invalid gibberish
+    const matches = allMonsterNames.filter(name =>
+      name.toLowerCase().startsWith(formatted.toLowerCase())
+    );
+
+    if (matches.length === 0 && value.length > 0) {
+      input.style.border = "2px solid red";
+      input.value = value.slice(0, -1); // remove invalid character
+      return;
+    } else {
+      input.style.border = "";
+    }
+  });
+});
