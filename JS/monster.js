@@ -15261,6 +15261,7 @@ const prevButton = document.getElementById("prevPage");
 const nextButton = document.getElementById("nextPage");
 
 // The full list of islands (this is necessary for pagination)
+// The full list of islands (this is necessary for pagination)
 const allIslands = [
   { value: "plant", text: "Plant Island" },
   { value: "cold", text: "Cold Island" },
@@ -15323,7 +15324,7 @@ const allIslandSkins = [
 
   //psychic
   { value: "bogglepsychic", text: "MindBoggle", titleSrc: "images/Titles/MindBoggle.png", src: "images/islands/Psychic Island (MindBoggle Skin).png" },
-
+  { value: "mirrorpsychic", text: "Mirror Psychic", titleSrc: "images/Titles/Mirror Psychic Island.png", src: "images/islands/Mirror Psychic Island.png" },
   //faerie
   { value: "cloverfaerie", text: "Clover Spell", titleSrc: "images/Titles/Cloverspell.png", src: "images/islands/Faerie Island (Cloverspell Skin).png" },
   { value: "mirrorfaerie", text: "Mirror Faerie", titleSrc: "images/Titles/Mirror Faerie Island.png", src: "images/islands/Mirror Faerie Island.png" },
@@ -15343,6 +15344,8 @@ const allIslandSkins = [
 
   //gold 
   { value: "anniversarygold", text: "Anniversary", titleSrc: "images/Titles/Anniversary Month.png", src: "images/islands/Gold Island (Anniversary Month Skin).png" },
+
+  { value: "mirrorpaironormal", text: "Mirror Paironormal", titleSrc: "images/Titles/Paironormal Carnival - Minor.png", src: "images/islands/Paironormal Carnival - Minor.png" },
 ];
 
 const islandsPerPage = 5;
@@ -15478,33 +15481,38 @@ function switchIslandSkin() {
     ],
     psychic: [
       allIslandSkins[19].src,
+      allIslandSkins[20].src,
       "images/islands/Psychic Island.png"
     ],
     faerie: [
-      allIslandSkins[20].src,
       allIslandSkins[21].src,
+      allIslandSkins[22].src,
       "images/islands/Faerie Island.png"
     ],
     bone: [
-      allIslandSkins[22].src,
       allIslandSkins[23].src,
+      allIslandSkins[24].src,
       "images/islands/Bone Island.png"
     ],
     ethereal: [
-      allIslandSkins[24].src,
+      allIslandSkins[25].src,
       "images/islands/Ethereal Island.png"
     ],
     "magical Sanctum": [
-      allIslandSkins[25].src,
+      allIslandSkins[26].src,
       "images/islands/Magical Sanctum Island.png"
     ],
     amber: [
-      allIslandSkins[26].src,
+      allIslandSkins[27].src,
       "images/islands/Amber Island.png"
     ],
     gold: [
-      allIslandSkins[27].src,
+      allIslandSkins[28].src,
       "images/islands/Gold Island.png"
+    ], 
+    paironormal: [
+      allIslandSkins[29].src,
+      "images/islands/Paironormal Carnival - Major.png"
     ]
   };
 
@@ -15554,33 +15562,38 @@ function switchIslandSkin() {
     ],
     psychic: [
       allIslandSkins[19].titleSrc,
+      allIslandSkins[20].titleSrc,
       "images/Titles/Psychic Island.png"
     ],
     faerie: [
-      allIslandSkins[20].titleSrc,
       allIslandSkins[21].titleSrc,
+      allIslandSkins[22].titleSrc,
       "images/Titles/Faerie Island.png"
     ],
     bone: [
-      allIslandSkins[22].titleSrc,
       allIslandSkins[23].titleSrc,
+      allIslandSkins[24].titleSrc,
       "images/Titles/Bone Island.png"
     ],
     ethereal: [
-      allIslandSkins[24].titleSrc,
+      allIslandSkins[25].titleSrc,
       "images/Titles/Ethereal Island.png"
     ],
     "magical Sanctum": [
-      allIslandSkins[25].titleSrc,
+      allIslandSkins[26].titleSrc,
       "images/Titles/Magical Sanctum.png"
     ],
     amber: [
-      allIslandSkins[26].titleSrc,
+      allIslandSkins[27].titleSrc,
       "images/Titles/Amber Island.png"
     ],
     gold: [
-      allIslandSkins[27].titleSrc,
+      allIslandSkins[28].titleSrc,
       "images/Titles/Gold Island.png"
+    ], 
+    paironormal: [
+      allIslandSkins[29].titleSrc,
+      "images/Titles/Paironormal Carnival - Major.png"
     ]
   }
 
@@ -15597,7 +15610,7 @@ function switchIslandSkin() {
 function hideIslandSkin() {
   const islandButton = document.getElementById('switchIsland');
   const selectedIsland = islandDropdown.value;
-  const SKIN_ISLANDS = ['plant', 'cold', 'air', 'water', 'earth', 'haven', 'oasis', 'light', 'psychic', 'faerie', 'bone', 'ethereal', 'magical Sanctum', 'amber', 'gold'];
+  const SKIN_ISLANDS = ['plant', 'cold', 'air', 'water', 'earth', 'haven', 'oasis', 'light', 'psychic', 'faerie', 'bone', 'ethereal', 'magical Sanctum', 'amber', 'gold', 'paironormal'];
   if (SKIN_ISLANDS.includes(selectedIsland)) {
     islandButton.style.display = 'block';
   } else {
@@ -15607,7 +15620,6 @@ function hideIslandSkin() {
 // Initial render
 renderIslands();
 hideIslandSkin();
-
 // ------------------ CHECKLIST -------------------
 
 const allIslandsNames = [
