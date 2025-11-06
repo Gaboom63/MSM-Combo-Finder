@@ -8,6 +8,6 @@ A easy to use, but packed with information monster breeding tool.  This is still
 <br><br>
 (This will be updated frequently as of right now)
 <br><br>
-As of now it has been updated to include **Spooktacle 2025**! 
+As of now it has been updated to include **Beat Here After 2025**! 
 
 New Updates Finally Published! Working on some new stuff so look out for that! Updated to: (10/30/25)
