@@ -1,2229 +1,3 @@
-// Array of monster data
-const raremonsters = [
-  {
-    name: "Shugarock",
-    image: {
-      normal: "images/bm/Shugarock.png",
-      rare: "images/bm/Rare Shugarock.png",
-      epic: "images/bm/Epic Shugarock.png",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugavox",
-    image: {
-      normal: "images/bm/Shugavox.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugabass",
-    image: {
-      normal: "images/bm/Shugabass.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugajo",
-    image: {
-      normal: "images/bm/Shugajo.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugabeats",
-    image: {
-      normal: "images/bm/Shugabeats.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugitar",
-    image: {
-      normal: "images/bm/Shugitar.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Shugabuzz",
-    image: {
-      normal:
-        "Breeding Time: 1 day, 11 hr, <br> <br> Enhanced Time: 1 day, 2 hr, 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Breeding Time: 100, <br> <br> Enhanced Time: 100 <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Mammott",
-    image: {
-      normal: "images/bm/Rare Mammott.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Deedge",
-    image: {
-      normal: "images/bm/Rare Deedge.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Rare Breeding Time: 1 day 6 hr 30 min , <br> <br> Enhanced Time: 22 hr 52 min 30 sec <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Potbelly",
-    image: {
-      normal: "images/bm/Rare Potbelly.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Oaktopus",
-    image: {
-      normal: "images/bm/Rare Oaktopus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Viveine",
-    image: {
-      normal: "images/bm/Rare Viveine.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Furcorn",
-    image: {
-      normal: "images/bm/Rare Furcorn.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Quibble",
-    image: {
-      normal: "images/bm/Rare Quibble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare PomPom",
-    image: {
-      normal: "images/bm/Rare PomPom.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare G'joob",
-    image: {
-      normal: "images/bm/Rare G_joob.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Knurv",
-    image: {
-      normal: "images/bm/Rare Knurv.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Strombonin",
-    image: {
-      normal: "images/bm/Rare Strombonin.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Yawstrich",
-    image: {
-      normal: "images/bm/Rare Yawstrich.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Anglow",
-    image: {
-      normal: "images/bm/Rare Anglow.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Hyehehe",
-    image: {
-      normal: "images/bm/Rare Hyehehe.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Buzzinga",
-    image: {
-      normal: "images/bm/Rare Buzzinga.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Cherubble",
-    image: {
-      normal: "images/bm/Rare Cherubble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Cataliszt",
-    image: {
-      normal: "images/bm/Rare Cataliszt.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Punkleton",
-    image: {
-      normal: "images/bm/Rare Punkleton.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Yool",
-    image: {
-      normal: "images/bm/Rare Yool.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Schmoochle",
-    image: {
-      normal: "images/bm/Rare Schmoochle.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Blabbit",
-    image: {
-      normal: "images/bm/Rare Blabbit.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Hoola",
-    image: {
-      normal: "images/bm/Rare Hoola.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Viveine",
-    image: {
-      normal: "images/bm/Rare Viveine.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Monculus",
-    image: {
-      normal: "images/bm/Rare Monculus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Gobbleygourd",
-    image: {
-      normal: "images/bm/Rare Gobbleygourd.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Spurrit",
-    image: {
-      normal: "images/bm/Rare Spurrit.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Whiz bang",
-    image: {
-      normal: "images/bm/Rare Whiz-bang.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Boo'qwurm",
-    image: {
-      normal: "images/bm/Rare Boo_qwurm.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Ffidyll",
-    image: {
-      normal: "images/bm/Rare Ffidyll.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Clavavera",
-    image: {
-      normal: "images/bm/Rare Clavavera.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Carillong",
-    image: {
-      normal: "images/bm/Rare Carillong.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Jam Boree",
-    image: {
-      normal: "images/bm/Rare Jam Boree - Year 11.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Gloptic",
-    image: {
-      normal: "images/bm/Rare Gloptic",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Uuduk",
-    image: {
-      normal: "images/bm/Rare Uuduk",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Fiddlement",
-    image: {
-      normal: "images/bm/Rare Fiddlement.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Clavi Gnat",
-    image: {
-      normal: "images/bm/Rare Clavi Gnat.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Drummidary",
-    image: {
-      normal: "images/bm/Rare Drummidary.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Breeding Time: 3 days 23 hr 30 mins",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Sporerow",
-    image: {
-      normal: "images/bm/Rare Sporerow.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 22 hr <br>  <br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Pinghound",
-    image: {
-      normal: "images/bm/Rare Pinghound.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 2 day 4 hr 30 min <br>  <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Mushaboom",
-    image: {
-      normal: "images/bm/Rare Mushaboom.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Plinkajou",
-    image: {
-      normal: "images/bm/Rare Plinkajou.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Roarick",
-    image: {
-      normal: "images/bm/Rare Roarick.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 2 hr 30 min <br> <br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Spytrap",
-    image: {
-      normal: "images/bm/Rare Spytrap.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 1 hr 30 min <br> <br> Enhanced Breeding Time: 19 hours 7 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Pladdie",
-    image: {
-      normal: "images/bm/Rare Pladdie.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 18 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 7 hr 52 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Mimic",
-    image: {
-      normal: "images/bm/Rare Mimic.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 3 days 23 hr 30 min <br><br> Enhanced Breeding Time: 2 days 23 hr 37 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Frondley",
-    image: {
-      normal: "images/bm/Rare Frondley.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 13 hr 30 min <br><br> Enhanced Breeding Time: 1 day 4 hr 7 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Periscorp",
-    image: {
-      normal: "images/bm/Rare Periscorp.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 1 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 7 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Peckidna",
-    image: {
-      normal: "images/bm/Rare Peckidna.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Cahoot",
-    image: {
-      normal: "images/bm/Rare Cahoot.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 2 hr 30 min <br><br> Enhanced Breeding Time: 19 hr 52 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Wheezel",
-    image: {
-      normal: "images/bm/Rare Wheezel.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 22 hr 15 min <br><br> Enhanced Breeding Time: 1 day 10 hr 41 min 15 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Squot",
-    image: {
-      normal: "images/bm/Rare Squot.png",
-      rare: "",
-      epic: ""
-    },
-    stats: {
-      normal: "Breeding Time: 12 hr 30 min <br><br> Enhanced Breeding Time: 9 hr 22 min 30 sec",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Incisaur",
-    image: {
-      normal: "images/bm/Rare Incisaur.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 2 day 4 hr 30 min <br> <br> Enhanced Breeding Time: 1 day 15 hr 22 min 30 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Rare Yooreek",
-    image: {
-      normal: "images/bm/Rare Yooreek.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Success: 1 day 11 hr",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Meebkin",
-    image: {
-      normal: "images/bm/Rare Meebkin.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Success: 1 day,  11 hours",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Blarret",
-    image: {
-      normal: "images/bm/Rare Blarret.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Success: 1 day 11 hr",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Gaddzooks",
-    image: {
-      normal: "images/bm/Rare Gaddzooks.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Success: 1 day 11 hr",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Auglur",
-    image: {
-      normal: "images/bm/Rare Auglur.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Success: 1 day 11 hr",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Rare Wubbox",
-    audio: "sounds/Rare_Wubbox_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Rare Wubbox.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-];
-
-const epicmonsters = [
-  {
-    name: "Epic Tweedle",
-    image: {
-      normal: "images/bm/Epic Tweedle.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 11 hr, <br> <br> Enhanced Time: 8 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-
-  {
-    name: "Epic Potbelly",
-    image: {
-      normal: "images/bm/Epic Potbelly.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 9 hr, <br> <br> Enhanced Time: 6 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Noggin",
-    image: {
-      normal: "images/bm/Epic .png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Epic Breeding Time: 44 min, <br> <br> Enhanced Time: 1 hr <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Toe Jammer",
-    image: {
-      normal: "images/bm/Epic Toe Jammer.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 3 hr, <br> <br> Enhanced Time: 2 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Mammott",
-    image: {
-      normal: "images/bm/Epic Mammott.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 5 hr, <br> <br> Enhanced Time: 3 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Kayna",
-    image: {
-      normal: "images/bm/Epic Kayna.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Dandidoo",
-    image: {
-      normal: "images/bm/Epic Dandidoo.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Cybop",
-    image: {
-      normal: "images/bm/Epic Cybop.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Quibble",
-    image: {
-      normal: "images/bm/Epic Quibble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Pango",
-    image: {
-      normal: "images/bm/Epic Pango.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Shrubb",
-    image: {
-      normal: "images/bm/Epic Shrubb.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Oaktopus",
-    image: {
-      normal: "images/bm/Epic Oaktopus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Furcorn",
-    image: {
-      normal: "images/bm/Epic Furcorn.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Fwog",
-    image: {
-      normal: "images/bm/Epic Fwog.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 7 hr, <br> <br> Enhanced Time: 5 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Drumpler",
-    image: {
-      normal: "images/bm/Epic Drumpler.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 15 hr, <br> <br> Enhanced Time: 11 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Maw",
-    image: {
-      normal: "images/bm/Epic Maw.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 13 hr, <br> <br> Enhanced Time: 9 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Glowl",
-    image: {
-      normal: "images/bm/Epic Glowl.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Flowah",
-    image: {
-      normal: "images/bm/Epic Flowah.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Stogg",
-    image: {
-      normal: "images/bm/Epic Stogg.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Phangler",
-    image: {
-      normal: "images/bm/Epic .png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Boskus",
-    image: {
-      normal: "images/bm/Epic Boskus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Reedling",
-    image: {
-      normal: "images/bm/Epic Reedling.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Spunge",
-    image: {
-      normal: "images/bm/Epic Spunge.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 17 hr, <br> <br> Enhanced Time: 12 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Thumpies",
-    image: {
-      normal: "images/bm/Epic Thumpies.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Scups",
-    image: {
-      normal: "images/bm/Epic Scups.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 13 hr, <br> <br> Enhanced Time: 1 day 3 hr 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic PomPom",
-    image: {
-      normal: "images/bm/Epic PomPom.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-    },
-  },
-  {
-    name: "Epic Congle",
-    image: {
-      normal: "images/bm/Epic Congle.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 23 hr, <br> <br> Enhanced Time: 17 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Pummel",
-    image: {
-      normal: "images/bm/Epic Pummel.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Clamble",
-    image: {
-      normal: "images/bm/Epic Clamble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 21 hr, <br> <br> Enhanced Time: 15 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-
-  {
-    name: "Epic Bowgart",
-    image: {
-      normal: "images/bm/Epic Bowgart.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic T Rox",
-    image: {
-      normal: "images/bm/Epic T-Rox.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 19 hr, <br> <br> Enhanced Time: 14 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Barrb",
-    image: {
-      normal: "images/bm/Epic Barrb.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Floogull",
-    image: {
-      normal: "images/bm/Epic Floogull.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 13 hr , <br> <br> Enhanced Time: 1 day 3 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Whaddle",
-    image: {
-      normal: "images/bm/Epic Whaddle.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 1 hr, <br> <br> Enhanced Time: 18 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Woolabee",
-    image: {
-      normal: "images/bm/Epic Woolabee.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Repatillo",
-    image: {
-      normal: "images/bm/Epic Repatillo.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 9 hr, <br> <br> Enhanced Time: 1 day 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-
-  {
-    name: "Epic Rootitoot",
-    image: {
-      normal: "images/bm/Epic Rootitoot.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Sooza",
-    image: {
-      normal: "images/bm/Epic Sooza.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 Day 3 hr, <br> <br> Enhanced Time: 20 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Thrumble",
-    image: {
-      normal: "images/bm/Epic Thrumble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 7 hr, <br> <br> Enhanced Time: 23 hr 15 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Ziggurab",
-    image: {
-      normal: "images/bm/Epic Ziggurab.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Wynq",
-    image: {
-      normal: "images/bm/Epic Wynq.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 5 hr, <br> <br> Enhanced Time: 21 hr 45 min <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Shellbeat",
-    image: {
-      normal: "images/bm/Epic Shellbeat.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 19 hr, <br> <br> Enhanced Time: 1 day 8 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-
-  {
-    name: "Epic Quarrister",
-    image: {
-      normal: "images/bm/Epic Quarrister.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 11 hr, <br> <br> Enhanced Time: 1 day 2 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Deedge",
-    image: {
-      normal: "images/bm/Epic Deedge.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Riff",
-    image: {
-      normal: "images/bm/Epic Riff.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 15 hr, <br> <br> Enhanced Time: 1 day 5 hr 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Entbrat",
-    image: {
-      normal: "images/bm/Epic Entbrat.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Tring",
-    image: {
-      normal: "images/bm/Epic Tring.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 21 hr, <br> <br> Enhanced Time: 1 day 9 hr 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Sneyser",
-    image: {
-      normal: "images/bm/Epic Sneyser.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 17 hr, <br> <br> Enhanced Time: 1 day 6 hr 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Ghazt",
-    image: {
-      normal: "images/bm/Epic Ghazt.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 hr 6 hr <br> <br> Enhanced Time: 22 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Grumpyre",
-    image: {
-      normal: "images/bm/Epic Grumpyre.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 4 hr, <br> <br> Enhanced Time: 21 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Reebro",
-    image: {
-      normal: "images/bm/Epic Reebro.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 10 hr, <br> <br> Enhanced Time: 1 day 1 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Jeeode",
-    image: {
-      normal: "images/bm/Epic Jeeode.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 2 hr, <br> <br> Enhanced Time: 19 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Humbug",
-    image: {
-      normal: "images/bm/Epic Humbug.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Whisp",
-    image: {
-      normal: "images/bm/Epic Whisp.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Nebulob",
-    image: {
-      normal: "images/bm/Epic Nebulob.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 20 hr, <br> <br> Enhanced Time: 1 day 9 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Sox",
-    image: {
-      normal: "images/bm/Epic Sox.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 12 hr, <br> <br> Enhanced Time: 1 day 3 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Jellbilly",
-    image: {
-      normal: "images/bm/Epic Jellbilly.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Arackulele",
-    image: {
-      normal: "images/bm/Epic Arackulele.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Boodoo",
-    image: {
-      normal: "images/bm/Epic Boodoo.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 18 hr, <br> <br> Enhanced Time: 1 day 7 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Kazilleon",
-    image: {
-      normal: "images/bm/Epic Kazilleon.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 14 hr, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Bellowfish",
-    image: {
-      normal: "images/bm/Epic Bellowfish.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 2 day<br> <br> Enhanced Time: 1 day 12 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Punkleton",
-    image: {
-      normal: "images/bm/Epic Punkleton.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 7 hr 10 min, <br> <br> Enhanced Time: 23 hr 22 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Yool",
-    image: {
-      normal: "images/bm/Epic Yool.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 1 hr 22 hr, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Schmoochle",
-    image: {
-      normal: "images/bm/Epic Schmoochle.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 22 hr 14 min, <br> <br> Enhanced Time: 16 hr 40 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Blabbit",
-    image: {
-      normal: "images/bm/Epic Blabbit.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 1 hr 22 min, <br> <br> Enhanced Time: 19 hr 1 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Hoola",
-    image: {
-      normal: "images/bm/Epic Hoola.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 21hr 20 min, <br> <br> Enhanced Time: 16 hr<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Gobbleygourd",
-    image: {
-      normal: "images/bm/Epic Gobbleygourd.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 3 hr 11 min, <br> <br> Enhanced Time: 20 hr 23 min 15 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Clavavera",
-    image: {
-      normal: "images/bm/Epic Clavavera.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 23 hr 11 min, <br> <br> Enhanced Time: 17 hr 23 min 15 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Viveine",
-    image: {
-      normal: "images/bm/Epic Viveine.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 8 hr 10 min, <br> <br> Enhanced Time: 1 day 7 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Jam Boree",
-    image: {
-      normal: "images/bm/Epic Jam Boree - Year 11.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 16 hr 23 min, <br> <br> Enhanced Time: 1 day 6 hr 17 min 15 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Carillong",
-    image: {
-      normal: "images/bm/Epic Carillong.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 12 hr 12 min, <br> <br> Enhanced Time: 1 day 3 hr 9 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Whiz bang",
-    image: {
-      normal: "images/bm/Epic Whiz-bang.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 6 hr 30 min, <br> <br> Enhanced Time: 22 hr 52 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Monculus",
-    image: {
-      normal: "images/bm/Epic Monculus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 2 day 9 hr 30 min 40 sec, <br> <br> Enhanced Time: 1 day 19 hr 8 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Ffidyll",
-    image: {
-      normal: "images/bm/Epic Ffidyll.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 6 hr 17 min, <br> <br> Enhanced Time: 22 hr 42 min 45 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Boo'qwurm",
-    image: {
-      normal: "images/bm/Epic Boo_qwurm.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 2 day 4 hr 10 min, <br> <br> Enhanced Time: 1 day 15 hr 7 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Spurrit",
-    image: {
-      normal: "images/bm/Epic Spurrit.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 3 hr 20 sec, <br> <br> Enhanced Time: 20 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic G'joob",
-    image: {
-      normal: "images/bm/Epic G_joob.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 9 hr 10 min, <br> <br> Enhanced Time: 1 day 52 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Yawstrich",
-    image: {
-      normal: "images/bm/Epic Yawstrich.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 14 hr 23 min, <br> <br> Enhanced Time: 1 day 4 hr 30 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Strombonin",
-    image: {
-      normal: "images/bm/Epic Strombonin.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 10 hr 30 min, <br> <br> Enhanced Time: 1 day 1 hr 52 min 30 sec<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Buzzinga",
-    image: {
-      normal: "images/bm/Epic Buzzinga.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day, 6 hours, 34 minutes <br><br> Enhanced Time: 22 hours, 55 minutes, 30 seconds",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Yelmut",
-    image: {
-      normal: "images/bm/Epic Yelmut.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day, 15 hr <br> <br> Enhanced Breeding Time: 1 day, 5 hr, 15 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic PongPing",
-    image: {
-      normal: "images/bm/Epic PongPing.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 23 hr<br><br> Enhanced Time: 1 day 11 hr 15 min",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Fung Pray",
-    image: {
-      normal: "images/bm/Epic Fung Pray.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day 20 hours <br><br> Enhanced Time: 1 day 9 hr",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Edamimi",
-    image: {
-      normal: "images/bm/Epic Edamimi.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Epic Breeding Time: 1 day, 21 hr <br> <br> Enhanced Breeding Time: 1 day, 9 hr, 45 min<br>",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Cherubble",
-    image: {
-      normal: "images/bm/Epic Cherubble.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Anglow",
-    image: {
-      normal: "images/bm/Epic Anglow.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 17 hr 13 min <br> <br> Enhanced Breeding Time: 1 day 6 hr 54 min 45 sec",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Bisonorus",
-    image: {
-      normal: "images/bm/Epic Bisonorus.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Breeding Time: 2 day 3 hr <br> <br> Enhanced Breeding Time: 1 day 14 hr 15 min",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Incisaur",
-    image: {
-      normal: "images/bm/Epic Incisaur.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 17 hr <br> <br> Enhanced Breeding Time: 1 day 6 hr 45 min",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Hyehehe",
-    image: {
-      normal: "images/bm/Epic Hyehehe.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal:
-        "Breeding Time: 1 day 9 hr 28 min <br> <br> Enhanced Breeding Time: 1 day 1 hr 6 min",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic PWubbox",
-    image: {
-      normal: "images/bm/Epic Wubbox Plant.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic CWubbox",
-    image: {
-      normal: "images/bm/Epic Wubbox Cold.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic AWubbox",
-    image: {
-      normal: "images/bm/Epic Wubbox Cold.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic WWubbox",
-    audio: "sounds/Epic_Wubbox_(Water)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Water.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic EWubbox",
-    audio: "sounds/Epic_Wubbox_(Earth)_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/Wubbox.png",
-      rare: "images/bm/Rare Wubbox.png",
-      epic: "images/bm/Epic Wubbox Earth.png",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: "",
-    },
-  },
-  {
-    name: "Epic Flum Ox",
-    image: {
-      normal: "images/bm/Epic Flum Ox.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Breeding Time: 1 day 13 hr <br> <br> Enhanced Time: 1 day 3 hr 45 min <br><br> Success: 1 day 13 hr <br><br> Fail: 20 hr",
-      rare: "",
-      epic: ""
-    }
-  },
-  {
-    name: "Epic Clackula",
-    image: {
-      normal: "images/bm/Epic Clackula.png",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "Epic Breeding Time: 20 hr 6 min <br><br> Enhanced Time: 15 hr 4 min 30 sec <br>",
-      rare: "",
-      epic: ""
-    }
-},
-];
-
-/*
-{
-    name: "",
-    image: {
-      normal: "images/bm/",
-      rare: "",
-      epic: "",
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: ""
-    }
-},
-*/
-
-
 const monsters = [
   {
     name: "Tweedle",
@@ -5644,7 +3418,21 @@ const monsters = [
     }
   },
 ];
-
+/*
+{
+    name: "",
+    image: {
+      normal: "images/bm/",
+      rare: "",
+      epic: "",
+    },
+    stats: {
+      normal: "",
+      rare: "",
+      epic: ""
+    }
+},
+*/
 const wubboxs = [
   {
     name: "Plant Wubbox",
@@ -5717,6 +3505,602 @@ const wubboxs = [
     },
   },
 ]
+
+const breedingCombinations = {
+  "Get From Shop!": ["Gnarls"],
+  "Potbelly + Noggin": ["Shrubb"],
+  "Potbelly + Toe Jammer": ["Oaktopus"],
+  "Potbelly + Mammott": ["Furcorn"],
+  "Noggin + Toe Jammer": ["Fwog"],
+  "Noggin + Mammott": ["Drumpler"],
+  "Toe Jammer + Mammott": ["Maw"],
+  "Tweedle + Toe Jammer": ["Quibble"],
+  "Tweedle + Mammott": ["Pango"],
+  "Tweedle + Noggin": ["Cybop"],
+  "Tweedle + Kayna": ["Glowl"],
+  "Potbelly + Kayna": ["Flowah"],
+  "Noggin + Kayna": ["Stogg"],
+  "Toe Jammer + Kayna": ["Phangler"],
+  "Mammott + Kayna": ["Boskus"],
+  // Three Elements
+  "Fwog + Potbelly": ["Pummel"],
+  "Oaktopus + Noggin": ["Pummel"],
+  "Shrubb + Toe Jammer": ["Pummel"],
+  "Pummel + Noggin": ["Pummel"],
+  "Furcorn + Noggin": ["Clamble"],
+  "Drumpler + Potbelly": ["Clamble"],
+  "Shrubb + Mammott": ["Clamble"],
+  "Clamble + Noggin": ["Clamble"],
+  "Furcorn + Toe Jammer": ["Bowgart"],
+  "Oaktopus + Mammott": ["Bowgart"],
+  "Maw + Potbelly": ["Bowgart"],
+  "Bowgart + Toe Jammer": ["Bowgart"],
+  "Maw + Noggin": ["T-Rox"],
+  "Drumpler + Toe Jammer": ["T-Rox"],
+  "Fwog + Mammott": ["T-Rox"],
+  "T-Rox + Entbrat": ["T-Rox"],
+  "T-Rox + Noggin": ["T-Rox"],
+  "Dandidoo + Toe Jammer": ["Spunge"],
+  "Quibble + Potbelly": ["Spunge"],
+  "Oaktopus + Tweedle": ["Spunge"],
+  "Spunge + Toe Jammer": ["Spunge"],
+  "Dandidoo + Mammott": ["Thumpies"],
+  "Pango + Potbelly": ["Thumpies"],
+  "Furcorn + Tweedle": ["Thumpies"],
+  "Maw + Tweedle": ["Congle"],
+  "Pango + Toe Jammer": ["Congle"],
+  "Quibble + Mammott": ["Congle"],
+  "Congle + Sneyser": ["Congle", "Sneyser"],
+  "Congle + Toe Jammer": ["Congle"],
+  "Tweedle + Fwog": ["Scups"],
+  "Quibble + Noggin": ["Scups"],
+  "Cybop + Toe Jammer": ["Scups"],
+  "Scups + Noggin": ["Scups"],
+  "Drumpler + Tweedle": ["PomPom"],
+  "Pango + Noggin": ["PomPom"],
+  "Cybop + Mammott": ["PomPom"],
+  "PomPom + Noggin": ["PomPom"],
+  "Dandidoo + Noggin": ["Reedling"],
+  "Cybop + Potbelly": ["Reedling"],
+  "Shrubb + Tweedle": ["Reedling"],
+  "Reedling + Noggin": ["Reedling"],
+  "Reedling + Tring": ["Reedling"],
+  "Dandidoo + Kayna": ["Barrb"],
+  "Flowah + Tweedle": ["Barrb"],
+  "Glowl + Potbelly": ["Barrb"],
+  "Barrb + Tring": ["Barrb", "Tring"],
+  "Cybop + Kayna": ["Floogull"],
+  "Stogg + Tweedle": ["Floogull"],
+  "Glowl + Noggin": ["Floogull"],
+  "Floogull + Tring": ["Floogull", "Tring"],
+  "Shrubb + Kayna": ["Repatillo"],
+  "Stogg + Potbelly": ["Repatillo"],
+  "Flowah + Noggin": ["Repatillo"],
+  "Repatillo + Tring": ["Repatillo", "Tring"],
+  "Repatillo + Noggin": ["Repatillo"],
+  "Quibble + Kayna": ["Whaddle"],
+  "Phangler + Tweedle": ["Whaddle"],
+  "Glowl + Toe Jammer": ["Whaddle"],
+  "Whaddle + Sneyser": ["Whaddle", "Sneyser"],
+  "Pango + Kayna": ["Woolabee"],
+  "Boskus + Tweedle": ["Woolabee"],
+  "Glowl + Mammott": ["Woolabee"],
+  "Woolabee + Sneyser": ["Woolabee", "Sneyser"],
+  "Maw + Kayna": ["Wynq"],
+  "Boskus + Toe Jammer": ["Wynq"],
+  "Phangler + Mammott": ["Wynq"],
+  "Wynq + Sneyser": ["Wynq", "Sneyser"],
+  "Boskus + Potbelly": ["Sooza"],
+  "Flowah + Mammott": ["Sooza"],
+  "Furcorn + Kayna": ["Sooza"],
+  "Sooza + Blow t": ["Sooza", "Blow t"],
+  "Oaktopus + Kayna": ["Rootitoot"],
+  "Flowah + Toe Jammer": ["Rootitoot"],
+  "Phangler + Potbelly": ["Rootitoot"],
+  "Rootitoot + Gloptic": ["Rootitoot", "Gloptic"],
+  "Drumpler + Kayna": ["Ziggurab"],
+  "Stogg + Mammott": ["Ziggurab"],
+  "Boskus + Noggin": ["Ziggurab"],
+  "Ziggurab + Pladdie": ["Ziggurab", "Pladdie"],
+  "Fwog + Kayna": ["Thrumble"],
+  "Stogg Toe Jammer": ["Thrumble"],
+  "Phangler + Noggin": ["Thrumble"],
+  "Thrumble + Plinkajou": ["Thrumble", "Plinkajou"],
+  //Four Elements
+  "Shrubb + Maw": ["Entbrat"],
+  "Oaktopus + Drumpler": ["Entbrat"],
+  "Furcorn + Fwog": ["Entbrat"],
+  "Clamble + Toe Jammer": ["Entbrat"],
+  "Bowgart + Noggin": ["Entbrat"],
+  "T-Rox + Potbelly": ["Entbrat"],
+  "Pummel + Mammott": ["Entbrat"],
+  "Dandidoo + Maw": ["Deedge"],
+  "Quibble + Furcorn": ["Deedge"],
+  "Pango + Oaktopus": ["Deedge"],
+  "Spunge + Mammott": ["Deedge"],
+  "Thumpies + Toe Jammer": ["Deedge"],
+  "Congle + Potbelly": ["Deedge"],
+  "Bowgart + Tweedle": ["Deedge"],
+  "Cybop + Maw": ["Riff"],
+  "Quibble + Drumpler": ["Riff"],
+  "Pango + Fwog": ["Riff"],
+  "Scups + Mammott": ["Riff"],
+  "T-Rox + Tweedle": ["Riff"],
+  "Congle + Noggin": [""],
+  "PomPom + Toe Jammer": ["Riff"],
+  "Dandidoo + Fwog": ["Shellbeat"],
+  "Cybop + Oaktopus": ["Shellbeat"],
+  "Quibble + Shrubb": ["Shellbeat"],
+  "Scups + Potbelly": ["Shellbeat"],
+  "Reedling + Toe Jammer": ["Shellbeat"],
+  "Pummel + Tweedle": ["Shellbeat"],
+  "Spunge + Noggin": ["Shellbeat"],
+  "Dandidoo + Drumpler": ["Quarrister"],
+  "Cybop + Furcorn": ["Quarrister"],
+  "Pango + Shrubb": ["Quarrister"],
+  "Reedling + Mammott": ["Quarrister"],
+  "Thumpies + Noggin": ["Quarrister"],
+  "PomPom + Potbelly": ["Quarrister"],
+  "Clamble + Tweedle": ["Quarrister"],
+  "Stogg + Dandidoo": ["Tring"],
+  "Shrubb + Glowl": ["Tring"],
+  "Flowah + Cybop": ["Tring"],
+  "Reedling + Kayna": ["Tring"],
+  "Floogull + Potbelly": ["Tring"],
+  "Barrb + Noggin": ["Tring"],
+  "Quibble + Boskus": ["Sneyser"],
+  "Pango + Phangler": ["Sneyser"],
+  "Glowl + Maw": ["Sneyser"],
+  "Congle + Kayna": ["Sneyser"],
+  "Whaddle + Kayna": ["Sneyser"],
+  "Woolabee + Toe Jammer": ["Sneyser"],
+  "Wynq + Tweedle": ["Sneyser"],
+  "Bowgart + Clamble": ["Shugabush"],
+  "Shugabush + Mammott": ["Shugarock", "Mammott", "Epic PomPom"],
+  "Shugabush + Potbelly": ["Shugabass", "Epic Deedge"],
+  "Shugabush + Oaktopus": ["Shugajo", "Oaktopus", "Epic Mammott", "Viveine"],
+  "Shugabush + Furcorn": ["Shugabeats", "Furcorn", "Epic Potbelly"],
+  "Shugabush + Quibble": ["Shugabuzz", "Quibble", "Epic Oaktopus"],
+  "Shugabush + PomPom": ["Shugitar", "PomPom", "Epic Viveine"],
+  "Shugabush + Deedge": ["Shugavox", "Deedge", "Epic Furcorn"],
+  "Entbrat + T-Rox": ["Ghazt", "T-Rox"],
+  "Entbrat + Clamble": ["Ghazt", "Clamble"],
+  "Entbrat + Pummel": ["Ghazt", "Pummel"],
+  "Entbrat + Bowgart": ["Ghazt", "Bowgart"],
+  "Deedge + Congle": ["Grumpyre", "Congle"],
+  "Deedge + Bowgart": ["Grumpyre", "Bowgart"],
+  "Deedge + Spunge": ["Grumpyre", "Spunge"],
+  "Deedge + Thumpies": ["Grumpyre", "Thumpies"],
+  "Riff + Congle": ["Reebro", "Congle"],
+  "Riff + Scups": ["Reebro", "Scups"],
+  "Riff + PomPom": ["Reebro", "PomPom"],
+  "Riff + T-Rox": ["Reebro", "T-Rox"],
+  "Shellbeat + Spunge": ["Jeeode", "Spunge"],
+  "Shellbeat + Pummel": ["Jeeode", "Pummel"],
+  "Shellbeat + Scups": ["Jeeode", "Scups"],
+  "Shellbeat + Reedling": ["Jeeode", "Reedling"],
+  "Quarrister + Reedling": ["Humbug", "Reedling"],
+  "Quarrister + PomPom": ["Humbug", "PomPom"],
+  "Quarrister + Thumpies": ["Humbug", "Thumpies"],
+  "Quarrister + Clamble": ["Humbug", "Clamble"],
+  "Ghazt + Grumpyre": ["Whisp"],
+  "Ghazt + Reebro": ["Nebulob"],
+  "Grumpyre + Reebro": ["Arackulele"],
+  "Ghazt + Jeeode": ["Sox"],
+  "Grumpyre + Jeeode": ["Boodoo"],
+  "Reebro + Jeeode": ["Bellowfish"],
+  "Ghazt + Humbug": ["Jellbilly"],
+  "Grumpyre + Humbug": ["Kazilleon"],
+  "Reebro + Humbug": ["Dragong"],
+  "Jeeode + Humbug": ["Fung Pray"],
+  "T-Rox + Pummel": ["G'joob"],
+  "Gloptic + Rootitoot": ["Hairionette"],
+  "Gloptic + Tapricorn": ["Hairionette"],
+  "Gloptic + Rooba": ["Hairionette"],
+  "Gloptic + Periscorp": ["Hairionette"],
+  "Bowgart + Spunge": ["Strombonin"],
+  "T-Rox + Scups": ["Yawstrich"],
+  "Scups + Pummel": ["Anglow"],
+  "Thumpies + PomPom": ["Hyehehe", "Rare Hyehehe"],
+  "Congle + Woolabee": ["Cherubble"],
+  "Cataliszt + G'joob": ["Bleatnik", "Epic Strombonin"],
+  "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
+  "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob", "Rare Sporerow"],
+  "Cataliszt + Hyehehe": ["Wheezel", "Rare Wheezel"],
+  "Cataliszt + Cherubble": ["shLep", "Epic Bleatnik"],
+  "Thumpies + Congle": ["Yool"],
+  "Riff + Tweedle": ["Schmoochle"],
+  "Spunge + Scups": ["Blabbit"],
+  "PomPom + Pango": ["Hoola"],
+  "Punkleton + Blabbit": ["Viveine"],
+  "Yool + Hoola": ["Monculus"],
+  "Punkleton + Yool": ["Gobbleygourd"],
+  "Blabbit + Hoola": ["Spurrit"],
+  "Yool + Blabbit": ["Whiz bang"],
+  "Schmoochle + Hoola": ["Boo'qwurm"],
+  "Schmoochle + Blabbit": ["Ffidyll"],
+  "Punkleton + Schmoochle": ["Clavavera"],
+  "Yool + Schmoochle": ["Carillong"],
+  "Punkleton + Hoola": ["Jam Boree"],
+  "Potbelly + Fluoress": ["Gob"],
+  "Mammott + Fluoress": ["Bulbo"],
+  "Kayna + Fluoress": ["Pluckbill"],
+  "Potbelly + Theremind": ["Bonkers"],
+  "Toe Jammer + Theremind": ["Poppette"],
+  "Kayna + Theremind": ["Yuggler"],
+  "Noggin + Floot Fly": ["HippityHop"],
+  "Mammott + Floot Fly": ["Squot", "Rare Squot"],
+  "Kayna + Floot Fly": ["Wimmzies"],
+  "Noggin + Clackula": ["Peckidna", "Rare Peckidna"],
+  "Toe Jammer + Clackula": ["Denchuhs"],
+  "Kayna + Clackula": ["Hawlo"],
+  "Theremind + Clackula": ["Xyster"],
+  "Theremind + Fluoress": ["Cahoot", "Rare Cahoot"],
+  "Theremind + Floot Fly": ["Deja-Jin"],
+  "Clackula + Fluoress": ["Roarick"],
+  "Floot Fly + Clackula": ["Osstax"],
+  "Floot Fly + Fluoress": ["Knucklehead"],
+  "Gob + Mammott": ["Spytrap"],
+  "Pluckbill + Potbelly": ["TooToo"],
+  "Pluckbill + Mammott": ["Fiddlement"],
+  "Bonkers + Toe Jammer": ["Tapricorn"],
+  "Yuggler + Potbelly": ["Rooba"],
+  "Yuggler + Toe Jammer": ["Periscorp", "Rare Periscorp"],
+  "Squot + Noggin": ["Cantorell"],
+  "Wimmzies + Noggin": ["Bridg it"],
+  "Wimmzies + Mammott": ["Clavi Gnat"],
+  "Denchuhs + Noggin": ["Withur"],
+  "Hawlo + Noggin": ["Banjaw"],
+  "Xyster + Fluoress": ["G'day"],
+  "Osstax + Theremind": ["Larvaluss"],
+  "Deja + Fluoress": ["Frondley", "Rare Frondley"],
+  "Osstax + Fluoress": ["Mushaboom"],
+  "Furcorn + Pluckbill": ["Blow t"],
+  "Flowah + Bulbo": ["Blow t"],
+  "Boskus + Gob": ["Blow t"],
+  "TooToo + Mammott": ["Blow t"],
+  "Fiddlement + Potbelly": ["Blow t"],
+  "Spytrap + Kayna": ["Blow t"],
+  "Sooza + Fluoress": ["Blow t"],
+  "Oaktopus + Yuggler": ["Gloptic", "Rare Gloptic"],
+  "Flowah + Poppette": ["Gloptic", "Rare Gloptic"],
+  "Phangler + Bonkers": ["Gloptic", "Rare Gloptic"],
+  "Rootitoot + Theremind": ["Gloptic", "Rare Gloptic"],
+  "Tapricorn + Kayna": ["Gloptic", "Rare Gloptic"],
+  "Rooba + Toe Jammer": ["Gloptic", "Rare Gloptic"],
+  "Periscorp + Potbelly": ["Gloptic", "Rare Gloptic"],
+  "Drumpler + Wimmzies": ["Pladdie"],
+  "Stogg + Squot": ["Pladdie"],
+  "Boskus + HippityHop": ["Pladdie"],
+  "Clavi Gnat + Noggin": ["Pladdie"],
+  "Bridg it + Mammott": ["Pladdie"],
+  "Cantorell + Kayna": ["Pladdie"],
+  "Ziggurab + Floot Fly": ["Pladdie"],
+  "Pladdie + Drumpler": ["Drumpler", "Pladdie"],
+  "Fwog + Hawlo": ["Plinkajou"],
+  "Stogg + Denchuhs": ["Plinkajou"],
+  "Phangler + Peckidna": ["Plinkajou"],
+  "Banjaw + Noggin": ["Plinkajou"],
+  "Uuduk + Toe Jammer": ["Plinkajou"],
+  "Withur + Kayna": ["Plinkajou"],
+  "Thrumble + Clackula": ["Plinkajou"],
+  "Plinkajou + Fwog": ["Plinkajou", "Fwog"],
+  "Deja-Jin + Roarick": ["Enchantling"],
+  "Xyster + Knucklehead": ["Enchantling"],
+  "Cahoot + Osstax": ["Enchantling"],
+  "Mushaboom + Theremind": ["Enchantling"],
+  "G'day + Floot Fly": ["Enchantling"],
+  "Frondley + Clackula": ["Enchantling"],
+  "Larvaluss + Fluoress": ["Enchantling"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
+  "Plasma Meeb + Shadow Meeb + Crystal Meeb": ["Meebkin"],
+  "Plasma Meeb + Shadow Meeb + Poison Meeb": ["Blarret"],
+  "Plasma Meeb + Mech Meeb + Crystal Meeb": ["Gaddzooks"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
+  "Plasma Meeb + Mech Meeb + Poison Meeb": ["Auglur"],
+  "Plasma Meeb + Crystal Meeb + Poison Meeb": ["Flasque"],
+  "Shadow Meeb + Mech Meeb + Crystal Meeb": ["Nitebear"],
+  "Shadow Meeb + Mech Meeb + Poison Meeb": ["Piplash"],
+  "Shadow Meeb + Crystal Meeb + Poison Meeb": ["X rt"],
+  "Mech Meeb + Crystal Meeb + Poison Meeb": ["Teeter Tauter"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb": ["Whaill"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Poison Meeb": ["Vhenshun"],
+  "Plasma Meeb + Shadow Meeb + Crystal Meeb + Poison Meeb": ["Pentumbra"],
+  "Plasma Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Rhysmuth"],
+  "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
+  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["BeMeebEth"],
+  "Pladdie + Ziggurab": ["Owlesque"],
+  "Pladdie + Cantorell": ["Owlesque"],
+  "Pladdie + Bridg it": ["Owlesque"],
+  "Pladdie + Clavi Gnat": ["Owlesque"],
+
+  //Epic Breeding Combos!
+  "Entbrat + Maw": ["Epic G'joob"], //Heres the main method to breed epic monsters in the two boxes
+  "Deedge + Dandidoo": ["Epic Tweedle"],
+  "Riff + Cybop": ["Epic Tweedle"],
+  "Shellbeat + Quibble": ["Epic Tweedle"],
+  "Quarrister + Pango": ["Epic Tweedle"],
+  "Tring + Shrubb": ["Epic Tweedle"],
+  "Sneyser + Maw": ["Epic Tweedle"],
+  "Entbrat + Shrubb": ["Epic Potbelly"],
+  "Deedge + Oaktopus": ["Epic Potbelly"],
+  "Shellbeat + Dandidoo": ["Epic Potbelly"],
+  "Quarrister + Furcorn": ["Epic Potbelly"],
+  "Tring + Cybop": ["Epic Potbelly"],
+  "Blow t + Boskus": ["Epic Potbelly"],
+  "Gloptic + Phangler": ["Epic Potbelly"],
+  "Shugabush + Furcorn": ["Epic Potbelly"],
+  "Entbrat + Fwog": ["Epic Noggin"],
+  "Riff + Drumpler": ["Epic Noggin"],
+  "Shellbeat + Shrubb": ["Epic Noggin"],
+  "Quarrister + Cybop": ["Epic Noggin"],
+  "Tring + Dandidoo": ["Epic Noggin"],
+  "Pladdie + Boskus": ["Epic Noggin"],
+  "Plinkajou + Phangler": ["Epic Noggin"],
+  "Entbrat + Oaktopus": ["Epic Toe Jammer"],
+  "Deedge + Quibble": ["Epic Toe Jammer"],
+  "Riff + Maw": ["Epic Toe Jammer"],
+  "Shellbeat + Fwog": ["Epic Toe Jammer"],
+  "Sneyser + Pango": ["Epic Toe Jammer"],
+  "Gloptic + Flowah": ["Epic Toe Jammer"],
+  "Plinkajou + Stogg": ["Epic Toe Jammer"],
+  "Entbrat + Furcorn": ["Epic Mammott"],
+  "Deedge + Maw": ["Epic Mammott"],
+  "Riff + Pango": ["Epic Mammott"],
+  "Quarrister + Drumpler": ["Epic Mammott"],
+  "Sneyser + Quibble": ["Epic Mammott"],
+  "Blow t + Flowah": ["Epic Mammott"],
+  "Pladdie + Stogg": ["Epic Mammott"],
+  "Shugabush + Oaktopus": ["Epic Mammott"],
+  "Tring + Stogg": ["Epic Kayna"],
+  "Sneyser + Phangler": ["Epic Kayna"],
+  "Blow t + Furcorn": ["Epic Kayna"],
+  "Gloptic + Oaktopus": ["Epic Kayna"],
+  "Pladdie + Drumpler": ["Epic Kayna"],
+  "Plinkajou + Fwog": ["Epic Kayna"],
+  "Bowgart + Quibble": ["Epic Dandidoo"],
+  "Pummel + Cybop": ["Epic Dandidoo"],
+  "Clamble + Pango": ["Epic Dandidoo"],
+  "Reedling + Flowah": ["Epic Dandidoo"],
+  "Congle + Drumpler": ["Epic Cybop"],
+  "Scups + Dandidoo": ["Epic Cybop"],
+  "PomPom + Shrubb": ["Epic Cybop"],
+  "Reedling + Stogg": ["Epic Cybop"],
+  "Congle + Dandidoo": ["Epic Quibble"],
+  "Scups + Maw": ["Epic Quibble"],
+  "Spunge + Shrubb": ["Epic Quibble"],
+  "Wynq + Pango": ["Epic Quibble"],
+  "Shugabush + PomPom": ["Epic Quibble"],
+  "Thumpie + Oaktopus": ["Epic Pango"],
+  "Congle + Cybop": ["Epic Pango"],
+  "Reedling + Furcorn": ["Epic Pango"],
+  "Whaddle + Maw": ["Epic Pango"],
+  "T-Rox + Oaktopus": ["Epic Shrubb"],
+  "Reedling + Quibble": ["Epic Shrubb"],
+  "PomPom + Dandidoo": ["Epic Shrubb"],
+  "Barrb + Cybop": ["Epic Shrubb"],
+  "Bowgart + Shrubb": ["Epic Oaktopus"],
+  "Spunge + Pango": ["Epic Oaktopus"],
+  "Reedling + Fwog": ["Epic Oaktopus"],
+  "Rootitoot + Bonkers": ["Epic Oaktopus"],
+  "Shugabush + Quibble": ["Epic Oaktopus"],
+  "Clamble + Fwog": ["Epic Furcorn"],
+  "Spunge + Maw": ["Epic Furcorn"],
+  "Thumpies + Drumpler": ["Epic Furcorn"],
+  "Sooza + Pluckbill": ["Epic Furcorn"],
+  "Pummel + Furcorn": ["Epic Fwog"],
+  "Scups + Furcorn": ["Epic Fwog"],
+  "Reedling + Oaktopus": ["Epic Fwog"],
+  "Thrumble + Denchuhs": ["Epic Fwog"],
+  "Clamble + Maw": ["Epic Drumpler"],
+  "PomPom + Fwog": ["Epic Drumpler"],
+  "Thumpies + Cybop": ["Epic Drumpler"],
+  "Ziggurab + HippityHop": ["Epic Drumpler"],
+  "Bowgart + Drumpler": ["Epic Maw"],
+  "Spunge + Furcorn": ["Epic Maw"],
+  "T-Rox + Quibble": ["Epic Maw"],
+  "Whaddle + Pango": ["Epic Maw"],
+  "Floogull + Dandidoo": ["Epic Glowl"],
+  "Wynq + Quibble": ["Epic Glowl"],
+  "Barrb + Shrubb": ["Epic Flowah"],
+  "Fiddlement + Gob": ["Epic Flowah"],
+  "Rooba + Poppette": ["Epic Flowah"],
+  "Repatillo + Glowl": ["Epic Stogg"],
+  "Bridg it + Squot": ["Epic Stogg"],
+  "Withur + Phangler": ["Epic Stogg"],
+  "Congle + Glowl": ["Epic Phangler"],
+  "Tapricorn + Yuggler": ["Epic Phangler"],
+  "Banjaw + Peckidna": ["Epic Phangler"],
+  "Woolabee + Maw": ["Epic Boskus"],
+  "TooToo + Bulbo": ["Epic Boskus"],
+  "Cantorell + Wimmzies": ["Epic Boskus"],
+  "Spunge + Fwog": ["Epic Reedling"],
+  "Thumpies + Shrubb": ["Epic Reedling"],
+  "Repatillo + Cybop": ["Epic Reedling"],
+  "Thumpies + Quibble": ["Epic Spunge"],
+  "Scups + Oaktopus": ["Epic Spunge"],
+  "Congle + Oaktopus": ["Epic Thumpies"],
+  "Reedling + Pango": ["Epic Thumpies"], //Next is Scups!
+  "PomPom + Maw": ["Epic Scups"],
+  "Pummel + Dandidoo": ["Epic Scups"],
+  "T-Rox + Cybop": ["Epic PomPom"],
+  "Thumpies + Mammott": ["Thumpies"],
+  "Reedling + Drumpler": ["Epic PomPom"],
+  "Shugabush + Mammott": ["Epic PomPom"],
+  "Thumpies + Maw": ["Epic Congle"],
+  "Scups + Drumpler": ["Epic Congle"],
+  "Woolabee + Quibble": ["Epic Congle"],
+  "Bowgart + Fwog": ["Epic Pummel"],
+  "Scups + Shrubb": ["Epic Pummel"],
+  "Pummel + Maw": ["Epic Clamble"],
+  "PomPom + Furcorn": ["Epic Clamble"],
+  "Clamble + Oaktopus": ["Epic Bowgart"],
+  "Congle + Furcorn": ["Epic Bowgart"],
+  "Pummel + Drumpler": ["Epic T-Rox"],
+  "Congle + Fwog": ["Epic T-Rox"],
+  "Floogull + Shrubb": ["Epic Barrb"],
+  "Reedling + Glowl": ["Epic Floogull"],
+  "Congle + Phangler": ["Epic Whaddle"],
+  "Whaddle + Boskus": ["Epic Woolabee"],
+  "Floogull + Flowah": ["Epic Repatillo"],
+  "Rooba + Oaktopus": ["Epic Rootitoot"],
+  "TooToo + Boskus": ["Epic Sooza"],
+  "Uuduk + Denchuhs": ["Epic Thrumble"],
+  "Bridg it + Drumpler": ["Epic Ziggurab"],
+  "Congle + Boskus": ["Epic Wynq"],
+  "Spunge + Cybop": ["Epic Shellbeat"],
+  "Clamble + Dandidoo": ["Epic Quarrister"],
+  "Pango + Bowgart": ["Epic Deedge"],
+  "PomPom + Quibble": ["Epic Riff"],
+  "T-Rox + Shrubb": ["Epic Entbrat"],
+  "Barrb + Stogg": ["Epic Tring"],
+  "Woolabee + Phangler": ["Epic Sneyser"],
+  "T-Rox + Furcorn": ["Epic Ghazt"],
+  "Boodoo + Dragong": ["Epic Ghazt"],
+  "Bowgart + Dandidoo": ["Epic Grumpyre"],
+  "Nebulob + Fung Pray": ["Epic Grumpyre"],
+  "T-Rox + Pango": ["Epic Reebro"],
+  "Sox + Kazilleon": ["Epic Reebro"],
+  "Pummel + Quibble": ["Epic Jeeode"],
+  "Jellbilly + Arackulele": ["Epic Jeeode"],
+  "Clamble + Cybop": ["Epic Humbug"],
+  "Whisp + Bellowfish": ["Epic Humbug"],
+  "Nebulob + Kazilleon": ["Epic Whisp"],
+  "Boodoo + Jellbilly": ["Epic Nebulob"],
+  "Jellbilly + Bellowfish": ["Epic Sox"],
+  "Arackulele + Fung Pray": ["Epic Jellbilly"],
+  "Sox + Dragong": ["Epic Arackulele"],
+  "Kazilleon + Bellowfish": ["Epic Boodoo"],
+  "Sox + Arackulele": ["Epic Kazilleon"],
+  "Whisp + Dragong": ["Epic Bellowfish"],
+  "Whisp + Fung Pray": ["Epic Dragong"],
+  "Nebulob + Boodoo": ["Epic Fung Pray"],
+  "Entbrat +  Drumpler": ["Epic Punkleton"],
+  "Schmoochle + Blabbit": ["Epic Punkleton"],
+  "Deedge + Pango": ["Epic Yool"],
+  "Hoola + Blabbit": ["Epic Yool"],
+  "Riff + Quibble": ["Epic Schmoochle"],
+  "Punkleton + Hoola": ["Epic Schmoochle"],
+  "Shellbeat + Oaktopus": ["Epic Blabbit"],
+  "Punkelton + Yool": ["Epic Blabbit"],
+  "Riff + Fwog": ["Epic Hoola"],
+  "Quarrister + Dandidoo": ["Epic Hoola"],
+  "Tring + Flowah": ["Epic Gobbleygourd"],
+  "Sneyser + Boskus": ["Epic Gobbleygourd"],
+  "Jam Boree + Clavavera": ["Epic Gobbleygourd"],
+  "Plinkajou + Hawlo": ["Epic Clavavera"],
+  "Viveine + Whiz bang": ["Epic Clavavera"],
+  "Shugabush + PomPom": ["Epic Viveine"],
+  "Ffidyll + Monculus": ["Epic Viveine"],
+  "Gobbleygourd + Boo'qwurm": ["Epic Jam Boree"],
+  "Enchantling + Roarick": ["Epic Carillong"],
+  "Whiz bang + Monculus": ["Epic Carillong"],
+  "Blow t + Bulbo": ["Epic Whiz bang"],
+  "Boo'qwurm + Spurrit": ["Epic Whiz bang"],
+  "Whisp + Humbug": ["Epic Monculus"],
+  "Ffidyll + Carillong": ["Epic Monculus"],
+  "Pladdie + HippityHop": ["Epic Ffidyll"],
+  "Viveine + Spurrit": ["Epic Ffidyll"],
+  "Gloptic + Bonkers": ["Epic Boo'qwurm"],
+  "Gobbleygourd + Clavavera": ["Epic Boo'qwurm"],
+  "Sneyser + Glowl": ["Epic Spurrit"],
+  "Jam Boree + Carillong": ["Epic Spurrit"],
+  "Entbrat + Maw": ["Epic G'joob"],
+  "Deedge + Furcorn": ["Epic Strombonin"],
+  "Riff + Fwog": ["Epic Yawstrich"],
+  "Shellbeat + Cybop": ["Epic Anglow"],
+  "Cataliszt + Cherubble": ["Epic Anglow"],
+  "Quarrister + Shrubb": ["Epic Hyehehe"],
+  "Cataliszt + Buzzinga": ["Knurv", "Epic Hyehehe"],
+  "Tring + Glowl": ["Epic Buzzinga"],
+  "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
+  "Blow t + Kayna": ["Epic Yelmut"],
+  "Sneyser + Boskus": ["Epic Cherubble"],
+  "Cataliszt + Hyehehe": ["Epic Cherubble"],
+
+  //Update V3 ~Seasonal Fix :)
+  "Kayna + Barrb": ["Buzzinga"],
+  "Withur + Clackula": ["Clavavera"],
+  "Shugabush + Oaktopus": ["Viveine", "Epic Mammott"],
+  "Punkleton + Hoola": ["Jam Boree", "Epic Schmoochle"],
+  "Schmoochle + Yool": ["Carillong"],
+  "Mushaboom + Roarick": ["Carillong"],
+  "Blow t + Spytrap": ["Whiz bang", "Shhimmer"],
+  "Nebulob + Jeeode": ["Monculus"],
+  "Pladdie + Floot Fly": ["Ffidyll", "Epic PongPing"],
+  "Periscorp + Bonkers": ["Boo'qwurm"],
+  "Wynq + Maw": ["Spurrit"],
+  "500 Relics": ["Mimic"],
+  "Buy From Store For 100 Relics": ["Stoowarb", "Parlsona", "Tawkerr", "Maggpi",],
+  "Plinkajou + Thrumble": ["Arcorina"],
+  "Plinkajou + Withur": ["Arcorina"],
+  "Plinkajou + Uuduk": ["Arcorina"],
+  "Plinkajou + Banjaw": ["Arcorina"],
+
+  // UPDATE 5.0! 
+  "Blow t + Sooza": ["Shhimmer"],
+  "Blow t + TooToo": ["Shhimmer"],
+  "Blow t + Fiddlement": ["Shhimmer"],
+  "Hairionette + Owlesque": ["Scallyrags"],
+  "Owlesque + Arcorina": ["Dakktyl"],
+  "Scallyrags + Arcorina": ["Jerm"],
+  "Dakktyl + Hairionette": ["Jerm"],
+
+  // "Clamble + Bowgart": ["Rare Mammott"],
+  // "Clamble + T Rox": ["Rare Mammott"], 
+  "Bowgart + T Rox": ["Punkleton", "Rare Mammott"],
+  "Thumpies +  Congle": ["Rare Mammott"],
+  // "Thumpies + Bowgart": ["Rare Mammott"],
+  // "Congle + Bowgart": ["Rare Mammott"],
+  // "PomPom + Congle": ["Rare Mammott"],
+  // "PomPom + T Rox": ["Rare Mammott"],
+  "Congle + T Rox": ["Rare Mammott"],
+  "Thumpies + PomPom": ["Rare Mammott"],
+  // "Thumpies + Clamble": ["Rare Mammott"],
+  // "Clamble + PomPom": ["Rare Mammott"],
+  // "Congle + Woolabee": ["Rare Mammott"],
+  "Congle + Wynq": ["Rare Mammott"],
+  // "Woolabee + Wynq": ["Rare Mammott"],
+  // "Sooza + Spytrap": ["Rare Mammott"],
+  // "Sooza + Fiddlement": ["Rare Mammott"],
+  "Spytrap + Fiddlement": ["Rare Mammott"],
+  // "Ziggurab + Cantorell": ["Rare Mammott"],
+  // "Ziggurab + Clavi Gnat": ["Rare Mammott"],
+  "Cantorell + Clavi Gnat": ["Rare Mammott"],
+  "Pummel + T Rox": ["Rare Noggin"],
+  "Scups + T Rox": ["Rare Noggin"],
+  "Reedling + Pummel": ["Rare Noggin"],
+  "Reedling + Clamble": ["Rare Noggin"],
+  "Reedling + Floogull": ["Rare Noggin", "Rare Tweedle"],
+  "Ziggurab + Bridg it": ["Rare Noggin"],
+  "Thrumble + Withur": ["Rare Noggin", "Rare Toe Jammer"],
+  "Pummel + Bowgart": ["Rare Potbelly", "Rare Toe Jammer"],
+  "Spunge + Bowgart": ["Rare Potbelly", "Rare Tweedle"],
+  "Reedling + Spunge": ["Rare Potbelly", "Rare Tweedle"],
+  "Reedling + Thumpies": ["Rare Potbelly"],
+  "Reedling + Barrb": ["Rare Potbelly"],
+  "Sooza + Spytrap": ["Rare Potbelly"],
+  "Rootitoot + Tapricorn": ["Rare Potbelly", "Rare Toe Jammer"],
+  "Spunge + Thumpies": ["Rare Tweedle"],
+  "Scups + PomPom": ["Rare Tweedle"],
+  "Congle + Whaddle": ["Rare Tweedle", "Rare Toe Jammer"],
+  "Spunge + Congle": ["Rare Toe Jammer"],
+  "Scups + Congle": ["Rare Toe Jammer"],
+  "Spunge + Scups": ["Rare Toe Jammer"],
+  "Barrb + Floogull": ["Rare Kayna"],
+  "Whaddle + Woolabbe": ["Rare Kayna"],
+  "Sooza + TooToo": ["Rare Kayna"],
+  "Rootitoot + Rooba": ["Rare Kayna"],
+  "Thrumble + Uuduk": ["Rare Kayna"],
+  "Spytrap + TooToo": ["Rare Fluoress"],
+  "G day + Frondley": ["Rare Fluoress", "Rare Theremind", "Rare Floot Fly", "Rare Clackula"],
+  "Tapricorn + Rooba": ["Rare Theremind"],
+  "Cantorell + Bridg it": ["Rare Floot Fly"],
+  "Withur + Uuduk": ["Rare Clackula"],
+  "Plinkajou + Denchuhs": ["Epic Clackula"],
+
+  "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Tweedle", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"]
+};
 
 const monsterCostumes = [
   {
@@ -7186,1889 +5570,9 @@ const monsterCostumes = [
   }
 ];
 
-const search_box = document.getElementById("Search_Monster");
-
-function switchCostume(activeRarity) {
-  // Normalize search query like your input handler does
-  let query = searchMonsterInput.value.trim();
-  if (!query) {
-    console.warn("switchCostume: search box empty — aborting");
-    return;
-  }
-  if (query.toLowerCase().startsWith("rare ")) query = query.slice(5);
-  else if (query.toLowerCase().startsWith("epic ")) query = query.slice(5);
-  // console.log("switchCostume: normalized query:", query);
-
-  const monster = monsterCostumes.find(m => m.name === query);
-  // console.log("switchCostume: monster lookup:", monster && monster.name);
-
-  const img = imageContainer.querySelector(".monster-image");
-  if (!img) {
-    console.warn("No monster image found in container.");
-    return;
-  }
-
-  // Try to infer rarity if missing
-  if (!activeRarity) {
-    activeRarity =
-      img.dataset.currentActiveRarity ||
-      imageContainer.dataset.currentActiveRarity ||
-      (document.querySelector(".tab-button.active") &&
-        document.querySelector(".tab-button.active").textContent.toLowerCase());
-    // console.log("switchCostume: inferred activeRarity:", activeRarity);
-  }
-
-  if (!activeRarity) {
-    console.warn("switchCostume: no activeRarity provided and could not infer it — aborting.");
-    return;
-  }
-
-  const rarity = monster[activeRarity];
-  console.log("switchCostume: rarity object:", rarity);
-
-  if (!rarity || Object.keys(rarity).length === 0) {
-    console.warn(`No costumes defined for ${activeRarity} of ${query}`);
-    return;
-  }
-
-  const keys = Object.keys(rarity);
-  const datasetKey = `currentCostumeIndex_${activeRarity}`;
-
-  // Default image state = -1
-  if (!img.dataset[datasetKey]) img.dataset[datasetKey] = "-1";
-  let currentIndex = parseInt(img.dataset[datasetKey], 10);
-  // console.log("switchCostume: currentIndex (before):", currentIndex, "available keys:", keys);
-
-  currentIndex++;
-
-  // Loop around (after last costume → back to default)
-  if (currentIndex > keys.length - 1) currentIndex = -1;
-
-  let newSrc;
-
-  if (currentIndex === -1) {
-    const baseFolder = "images/bm/";
-
-    if (activeRarity === "rare" || activeRarity === "epic") {
-      const rarityCapitalized = activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1);
-      newSrc = `${baseFolder}${rarityCapitalized} ${monster.name}.png`;
-    } else {
-      newSrc = `${baseFolder}${monster.name}.png`;
-    }
-
-    // console.log("switchCostume: reverted to default image ->", newSrc);
-  } else {
-    let folderPath = `images/Costumes/${monster.name}/`;
-    if (activeRarity === "rare" || activeRarity === "epic") {
-      folderPath += `${activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1)}/`;
-    }
-    newSrc = `${folderPath}${rarity[keys[currentIndex]]}.png`;
-    // console.log("switchCostume: setting img.src ->", newSrc);
-  }
-
-  img.src = newSrc;
-  img.dataset[datasetKey] = String(currentIndex);
-  img.dataset.currentActiveRarity = activeRarity;
-
-  // console.log("<<< switchCostume finished. new dataset:", img.dataset);
-}
-
-/**
-  {
-    name: "",
-    audio: "sounds/_Memory_Sample.mp3.mpeg",
-    image: {
-      normal: "images/bm/.png",
-      rare: "images/bm/Rare .png",
-      epic: "images/bm/Epic .png"
-    },
-    stats: {
-      normal: "",
-      rare: "",
-      epic: ""
-    }
-  },
-*/
-
-const epicBreedingCombinations = {
-  Tweedle: [
-    `Deedge + Dandidoo <br> Riff + Cybop <br> Shellbeat + Quibble <br> Quarrister + Pango <br> Tring + Shrubb <br> Sneyser + Maw`,
-  ],
-  Potbelly: [
-    `Entbrat + Shrubb <br> Deedge + Oaktopus <br> Shellbeat + Dandidoo <br> Quarrister + Furcorn <br> Tring + Cybop <br> Blow t + Boskus <br> Gloptic + Phangler <br> Shugabush + Furcorn`,
-  ],
-  Mammott: [
-    `Entbrat + Furcorn <br> Deedge + Maw <br> Riff + Pango <br> Quarrister + Drumpler <br> Sneyser + Quibble <br> Blow t + Flowah <br> Pladdie + Stogg <br> Shugabush + Oaktopus`,
-  ],
-  Noggin: [
-    `Entbrat + Fwog <br> Riff + Drumpler <br> Shellbeat + Shrubb <br> Quarrister + Cybop <br> Tring + Dandidoo <br> Pladdie + Boskus <br> Plinkajou + Phangler`,
-  ],
-  "Toe Jammer": [
-    `Entbrat + Oaktopus <br> Deedge + Quibble <br> Riff + Maw <br> Shellbeat + Fwog <br> Sneyser + Pango <br> Gloptic + Flowah <br> Plinkajou + Stogg`,
-  ],
-  Kayna: [
-    `Tring + Stogg <br> Sneyser + Phangler <br> Blow t + Furcorn <br> Gloptic + Oaktopus <br> Pladdie + Drumpler <br> Plinkajou + Fwog`,
-  ],
-  Dandidoo: [
-    `Bowgart + Quibble <br> Pummel + Cybop <br> Clamble + Pango <br> Reedling + Flowah`,
-  ],
-  Cybop: [
-    `Congle + Drumpler <br> Scups + Dandidoo <br> PomPom + Shrubb <br> Reedling + Stogg`,
-  ],
-  Quibble: [
-    `Congle + Dandidoo <br> Scups + Maw <br> Spunge + Shrubb <br> Wynq + Pango <br> Shugabush + PomPom`,
-  ],
-  Pango: [
-    `Thumpies + Oaktopus <br> Congle + Cybop <br> Reedling + Furcorn <br> Whaddle + Maw`,
-  ],
-  Shrubb: [
-    `T-Rox + Oaktopus <br> Reedling + Quibble <br> PomPom + Dandidoo <br> Barrb + Cybop`,
-  ],
-  Oaktopus: [
-    `Bowgart + Shrubb <br> Spunge + Pango <br> Reedling + Fwog <br> Rootitoot + Bonkers <br> Shugabush + Quibble`,
-  ],
-  Furcorn: [
-    `Clamble + Fwog <br> Spunge + Maw <br> Thumpies + Drumpler <br> Sooza + Pluckbill <br> Shugabush + Deedge`,
-  ],
-  Fwog: [
-    `Pummel + Furcorn <br> Scups + Pango <br> Reedling + Oaktopus <br> Thrumble + Denchuhs`,
-  ],
-  Drumpler: [
-    `Clamble + Maw <br> PomPom + Fwog <br> Thumpies + Cybop <br> Ziggurab + HippityHop`,
-  ],
-  Maw: [
-    `Bowgart + Drumpler <br> Spunge + Furcorn <br> T-Rox + Quibble <br> Whaddle + Pango`,
-  ],
-  Glowl: [`Floogull + Dandidoo <br> Wynq + Quibble`],
-  Flowah: [`Barrb + Shrubb <br> Fiddlement + Gob <br> Rooba + Poppette`],
-  Stogg: [`Repatillo + Glowl <br> Bridg it + Squot <br> Withur + Phangler`],
-  Phangler: [`Congle + Glowl <br> Tapricorn + Yuggler <br> Banjaw + Peckidna`],
-  Boskus: [`Woolabee + Maw <br> TooToo + Bulbo <br> Cantorell + Wimmzies`],
-  Reedling: [`Spunge + Fwog <br> Thumpies + Shrubb <br> Repatillo + Cybop`],
-  Spunge: [`Thumpies + Quibble <br> Scups + Oaktopus`],
-  Thumpies: [`Congle + Oaktopus <br> Reedling + Pango`],
-  Scups: [`PomPom + Maw <br> Pummel + Dandidoo`],
-  PomPom: [`T-Rox + Cybop <br> Reedling + Drumpler <br> Shugabush + Mammott`],
-  Congle: [`Thumpies + Maw <br> Scups + Drumpler <br> Woolabee + Quibble`],
-  Pummel: [`Bowgart + Fwog <br> Scups + Shrubb`],
-  Clamble: [`Pummel + Maw <br> PomPom + Furcorn`],
-  Bowgart: [`Clamble + Oaktopus <br> Congle + Furcorn`],
-  "T-Rox": [`Pummel + Drumpler <br> Congle + Fwog`],
-  Barrb: [`Floogull + Shrubb`],
-  Whaddle: [`Congle + Phangler`],
-  Woolabee: [`Whaddle + Boskus`],
-  Repatillo: [`Floogull + Flowah`],
-  Rootitoot: [`Rooba + Oaktopus`],
-  Sooza: [`TooToo + Boskus`],
-  Thrumble: [`Uuduk + Denchuhs`],
-  Ziggurab: [`Bridg it + Drumpler`],
-  Wynq: [`Congle + Boskus`],
-  Shellbeat: [`Spunge + Cybop`],
-  Quarrister: [`Clamble + Dandidoo`],
-  Deedge: [`Pango + Bowgart <br> Shugabush + Potbelly`],
-  Riff: [`PomPom + Quibble`],
-  Entbrat: [`T-Rox + Shrubb`],
-  Tring: [`Barrb + Stogg`],
-  Sneyser: [`Woolabee + Phangler`],
-  Ghazt: [`T-Rox + Furcorn <br> Boodoo + Dragong`],
-  Grumpyre: [`Bowgart + Dandidoo <br> Nebulob + Fung Pray`],
-  Reebro: [`T-Rox + Pango <br> Sox + Kazilleon`],
-  Jeeode: [`Pummel + Quibble <br> Jellbilly + Arackulele`],
-  Humbug: [`Clamble + Cybop <br> Whisp + Bellowfish`],
-  Whisp: [`Nebulob + Kazilleon`],
-  Nebulob: [`Boodoo + Jellbilly`],
-  Sox: [`Jellbilly + Bellowfish`],
-  Jellbilly: [`Arackulele + Fung Pray`],
-  Boodoo: [`Kazilleon + Bellowfish`],
-  Kazilleon: [`Sox + Arackulele`],
-  Bellowfish: [`Whisp + Dragong`],
-  Punkleton: [`Entbrat + Drumpler <br> Schmoochle + Blabbit`],
-  Yool: [`Deedge + Pango <br> Hoola + Blabbit`],
-  Schmoochle: [`Shellbeat + Oaktopus <br> Punkleton + Hoola`],
-  Blabbit: [`Shellbeat + Oaktopus <br> Punkleton + Yool`],
-  Hoola: [`Riff + Fwog <br> Quarrister + Dandidoo <br> Yool + Schmoochle`],
-  Gobbleygourd: [
-    `Tring + Flowah <br> Sneyser + Boskus <br> Jam Boree + Clavavera`,
-  ],
-  Clavavera: [`Plinkajou + Hallow <br> Viveine + Whiz bang`],
-  Viveine: [`Shugabush + PomPom <br> Ffidyll + Monculus`],
-  "Jam Boree": [`Gobbleygourd +  Boo'qwurm`],
-  "Whiz bang": [`Blow t + Bulbo <br> Boo'qwurm + Spurrit`],
-  Monculus: [`Whisp + Humbug <br> Ffidyll + Carillong`],
-  Ffidyll: [`Pladdie + HippityHop <br> Viveine + Spurrit`],
-  "Boo'qwurm": [`Gloptic + Bonkers <br> Gobbleygourd + Clavavera`],
-  Spurrit: [`Sneyser + Glowl <br>Jam Boree + Carillong`],
-  "G'joob": [`Entbrat + Maw <br> Cataliszt + Yawstrich`],
-  Yawstrich: [`Riff + Fwog <br> Cataliszt + Strombonin`],
-  Floogull: [`Reedling + Glowl`],
-  Strombonin: [`Deedge + Furcorn <br> Cataliszt + G'joob`],
-  Yelmut: [`Kayna + Blow_t <br>`],
-  Dragong: [`Whisp + Fung Pray <br>`],
-  Krillby: [`Pladdie + Kayna <br>`],
-  "Fung Pray": [`Nebulob + Boodoo <br>`],
-  PongPing: [`Pladdie + Floot Fly<br>`],
-  Hyehehe: [`Cataliszt + Buzzinga`],
-  Clackula: [`Plinkajou + Denchuhs`]
-};
 // Valid breeding combinations
-const breedingCombinations = {
-  "Get From Shop!": ["Gnarls"],
-  "Potbelly + Noggin": ["Shrubb"],
-  "Potbelly + Toe Jammer": ["Oaktopus"],
-  "Potbelly + Mammott": ["Furcorn"],
-  "Noggin + Toe Jammer": ["Fwog"],
-  "Noggin + Mammott": ["Drumpler"],
-  "Toe Jammer + Mammott": ["Maw"],
-  "Tweedle + Toe Jammer": ["Quibble"],
-  "Tweedle + Mammott": ["Pango"],
-  "Tweedle + Noggin": ["Cybop"],
-  "Tweedle + Kayna": ["Glowl"],
-  "Potbelly + Kayna": ["Flowah"],
-  "Noggin + Kayna": ["Stogg"],
-  "Toe Jammer + Kayna": ["Phangler"],
-  "Mammott + Kayna": ["Boskus"],
-  // Three Elements
-  "Fwog + Potbelly": ["Pummel"],
-  "Oaktopus + Noggin": ["Pummel"],
-  "Shrubb + Toe Jammer": ["Pummel"],
-  "Pummel + Noggin": ["Pummel"],
-  "Furcorn + Noggin": ["Clamble"],
-  "Drumpler + Potbelly": ["Clamble"],
-  "Shrubb + Mammott": ["Clamble"],
-  "Clamble + Noggin": ["Clamble"],
-  "Furcorn + Toe Jammer": ["Bowgart"],
-  "Oaktopus + Mammott": ["Bowgart"],
-  "Maw + Potbelly": ["Bowgart"],
-  "Bowgart + Toe Jammer": ["Bowgart"],
-  "Maw + Noggin": ["T-Rox"],
-  "Drumpler + Toe Jammer": ["T-Rox"],
-  "Fwog + Mammott": ["T-Rox"],
-  "T-Rox + Entbrat": ["T-Rox"],
-  "T-Rox + Noggin": ["T-Rox"],
-  "Dandidoo + Toe Jammer": ["Spunge"],
-  "Quibble + Potbelly": ["Spunge"],
-  "Oaktopus + Tweedle": ["Spunge"],
-  "Spunge + Toe Jammer": ["Spunge"],
-  "Dandidoo + Mammott": ["Thumpies"],
-  "Pango + Potbelly": ["Thumpies"],
-  "Furcorn + Tweedle": ["Thumpies"],
-  "Maw + Tweedle": ["Congle"],
-  "Pango + Toe Jammer": ["Congle"],
-  "Quibble + Mammott": ["Congle"],
-  "Congle + Sneyser": ["Congle", "Sneyser"],
-  "Congle + Toe Jammer": ["Congle"],
-  "Tweedle + Fwog": ["Scups"],
-  "Quibble + Noggin": ["Scups"],
-  "Cybop + Toe Jammer": ["Scups"],
-  "Scups + Noggin": ["Scups"],
-  "Drumpler + Tweedle": ["PomPom"],
-  "Pango + Noggin": ["PomPom"],
-  "Cybop + Mammott": ["PomPom"],
-  "PomPom + Noggin": ["PomPom"],
-  "Dandidoo + Noggin": ["Reedling"],
-  "Cybop + Potbelly": ["Reedling"],
-  "Shrubb + Tweedle": ["Reedling"],
-  "Reedling + Noggin": ["Reedling"],
-  "Reedling + Tring": ["Reedling"],
-  "Dandidoo + Kayna": ["Barrb"],
-  "Flowah + Tweedle": ["Barrb"],
-  "Glowl + Potbelly": ["Barrb"],
-  "Barrb + Tring": ["Barrb", "Tring"],
-  "Cybop + Kayna": ["Floogull"],
-  "Stogg + Tweedle": ["Floogull"],
-  "Glowl + Noggin": ["Floogull"],
-  "Floogull + Tring": ["Floogull", "Tring"],
-  "Shrubb + Kayna": ["Repatillo"],
-  "Stogg + Potbelly": ["Repatillo"],
-  "Flowah + Noggin": ["Repatillo"],
-  "Repatillo + Tring": ["Repatillo", "Tring"],
-  "Repatillo + Noggin": ["Repatillo"],
-  "Quibble + Kayna": ["Whaddle"],
-  "Phangler + Tweedle": ["Whaddle"],
-  "Glowl + Toe Jammer": ["Whaddle"],
-  "Whaddle + Sneyser": ["Whaddle", "Sneyser"],
-  "Pango + Kayna": ["Woolabee"],
-  "Boskus + Tweedle": ["Woolabee"],
-  "Glowl + Mammott": ["Woolabee"],
-  "Woolabee + Sneyser": ["Woolabee", "Sneyser"],
-  "Maw + Kayna": ["Wynq"],
-  "Boskus + Toe Jammer": ["Wynq"],
-  "Phangler + Mammott": ["Wynq"],
-  "Wynq + Sneyser": ["Wynq", "Sneyser"],
-  "Boskus + Potbelly": ["Sooza"],
-  "Flowah + Mammott": ["Sooza"],
-  "Furcorn + Kayna": ["Sooza"],
-  "Sooza + Blow t": ["Sooza", "Blow t"],
-  "Oaktopus + Kayna": ["Rootitoot"],
-  "Flowah + Toe Jammer": ["Rootitoot"],
-  "Phangler + Potbelly": ["Rootitoot"],
-  "Rootitoot + Gloptic": ["Rootitoot", "Gloptic"],
-  "Drumpler + Kayna": ["Ziggurab"],
-  "Stogg + Mammott": ["Ziggurab"],
-  "Boskus + Noggin": ["Ziggurab"],
-  "Ziggurab + Pladdie": ["Ziggurab", "Pladdie"],
-  "Fwog + Kayna": ["Thrumble"],
-  "Stogg Toe Jammer": ["Thrumble"],
-  "Phangler + Noggin": ["Thrumble"],
-  "Thrumble + Plinkajou": ["Thrumble", "Plinkajou"],
-  //Four Elements
-  "Shrubb + Maw": ["Entbrat"],
-  "Oaktopus + Drumpler": ["Entbrat"],
-  "Furcorn + Fwog": ["Entbrat"],
-  "Clamble + Toe Jammer": ["Entbrat"],
-  "Bowgart + Noggin": ["Entbrat"],
-  "T-Rox + Potbelly": ["Entbrat"],
-  "Pummel + Mammott": ["Entbrat"],
-  "Dandidoo + Maw": ["Deedge"],
-  "Quibble + Furcorn": ["Deedge"],
-  "Pango + Oaktopus": ["Deedge"],
-  "Spunge + Mammott": ["Deedge"],
-  "Thumpies + Toe Jammer": ["Deedge"],
-  "Congle + Potbelly": ["Deedge"],
-  "Bowgart + Tweedle": ["Deedge"],
-  "Cybop + Maw": ["Riff"],
-  "Quibble + Drumpler": ["Riff"],
-  "Pango + Fwog": ["Riff"],
-  "Scups + Mammott": ["Riff"],
-  "T-Rox + Tweedle": ["Riff"],
-  "Congle + Noggin": [""],
-  "PomPom + Toe Jammer": ["Riff"],
-  "Dandidoo + Fwog": ["Shellbeat"],
-  "Cybop + Oaktopus": ["Shellbeat"],
-  "Quibble + Shrubb": ["Shellbeat"],
-  "Scups + Potbelly": ["Shellbeat"],
-  "Reedling + Toe Jammer": ["Shellbeat"],
-  "Pummel + Tweedle": ["Shellbeat"],
-  "Spunge + Noggin": ["Shellbeat"],
-  "Dandidoo + Drumpler": ["Quarrister"],
-  "Cybop + Furcorn": ["Quarrister"],
-  "Pango + Shrubb": ["Quarrister"],
-  "Reedling + Mammott": ["Quarrister"],
-  "Thumpies + Noggin": ["Quarrister"],
-  "PomPom + Potbelly": ["Quarrister"],
-  "Clamble + Tweedle": ["Quarrister"],
-  "Stogg + Dandidoo": ["Tring"],
-  "Shrubb + Glowl": ["Tring"],
-  "Flowah + Cybop": ["Tring"],
-  "Reedling + Kayna": ["Tring"],
-  "Floogull + Potbelly": ["Tring"],
-  "Barrb + Noggin": ["Tring"],
-  "Quibble + Boskus": ["Sneyser"],
-  "Pango + Phangler": ["Sneyser"],
-  "Glowl + Maw": ["Sneyser"],
-  "Congle + Kayna": ["Sneyser"],
-  "Whaddle + Kayna": ["Sneyser"],
-  "Woolabee + Toe Jammer": ["Sneyser"],
-  "Wynq + Tweedle": ["Sneyser"],
-  "Bowgart + Clamble": ["Shugabush"],
-  "Shugabush + Mammott": ["Shugarock", "Mammott", "Epic PomPom"],
-  "Shugabush + Potbelly": ["Shugabass", "Epic Deedge"],
-  "Shugabush + Oaktopus": ["Shugajo", "Oaktopus", "Epic Mammott", "Viveine"],
-  "Shugabush + Furcorn": ["Shugabeats", "Furcorn", "Epic Potbelly"],
-  "Shugabush + Quibble": ["Shugabuzz", "Quibble", "Epic Oaktopus"],
-  "Shugabush + PomPom": ["Shugitar", "PomPom", "Epic Viveine"],
-  "Shugabush + Deedge": ["Shugavox", "Deedge", "Epic Furcorn"],
-  "Entbrat + T-Rox": ["Ghazt", "T-Rox"],
-  "Entbrat + Clamble": ["Ghazt", "Clamble"],
-  "Entbrat + Pummel": ["Ghazt", "Pummel"],
-  "Entbrat + Bowgart": ["Ghazt", "Bowgart"],
-  "Deedge + Congle": ["Grumpyre", "Congle"],
-  "Deedge + Bowgart": ["Grumpyre", "Bowgart"],
-  "Deedge + Spunge": ["Grumpyre", "Spunge"],
-  "Deedge + Thumpies": ["Grumpyre", "Thumpies"],
-  "Riff + Congle": ["Reebro", "Congle"],
-  "Riff + Scups": ["Reebro", "Scups"],
-  "Riff + PomPom": ["Reebro", "PomPom"],
-  "Riff + T-Rox": ["Reebro", "T-Rox"],
-  "Shellbeat + Spunge": ["Jeeode", "Spunge"],
-  "Shellbeat + Pummel": ["Jeeode", "Pummel"],
-  "Shellbeat + Scups": ["Jeeode", "Scups"],
-  "Shellbeat + Reedling": ["Jeeode", "Reedling"],
-  "Quarrister + Reedling": ["Humbug", "Reedling"],
-  "Quarrister + PomPom": ["Humbug", "PomPom"],
-  "Quarrister + Thumpies": ["Humbug", "Thumpies"],
-  "Quarrister + Clamble": ["Humbug", "Clamble"],
-  "Ghazt + Grumpyre": ["Whisp"],
-  "Ghazt + Reebro": ["Nebulob"],
-  "Grumpyre + Reebro": ["Arackulele"],
-  "Ghazt + Jeeode": ["Sox"],
-  "Grumpyre + Jeeode": ["Boodoo"],
-  "Reebro + Jeeode": ["Bellowfish"],
-  "Ghazt + Humbug": ["Jellbilly"],
-  "Grumpyre + Humbug": ["Kazilleon"],
-  "Reebro + Humbug": ["Dragong"],
-  "Jeeode + Humbug": ["Fung Pray"],
-  "T-Rox + Pummel": ["G'joob"],
-  "Gloptic + Rootitoot": ["Hairionette"],
-  "Gloptic + Tapricorn": ["Hairionette"],
-  "Gloptic + Rooba": ["Hairionette"],
-  "Gloptic + Periscorp": ["Hairionette"],
-  "Bowgart + Spunge": ["Strombonin"],
-  "T-Rox + Scups": ["Yawstrich"],
-  "Scups + Pummel": ["Anglow"],
-  "Thumpies + PomPom": ["Hyehehe", "Rare Hyehehe"],
-  "Congle + Woolabee": ["Cherubble"],
-  "Cataliszt + G'joob": ["Bleatnik", "Epic Strombonin"],
-  "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
-  "Cataliszt + Yawstrich": ["Sporerow", "Epic G'joob", "Rare Sporerow"],
-  "Cataliszt + Anglow": ["Pinghound", "Epic Buzzinga"],
-  "Cataliszt + Hyehehe": ["Wheezel", "Rare Wheezel"],
-  "Cataliszt + Buzzinga": ["Knurv", "Epic Hyehehe"],
-  "Cataliszt + Cherubble": ["shLep"],
-  "Thumpies + Congle": ["Yool"],
-  "Riff + Tweedle": ["Schmoochle"],
-  "Spunge + Scups": ["Blabbit"],
-  "PomPom + Pango": ["Hoola"],
-  "Punkleton + Blabbit": ["Viveine"],
-  "Yool + Hoola": ["Monculus"],
-  "Punkleton + Yool": ["Gobbleygourd"],
-  "Blabbit + Hoola": ["Spurrit"],
-  "Yool + Blabbit": ["Whiz bang"],
-  "Schmoochle + Hoola": ["Boo'qwurm"],
-  "Schmoochle + Blabbit": ["Ffidyll"],
-  "Punkleton + Schmoochle": ["Clavavera"],
-  "Yool + Schmoochle": ["Carillong"],
-  "Punkleton + Hoola": ["Jam Boree"],
-  "Potbelly + Fluoress": ["Gob"],
-  "Mammott + Fluoress": ["Bulbo"],
-  "Kayna + Fluoress": ["Pluckbill"],
-  "Potbelly + Theremind": ["Bonkers"],
-  "Toe Jammer + Theremind": ["Poppette"],
-  "Kayna + Theremind": ["Yuggler"],
-  "Noggin + Floot Fly": ["HippityHop"],
-  "Mammott + Floot Fly": ["Squot", "Rare Squot"],
-  "Kayna + Floot Fly": ["Wimmzies"],
-  "Noggin + Clackula": ["Peckidna", "Rare Peckidna"],
-  "Toe Jammer + Clackula": ["Denchuhs"],
-  "Kayna + Clackula": ["Hawlo"],
-  "Theremind + Clackula": ["Xyster"],
-  "Theremind + Fluoress": ["Cahoot", "Rare Cahoot"],
-  "Theremind + Floot Fly": ["Deja-Jin"],
-  "Clackula + Fluoress": ["Roarick"],
-  "Floot Fly + Clackula": ["Osstax"],
-  "Floot Fly + Fluoress": ["Knucklehead"],
-  "Gob + Mammott": ["Spytrap"],
-  "Pluckbill + Potbelly": ["TooToo"],
-  "Pluckbill + Mammott": ["Fiddlement"],
-  "Bonkers + Toe Jammer": ["Tapricorn"],
-  "Yuggler + Potbelly": ["Rooba"],
-  "Yuggler + Toe Jammer": ["Periscorp", "Rare Periscorp"],
-  "Squot + Noggin": ["Cantorell"],
-  "Wimmzies + Noggin": ["Bridg it"],
-  "Wimmzies + Mammott": ["Clavi Gnat"],
-  "Denchuhs + Noggin": ["Withur"],
-  "Hawlo + Noggin": ["Banjaw"],
-  "Xyster + Fluoress": ["G'day"],
-  "Osstax + Theremind": ["Larvaluss"],
-  "Deja + Fluoress": ["Frondley", "Rare Frondley"],
-  "Osstax + Fluoress": ["Mushaboom"],
-  "Furcorn + Pluckbill": ["Blow t"],
-  "Flowah + Bulbo": ["Blow t"],
-  "Boskus + Gob": ["Blow t"],
-  "TooToo + Mammott": ["Blow t"],
-  "Fiddlement + Potbelly": ["Blow t"],
-  "Spytrap + Kayna": ["Blow t"],
-  "Sooza + Fluoress": ["Blow t"],
-  "Oaktopus + Yuggler": ["Gloptic", "Rare Gloptic"],
-  "Flowah + Poppette": ["Gloptic", "Rare Gloptic"],
-  "Phangler + Bonkers": ["Gloptic", "Rare Gloptic"],
-  "Rootitoot + Theremind": ["Gloptic", "Rare Gloptic"],
-  "Tapricorn + Kayna": ["Gloptic", "Rare Gloptic"],
-  "Rooba + Toe Jammer": ["Gloptic", "Rare Gloptic"],
-  "Periscorp + Potbelly": ["Gloptic", "Rare Gloptic"],
-  "Drumpler + Wimmzies": ["Pladdie"],
-  "Stogg + Squot": ["Pladdie"],
-  "Boskus + HippityHop": ["Pladdie"],
-  "Clavi Gnat + Noggin": ["Pladdie"],
-  "Bridg it + Mammott": ["Pladdie"],
-  "Cantorell + Kayna": ["Pladdie"],
-  "Ziggurab + Floot Fly": ["Pladdie"],
-  "Pladdie + Drumpler": ["Drumpler", "Pladdie"],
-  "Fwog + Hawlo": ["Plinkajou"],
-  "Stogg + Denchuhs": ["Plinkajou"],
-  "Phangler + Peckidna": ["Plinkajou"],
-  "Banjaw + Noggin": ["Plinkajou"],
-  "Uuduk + Toe Jammer": ["Plinkajou"],
-  "Withur + Kayna": ["Plinkajou"],
-  "Thrumble + Clackula": ["Plinkajou"],
-  "Plinkajou + Fwog": ["Plinkajou", "Fwog"],
-  "Deja-Jin + Roarick": ["Enchantling"],
-  "Xyster + Knucklehead": ["Enchantling"],
-  "Cahoot + Osstax": ["Enchantling"],
-  "Mushaboom + Theremind": ["Enchantling"],
-  "G'day + Floot Fly": ["Enchantling"],
-  "Frondley + Clackula": ["Enchantling"],
-  "Larvaluss + Fluoress": ["Enchantling"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
-  "Plasma Meeb + Shadow Meeb + Crystal Meeb": ["Meebkin"],
-  "Plasma Meeb + Shadow Meeb + Poison Meeb": ["Blarret"],
-  "Plasma Meeb + Mech Meeb + Crystal Meeb": ["Gaddzooks"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb": ["Yooreek"],
-  "Plasma Meeb + Mech Meeb + Poison Meeb": ["Auglur"],
-  "Plasma Meeb + Crystal Meeb + Poison Meeb": ["Flasque"],
-  "Shadow Meeb + Mech Meeb + Crystal Meeb": ["Nitebear"],
-  "Shadow Meeb + Mech Meeb + Poison Meeb": ["Piplash"],
-  "Shadow Meeb + Crystal Meeb + Poison Meeb": ["X rt"],
-  "Mech Meeb + Crystal Meeb + Poison Meeb": ["Teeter Tauter"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb": ["Whaill"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb + Poison Meeb": ["Vhenshun"],
-  "Plasma Meeb + Shadow Meeb + Crystal Meeb + Poison Meeb": ["Pentumbra"],
-  "Plasma Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Rhysmuth"],
-  "Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": ["Oogiddy"],
-  "Plasma Meeb + Shadow Meeb + Mech Meeb + Crystal Meeb + Poison Meeb": [
-    "BeMeebEth",
-  ],
-  "Pladdie + Ziggurab": ["Owlesque"],
-  "Pladdie + Cantorell": ["Owlesque"],
-  "Pladdie + Bridg it": ["Owlesque"],
-  "Pladdie + Clavi Gnat": ["Owlesque"],
-
-  //Epic Breeding Combos!
-  "Entbrat + Maw": ["Epic G'joob"], //Heres the main method to breed epic monsters in the two boxes
-  "Deedge + Dandidoo": ["Epic Tweedle"],
-  "Riff + Cybop": ["Epic Tweedle"],
-  "Shellbeat + Quibble": ["Epic Tweedle"],
-  "Quarrister + Pango": ["Epic Tweedle"],
-  "Tring + Shrubb": ["Epic Tweedle"],
-  "Sneyser + Maw": ["Epic Tweedle"],
-  "Entbrat + Shrubb": ["Epic Potbelly"],
-  "Deedge + Oaktopus": ["Epic Potbelly"],
-  "Shellbeat + Dandidoo": ["Epic Potbelly"],
-  "Quarrister + Furcorn": ["Epic Potbelly"],
-  "Tring + Cybop": ["Epic Potbelly"],
-  "Blow t + Boskus": ["Epic Potbelly"],
-  "Gloptic + Phangler": ["Epic Potbelly"],
-  "Shugabush + Furcorn": ["Epic Potbelly"],
-  "Entbrat + Fwog": ["Epic Noggin"],
-  "Riff + Drumpler": ["Epic Noggin"],
-  "Shellbeat + Shrubb": ["Epic Noggin"],
-  "Quarrister + Cybop": ["Epic Noggin"],
-  "Tring + Dandidoo": ["Epic Noggin"],
-  "Pladdie + Boskus": ["Epic Noggin"],
-  "Plinkajou + Phangler": ["Epic Noggin"],
-  "Entbrat + Oaktopus": ["Epic Toe Jammer"],
-  "Deedge + Quibble": ["Epic Toe Jammer"],
-  "Riff + Maw": ["Epic Toe Jammer"],
-  "Shellbeat + Fwog": ["Epic Toe Jammer"],
-  "Sneyser + Pango": ["Epic Toe Jammer"],
-  "Gloptic + Flowah": ["Epic Toe Jammer"],
-  "Plinkajou + Stogg": ["Epic Toe Jammer"],
-  "Entbrat + Furcorn": ["Epic Mammott"],
-  "Deedge + Maw": ["Epic Mammott"],
-  "Riff + Pango": ["Epic Mammott"],
-  "Quarrister + Drumpler": ["Epic Mammott"],
-  "Sneyser + Quibble": ["Epic Mammott"],
-  "Blow t + Flowah": ["Epic Mammott"],
-  "Pladdie + Stogg": ["Epic Mammott"],
-  "Shugabush + Oaktopus": ["Epic Mammott"],
-  "Tring + Stogg": ["Epic Kayna"],
-  "Sneyser + Phangler": ["Epic Kayna"],
-  "Blow t + Furcorn": ["Epic Kayna"],
-  "Gloptic + Oaktopus": ["Epic Kayna"],
-  "Pladdie + Drumpler": ["Epic Kayna"],
-  "Plinkajou + Fwog": ["Epic Kayna"],
-  "Bowgart + Quibble": ["Epic Dandidoo"],
-  "Pummel + Cybop": ["Epic Dandidoo"],
-  "Clamble + Pango": ["Epic Dandidoo"],
-  "Reedling + Flowah": ["Epic Dandidoo"],
-  "Congle + Drumpler": ["Epic Cybop"],
-  "Scups + Dandidoo": ["Epic Cybop"],
-  "PomPom + Shrubb": ["Epic Cybop"],
-  "Reedling + Stogg": ["Epic Cybop"],
-  "Congle + Dandidoo": ["Epic Quibble"],
-  "Scups + Maw": ["Epic Quibble"],
-  "Spunge + Shrubb": ["Epic Quibble"],
-  "Wynq + Pango": ["Epic Quibble"],
-  "Shugabush + PomPom": ["Epic Quibble"],
-  "Thumpie + Oaktopus": ["Epic Pango"],
-  "Congle + Cybop": ["Epic Pango"],
-  "Reedling + Furcorn": ["Epic Pango"],
-  "Whaddle + Maw": ["Epic Pango"],
-  "T-Rox + Oaktopus": ["Epic Shrubb"],
-  "Reedling + Quibble": ["Epic Shrubb"],
-  "PomPom + Dandidoo": ["Epic Shrubb"],
-  "Barrb + Cybop": ["Epic Shrubb"],
-  "Bowgart + Shrubb": ["Epic Oaktopus"],
-  "Spunge + Pango": ["Epic Oaktopus"],
-  "Reedling + Fwog": ["Epic Oaktopus"],
-  "Rootitoot + Bonkers": ["Epic Oaktopus"],
-  "Shugabush + Quibble": ["Epic Oaktopus"],
-  "Clamble + Fwog": ["Epic Furcorn"],
-  "Spunge + Maw": ["Epic Furcorn"],
-  "Thumpies + Drumpler": ["Epic Furcorn"],
-  "Sooza + Pluckbill": ["Epic Furcorn"],
-  // "Shugabush + Deedge": ["Epic Furcorn"], Here but commented out bc already defined
-  "Pummel + Furcorn": ["Epic Fwog"],
-  "Scups + Furcorn": ["Epic Fwog"],
-  "Reedling + Oaktopus": ["Epic Fwog"],
-  "Thrumble + Denchuhs": ["Epic Fwog"],
-  "Clamble + Maw": ["Epic Drumpler"],
-  "PomPom + Fwog": ["Epic Drumpler"],
-  "Thumpies + Cybop": ["Epic Drumpler"],
-  "Ziggurab + HippityHop": ["Epic Drumpler"],
-  "Bowgart + Drumpler": ["Epic Maw"],
-  "Spunge + Furcorn": ["Epic Maw"],
-  "T-Rox + Quibble": ["Epic Maw"],
-  "Whaddle + Pango": ["Epic Maw"],
-  "Floogull + Dandidoo": ["Epic Glowl"],
-  "Wynq + Quibble": ["Epic Glowl"],
-  "Barrb + Shrubb": ["Epic Flowah"],
-  "Fiddlement + Gob": ["Epic Flowah"],
-  "Rooba + Poppette": ["Epic Flowah"],
-  "Repatillo + Glowl": ["Epic Stogg"],
-  "Bridg it + Squot": ["Epic Stogg"],
-  "Withur + Phangler": ["Epic Stogg"],
-  "Congle + Glowl": ["Epic Phangler"],
-  "Tapricorn + Yuggler": ["Epic Phangler"],
-  "Banjaw + Peckidna": ["Epic Phangler"],
-  "Woolabee + Maw": ["Epic Boskus"],
-  "TooToo + Bulbo": ["Epic Boskus"],
-  "Cantorell + Wimmzies": ["Epic Boskus"],
-  "Spunge + Fwog": ["Epic Reedling"],
-  "Thumpies + Shrubb": ["Epic Reedling"],
-  "Repatillo + Cybop": ["Epic Reedling"],
-  "Thumpies + Quibble": ["Epic Spunge"],
-  "Scups + Oaktopus": ["Epic Spunge"],
-  "Congle + Oaktopus": ["Epic Thumpies"],
-  "Reedling + Pango": ["Epic Thumpies"], //Next is Scups!
-  "PomPom + Maw": ["Epic Scups"],
-  "Pummel + Dandidoo": ["Epic Scups"],
-  "T-Rox + Cybop": ["Epic PomPom"],
-  "Thumpies + Mammott": ["Thumpies"],
-  "Reedling + Drumpler": ["Epic PomPom"],
-  "Shugabush + Mammott": ["Epic PomPom"],
-  "Thumpies + Maw": ["Epic Congle"],
-  "Scups + Drumpler": ["Epic Congle"],
-  "Woolabee + Quibble": ["Epic Congle"],
-  "Bowgart + Fwog": ["Epic Pummel"],
-  "Scups + Shrubb": ["Epic Pummel"],
-  "Pummel + Maw": ["Epic Clamble"],
-  "PomPom + Furcorn": ["Epic Clamble"],
-  "Clamble + Oaktopus": ["Epic Bowgart"],
-  "Congle + Furcorn": ["Epic Bowgart"],
-  "Pummel + Drumpler": ["Epic T-Rox"],
-  "Congle + Fwog": ["Epic T-Rox"],
-  "Floogull + Shrubb": ["Epic Barrb"],
-  "Reedling + Glowl": ["Epic Floogull"],
-  "Congle + Phangler": ["Epic Whaddle"],
-  "Whaddle + Boskus": ["Epic Woolabee"],
-  "Floogull + Flowah": ["Epic Repatillo"],
-  "Rooba + Oaktopus": ["Epic Rootitoot"],
-  "TooToo + Boskus": ["Epic Sooza"],
-  "Uuduk + Denchuhs": ["Epic Thrumble"],
-  "Bridg it + Drumpler": ["Epic Ziggurab"],
-  "Congle + Boskus": ["Epic Wynq"],
-  "Spunge + Cybop": ["Epic Shellbeat"],
-  "Clamble + Dandidoo": ["Epic Quarrister"],
-  "Pango + Bowgart": ["Epic Deedge"],
-  "PomPom + Quibble": ["Epic Riff"],
-  "T-Rox + Shrubb": ["Epic Entbrat"],
-  "Barrb + Stogg": ["Epic Tring"],
-  "Woolabee + Phangler": ["Epic Sneyser"],
-  "T-Rox + Furcorn": ["Epic Ghazt"],
-  "Boodoo + Dragong": ["Epic Ghazt"],
-  "Bowgart + Dandidoo": ["Epic Grumpyre"],
-  "Nebulob + Fung Pray": ["Epic Grumpyre"],
-  "T-Rox + Pango": ["Epic Reebro"],
-  "Sox + Kazilleon": ["Epic Reebro"],
-  "Pummel + Quibble": ["Epic Jeeode"],
-  "Jellbilly + Arackulele": ["Epic Jeeode"],
-  "Clamble + Cybop": ["Epic Humbug"],
-  "Whisp + Bellowfish": ["Epic Humbug"],
-  "Nebulob + Kazilleon": ["Epic Whisp"],
-  "Boodoo + Jellbilly": ["Epic Nebulob"],
-  "Jellbilly + Bellowfish": ["Epic Sox"],
-  "Arackulele + Fung Pray": ["Epic Jellbilly"],
-  "Sox + Dragong": ["Epic Arackulele"],
-  "Kazilleon + Bellowfish": ["Epic Boodoo"],
-  "Sox + Arackulele": ["Epic Kazilleon"],
-  "Whisp + Dragong": ["Epic Bellowfish"],
-  "Entbrat +  Drumpler": ["Epic Punkleton"],
-  "Schmoochle + Blabbit": ["Epic Punkleton"],
-  "Deedge + Pango": ["Epic Yool"],
-  "Hoola + Blabbit": ["Epic Yool"],
-  "Riff + Quibble": ["Epic Schmoochle"],
-  "Punkleton + Hoola": ["Epic Schmoochle"],
-  "Shellbeat + Oaktopus": ["Epic Blabbit"],
-  "Punkelton + Yool": ["Epic Blabbit"],
-  "Riff + Fwog": ["Epic Hoola"],
-  "Quarrister + Dandidoo": ["Epic Hoola"],
-  "Tring + Flowah": ["Epic Gobbleygourd"],
-  "Sneyser + Boskus": ["Epic Gobbleygourd"],
-  "Jam Boree + Clavavera": ["Epic Gobbleygourd"],
-  "Plinkajou + Hawlo": ["Epic Clavavera"],
-  "Viveine + Whiz bang": ["Epic Clavavera"],
-  "Shugabush + PomPom": ["Epic Viveine"],
-  "Ffidyll + Monculus": ["Epic Viveine"],
-  "Gobbleygourd + Boo'qwurm": ["Epic Jam Boree"],
-  "Enchantling + Roarick": ["Epic Carillong"],
-  "Whiz bang + Monculus": ["Epic Carillong"],
-  "Blow t + Bulbo": ["Epic Whiz bang"],
-  "Boo'qwurm + Spurrit": ["Epic Whiz bang"],
-  "Whisp + Humbug": ["Epic Monculus"],
-  "Ffidyll + Carillong": ["Epic Monculus"],
-  "Pladdie + HippityHop": ["Epic Ffidyll"],
-  "Viveine + Spurrit": ["Epic Ffidyll"],
-  "Gloptic + Bonkers": ["Epic Boo'qwurm"],
-  "Gobbleygourd + Clavavera": ["Epic Boo'qwurm"],
-  "Sneyser + Glowl": ["Epic Spurrit"],
-  "Jam Boree + Carillong": ["Epic Spurrit"],
-  "Entbrat + Maw": ["Epic G'joob"],
-  "Riff + Fwog": ["Epic Yawstrich"],
-  "Deedge + Furcorn": ["Epic Strombonin"],
-  "Tring + Glowl": ["Epic Buzzinga"],
-  "Blow t + Kayna": ["Epic Yelmut"],
-
-  //Update V3 ~Seasonal Fix :)
-  "Kayna + Barrb": ["Buzzinga"],
-  "Withur + Clackula": ["Clavavera"],
-  "Shugabush + Oaktopus": ["Viveine", "Epic Mammott"],
-  "Punkleton + Hoola": ["Jam Boree", "Epic Schmoochle"],
-  "Schmoochle + Yool": ["Carillong"],
-  "Mushaboom + Roarick": ["Carillong"],
-  "Blow t + Spytrap": ["Whiz bang", "Shhimmer"],
-  "Nebulob + Jeeode": ["Monculus"],
-  "Pladdie + Floot Fly": ["Ffidyll", "Epic PongPing"],
-  "Periscorp + Bonkers": ["Boo'qwurm"],
-  "Wynq + Maw": ["Spurrit"],
-  "500 Relics": ["Mimic"],
-  "Sneyser + Boskus": ["Epic Cherubble"],
-  "Cataliszt + Hyehehe": ["Epic Cherubble"],
-  "Shellbeat + Cybop": ["Epic Anglow"],
-  "Cataliszt + Cherubble": ["Epic Anglow"],
-  "Buy From Store For 100 Relics": [
-    "Stoowarb",
-    "Parlsona",
-    "Tawkerr",
-    "Maggpi",
-  ],
-  "Quarrister + Shrubb": ["Epic Hyehehe"],
-  "Plinkajou + Thrumble": ["Arcorina"],
-  "Plinkajou + Withur": ["Arcorina"],
-  "Plinkajou + Uuduk": ["Arcorina"],
-  "Plinkajou + Banjaw": ["Arcorina"],
-
-  // UPDATE 5.0! 
-  "Blow t + Sooza": ["Shhimmer"],
-  "Blow t + TooToo": ["Shhimmer"],
-  "Blow t + Fiddlement": ["Shhimmer"],
-  "Hairionette + Owlesque": ["Scallyrags"],
-  "Owlesque + Arcorina": ["Dakktyl"],
-  "Scallyrags + Arcorina": ["Jerm"],
-  "Dakktyl + Hairionette": ["Jerm"],
-
-  // "Clamble + Bowgart": ["Rare Mammott"],
-  // "Clamble + T Rox": ["Rare Mammott"], 
-  "Bowgart + T Rox": ["Punkleton", "Rare Mammott"],
-  "Thumpies +  Congle": ["Rare Mammott"],
-  // "Thumpies + Bowgart": ["Rare Mammott"],
-  // "Congle + Bowgart": ["Rare Mammott"],
-  // "PomPom + Congle": ["Rare Mammott"],
-  // "PomPom + T Rox": ["Rare Mammott"],
-  "Congle + T Rox": ["Rare Mammott"],
-  "Thumpies + PomPom": ["Rare Mammott"],
-  // "Thumpies + Clamble": ["Rare Mammott"],
-  // "Clamble + PomPom": ["Rare Mammott"],
-  // "Congle + Woolabee": ["Rare Mammott"],
-  "Congle + Wynq": ["Rare Mammott"],
-  // "Woolabee + Wynq": ["Rare Mammott"],
-  // "Sooza + Spytrap": ["Rare Mammott"],
-  // "Sooza + Fiddlement": ["Rare Mammott"],
-  "Spytrap + Fiddlement": ["Rare Mammott"],
-  // "Ziggurab + Cantorell": ["Rare Mammott"],
-  // "Ziggurab + Clavi Gnat": ["Rare Mammott"],
-  "Cantorell + Clavi Gnat": ["Rare Mammott"],
-  "Pummel + T Rox": ["Rare Noggin"],
-  "Scups + T Rox": ["Rare Noggin"],
-  "Reedling + Pummel": ["Rare Noggin"],
-  "Reedling + Clamble": ["Rare Noggin"],
-  "Reedling + Floogull": ["Rare Noggin", "Rare Tweedle"],
-  "Ziggurab + Bridg it": ["Rare Noggin"],
-  "Thrumble + Withur": ["Rare Noggin", "Rare Toe Jammer"],
-  "Pummel + Bowgart": ["Rare Potbelly", "Rare Toe Jammer"],
-  "Spunge + Bowgart": ["Rare Potbelly", "Rare Tweedle"],
-  "Reedling + Spunge": ["Rare Potbelly", "Rare Tweedle"],
-  "Reedling + Thumpies": ["Rare Potbelly"],
-  "Reedling + Barrb": ["Rare Potbelly"],
-  "Sooza + Spytrap": ["Rare Potbelly"],
-  "Rootitoot + Tapricorn": ["Rare Potbelly", "Rare Toe Jammer"],
-  "Spunge + Thumpies": ["Rare Tweedle"],
-  "Scups + PomPom": ["Rare Tweedle"],
-  "Congle + Whaddle": ["Rare Tweedle", "Rare Toe Jammer"],
-  "Spunge + Congle": ["Rare Toe Jammer"],
-  "Scups + Congle": ["Rare Toe Jammer"],
-  "Spunge + Scups": ["Rare Toe Jammer"],
-  "Barrb + Floogull": ["Rare Kayna"],
-  "Whaddle + Woolabbe": ["Rare Kayna"],
-  "Sooza + TooToo": ["Rare Kayna"],
-  "Rootitoot + Rooba": ["Rare Kayna"],
-  "Thrumble + Uuduk": ["Rare Kayna"],
-  "Spytrap + TooToo": ["Rare Fluoress"],
-  "G day + Frondley": ["Rare Fluoress", "Rare Theremind", "Rare Floot Fly", "Rare Clackula"],
-  "Tapricorn + Rooba": ["Rare Theremind"],
-  "Cantorell + Bridg it": ["Rare Floot Fly"],
-  "Withur + Uuduk": ["Rare Clackula"],
-  "Plinkajou + Denchuhs": ["Epic Clackula"],
-  
-  "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Tweedle", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"]
-};
-
-// Suggestions list
-const suggestionsList = monsters.map((monster) => monster.name);
-const searchMonsterInput = document.getElementById("Search_Monster");
-const firstMonsterInput = document.getElementById("First_Monster");
-const secondMonsterInput = document.getElementById("Second_Monster");
-const suggestionsBox1 = document.getElementById("suggestions1");
-const suggestionsBox2 = document.getElementById("suggestions2");
-const suggestionsBox3 = document.getElementById("suggestions3");
-const breedButton = document.getElementById("breedButton");
-const imageContainer = document.getElementById("imageContainer");
-const statsContainer = document.getElementById("statsContainer");
-const combinationsContainer = document.getElementById("Search_Monster");
-const resetButton = document.getElementById("resetButton");
-
-// Create monster data map for easy access
-const monsterData = Object.fromEntries(
-  monsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-
-const epicMonsterData = Object.fromEntries(
-  epicmonsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-
-const rareMonsterData = Object.fromEntries(
-  raremonsters.map((monster) => [
-    monster.name,
-    { image: monster.image, stats: monster.stats, audio: monster.audio },
-  ])
-);
-// Function to clear all inputs and results
-const resetAll = () => {
-  // Clear input fields
-  searchMonsterInput.value = "";
-  firstMonsterInput.value = "";
-  secondMonsterInput.value = "";
-
-  // Clear suggestions
-  suggestionsBox1.innerHTML = "";
-  suggestionsBox1.style.display = "none";
-  suggestionsBox2.innerHTML = "";
-  suggestionsBox2.style.display = "none";
-  suggestionsBox3.innerHTML = "";
-  suggestionsBox3.style.display = "none";
-
-  // Clear results containers
-  imageContainer.innerHTML = ""; // Clear previous images
-  statsContainer.innerHTML = ""; // Clear previous stats
-
-  // Enable all inputs
-  firstMonsterInput.disabled = false;
-  secondMonsterInput.disabled = false;
-  searchMonsterInput.disabled = false;
-
-  // Reset input styles
-  firstMonsterInput.style.backgroundColor = "";
-  secondMonsterInput.style.backgroundColor = "";
-  searchMonsterInput.style.backgroundColor = "";
-};
-
-// Add event listener to the reset button
-resetButton.addEventListener("click", resetAll);
-
-// Function to show suggestions
-let currentSuggestions = []; // Array to hold current suggestions
-
-const showSuggestions = (input, suggestionsBox) => {
-  const query = input.value.toLowerCase();
-  suggestionsBox.innerHTML = ""; // Clear previous suggestions
-  currentSuggestions = []; // Reset current suggestions
-  if (query) {
-    const filteredSuggestions = suggestionsList.filter((item) =>
-      item.toLowerCase().includes(query)
-    );
-    if (filteredSuggestions.length > 0) {
-      suggestionsBox.style.display = "block";
-      const rect = input.getBoundingClientRect();
-      suggestionsBox.style.left = `${rect.left}px`;
-      suggestionsBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
-
-      filteredSuggestions.forEach((suggestion) => {
-        currentSuggestions.push(suggestion); // Store current suggestions
-        const div = document.createElement("div");
-        div.textContent = suggestion;
-        div.classList.add("suggestion-item");
-        div.addEventListener("click", () => {
-          input.value = suggestion;
-          suggestionsBox.innerHTML = "";
-          suggestionsBox.style.display = "none";
-        });
-        suggestionsBox.appendChild(div);
-      });
-    } else {
-      suggestionsBox.style.display = "none";
-    }
-  } else {
-    suggestionsBox.style.display = "none";
-  }
-};
-
-// Add keydown event listener for selecting the first suggestion
-firstMonsterInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && currentSuggestions.length > 0) {
-    firstMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox1.innerHTML = "";
-    suggestionsBox1.style.display = "none"; // Hide suggestions
-    event.preventDefault(); // Prevent default form submission if inside a form
-  }
-});
-
-secondMonsterInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && currentSuggestions.length > 0) {
-    secondMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox2.innerHTML = "";
-    suggestionsBox2.style.display = "none"; // Hide suggestions
-    event.preventDefault(); // Prevent default form submission if inside a form
-  }
-});
-
-searchMonsterInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && currentSuggestions.length > 0) {
-    searchMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
-    suggestionsBox3.innerHTML = "";
-    suggestionsBox3.style.display = "none"; // Hide suggestions
-    event.preventDefault(); // Prevent default form submission if inside a form
-  }
-});
-
-// Event listeners for suggestion boxes
-firstMonsterInput.addEventListener("input", () =>
-  showSuggestions(firstMonsterInput, suggestionsBox1)
-);
-secondMonsterInput.addEventListener("input", () =>
-  showSuggestions(secondMonsterInput, suggestionsBox2)
-);
-searchMonsterInput.addEventListener("input", () =>
-  showSuggestions(searchMonsterInput, suggestionsBox3)
-);
-
-// Hide suggestions when clicking outside
-document.addEventListener("click", (event) => {
-  if (
-    !suggestionsBox1.contains(event.target) &&
-    event.target !== firstMonsterInput
-  ) {
-    suggestionsBox1.innerHTML = "";
-    suggestionsBox1.style.display = "none";
-  }
-  if (
-    !suggestionsBox2.contains(event.target) &&
-    event.target !== secondMonsterInput
-  ) {
-    suggestionsBox2.innerHTML = "";
-    suggestionsBox2.style.display = "none";
-  }
-  if (
-    !suggestionsBox3.contains(event.target) &&
-    event.target !== searchMonsterInput
-  ) {
-    suggestionsBox3.innerHTML = "";
-    suggestionsBox3.style.display = "none";
-  }
-});
-
-firstMonsterInput.addEventListener("input", () =>
-  showSuggestions(firstMonsterInput, suggestionsBox1)
-);
-secondMonsterInput.addEventListener("input", () =>
-  showSuggestions(secondMonsterInput, suggestionsBox2)
-);
-
-// New function to display results with tabs
-const searchBreedingCombinations = (monsterName) => {
-  const combinations = Object.entries(breedingCombinations).filter(
-    ([key, value]) => {
-      return value.includes(monsterName);
-    }
-  );
-
-  if (combinations.length > 0) {
-    combinationsContainer.innerHTML = ""; // Clear previous results
-    combinations.forEach(([combination, results]) => {
-      const div = document.createElement("div");
-      const monsterInfo = monsters.find(
-        (monster) => monster.name === results[0]
-      );
-
-      let breedingTimeText = "Breeding Time not available";
-      if (monsterInfo) {
-        breedingTimeText = monsterInfo.stats.normal;
-      }
-
-      div.innerHTML = `${combination}: ${results.join(
-        ", "
-      )} - ${breedingTimeText}`;
-      combinationsContainer.appendChild(div);
-    });
-  } else {
-    combinationsContainer.innerHTML = "No breeding combinations found.";
-  }
-};
-
-const resultContainer = document.createElement("div");
-resultContainer.classList.add("result-container");
-
-const blackBox = document.createElement("div");
-blackBox.classList.add("black-box");
-
-const resultText = document.createElement("div");
-resultText.classList.add("result-text");
-
-//!This is what makes the automatic search work
-searchMonsterInput.addEventListener("input", () => {
-  
-  switchSearch();
-
-  if (!restrictMonsterSearch()) return; // stops if no exact name
-
-    
-  let rawQuery = searchMonsterInput.value.trim();
-  let baseQuery = rawQuery;
-  let defaultTab = "Normal";
-
-  // Normalize prefixes like "Rare " or "Epic "
-  if (rawQuery.toLowerCase().startsWith("rare ")) {
-    baseQuery = rawQuery.slice(5);
-    defaultTab = "Rare";
-  } else if (rawQuery.toLowerCase().startsWith("epic ")) {
-    baseQuery = rawQuery.slice(5);
-    defaultTab = "Epic";
-  }
-
-
-  // Lookup monster using normalized name
-  const monsterInfo = monsterData[baseQuery];
-
-  if (!monsterInfo) {
-    console.warn("No monster info found for:", baseQuery);
-    return;
-  }
-
-  const img = document.createElement("img");
-  img.alt = "images/important/NoImageFound.png";
-  img.classList.add("monster-image");
-
-  // set main image source
-  img.src = monsterInfo.image.normal;
-  img.onerror = () => img.src = "images/important/NoImageFound.png";
-
-
-  showBlur();
-
-  // Clear previous content
-  imageContainer.innerHTML = "";
-  imageContainer.appendChild(img);
-
-  const tabs = ["Normal", "Rare", "Epic"];
-  const tabContainer = document.createElement("div");
-  tabContainer.classList.add("tab-container");
-  const tabContentContainer = document.createElement("div");
-  tabContentContainer.classList.add("tab-content-container");
-
-  const switchCostumeButton = document.createElement("button");
-  switchCostumeButton.innerHTML = "<i>Switch Costume</i>";
-  switchCostumeButton.title = "Change Costume";
-  switchCostumeButton.classList.add("costume-button");
-
-  // Find the monster in the array
-  const determineMonsterCostume = monsterCostumes.find(m => m.name === baseQuery);
-
-  // Check if this monster has ANY costumes in any rarity
-  const hasCostume =
-    determineMonsterCostume &&
-    (
-      (determineMonsterCostume.normal && Object.keys(determineMonsterCostume.normal).length > 0) ||
-      (determineMonsterCostume.rare && Object.keys(determineMonsterCostume.rare).length > 0) ||
-      (determineMonsterCostume.epic && Object.keys(determineMonsterCostume.epic).length > 0)
-    );
-
-  if (hasCostume) {
-    tabContainer.appendChild(switchCostumeButton);
-
-    switchCostumeButton.addEventListener("click", () => {
-      const rarity = imageContainer.dataset.currentActiveRarity || "normal";
-      console.log(`Switching costume for ${baseQuery} (${rarity})`);
-      switchCostume(rarity);
-    });
-  }
-
-  const switchWubbox = document.createElement("button");
-  switchWubbox.innerHTML = "<i>Switch Epic Wubbox</i>";
-  switchWubbox.title = "Change Mode";
-  switchWubbox.classList.add("tab-button-minor");
-  let removeWubboxButton = 0;
-
-  // Handle tab clicks
-  tabs.forEach((tabName) => {
-    const tab = document.createElement("button");
-    tab.classList.add("tab-button");
-    tab.textContent = tabName;
-
-    tab.addEventListener("click", () => {
-      const activeRarity = tabName.toLowerCase();
-      imageContainer.dataset.currentActiveRarity = activeRarity;
-      switchCostumeButton.dataset.activeRarity = activeRarity;
-
-      const monster = monsterCostumes.find((m) => m.name === baseQuery);
-      const img = imageContainer.querySelector(".monster-image");
-
-      // If the rarity has costumes, enable the button
-      if (monster && monster[activeRarity] && Object.keys(monster[activeRarity]).length > 0) {
-        switchCostumeButton.disabled = false;
-        switchCostumeButton.title = "Change Costume";
-      } else {
-        switchCostumeButton.disabled = true;
-        switchCostumeButton.title = "No costume available for this monster.";
-      }
-
-      if (activeRarity === "normal") {
-        img.src = monsterInfo.image.normal;
-      } else if (monsterInfo.image[activeRarity]) {
-        img.src = monsterInfo.image[activeRarity]; // base image for rare/epic
-      } else {
-        img.src = monsterInfo.image.normal; // fallback
-      }
-      img.onerror = () => img.src = "images/important/NoImageFound.png";
-
-      if (activeRarity === "normal" && baseQuery === "Wubbox") {
-        if (removeWubboxButton === 1) {
-          tabContainer.removeChild(switchWubbox);
-          tabContainer.appendChild(switchCostumeButton);
-          switchCostumeButton.addEventListener("click", () => {
-            const rarity =
-              imageContainer.dataset.currentActiveRarity || "normal";
-            switchCostume("normal");
-          });
-          removeWubboxButton = 0;
-        }
-      } else if (activeRarity === "epic" && baseQuery === "Wubbox") {
-        removeWubboxButton = 1;
-        tabContainer.removeChild(switchCostumeButton);
-        tabContainer.appendChild(switchWubbox);
-      }
-
-
-
-      // Show stats and breeding info
-      tabContentContainer.innerHTML = "";
-      statsContainer.innerHTML = "";
-
-      const monsterStats = monsterInfo.stats[activeRarity] || "Unknown Currently <br> Please Come Back Soon!";
-      const resultContainer = document.createElement("div");
-      resultContainer.classList.add("result-container");
-
-      const blackBox = document.createElement("div");
-      blackBox.classList.add("black-box");
-
-      const resultText = document.createElement("div");
-      resultText.classList.add("result-text");
-      resultText.innerHTML = `<h3>${tabName} Version of ${baseQuery}!</h3><p>${monsterStats}</p>`;
-
-      let breedingCombinationText = "";
-
- // List of monsters that have different Rare combos
-      const specialRareMonsters = ["Mammott", "Toe Jammer", "Potbelly", "Tweedle", "Noggin", "Floot Fly", "Clackula", "Fluoress", "Theremind"]; // Rare Element Single With Different Rare Combos :)
-
-      if (tabName === "Epic" && epicBreedingCombinations[baseQuery]) { 
-        breedingCombinationText += `<p>${epicBreedingCombinations[baseQuery].join(", ")}</p>`;
-      } else if (tabName === "Rare" && specialRareMonsters.includes(baseQuery)) {
-        // Special Rare logic only for certain monsters
-        for (let combo in breedingCombinations) {
-          const results = breedingCombinations[combo];
-          if (results.includes(`Rare ${baseQuery}`)) {
-            breedingCombinationText += `<p>${combo}</p>`;
-          }
-        }
-      } else {
-        // Normal logic (works for Normal tab + most Rare tab monsters that aren't special)
-        for (let combo in breedingCombinations) {
-          if (
-            (tabName === "Normal" && breedingCombinations[combo].includes(baseQuery)) ||
-            (tabName === "Rare" && breedingCombinations[combo].includes(baseQuery))
-          ) {
-            breedingCombinationText += `<p>${combo}</p>`;
-          }
-        }
-      }
-
-      if (breedingCombinationText) {
-        resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
-      }
-      resultContainer.appendChild(blackBox);
-      resultContainer.appendChild(resultText);
-      statsContainer.appendChild(resultContainer);
-      tabContentContainer.appendChild(img);
-    });
-
-    tabContainer.appendChild(tab);
-  });
-
-  // Costume switch button
-  switchCostumeButton.addEventListener("click", () => {
-    const ar = switchCostumeButton.dataset.activeRarity || imageContainer.dataset.currentActiveRarity;
-    console.log("Switch Costume button pressed for rarity:", ar);
-    switchCostume(ar);
-  });
-
-  // Volume button
-  function playMonsterSound(monsterName) {
-    const monster = monsterData[monsterName];
-    if (monster && monster.audio) {
-      const audio = new Audio(monster.audio);
-      audio.play().catch((err) => console.error("Playback error:", err));
-    } else {
-      console.warn("No audio found for monster:", monsterName);
-    }
-  }
-  const volumeButton = document.createElement("button");
-  volumeButton.classList.add("volume-button");
-  volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-  volumeButton.title = "Play Sound";
-  volumeButton.addEventListener("click", () => {
-    playMonsterSound(baseQuery);
-  });
-  tabContainer.appendChild(volumeButton);
-
-  // Handle Primordials (unchanged)
-  if (["Hairionette", "Owlesque", "Arcorina", "Shhimmer", "Scallyrags", "Dakktyl", "Jerm"].includes(baseQuery)) {
-    const switchMode = document.createElement("button");
-    switchMode.innerHTML = "<i>Switch Form</i>";
-    switchMode.title = "Change Mode";
-    switchMode.classList.add("tab-button-minor");
-    let switchCheck = 0;
-
-    switchMode.addEventListener("click", () => {
-      const img = imageContainer.querySelector(".monster-image") || document.createElement("img");
-      img.src = switchCheck === 0
-        ? `images/bm/${baseQuery} (Minor).png`
-        : `images/bm/${baseQuery} (Major).png`;
-      switchCheck = 1 - switchCheck;
-      img.classList.add("monster-image");
-      imageContainer.appendChild(img);
-    });
-    tabContainer.appendChild(switchMode);
-  }
-  if (["Wubbox", "Rare Wubbox"].includes(baseQuery)) {
-    const epicForms = [
-      { name: "Cold", img: "images/bm/Epic Wubbox Cold.png" },
-      { name: "Air", img: "images/bm/Epic Wubbox Air.png" },
-      { name: "Water", img: "images/bm/Epic Wubbox Water.png" },
-      { name: "Earth", img: "images/bm/Epic Wubbox Earth.png" },
-      { name: "Fire Haven", img: "images/bm/Epic Wubbox Haven.png" },
-      { name: "Fire Oasis", img: "images/bm/Epic Wubbox Oasis.png" },
-      { name: "Ethereal", img: "images/bm/Epic Wubbox Ethereal.png" },
-      { name: "Plant", img: "images/bm/Epic Wubbox Plant.png" }
-    ];
-
-    let switchCheck = 0;
-
-    switchWubbox.addEventListener("click", () => {
-      const form = epicForms[switchCheck];
-      const img = imageContainer.querySelector(".monster-image") || document.createElement("img");
-
-      // Update image
-      img.src = form.img;
-      img.classList.add("monster-image");
-
-      // Update stats text
-      resultText.innerHTML = `
-      <h3>Epic Version of ${form.name} Wubbox!</h3>
-      <p>Buy From Shop For <b>1 Diamond</b></p>
-    `;
-
-      // Refresh stats panel
-      statsContainer.innerHTML = "";
-      resultContainer.appendChild(resultText);
-      resultContainer.appendChild(blackBox);
-      statsContainer.appendChild(resultContainer);
-
-      // Cycle to next form
-      switchCheck = (switchCheck + 1) % epicForms.length;
-    });
-  }
-
-
-  imageContainer.appendChild(tabContainer);
-  imageContainer.appendChild(tabContentContainer);
-
-  // Click default tab automatically (uses defaultTab derived from prefix)
-  const defaultTabButton = Array.from(tabContainer.children).find((tab) => tab.textContent === defaultTab);
-  if (defaultTabButton) {
-    defaultTabButton.click();
-  }
-});
-
-
-breedButton.addEventListener("click", () => {
-  const monster1 = firstMonsterInput.value.trim();
-  const monster2 = secondMonsterInput.value.trim();
-  const searchMonster = searchMonsterInput.value.trim();
-
-  imageContainer.innerHTML = "";
-  statsContainer.innerHTML = "";
-
-  document.getElementById("suggestions1").style.display = "none";
-  document.getElementById("suggestions2").style.display = "none";
-  document.getElementById("suggestions3").style.display = "none";
-
-  const getMonsterInfo = (name) =>
-    monsters.find((m) => m.name.toLowerCase() === name.toLowerCase()) ||
-    epicmonsters.find((m) => m.name.toLowerCase() === name.toLowerCase()) ||
-    raremonsters.find((m) => m.name.toLowerCase() === name.toLowerCase());
-
-  const playMonsterSound = (name) => {
-    const actualName = name.includes("Hairionette") ? "Hairionette" : name;
-    const monster = monsterData[actualName];
-    if (monster && monster.audio) {
-      new Audio(monster.audio)
-        .play()
-        .catch((err) => console.error("Playback error:", err));
-    } else {
-      console.warn("No audio found for:", actualName);
-    }
-  };
-
-  const renderStats = (monsterInfo, monsterName, form) => {
-    const stats =
-      monsterInfo.stats?.[form] ||
-      "Unknown Currently <br><br> Please Come Back Soon!";
-
-    resultText.innerHTML = `
-    <h3>${form === "normal"
-        ? "Normal Version Of:"
-        : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
-      }<br><h3 id="search_monster_result">${monsterName}!</h3></h3>
-    <p>${stats}</p>
-  `;
-
-    console.log(monsterInfo, monsterName, form);
-
-    // --- Updated Breeding Combo Logic (supports Rare & Epic results) ---
-    let breedingCombinationText = "";
-
-    for (let combo in breedingCombinations) {
-      const results = breedingCombinations[combo];
-
-      // Normal version
-      if (results.includes(monsterName) && form === "normal") {
-        breedingCombinationText += `<p>${combo}</p>`;
-      }
-
-      // Rare version
-      if (results.includes(`Rare ${monsterName}`) && form === "rare") {
-        breedingCombinationText += `<p>${combo}</p>`;
-      }
-
-      // Epic version
-      if (results.includes(`Epic ${monsterName}`) && form === "epic") {
-        breedingCombinationText += `<p>${combo}</p>`;
-      }
-    }
-
-    // Add epic-specific combos if defined in epicBreedingCombinations
-    if (form === "epic" && epicBreedingCombinations[monsterName]) {
-      breedingCombinationText += `<p>${epicBreedingCombinations[
-        monsterName
-      ].join(", ")}</p>`;
-    }
-
-    // Display section if combos exist
-    if (breedingCombinationText) {
-      resultText.innerHTML += `
-      <h4><u>Breeding Combinations:</u></h4>
-      ${breedingCombinationText}
-    `;
-    }
-
-    // Append to containers
-    resultContainer.appendChild(blackBox);
-    resultContainer.appendChild(resultText);
-    statsContainer.appendChild(resultContainer);
-  };
-
-
-
-
-
-  const createTabButton = (label, onClick) => {
-    const btn = document.createElement("button");
-    btn.classList.add("tab-button");
-    btn.textContent = label;
-    btn.addEventListener("click", onClick);
-    return btn;
-  };
-
-  if (searchMonster) {
-    const monsterInfo = getMonsterInfo(searchMonster);
-    if (!monsterInfo) {
-      statsContainer.innerHTML =
-        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-      return;
-    }
-
-    const img = document.createElement("img");
-    img.src = monsterInfo.image.normal;
-    img.onerror = () => img.src = "images/important/NoImageFound.png";
-    img.classList.add("monster-image");
-    imageContainer.appendChild(img);
-
-    const tabContainer = document.createElement("div");
-    tabContainer.classList.add("tab-container");
-
-    const tabContentContainer = document.createElement("div");
-    tabContentContainer.classList.add("tab-content-container");
-
-
-
-    ["Normal", "Rare", "Epic"].forEach((tabName) => {
-      tabContainer.appendChild(
-        createTabButton(tabName, () => {
-          tabContentContainer.innerHTML = "";
-          statsContainer.innerHTML = "";
-          const lowerTab = tabName.toLowerCase();
-
-          img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
-          tabContentContainer.appendChild(img);
-          renderStats(monsterInfo, searchMonster, lowerTab);
-        })
-      );
-    });
-
-    const volumeButton = document.createElement("button");
-    volumeButton.classList.add("volume-button");
-    volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-    volumeButton.title = "Play Sound";
-    volumeButton.addEventListener("click", () =>
-      playMonsterSound(searchMonster)
-    );
-    tabContainer.appendChild(volumeButton);
-
-    imageContainer.appendChild(tabContainer);
-    imageContainer.appendChild(tabContentContainer);
-    tabContainer.querySelector(".tab-button").click(); // Auto click Normal
-    return;
-  }
-
-  if (monster1 && monster2) {
-    const results = getResultingMonsters(monster1, monster2);
-    if (!results.length) {
-      statsContainer.innerHTML =
-        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-      return;
-    }
-
-    const tabContainer = document.createElement("div");
-    tabContainer.classList.add("tab-container");
-    const tabContentContainer = document.createElement("div");
-    tabContentContainer.classList.add("tab-content-container");
-
-    results.forEach((name, index) => {
-      const tab = createTabButton(name, () => {
-        tabContentContainer.innerHTML = "";
-        statsContainer.innerHTML = "";
-
-        const info = getMonsterInfo(name);
-        if (info) {
-          const img = document.createElement("img");
-          img.src = info.image.normal;
-          img.alt = `<img src="image/important/NoImageFound.png">`;
-          img.classList.add("monster-image");
-          tabContentContainer.appendChild(img);
-          renderStats(info, name, "normal");
-
-          const volumeButton = document.createElement("button");
-          volumeButton.classList.add("volume-button");
-          volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
-          volumeButton.title = "Play Sound";
-          volumeButton.addEventListener("click", () =>
-            playMonsterSound(name)
-          );
-          if (!tabContainer.querySelector('.volume-button')) {
-            tabContainer.appendChild(volumeButton);
-          }
-        } else {
-          statsContainer.innerHTML =
-            '<img src="images/important/Nomonsterfound.png" id="noMonster">';
-        }
-      });
-      tabContainer.appendChild(tab);
-      if (index === 0) tab.click();
-    });
-
-    imageContainer.appendChild(tabContainer);
-    imageContainer.appendChild(tabContentContainer);
-  } else {
-    statsContainer.innerHTML =
-      '<img src="images/important/Enterrightmonster.png" id="noMonster">';
-  }
-});
-
-// Function to check breeding combinations
-//!This IS what you have been looking for! :D
-const getResultingMonsters = (monster1, monster2) => {
-  const comboKey = `${monster1} + ${monster2}`;
-  const reverseComboKey = `${monster2} + ${monster1}`;
-  return (
-    breedingCombinations[comboKey] ||
-    breedingCombinations[reverseComboKey] ||
-    []
-  );
-};
-
-const toggleSearchMonsterInput = () => {
-  if (firstMonsterInput.value.trim() || secondMonsterInput.value.trim()) {
-    searchMonsterInput.disabled = true;
-    searchMonsterInput.value = ""; // Clear the input
-  } else {
-    searchMonsterInput.disabled = false;
-  }
-};
-
-// Add event listeners to toggle the Search_Monster input
-firstMonsterInput.addEventListener("input", () => {
-  showSuggestions(firstMonsterInput, suggestionsBox1);
-  toggleSearchMonsterInput();
-});
-
-secondMonsterInput.addEventListener("input", () => {
-  showSuggestions(secondMonsterInput, suggestionsBox2);
-  toggleSearchMonsterInput();
-});
-
-// Initial toggle call
-toggleSearchMonsterInput();
-
-// Function to toggle graying out of inputs
-const toggleInputStyles = () => {
-  const isSearchActive = searchMonsterInput.value.trim() !== "";
-  firstMonsterInput.disabled = isSearchActive;
-  secondMonsterInput.disabled = isSearchActive;
-  firstMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
-  secondMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
-
-  const isFirstOrSecondActive =
-    firstMonsterInput.value.trim() !== "" ||
-    secondMonsterInput.value.trim() !== "";
-  searchMonsterInput.disabled = isFirstOrSecondActive;
-  searchMonsterInput.style.backgroundColor = isFirstOrSecondActive
-    ? "#d3d3d3"
-    : "";
-};
-
-// Add event listeners to toggle the inputs
-firstMonsterInput.addEventListener("input", () => {
-  showSuggestions(firstMonsterInput, suggestionsBox1);
-  toggleInputStyles();
-});
-
-secondMonsterInput.addEventListener("input", () => {
-  showSuggestions(secondMonsterInput, suggestionsBox2);
-  toggleInputStyles();
-});
-
-searchMonsterInput.addEventListener("input", () => {
-  showSuggestions(searchMonsterInput, suggestionsBox3);
-  toggleInputStyles();
-});
-
-// Initial toggle call
-toggleInputStyles();
-
-// Hide suggestions when clicking outside
-document.addEventListener("click", (event) => {
-  if (
-    !suggestionsBox1.contains(event.target) &&
-    event.target !== firstMonsterInput
-  ) {
-    suggestionsBox1.innerHTML = "";
-    suggestionsBox1.style.display = "none";
-  }
-  if (
-    !suggestionsBox2.contains(event.target) &&
-    event.target !== secondMonsterInput
-  ) {
-    suggestionsBox2.innerHTML = "";
-    suggestionsBox2.style.display = "none";
-  }
-});
-
-function closeMenu() {
-  hideBlur(); // Hide the blur overlay
-  resetAll();
-}
-// Function to show the blur overlay and message
-function showBlur() {
-  document.getElementById("blurOverlay").style.display = "block";
-  document.getElementById("blurMessage").style.display = "block"; // Show the message
-
-  // Hide input elements and buttons
-  document.getElementById("inputContainer").classList.add("hidden"); // Hide the input container
-  const inputs = document.querySelectorAll(
-    "#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist"); // #musicSlidePanel, #musicSlideButton
-  inputs.forEach((input) => input.classList.add("hidden")); // Hide each input/button
-
-  // Hide suggestion boxes
-  const suggestionsBox1 = document.getElementById("suggestions1");
-  const suggestionsBox2 = document.getElementById("suggestions2");
-  const suggestionsBox3 = document.getElementById("suggestions3");
-
-  suggestionsBox1.innerHTML = ""; // Clear suggestions
-  suggestionsBox1.style.display = "none"; // Hide suggestions box 1
-  suggestionsBox2.innerHTML = ""; // Clear suggestions
-  suggestionsBox2.style.display = "none"; // Hide suggestions box 2
-  suggestionsBox3.innerHTML = ""; // Clear suggestions
-  suggestionsBox3.style.display = "none"; // Hide suggestions box 3
-
-  // Hide all suggestion items (custom)
-  const suggestionItems = document.querySelectorAll(".suggestion-item");
-  suggestionItems.forEach((item) => {
-    item.style.display = "none"; // Hide each suggestion item
-  });
-
-  // Optionally, hide the autocomplete suggestions from the browser
-  inputs.forEach((input) => {
-    input.setAttribute("autocomplete", "off"); // Disable autocomplete
-  });
-
-  // Set z-index for image and stats container above fog
-  document.getElementById("imageContainer").style.zIndex = "102"; // Set z-index to 102
-  document.getElementById("statsContainer").style.zIndex = "102"; // Set z-index to 102
-}
-
-// Function to hide the blur overlay and message
-function hideBlur() {
-  document.getElementById("blurOverlay").style.display = "none";
-  document.getElementById("blurMessage").style.display = "none"; // Hide the message
-
-  // Show input elements and buttons
-  document.getElementById("inputContainer").classList.remove("hidden"); // Show the input container
-  const inputs = document.querySelectorAll(
-    "#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist" //#musicSlidePanel, #musicSlideButton
-  ); // Select input fields and buttons
-  inputs.forEach((input) => {
-    input.classList.remove("hidden"); // Show each input/button
-    input.setAttribute("autocomplete", "on"); // Re-enable autocomplete
-  });
-
-  // Reset z-index for image and stats container
-  document.getElementById("imageContainer").style.zIndex = "0"; // Reset z-index to 0
-  document.getElementById("statsContainer").style.zIndex = "0"; // Reset z-index to 0
-}
-
-// Example of how you might handle finding a combination
-document.getElementById("breedButton").addEventListener("click", function () {
-  // Simulate finding a combination
-  const combinationFound = true; // Set this based on your logic
-
-  if (combinationFound) {
-    showBlur(); // Show the blur overlay
-  } else {
-    hideBlur(); // Hide if no combination is found (optional)
-  }
-
-});
-
-// Add event listener for keydown event
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    // Check if the key pressed is Escape
-    hideBlur(); // Hide the blur overlay
-    resetAll();
-  }
-});
-
-//Searching Epic Monsters
-function searchMonsters() {
-  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-  const resultsContainer = document.getElementById("resultsContainer");
-  resultsContainer.innerHTML = "";
-
-  const normalResults = monsters.filter((monster) =>
-    monster.name.toLowerCase().includes(searchTerm)
-  );
-  const rareResults = monsters.filter((monster) =>
-    monster.name.toLowerCase().includes(searchTerm)
-  );
-  const epicResults = epicmonsters.filter((monster) =>
-    monster.name.toLowerCase().includes(searchTerm)
-  );
-
-  if (
-    normalResults.length === 0 &&
-    rareResults.length === 0 &&
-    epicResults.length === 0
-  ) {
-    resultsContainer.innerHTML = "<p>Unknown Currently <br><br> Please Come Back Soon!</p>";
-    return;
-  }
-
-  normalResults.forEach((monster) => displayMonster(monster, "normal"));
-  rareResults.forEach((monster) => displayMonster(monster, "rare"));
-  epicResults.forEach((monster) => displayMonster(monster, "epic"));
-}
-
-function displayMonster(monster, type) {
-  const resultsContainer = document.getElementById("resultsContainer");
-  const monsterDiv = document.createElement("div");
-  monsterDiv.className = "monster-result";
-
-  const name =
-    type === "normal"
-      ? monster.name
-      : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
-  monsterDiv.innerHTML = `
-    <h3>${name}</h3>
-    <img src="${monster.image.normal}" alt="<img src="image/important/NoImageFound.png">" />
-    <p>Breeding Time: ${monster.stats.normal}</p>
-  `;
-
-  if (epicBreedingCombinations[name]) {
-    monsterDiv.innerHTML += `<p>Epic Breeding: ${epicBreedingCombinations[name]}</p>`;
-  }
-  resultsContainer.appendChild(monsterDiv);
-}
-
-// Call hideBlur on page load to ensure it starts hidden
-hideBlur();
-
-const slideButton = document.getElementById("slideButton");
-const slidePanel = document.getElementById("slidePanel");
-
-slideButton.addEventListener("click", () => {
-  if (checklistMenu.classList.value === "open") {
-    checklistMenu.classList.value = "closed"
-    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
-  } else {
-    slidePanel.classList.toggle("open");
-  }
-  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>` && checklistMenu.classList.value !== "open") {
-    slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
-    slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
-    if (checklistMenu.classList.value === "closed") {
-      slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`;
-      slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
-      checklistMenu.classList.value = ""
-    }
-    console.log("Closed");
-  } else if (checklistMenu.classList.value !== "open") {
-    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`;
-    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
-    console.log("Open")
-  }
-});
-
-// function closePanel() {
-//     slidePanel.classList.remove('open');
-// }
-
-document
-  .getElementById("islandDropdown")
-  .addEventListener("change", function () {
-    const value = this.value;
-    const islandTitleImg = document.getElementById("islandNameImg");
-    const islandImg = document.getElementById("islandImg");
-    const islandNameChecklist = document.getElementById("islandNameChecklist");
-    // Capitalize first letter for display
-    const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
-    skinCounter = 0;
-
-    // Update the name and image
-    if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus" || value === "paironormal") {
-      islandImg.src = `images/islands/${capitalized} Island.png`;
-      islandTitleImg.src = `images/Titles/${capitalized}.png`;
-
-      if (value === "oasis") {
-        islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
-        islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
-      } else if (value === "haven") {
-        islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
-        islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
-      } else if (value === "nexus") {
-        islandImg.src = `images/islands/Magical ${capitalized}.png`;
-        islandTitleImg.src = `images/Titles/Magical ${capitalized}.png`;
-      } else if (value === "paironormal") {
-        islandImg.src = `images/islands/Paironormal Carnival - Major.png`;
-        islandTitleImg.src = `images/Titles/Paironormal Carnival - Major.png`;
-      }
-
-      // console.log(islandTitleImg, value, capitalized)
-    } else if (value !== "Plasma Islet" && value !== "Mech Islet" && value !== "Ethereal Workshop" && capitalized !== "Oasis" && capitalized !== "Fire Haven" && capitalized !== "Magical Sanctum" && capitalized !== "Seasonal Shanty" && value !== "nexus") {
-      islandImg.src = `images/islands/${capitalized} Island.png`;
-      islandTitleImg.src = `images/Titles/${capitalized} Island.png`;
-      // console.log(islandTitleImg, value, capitalized)
-    }
-
-    hideIslandSkin();
-  });
-
-document
-  .getElementById("monsterTypeDropdown")
-  .addEventListener("change", function () {
-    const value = this.value;
-
-    const commonPanel = document.getElementById("commonSection");
-    const rarePanel = document.getElementById("rareSection");
-    const epicPanel = document.getElementById("epicSection");
-
-    // Collapse all
-    commonPanel.classList.remove("active");
-    rarePanel.classList.remove("active");
-    epicPanel.classList.remove("active");
-
-    // Expand selected + trigger its select change
-    if (value === "common") {
-      commonPanel.classList.add("active");
-      const select = commonPanel.querySelector("select");
-      if (select) select.dispatchEvent(new Event("change"));
-    } else if (value === "rare") {
-      rarePanel.classList.add("active");
-      const select = rarePanel.querySelector("select");
-      if (select) select.dispatchEvent(new Event("change"));
-    } else if (value === "epic") {
-      epicPanel.classList.add("active");
-      const select = epicPanel.querySelector("select");
-      if (select) select.dispatchEvent(new Event("change"));
-    }
-  });
-
-
-/** 
- *  "": {
-     name: "",
-     image: "images/Monster_Avatars/.png",
-     diamonds: ,
-     coins: ,
-       description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
-   },
-*/
-
+let titleSkinCounter = 0;
 let million = "m"; // Never Used, needs fixing. 
-
-/* 
-ulike: {
-  0: "",
-  1: "",
-  2: "",
-},
-likes: {
-  
-}
-*/
 
 const monsterInfo = {
   potbelly: {
@@ -9936,6 +6440,8 @@ const monsterInfo = {
       seasonal: ["Schmoochle"]
     }
   },
+
+
   gobbleygourd: {
     name: "Gobbleygourd",
     image: "images/Monster_Avatars/Gobbleygourd.png",
@@ -11202,7 +7708,7 @@ const monsterInfo = {
     name: "Phosphoran Phlox",
     image: "images/Monster_Avatars/Phosphoran Phlox.png",
     diamonds: 0,
-    coins: 10 + million,
+    coins: '10 M',
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('phosphoran_phlox') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
   },
   whiz_bang: {
@@ -13358,7 +9864,16 @@ const monsterInfo = {
   },
 };
 
-/*
+/* 
+  ulike: {
+    0: "",
+    1: "",
+    2: "",
+  },
+  likes: {
+
+  }
+
   name: {
     name: "",
     image: "images/Monster_Avatars/.png",
@@ -14970,29 +11485,6 @@ const islandData = {
   }
 };
 
-const dropdown = document.getElementById("monsterTypeDropdown");
-
-function updateDropdown(islandName) {
-  const island = islandData[islandName];
-
-  const commonOpt = dropdown.querySelector('option[value="common"]');
-  const rareOpt = dropdown.querySelector('option[value="rare"]');
-  const epicOpt = dropdown.querySelector('option[value="epic"]');
-
-  // Disable options if that rarity list is empty/missing
-  commonOpt.disabled = !island?.common?.length;
-  rareOpt.disabled = !island?.rare?.length;
-  epicOpt.disabled = !island?.epic?.length;
-
-  // Pick first valid option if current one is disabled
-  if (dropdown.options[dropdown.selectedIndex].disabled) {
-    const firstEnabled = [...dropdown.options].find(opt => !opt.disabled);
-    if (firstEnabled) dropdown.value = firstEnabled.value;
-  }
-
-  // Trigger change so your panel logic updates
-  dropdown.dispatchEvent(new Event("change"));
-}
 const islandKeyMap = {
   "Plant Island": "plant",
   "Cold Island": "cold",
@@ -15020,6 +11512,1210 @@ const islandKeyMap = {
   "Magical Nexus": "nexus",
   "Paironormal Carnival": "paironormal"
 };
+function switchIslandSkin() {
+  const islandImage = document.getElementById("islandImg");
+  let islandName = document.getElementById("islandNameImg");
+  const selectedIsland = islandDropdown.value;
+
+  // Define skin sets by island
+  const islandSkins = {
+    plant: [
+      allIslandSkins[0].src,
+      allIslandSkins[1].src,
+      allIslandSkins[2].src,
+      "images/islands/Plant Island.png"
+    ],
+    cold: [
+      allIslandSkins[3].src,
+      allIslandSkins[4].src,
+      allIslandSkins[5].src,
+      "images/islands/Cold Island.png"
+    ],
+    air: [
+      allIslandSkins[6].src,
+      allIslandSkins[7].src,
+      allIslandSkins[8].src,
+      "images/islands/Air Island.png"
+    ],
+    water: [
+      allIslandSkins[9].src,
+      allIslandSkins[10].src,
+      allIslandSkins[11].src,
+      "images/islands/Water Island.png"
+    ],
+    earth: [
+      allIslandSkins[12].src,
+      allIslandSkins[13].src,
+      allIslandSkins[14].src,
+      "images/islands/Earth Island.png"
+    ],
+    haven: [
+      allIslandSkins[15].src,
+      "images/islands/Fire Haven Island.png"
+    ],
+    oasis: [
+      allIslandSkins[16].src,
+      "images/islands/Fire Oasis Island.png"
+    ],
+    light: [
+      allIslandSkins[17].src,
+      allIslandSkins[18].src,
+      "images/islands/Light Island.png"
+    ],
+    psychic: [
+      allIslandSkins[19].src,
+      allIslandSkins[20].src,
+      "images/islands/Psychic Island.png"
+    ],
+    faerie: [
+      allIslandSkins[21].src,
+      allIslandSkins[22].src,
+      "images/islands/Faerie Island.png"
+    ],
+    bone: [
+      allIslandSkins[23].src,
+      allIslandSkins[24].src,
+      "images/islands/Bone Island.png"
+    ],
+    ethereal: [
+      allIslandSkins[25].src,
+      "images/islands/Ethereal Island.png"
+    ],
+    "magical Sanctum": [
+      allIslandSkins[26].src,
+      "images/islands/Magical Sanctum Island.png"
+    ],
+    amber: [
+      allIslandSkins[27].src,
+      "images/islands/Amber Island.png"
+    ],
+    gold: [
+      allIslandSkins[28].src,
+      "images/islands/Gold Island.png"
+    ],
+    paironormal: [
+      allIslandSkins[29].src,
+      "images/islands/Paironormal Carnival - Major.png"
+    ]
+  };
+
+  const islandTitles = {
+    plant: [
+      allIslandSkins[0].titleSrc,
+      allIslandSkins[1].titleSrc,
+      allIslandSkins[2].titleSrc,
+      "images/Titles/Plant Island.png"
+    ],
+    cold: [
+      allIslandSkins[3].titleSrc,
+      allIslandSkins[4].titleSrc,
+      allIslandSkins[5].titleSrc,
+      "images/Titles/Cold Island.png"
+    ],
+    air: [
+      allIslandSkins[6].titleSrc,
+      allIslandSkins[7].titleSrc,
+      allIslandSkins[8].titleSrc,
+      "images/Titles/Air Island.png"
+    ],
+    water: [
+      allIslandSkins[9].titleSrc,
+      allIslandSkins[10].titleSrc,
+      allIslandSkins[11].titleSrc,
+      "images/Titles/Water Island.png"
+    ],
+    earth: [
+      allIslandSkins[12].titleSrc,
+      allIslandSkins[13].titleSrc,
+      allIslandSkins[14].titleSrc,
+      "images/Titles/Earth Island.png"
+    ],
+    haven: [
+      allIslandSkins[15].titleSrc,
+      "images/Titles/Fire Haven.png"
+    ],
+    oasis: [
+      allIslandSkins[16].titleSrc,
+      "images/Titles/Fire Oasis.png"
+    ],
+    light: [
+      allIslandSkins[17].titleSrc,
+      allIslandSkins[18].titleSrc,
+      "images/Titles/Light Island.png"
+    ],
+    psychic: [
+      allIslandSkins[19].titleSrc,
+      allIslandSkins[20].titleSrc,
+      "images/Titles/Psychic Island.png"
+    ],
+    faerie: [
+      allIslandSkins[21].titleSrc,
+      allIslandSkins[22].titleSrc,
+      "images/Titles/Faerie Island.png"
+    ],
+    bone: [
+      allIslandSkins[23].titleSrc,
+      allIslandSkins[24].titleSrc,
+      "images/Titles/Bone Island.png"
+    ],
+    ethereal: [
+      allIslandSkins[25].titleSrc,
+      "images/Titles/Ethereal Island.png"
+    ],
+    "magical Sanctum": [
+      allIslandSkins[26].titleSrc,
+      "images/Titles/Magical Sanctum.png"
+    ],
+    amber: [
+      allIslandSkins[27].titleSrc,
+      "images/Titles/Amber Island.png"
+    ],
+    gold: [
+      allIslandSkins[28].titleSrc,
+      "images/Titles/Gold Island.png"
+    ],
+    paironormal: [
+      allIslandSkins[29].titleSrc,
+      "images/Titles/Paironormal Carnival - Major.png"
+    ]
+  }
+
+  // If the selected island has skins
+  if (islandSkins[selectedIsland]) {
+    islandImage.src = islandSkins[selectedIsland][skinCounter];
+    islandName.src = islandTitles[selectedIsland][skinCounter];
+    titleSkinCounter = (titleSkinCounter + 1) % islandTitles[selectedIsland].length;
+    skinCounter = (skinCounter + 1) % islandSkins[selectedIsland].length;
+    // console.log(islandName); 
+  }
+}
+
+// Suggestions list
+const suggestionsList = monsters.map((monster) => monster.name);
+const searchMonsterInput = document.getElementById("Search_Monster");
+const firstMonsterInput = document.getElementById("First_Monster");
+const secondMonsterInput = document.getElementById("Second_Monster");
+const suggestionsBox1 = document.getElementById("suggestions1");
+const suggestionsBox2 = document.getElementById("suggestions2");
+const suggestionsBox3 = document.getElementById("suggestions3");
+const breedButton = document.getElementById("breedButton");
+const imageContainer = document.getElementById("imageContainer");
+const statsContainer = document.getElementById("statsContainer");
+const combinationsContainer = document.getElementById("Search_Monster");
+const resetButton = document.getElementById("resetButton");
+const search_box = document.getElementById("Search_Monster");
+
+
+// Create monster data map for easy access
+const monsterData = Object.fromEntries(
+  monsters.map((monster) => [
+    monster.name,
+    { image: monster.image, stats: monster.stats, audio: monster.audio },
+  ])
+);
+
+function switchCostume(activeRarity) {
+  // Normalize search query like your input handler does
+  let query = searchMonsterInput.value.trim();
+  if (!query) {
+    console.warn("switchCostume: search box empty — aborting");
+    return;
+  }
+  if (query.toLowerCase().startsWith("rare ")) query = query.slice(5);
+  else if (query.toLowerCase().startsWith("epic ")) query = query.slice(5);
+  // console.log("switchCostume: normalized query:", query);
+
+  const monster = monsterCostumes.find(m => m.name === query);
+  // console.log("switchCostume: monster lookup:", monster && monster.name);
+
+  const img = imageContainer.querySelector(".monster-image");
+  if (!img) {
+    console.warn("No monster image found in container.");
+    return;
+  }
+
+  // Try to infer rarity if missing
+  if (!activeRarity) {
+    activeRarity =
+      img.dataset.currentActiveRarity ||
+      imageContainer.dataset.currentActiveRarity ||
+      (document.querySelector(".tab-button.active") &&
+        document.querySelector(".tab-button.active").textContent.toLowerCase());
+    // console.log("switchCostume: inferred activeRarity:", activeRarity);
+  }
+
+  if (!activeRarity) {
+    console.warn("switchCostume: no activeRarity provided and could not infer it — aborting.");
+    return;
+  }
+
+  const rarity = monster[activeRarity];
+  console.log("switchCostume: rarity object:", rarity);
+
+  if (!rarity || Object.keys(rarity).length === 0) {
+    console.warn(`No costumes defined for ${activeRarity} of ${query}`);
+    return;
+  }
+
+  const keys = Object.keys(rarity);
+  const datasetKey = `currentCostumeIndex_${activeRarity}`;
+
+  // Default image state = -1
+  if (!img.dataset[datasetKey]) img.dataset[datasetKey] = "-1";
+  let currentIndex = parseInt(img.dataset[datasetKey], 10);
+  // console.log("switchCostume: currentIndex (before):", currentIndex, "available keys:", keys);
+
+  currentIndex++;
+
+  // Loop around (after last costume → back to default)
+  if (currentIndex > keys.length - 1) currentIndex = -1;
+
+  let newSrc;
+
+  if (currentIndex === -1) {
+    const baseFolder = "images/bm/";
+
+    if (activeRarity === "rare" || activeRarity === "epic") {
+      const rarityCapitalized = activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1);
+      newSrc = `${baseFolder}${rarityCapitalized} ${monster.name}.png`;
+    } else {
+      newSrc = `${baseFolder}${monster.name}.png`;
+    }
+
+    // console.log("switchCostume: reverted to default image ->", newSrc);
+  } else {
+    let folderPath = `images/Costumes/${monster.name}/`;
+    if (activeRarity === "rare" || activeRarity === "epic") {
+      folderPath += `${activeRarity.charAt(0).toUpperCase() + activeRarity.slice(1)}/`;
+    }
+    newSrc = `${folderPath}${rarity[keys[currentIndex]]}.png`;
+    // console.log("switchCostume: setting img.src ->", newSrc);
+  }
+
+  img.src = newSrc;
+  img.dataset[datasetKey] = String(currentIndex);
+  img.dataset.currentActiveRarity = activeRarity;
+
+  // console.log("<<< switchCostume finished. new dataset:", img.dataset);
+}
+
+// Function to clear all inputs and results
+const resetAll = () => {
+  // Clear input fields
+  searchMonsterInput.value = "";
+  firstMonsterInput.value = "";
+  secondMonsterInput.value = "";
+
+  // Clear suggestions
+  suggestionsBox1.innerHTML = "";
+  suggestionsBox1.style.display = "none";
+  suggestionsBox2.innerHTML = "";
+  suggestionsBox2.style.display = "none";
+  suggestionsBox3.innerHTML = "";
+  suggestionsBox3.style.display = "none";
+
+  // Clear results containers
+  imageContainer.innerHTML = ""; // Clear previous images
+  statsContainer.innerHTML = ""; // Clear previous stats
+
+  // Enable all inputs
+  firstMonsterInput.disabled = false;
+  secondMonsterInput.disabled = false;
+  searchMonsterInput.disabled = false;
+
+  // Reset input styles
+  firstMonsterInput.style.backgroundColor = "";
+  secondMonsterInput.style.backgroundColor = "";
+  searchMonsterInput.style.backgroundColor = "";
+};
+
+// Add event listener to the reset button
+resetButton.addEventListener("click", resetAll);
+
+// Function to show suggestions
+let currentSuggestions = []; // Array to hold current suggestions
+
+const showSuggestions = (input, suggestionsBox) => {
+  const query = input.value.toLowerCase();
+  suggestionsBox.innerHTML = ""; // Clear previous suggestions
+  currentSuggestions = []; // Reset current suggestions
+  if (query) {
+    const filteredSuggestions = suggestionsList.filter((item) =>
+      item.toLowerCase().includes(query)
+    );
+    if (filteredSuggestions.length > 0) {
+      suggestionsBox.style.display = "block";
+      const rect = input.getBoundingClientRect();
+      suggestionsBox.style.left = `${rect.left}px`;
+      suggestionsBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
+
+      filteredSuggestions.forEach((suggestion) => {
+        currentSuggestions.push(suggestion); // Store current suggestions
+        const div = document.createElement("div");
+        div.textContent = suggestion;
+        div.classList.add("suggestion-item");
+        div.addEventListener("click", () => {
+          input.value = suggestion;
+          suggestionsBox.innerHTML = "";
+          suggestionsBox.style.display = "none";
+        });
+        suggestionsBox.appendChild(div);
+      });
+    } else {
+      suggestionsBox.style.display = "none";
+    }
+  } else {
+    suggestionsBox.style.display = "none";
+  }
+};
+
+// Add keydown event listener for selecting the first suggestion
+firstMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
+    firstMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none"; // Hide suggestions
+    event.preventDefault(); // Prevent default form submission if inside a form
+  }
+});
+
+secondMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
+    secondMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none"; // Hide suggestions
+    event.preventDefault(); // Prevent default form submission if inside a form
+  }
+});
+
+searchMonsterInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && currentSuggestions.length > 0) {
+    searchMonsterInput.value = currentSuggestions[0]; // Autofill with first suggestion
+    suggestionsBox3.innerHTML = "";
+    suggestionsBox3.style.display = "none"; // Hide suggestions
+    event.preventDefault(); // Prevent default form submission if inside a form
+  }
+});
+
+// Event listeners for suggestion boxes
+firstMonsterInput.addEventListener("input", () =>
+  showSuggestions(firstMonsterInput, suggestionsBox1)
+);
+secondMonsterInput.addEventListener("input", () =>
+  showSuggestions(secondMonsterInput, suggestionsBox2)
+);
+searchMonsterInput.addEventListener("input", () =>
+  showSuggestions(searchMonsterInput, suggestionsBox3)
+);
+
+// Hide suggestions when clicking outside
+document.addEventListener("click", (event) => {
+  if (
+    !suggestionsBox1.contains(event.target) &&
+    event.target !== firstMonsterInput
+  ) {
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none";
+  }
+  if (
+    !suggestionsBox2.contains(event.target) &&
+    event.target !== secondMonsterInput
+  ) {
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none";
+  }
+  if (
+    !suggestionsBox3.contains(event.target) &&
+    event.target !== searchMonsterInput
+  ) {
+    suggestionsBox3.innerHTML = "";
+    suggestionsBox3.style.display = "none";
+  }
+});
+
+firstMonsterInput.addEventListener("input", () =>
+  showSuggestions(firstMonsterInput, suggestionsBox1)
+);
+secondMonsterInput.addEventListener("input", () =>
+  showSuggestions(secondMonsterInput, suggestionsBox2)
+);
+
+// New function to display results with tabs
+const searchBreedingCombinations = (monsterName) => {
+  const combinations = Object.entries(breedingCombinations).filter(
+    ([key, value]) => {
+      return value.includes(monsterName);
+    }
+  );
+
+  if (combinations.length > 0) {
+    combinationsContainer.innerHTML = ""; // Clear previous results
+    combinations.forEach(([combination, results]) => {
+      const div = document.createElement("div");
+      const monsterInfo = monsters.find(
+        (monster) => monster.name === results[0]
+      );
+
+      let breedingTimeText = "Breeding Time not available";
+      if (monsterInfo) {
+        breedingTimeText = monsterInfo.stats.normal;
+      }
+
+      div.innerHTML = `${combination}: ${results.join(
+        ", "
+      )} - ${breedingTimeText}`;
+      combinationsContainer.appendChild(div);
+    });
+  } else {
+    combinationsContainer.innerHTML = "No breeding combinations found.";
+  }
+};
+
+const resultContainer = document.createElement("div");
+resultContainer.classList.add("result-container");
+
+const blackBox = document.createElement("div");
+blackBox.classList.add("black-box");
+
+const resultText = document.createElement("div");
+resultText.classList.add("result-text");
+
+searchMonsterInput.addEventListener("input", () => {
+
+  const value = searchMonsterInput.value;
+
+  if (!value) return;
+
+  // Capitalize the first letter of each word (letters after spaces)
+  const formatted = value.replace(/\b[a-z]/g, (char) => char.toUpperCase());
+
+  // Only update the input if it changed
+  if (formatted !== value) {
+    const cursorPos = searchMonsterInput.selectionStart;
+    searchMonsterInput.value = formatted;
+    searchMonsterInput.setSelectionRange(cursorPos, cursorPos);
+  }
+
+  if (!restrictMonsterSearch()) return; // stops if no exact name
+
+  let rawQuery = searchMonsterInput.value.trim();
+  let baseQuery = rawQuery;
+  let defaultTab = "Normal";
+
+  // Detect prefix for Rare/Epic
+  if (rawQuery.toLowerCase().startsWith("rare ")) {
+    baseQuery = rawQuery.slice(5);
+    defaultTab = "Rare";
+  } else if (rawQuery.toLowerCase().startsWith("epic ")) {
+    baseQuery = rawQuery.slice(5);
+    defaultTab = "Epic";
+  }
+
+  // Helper: get monster data by rarity
+  function getMonsterData(name, rarity) {
+    rarity = rarity.toLowerCase();
+    if (rarity === "epic") return epicMonsterData[name] || monsterData[name];
+    if (rarity === "rare") return monsterData[name]; // adjust if you have rareMonsterData
+    return monsterData[name];
+  }
+
+  // Only proceed if restrictMonsterSearch passed
+  const monsterInfo = monsterData[baseQuery];
+
+  if (!monsterInfo) {
+    // Don't show message while typing, just stop
+    return;
+  }
+
+  // Clear previous content
+  imageContainer.innerHTML = "";
+  statsContainer.innerHTML = "";
+
+  const img = document.createElement("img");
+  img.classList.add("monster-image");
+  img.alt = "Monster Image";
+  img.onerror = () => img.src = "images/important/NoImageFound.png";
+
+  // Set initial image based on defaultTab
+  const rarityLower = defaultTab.toLowerCase();
+  img.src = monsterInfo.image[rarityLower] || monsterInfo.image.normal;
+  imageContainer.appendChild(img);
+
+  showBlur(); // keep your blur effect
+
+  // Create tabs
+  const tabs = ["Normal", "Rare", "Epic"];
+  const tabContainer = document.createElement("div");
+  tabContainer.classList.add("tab-container");
+
+  const tabContentContainer = document.createElement("div");
+  tabContentContainer.classList.add("tab-content-container");
+
+  const switchCostumeButton = document.createElement("button");
+  switchCostumeButton.innerHTML = "<i>Switch Costume</i>";
+  switchCostumeButton.title = "Change Costume";
+  switchCostumeButton.classList.add("costume-button");
+
+  const monsterCostumeData = monsterCostumes.find(m => m.name === baseQuery);
+
+  function hasCostume(rarity) {
+    return monsterCostumeData && monsterCostumeData[rarity] && Object.keys(monsterCostumeData[rarity]).length > 0;
+  }
+
+  if (hasCostume(rarityLower)) {
+    tabContainer.appendChild(switchCostumeButton);
+    switchCostumeButton.addEventListener("click", () => switchCostume(rarityLower));
+  }
+
+  const switchWubbox = document.createElement("button");
+  switchWubbox.innerHTML = "<i>Switch Epic Wubbox</i>";
+  switchWubbox.title = "Change Mode";
+  switchWubbox.classList.add("tab-button-minor");
+  let removeWubboxButton = 0;
+
+  // Function to update stats & breeding info
+  function renderStatsAndBreeding(rarity) {
+    statsContainer.innerHTML = "";
+    const resultContainer = document.createElement("div");
+    resultContainer.classList.add("result-container");
+
+    const blackBox = document.createElement("div");
+    blackBox.classList.add("black-box");
+
+    const resultText = document.createElement("div");
+    resultText.classList.add("result-text");
+
+    const monsterStats = monsterInfo.stats[rarity] || "Unknown Currently <br><br> Please Come Back Soon!";
+    resultText.innerHTML = `<h3>${rarity.charAt(0).toUpperCase() + rarity.slice(1)} Version of ${baseQuery}!</h3><p>${monsterStats}</p>`;
+
+    // Breeding combos
+    let breedingCombinationText = "";
+    for (let combo in breedingCombinations) {
+      const results = breedingCombinations[combo];
+      if (
+        (rarity === "normal" && results.includes(baseQuery)) ||
+        (rarity === "rare" && results.includes(`Rare ${baseQuery}`)) ||
+        (rarity === "epic" && results.includes(`Epic ${baseQuery}`))
+      ) {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+    }
+
+    if (breedingCombinationText) {
+      resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
+    }
+
+    resultContainer.appendChild(blackBox);
+    resultContainer.appendChild(resultText);
+    statsContainer.appendChild(resultContainer);
+  }
+
+  // Create tabs
+  tabs.forEach(tabName => {
+    const tab = document.createElement("button");
+    tab.classList.add("tab-button");
+    tab.textContent = tabName;
+
+    tab.addEventListener("click", () => {
+      const activeRarity = tabName.toLowerCase();
+      imageContainer.dataset.currentActiveRarity = activeRarity;
+      switchCostumeButton.dataset.activeRarity = activeRarity;
+
+      // Set correct image
+      img.src = monsterInfo.image[activeRarity] || monsterInfo.image.normal;
+
+      // Enable costume button if available
+      switchCostumeButton.disabled = !hasCostume(activeRarity);
+
+      // Special Wubbox logic
+      if (activeRarity === "epic" && baseQuery === "Wubbox") {
+        removeWubboxButton = 1;
+        tabContainer.appendChild(switchWubbox);
+        if (tabContainer.contains(switchCostumeButton)) tabContainer.removeChild(switchCostumeButton);
+      } else {
+        removeWubboxButton = 0;
+        if (!tabContainer.contains(switchCostumeButton)) tabContainer.appendChild(switchCostumeButton);
+        if (tabContainer.contains(switchWubbox)) tabContainer.removeChild(switchWubbox);
+      }
+
+      renderStatsAndBreeding(activeRarity);
+      tabContentContainer.appendChild(img);
+    });
+
+    tabContainer.appendChild(tab);
+  });
+
+  // Volume button
+  const volumeButton = document.createElement("button");
+  volumeButton.classList.add("volume-button");
+  volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+  volumeButton.title = "Play Sound";
+  volumeButton.addEventListener("click", () => {
+    const monster = getMonsterData(baseQuery, defaultTab);
+    if (monster && monster.audio) {
+      new Audio(monster.audio).play().catch(err => console.error(err));
+    }
+  });
+  tabContainer.appendChild(volumeButton);
+
+  imageContainer.appendChild(tabContainer);
+  imageContainer.appendChild(tabContentContainer);
+
+  // Auto-click default tab
+  const defaultTabButton = Array.from(tabContainer.children).find(btn => btn.textContent === defaultTab);
+  if (defaultTabButton) defaultTabButton.click();
+});
+
+
+
+breedButton.addEventListener("click", () => {
+  const monster1 = firstMonsterInput.value.trim();
+  const monster2 = secondMonsterInput.value.trim();
+  const searchMonster = searchMonsterInput.value.trim();
+
+  imageContainer.innerHTML = "";
+  statsContainer.innerHTML = "";
+
+  document.getElementById("suggestions1").style.display = "none";
+  document.getElementById("suggestions2").style.display = "none";
+  document.getElementById("suggestions3").style.display = "none";
+
+  const getMonsterInfo = (name) =>
+    monsters.find((m) => m.name.toLowerCase() === name.toLowerCase());
+
+  const playMonsterSound = (name) => {
+    const actualName = name.includes("Hairionette") ? "Hairionette" : name;
+    const monster = monsterData[actualName];
+    if (monster && monster.audio) {
+      new Audio(monster.audio)
+        .play()
+        .catch((err) => console.error("Playback error:", err));
+    } else {
+      console.warn("No audio found for:", actualName);
+    }
+  };
+
+  const renderStats = (monsterInfo, monsterName, form) => {
+    const stats =
+      monsterInfo.stats?.[form] ||
+      "Unknown Currently <br><br> Please Come Back Soon!";
+
+    resultText.innerHTML = `
+    <h3>${form === "normal"
+        ? "Normal Version Of:"
+        : form.charAt(0).toUpperCase() + form.slice(1) + " Version of"
+      }<br><h3 id="search_monster_result">${monsterName}!</h3></h3>
+    <p>${stats}</p>
+  `;
+
+    console.log(monsterInfo, monsterName, form);
+
+    // --- Updated Breeding Combo Logic (supports Rare & Epic results) ---
+    let breedingCombinationText = "";
+
+    for (let combo in breedingCombinations) {
+      const results = breedingCombinations[combo];
+
+      // Normal version
+      if (results.includes(monsterName) && form === "normal") {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+
+      // Rare version
+      if (results.includes(`Rare ${monsterName}`) && form === "rare") {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+
+      // Epic version
+      if (results.includes(`Epic ${monsterName}`) && form === "epic") {
+        breedingCombinationText += `<p>${combo}</p>`;
+      }
+    }
+
+    // Display section if combos exist
+    if (breedingCombinationText) {
+      resultText.innerHTML += `
+      <h4><u>Breeding Combinations:</u></h4>
+      ${breedingCombinationText}
+    `;
+    }
+
+    // Append to containers
+    resultContainer.appendChild(blackBox);
+    resultContainer.appendChild(resultText);
+    statsContainer.appendChild(resultContainer);
+  };
+
+
+
+
+
+  const createTabButton = (label, onClick) => {
+    const btn = document.createElement("button");
+    btn.classList.add("tab-button");
+    btn.textContent = label;
+    btn.addEventListener("click", onClick);
+    return btn;
+  };
+
+  if (searchMonster) {
+    const monsterInfo = getMonsterInfo(searchMonster);
+    if (!monsterInfo) {
+      statsContainer.innerHTML =
+        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      return;
+    }
+
+    const img = document.createElement("img");
+    img.src = monsterInfo.image.normal;
+    img.onerror = () => img.src = "images/important/NoImageFound.png";
+    img.classList.add("monster-image");
+    imageContainer.appendChild(img);
+
+    const tabContainer = document.createElement("div");
+    tabContainer.classList.add("tab-container");
+
+    const tabContentContainer = document.createElement("div");
+    tabContentContainer.classList.add("tab-content-container");
+
+
+
+    ["Normal", "Rare", "Epic"].forEach((tabName) => {
+      tabContainer.appendChild(
+        createTabButton(tabName, () => {
+          tabContentContainer.innerHTML = "";
+          statsContainer.innerHTML = "";
+          const lowerTab = tabName.toLowerCase();
+
+          img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
+          tabContentContainer.appendChild(img);
+          renderStats(monsterInfo, searchMonster, lowerTab);
+        })
+      );
+    });
+
+    const volumeButton = document.createElement("button");
+    volumeButton.classList.add("volume-button");
+    volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+    volumeButton.title = "Play Sound";
+    volumeButton.addEventListener("click", () =>
+      playMonsterSound(searchMonster)
+    );
+    tabContainer.appendChild(volumeButton);
+
+    imageContainer.appendChild(tabContainer);
+    imageContainer.appendChild(tabContentContainer);
+    tabContainer.querySelector(".tab-button").click(); // Auto click Normal
+    return;
+  }
+
+  if (monster1 && monster2) {
+    const results = getResultingMonsters(monster1, monster2);
+    if (!results.length) {
+      statsContainer.innerHTML =
+        '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+      return;
+    }
+
+    const tabContainer = document.createElement("div");
+    tabContainer.classList.add("tab-container");
+    const tabContentContainer = document.createElement("div");
+    tabContentContainer.classList.add("tab-content-container");
+
+    results.forEach((name, index) => {
+      const tab = createTabButton(name, () => {
+        tabContentContainer.innerHTML = "";
+        statsContainer.innerHTML = "";
+
+        const form = name.startsWith("Epic ") ? "epic" : name.startsWith("Rare ") ? "rare" : "normal";
+        const baseName = name.replace(/^(Epic |Rare )/, "");
+        const info = monsterData[baseName];
+
+        if (info) {
+          const img = document.createElement("img");
+
+          // Pick the correct image based on the form
+          if (form === "normal") {
+            img.src = info.image.normal;
+          } else if (form === "rare") {
+            img.src = info.image.rare || info.image.normal;
+          } else if (form === "epic") {
+            img.src = info.image.epic || info.image.normal;
+          }
+
+          img.alt = `<img src="images/important/NoImageFound.png">`;
+          img.classList.add("monster-image");
+          tabContentContainer.appendChild(img);
+
+          renderStats(info, name, form);
+
+          const volumeButton = document.createElement("button");
+          volumeButton.classList.add("volume-button");
+          volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+          volumeButton.title = "Play Sound";
+          volumeButton.addEventListener("click", () => playMonsterSound(baseName));
+
+          if (!tabContainer.querySelector(".volume-button")) {
+            tabContainer.appendChild(volumeButton);
+          }
+        } else {
+          statsContainer.innerHTML =
+            '<img src="images/important/Nomonsterfound.png" id="noMonster">';
+        }
+      });
+      tabContainer.appendChild(tab);
+      if (index === 0) tab.click();
+    });
+
+
+
+    imageContainer.appendChild(tabContainer);
+    imageContainer.appendChild(tabContentContainer);
+  } else {
+    statsContainer.innerHTML =
+      '<img src="images/important/Enterrightmonster.png" id="noMonster">';
+  }
+});
+
+// Function to check breeding combinations
+//!This IS what you have been looking for! :D
+const getResultingMonsters = (monster1, monster2) => {
+  const comboKey = `${monster1} + ${monster2}`;
+  const reverseComboKey = `${monster2} + ${monster1}`;
+  return (
+    breedingCombinations[comboKey] ||
+    breedingCombinations[reverseComboKey] ||
+    []
+  );
+};
+
+const toggleSearchMonsterInput = () => {
+  if (firstMonsterInput.value.trim() || secondMonsterInput.value.trim()) {
+    searchMonsterInput.disabled = true;
+    searchMonsterInput.value = ""; // Clear the input
+  } else {
+    searchMonsterInput.disabled = false;
+  }
+};
+
+// Add event listeners to toggle the Search_Monster input
+firstMonsterInput.addEventListener("input", () => {
+  showSuggestions(firstMonsterInput, suggestionsBox1);
+  toggleSearchMonsterInput();
+});
+
+secondMonsterInput.addEventListener("input", () => {
+  showSuggestions(secondMonsterInput, suggestionsBox2);
+  toggleSearchMonsterInput();
+});
+
+// Initial toggle call
+toggleSearchMonsterInput();
+
+// Function to toggle graying out of inputs
+const toggleInputStyles = () => {
+  const isSearchActive = searchMonsterInput.value.trim() !== "";
+  firstMonsterInput.disabled = isSearchActive;
+  secondMonsterInput.disabled = isSearchActive;
+  firstMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
+  secondMonsterInput.style.backgroundColor = isSearchActive ? "#d3d3d3" : "";
+
+  const isFirstOrSecondActive =
+    firstMonsterInput.value.trim() !== "" ||
+    secondMonsterInput.value.trim() !== "";
+  searchMonsterInput.disabled = isFirstOrSecondActive;
+  searchMonsterInput.style.backgroundColor = isFirstOrSecondActive
+    ? "#d3d3d3"
+    : "";
+};
+
+// Add event listeners to toggle the inputs
+firstMonsterInput.addEventListener("input", () => {
+  showSuggestions(firstMonsterInput, suggestionsBox1);
+  toggleInputStyles();
+});
+
+secondMonsterInput.addEventListener("input", () => {
+  showSuggestions(secondMonsterInput, suggestionsBox2);
+  toggleInputStyles();
+});
+
+searchMonsterInput.addEventListener("input", () => {
+  showSuggestions(searchMonsterInput, suggestionsBox3);
+  toggleInputStyles();
+});
+
+// Initial toggle call
+toggleInputStyles();
+
+// Hide suggestions when clicking outside
+document.addEventListener("click", (event) => {
+  if (
+    !suggestionsBox1.contains(event.target) &&
+    event.target !== firstMonsterInput
+  ) {
+    suggestionsBox1.innerHTML = "";
+    suggestionsBox1.style.display = "none";
+  }
+  if (
+    !suggestionsBox2.contains(event.target) &&
+    event.target !== secondMonsterInput
+  ) {
+    suggestionsBox2.innerHTML = "";
+    suggestionsBox2.style.display = "none";
+  }
+});
+
+
+// Function to show the blur overlay and message
+function showBlur() {
+  document.getElementById("blurOverlay").style.display = "block";
+  document.getElementById("blurMessage").style.display = "block"; // Show the message
+
+  // Hide input elements and buttons
+  document.getElementById("inputContainer").classList.add("hidden"); // Hide the input container
+  const inputs = document.querySelectorAll(
+    "#inputContainer input, #inputContainer button #suggestions .suggestions, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist"); // #musicSlidePanel, #musicSlideButton
+  inputs.forEach((input) => input.classList.add("hidden")); // Hide each input/button
+
+  // Hide suggestion boxes
+  const suggestionsBox1 = document.getElementById("suggestions1");
+  const suggestionsBox2 = document.getElementById("suggestions2");
+  const suggestionsBox3 = document.getElementById("suggestions3");
+
+  suggestionsBox1.innerHTML = ""; // Clear suggestions
+  suggestionsBox1.style.display = "none"; // Hide suggestions box 1
+  suggestionsBox2.innerHTML = ""; // Clear suggestions
+  suggestionsBox2.style.display = "none"; // Hide suggestions box 2
+  suggestionsBox3.innerHTML = ""; // Clear suggestions
+  suggestionsBox3.style.display = "none"; // Hide suggestions box 3
+
+  // Hide all suggestion items (custom)
+  const suggestionItems = document.querySelectorAll(".suggestion-item");
+  suggestionItems.forEach((item) => {
+    item.style.display = "none"; // Hide each suggestion item
+  });
+
+  // Optionally, hide the autocomplete suggestions from the browser
+  inputs.forEach((input) => {
+    input.setAttribute("autocomplete", "off"); // Disable autocomplete
+  });
+
+  // Set z-index for image and stats container above fog
+  document.getElementById("imageContainer").style.zIndex = "102"; // Set z-index to 102
+  document.getElementById("statsContainer").style.zIndex = "102"; // Set z-index to 102
+}
+
+// Function to hide the blur overlay and message
+function hideBlur() {
+  document.getElementById("blurOverlay").style.display = "none";
+  document.getElementById("blurMessage").style.display = "none"; // Hide the message
+
+  // Show input elements and buttons
+  document.getElementById("inputContainer").classList.remove("hidden"); // Show the input container
+  const inputs = document.querySelectorAll(
+    "#inputContainer input, #inputContainer button #suggestions3, #slidePanel, #slideButton, #checklistMenu, #slideButtonForChecklist" //#musicSlidePanel, #musicSlideButton
+  ); // Select input fields and buttons
+  inputs.forEach((input) => {
+    input.classList.remove("hidden"); // Show each input/button
+    input.setAttribute("autocomplete", "on"); // Re-enable autocomplete
+  });
+
+  // Reset z-index for image and stats container
+  document.getElementById("imageContainer").style.zIndex = "0"; // Reset z-index to 0
+  document.getElementById("statsContainer").style.zIndex = "0"; // Reset z-index to 0
+}
+
+// Example of how you might handle finding a combination
+document.getElementById("breedButton").addEventListener("click", function () {
+  // Simulate finding a combination
+  const combinationFound = true; // Set this based on your logic
+
+  if (combinationFound) {
+    showBlur(); // Show the blur overlay
+  } else {
+    hideBlur(); // Hide if no combination is found (optional)
+  }
+
+});
+
+// Add event listener for keydown event
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+
+
+function displayMonster(monster, type) {
+  const resultsContainer = document.getElementById("resultsContainer");
+  const monsterDiv = document.createElement("div");
+  monsterDiv.className = "monster-result";
+
+  const name =
+    type === "normal"
+      ? monster.name
+      : `${type.charAt(0).toUpperCase() + type.slice(1)} ${monster.name}`;
+  monsterDiv.innerHTML = `
+    <h3>${name}</h3>
+    <img src="${monster.image.normal}" alt="<img src="image/important/NoImageFound.png">" />
+    <p>Breeding Time: ${monster.stats.normal}</p>
+  `;
+
+  // Show breeding combos for this monster and type
+  let breedingText = "";
+  for (let combo in breedingCombinations) {
+    const results = breedingCombinations[combo];
+    if (
+      (type === "normal" && results.includes(monster.name)) ||
+      (type === "rare" && results.includes(`Rare ${monster.name}`)) ||
+      (type === "epic" && results.includes(`Epic ${monster.name}`))
+    ) {
+      breedingText += `<p>${combo}</p>`;
+    }
+  }
+
+  if (breedingText) {
+    monsterDiv.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingText}`;
+  }
+
+  resultsContainer.appendChild(monsterDiv);
+}
+
+// Call hideBlur on page load to ensure it starts hidden
+hideBlur();
+
+const slideButton = document.getElementById("slideButton");
+const slidePanel = document.getElementById("slidePanel");
+
+slideButton.addEventListener("click", () => {
+  if (checklistMenu.classList.value === "open") {
+    checklistMenu.classList.value = "closed"
+    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
+  } else {
+    slidePanel.classList.toggle("open");
+  }
+  if (slideButton.innerHTML === `<i class="fas fa-arrow-right"></i>` && checklistMenu.classList.value !== "open") {
+    slideButton.innerHTML = `<i class="fas fa-arrow-left"></i>`;
+    slideButton.style.backgroundColor = `rgb(255, 109, 109, 0.7)`;
+    if (checklistMenu.classList.value === "closed") {
+      slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`;
+      slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
+      checklistMenu.classList.value = ""
+    }
+    console.log("Closed");
+  } else if (checklistMenu.classList.value !== "open") {
+    slideButton.innerHTML = `<i class="fas fa-arrow-right"></i>`;
+    slideButton.style.backgroundColor = `rgb(147, 112, 219, 0.7)`;
+    console.log("Open")
+  }
+});
+
+document
+  .getElementById("islandDropdown")
+  .addEventListener("change", function () {
+    const value = this.value;
+    const islandTitleImg = document.getElementById("islandNameImg");
+    const islandImg = document.getElementById("islandImg");
+    const islandNameChecklist = document.getElementById("islandNameChecklist");
+    // Capitalize first letter for display
+    const capitalized = value.charAt(0).toUpperCase() + value.slice(1);
+    skinCounter = 0;
+
+    // Update the name and image
+    if (value === "Plasma Islet" || value === "Mech Islet" || value === "Ethereal Workshop" || value === "oasis" || value === "haven" || capitalized === "Magical Sanctum" || capitalized === "Seasonal Shanty" || value === "nexus" || value === "paironormal") {
+      islandImg.src = `images/islands/${capitalized} Island.png`;
+      islandTitleImg.src = `images/Titles/${capitalized}.png`;
+
+      if (value === "oasis") {
+        islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
+        islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
+      } else if (value === "haven") {
+        islandImg.src = `images/islands/Fire ${capitalized} Island.png`;
+        islandTitleImg.src = `images/Titles/Fire ${capitalized}.png`;
+      } else if (value === "nexus") {
+        islandImg.src = `images/islands/Magical ${capitalized}.png`;
+        islandTitleImg.src = `images/Titles/Magical ${capitalized}.png`;
+      } else if (value === "paironormal") {
+        islandImg.src = `images/islands/Paironormal Carnival - Major.png`;
+        islandTitleImg.src = `images/Titles/Paironormal Carnival - Major.png`;
+      }
+
+      // console.log(islandTitleImg, value, capitalized)
+    } else if (value !== "Plasma Islet" && value !== "Mech Islet" && value !== "Ethereal Workshop" && capitalized !== "Oasis" && capitalized !== "Fire Haven" && capitalized !== "Magical Sanctum" && capitalized !== "Seasonal Shanty" && value !== "nexus") {
+      islandImg.src = `images/islands/${capitalized} Island.png`;
+      islandTitleImg.src = `images/Titles/${capitalized} Island.png`;
+      // console.log(islandTitleImg, value, capitalized)
+    }
+
+    hideIslandSkin();
+  });
+
+document
+  .getElementById("monsterTypeDropdown")
+  .addEventListener("change", function () {
+    const value = this.value;
+
+    const commonPanel = document.getElementById("commonSection");
+    const rarePanel = document.getElementById("rareSection");
+    const epicPanel = document.getElementById("epicSection");
+
+    // Collapse all
+    commonPanel.classList.remove("active");
+    rarePanel.classList.remove("active");
+    epicPanel.classList.remove("active");
+
+    // Expand selected + trigger its select change
+    if (value === "common") {
+      commonPanel.classList.add("active");
+      const select = commonPanel.querySelector("select");
+      if (select) select.dispatchEvent(new Event("change"));
+    } else if (value === "rare") {
+      rarePanel.classList.add("active");
+      const select = rarePanel.querySelector("select");
+      if (select) select.dispatchEvent(new Event("change"));
+    } else if (value === "epic") {
+      epicPanel.classList.add("active");
+      const select = epicPanel.querySelector("select");
+      if (select) select.dispatchEvent(new Event("change"));
+    }
+  });
+
+/** 
+ *  "": {
+     name: "",
+     image: "images/Monster_Avatars/.png",
+     diamonds: ,
+     coins: ,
+       description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch(''); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+   },
+*/
+
+const dropdown = document.getElementById("monsterTypeDropdown");
+
+function updateDropdown(islandName) {
+  const island = islandData[islandName];
+
+  const commonOpt = dropdown.querySelector('option[value="common"]');
+  const rareOpt = dropdown.querySelector('option[value="rare"]');
+  const epicOpt = dropdown.querySelector('option[value="epic"]');
+
+  // Disable options if that rarity list is empty/missing
+  commonOpt.disabled = !island?.common?.length;
+  rareOpt.disabled = !island?.rare?.length;
+  epicOpt.disabled = !island?.epic?.length;
+
+  // Pick first valid option if current one is disabled
+  if (dropdown.options[dropdown.selectedIndex].disabled) {
+    const firstEnabled = [...dropdown.options].find(opt => !opt.disabled);
+    if (firstEnabled) dropdown.value = firstEnabled.value;
+  }
+
+  // Trigger change so your panel logic updates
+  dropdown.dispatchEvent(new Event("change"));
+}
+
 
 function populateMonsterSections(islandKey) {
   const island = islandData[islandKey];
@@ -15072,10 +12768,21 @@ function showSection(rarity) {
   hideIslandSkin();
 }
 
+let universalMonster = '';
+let universalIsland = defaultSelectedIsland;
+
 document
   .getElementById("islandDropdown")
   .addEventListener("change", function () {
     let selectedIsland = this.value; // e.g., "plant", "cold"
+    universalIsland = selectedIsland;
+    skinCounter = 0;
+
+    const monsterLikeImg = document.getElementById('monsterLikeName');
+    const monsterLike1 = document.getElementById('monsterLikeImage1');
+    const monsterLike2 = document.getElementById('monsterLikeImage2');
+    const monsterLike3 = document.getElementById('monsterLikeImage3');
+
     if (selectedIsland === "oasis") {
       selectedIsland = "oasis"; // THIS IS HOW YOU ASSIGN NEW ISLANDS WITHOUT CHANGING ID!!! 
       populateMonsterSections(selectedIsland);
@@ -15102,6 +12809,11 @@ document
       populateMonsterSections(selectedIsland);
       console.log("Other Islands", selectedIsland);
     }
+    monsterLikeImg.innerHTML = `<img src="images/bm/${monsterInfo[universalMonster].likes[universalIsland][0]}.png" style="width: 100px;">`;
+    monsterLike1.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[0]}.png" style="width: 50px;">`;
+    monsterLike2.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[1]}.png" style="width: 50px;">`;
+    monsterLike3.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[2]}.png" style="width: 50px;">`;
+
     hideIslandSkin();
   });
 
@@ -15121,10 +12833,21 @@ document
     const coinImg = document.getElementById('coinImg');
     const starImg = document.getElementById('starImg');
 
+    const monsterLikeImg = document.getElementById('monsterLikeName');
+    const monsterLike1 = document.getElementById('monsterLikeImage1');
+    const monsterLike2 = document.getElementById('monsterLikeImage2');
+    const monsterLike3 = document.getElementById('monsterLikeImage3');
+
+    universalMonster = info.name.toLowerCase().replace(/\s/g, '_');
     if (info) {
       img.src = info.image;
       desc.innerHTML = info.description;
       diamonds.innerHTML = info.diamonds;
+      monsterLikeImg.innerHTML = `<img src="images/bm/${monsterInfo[universalMonster].likes[universalIsland][0]}.png" style="width: 100px;">`;
+      monsterLike1.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[0]}.png" style="width: 50px;">`;
+      monsterLike2.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[1]}.png" style="width: 50px;">`;
+      monsterLike3.innerHTML = `<img src="images/Decorations/${monsterInfo[universalMonster].ulike[2]}.png" style="width: 50px;">`;
+
 
       if (info.coins >= 0) {
         relicImg.style.display = 'none';
@@ -15249,19 +12972,12 @@ document
     }
   });
 
-function simulateMonsterSearch(monsterName) {
-  console.log(monsterName);
-  searchMonsterInput.value = monsterInfo[monsterName].name;
-  console.log(searchMonsterInput.value);
-  searchMonsterInput.dispatchEvent(new Event("input"));
-}
 
 // From here one I do believe it SHOULD only be checklist related things. 
 const islandDropdown = document.getElementById("islandDropdown");
 const prevButton = document.getElementById("prevPage");
 const nextButton = document.getElementById("nextPage");
 
-// The full list of islands (this is necessary for pagination)
 // The full list of islands (this is necessary for pagination)
 const allIslands = [
   { value: "plant", text: "Plant Island" },
@@ -15428,186 +13144,6 @@ function updateIslandDisplay() {
   }
 }
 
-let titleSkinCounter = 0;
-
-function switchIslandSkin() {
-  const islandImage = document.getElementById("islandImg");
-  let islandName = document.getElementById("islandNameImg");
-  const selectedIsland = islandDropdown.value;
-
-  // Define skin sets by island
-  const islandSkins = {
-    plant: [
-      allIslandSkins[0].src,
-      allIslandSkins[1].src,
-      allIslandSkins[2].src,
-      "images/islands/Plant Island.png"
-    ],
-    cold: [
-      allIslandSkins[3].src,
-      allIslandSkins[4].src,
-      allIslandSkins[5].src,
-      "images/islands/Cold Island.png"
-    ],
-    air: [
-      allIslandSkins[6].src,
-      allIslandSkins[7].src,
-      allIslandSkins[8].src,
-      "images/islands/Air Island.png"
-    ],
-    water: [
-      allIslandSkins[9].src,
-      allIslandSkins[10].src,
-      allIslandSkins[11].src,
-      "images/islands/Water Island.png"
-    ],
-    earth: [
-      allIslandSkins[12].src,
-      allIslandSkins[13].src,
-      allIslandSkins[14].src,
-      "images/islands/Earth Island.png"
-    ],
-    haven: [
-      allIslandSkins[15].src,
-      "images/islands/Fire Haven Island.png"
-    ],
-    oasis: [
-      allIslandSkins[16].src,
-      "images/islands/Fire Oasis Island.png"
-    ],
-    light: [
-      allIslandSkins[17].src,
-      allIslandSkins[18].src,
-      "images/islands/Light Island.png"
-    ],
-    psychic: [
-      allIslandSkins[19].src,
-      allIslandSkins[20].src,
-      "images/islands/Psychic Island.png"
-    ],
-    faerie: [
-      allIslandSkins[21].src,
-      allIslandSkins[22].src,
-      "images/islands/Faerie Island.png"
-    ],
-    bone: [
-      allIslandSkins[23].src,
-      allIslandSkins[24].src,
-      "images/islands/Bone Island.png"
-    ],
-    ethereal: [
-      allIslandSkins[25].src,
-      "images/islands/Ethereal Island.png"
-    ],
-    "magical Sanctum": [
-      allIslandSkins[26].src,
-      "images/islands/Magical Sanctum Island.png"
-    ],
-    amber: [
-      allIslandSkins[27].src,
-      "images/islands/Amber Island.png"
-    ],
-    gold: [
-      allIslandSkins[28].src,
-      "images/islands/Gold Island.png"
-    ], 
-    paironormal: [
-      allIslandSkins[29].src,
-      "images/islands/Paironormal Carnival - Major.png"
-    ]
-  };
-
-  const islandTitles = {
-    plant: [
-      allIslandSkins[0].titleSrc,
-      allIslandSkins[1].titleSrc,
-      allIslandSkins[2].titleSrc,
-      "images/Titles/Plant Island.png"
-    ],
-    cold: [
-      allIslandSkins[3].titleSrc,
-      allIslandSkins[4].titleSrc,
-      allIslandSkins[5].titleSrc,
-      "images/Titles/Cold Island.png"
-    ],
-    air: [
-      allIslandSkins[6].titleSrc,
-      allIslandSkins[7].titleSrc,
-      allIslandSkins[8].titleSrc,
-      "images/Titles/Air Island.png"
-    ],
-    water: [
-      allIslandSkins[9].titleSrc,
-      allIslandSkins[10].titleSrc,
-      allIslandSkins[11].titleSrc,
-      "images/Titles/Water Island.png"
-    ],
-    earth: [
-      allIslandSkins[12].titleSrc,
-      allIslandSkins[13].titleSrc,
-      allIslandSkins[14].titleSrc,
-      "images/Titles/Earth Island.png"
-    ],
-    haven: [
-      allIslandSkins[15].titleSrc,
-      "images/Titles/Fire Haven.png"
-    ],
-    oasis: [
-      allIslandSkins[16].titleSrc,
-      "images/Titles/Fire Oasis.png"
-    ],
-    light: [
-      allIslandSkins[17].titleSrc,
-      allIslandSkins[18].titleSrc,
-      "images/Titles/Light Island.png"
-    ],
-    psychic: [
-      allIslandSkins[19].titleSrc,
-      allIslandSkins[20].titleSrc,
-      "images/Titles/Psychic Island.png"
-    ],
-    faerie: [
-      allIslandSkins[21].titleSrc,
-      allIslandSkins[22].titleSrc,
-      "images/Titles/Faerie Island.png"
-    ],
-    bone: [
-      allIslandSkins[23].titleSrc,
-      allIslandSkins[24].titleSrc,
-      "images/Titles/Bone Island.png"
-    ],
-    ethereal: [
-      allIslandSkins[25].titleSrc,
-      "images/Titles/Ethereal Island.png"
-    ],
-    "magical Sanctum": [
-      allIslandSkins[26].titleSrc,
-      "images/Titles/Magical Sanctum.png"
-    ],
-    amber: [
-      allIslandSkins[27].titleSrc,
-      "images/Titles/Amber Island.png"
-    ],
-    gold: [
-      allIslandSkins[28].titleSrc,
-      "images/Titles/Gold Island.png"
-    ], 
-    paironormal: [
-      allIslandSkins[29].titleSrc,
-      "images/Titles/Paironormal Carnival - Major.png"
-    ]
-  }
-
-  // If the selected island has skins
-  if (islandSkins[selectedIsland]) {
-    islandImage.src = islandSkins[selectedIsland][skinCounter];
-    islandName.src = islandTitles[selectedIsland][skinCounter];
-    titleSkinCounter = (titleSkinCounter + 1) % islandTitles[selectedIsland].length;
-    skinCounter = (skinCounter + 1) % islandSkins[selectedIsland].length;
-    // console.log(islandName); 
-  }
-}
-
 function hideIslandSkin() {
   const islandButton = document.getElementById('switchIsland');
   const selectedIsland = islandDropdown.value;
@@ -15621,6 +13157,7 @@ function hideIslandSkin() {
 // Initial render
 renderIslands();
 hideIslandSkin();
+
 // ------------------ CHECKLIST -------------------
 
 const allIslandsNames = [
@@ -15784,7 +13321,7 @@ function renderChecklist() {
     // Create the monster cell with image and name
     const monsterCell = document.createElement("div");
     monsterCell.className = "cell monster";
-    monsterCell.innerHTML = `<img src="${monster.image}" alt="${monster.name}"><span>${monster.name}</span>`;
+    monsterCell.innerHTML = `<img src="${monster.image}" alt="${monster.name}"><span style="color: #fff; text-shadow: 0 0 10px #9b59b6;">${monster.name}</span>`;
     row.appendChild(monsterCell);
 
     // For each visible island, add a checkbox if the monster is available there
@@ -15982,108 +13519,137 @@ const monsterBreedingButtons = document.getElementById('monsterDescription');
 const monsterLikesName = document.getElementById('monsterNameList');
 const monsterLikeContainer = document.getElementById('monsterLikeContainer');
 const monsterSelection = document.getElementById('monsterSelection');
+const flipBtn = document.getElementById('flipChecklistBtn');
 
-function switchSearch() {
-  const input = searchMonsterInput;
-  const start = input.selectionStart;
-  const end = input.selectionEnd;
+flipBtn.addEventListener('click', () => {
+  flipped = !flipped; // toggle flip state
 
-  let value = input.value;
-  if (value.trim().length === 0) return;
+  // Flip animation
+  checklist.classList.toggle('flip-view', flipped);
+  checklistName.classList.toggle('flip-view', flipped);
+  monsterTypeDropdown.classList.toggle('flip-view', flipped);
+  commonSection.classList.toggle('flip-view', flipped);
+  rareSection.classList.toggle('flip-view', flipped);
+  epicSection.classList.toggle('flip-view', flipped);
+  monsterSelection.classList.toggle('flip-view', flipped);
+  flipBtn.classList.toggle('flip-view', flipped);
 
-  // Normalize the casing (first letters uppercase for readability)
-  let formatted = value
-    .toLowerCase()
-    .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
-
-  // Now we’ll check if any monster’s real name starts with this (case-insensitive)
-  const allMonsterNames = [
-    ...monsters.map(m => m.name),
-    ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
-    ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
-  ];
-
-  const possibleMatches = allMonsterNames.filter(name =>
-    name.toLowerCase().startsWith(formatted.toLowerCase())
-  );
-
-  // If there’s an exact or partial match, use the monster’s real capitalization pattern
-  if (possibleMatches.length > 0) {
-    // If user typed a partial, format to match what they’ve typed so far
-    const bestMatch = possibleMatches[0];
-
-    // Apply the proper casing for the part typed so far
-    const correctCasing =
-      bestMatch.slice(0, formatted.length);
-
-    formatted = correctCasing;
+  // Hide or show resource elements
+  if (flipped) {
+    diamonds.style.display = 'none';
+    coins.style.display = 'none';
+    relic.style.display = 'none';
+    starPower.style.display = 'none';
+    monsterBreedingButtons.style.display = 'none';
+    monsterLikeContainer.style.display = 'flex';
+    monsterLikesName.innerHTML = `Monster Likes`;
+  } else {
+    checklist.style.transition = 'transform 0.6s'; // ensures smooth animation
+    diamonds.style.display = 'flex';
+    coins.style.display = 'flex';
+    relic.style.display = 'flex';
+    starPower.style.display = 'flex';
+    monsterLikeContainer.style.display = 'none';
+    monsterBreedingButtons.style.display = 'block';
+    monsterLikesName.innerHTML = `Monster List:`;
   }
 
-  if (formatted !== value) {
-    input.value = formatted;
-    input.setSelectionRange(start, end);
-  }
+  // console.log('Flipped:', flipped);
+});
+
+
+function closeMenu() {
+  hideBlur(); // Hide the blur overlay
+  resetAll();
 }
 
+function simulateMonsterSearch(monsterName) {
+  // console.log(monsterName);
+  searchMonsterInput.value = monsterInfo[monsterName].name;
+  // console.log(searchMonsterInput.value);
+  searchMonsterInput.dispatchEvent(new Event("input"));
+}
+
+function searchMonsters() {
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const resultsContainer = document.getElementById("resultsContainer");
+  resultsContainer.innerHTML = "";
+
+  const matchedMonsters = monsters.filter((monster) =>
+    monster.name.toLowerCase().includes(searchTerm)
+  );
+
+  if (matchedMonsters.length === 0) {
+    resultsContainer.innerHTML = "<p>Unknown Currently <br><br> Please Come Back Soon!</p>";
+    return;
+  }
+
+  matchedMonsters.forEach((monster) => {
+    // Show as Normal
+    displayMonster(monster, "normal");
+
+    // Optionally show Rare if it has a rare image
+    if (monster.image.rare) displayMonster(monster, "rare");
+
+    // Optionally show Epic if it has an epic image
+    if (monster.image.epic) displayMonster(monster, "epic");
+  });
+}
 
 function restrictMonsterSearch() {
-  const input = searchMonsterInput.value.trim();
-  if (input.length === 0) {
+  const value = searchMonsterInput.value;
+  if (value.length === 0) {
     searchMonsterInput.style.border = "";
     return true;
   }
 
-  // Combine all monster names
-  const allMonsterNames = [
-    ...monsters.map(m => m.name),
-    ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
-    ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
-  ];
+  // Generate all monster variations (Base, Rare, Epic)
+  const allMonsterNames = monsters.flatMap(m => [
+    m.name,                // Base name
+    `Rare ${m.name}`,      // Rare version
+    `Epic ${m.name}`       // Epic version
+  ]);
 
-  // Normalize capitalization (like your switchSearch)
-  const formattedInput = input
+  const formattedInput = value
     .toLowerCase()
-    .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
+    .replace(/(^|[\s_\-'])+([a-z])/g, (m, before, letter) => before + letter.toUpperCase());
 
-  // Check if input matches the start of any valid name
   const matches = allMonsterNames.filter(name =>
     name.toLowerCase().startsWith(formattedInput.toLowerCase())
   );
 
   if (matches.length === 0) {
-    // No valid monster starts with this → reject input
+    //No possible monster starts this way → block nonsense
     searchMonsterInput.style.border = "2px solid red";
-
-    // Optional: erase last invalid character to prevent nonsense typing
-    searchMonsterInput.value = input.slice(0, -1);
+    searchMonsterInput.value = value.slice(0, -1); // remove the last invalid char
     return false;
   } else {
-    searchMonsterInput.style.border = ""; // Looks normal
+    //At least one possible match → fine
+    searchMonsterInput.style.border = "";
     return true;
   }
 }
 
+
 [firstMonsterInput, secondMonsterInput].forEach((input) => {
   input.addEventListener("input", () => {
-    // Capitalization logic (PomPom, Toe Jammer, etc.)
-    const start = input.selectionStart;
-    const end = input.selectionEnd;
+    const oldStart = input.selectionStart;
+    const oldEnd = input.selectionEnd;
 
     let value = input.value;
-    if (value.trim().length === 0) return;
+    if (!value) return;
 
-    const allMonsterNames = [
-      ...monsters.map(m => m.name),
-      ...(typeof raremonsters !== 'undefined' ? raremonsters.map(m => m.name) : []),
-      ...(typeof epicmonsters !== 'undefined' ? epicmonsters.map(m => m.name) : [])
-    ];
+    // Capitalize first letter of each word
+    let formatted = value.replace(/\b[a-z]/g, (char) => char.toUpperCase());
 
-    // Normalize basic capitalization
-    let formatted = value
-      .toLowerCase()
-      .replace(/(^|[\s_\-'])+([a-z])/g, (match, before, letter) => before + letter.toUpperCase());
+    // Try to match correct casing from monster list
+    const allMonsterNames = monsters.flatMap(m => {
+      const names = [m.name]; // Normal
+      if (m.image.rare) names.push(`Rare ${m.name}`);
+      if (m.image.epic) names.push(`Epic ${m.name}`);
+      return names;
+    });
 
-    // Match correct internal capitalization (PomPom, etc.)
     const possibleMatches = allMonsterNames.filter(name =>
       name.toLowerCase().startsWith(formatted.toLowerCase())
     );
@@ -16093,20 +13659,21 @@ function restrictMonsterSearch() {
       formatted = bestMatch.slice(0, formatted.length);
     }
 
+    // Only update input if it changed
     if (formatted !== value) {
+      const diff = formatted.length - value.length;
       input.value = formatted;
-      input.setSelectionRange(start, end);
+      const newPos = Math.max(0, oldEnd + diff);
+      input.setSelectionRange(newPos, newPos);
     }
 
-    // Restrict invalid gibberish
+    // Block invalid input
     const matches = allMonsterNames.filter(name =>
       name.toLowerCase().startsWith(formatted.toLowerCase())
     );
-
     if (matches.length === 0 && value.length > 0) {
       input.style.border = "2px solid red";
-      input.value = value.slice(0, -1); // remove invalid character
-      return;
+      input.value = value.slice(0, -1);
     } else {
       input.style.border = "";
     }
