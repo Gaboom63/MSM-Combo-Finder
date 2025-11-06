@@ -15075,6 +15075,7 @@ function showSection(rarity) {
 document
   .getElementById("islandDropdown")
   .addEventListener("change", function () {
+    let selectedIsland = this.value; // e.g., "plant", "cold"
     if (selectedIsland === "oasis") {
       selectedIsland = "oasis"; // THIS IS HOW YOU ASSIGN NEW ISLANDS WITHOUT CHANGING ID!!! 
       populateMonsterSections(selectedIsland);
