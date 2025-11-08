@@ -12085,30 +12085,55 @@ searchMonsterInput.addEventListener("input", () => {
     const resultText = document.createElement("div");
     resultText.classList.add("result-text");
 
-    const monsterStats = monsterInfo.stats[rarity] || "Unknown Currently <br><br> Please Come Back Soon!";
+    const monsterStats =
+      monsterInfo.stats[rarity] ||
+      "Unknown Currently <br><br> Please Come Back Soon!";
     resultText.innerHTML = `<h3>${rarity.charAt(0).toUpperCase() + rarity.slice(1)} Version of ${baseQuery}!</h3><p>${monsterStats}</p>`;
 
-    // Breeding combos
+    // --- Breeding combos ---
     let breedingCombinationText = "";
+
+    // Monsters that have unique Rare combos
+    const specialRareMonsters = ["Mammott", "Toe Jammer", "Noggin", "Tweedle", "Potbelly","Kayna", "Theremind", "Clackula", "Fluoress", "Floot Fly"]; // add more as needed
+
     for (let combo in breedingCombinations) {
       const results = breedingCombinations[combo];
+
+      // Normal & Epic stay the same
       if (
         (rarity === "normal" && results.includes(baseQuery)) ||
-        (rarity === "rare" && results.includes(`Rare ${baseQuery}`)) ||
         (rarity === "epic" && results.includes(`Epic ${baseQuery}`))
       ) {
         breedingCombinationText += `<p>${combo}</p>`;
+      }
+
+      // Rare monsters
+      if (rarity === "rare") {
+        if (specialRareMonsters.includes(baseQuery)) {
+          // Only show combos that explicitly make "Rare Monster"
+          if (results.includes(`Rare ${baseQuery}`)) {
+            breedingCombinationText += `<p>${combo}</p>`;
+          }
+        } else {
+          // Default: same combos as Normal
+          if (results.includes(baseQuery)) {
+            breedingCombinationText += `<p>${combo}</p>`;
+          }
+        }
       }
     }
 
     if (breedingCombinationText) {
       resultText.innerHTML += `<h4><u>Breeding Combinations:</u></h4>${breedingCombinationText}`;
+    } else {
+      resultText.innerHTML += `<p><em>No breeding combinations found.</em></p>`;
     }
 
     resultContainer.appendChild(blackBox);
     resultContainer.appendChild(resultText);
     statsContainer.appendChild(resultContainer);
   }
+
 
   // Create tabs
   tabs.forEach(tabName => {
@@ -12165,8 +12190,6 @@ searchMonsterInput.addEventListener("input", () => {
   const defaultTabButton = Array.from(tabContainer.children).find(btn => btn.textContent === defaultTab);
   if (defaultTabButton) defaultTabButton.click();
 });
-
-
 
 breedButton.addEventListener("click", () => {
   const monster1 = firstMonsterInput.value.trim();
