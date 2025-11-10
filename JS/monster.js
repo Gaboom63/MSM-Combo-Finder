@@ -12138,14 +12138,24 @@ blackBox.classList.add("black-box");
 const resultText = document.createElement("div");
 resultText.classList.add("result-text");
 
-searchMonsterInput.addEventListener("input", () => { // This is what makes automatic search work. 
-
+// New function to display results with tabs
+searchMonsterInput.addEventListener("input", () => {
   const value = searchMonsterInput.value;
 
   if (!value) return;
 
-  // Capitalize the first letter of each word (letters after spaces)
-  const formatted = value.replace(/\b[a-z]/g, (char) => char.toUpperCase());
+  // Always capitalize the first letter
+  let formatted = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+
+  // Capitalize subsequent words based on their correct capitalization (preserve lowercase where needed)
+  formatted = formatted.replace(/\b[a-z]/g, (char, index, str) => {
+    // Look ahead to determine whether the next word should start with uppercase or lowercase
+    const nextChar = str[index + 1];
+    const shouldCapitalize = nextChar && nextChar === nextChar.toUpperCase();  // Check if next word starts with uppercase
+    
+    // If the next word should be uppercase, capitalize the current letter; otherwise, keep it lowercase
+    return shouldCapitalize ? char.toUpperCase() : char;
+  });
 
   // Only update the input if it changed
   if (formatted !== value) {
@@ -12154,7 +12164,8 @@ searchMonsterInput.addEventListener("input", () => { // This is what makes autom
     searchMonsterInput.setSelectionRange(cursorPos, cursorPos);
   }
 
-  if (!restrictMonsterSearch()) return; // stops if no exact name
+  // Call restrictMonsterSearch() to check if it's a valid search term
+  if (!restrictMonsterSearch()) return; // stops if no valid monster starts with input
 
   let rawQuery = searchMonsterInput.value.trim();
   let baseQuery = rawQuery;
@@ -13895,21 +13906,27 @@ function restrictMonsterSearch() {
     `Epic ${m.name}`       // Epic version
   ]);
 
+  // Capitalize the first letter of each word but respect lowercase for words like "joob"
   const formattedInput = value
     .toLowerCase()
-    .replace(/(^|[\s_\-'])+([a-z])/g, (m, before, letter) => before + letter.toUpperCase());
+    .replace(/(^|[\s_\-'])+([a-z])/g, (m, before, letter, offset, string) => {
+      // Lookahead to preserve lowercase letter if needed
+      const nextChar = string[offset + 1];
+      const shouldCapitalize = nextChar && nextChar === nextChar.toUpperCase(); // "Joob" vs "joob"
+      return before + (shouldCapitalize ? letter.toUpperCase() : letter);
+    });
 
   const matches = allMonsterNames.filter(name =>
     name.toLowerCase().startsWith(formattedInput.toLowerCase())
   );
 
   if (matches.length === 0) {
-    //No possible monster starts this way → block nonsense
+    // No possible monster starts this way → block nonsense
     searchMonsterInput.style.border = "2px solid red";
-    searchMonsterInput.value = value.slice(0, -1); // remove the last invalid char
+    searchMonsterInput.value = value.slice(0, -1); // Remove the last invalid char
     return false;
   } else {
-    //At least one possible match → fine
+    // At least one possible match → fine
     searchMonsterInput.style.border = "";
     return true;
   }
@@ -13924,8 +13941,14 @@ function restrictMonsterSearch() {
     let value = input.value;
     if (!value) return;
 
-    // Capitalize first letter of each word
-    let formatted = value.replace(/\b[a-z]/g, (char) => char.toUpperCase());
+    // Capitalize the first letter of each word, but leave lowercase for names like "joob"
+    let formatted = value.replace(/\b[a-z]/g, (char, index, str) => {
+      const nextChar = str[index + 1];
+      const shouldCapitalize = nextChar && nextChar === nextChar.toUpperCase(); // Check for uppercase in next word
+
+      // If the next word should start with uppercase, capitalize, otherwise leave as lowercase
+      return shouldCapitalize ? char.toUpperCase() : char;
+    });
 
     // Try to match correct casing from monster list
     const allMonsterNames = monsters.flatMap(m => {
