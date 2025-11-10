@@ -23,6 +23,7 @@ body {
 }
 
 /* Title Styles */
+#slideMenuTitle, 
 #title {
     text-align: center;
     background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
