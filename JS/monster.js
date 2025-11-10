@@ -12138,24 +12138,38 @@ blackBox.classList.add("black-box");
 const resultText = document.createElement("div");
 resultText.classList.add("result-text");
 
+searchMonsterInput.addEventListener("input", () => { // This is what makes automatic search work. 
+
 // New function to display results with tabs
-searchMonsterInput.addEventListener("input", () => {
-  const value = searchMonsterInput.value;
+ const value = searchMonsterInput.value;
 
   if (!value) return;
+
+  // Create a list of exceptions where the second word should not be capitalized
+  const exceptions = ['joob'];  // Add only the second word as exceptions (e.g., "joob" but not "G joob")
 
   // Always capitalize the first letter
   let formatted = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
 
-  // Capitalize subsequent words based on their correct capitalization (preserve lowercase where needed)
-  formatted = formatted.replace(/\b[a-z]/g, (char, index, str) => {
-    // Look ahead to determine whether the next word should start with uppercase or lowercase
-    const nextChar = str[index + 1];
-    const shouldCapitalize = nextChar && nextChar === nextChar.toUpperCase();  // Check if next word starts with uppercase
-    
-    // If the next word should be uppercase, capitalize the current letter; otherwise, keep it lowercase
-    return shouldCapitalize ? char.toUpperCase() : char;
-  });
+  // Split the string into words
+  let words = formatted.split(' ');
+
+  // If there's a second word, handle it based on the exception list
+  if (words.length > 1) {
+    const secondWord = words[1].toLowerCase();  // Ensure the second word is lowercase for comparison
+
+    // Check if the second word is in the exceptions list
+    if (exceptions.includes(secondWord)) {
+      // If it's an exception, keep it lowercase
+      words[1] = secondWord;
+    } else {
+      // Otherwise, capitalize the second word
+      words[1] = secondWord.charAt(0).toUpperCase() + secondWord.slice(1);
+    }
+  }
+
+  // Join the words back into a string
+  formatted = words.join(' ');
 
   // Only update the input if it changed
   if (formatted !== value) {
