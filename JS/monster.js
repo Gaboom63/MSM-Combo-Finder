@@ -2087,10 +2087,9 @@ const monsters = [
       epic: "images/bm/Epic Candelavra.png",
     },
     stats: {
-      normal:
-        "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
+      normal:"Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: "",
+      epic: "Breeding Time: 2 day 5 hr <br><br>Enhanced Time: 1 day 15 hr 45 min",
     },
   },
   {
@@ -2232,7 +2231,7 @@ const monsters = [
     },
     stats: {
       normal: "Success: 1 day 6 hr <br><br> Failure: 10 hr",
-      rare: "",
+      rare: "Success: 1 day 11 hr <br><br> Failure: Unknown (I think 11 hr)",
       epic: "",
     },
   },
@@ -4098,7 +4097,7 @@ const breedingCombinations = {
   "Cantorell + Bridg it": ["Rare Floot Fly"],
   "Withur + Uuduk": ["Rare Clackula"],
   "Plinkajou + Denchuhs": ["Epic Clackula"],
-
+  "Repatillo + Dandidoo": ["Epic Candelavra"],
   "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Tweedle", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"]
 };
 
@@ -7080,13 +7079,14 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_buzzinga') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
     slike: ["Cave Crystal Teleporter"]
   },
-  // candelavra: {
-  //   name: "Candelavra",
-  //   image: "images/Monster_Avatars/Candelavra.png",
-  //   diamonds: 0,
-  //   relics: 500,
-  //   description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('id ('candelavra ')'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
-  // },  
+  epic_candelavra: {
+    name: "Epic Candelavra",
+    image: "images/Monster_Avatars/Candelavra - Epic.png",
+    diamonds: 1750,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_candelavra'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    slike: ["Jarhead"]
+  },
   phangler: {
     name: "Phangler",
     image: "images/Monster_Avatars/Phangler.png",
@@ -9713,6 +9713,14 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_auglur') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
     slike: ["Castanevine"]
   },
+  rare_nitebear: {
+    name: "Rare Nitebear",
+    image: "images/Monster_Avatars/Nitebear - Rare.png",
+    diamonds: 3600,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('rare_nitebear') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    slike: ["Bloofi Tree"]
+  },
   lowb: {
     name: "Lowb",
     image: "images/Monster_Avatars/Lowb.png",
@@ -10233,7 +10241,7 @@ const islandData = {
       "Epic Floogull",
       "Epic Repatillo",
       "Epic Tring",
-      // "Epic Candelavra",
+      "Epic Candelavra",
       "Epic Fire Haven Wubbox",
       "Epic Gobbleygourd",
       "Epic Buzzinga",
@@ -10983,7 +10991,7 @@ const islandData = {
       "Epic PongPing",
       "Epic Incisaur",
       "Epic Tiawa",
-      // "Epic Candelavra",
+      "Epic Candelavra",
       // "Epic Drummidary",
       // "Epic Bowhead",
       // "Epic Tuskski",
@@ -11169,6 +11177,7 @@ const islandData = {
       "Rare Arackulele",
       "Rare Bellowfish",
       "Rare Dragong",
+      "Rare Nitebear"
     ],
     epic: [
       "Epic Reebro",
