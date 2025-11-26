@@ -1191,9 +1191,9 @@ const monsters = [
       epic: "images/bm/Epic Knurv.png",
     },
     stats: {
-      normal: "Breeding Time: 32 hr, <br> <br> Enhanced Time: 24 hr <br>",
+      normal: "Breeding Time: 1 day 8 hr, <br> <br> Enhanced Time: 1 day <br>",
       rare: "Breeding Time: 1 day 16 hr, <br> <br> Enhanced Time: 1 day 6 hr <br>",
-      epic: "",
+      epic: "Breeding Time: 2 day 8 hr 10 min <br><br> Enhanced Time: 1 day 18 hr 7 min 30 sec",
     },
   },
   {
@@ -6901,7 +6901,14 @@ const monsterInfo = {
     description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_hyehehe'); })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
     slike: ["Odd-o-Mobile"]
   },
-
+  epic_knurv: {
+    name: "Epic Knurv",
+    image: "images/Monster_Avatars/Knurv - Epic.png",
+    diamonds: 1100,
+    coins: 0,
+    description: `<button id="monsterListButton" onClick="(function() { simulateMonsterSearch('epic_knurv') })();">Breeding Combo</button><button id="openChecklistButton" onClick="(function() { openChecklist(); })();">Open Checklist</button>`,
+    slike: ["Boss Monument"]
+  },
   // Now Onto all the rest of the islands after the core 5 ones. 
   candelavra: {
     name: "Candelavra",
@@ -10774,7 +10781,7 @@ const islandData = {
       // "Epic Sporerow",
       // "Epic Pinghound",
       // "Epic Wheezel",
-      // "Epic Knurv",
+      "Epic Knurv",
       // "Epic shLep"
     ]
   },
