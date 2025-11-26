@@ -3702,7 +3702,7 @@ const breedingCombinations = {
   "Scups + Pummel": ["Anglow"],
   "Thumpies + PomPom": ["Hyehehe", "Rare Hyehehe"],
   "Congle + Woolabee": ["Cherubble"],
-  "Cataliszt + G joob": ["Bleatnik", "Epic Strombonin"],
+  "Cataliszt + G joob": ["Bleatnik", "Epic Strombonin", "Epic Knurv"],
   "Cataliszt + Strombonin": ["Cranchee", "Epic Yawstrich"],
   "Cataliszt + Yawstrich": ["Sporerow", "Epic G joob", "Rare Sporerow"],
   "Cataliszt + Hyehehe": ["Wheezel", "Rare Wheezel"],
