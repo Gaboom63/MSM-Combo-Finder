@@ -4018,7 +4018,7 @@ const breedingCombinations = {
   "Cataliszt + Hyehehe": ["Epic Cherubble"],
 
   //Update V3 ~Seasonal Fix :)
-  "Kayna + Barrb": ["Buzzinga"],
+  "Reedling + Barrb": ["Buzzinga"],
   "Withur + Clackula": ["Clavavera"],
   "Shugabush + Oaktopus": ["Viveine", "Epic Mammott"],
   "Punkleton + Hoola": ["Jam Boree", "Epic Schmoochle"],
