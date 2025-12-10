@@ -3416,10 +3416,54 @@ const monsters = [
       epic: ""
     }
   },
+  {
+    name: "Bbli$zard",
+    audio: "sounds/Bbli$zard_Memory_Sample.mp3.mpeg",
+    image: {
+      normal: "images/bm/bbli$zard.png",
+      rare: "images/bm/Rare bbli$zard.png",
+      epic: "images/bm/Epic bbli$zard.png",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 11 hr <br><br> Enhanced Time: 1 day 2 hr 15 min",
+      rare: "",
+      epic: ""
+    }
+},
+{
+    name: "Erma Gurdy",
+    audio: "sounds/ERmA_gUrDy_(Major)_Memory_Sample.mp3.mpeg", 
+    image: {
+      normal: "images/bm/eRmA gUrDy (Major).png",
+      rare: "images/bm/Rare eRmA gUrDy (Major).png",
+      epic: "images/bm/Epic eRmA gUrDy (Major).png",
+    },
+    stats: {
+      normal: "Breeding Time: 1 day 21 hr <br> <br> Enhanced Time: 1 day 9 hr 45 min",
+      rare: "",
+      epic: ""
+    }
+},
+{
+    name: "Fandhul",
+    audio: "sounds/Fandhul_Memory_Sample.mp3.mpeg", 
+    image: {
+      normal: "images/bm/Fandhul.png",
+      rare: "images/bm/Rare Fandhul.png",
+      epic: "images/bm/Epic Fandhul.png",
+    },
+    stats: {
+      normal: "Not available. Please Come Back Later!",
+      rare: "",
+      epic: ""
+    }
+},
 ];
+
 /*
 {
     name: "",
+    audio: "sounds/", 
     image: {
       normal: "images/bm/",
       rare: "",
@@ -4098,7 +4142,11 @@ const breedingCombinations = {
   "Withur + Uuduk": ["Rare Clackula"],
   "Plinkajou + Denchuhs": ["Epic Clackula"],
   "Repatillo + Dandidoo": ["Epic Candelavra"],
-  "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Tweedle", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"]
+  "Buy From Shop": ["Toe Jammer", "Mammott", "Potbelly", "Tweedle", "Kayna", "Noggin", "Clackula", "Floot Fly", "Fluoress", "Theremind"],
+  // 5.2 Update! 
+  "Thumpies + Congle": ["Bbli$zard"],
+  "Hairionette + Shhimmer": ["Erma Gurdy"],
+  "Get From Dish-Harmonizer": ["Fandhul"]
 };
 
 const monsterCostumes = [
@@ -12218,10 +12266,18 @@ searchMonsterInput.addEventListener("input", () => { // This is what makes autom
   paironormalSwitch.innerHTML = 'Switch Form';
   paironormalSwitch.title = "Switch Form";
   let switchClick = 0;
-  const paironormals = ['Shhimmer', "Hairionette", "Owlesque", "Arcorina", "Dakktyl", "Jerm", "Scallyrags"];
+  const paironormals = ['Shhimmer', "Hairionette", "Owlesque", "Arcorina", "Dakktyl", "Jerm", "Scallyrags", "Erma Gurdy"];
 
   paironormalSwitch.addEventListener("click", () => {
-
+    if(searchMonsterInput.innerHTML === `Erma Gurdy`) {
+     if (switchClick === 0) {
+      img.src = `images/bm/eRmA gUrDy (Minor).png`;
+      switchClick = 1;
+    } else if (switchClick === 1) {
+      img.src = `images/bm/eRmA gUrDy (Major).png`;
+      switchClick = 0;
+    } 
+    } else {
     if (switchClick === 0) {
       img.src = `images/bm/${searchMonsterInput.value} (Minor).png`;
       switchClick = 1;
@@ -12229,6 +12285,8 @@ searchMonsterInput.addEventListener("input", () => { // This is what makes autom
       img.src = `images/bm/${searchMonsterInput.value} (Major).png`;
       switchClick = 0;
     }
+    }
+    
   });
 
   for (let i = 0; i <= paironormals.length; i++) {
@@ -12277,6 +12335,16 @@ breedButton.addEventListener("click", () => {
   };
 
   const renderStats = (monsterInfo, monsterName, form) => {
+    statsContainer.innerHTML = "";
+    const resultContainer = document.createElement("div");
+    resultContainer.classList.add("result-container");
+
+    const blackBox = document.createElement("div");
+    blackBox.classList.add("black-box");
+
+    const resultText = document.createElement("div");
+    resultText.classList.add("result-text");
+
     const stats =
       monsterInfo.stats?.[form] ||
       "Unknown Currently <br><br> Please Come Back Soon!";
@@ -12327,6 +12395,7 @@ breedButton.addEventListener("click", () => {
     statsContainer.appendChild(resultContainer);
   };
 
+
   const createTabButton = (label, onClick) => {
     const btn = document.createElement("button");
     btn.classList.add("tab-button");
@@ -12335,6 +12404,7 @@ breedButton.addEventListener("click", () => {
     return btn;
   };
 
+  // --- Start Single Monster Search Branch ---
   if (searchMonster) {
     const monsterInfo = getMonsterInfo(searchMonster);
     if (!monsterInfo) {
@@ -12355,7 +12425,9 @@ breedButton.addEventListener("click", () => {
     const tabContentContainer = document.createElement("div");
     tabContentContainer.classList.add("tab-content-container");
 
-
+    // Definition for paironormal check (used in the tab clicks)
+    const paironormals = ['Shhimmer', "Hairionette", "Owlesque", "Arcorina", "Dakktyl", "Jerm", "Scallyrags", "Erma Gurdy"];
+    let switchClick = 0; // State variable for the switch button
 
     ["Normal", "Rare", "Epic"].forEach((tabName) => {
       tabContainer.appendChild(
@@ -12363,10 +12435,46 @@ breedButton.addEventListener("click", () => {
           tabContentContainer.innerHTML = "";
           statsContainer.innerHTML = "";
           const lowerTab = tabName.toLowerCase();
-
+          
+          // Clear any existing minor buttons (like paironormalSwitch)
+          tabContainer.querySelectorAll(".tab-button-minor").forEach(btn => btn.remove());
+          
           img.src = monsterInfo.image[lowerTab] || monsterInfo.image.normal;
           tabContentContainer.appendChild(img);
           renderStats(monsterInfo, searchMonster, lowerTab);
+          
+          // --- NEW: Add Paironormal Switch Logic ---
+          if (paironormals.includes(searchMonster)) {
+              const paironormalSwitch = document.createElement("button");
+              paironormalSwitch.classList.add("tab-button-minor");
+              paironormalSwitch.innerHTML = 'Switch Form';
+              paironormalSwitch.title = "Switch Form";
+              
+              switchClick = 0; // Reset state on tab switch
+
+              paironormalSwitch.addEventListener("click", () => {
+                  if (searchMonster === `Erma Gurdy`) {
+                      if (switchClick === 0) {
+                          img.src = `images/bm/eRmA gUrDy (Minor).png`;
+                          switchClick = 1;
+                      } else {
+                          img.src = `images/bm/eRmA gUrDy (Major).png`;
+                          switchClick = 0;
+                      }
+                  } else {
+                      if (switchClick === 0) {
+                          img.src = `images/bm/${searchMonster} (Minor).png`;
+                          switchClick = 1;
+                      } else {
+                          img.src = `images/bm/${searchMonster} (Major).png`;
+                          switchClick = 0;
+                      }
+                  }
+              });
+              
+              tabContainer.appendChild(paironormalSwitch);
+          }
+          // --- END NEW LOGIC ---
         })
       );
     });
@@ -12383,9 +12491,12 @@ breedButton.addEventListener("click", () => {
     imageContainer.appendChild(tabContainer);
     imageContainer.appendChild(tabContentContainer);
     tabContainer.querySelector(".tab-button").click(); // Auto click Normal
-    return;
+    return; // EXIT POINT FOR SINGLE MONSTER SEARCH
   }
+  // --- End Single Monster Search Branch ---
 
+
+  // --- Start Breeding Combo Search Branch ---
   if (monster1 && monster2) {
     const results = getResultingMonsters(monster1, monster2);
     if (!results.length) {
@@ -12399,16 +12510,26 @@ breedButton.addEventListener("click", () => {
     const tabContentContainer = document.createElement("div");
     tabContentContainer.classList.add("tab-content-container");
 
+    const paironormals = ['Shhimmer', "Hairionette", "Owlesque", "Arcorina", "Dakktyl", "Jerm", "Scallyrags", "Erma Gurdy"];
+    let switchClick = 0; // State variable for the switch button
+
     results.forEach((name, index) => {
       const tab = createTabButton(name, () => {
+        // --- START TAB CLICK ---
+
         tabContentContainer.innerHTML = "";
         statsContainer.innerHTML = "";
+        
+        // 1. CLEAR existing minor buttons and volume button
+        tabContainer.querySelectorAll(".tab-button-minor, .volume-button").forEach(btn => btn.remove());
+
 
         const form = name.startsWith("Epic ") ? "epic" : name.startsWith("Rare ") ? "rare" : "normal";
-        const baseName = name.replace(/^(Epic |Rare )/, "");
+        const baseName = name.replace(/^(Epic |Rare )/, ""); // The base name, e.g., "Ghazt"
         const info = monsterData[baseName];
 
         if (info) {
+          // IMPORTANT: Create the image here so the button click can reference it
           const img = document.createElement("img");
 
           // Pick the correct image based on the form
@@ -12426,49 +12547,66 @@ breedButton.addEventListener("click", () => {
 
           renderStats(info, name, form);
 
+          // 2. CREATE the Volume Button
           const volumeButton = document.createElement("button");
           volumeButton.classList.add("volume-button");
           volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
           volumeButton.title = "Play Sound";
           volumeButton.addEventListener("click", () => playMonsterSound(baseName));
+          
+          
+          // 3. CHECK and ADD Paironormal Switch or just the Volume Button
+          if (paironormals.includes(baseName)) {
+              const paironormalSwitch = document.createElement("button");
+              paironormalSwitch.classList.add("tab-button-minor");
+              paironormalSwitch.innerHTML = 'Switch Form';
+              paironormalSwitch.title = "Switch Form";
+              
+              switchClick = 0; // Reset state on tab switch
 
-          if (!tabContainer.querySelector(".volume-button")) {
-            tabContainer.appendChild(volumeButton);
-          }
-
-          const paironormalSwitch = document.createElement("button");
-          paironormalSwitch.classList.add("tab-button-minor");
-          paironormalSwitch.innerHTML = 'Switch Form';
-          paironormalSwitch.title = "Switch Form";
-          let switchClick = 0;
-          const paironormals = ['Shhimmer', "Hairionette", "Owlesque", "Arcorina", "Dakktyl", "Jerm", "Scallyrags"];
-
-          paironormalSwitch.addEventListener("click", () => {
-
-            if (switchClick === 0) {
-              img.src = `images/bm/${name} (Minor).png`;
-              switchClick = 1;
-            } else if (switchClick === 1) {
-              img.src = `images/bm/${name} (Major).png`;
-              switchClick = 0;
-            }
-          });
-
-          for (let i = 0; i <= paironormals.length; i++) {
-            if (paironormals[i] === name) {
+              paironormalSwitch.addEventListener("click", () => {
+                  if (baseName === `Erma Gurdy`) {
+                      if (switchClick === 0) {
+                          img.src = `images/bm/eRmA gUrDy (Minor).png`;
+                          switchClick = 1;
+                      } else {
+                          img.src = `images/bm/eRmA gUrDy (Major).png`;
+                          switchClick = 0;
+                      }
+                  } else {
+                      if (switchClick === 0) {
+                          img.src = `images/bm/${baseName} (Minor).png`;
+                          switchClick = 1;
+                      } else {
+                          img.src = `images/bm/${baseName} (Major).png`;
+                          switchClick = 0;
+                      }
+                  }
+              });
+              
+              // Append Switch then Volume
               tabContainer.appendChild(paironormalSwitch);
-            }
+              tabContainer.appendChild(volumeButton); 
+              
+          } else {
+              // Append Volume Button for non-Paironormal monsters
+              tabContainer.appendChild(volumeButton);
           }
+
+
         } else {
           statsContainer.innerHTML =
             '<img src="images/important/Nomonsterfound.png" id="noMonster">';
         }
+        // --- END TAB CLICK ---
       });
+
       tabContainer.appendChild(tab);
       if (index === 0) tab.click();
     });
-
-
+    
+    // Everything below here from the original code was redundant/incorrectly placed
+    // and has been removed for the breeding combo path.
 
     imageContainer.appendChild(tabContainer);
     imageContainer.appendChild(tabContentContainer);
