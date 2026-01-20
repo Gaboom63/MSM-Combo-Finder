@@ -2119,7 +2119,7 @@ const monsters = [
       normal:
         "Breeding Time: 3 days 8 hr <br><br>Enhanced Time: 2 days 12 hr <br><br>Buy From Shop: 500 Relics ",
       rare: "15,000 Starpower <br><br>Breeding Time: 3 days, 23 hr 30 mins <br><br> Enchanced time: 2 days 23 hr 37 min 30 sec",
-      epic: "",
+      epic: "Breeding Time: 2 day 3 hr <br><br> Enhanced Time: 1 day 14 hr 15 min",
     },
   },
   {
@@ -4146,7 +4146,8 @@ const breedingCombinations = {
   // 5.2 Update! 
   "Thumpies + Congle": ["Bbli$zard"],
   "Hairionette + Shhimmer": ["Erma Gurdy"],
-  "Get From Dish-Harmonizer": ["Fandhul"]
+  "Get From Dish-Harmonizer": ["Fandhul"],
+  "Gloptic + Poppette": ["Epic Bowhead"]
 };
 
 const monsterCostumes = [
