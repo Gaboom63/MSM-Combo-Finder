@@ -427,33 +427,33 @@ setupAutocomplete(secondInput, suggestions2);
 
 
 (function loadMSMAPI() {
-    const primary = "https://msm-api.pages.dev/dist/msm.js";
-    const fallback = "https://raw.githubusercontent.com/Gaboom63/MSM-API/main/dist/msm.js";
+    const PRIMARY_API = "https://msm-api.pages.dev/dist/msm.js";
+    const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
 
-    function inject(src) {
+    function loadScript(src) {
         return new Promise((resolve, reject) => {
-            const s = document.createElement("script");
-            s.src = src;
-            s.defer = true;
-            s.onload = resolve;
-            s.onerror = reject;
-            document.head.appendChild(s);
+            const script = document.createElement("script");
+            script.src = src;
+            script.defer = true;
+            script.onload = () => resolve(src);
+            script.onerror = () => reject(src);
+            document.head.appendChild(script);
         });
     }
 
-    inject(primary)
-        .then(() => {
-            console.log("MSM API loaded from primary source");
+    loadScript(PRIMARY_API)
+        .then(src => {
+            console.log("MSM API loaded:", src);
         })
         .catch(() => {
-            console.warn("Primary API failed, loading from GitHub fallback...");
-            return inject(fallback);
+            console.warn("Primary failed, loading CDN fallback...");
+            return loadScript(FALLBACK_API);
         })
-        .then(() => {
-            console.log("MSM API ready");
+        .then(src => {
+            console.log("MSM API ready:", src);
         })
         .catch(() => {
-            console.error("Both API sources failed to load");
-            alert("Failed to load MSM API. Please check your connection.");
+            console.error("All MSM API sources failed");
+            alert("Failed to load MSM API. Network may be blocking scripts.");
         });
 })();
