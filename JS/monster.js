@@ -424,3 +424,36 @@ function selectSuggestion(name, container, inputField) {
 setupAutocomplete(searchInput, suggestionsContainer);
 setupAutocomplete(firstInput, suggestions1);
 setupAutocomplete(secondInput, suggestions2);
+
+
+(function loadMSMAPI() {
+    const primary = "https://msm-api.pages.dev/dist/msm.js";
+    const fallback = "https://raw.githubusercontent.com/Gaboom63/MSM-API/main/dist/msm.js";
+
+    function inject(src) {
+        return new Promise((resolve, reject) => {
+            const s = document.createElement("script");
+            s.src = src;
+            s.defer = true;
+            s.onload = resolve;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+    }
+
+    inject(primary)
+        .then(() => {
+            console.log("MSM API loaded from primary source");
+        })
+        .catch(() => {
+            console.warn("Primary API failed, loading from GitHub fallback...");
+            return inject(fallback);
+        })
+        .then(() => {
+            console.log("MSM API ready");
+        })
+        .catch(() => {
+            console.error("Both API sources failed to load");
+            alert("Failed to load MSM API. Please check your connection.");
+        });
+})();
