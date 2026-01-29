@@ -23,7 +23,7 @@ body {
 }
 
 /* Title Styles */
-#slideMenuTitle, 
+#slideMenuTitle,
 #title {
     text-align: center;
     background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
@@ -56,7 +56,8 @@ body {
     box-shadow: 0 0 10px rgba(255, 109, 109, 0.5);
     outline: none;
 }
-
+#First_Monster:disabled,
+#Second_Monster:disabled,
 #Search_Monster:disabled,
 input:disabled {
     background-color: #d3d3d3;
@@ -96,14 +97,18 @@ input:disabled {
 }
 
 .monster-image {
+    position: fixed;
     width: 300px;
     height: auto;
-    margin-right: 10px;
-    position: left;
     opacity: 0;
     transform: translateY(100px);
     animation: slide-up 0.5s forwards;
+    top: 140px;
+    left: 200px;
+    /* instead of right */
+    display: none;
 }
+
 
 /* Result Text Styles */
 .result-container {
@@ -121,7 +126,7 @@ input:disabled {
     text-align: center;
 }
 
-.black-box {
+#black-box {
     position: absolute;
     top: 0;
     left: 0;
@@ -176,6 +181,7 @@ input:disabled {
     box-sizing: border-box;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .costume-button:hover,
 .tab-button:hover,
 .tab-button-minor:hover {
@@ -1463,4 +1469,230 @@ label {
     /* instead of 70vh */
     left: 50px;
     /* instead of 5vw */
+}
+
+#common {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 150px;
+    display: none;
+}
+
+#rare {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 260px;
+    display: none;
+}
+
+#epic {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 370px;
+    display: none;
+}
+
+#volume-button {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 480px;
+    display: none;
+}
+
+#statsBox {
+    position: fixed;
+    width: 280px;
+    height: 373px;
+    right: 200px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
+    display: none;
+}
+
+#noMonsterImage {
+    position: absolute;
+    width: 614px;
+    height: 508px;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%);
+    display: none;
+    opacity: 0;
+    /* Starts completely transparent */
+    transform: translateY(20px);
+    /* Starts 20 pixels below its final position */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Applies the animation over 1 second */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* At the start of the animation (0%) */
+        transform: translateY(20px);
+        /* Positioned 20px down */
+    }
+
+    100% {
+        opacity: 1;
+        /* At the end of the animation (100%) */
+        transform: translateY(0);
+        /* Returns to its original vertical position */
+    }
+}
+
+
+/* Suggestion Box */
+.suggestions {
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute; /* critical for floating */
+    background: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it sits on top of the blur/images */
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    margin-top: 100px;
+    margin-left: 17px;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+    color: #b60606;
+}
+
+/* Suggestion Box - Generic Styles */
+.suggestions {
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    background: white;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 200px; /* Matches input width */
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    
+    /* Center the box horizontally to match the inputs */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 115px;
+}
+
+/* Specific Positioning for the Search Box (Input #3) */
+/* This manually forces it under the 3rd input if JS positioning fails */
+#suggestions3 {
+    top: 205px; /* Height of previous inputs + margins */
+}
+
+/* Specific Positioning for Breeding Input 1 (Optional adjustment) */
+#suggestions1 {
+    top: 55px;
+}
+
+/* Specific Positioning for Breeding Input 2 (Optional adjustment) */
+#suggestions2 {
+    top: 130px;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Keep text readable */
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+    color: #b60606;
+}
+
+/* --- Loading Spinner --- */
+.spinner {
+    display: none; /* Hidden by default */
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: rgb(255, 109, 109); /* Red top to match theme */
+    animation: spin 1s ease-in-out infinite;
+    
+    /* Center it in the image container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 105;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* --- Slide Up Fade Animation --- */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in place */
+    }
+}
+
+/* The class we will add with JS */
+.animate-enter {
+    animation: slideUpFade 0.5s ease-out forwards;
+}
+
+/* Ensure image is hidden while loading */
+#monsterImage {
+    opacity: 0; 
+    transition: opacity 0.1s;
+}
+
+/* Add this to your Button section */
+#majorMinorButton {
+    position: absolute;
+    width: 120px; /* Slightly wider for text */
+    height: 50px;
+    left: 20px;
+    display: none;
+    z-index: 120;
+}
+
+/* --- Active Tab Animation --- */
+.active-tab {
+    background-color: darkblue !important; /* Darker to show selection */
+    color: white !important;
+    transform: scale(1.15); /* Pop out effect */
+    border-color: white !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) !important;
+    z-index: 130 !important; /* Ensure it sits above other buttons */
+    
+    /* Bouncy transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+/* Ensure inactive tabs fade back smoothly */
+#common, #rare, #epic {
+    transition: all 0.3s ease;
 }
