@@ -1696,3 +1696,20 @@ label {
 #common, #rare, #epic {
     transition: all 0.3s ease;
 }
+
+/* Update your existing .tabs-container class */
+.tabs-container {
+    /* 1. Layout */
+    display: flex;
+    justify-content: center; /* This forces the buttons to the center of the container */
+    align-items: center;
+    gap: 10px; /* Spacing between buttons */
+
+    /* 2. Positioning (Critical Fix) */
+    position: fixed; /* Must match .monster-image position type */
+    top: 90px;       /* Sits slightly above the image (Image is at 140px) */
+    left: 200px;     /* EXACTLY match the image's left position */
+    width: 300px;    /* EXACTLY match the image's width */
+    
+    z-index: 150;    /* Ensure buttons sit above the image/overlays */
+}

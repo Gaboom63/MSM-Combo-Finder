@@ -17,6 +17,7 @@ const suggestions1 = document.getElementById('suggestions1');
 const suggestions2 = document.getElementById('suggestions2');
 const loadingSpinner = document.getElementById('loadingSpinner'); 
 const majorMinorButton = document.getElementById('majorMinorButton'); 
+const tabsContainer = document.getElementById('tabsContainer');
 
 let currentRarity = "";
 let monsterRegistry = []; 
@@ -55,30 +56,26 @@ buildMonsterRegistry();
 
 // --- 2. CORE FUNCTIONS ---
 
-// NEW: Helper for Display Text ONLY
 function toDisplayCase(str) {
     if (!str) return "";
     return str.toLowerCase().replace(/(?:^|[\s\-\(\)])[a-z]/g, (letter) => letter.toUpperCase());
 }
 
-// Logic Name Normalizer
 function normalizeName(name) {
     if (!name) return "";
     return name.replace(/^(common|rare|epic|legendary)\s+/i, "").trim();
 }
 
-// --- TAB HIGHLIGHT LOGIC ---
 function updateActiveTab() {
-    // 1. Remove active class from all tabs
-    [commonButton, rareButton, epicButton].forEach(btn => btn.classList.remove('active-tab'));
-
-    // 2. Add to the current one
-    if (currentRarity === "Common") commonButton.classList.add('active-tab');
-    else if (currentRarity === "Rare") rareButton.classList.add('active-tab');
-    else if (currentRarity === "Epic") epicButton.classList.add('active-tab');
+    // Only update standard buttons if tabs are NOT in use
+    if (tabsContainer.children.length === 0) {
+        [commonButton, rareButton, epicButton].forEach(btn => btn.classList.remove('active-tab'));
+        if (currentRarity === "Common") commonButton.classList.add('active-tab');
+        else if (currentRarity === "Rare") rareButton.classList.add('active-tab');
+        else if (currentRarity === "Epic") epicButton.classList.add('active-tab');
+    }
 }
 
-// Animation Logic
 function loadMonsterImage(name) {
     if (!name) return;
     
@@ -100,17 +97,33 @@ function loadMonsterImage(name) {
     }
 }
 
-function showMonsterUI() {
+function showMonsterUI(isBreedingResult = false) {
     monsterImage.style.display = 'revert';
     blurMessage.style.display = 'revert';
     blurOverlay.style.display = 'revert';
-    commonButton.style.display = 'revert';
-    rareButton.style.display = 'revert';
-    epicButton.style.display = 'revert';
     statBox.style.display = 'revert';
     volumeButton.style.display = 'revert'; 
     inputContainer.style.display = 'none';
     noMonsterImage.style.display = 'none';
+
+    // Toggle Buttons based on mode
+    if (isBreedingResult) {
+        // Hide standard rarity buttons
+        commonButton.style.display = 'none';
+        rareButton.style.display = 'none';
+        epicButton.style.display = 'none';
+        // Show Tabs
+        tabsContainer.style.display = 'flex';
+        tabsContainer.style.justifyContent = 'center'; // Center the tabs
+        tabsContainer.style.gap = '10px'; // Add some spacing
+    } else {
+        // Show standard rarity buttons
+        commonButton.style.display = 'revert';
+        rareButton.style.display = 'revert';
+        epicButton.style.display = 'revert';
+        // Hide Tabs
+        tabsContainer.style.display = 'none';
+    }
 }
 
 document.addEventListener('keydown', e => {
@@ -123,10 +136,15 @@ function reset() {
     blurMessage.style.display = 'none';
     blurOverlay.style.display = 'none';
     
-    // Hide buttons
+    // Clear dynamic tabs
+    if(tabsContainer) {
+        tabsContainer.innerHTML = '';
+        tabsContainer.style.display = 'none';
+    }
+
     [commonButton, rareButton, epicButton, statBox, noMonsterImage, volumeButton, majorMinorButton].forEach(el => {
         if(el) el.style.display = 'none';
-        el.classList.remove('active-tab'); // Clean up tabs
+        el.classList.remove('active-tab'); 
     });
 
     if(loadingSpinner) loadingSpinner.style.display = 'none';
@@ -145,6 +163,7 @@ function reset() {
 // --- 3. EVENT LISTENERS ---
 
 breedingButton.addEventListener("click", async () => {
+    // Priority 1: Search Box (Standard Mode)
     if (!searchInput.disabled && searchInput.value.trim() !== "") {
         const raw = searchInput.value.trim();
         
@@ -155,13 +174,17 @@ breedingButton.addEventListener("click", async () => {
         const baseName = normalizeName(raw);
         monsterImage.setAttribute('data-name', baseName);
 
-        showMonsterUI();
-        updateActiveTab(); // Highlight tab
+        // Clear tabs so standard UI shows
+        tabsContainer.innerHTML = '';
+        showMonsterUI(false); 
+        
+        updateActiveTab(); 
         loadMonsterImage(raw); 
         await loadStats(raw);
         return;
     }
 
+    // Priority 2: Breeding Inputs (Combo Mode)
     if (!firstInput.disabled && firstInput.value && secondInput.value) {
         await comboFinder();
     }
@@ -173,7 +196,7 @@ commonButton.addEventListener("click", () => {
 
     searchInput.value = base;
     currentRarity = "Common";
-    updateActiveTab(); // Highlight tab
+    updateActiveTab(); 
     loadMonsterImage(base); 
     loadStats(base);
 });
@@ -185,7 +208,7 @@ rareButton.addEventListener("click", () => {
     const name = `Rare ${base}`;
     searchInput.value = name;
     currentRarity = "Rare";
-    updateActiveTab(); // Highlight tab
+    updateActiveTab(); 
     loadMonsterImage(name); 
     loadStats(name);
 });
@@ -197,7 +220,7 @@ epicButton.addEventListener("click", () => {
     const name = `Epic ${base}`;
     searchInput.value = name;
     currentRarity = "Epic";
-    updateActiveTab(); // Highlight tab
+    updateActiveTab(); 
     loadMonsterImage(name); 
     loadStats(name);
 });
@@ -220,6 +243,85 @@ majorMinorButton.addEventListener("click", () => {
         loadStats(newName);
     }
 });
+
+// --- UPDATED: Combo Finder Logic ---
+async function comboFinder() {
+    const combo = `${firstInput.value} + ${secondInput.value}`;
+    const result = await MSM.twoMonsterCombo(combo);
+
+    // 1. Handle Errors
+    if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
+        showMonsterUI(false); // Default UI for error
+        showNoMonsterError();
+        return;
+    }
+
+    // 2. Clear old tabs
+    tabsContainer.innerHTML = '';
+
+    // 3. Logic: If > 1 result, use Tabs Mode
+    if (result.length > 1) {
+        
+        // --- NEW: SORT BY LENGTH (Longest Name First) ---
+        // This puts the "biggest" buttons on the left
+        result.sort((a, b) => b.length - a.length); 
+
+        result.forEach((monsterName, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'tab-button'; 
+            btn.textContent = monsterName;
+            
+            btn.addEventListener('click', () => {
+                // Handle Active State
+                Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
+                btn.classList.add('active-tab');
+                loadFromTab(monsterName);
+            });
+
+            // Auto-select the first tab (which is now the longest one)
+            if (index === 0) btn.classList.add('active-tab');
+            tabsContainer.appendChild(btn);
+        });
+
+        // ACTIVATE TABS UI (Hides Common/Rare/Epic)
+        showMonsterUI(true);
+        
+        // Load the first result (the longest one)
+        loadFromTab(result[0]);
+
+    } else {
+        // Single result: Use standard UI
+        const name = result[0];
+        
+        if (/^rare/i.test(name)) currentRarity = "Rare";
+        else if (/^epic/i.test(name)) currentRarity = "Epic";
+        else currentRarity = "Common";
+        
+        monsterImage.setAttribute('data-name', normalizeName(name));
+        showMonsterUI(false); // Standard UI
+        updateActiveTab();
+        loadMonsterImage(name);
+        loadStats(name);
+    }
+}
+
+// Helper to switch monster from the dynamic tabs
+function loadFromTab(monsterName) {
+    const cleanName = monsterName.trim();
+    searchInput.value = cleanName;
+    
+    // Set internal state, but buttons are hidden so visual updateActiveTab won't show much
+    if (/^rare/i.test(cleanName)) currentRarity = "Rare";
+    else if (/^epic/i.test(cleanName)) currentRarity = "Epic";
+    else currentRarity = "Common";
+
+    monsterImage.setAttribute('data-name', normalizeName(cleanName));
+
+    loadMonsterImage(cleanName);
+    loadStats(cleanName);
+}
+
+// --- End of Update ---
 
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
@@ -253,6 +355,9 @@ async function loadStats(forceName) {
 
         const displayName = toDisplayCase(baseName);
         const nameEl = document.getElementById('name');
+        
+        // Logic check: if we are in "Tabs Mode", currentRarity might be derived from the specific tab name
+        // We display whatever the current loaded monster is.
         nameEl.innerHTML = `${currentRarity || "Common"} Version Of:<br>${displayName}!`;
 
         if (times.breedingTime === "Unknown") {
@@ -307,37 +412,17 @@ function showNoMonsterError() {
     monsterImage.style.display = 'none';
     if(loadingSpinner) loadingSpinner.style.display = 'none';
     
+    if(tabsContainer) {
+        tabsContainer.innerHTML = '';
+        tabsContainer.style.display = 'none';
+    }
+
     [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton].forEach(el => {
         if(el) el.style.display = 'none';
     });
     
     noMonsterImage.style.display = 'revert';
     noMonsterImage.src = `images/important/Nomonsterfound.png`;
-}
-
-async function comboFinder() {
-    const combo = `${firstInput.value} + ${secondInput.value}`;
-    const result = await MSM.twoMonsterCombo(combo);
-
-    if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI();
-        showNoMonsterError();
-        return;
-    }
-
-    const monsterName = result[0].trim();
-    
-    searchInput.value = monsterName;
-    monsterImage.setAttribute('data-name', normalizeName(monsterName));
-
-    currentRarity = "Common"; 
-    if(monsterName.toLowerCase().startsWith("rare")) currentRarity = "Rare";
-    if(monsterName.toLowerCase().startsWith("epic")) currentRarity = "Epic";
-
-    showMonsterUI(); 
-    updateActiveTab(); // Highlight tab
-    loadMonsterImage(monsterName); 
-    loadStats(monsterName);
 }
 
 async function playSound() {
@@ -414,8 +499,11 @@ function selectSuggestion(name, container, inputField) {
 
         monsterImage.setAttribute('data-name', normalizeName(name));
 
-        showMonsterUI();
-        updateActiveTab(); // Highlight tab
+        // Ensure tabs are gone for search
+        tabsContainer.innerHTML = '';
+        showMonsterUI(false); 
+
+        updateActiveTab(); 
         loadMonsterImage(name); 
         loadStats(name);
     }
