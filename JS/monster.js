@@ -56,8 +56,29 @@ buildMonsterRegistry();
 
 // --- 2. CORE FUNCTIONS ---
 
+// NEW: Robust Lookup Function
+// This finds the correct key in MSM regardless of how you typed it.
+function findTrueName(input) {
+    if (!input) return null;
+    const cleanInput = input.trim().toLowerCase();
+    
+    // 1. Search MSM object keys directly
+    if (typeof MSM !== 'undefined') {
+        const trueKey = Object.keys(MSM).find(key => key.toLowerCase() === cleanInput);
+        if (trueKey) return trueKey;
+    }
+
+    // 2. Fallback to Registry
+    const registryKey = monsterRegistry.find(key => key.toLowerCase() === cleanInput);
+    if (registryKey) return registryKey;
+
+    // 3. Last Resort: Return input as-is (might fail, but better than nothing)
+    return input.trim();
+}
+
 function toDisplayCase(str) {
     if (!str) return "";
+    // Only used for UI labels, not for logic/searching
     return str.toLowerCase().replace(/(?:^|[\s\-\(\)])[a-z]/g, (letter) => letter.toUpperCase());
 }
 
@@ -67,7 +88,6 @@ function normalizeName(name) {
 }
 
 function updateActiveTab() {
-    // Only update standard buttons if tabs are NOT in use
     if (tabsContainer.children.length === 0) {
         [commonButton, rareButton, epicButton].forEach(btn => btn.classList.remove('active-tab'));
         if (currentRarity === "Common") commonButton.classList.add('active-tab');
@@ -106,22 +126,19 @@ function showMonsterUI(isBreedingResult = false) {
     inputContainer.style.display = 'none';
     noMonsterImage.style.display = 'none';
 
-    // Toggle Buttons based on mode
     if (isBreedingResult) {
-        // Hide standard rarity buttons
         commonButton.style.display = 'none';
         rareButton.style.display = 'none';
         epicButton.style.display = 'none';
-        // Show Tabs
+        volumeButton.style.display = 'none';
         tabsContainer.style.display = 'flex';
-        tabsContainer.style.justifyContent = 'center'; // Center the tabs
-        tabsContainer.style.gap = '10px'; // Add some spacing
+        tabsContainer.style.justifyContent = 'center';
+        tabsContainer.style.gap = '10px';
     } else {
-        // Show standard rarity buttons
         commonButton.style.display = 'revert';
         rareButton.style.display = 'revert';
         epicButton.style.display = 'revert';
-        // Hide Tabs
+        volumeButton.style.display = 'revert';
         tabsContainer.style.display = 'none';
     }
 }
@@ -136,7 +153,6 @@ function reset() {
     blurMessage.style.display = 'none';
     blurOverlay.style.display = 'none';
     
-    // Clear dynamic tabs
     if(tabsContainer) {
         tabsContainer.innerHTML = '';
         tabsContainer.style.display = 'none';
@@ -163,28 +179,30 @@ function reset() {
 // --- 3. EVENT LISTENERS ---
 
 breedingButton.addEventListener("click", async () => {
-    // Priority 1: Search Box (Standard Mode)
+    // Priority 1: Search Box
     if (!searchInput.disabled && searchInput.value.trim() !== "") {
         const raw = searchInput.value.trim();
         
-        if (/^rare/i.test(raw)) currentRarity = "Rare";
-        else if (/^epic/i.test(raw)) currentRarity = "Epic";
+        // Use the True Name Lookup
+        const trueName = findTrueName(raw); 
+        
+        if (/^rare/i.test(trueName)) currentRarity = "Rare";
+        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
         else currentRarity = "Common";
 
-        const baseName = normalizeName(raw);
+        const baseName = normalizeName(trueName);
         monsterImage.setAttribute('data-name', baseName);
 
-        // Clear tabs so standard UI shows
         tabsContainer.innerHTML = '';
         showMonsterUI(false); 
         
         updateActiveTab(); 
-        loadMonsterImage(raw); 
-        await loadStats(raw);
+        loadMonsterImage(trueName); 
+        await loadStats(trueName);
         return;
     }
 
-    // Priority 2: Breeding Inputs (Combo Mode)
+    // Priority 2: Breeding Inputs
     if (!firstInput.disabled && firstInput.value && secondInput.value) {
         await comboFinder();
     }
@@ -194,11 +212,17 @@ commonButton.addEventListener("click", () => {
     const base = monsterImage.getAttribute('data-name');
     if(!base) return;
 
-    searchInput.value = base;
+    // We can assume base is already "True" since it came from data-name
+    // But we need to ensure "Common [base]" is correct logic if MSM stores it that way
+    // Usually "Mammott" is just "Mammott".
+    
+    const trueName = findTrueName(base);
+
+    searchInput.value = trueName;
     currentRarity = "Common";
     updateActiveTab(); 
-    loadMonsterImage(base); 
-    loadStats(base);
+    loadMonsterImage(trueName); 
+    loadStats(trueName);
 });
 
 rareButton.addEventListener("click", () => {
@@ -206,11 +230,13 @@ rareButton.addEventListener("click", () => {
     if(!base) return;
 
     const name = `Rare ${base}`;
-    searchInput.value = name;
+    const trueName = findTrueName(name); // Ensure "Rare Mammott" casing is correct
+
+    searchInput.value = trueName;
     currentRarity = "Rare";
     updateActiveTab(); 
-    loadMonsterImage(name); 
-    loadStats(name);
+    loadMonsterImage(trueName); 
+    loadStats(trueName);
 });
 
 epicButton.addEventListener("click", () => {
@@ -218,11 +244,13 @@ epicButton.addEventListener("click", () => {
     if(!base) return;
 
     const name = `Epic ${base}`;
-    searchInput.value = name;
+    const trueName = findTrueName(name);
+
+    searchInput.value = trueName;
     currentRarity = "Epic";
     updateActiveTab(); 
-    loadMonsterImage(name); 
-    loadStats(name);
+    loadMonsterImage(trueName); 
+    loadStats(trueName);
 });
 
 majorMinorButton.addEventListener("click", () => {
@@ -237,10 +265,11 @@ majorMinorButton.addEventListener("click", () => {
     }
 
     if(newName) {
-        searchInput.value = newName;
-        monsterImage.setAttribute('data-name', newName);
-        loadMonsterImage(newName);
-        loadStats(newName);
+        const trueName = findTrueName(newName);
+        searchInput.value = trueName;
+        monsterImage.setAttribute('data-name', trueName);
+        loadMonsterImage(trueName);
+        loadStats(trueName);
     }
 });
 
@@ -249,21 +278,17 @@ async function comboFinder() {
     const combo = `${firstInput.value} + ${secondInput.value}`;
     const result = await MSM.twoMonsterCombo(combo);
 
-    // 1. Handle Errors
     if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI(false); // Default UI for error
+        showMonsterUI(false); 
         showNoMonsterError();
         return;
     }
 
-    // 2. Clear old tabs
     tabsContainer.innerHTML = '';
 
-    // 3. Logic: If > 1 result, use Tabs Mode
     if (result.length > 1) {
         
-        // --- NEW: SORT BY LENGTH (Longest Name First) ---
-        // This puts the "biggest" buttons on the left
+        // Sort by length (Longest First)
         result.sort((a, b) => b.length - a.length); 
 
         result.forEach((monsterName, index) => {
@@ -272,53 +297,47 @@ async function comboFinder() {
             btn.textContent = monsterName;
             
             btn.addEventListener('click', () => {
-                // Handle Active State
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
                 btn.classList.add('active-tab');
                 loadFromTab(monsterName);
             });
 
-            // Auto-select the first tab (which is now the longest one)
             if (index === 0) btn.classList.add('active-tab');
             tabsContainer.appendChild(btn);
         });
 
-        // ACTIVATE TABS UI (Hides Common/Rare/Epic)
         showMonsterUI(true);
-        
-        // Load the first result (the longest one)
         loadFromTab(result[0]);
 
     } else {
-        // Single result: Use standard UI
         const name = result[0];
-        
-        if (/^rare/i.test(name)) currentRarity = "Rare";
-        else if (/^epic/i.test(name)) currentRarity = "Epic";
+        const trueName = findTrueName(name); // Ensure we get the correct casing
+
+        if (/^rare/i.test(trueName)) currentRarity = "Rare";
+        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
         else currentRarity = "Common";
         
-        monsterImage.setAttribute('data-name', normalizeName(name));
-        showMonsterUI(false); // Standard UI
+        monsterImage.setAttribute('data-name', normalizeName(trueName));
+        showMonsterUI(false);
         updateActiveTab();
-        loadMonsterImage(name);
-        loadStats(name);
+        loadMonsterImage(trueName);
+        loadStats(trueName);
     }
 }
 
-// Helper to switch monster from the dynamic tabs
 function loadFromTab(monsterName) {
-    const cleanName = monsterName.trim();
-    searchInput.value = cleanName;
+    const trueName = findTrueName(monsterName); // Lookup the real key
     
-    // Set internal state, but buttons are hidden so visual updateActiveTab won't show much
-    if (/^rare/i.test(cleanName)) currentRarity = "Rare";
-    else if (/^epic/i.test(cleanName)) currentRarity = "Epic";
+    searchInput.value = trueName;
+    
+    if (/^rare/i.test(trueName)) currentRarity = "Rare";
+    else if (/^epic/i.test(trueName)) currentRarity = "Epic";
     else currentRarity = "Common";
 
-    monsterImage.setAttribute('data-name', normalizeName(cleanName));
+    monsterImage.setAttribute('data-name', normalizeName(trueName));
 
-    loadMonsterImage(cleanName);
-    loadStats(cleanName);
+    loadMonsterImage(trueName);
+    loadStats(trueName);
 }
 
 // --- End of Update ---
@@ -327,9 +346,14 @@ async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
 
+    // Use findTrueName here too, just in case
+    const trueName = findTrueName(rawInput);
+    
     try {
-        const baseName = normalizeName(rawInput); 
-        const monster = MSM[rawInput]; 
+        const baseName = normalizeName(trueName); 
+        const monster = MSM[trueName]; // Use trueName for the lookup!
+
+        if (!monster) throw new Error("Monster not found in MSM object");
 
         const [times, combos] = await Promise.all([
             monster.getBreedingTime(),
@@ -355,9 +379,6 @@ async function loadStats(forceName) {
 
         const displayName = toDisplayCase(baseName);
         const nameEl = document.getElementById('name');
-        
-        // Logic check: if we are in "Tabs Mode", currentRarity might be derived from the specific tab name
-        // We display whatever the current loaded monster is.
         nameEl.innerHTML = `${currentRarity || "Common"} Version Of:<br>${displayName}!`;
 
         if (times.breedingTime === "Unknown") {
@@ -388,6 +409,9 @@ async function loadStats(forceName) {
         showNoMonsterError();
     }
 }
+
+// ... rest of lockInput, showNoMonsterError, playSound, autocomplete ...
+// (These sections remain the same as previous files, included for completeness if needed)
 
 function lockInput() {
     setInterval(() => {
@@ -428,26 +452,49 @@ function showNoMonsterError() {
 async function playSound() {
     const raw = searchInput.value.trim();
     if (!raw) return;
-    try { await MSM[raw].playSound(); } 
+    try { 
+        // Also use True Name for sound
+        const trueName = findTrueName(raw);
+        await MSM[trueName].playSound(); 
+    } 
     catch (err) { console.warn("Sound failed:", err); }
 }
 
 // --- 4. AUTOCOMPLETE LOGIC ---
 
-function setupAutocomplete(inputElement, resultElement) {
+function setupAutocomplete(inputElement, resultElement, includeRarities = true) {
     if(!resultElement) return;
+
+    let currentMatches = []; // Store valid matches for this input
 
     inputElement.addEventListener('input', function() {
         const query = this.value.toLowerCase().trim();
         
         if (!query) {
             resultElement.style.display = 'none';
+            currentMatches = []; // Clear matches if empty
             return;
         }
 
-        const matches = monsterRegistry.filter(name => 
-            name.toLowerCase().includes(query)
-        );
+        const matches = monsterRegistry.filter(name => {
+            const lowerName = name.toLowerCase();
+            
+            // 1. Check if it matches the typing
+            const matchesQuery = lowerName.includes(query);
+            if (!matchesQuery) return false;
+
+            // 2. If this input forbids rarities, filter them out
+            if (!includeRarities) {
+                if (lowerName.startsWith("rare ") || lowerName.startsWith("epic ")) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+
+        // Update our tracker
+        currentMatches = matches;
 
         if (matches.length > 0) {
             resultElement.style.left = inputElement.offsetLeft + "px";
@@ -457,9 +504,25 @@ function setupAutocomplete(inputElement, resultElement) {
             resultElement.style.display = 'none';
         }
     });
+
+    // NEW: Handle Tab Key (Auto-complete if 1 match)
+    inputElement.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            if (currentMatches.length === 1) {
+                // Select the monster
+                selectSuggestion(currentMatches[0], resultElement, inputElement);
+                // We do NOT preventDefault(), so the focus will still move to the next box naturally
+            }
+        }
+    });
     
+    // UPDATED: Handle Blur (Auto-complete if 1 match when leaving)
     inputElement.addEventListener('blur', function() {
         setTimeout(() => {
+            // If there is exactly one match, pick it automatically
+            if (currentMatches.length === 1) {
+                selectSuggestion(currentMatches[0], resultElement, inputElement);
+            }
             resultElement.style.display = 'none';
         }, 200); 
     });
@@ -493,25 +556,32 @@ function selectSuggestion(name, container, inputField) {
     container.style.display = 'none';
     
     if (inputField === searchInput) {
-        if (/^rare/i.test(name)) currentRarity = "Rare";
-        else if (/^epic/i.test(name)) currentRarity = "Epic";
+        // Use lookup even on suggestion to be safe
+        const trueName = findTrueName(name);
+        
+        if (/^rare/i.test(trueName)) currentRarity = "Rare";
+        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
         else currentRarity = "Common";
 
-        monsterImage.setAttribute('data-name', normalizeName(name));
+        monsterImage.setAttribute('data-name', normalizeName(trueName));
 
-        // Ensure tabs are gone for search
         tabsContainer.innerHTML = '';
         showMonsterUI(false); 
 
         updateActiveTab(); 
-        loadMonsterImage(name); 
-        loadStats(name);
+        loadMonsterImage(trueName); 
+        loadStats(trueName);
     }
 }
 
-setupAutocomplete(searchInput, suggestionsContainer);
-setupAutocomplete(firstInput, suggestions1);
-setupAutocomplete(secondInput, suggestions2);
+// --- SETUP CALLS (Updated) ---
+
+// Search Bar: allow rarities (true)
+setupAutocomplete(searchInput, suggestionsContainer, true);
+
+// Breeding Inputs: disable rarities (false)
+setupAutocomplete(firstInput, suggestions1, false);
+setupAutocomplete(secondInput, suggestions2, false);
 
 
 (function loadMSMAPI() {
