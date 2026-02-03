@@ -213,10 +213,18 @@ button:focus { outline: none; }
     display: none;
     transition: all 0.3s ease;
 }
+#costumeButton {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    display: none;
+    transition: all 0.3s ease;
+}
 #common { left: 150px; }
 #rare { left: 260px; }
 #epic { left: 370px; }
 #volume-button { left: 480px; }
+#costumeButton { left: 40px; }
 
 #majorMinorButton {
     position: absolute;
