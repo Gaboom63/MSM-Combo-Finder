@@ -18,9 +18,11 @@ const suggestions2 = document.getElementById('suggestions2');
 const loadingSpinner = document.getElementById('loadingSpinner'); 
 const majorMinorButton = document.getElementById('majorMinorButton'); 
 const tabsContainer = document.getElementById('tabsContainer');
+const costumeButton = document.getElementById('costumeButton'); 
 
 let currentRarity = "";
 let monsterRegistry = []; 
+let currentMonster = null;
 
 // --- 1. BUILD REGISTRY ---
 async function buildMonsterRegistry() {
@@ -102,12 +104,16 @@ function loadMonsterImage(name) {
     monsterImage.classList.remove('animate-enter'); 
     monsterImage.style.opacity = '0'; 
     if(loadingSpinner) loadingSpinner.style.display = 'block'; 
+    
+    const monster = MSM[name]; // Async proxy
 
     monsterImage.onload = () => {
         if(loadingSpinner) loadingSpinner.style.display = 'none'; 
         monsterImage.style.opacity = '1'; 
         monsterImage.classList.add('animate-enter'); 
     };
+
+    currentMonster = monster;
 
     try {
         MSM[name].loadImage("monsterImage");
@@ -131,6 +137,7 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'none';
         epicButton.style.display = 'none';
         volumeButton.style.display = 'none';
+        costumeButton.style.display = 'none';
         tabsContainer.style.display = 'flex';
         tabsContainer.style.justifyContent = 'center';
         tabsContainer.style.gap = '10px';
@@ -139,6 +146,7 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'revert';
         epicButton.style.display = 'revert';
         volumeButton.style.display = 'revert';
+        costumeButton.style.display = 'revert';
         tabsContainer.style.display = 'none';
     }
 }
@@ -158,7 +166,7 @@ function reset() {
         tabsContainer.style.display = 'none';
     }
 
-    [commonButton, rareButton, epicButton, statBox, noMonsterImage, volumeButton, majorMinorButton].forEach(el => {
+    [commonButton, rareButton, epicButton, statBox, noMonsterImage, volumeButton, costumeButton, majorMinorButton].forEach(el => {
         if(el) el.style.display = 'none';
         el.classList.remove('active-tab'); 
     });
@@ -252,6 +260,24 @@ epicButton.addEventListener("click", () => {
     loadMonsterImage(trueName); 
     loadStats(trueName);
 });
+
+let currentCostumeIndex = 0;
+let currentCostumes = []; // Array of image URLs for the current monster's costumes
+
+costumeButton.addEventListener("click", async () => {
+    if (!currentMonster) return;
+
+    const nextCostumeUrl = await currentMonster.nextCostume();
+    if (!nextCostumeUrl) {
+        alert("No costumes available for this monster!");
+        return;
+    }
+
+    monsterImage.src = nextCostumeUrl;
+});
+
+
+
 
 majorMinorButton.addEventListener("click", () => {
     const currentName = monsterImage.getAttribute('data-name');
@@ -584,34 +610,34 @@ setupAutocomplete(firstInput, suggestions1, false);
 setupAutocomplete(secondInput, suggestions2, false);
 
 
-(function loadMSMAPI() {
-    const PRIMARY_API = "https://msm-api.pages.dev/dist/msm.js";
-    const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
+// (function loadMSMAPI() {
+//     const PRIMARY_API = "https://msm-api.pages.dev/dist/msm.js";
+//     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
 
-    function loadScript(src) {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement("script");
-            script.src = src;
-            script.defer = true;
-            script.onload = () => resolve(src);
-            script.onerror = () => reject(src);
-            document.head.appendChild(script);
-        });
-    }
+//     function loadScript(src) {
+//         return new Promise((resolve, reject) => {
+//             const script = document.createElement("script");
+//             script.src = src;
+//             script.defer = true;
+//             script.onload = () => resolve(src);
+//             script.onerror = () => reject(src);
+//             document.head.appendChild(script);
+//         });
+//     }
 
-    loadScript(PRIMARY_API)
-        .then(src => {
-            console.log("MSM API loaded:", src);
-        })
-        .catch(() => {
-            console.warn("Primary failed, loading CDN fallback...");
-            return loadScript(FALLBACK_API);
-        })
-        .then(src => {
-            console.log("MSM API ready:", src);
-        })
-        .catch(() => {
-            console.error("All MSM API sources failed");
-            alert("Failed to load MSM API. Network may be blocking scripts.");
-        });
-})();
+//     loadScript(PRIMARY_API)
+//         .then(src => {
+//             console.log("MSM API loaded:", src);
+//         })
+//         .catch(() => {
+//             console.warn("Primary failed, loading CDN fallback...");
+//             return loadScript(FALLBACK_API);
+//         })
+//         .then(src => {
+//             console.log("MSM API ready:", src);
+//         })
+//         .catch(() => {
+//             console.error("All MSM API sources failed");
+//             alert("Failed to load MSM API. Network may be blocking scripts.");
+//         });
+// })();
