@@ -611,7 +611,7 @@ setupAutocomplete(secondInput, suggestions2, false);
 
 
 (function loadMSMAPI() {
-    const PRIMARY_API = "https://msm-api.pages.dev/dist/msm.js";
+    const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
 
     function loadScript(src) {
