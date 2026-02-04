@@ -123,6 +123,7 @@ function loadMonsterImage(name) {
     }
 }
 
+
 function showMonsterUI(isBreedingResult = false) {
     monsterImage.style.display = 'revert';
     blurMessage.style.display = 'revert';
@@ -137,7 +138,7 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'none';
         epicButton.style.display = 'none';
         volumeButton.style.display = 'none';
-        costumeButton.style.display = 'none';
+        // costumeButton.style.display = 'none';
         tabsContainer.style.display = 'flex';
         tabsContainer.style.justifyContent = 'center';
         tabsContainer.style.gap = '10px';
@@ -146,7 +147,7 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'revert';
         epicButton.style.display = 'revert';
         volumeButton.style.display = 'revert';
-        costumeButton.style.display = 'revert';
+        // costumeButton.style.display = 'revert';
         tabsContainer.style.display = 'none';
     }
 }
@@ -154,6 +155,20 @@ function showMonsterUI(isBreedingResult = false) {
 document.addEventListener('keydown', e => {
     if (e.key === "Escape") reset();
 });
+
+async function costumeErrorHandling(name) {
+    const costumes = await MSM[name].getCostumes();
+
+    console.log(costumes);
+
+    if (!costumes || costumes.length === 0) {
+        costumeButton.style.display = 'none';
+        console.log("No Costumes available!");
+    } else {
+        costumeButton.style.display = 'revert';
+    }
+}
+
 
 function reset() {
     inputContainer.style.display = 'block';
@@ -203,8 +218,9 @@ breedingButton.addEventListener("click", async () => {
 
         tabsContainer.innerHTML = '';
         showMonsterUI(false); 
-        
+
         updateActiveTab(); 
+        costumeErrorHandling(trueName);
         loadMonsterImage(trueName); 
         await loadStats(trueName);
         return;
@@ -226,9 +242,11 @@ commonButton.addEventListener("click", () => {
     
     const trueName = findTrueName(base);
 
+
     searchInput.value = trueName;
     currentRarity = "Common";
     updateActiveTab(); 
+    costumeErrorHandling(trueName);
     loadMonsterImage(trueName); 
     loadStats(trueName);
 });
@@ -240,9 +258,22 @@ rareButton.addEventListener("click", () => {
     const name = `Rare ${base}`;
     const trueName = findTrueName(name); // Ensure "Rare Mammott" casing is correct
 
+    let isEmpty = null;
+    
+    isEmpty = MSM[trueName].costumes; 
+    
+    console.log(isEmpty);
+    if(isEmpty.length === 0) {
+        costumeButton.style.display = 'none';
+        console.log("No Costumes available!"); 
+    } else {
+        costumeButton.style.display = 'revert';
+    } 
+
     searchInput.value = trueName;
     currentRarity = "Rare";
     updateActiveTab(); 
+    costumeErrorHandling(trueName);
     loadMonsterImage(trueName); 
     loadStats(trueName);
 });
@@ -257,6 +288,7 @@ epicButton.addEventListener("click", () => {
     searchInput.value = trueName;
     currentRarity = "Epic";
     updateActiveTab(); 
+    costumeErrorHandling(trueName);
     loadMonsterImage(trueName); 
     loadStats(trueName);
 });
@@ -326,10 +358,12 @@ async function comboFinder() {
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
                 btn.classList.add('active-tab');
                 loadFromTab(monsterName);
+                costumeErrorHandling(monsterName)
             });
 
             if (index === 0) btn.classList.add('active-tab');
             tabsContainer.appendChild(btn);
+            costumeErrorHandling(monsterName);
         });
 
         showMonsterUI(true);
@@ -596,6 +630,7 @@ function selectSuggestion(name, container, inputField) {
 
         updateActiveTab(); 
         loadMonsterImage(trueName); 
+        costumeErrorHandling(trueName);
         loadStats(trueName);
     }
 }
