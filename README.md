@@ -5,7 +5,7 @@ Whats New? <br>
 I have been working on coding a **FULL MSM API!** And now that it's finished I fully rewrote the code for this tool and made it use the API, this should be updated much more consistantly due to the API! **ENJOY! :)**
 
 **FOR ONLINE USE**: Use the link on the right side!<br><br>
-As of now it has been updated to include **Kick Start January 2026**! 
+As of now it has been updated to include **Feb 2026**! 
 
 **What Am I Working On Now? (Regarding This Tool)**
 -------------------
