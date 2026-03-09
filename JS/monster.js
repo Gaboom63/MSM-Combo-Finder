@@ -406,26 +406,18 @@ async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
 
-    // Use findTrueName here too, just in case
     const trueName = findTrueName(rawInput);
     
     try {
         const baseName = normalizeName(trueName); 
-        const monster = MSM[trueName]; // Use trueName for the lookup!
+        const monster = MSM[trueName]; 
 
-        if (!monster) throw new Error("Monster not found in MSM object");
+        if (!monster) throw new Error("Monster not found");
 
         const [times, combos] = await Promise.all([
             monster.getBreedingTime(),
             monster.getBreedingCombos()
         ]);
-
-        if (!times) {
-            console.warn("API returned no data object.");
-            throw new Error("Invalid monster data");
-        }
-        
-        monsterImage.setAttribute('data-name', baseName);
 
         if (baseName.includes("(Major)")) {
             majorMinorButton.textContent = "Switch To Minor";
@@ -438,38 +430,48 @@ async function loadStats(forceName) {
         }
 
         const displayName = toDisplayCase(baseName);
-        const nameEl = document.getElementById('name');
-        nameEl.innerHTML = `${currentRarity || "Common"} Version Of:<br>${displayName}!`;
+        const statsBox = document.getElementById('statsBox');
 
-        if (times.breedingTime === "Unknown") {
-             document.getElementById('breedingTime').innerHTML = `
-                Breeding Time: N/A (Not Breedable)<br>
-                Enhanced Time: N/A
-            `;
-        } else {
-            document.getElementById('breedingTime').innerHTML = `
-                Breeding Time: ${times.breedingTime}<br>
-                Enhanced Time: ${times.enhancedTime}
-            `;
-        }
+        // 1. Identity Bubble - Using FontAwesome icons you already have linked!
+        const nameHtml = `
+            <div class="stats-bubble">
+                <span class="label-text"><i class="fas fa-dna"></i> Monster Name </span>
+                <h3>${currentRarity || "Common"} ${displayName}</h3>
+            </div>
+        `;
 
-        if (!combos || combos.length === 0) {
-            document.getElementById('breedingCombo').innerHTML = `
-                <u>Breeding Combinations:</u><br>
-                • Cannot be bred (Buy with Currency)
-            `;
-        } else {
-            document.getElementById('breedingCombo').innerHTML =
-                `<u>Breeding Combinations:</u><br>` +
-                combos.map(c => `• ${c}`).join("<br>");
-        }
+        // 2. Time Bubble
+        const timeContent = (times.breedingTime === "Unknown") 
+            ? "Not Breedable" 
+            : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
+
+        const timeHtml = `
+            <div class="stats-bubble">
+                <span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span>
+                <p style="margin:0; text-align: center;">${timeContent}</p>
+            </div>
+        `;
+
+        // 3. Breeding Combo Bubble
+        const comboList = (!combos || combos.length === 0) 
+            ? "• Special Combination Required" 
+            : combos.map(c => `• ${c}`).join("<br>");
+
+        const comboHtml = `
+            <div class="stats-bubble">
+                <span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span>
+                <p style="margin:0; font-size: 0.9rem;">${comboList}</p>
+            </div>
+        `;
+
+        statsBox.innerHTML = nameHtml + timeHtml + comboHtml;
+        statsBox.style.display = 'flex'; 
 
     } catch (err) {
-        console.error("Monster validation failed:", err);
+        console.error("Stats failed:", err);
         showNoMonsterError();
     }
 }
-
 // ... rest of lockInput, showNoMonsterError, playSound, autocomplete ...
 // (These sections remain the same as previous files, included for completeness if needed)
 

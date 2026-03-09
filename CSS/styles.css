@@ -3,6 +3,8 @@
     /* Only keeping the Red/Pink used by inputs and buttons */
     --main-red: rgb(255, 109, 109);
     --border-pink: #f7b7b7;
+    --float-speed: 4.5s;
+    --entrance-speed: 0.5s;
 }
 
 /* --- Global & Fonts --- */
@@ -319,3 +321,128 @@ button:focus { outline: none; }
 
 /* Utility class used by JS */
 .animate-enter { animation: slideUpFade 0.5s ease-out forwards; }
+
+/* Container - Moved closer to the monster */
+#statsBox {
+    position: fixed;
+    width: 280px;
+    right: 450px; /* Adjusted from 200px to be closer to the center */
+    top: 140px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 102;
+    background: none !important;
+}
+
+/* The Bubble - Improved for readability */
+.stats-bubble {
+    background: rgba(255, 109, 109, 0.4); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid var(--border-pink);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    cursor: default;
+    
+    /* Hardware acceleration for Magolor's GPU */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+
+transform: translateZ(0); 
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+
+    /* Single synchronized animation */
+    animation: 
+        revealIn var(--entrance-speed) ease-out forwards,
+        globalFloat var(--float-speed) cubic-bezier(.45,.05,.55,.95) var(--entrance-speed) infinite;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stats-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+    border-radius: 20px 20px 100% 100%;
+    pointer-events: none;
+}
+
+#statsBox[style*="display: flex"] .stats-bubble {
+    animation: 
+        revealIn var(--entrance-speed) ease-out forwards,
+        globalFloat var(--float-speed) ease-in-out var(--entrance-speed) infinite;
+}
+
+.stats-bubble:nth-child(1),
+.stats-bubble:nth-child(2),
+.stats-bubble:nth-child(3) { 
+    animation-delay: 0s, var(--entrance-speed); 
+}
+
+.stats-bubble:hover {
+    transform: scale(1.05) translateZ(0) !important;
+    animation-play-state: paused;
+    background: rgba(255, 109, 109, 0.6);
+}
+
+/* entrance: Clean and fast */
+@keyframes revealIn {
+    from { 
+        opacity: 0; 
+        transform: translateX(40px) translateZ(0); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0) translateZ(0); 
+    }
+}
+
+/* floating: Reduced the distance to 6px to prevent "seasickness" */
+@keyframes globalFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg) translateZ(0);
+    }
+
+    25% {
+        transform: translateY(-3px) rotate(-0.3deg) translateZ(0);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(0deg) translateZ(0);
+    }
+
+    75% {
+        transform: translateY(-3px) rotate(0.3deg) translateZ(0);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg) translateZ(0);
+    }
+}
+
+.stats-bubble h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff; /* Pure white for the main name */
+    text-align: center;
+}
+
+.label-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffcccc; /* Light pink for the label */
+    margin-bottom: 4px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
