@@ -1,6 +1,5 @@
 /* --- Variables --- */
 :root {
-    /* Only keeping the Red/Pink used by inputs and buttons */
     --main-red: rgb(255, 109, 109);
     --border-pink: #f7b7b7;
     --float-speed: 4.5s;
@@ -37,26 +36,40 @@ body {
     -webkit-text-stroke: 1px black;
 }
 
-/* --- Inputs --- */
+/* --- UI Refresh: Pink Theme Inputs (Restored) --- */
 #First_Monster, #Second_Monster, #Search_Monster {
-    width: 200px;
-    padding: 10px 15px;
+    width: 260px; 
+    height: 42px; 
+    padding: 0 20px;
     margin-bottom: 15px;
-    background: var(--main-red);
-    border: 2px solid var(--border-pink);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    color: #333;
-    transition: all 0.3s ease;
-    text-align: center;
-    position: relative;
+    background: var(--main-red); 
+    border: 2px solid var(--border-pink); 
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    color: #333333; 
+    box-sizing: border-box; 
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
     z-index: 98;
+    text-align: center; /* Centered on main menu */
+}
+
+input::placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5); 
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+input:focus::placeholder { 
+    color: #555555; 
+    font-style: normal; 
 }
 
 #First_Monster:focus, #Second_Monster:focus, #Search_Monster:focus {
-    border-color: var(--main-red);
-    box-shadow: 0 0 10px rgba(255, 109, 109, 0.5);
     outline: none;
 }
 
@@ -64,199 +77,361 @@ input:disabled {
     background-color: #d3d3d3;
     color: #a0a0a0;
     cursor: not-allowed;
+    border-color: #a0a0a0;
 }
 
-input::placeholder {
+/* --- UI Refresh: Expanded Search State --- */
+.expanded-search {
+    height: 52px !important; 
+    border-radius: 50px !important; 
+    font-size: 18px !important;
+    background: #222222 !important; 
+    color: #ffffff !important;
+    border: 2px solid #888888 !important;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15), 0 15px 30px rgba(0,0,0,0.8) !important;
+    z-index: 1000 !important;
+    text-align: left !important; /* Left-aligned when expanded */
+    padding-left: 30px !important;
+}
+
+/* --- UI Refresh: "OR" Divider --- */
+.divider {
+    display: flex;
+    align-items: center;
     text-align: center;
-    color: rgba(0, 0, 0, 0.5);
+    width: 260px; 
+    margin: -5px auto 10px auto; 
+    color: #ffffff; 
     font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); 
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+/* --- UI Refresh: Dynamic API Image Grid --- */
+#dynamicMonsterGrid {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 1000px;
+    max-height: 65vh;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+#dynamicMonsterGrid.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.grid-monster-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(40, 40, 40, 0.85);
+    border: 1px solid #3a3a3a;
+    border-radius: 15px;
+    padding: 12px;
+    width: 120px;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.grid-monster-item:hover {
+    transform: scale(1.1) translateY(-5px);
+    background: #222222;
+    border-color: #888888;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.grid-monster-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    animation: fadeIn 0.3s ease-in; 
+}
+
+.grid-monster-item span {
+    color: #e0e0e0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- UI Refresh: Darkened Blur Overlay --- */
+#blurOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.8); 
+    backdrop-filter: blur(8px);
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    z-index: 100; 
+}
+
+#blurOverlay.active {
     opacity: 1;
 }
-input:focus::placeholder { color: #ff6d6d; font-style: normal; }
 
-/* --- Buttons --- */
+/* --- UI Refresh: Dark Theme Result Buttons --- */
 button {
-    width: 10%;
-    padding: 8px;
-    margin: 5px 2%;
+    padding: 8px 16px;
+    margin: 5px;
     font-size: 12px;
     font-weight: bold;
-    color: white;
-    background: var(--main-red);
-    border: 2px solid var(--border-pink);
-    border-radius: 6px;
+    color: #e0e0e0; 
+    background: rgba(40, 40, 40, 0.85); 
+    border: 1px solid #555555; 
+    border-radius: 20px; 
     cursor: pointer;
-    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.3, 1);
     position: relative;
     z-index: 98;
 }
-button:hover { background: rgb(255, 79, 79); box-shadow: 0 0 8px rgba(255, 79, 79, 0.3); }
-button:active { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
-button:focus { outline: none; }
 
-#breedButton, #resetButton { color: black; }
-#breedButton:hover, #resetButton:hover { background-color: darkblue; color: white; }
-
-/* --- Suggestions --- */
-.suggestions {
-    border: 1px solid #ccc;
-    display: none;
-    position: absolute;
-    background: white;
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 1000;
-    width: 200px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 115px; /* Aligns with input boxes */
+button:hover { 
+    background: #222222; 
+    border-color: #888888;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
-/* Specific Positions for Suggestion Boxes */
-#suggestions1 { top: 55px; }
-#suggestions2 { top: 130px; }
-#suggestions3 { top: 205px; }
-
-.suggestion-item {
-    padding: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    text-align: left;
+button:active { 
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
 }
-.suggestion-item:hover { background-color: #f0f0f0; color: #b60606; }
 
-/* --- Result Layout & Containers --- */
+button:focus { 
+    outline: none; 
+}
+
+/* --- The Active Tab --- */
+.active-tab {
+    background: rgba(80, 80, 80, 0.9) !important; 
+    color: #ffffff !important; 
+    border-color: #e0e0e0 !important; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important; 
+    transform: scale(1.1) !important;
+    z-index: 130 !important;
+}
+
+/* --- THE RESPONSIVE FIX: Result Layout & Containers --- */
 #resultContainer {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    position: absolute;
-    top: 50px;
-    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 50px; 
+    margin: 40px auto 0;
+    width: 95%;
+    max-width: 1000px; 
+    position: relative;
     z-index: 120;
 }
 
-#imageContainer, #statsContainer { flex: 1; text-align: center; z-index: 120; }
+#leftPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 550px; /* Increased from 400px so the single row of buttons fits perfectly */
+}
+
+#utilityButtons {
+    display: flex;
+    flex-wrap: nowrap; /* THIS is the magic word that stops them from stacking! */
+    justify-content: center;
+    align-items: center; /* Keeps them perfectly vertically aligned */
+    gap: 8px;
+    width: 100%;
+}
+
+/* Make sure the text inside the buttons never breaks into two lines if it gets slightly squeezed */
+#utilityButtons button {
+    white-space: nowrap;
+}
+
+#imageContainer {
+    position: relative;
+    text-align: center;
+}
 
 /* --- Monster Image --- */
 .monster-image {
-    position: fixed;
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
     height: auto;
     opacity: 0;
-    transform: translateY(100px);
-    animation: slide-up 0.5s forwards;
-    top: 140px;
-    left: 200px;
     display: none;
+    animation: slide-up 0.5s forwards;
 }
+
 #monsterImage { opacity: 0; transition: opacity 0.1s; }
 
 /* --- Tabs (Breeding Results) --- */
 .tabs-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: fixed;
-    top: 90px;
-    left: 200px;
-    width: 300px;
-    z-index: 150;
-    margin-bottom: 10px;
-}
-
-.tab-button {
-    margin-right: 5px;
-    padding: 8px 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 100px;
-    max-width: 80px;
     width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 150;
 }
-.tab-button:hover { background-color: darkblue; color: white; }
 
-.active-tab {
-    background-color: darkblue !important;
-    color: white !important;
-    transform: scale(1.15);
-    border-color: white !important;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) !important;
-    z-index: 130 !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+/* --- Hidden/Utility Elements (Rarity, Volume, etc) --- */
+#common, #rare, #epic, #volume-button, #costumeButton, #majorMinorButton {
+    display: none;
+    position: static;
+    margin: 0;
 }
 
 /* --- Stats Box --- */
 #statsBox {
-    position: fixed;
-    width: 280px;
-    height: 373px;
-    right: 200px;
-    border-radius: 10px;
-    background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
+    width: 100%;
+    max-width: 300px;
     display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 102;
+    background: none !important;
+    margin-top: 20px; 
 }
 
-/* --- Hidden/Utility Elements (Rarity, Volume, etc) --- */
-#common, #rare, #epic, #volume-button {
-    position: absolute;
-    width: 100px;
-    height: 40px;
-    display: none;
-    transition: all 0.3s ease;
-}
-#costumeButton {
-    position: absolute;
-    width: 100px;
-    height: 50px;
-    display: none;
-    transition: all 0.3s ease;
-}
-#common { left: 150px; }
-#rare { left: 260px; }
-#epic { left: 370px; }
-#volume-button { left: 480px; }
-#costumeButton { left: 40px; }
-
-#majorMinorButton {
-    position: absolute;
-    width: 120px;
-    height: 50px;
-    left: 20px;
-    display: none;
-    z-index: 120;
+/* --- UI Refresh: Smoked Glass Stats Bubbles --- */
+.stats-bubble {
+    background: rgba(30, 30, 30, 0.65); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #444444; 
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); 
+    color: #ffffff; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    cursor: default;
+    transform: translateZ(0); 
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation: 
+        revealIn var(--entrance-speed) ease-out forwards,
+        globalFloat var(--float-speed) cubic-bezier(.45,.05,.55,.95) var(--entrance-speed) infinite;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, border-color 0.3s ease;
 }
 
-/* --- No Monster / Loading / Spinner --- */
+.stats-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+    border-radius: 20px 20px 100% 100%;
+    pointer-events: none;
+}
+
+#statsBox[style*="display: flex"] .stats-bubble {
+    animation: 
+        revealIn var(--entrance-speed) ease-out forwards,
+        globalFloat var(--float-speed) ease-in-out var(--entrance-speed) infinite;
+}
+
+.stats-bubble:nth-child(1),
+.stats-bubble:nth-child(2),
+.stats-bubble:nth-child(3) { 
+    animation-delay: 0s, var(--entrance-speed); 
+}
+
+.stats-bubble:hover {
+    transform: scale(1.05) translateZ(0) !important;
+    animation-play-state: paused;
+    background: rgba(50, 50, 50, 0.85); 
+    border-color: #888888; 
+}
+
+.stats-bubble h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff; 
+    text-align: center;
+}
+
+.label-text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #aaaaaa; 
+    margin-bottom: 4px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px; 
+}
+
+/* --- No Monster Image --- */
 #noMonsterImage {
-    position: absolute;
-    width: 614px;
-    height: 508px;
+    position: fixed; 
+    width: 90vw; /* Responsive width for smaller screens */
+    max-width: 600px; /* Prevents it from getting too massive */
+    height: auto;
     top: 50%;
-    left: 25%;
-    transform: translate(-50%) translateY(20px);
+    left: 50%;
+    /* This exactly centers the middle of the image to the middle of the screen */
+    transform: translate(-50%, -50%);
     display: none;
     opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInCenter 0.8s ease-out forwards;
+    z-index: 110;
+}
+
+/* Let's also add a smoother animation for it popping up in the center */
+@keyframes fadeInCenter {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%); /* Starts slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Rises into perfect center */
+    }
 }
 
 .spinner {
     display: none;
     width: 50px;
     height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    /* A very faint, translucent white ring */
+    border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border-top-color: var(--main-red);
+    /* A bright, crisp white spinning accent */
+    border-top-color: #ffffff;
     animation: spin 1s ease-in-out infinite;
     position: absolute;
     top: 50%;
@@ -264,7 +439,6 @@ button:focus { outline: none; }
     transform: translate(-50%, -50%);
     z-index: 105;
 }
-
 /* --- Icons, Hover Text & Blur --- */
 #iconContainer {
     position: absolute;
@@ -290,14 +464,6 @@ button:focus { outline: none; }
 #iconContainer:hover #textContainer { display: block; animation: slideIn 0.5s forwards; }
 #iconContainer:not(:hover) #textContainer { display: block; animation: slideOut 0.5s forwards; }
 
-#blurOverlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
-    display: none;
-    z-index: 100;
-}
 #blurMessage {
     position: fixed;
     top: 20px;
@@ -318,131 +484,22 @@ button:focus { outline: none; }
 @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 @keyframes slideUpFade { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* Utility class used by JS */
 .animate-enter { animation: slideUpFade 0.5s ease-out forwards; }
-
-/* Container - Moved closer to the monster */
-#statsBox {
-    position: fixed;
-    width: 280px;
-    right: 450px; /* Adjusted from 200px to be closer to the center */
-    top: 140px;
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 102;
-    background: none !important;
-}
-
-/* The Bubble - Improved for readability */
-.stats-bubble {
-    background: rgba(255, 109, 109, 0.4); 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 2px solid var(--border-pink);
-    border-radius: 20px;
-    padding: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    color: white; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    cursor: default;
-    
-    /* Hardware acceleration for Magolor's GPU */
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-
-transform: translateZ(0); 
-    will-change: transform;
-    backface-visibility: hidden;
-    perspective: 1000px;
-
-    /* Single synchronized animation */
-    animation: 
-        revealIn var(--entrance-speed) ease-out forwards,
-        globalFloat var(--float-speed) cubic-bezier(.45,.05,.55,.95) var(--entrance-speed) infinite;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.stats-bubble::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
-    border-radius: 20px 20px 100% 100%;
-    pointer-events: none;
-}
-
-#statsBox[style*="display: flex"] .stats-bubble {
-    animation: 
-        revealIn var(--entrance-speed) ease-out forwards,
-        globalFloat var(--float-speed) ease-in-out var(--entrance-speed) infinite;
-}
-
-.stats-bubble:nth-child(1),
-.stats-bubble:nth-child(2),
-.stats-bubble:nth-child(3) { 
-    animation-delay: 0s, var(--entrance-speed); 
-}
-
-.stats-bubble:hover {
-    transform: scale(1.05) translateZ(0) !important;
-    animation-play-state: paused;
-    background: rgba(255, 109, 109, 0.6);
-}
-
-/* entrance: Clean and fast */
 @keyframes revealIn {
-    from { 
-        opacity: 0; 
-        transform: translateX(40px) translateZ(0); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateX(0) translateZ(0); 
-    }
+    from { opacity: 0; transform: translateX(40px) translateZ(0); }
+    to { opacity: 1; transform: translateX(0) translateZ(0); }
 }
 
-/* floating: Reduced the distance to 6px to prevent "seasickness" */
 @keyframes globalFloat {
-    0% {
-        transform: translateY(0px) rotate(0deg) translateZ(0);
-    }
-
-    25% {
-        transform: translateY(-3px) rotate(-0.3deg) translateZ(0);
-    }
-
-    50% {
-        transform: translateY(-6px) rotate(0deg) translateZ(0);
-    }
-
-    75% {
-        transform: translateY(-3px) rotate(0.3deg) translateZ(0);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(0deg) translateZ(0);
-    }
+    0% { transform: translateY(0px) rotate(0deg) translateZ(0); }
+    25% { transform: translateY(-3px) rotate(-0.3deg) translateZ(0); }
+    50% { transform: translateY(-6px) rotate(0deg) translateZ(0); }
+    75% { transform: translateY(-3px) rotate(0.3deg) translateZ(0); }
+    100% { transform: translateY(0px) rotate(0deg) translateZ(0); }
 }
 
-.stats-bubble h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #fff; /* Pure white for the main name */
-    text-align: center;
-}
+/* Hide Old Suggestions */
+.suggestions { display: none !important; }
 
-.label-text {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #ffcccc; /* Light pink for the label */
-    margin-bottom: 4px;
-    display: block;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
