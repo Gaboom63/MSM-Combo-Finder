@@ -11,28 +11,34 @@ const epicButton = document.getElementById('epic');
 const statBox = document.getElementById('statsBox');
 const inputContainer = document.getElementById('inputContainer');
 const noMonsterImage = document.getElementById('noMonsterImage');
-const volumeButton = document.getElementById('volume-button'); 
-const suggestionsContainer = document.getElementById('suggestions3');
-const suggestions1 = document.getElementById('suggestions1');
-const suggestions2 = document.getElementById('suggestions2');
-const loadingSpinner = document.getElementById('loadingSpinner'); 
-const majorMinorButton = document.getElementById('majorMinorButton'); 
+const volumeButton = document.getElementById('volume-button');
+const loadingSpinner = document.getElementById('loadingSpinner');
+const majorMinorButton = document.getElementById('majorMinorButton');
 const tabsContainer = document.getElementById('tabsContainer');
-const costumeButton = document.getElementById('costumeButton'); 
+const costumeButton = document.getElementById('costumeButton');
+const dynamicGrid = document.getElementById('dynamicMonsterGrid');
+
+// --- NEW FALLBACK FOR GRID ERRORS ---
+// We will use the existing mammoticon favicon as the placeholder
+const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
 
 let currentRarity = "";
-let monsterRegistry = []; 
+let monsterRegistry = [];
 let currentMonster = null;
 
 // --- 1. BUILD REGISTRY ---
 async function buildMonsterRegistry() {
-    const breedingUrl = "https://raw.githubusercontent.com/Gaboom63/MSM-API/refs/heads/main/data/monsters/Extras/breedingCombos.json";
-    
+    // Also updated this to the faster jsDelivr link for you!
+    const breedingUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/monsters/Extras/breedingCombos.json";
+
     try {
         const response = await fetch(breedingUrl);
         const data = await response.json();
         const uniqueNames = new Set();
         const clean = (name) => name ? name.trim() : "";
+
+        // NEW: Ignore list to filter out breeding instructions
+        const ignoreList = ["any", "invalid", "no combination", "unknown"];
 
         Object.keys(data).forEach(key => {
             if (key.includes("+")) {
@@ -47,7 +53,12 @@ async function buildMonsterRegistry() {
             }
         });
 
-        monsterRegistry = Array.from(uniqueNames).filter(n => n).sort();
+        // NEW: Filter the final array against the ignore list
+        monsterRegistry = Array.from(uniqueNames).filter(n => {
+            const lowerName = n.toLowerCase();
+            return n !== "" && !ignoreList.some(ignoreWord => lowerName.includes(ignoreWord));
+        }).sort();
+
         console.log(`Registry ready: ${monsterRegistry.length} monsters.`);
     } catch (err) {
         console.error("Registry failed:", err);
@@ -57,30 +68,23 @@ buildMonsterRegistry();
 
 
 // --- 2. CORE FUNCTIONS ---
-
-// NEW: Robust Lookup Function
-// This finds the correct key in MSM regardless of how you typed it.
 function findTrueName(input) {
     if (!input) return null;
     const cleanInput = input.trim().toLowerCase();
-    
-    // 1. Search MSM object keys directly
+
     if (typeof MSM !== 'undefined') {
         const trueKey = Object.keys(MSM).find(key => key.toLowerCase() === cleanInput);
         if (trueKey) return trueKey;
     }
 
-    // 2. Fallback to Registry
     const registryKey = monsterRegistry.find(key => key.toLowerCase() === cleanInput);
     if (registryKey) return registryKey;
 
-    // 3. Last Resort: Return input as-is (might fail, but better than nothing)
     return input.trim();
 }
 
 function toDisplayCase(str) {
     if (!str) return "";
-    // Only used for UI labels, not for logic/searching
     return str.toLowerCase().replace(/(?:^|[\s\-\(\)])[a-z]/g, (letter) => letter.toUpperCase());
 }
 
@@ -100,36 +104,40 @@ function updateActiveTab() {
 
 function loadMonsterImage(name) {
     if (!name) return;
-    
-    monsterImage.classList.remove('animate-enter'); 
-    monsterImage.style.opacity = '0'; 
-    if(loadingSpinner) loadingSpinner.style.display = 'block'; 
-    
-    const monster = MSM[name]; // Async proxy
+
+    monsterImage.classList.remove('animate-enter');
+    monsterImage.style.opacity = '0';
+    if (loadingSpinner) loadingSpinner.style.display = 'block';
+
+    const monster = MSM[name];
 
     monsterImage.onload = () => {
-        if(loadingSpinner) loadingSpinner.style.display = 'none'; 
-        monsterImage.style.opacity = '1'; 
-        monsterImage.classList.add('animate-enter'); 
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+        monsterImage.style.opacity = '1';
+        monsterImage.classList.add('animate-enter');
     };
 
     currentMonster = monster;
 
     try {
         MSM[name].loadImage("monsterImage");
-    } catch(e) {
+    } catch (e) {
         console.warn("Image load trigger failed:", e);
-        if(loadingSpinner) loadingSpinner.style.display = 'none'; 
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
     }
 }
-
 
 function showMonsterUI(isBreedingResult = false) {
     monsterImage.style.display = 'revert';
     blurMessage.style.display = 'revert';
-    blurOverlay.style.display = 'revert';
+
+    blurOverlay.style.display = 'block';
+    requestAnimationFrame(() => {
+        blurOverlay.classList.add('active');
+    });
+
     statBox.style.display = 'revert';
-    volumeButton.style.display = 'revert'; 
+    volumeButton.style.display = 'revert';
     inputContainer.style.display = 'none';
     noMonsterImage.style.display = 'none';
 
@@ -138,7 +146,6 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'none';
         epicButton.style.display = 'none';
         volumeButton.style.display = 'none';
-        // costumeButton.style.display = 'none';
         tabsContainer.style.display = 'flex';
         tabsContainer.style.justifyContent = 'center';
         tabsContainer.style.gap = '10px';
@@ -147,7 +154,6 @@ function showMonsterUI(isBreedingResult = false) {
         rareButton.style.display = 'revert';
         epicButton.style.display = 'revert';
         volumeButton.style.display = 'revert';
-        // costumeButton.style.display = 'revert';
         tabsContainer.style.display = 'none';
     }
 }
@@ -158,171 +164,284 @@ document.addEventListener('keydown', e => {
 
 async function costumeErrorHandling(name) {
     const costumes = await MSM[name].getCostumes();
-
-    console.log(costumes);
-
     if (!costumes || costumes.length === 0) {
         costumeButton.style.display = 'none';
-        console.log("No Costumes available!");
     } else {
         costumeButton.style.display = 'revert';
     }
 }
-
 
 function reset() {
     inputContainer.style.display = 'block';
     monsterImage.style.display = 'none';
     blurMessage.style.display = 'none';
-    blurOverlay.style.display = 'none';
-    
-    if(tabsContainer) {
+
+    blurOverlay.classList.remove('active');
+    setTimeout(() => {
+        if (!firstInput.classList.contains('expanded-search')) {
+            blurOverlay.style.display = 'none';
+        }
+    }, 500);
+
+    if (tabsContainer) {
         tabsContainer.innerHTML = '';
         tabsContainer.style.display = 'none';
     }
 
     [commonButton, rareButton, epicButton, statBox, noMonsterImage, volumeButton, costumeButton, majorMinorButton].forEach(el => {
-        if(el) el.style.display = 'none';
-        el.classList.remove('active-tab'); 
+        if (el) el.style.display = 'none';
+        if (el.classList) el.classList.remove('active-tab');
     });
 
-    if(loadingSpinner) loadingSpinner.style.display = 'none';
+    if (loadingSpinner) loadingSpinner.style.display = 'none';
 
     searchInput.value = "";
     firstInput.value = "";
     secondInput.value = "";
-    
-    [suggestionsContainer, suggestions1, suggestions2].forEach(el => {
-        if(el) el.style.display = 'none';
-    });
-    
     currentRarity = "";
+
+    // Close any expanded search and grid safely
+    closeExpandedInput();
 }
 
-// --- 3. EVENT LISTENERS ---
 
-breedingButton.addEventListener("click", async () => {
-    // Priority 1: Search Box
-    if (!searchInput.disabled && searchInput.value.trim() !== "") {
-        const raw = searchInput.value.trim();
-        
-        // Use the True Name Lookup
-        const trueName = findTrueName(raw); 
-        
-        if (/^rare/i.test(trueName)) currentRarity = "Rare";
-        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
-        else currentRarity = "Common";
+// --- 3. UI REFRESH: Smooth Expansion & Dynamic API Grid ---
 
-        const baseName = normalizeName(trueName);
-        monsterImage.setAttribute('data-name', baseName);
+let activeInput = null;
+let activeOriginalRect = null;
 
-        tabsContainer.innerHTML = '';
-        showMonsterUI(false); 
+function setupSmoothExpansionAndGrid(inputElement, includeRarities = true) {
+    inputElement.addEventListener('focus', () => {
+        if (activeInput && activeInput !== inputElement) {
+            closeExpandedInput(); // Close others if open
+        }
 
-        updateActiveTab(); 
-        costumeErrorHandling(trueName);
-        loadMonsterImage(trueName); 
-        await loadStats(trueName);
-        return;
+        activeInput = inputElement;
+        activeOriginalRect = inputElement.getBoundingClientRect();
+
+        // Lock position
+        inputElement.style.transition = 'none';
+        inputElement.style.position = 'fixed';
+        inputElement.style.top = activeOriginalRect.top + 'px';
+        inputElement.style.left = activeOriginalRect.left + 'px';
+        inputElement.style.width = activeOriginalRect.width + 'px';
+        inputElement.style.margin = '0';
+
+        void inputElement.offsetWidth; // Force layout
+
+        // Animate
+        inputElement.style.transition = 'all 0.5s cubic-bezier(0.25, 1, 0.3, 1)';
+        const targetWidth = Math.min(window.innerWidth * 0.9, 1300);
+        const targetLeft = (window.innerWidth - targetWidth) / 2;
+        const targetTop = window.innerHeight * 0.12;
+
+        inputElement.style.top = targetTop + 'px';
+        inputElement.style.left = targetLeft + 'px';
+        inputElement.style.width = targetWidth + 'px';
+
+        inputElement.classList.add('expanded-search');
+        blurOverlay.style.display = 'block';
+        dynamicGrid.classList.add('active');
+
+        requestAnimationFrame(() => {
+            blurOverlay.classList.add('active');
+        });
+
+        inputElement.dispatchEvent(new Event('input')); // Trigger grid
+    });
+
+    inputElement.addEventListener('input', () => {
+        if (activeInput !== inputElement) return;
+
+        const query = inputElement.value.toLowerCase().trim();
+        if (!query) {
+            dynamicGrid.innerHTML = '';
+            return;
+        }
+
+        const matches = monsterRegistry.filter(name => {
+            const lowerName = name.toLowerCase();
+            if (!lowerName.includes(query)) return false;
+            if (!includeRarities && (lowerName.startsWith("rare ") || lowerName.startsWith("epic "))) return false;
+            return true;
+        });
+
+        const topMatches = matches.slice(0, 12);
+        dynamicGrid.innerHTML = '';
+
+        topMatches.forEach(match => {
+            const item = document.createElement('div');
+            item.className = 'grid-monster-item';
+
+            const img = document.createElement('img');
+            const safeId = 'grid-img-' + match.replace(/[^a-zA-Z0-9]/g, '');
+            img.id = safeId;
+
+            // --- UI REFRESH: Error Handling ---
+            // If the image fails to load, swap it with the mammoticon fallback
+            img.onerror = () => {
+                // Remove onerror to prevent infinite loops if the fallback itself is missing
+                img.onerror = null;
+                console.warn(`Grid image failed to load for: ${match}. Swapping to fallback.`);
+                img.src = GRID_FALLBACK_IMAGE;
+            };
+
+            const label = document.createElement('span');
+            label.textContent = match;
+
+            item.appendChild(img);
+            item.appendChild(label);
+
+            // Apply click to the entire item box, not just the img
+            // Apply click to the entire item box, not just the img
+            item.addEventListener('click', async () => {
+                inputElement.value = match;
+                closeExpandedInput();
+
+                // --- AUTO-SEARCH LOGIC ---
+                if (inputElement === searchInput) {
+                    const trueName = findTrueName(match);
+                    if (/^rare/i.test(trueName)) currentRarity = "Rare";
+                    else if (/^epic/i.test(trueName)) currentRarity = "Epic";
+                    else currentRarity = "Common";
+
+                    monsterImage.setAttribute('data-name', normalizeName(trueName));
+                    tabsContainer.innerHTML = '';
+                    showMonsterUI(false);
+                    updateActiveTab();
+                    loadMonsterImage(trueName);
+                    costumeErrorHandling(trueName);
+                    loadStats(trueName);
+                }
+
+                // --- NEW: AUTO-BREED LOGIC ---
+                // If this was a breeding input, check if both are now filled
+                else if (inputElement === firstInput || inputElement === secondInput) {
+                    if (firstInput.value.trim() !== "" && secondInput.value.trim() !== "") {
+                        // Small delay so the input has time to shrink back down before the UI changes
+                        setTimeout(async () => {
+                            await comboFinder();
+                        }, 300);
+                    }
+                }
+            });
+            dynamicGrid.appendChild(item);
+
+            try {
+                const trueName = findTrueName(match);
+                if (typeof MSM !== 'undefined' && MSM[trueName]) {
+                    MSM[trueName].loadImage(safeId);
+                }
+            } catch (e) {
+                console.warn("API Image load failed for:", match);
+                // Manually trigger the error fallback if the API call fails
+                img.onerror();
+            }
+        });
+    });
+}
+
+function closeExpandedInput() {
+    if (!activeInput) return;
+
+    const currentInput = activeInput;
+    activeInput = null;
+
+    currentInput.blur();
+    blurOverlay.classList.remove('active');
+    currentInput.classList.remove('expanded-search');
+    dynamicGrid.classList.remove('active');
+
+    if (activeOriginalRect) {
+        currentInput.style.top = activeOriginalRect.top + 'px';
+        currentInput.style.left = activeOriginalRect.left + 'px';
+        currentInput.style.width = activeOriginalRect.width + 'px';
     }
 
-    // Priority 2: Breeding Inputs
-    if (!firstInput.disabled && firstInput.value && secondInput.value) {
-        await comboFinder();
-    }
-});
+    setTimeout(() => {
+        currentInput.style.transition = '';
+        currentInput.style.position = '';
+        currentInput.style.top = '';
+        currentInput.style.left = '';
+        currentInput.style.width = '';
+        currentInput.style.margin = '';
+
+        if (!blurOverlay.classList.contains('active') && monsterImage.style.display !== 'revert') {
+            blurOverlay.style.display = 'none';
+        }
+    }, 500);
+}
+
+blurOverlay.addEventListener('click', closeExpandedInput);
+
+// Initialize all three inputs (Search allows rarities, Breeding inputs do not)
+setupSmoothExpansionAndGrid(searchInput, true);
+setupSmoothExpansionAndGrid(firstInput, false);
+setupSmoothExpansionAndGrid(secondInput, false);
 
 commonButton.addEventListener("click", () => {
     const base = monsterImage.getAttribute('data-name');
-    if(!base) return;
-
-    // We can assume base is already "True" since it came from data-name
-    // But we need to ensure "Common [base]" is correct logic if MSM stores it that way
-    // Usually "Mammott" is just "Mammott".
-    
+    if (!base) return;
     const trueName = findTrueName(base);
-
-
     searchInput.value = trueName;
     currentRarity = "Common";
-    updateActiveTab(); 
+    updateActiveTab();
     costumeErrorHandling(trueName);
-    loadMonsterImage(trueName); 
+    loadMonsterImage(trueName);
     loadStats(trueName);
 });
 
 rareButton.addEventListener("click", () => {
     const base = monsterImage.getAttribute('data-name');
-    if(!base) return;
-
+    if (!base) return;
     const name = `Rare ${base}`;
-    const trueName = findTrueName(name); // Ensure "Rare Mammott" casing is correct
+    const trueName = findTrueName(name);
 
-    let isEmpty = null;
-    
-    isEmpty = MSM[trueName].costumes; 
-    
-    console.log(isEmpty);
-    if(isEmpty.length === 0) {
-        costumeButton.style.display = 'none';
-        console.log("No Costumes available!"); 
-    } else {
-        costumeButton.style.display = 'revert';
-    } 
+    let isEmpty = MSM[trueName].costumes;
+    if (isEmpty && isEmpty.length === 0) { costumeButton.style.display = 'none'; }
+    else { costumeButton.style.display = 'revert'; }
 
     searchInput.value = trueName;
     currentRarity = "Rare";
-    updateActiveTab(); 
+    updateActiveTab();
     costumeErrorHandling(trueName);
-    loadMonsterImage(trueName); 
+    loadMonsterImage(trueName);
     loadStats(trueName);
 });
 
 epicButton.addEventListener("click", () => {
     const base = monsterImage.getAttribute('data-name');
-    if(!base) return;
-
+    if (!base) return;
     const name = `Epic ${base}`;
     const trueName = findTrueName(name);
 
     searchInput.value = trueName;
     currentRarity = "Epic";
-    updateActiveTab(); 
+    updateActiveTab();
     costumeErrorHandling(trueName);
-    loadMonsterImage(trueName); 
+    loadMonsterImage(trueName);
     loadStats(trueName);
 });
 
-let currentCostumeIndex = 0;
-let currentCostumes = []; // Array of image URLs for the current monster's costumes
-
 costumeButton.addEventListener("click", async () => {
     if (!currentMonster) return;
-
     const nextCostumeUrl = await currentMonster.nextCostume();
     if (!nextCostumeUrl) {
         alert("No costumes available for this monster!");
         return;
     }
-
     monsterImage.src = nextCostumeUrl;
 });
 
-
-
-
 majorMinorButton.addEventListener("click", () => {
     const currentName = monsterImage.getAttribute('data-name');
-    if(!currentName) return;
+    if (!currentName) return;
 
     let newName = "";
-    if (currentName.includes("(Major)")) {
-        newName = currentName.replace("(Major)", "(Minor)");
-    } else if (currentName.includes("(Minor)")) {
-        newName = currentName.replace("(Minor)", "(Major)");
-    }
+    if (currentName.includes("(Major)")) newName = currentName.replace("(Major)", "(Minor)");
+    else if (currentName.includes("(Minor)")) newName = currentName.replace("(Minor)", "(Major)");
 
-    if(newName) {
+    if (newName) {
         const trueName = findTrueName(newName);
         searchInput.value = trueName;
         monsterImage.setAttribute('data-name', trueName);
@@ -331,13 +450,13 @@ majorMinorButton.addEventListener("click", () => {
     }
 });
 
-// --- UPDATED: Combo Finder Logic ---
+// --- COMBO FINDER ---
 async function comboFinder() {
     const combo = `${firstInput.value} + ${secondInput.value}`;
     const result = await MSM.twoMonsterCombo(combo);
 
     if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI(false); 
+        showMonsterUI(false);
         showNoMonsterError();
         return;
     }
@@ -345,15 +464,12 @@ async function comboFinder() {
     tabsContainer.innerHTML = '';
 
     if (result.length > 1) {
-        
-        // Sort by length (Longest First)
-        result.sort((a, b) => b.length - a.length); 
-
+        result.sort((a, b) => b.length - a.length);
         result.forEach((monsterName, index) => {
             const btn = document.createElement('button');
-            btn.className = 'tab-button'; 
+            btn.className = 'tab-button';
             btn.textContent = monsterName;
-            
+
             btn.addEventListener('click', () => {
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
                 btn.classList.add('active-tab');
@@ -371,12 +487,12 @@ async function comboFinder() {
 
     } else {
         const name = result[0];
-        const trueName = findTrueName(name); // Ensure we get the correct casing
+        const trueName = findTrueName(name);
 
         if (/^rare/i.test(trueName)) currentRarity = "Rare";
         else if (/^epic/i.test(trueName)) currentRarity = "Epic";
         else currentRarity = "Common";
-        
+
         monsterImage.setAttribute('data-name', normalizeName(trueName));
         showMonsterUI(false);
         updateActiveTab();
@@ -386,31 +502,27 @@ async function comboFinder() {
 }
 
 function loadFromTab(monsterName) {
-    const trueName = findTrueName(monsterName); // Lookup the real key
-    
+    const trueName = findTrueName(monsterName);
     searchInput.value = trueName;
-    
+
     if (/^rare/i.test(trueName)) currentRarity = "Rare";
     else if (/^epic/i.test(trueName)) currentRarity = "Epic";
     else currentRarity = "Common";
 
     monsterImage.setAttribute('data-name', normalizeName(trueName));
-
     loadMonsterImage(trueName);
     loadStats(trueName);
 }
 
-// --- End of Update ---
-
+// --- STATS & UTILS ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
-
     const trueName = findTrueName(rawInput);
-    
+
     try {
-        const baseName = normalizeName(trueName); 
-        const monster = MSM[trueName]; 
+        const baseName = normalizeName(trueName);
+        const monster = MSM[trueName];
 
         if (!monster) throw new Error("Monster not found");
 
@@ -432,7 +544,6 @@ async function loadStats(forceName) {
         const displayName = toDisplayCase(baseName);
         const statsBox = document.getElementById('statsBox');
 
-        // 1. Identity Bubble - Using FontAwesome icons you already have linked!
         const nameHtml = `
             <div class="stats-bubble">
                 <span class="label-text"><i class="fas fa-dna"></i> Monster Name </span>
@@ -440,9 +551,8 @@ async function loadStats(forceName) {
             </div>
         `;
 
-        // 2. Time Bubble
-        const timeContent = (times.breedingTime === "Unknown") 
-            ? "Not Breedable" 
+        const timeContent = (times.breedingTime === "Unknown")
+            ? "Not Breedable"
             : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
 
         const timeHtml = `
@@ -452,9 +562,8 @@ async function loadStats(forceName) {
             </div>
         `;
 
-        // 3. Breeding Combo Bubble
-        const comboList = (!combos || combos.length === 0) 
-            ? "• Special Combination Required" 
+        const comboList = (!combos || combos.length === 0)
+            ? "• Special Combination Required"
             : combos.map(c => `• ${c}`).join("<br>");
 
         const comboHtml = `
@@ -465,15 +574,13 @@ async function loadStats(forceName) {
         `;
 
         statsBox.innerHTML = nameHtml + timeHtml + comboHtml;
-        statsBox.style.display = 'flex'; 
+        statsBox.style.display = 'flex';
 
     } catch (err) {
         console.error("Stats failed:", err);
         showNoMonsterError();
     }
 }
-// ... rest of lockInput, showNoMonsterError, playSound, autocomplete ...
-// (These sections remain the same as previous files, included for completeness if needed)
 
 function lockInput() {
     setInterval(() => {
@@ -496,17 +603,17 @@ lockInput();
 
 function showNoMonsterError() {
     monsterImage.style.display = 'none';
-    if(loadingSpinner) loadingSpinner.style.display = 'none';
-    
-    if(tabsContainer) {
+    if (loadingSpinner) loadingSpinner.style.display = 'none';
+
+    if (tabsContainer) {
         tabsContainer.innerHTML = '';
         tabsContainer.style.display = 'none';
     }
 
     [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton].forEach(el => {
-        if(el) el.style.display = 'none';
+        if (el) el.style.display = 'none';
     });
-    
+
     noMonsterImage.style.display = 'revert';
     noMonsterImage.src = `images/important/Nomonsterfound.png`;
 }
@@ -514,139 +621,14 @@ function showNoMonsterError() {
 async function playSound() {
     const raw = searchInput.value.trim();
     if (!raw) return;
-    try { 
-        // Also use True Name for sound
+    try {
         const trueName = findTrueName(raw);
-        await MSM[trueName].playSound(); 
-    } 
+        await MSM[trueName].playSound();
+    }
     catch (err) { console.warn("Sound failed:", err); }
 }
 
-// --- 4. AUTOCOMPLETE LOGIC ---
-
-function setupAutocomplete(inputElement, resultElement, includeRarities = true) {
-    if(!resultElement) return;
-
-    let currentMatches = []; // Store valid matches for this input
-
-    inputElement.addEventListener('input', function() {
-        const query = this.value.toLowerCase().trim();
-        
-        if (!query) {
-            resultElement.style.display = 'none';
-            currentMatches = []; // Clear matches if empty
-            return;
-        }
-
-        const matches = monsterRegistry.filter(name => {
-            const lowerName = name.toLowerCase();
-            
-            // 1. Check if it matches the typing
-            const matchesQuery = lowerName.includes(query);
-            if (!matchesQuery) return false;
-
-            // 2. If this input forbids rarities, filter them out
-            if (!includeRarities) {
-                if (lowerName.startsWith("rare ") || lowerName.startsWith("epic ")) {
-                    return false;
-                }
-            }
-
-            return true;
-        });
-
-        // Update our tracker
-        currentMatches = matches;
-
-        if (matches.length > 0) {
-            resultElement.style.left = inputElement.offsetLeft + "px";
-            resultElement.style.top = (inputElement.offsetTop + inputElement.offsetHeight + 10) + "px";
-            renderSuggestions(matches, resultElement, inputElement);
-        } else {
-            resultElement.style.display = 'none';
-        }
-    });
-
-    // NEW: Handle Tab Key (Auto-complete if 1 match)
-    inputElement.addEventListener('keydown', function(e) {
-        if (e.key === 'Tab') {
-            if (currentMatches.length === 1) {
-                // Select the monster
-                selectSuggestion(currentMatches[0], resultElement, inputElement);
-                // We do NOT preventDefault(), so the focus will still move to the next box naturally
-            }
-        }
-    });
-    
-    // UPDATED: Handle Blur (Auto-complete if 1 match when leaving)
-    inputElement.addEventListener('blur', function() {
-        setTimeout(() => {
-            // If there is exactly one match, pick it automatically
-            if (currentMatches.length === 1) {
-                selectSuggestion(currentMatches[0], resultElement, inputElement);
-            }
-            resultElement.style.display = 'none';
-        }, 200); 
-    });
-
-    document.addEventListener('click', (e) => {
-        if (e.target !== inputElement && e.target !== resultElement) {
-            resultElement.style.display = 'none';
-        }
-    });
-}
-
-function renderSuggestions(matches, container, inputField) {
-    container.innerHTML = '';
-    container.style.display = 'block';
-
-    matches.slice(0, 8).forEach(match => {
-        const div = document.createElement('div');
-        div.classList.add('suggestion-item');
-        div.textContent = match;
-
-        div.addEventListener('click', () => {
-            selectSuggestion(match, container, inputField);
-        });
-
-        container.appendChild(div);
-    });
-}
-
-function selectSuggestion(name, container, inputField) {
-    inputField.value = name;
-    container.style.display = 'none';
-    
-    if (inputField === searchInput) {
-        // Use lookup even on suggestion to be safe
-        const trueName = findTrueName(name);
-        
-        if (/^rare/i.test(trueName)) currentRarity = "Rare";
-        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
-        else currentRarity = "Common";
-
-        monsterImage.setAttribute('data-name', normalizeName(trueName));
-
-        tabsContainer.innerHTML = '';
-        showMonsterUI(false); 
-
-        updateActiveTab(); 
-        loadMonsterImage(trueName); 
-        costumeErrorHandling(trueName);
-        loadStats(trueName);
-    }
-}
-
-// --- SETUP CALLS (Updated) ---
-
-// Search Bar: allow rarities (true)
-setupAutocomplete(searchInput, suggestionsContainer, true);
-
-// Breeding Inputs: disable rarities (false)
-setupAutocomplete(firstInput, suggestions1, false);
-setupAutocomplete(secondInput, suggestions2, false);
-
-
+// --- MSM API INJECTION ---
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
@@ -663,18 +645,15 @@ setupAutocomplete(secondInput, suggestions2, false);
     }
 
     loadScript(PRIMARY_API)
-        .then(src => {
-            console.log("MSM API loaded:", src);
-        })
+        .then(src => console.log("MSM API loaded:", src))
         .catch(() => {
             console.warn("Primary failed, loading CDN fallback...");
             return loadScript(FALLBACK_API);
         })
-        .then(src => {
-            console.log("MSM API ready:", src);
-        })
+        .then(src => console.log("MSM API ready:", src))
         .catch(() => {
             console.error("All MSM API sources failed");
             alert("Failed to load MSM API. Network may be blocking scripts.");
         });
 })();
+
