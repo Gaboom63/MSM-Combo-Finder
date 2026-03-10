@@ -9,13 +9,12 @@
     <link rel="icon" href="ideas/favicon.txt" type="image/png">
     <link rel="icon" type="image/x-icon" href="images/important/mammoticon.png">
     <title>MSM Combo Finder</title>
-    <!-- <script src="../MSM-API/dist/msm.js"></script> -->
 </head>
 
 <body style="background-image: url(CSS/images/backgrounds/NoEventShellbeat.jpg); background-size: cover;">
 
-    <div id="blurOverlay"></div> <!-- Blur overlay element -->
-    <div id="blurMessage" onclick="reset()">Press ESC to go back</div> <!-- Message element -->
+    <div id="blurOverlay"></div>
+    <div id="blurMessage" onclick="reset()">Press ESC to go back</div>
     <div id="iconContainer">
         <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
         <div id="textContainer">
@@ -27,40 +26,61 @@
     <b>
         <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
     </b>
+
     <div id="inputContainer">
-        <input id="First_Monster" autocomplete="off" placeholder="First Monster"><br><br>
 
-        <input id="Second_Monster" autocomplete="off" placeholder="Second Monster"><br><br>
+        <div class="divider">
+            <span>BREED A MONSTER</span>
+        </div><br>
 
-        <input id="Search_Monster" autocomplete="off" placeholder="Search for a Monster"><br><br>
+        <input id="First_Monster" autocomplete="off" placeholder="Choose First Monster"><br><br>
+        <input id="Second_Monster" autocomplete="off" placeholder="Choose Second Monster"><br><br>
 
-        <button id="breedButton">Breed Or Search</button>
-        <button id="resetButton" onclick="reset()">Reset</button>
+        <div class="divider">
+            <span>OR</span>
+        </div><br>
+
+        <input id="Search_Monster" autocomplete="off" placeholder="Search any monster"><br><br>
     </div>
+
+    <div id="dynamicMonsterGrid"></div>
 
     <div id="suggestions1" class="suggestions"></div>
     <div id="suggestions2" class="suggestions"></div>
     <div id="suggestions3" class="suggestions"></div>
 
     <div id="resultContainer">
-        <button id="costumeButton">Switch Costume</button>
-        <button id="majorMinorButton">Switch</button>
-        <button id="common">Common</button>
-        <button id="rare">Rare</button>
-        <button id="epic">Epic</button>
-        <button id="volume-button" title="Play Sound" onclick="playSound()"><i class="fas fa-volume-up"></i></button>
-        <div id="imageContainer">
+
+        <div id="leftPanel">
             <div id="tabsContainer" class="tabs-container"></div>
-            <div id="loadingSpinner" class="spinner"></div>
-            <img id="monsterImage" class="monster-image">
+
+            <div id="utilityButtons">
+                <button id="costumeButton">Switch Costume</button>
+                <button id="majorMinorButton">Switch</button>
+                <button id="common">Common</button>
+                <button id="rare">Rare</button>
+                <button id="epic">Epic</button>
+                <button id="volume-button" title="Play Sound" onclick="playSound()"><i
+                        class="fas fa-volume-up"></i></button>
+            </div>
+
+            <div id="imageContainer">
+                <div id="loadingSpinner" class="spinner"></div>
+                <img id="monsterImage" class="monster-image">
+            </div>
         </div>
-        <div id="statsBox" style="color: rgb(182, 6, 6); z-index: 102;">
+
+        <div id="statsBox">
             <h3 id="name"></h3>
             <p id="breedingTime"></p>
             <p id="breedingCombo"></p>
         </div>
-        <img id="noMonsterImage">
+
+    </div>
+
+    <img id="noMonsterImage">
     </div>
     <script src="JS/monster.js"></script>
 </body>
+
 </html>
