@@ -26,28 +26,43 @@
     <b>
         <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
     </b>
-
     <div id="inputContainer">
-
-        <div class="divider">
-            <span>BREED A MONSTER</span>
-        </div><br>
-
-        <input id="First_Monster" autocomplete="off" placeholder="Choose First Monster"><br><br>
-        <input id="Second_Monster" autocomplete="off" placeholder="Choose Second Monster"><br><br>
+        <button id="openBreedUI" class="main-menu-btn">🎶 Breed Two Monsters</button><br><br>
 
         <div class="divider">
             <span>OR</span>
         </div><br>
 
-        <input id="Search_Monster" autocomplete="off" placeholder="Search any monster"><br><br>
+        <input id="Search_Monster" autocomplete="off" placeholder="🔍 Search any monster..." style="color: black;"><br><br>
+    </div>
+
+    <div id="breedSplitView">
+        <button id="closeBreedUI" title="Close"><i class="fas fa-times"></i></button>
+        
+        <div class="split-half">
+            <h2>Parent 1</h2>
+            <div id="placeholder-1" class="empty-slot"><i class="fas fa-egg"></i></div>
+            <img id="parent-img-1" class="parent-img" style="display: none;">
+            
+            <input id="First_Monster" autocomplete="off" placeholder="Choose First Monster...">
+            <div id="grid1" class="local-grid"></div> 
+        </div>
+        
+        <div class="split-divider">
+            <div class="fusion-badge"><i class="fas fa-plus"></i></div>
+        </div>
+        
+        <div class="split-half">
+            <h2>Parent 2</h2>
+            <div id="placeholder-2" class="empty-slot"><i class="fas fa-egg"></i></div>
+            <img id="parent-img-2" class="parent-img" style="display: none;">
+
+            <input id="Second_Monster" autocomplete="off" placeholder="Choose Second Monster...">
+            <div id="grid2" class="local-grid"></div>
+        </div>
     </div>
 
     <div id="dynamicMonsterGrid"></div>
-
-    <div id="suggestions1" class="suggestions"></div>
-    <div id="suggestions2" class="suggestions"></div>
-    <div id="suggestions3" class="suggestions"></div>
 
     <div id="resultContainer">
 
@@ -79,7 +94,6 @@
     </div>
 
     <img id="noMonsterImage">
-    </div>
     <script src="JS/monster.js"></script>
 </body>
 
