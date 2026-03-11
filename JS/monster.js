@@ -1,4 +1,3 @@
-const breedingButton = document.getElementById('breedButton');
 const firstInput = document.getElementById('First_Monster');
 const secondInput = document.getElementById('Second_Monster');
 const searchInput = document.getElementById('Search_Monster');
@@ -17,9 +16,10 @@ const majorMinorButton = document.getElementById('majorMinorButton');
 const tabsContainer = document.getElementById('tabsContainer');
 const costumeButton = document.getElementById('costumeButton');
 const dynamicGrid = document.getElementById('dynamicMonsterGrid');
+const openBreedBtn = document.getElementById('openBreedUI');
+const breedSplitView = document.getElementById('breedSplitView');
+const closeBreedBtn = document.getElementById('closeBreedUI');
 
-// --- NEW FALLBACK FOR GRID ERRORS ---
-// We will use the existing mammoticon favicon as the placeholder
 const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
 
 let currentRarity = "";
@@ -28,16 +28,12 @@ let currentMonster = null;
 
 // --- 1. BUILD REGISTRY ---
 async function buildMonsterRegistry() {
-    // Also updated this to the faster jsDelivr link for you!
     const breedingUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/monsters/Extras/breedingCombos.json";
-
     try {
-        const response = await fetch(breedingUrl);
+        const response = await fetch(breedingUrl, { credentials: 'omit' });
         const data = await response.json();
         const uniqueNames = new Set();
         const clean = (name) => name ? name.trim() : "";
-
-        // NEW: Ignore list to filter out breeding instructions
         const ignoreList = ["any", "invalid", "no combination", "unknown"];
 
         Object.keys(data).forEach(key => {
@@ -53,7 +49,6 @@ async function buildMonsterRegistry() {
             }
         });
 
-        // NEW: Filter the final array against the ignore list
         monsterRegistry = Array.from(uniqueNames).filter(n => {
             const lowerName = n.toLowerCase();
             return n !== "" && !ignoreList.some(ignoreWord => lowerName.includes(ignoreWord));
@@ -66,20 +61,16 @@ async function buildMonsterRegistry() {
 }
 buildMonsterRegistry();
 
-
 // --- 2. CORE FUNCTIONS ---
 function findTrueName(input) {
     if (!input) return null;
     const cleanInput = input.trim().toLowerCase();
-
     if (typeof MSM !== 'undefined') {
         const trueKey = Object.keys(MSM).find(key => key.toLowerCase() === cleanInput);
         if (trueKey) return trueKey;
     }
-
     const registryKey = monsterRegistry.find(key => key.toLowerCase() === cleanInput);
     if (registryKey) return registryKey;
-
     return input.trim();
 }
 
@@ -104,37 +95,26 @@ function updateActiveTab() {
 
 function loadMonsterImage(name) {
     if (!name) return;
-
     monsterImage.classList.remove('animate-enter');
     monsterImage.style.opacity = '0';
     if (loadingSpinner) loadingSpinner.style.display = 'block';
 
     const monster = MSM[name];
-
     monsterImage.onload = () => {
         if (loadingSpinner) loadingSpinner.style.display = 'none';
         monsterImage.style.opacity = '1';
         monsterImage.classList.add('animate-enter');
     };
-
     currentMonster = monster;
-
-    try {
-        MSM[name].loadImage("monsterImage");
-    } catch (e) {
-        console.warn("Image load trigger failed:", e);
-        if (loadingSpinner) loadingSpinner.style.display = 'none';
-    }
+    try { MSM[name].loadImage("monsterImage"); } 
+    catch (e) { if (loadingSpinner) loadingSpinner.style.display = 'none'; }
 }
 
 function showMonsterUI(isBreedingResult = false) {
     monsterImage.style.display = 'revert';
     blurMessage.style.display = 'revert';
-
     blurOverlay.style.display = 'block';
-    requestAnimationFrame(() => {
-        blurOverlay.classList.add('active');
-    });
+    requestAnimationFrame(() => blurOverlay.classList.add('active'));
 
     statBox.style.display = 'revert';
     volumeButton.style.display = 'revert';
@@ -142,33 +122,21 @@ function showMonsterUI(isBreedingResult = false) {
     noMonsterImage.style.display = 'none';
 
     if (isBreedingResult) {
-        commonButton.style.display = 'none';
-        rareButton.style.display = 'none';
-        epicButton.style.display = 'none';
+        commonButton.style.display = 'none'; rareButton.style.display = 'none'; epicButton.style.display = 'none';
         volumeButton.style.display = 'none';
-        tabsContainer.style.display = 'flex';
-        tabsContainer.style.justifyContent = 'center';
-        tabsContainer.style.gap = '10px';
+        tabsContainer.style.display = 'flex'; tabsContainer.style.justifyContent = 'center'; tabsContainer.style.gap = '10px';
     } else {
-        commonButton.style.display = 'revert';
-        rareButton.style.display = 'revert';
-        epicButton.style.display = 'revert';
-        volumeButton.style.display = 'revert';
-        tabsContainer.style.display = 'none';
+        commonButton.style.display = 'revert'; rareButton.style.display = 'revert'; epicButton.style.display = 'revert';
+        volumeButton.style.display = 'revert'; tabsContainer.style.display = 'none';
     }
 }
 
-document.addEventListener('keydown', e => {
-    if (e.key === "Escape") reset();
-});
+document.addEventListener('keydown', e => { if (e.key === "Escape") reset(); });
 
 async function costumeErrorHandling(name) {
     const costumes = await MSM[name].getCostumes();
-    if (!costumes || costumes.length === 0) {
-        costumeButton.style.display = 'none';
-    } else {
-        costumeButton.style.display = 'revert';
-    }
+    if (!costumes || costumes.length === 0) costumeButton.style.display = 'none';
+    else costumeButton.style.display = 'revert';
 }
 
 function reset() {
@@ -177,16 +145,9 @@ function reset() {
     blurMessage.style.display = 'none';
 
     blurOverlay.classList.remove('active');
-    setTimeout(() => {
-        if (!firstInput.classList.contains('expanded-search')) {
-            blurOverlay.style.display = 'none';
-        }
-    }, 500);
+    setTimeout(() => { if (!firstInput.classList.contains('expanded-search')) blurOverlay.style.display = 'none'; }, 500);
 
-    if (tabsContainer) {
-        tabsContainer.innerHTML = '';
-        tabsContainer.style.display = 'none';
-    }
+    if (tabsContainer) { tabsContainer.innerHTML = ''; tabsContainer.style.display = 'none'; }
 
     [commonButton, rareButton, epicButton, statBox, noMonsterImage, volumeButton, costumeButton, majorMinorButton].forEach(el => {
         if (el) el.style.display = 'none';
@@ -195,69 +156,120 @@ function reset() {
 
     if (loadingSpinner) loadingSpinner.style.display = 'none';
 
-    searchInput.value = "";
-    firstInput.value = "";
-    secondInput.value = "";
-    currentRarity = "";
+    searchInput.value = ""; firstInput.value = ""; secondInput.value = ""; currentRarity = "";
 
-    // Close any expanded search and grid safely
+    // Reset UI Refresh Splity View State
+    document.querySelectorAll('.parent-img').forEach(img => { 
+        img.style.display = 'none'; 
+        img.src = ''; 
+        img.classList.remove('breeding-glow-left', 'breeding-glow-right');
+    });
+    document.querySelectorAll('.empty-slot').forEach(slot => { slot.style.display = 'flex'; });
+    document.querySelectorAll('.split-half h2').forEach((h2, index) => { 
+        h2.classList.remove('active-label'); 
+        h2.textContent = index === 0 ? 'Parent 1' : 'Parent 2'; // Restores default text
+    });
+    // Stop the breeding animation if ESC is pressed midway
+    const badge = document.querySelector('.fusion-badge');
+    if (badge) {
+        badge.classList.remove('breeding');
+        const icon = badge.querySelector('i');
+        if (icon) icon.className = 'fas fa-plus';
+    }
+    firstInput.style.opacity = '1';
+    secondInput.style.opacity = '1';
+
     closeExpandedInput();
+    checkInputGlows(); // <-- FIX: Clears the green glows immediately on reset
 }
 
+// --- STEP 2: Split View Logic ---
+openBreedBtn.addEventListener('click', () => {
+    breedSplitView.style.display = 'flex';
+    requestAnimationFrame(() => breedSplitView.classList.add('active'));
+});
+
+closeBreedBtn.addEventListener('click', closeSplitView);
+
+function closeSplitView() {
+    closeExpandedInput();
+    breedSplitView.classList.remove('active');
+    setTimeout(() => { breedSplitView.style.display = 'none'; }, 400);
+}
 
 // --- 3. UI REFRESH: Smooth Expansion & Dynamic API Grid ---
-
 let activeInput = null;
 let activeOriginalRect = null;
+let activeGrid = null;
+const grid1 = document.getElementById('grid1');
+const grid2 = document.getElementById('grid2');
 
-function setupSmoothExpansionAndGrid(inputElement, includeRarities = true) {
+function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities = true, animMode = 'full') {
+    let selectedIndex = -1;
+
     inputElement.addEventListener('focus', () => {
-        if (activeInput && activeInput !== inputElement) {
-            closeExpandedInput(); // Close others if open
-        }
+        if (activeInput && activeInput !== inputElement) closeExpandedInput();
 
         activeInput = inputElement;
-        activeOriginalRect = inputElement.getBoundingClientRect();
+        activeGrid = targetGrid;
 
-        // Lock position
+        // --- FIX: Hide the Parent text and egg while actively searching ---
+        const splitHalf = inputElement.closest('.split-half');
+        if (splitHalf) splitHalf.classList.add('searching');
+        // ------------------------------------------------------------------
+
+        activeOriginalRect = inputElement.getBoundingClientRect();
         inputElement.style.transition = 'none';
         inputElement.style.position = 'fixed';
         inputElement.style.top = activeOriginalRect.top + 'px';
         inputElement.style.left = activeOriginalRect.left + 'px';
         inputElement.style.width = activeOriginalRect.width + 'px';
         inputElement.style.margin = '0';
+        void inputElement.offsetWidth;
 
-        void inputElement.offsetWidth; // Force layout
-
-        // Animate
         inputElement.style.transition = 'all 0.5s cubic-bezier(0.25, 1, 0.3, 1)';
-        const targetWidth = Math.min(window.innerWidth * 0.9, 1300);
-        const targetLeft = (window.innerWidth - targetWidth) / 2;
-        const targetTop = window.innerHeight * 0.12;
+        let targetWidth, targetLeft, targetTop;
+
+        if (animMode === 'full') {
+            targetWidth = Math.min(window.innerWidth * 0.9, 1300);
+            targetLeft = (window.innerWidth - targetWidth) / 2;
+            targetTop = window.innerHeight * 0.12;
+            blurOverlay.style.display = 'block';
+            requestAnimationFrame(() => blurOverlay.classList.add('active'));
+        } else {
+            const parentRect = inputElement.parentElement.getBoundingClientRect();
+            targetWidth = Math.min(parentRect.width * 0.85, 600);
+            targetLeft = parentRect.left + (parentRect.width - targetWidth) / 2;
+            targetTop = window.innerHeight * 0.12; 
+        }
 
         inputElement.style.top = targetTop + 'px';
         inputElement.style.left = targetLeft + 'px';
         inputElement.style.width = targetWidth + 'px';
-
+        
         inputElement.classList.add('expanded-search');
-        blurOverlay.style.display = 'block';
-        dynamicGrid.classList.add('active');
+        checkInputGlows(); // <-- FIX: Turn off the green glow while expanded
 
-        requestAnimationFrame(() => {
-            blurOverlay.classList.add('active');
-        });
-
-        inputElement.dispatchEvent(new Event('input')); // Trigger grid
+        targetGrid.classList.add('active');
+        inputElement.dispatchEvent(new Event('input'));
     });
 
     inputElement.addEventListener('input', () => {
         if (activeInput !== inputElement) return;
+        selectedIndex = -1;
 
-        const query = inputElement.value.toLowerCase().trim();
-        if (!query) {
-            dynamicGrid.innerHTML = '';
-            return;
+        const label = inputElement.parentElement.querySelector('h2');
+        const imgElement = inputElement.parentElement.querySelector('.parent-img');
+        const placeholder = inputElement.parentElement.querySelector('.empty-slot');
+        if (label && imgElement && placeholder) {
+            label.classList.remove('active-label');
+            // NEW: Restore the correct Parent text
+            label.textContent = inputElement.id === 'First_Monster' ? 'Parent 1' : 'Parent 2';
+            imgElement.style.display = 'none';
+            placeholder.style.display = 'flex';
         }
+        const query = inputElement.value.toLowerCase().trim();
+        if (!query) { targetGrid.innerHTML = ''; return; }
 
         const matches = monsterRegistry.filter(name => {
             const lowerName = name.toLowerCase();
@@ -267,7 +279,7 @@ function setupSmoothExpansionAndGrid(inputElement, includeRarities = true) {
         });
 
         const topMatches = matches.slice(0, 12);
-        dynamicGrid.innerHTML = '';
+        targetGrid.innerHTML = '';
 
         topMatches.forEach(match => {
             const item = document.createElement('div');
@@ -276,81 +288,104 @@ function setupSmoothExpansionAndGrid(inputElement, includeRarities = true) {
             const img = document.createElement('img');
             const safeId = 'grid-img-' + match.replace(/[^a-zA-Z0-9]/g, '');
             img.id = safeId;
+            img.onerror = () => { img.onerror = null; img.src = GRID_FALLBACK_IMAGE; };
 
-            // --- UI REFRESH: Error Handling ---
-            // If the image fails to load, swap it with the mammoticon fallback
-            img.onerror = () => {
-                // Remove onerror to prevent infinite loops if the fallback itself is missing
-                img.onerror = null;
-                console.warn(`Grid image failed to load for: ${match}. Swapping to fallback.`);
-                img.src = GRID_FALLBACK_IMAGE;
-            };
+            const labelTxt = document.createElement('span');
+            labelTxt.textContent = match;
 
-            const label = document.createElement('span');
-            label.textContent = match;
+            item.appendChild(img); item.appendChild(labelTxt);
 
-            item.appendChild(img);
-            item.appendChild(label);
-
-            // Apply click to the entire item box, not just the img
-            // Apply click to the entire item box, not just the img
             item.addEventListener('click', async () => {
                 inputElement.value = match;
                 closeExpandedInput();
+                checkInputGlows(); 
 
-                // --- AUTO-SEARCH LOGIC ---
+                const trueName = findTrueName(match);
+
+                if (label && imgElement && placeholder) {
+                    label.classList.add('active-label');
+                    label.textContent = match; // NEW: Swap the text to the chosen monster's name!
+                    placeholder.style.display = 'none';
+                    imgElement.style.display = 'block';                    try { if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(imgElement.id); } 
+                    catch (e) { imgElement.src = GRID_FALLBACK_IMAGE; }
+                }
+
                 if (inputElement === searchInput) {
-                    const trueName = findTrueName(match);
                     if (/^rare/i.test(trueName)) currentRarity = "Rare";
                     else if (/^epic/i.test(trueName)) currentRarity = "Epic";
                     else currentRarity = "Common";
 
                     monsterImage.setAttribute('data-name', normalizeName(trueName));
                     tabsContainer.innerHTML = '';
-                    showMonsterUI(false);
-                    updateActiveTab();
-                    loadMonsterImage(trueName);
-                    costumeErrorHandling(trueName);
-                    loadStats(trueName);
+                    showMonsterUI(false); updateActiveTab(); loadMonsterImage(trueName);
+                    costumeErrorHandling(trueName); loadStats(trueName);
                 }
-
-                // --- NEW: AUTO-BREED LOGIC ---
-                // If this was a breeding input, check if both are now filled
                 else if (inputElement === firstInput || inputElement === secondInput) {
                     if (firstInput.value.trim() !== "" && secondInput.value.trim() !== "") {
-                        // Small delay so the input has time to shrink back down before the UI changes
-                        setTimeout(async () => {
-                            await comboFinder();
-                        }, 300);
+                        const badge = document.querySelector('.fusion-badge');
+                        const badgeIcon = badge.querySelector('i');
+                        const img1 = document.getElementById('parent-img-1');
+                        const img2 = document.getElementById('parent-img-2');
+
+                        firstInput.style.opacity = '0'; secondInput.style.opacity = '0';
+                        if (grid1) grid1.classList.remove('active'); if (grid2) grid2.classList.remove('active');
+
+                        badgeIcon.className = 'fas fa-heart'; badge.classList.add('breeding');
+                        if (img1) img1.classList.add('breeding-glow-left');
+                        if (img2) img2.classList.add('breeding-glow-right');
+
+                        setTimeout(async () => { 
+                            closeSplitView(); 
+                            await comboFinder(); 
+                            setTimeout(() => {
+                                badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
+                                firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
+                                if (img1) img1.classList.remove('breeding-glow-left');
+                                if (img2) img2.classList.remove('breeding-glow-right');
+                            }, 500);
+                        }, 1800);
                     }
                 }
             });
-            dynamicGrid.appendChild(item);
+            targetGrid.appendChild(item);
 
             try {
                 const trueName = findTrueName(match);
-                if (typeof MSM !== 'undefined' && MSM[trueName]) {
-                    MSM[trueName].loadImage(safeId);
-                }
-            } catch (e) {
-                console.warn("API Image load failed for:", match);
-                // Manually trigger the error fallback if the API call fails
-                img.onerror();
-            }
+                if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(safeId);
+            } catch (e) { img.onerror(); }
         });
-    });
+});
+
+inputElement.addEventListener('keydown', (e) => {
+        const items = targetGrid.querySelectorAll('.grid-monster-item');
+        if (items.length === 0) return;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); selectedIndex = (selectedIndex + 1) % items.length; updateSelection(items); } 
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); selectedIndex = (selectedIndex - 1 + items.length) % items.length; updateSelection(items); } 
+        else if (e.key === 'Enter' && selectedIndex >= 0) { e.preventDefault(); items[selectedIndex].click(); }
+});
+
+function updateSelection(items) {
+        items.forEach(item => item.classList.remove('keyboard-selected'));
+        if (selectedIndex >= 0) {
+            items[selectedIndex].classList.add('keyboard-selected');
+            items[selectedIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+    }
 }
 
 function closeExpandedInput() {
     if (!activeInput) return;
-
-    const currentInput = activeInput;
-    activeInput = null;
-
+    const currentInput = activeInput; const currentGrid = activeGrid;
+    activeInput = null; activeGrid = null;
     currentInput.blur();
-    blurOverlay.classList.remove('active');
+    
+    if (currentGrid) currentGrid.classList.remove('active');
     currentInput.classList.remove('expanded-search');
-    dynamicGrid.classList.remove('active');
+
+    // --- FIX: Bring back the Parent text/egg/image when the search closes ---
+    const splitHalf = currentInput.closest('.split-half');
+    if (splitHalf) splitHalf.classList.remove('searching');
+    // ------------------------------------------------------------------------
 
     if (activeOriginalRect) {
         currentInput.style.top = activeOriginalRect.top + 'px';
@@ -358,95 +393,74 @@ function closeExpandedInput() {
         currentInput.style.width = activeOriginalRect.width + 'px';
     }
 
-    setTimeout(() => {
-        currentInput.style.transition = '';
-        currentInput.style.position = '';
-        currentInput.style.top = '';
-        currentInput.style.left = '';
-        currentInput.style.width = '';
-        currentInput.style.margin = '';
+    if (currentInput === searchInput) blurOverlay.classList.remove('active');
 
-        if (!blurOverlay.classList.contains('active') && monsterImage.style.display !== 'revert') {
-            blurOverlay.style.display = 'none';
-        }
+    checkInputGlows(); // <-- FIX: Turn the green glow back on if they successfully picked one
+
+    setTimeout(() => {
+        currentInput.style.transition = ''; currentInput.style.position = ''; currentInput.style.top = ''; currentInput.style.left = ''; currentInput.style.width = ''; currentInput.style.margin = '';
+        if (currentInput === searchInput && !blurOverlay.classList.contains('active') && monsterImage.style.display !== 'revert') blurOverlay.style.display = 'none';
     }, 500);
 }
 
 blurOverlay.addEventListener('click', closeExpandedInput);
 
-// Initialize all three inputs (Search allows rarities, Breeding inputs do not)
-setupSmoothExpansionAndGrid(searchInput, true);
-setupSmoothExpansionAndGrid(firstInput, false);
-setupSmoothExpansionAndGrid(secondInput, false);
+function checkInputGlows() {
+    // FIX: Ensure it never glows while it's actively expanded/being typed in
+    if (firstInput.value.trim() !== "" && !firstInput.classList.contains('expanded-search')) {
+        firstInput.classList.add('ready-glow');
+    } else {
+        firstInput.classList.remove('ready-glow');
+    }
+
+    if (secondInput.value.trim() !== "" && !secondInput.classList.contains('expanded-search')) {
+        secondInput.classList.add('ready-glow');
+    } else {
+        secondInput.classList.remove('ready-glow');
+    }
+}
+
+setupSmoothExpansionAndGrid(searchInput, dynamicGrid, true, 'full');
+setupSmoothExpansionAndGrid(firstInput, grid1, false, 'local');
+setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 
 commonButton.addEventListener("click", () => {
-    const base = monsterImage.getAttribute('data-name');
-    if (!base) return;
-    const trueName = findTrueName(base);
-    searchInput.value = trueName;
-    currentRarity = "Common";
-    updateActiveTab();
-    costumeErrorHandling(trueName);
-    loadMonsterImage(trueName);
-    loadStats(trueName);
+    const base = monsterImage.getAttribute('data-name'); if (!base) return;
+    const trueName = findTrueName(base); searchInput.value = trueName; currentRarity = "Common";
+    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
 });
 
 rareButton.addEventListener("click", () => {
-    const base = monsterImage.getAttribute('data-name');
-    if (!base) return;
-    const name = `Rare ${base}`;
-    const trueName = findTrueName(name);
-
+    const base = monsterImage.getAttribute('data-name'); if (!base) return;
+    const name = `Rare ${base}`; const trueName = findTrueName(name);
     let isEmpty = MSM[trueName].costumes;
-    if (isEmpty && isEmpty.length === 0) { costumeButton.style.display = 'none'; }
-    else { costumeButton.style.display = 'revert'; }
-
-    searchInput.value = trueName;
-    currentRarity = "Rare";
-    updateActiveTab();
-    costumeErrorHandling(trueName);
-    loadMonsterImage(trueName);
-    loadStats(trueName);
+    if (isEmpty && isEmpty.length === 0) costumeButton.style.display = 'none'; else costumeButton.style.display = 'revert';
+    searchInput.value = trueName; currentRarity = "Rare";
+    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
 });
 
 epicButton.addEventListener("click", () => {
-    const base = monsterImage.getAttribute('data-name');
-    if (!base) return;
-    const name = `Epic ${base}`;
-    const trueName = findTrueName(name);
-
-    searchInput.value = trueName;
-    currentRarity = "Epic";
-    updateActiveTab();
-    costumeErrorHandling(trueName);
-    loadMonsterImage(trueName);
-    loadStats(trueName);
+    const base = monsterImage.getAttribute('data-name'); if (!base) return;
+    const name = `Epic ${base}`; const trueName = findTrueName(name);
+    searchInput.value = trueName; currentRarity = "Epic";
+    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
 });
 
 costumeButton.addEventListener("click", async () => {
     if (!currentMonster) return;
     const nextCostumeUrl = await currentMonster.nextCostume();
-    if (!nextCostumeUrl) {
-        alert("No costumes available for this monster!");
-        return;
-    }
+    if (!nextCostumeUrl) { alert("No costumes available for this monster!"); return; }
     monsterImage.src = nextCostumeUrl;
 });
 
 majorMinorButton.addEventListener("click", () => {
-    const currentName = monsterImage.getAttribute('data-name');
-    if (!currentName) return;
-
+    const currentName = monsterImage.getAttribute('data-name'); if (!currentName) return;
     let newName = "";
     if (currentName.includes("(Major)")) newName = currentName.replace("(Major)", "(Minor)");
     else if (currentName.includes("(Minor)")) newName = currentName.replace("(Minor)", "(Major)");
-
     if (newName) {
-        const trueName = findTrueName(newName);
-        searchInput.value = trueName;
-        monsterImage.setAttribute('data-name', trueName);
-        loadMonsterImage(trueName);
-        loadStats(trueName);
+        const trueName = findTrueName(newName); searchInput.value = trueName; monsterImage.setAttribute('data-name', trueName);
+        loadMonsterImage(trueName); loadStats(trueName);
     }
 });
 
@@ -456,175 +470,70 @@ async function comboFinder() {
     const result = await MSM.twoMonsterCombo(combo);
 
     if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI(false);
-        showNoMonsterError();
-        return;
+        showMonsterUI(false); showNoMonsterError(); return;
     }
 
     tabsContainer.innerHTML = '';
-
     if (result.length > 1) {
         result.sort((a, b) => b.length - a.length);
         result.forEach((monsterName, index) => {
-            const btn = document.createElement('button');
-            btn.className = 'tab-button';
-            btn.textContent = monsterName;
-
+            const btn = document.createElement('button'); btn.className = 'tab-button'; btn.textContent = monsterName;
             btn.addEventListener('click', () => {
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
-                btn.classList.add('active-tab');
-                loadFromTab(monsterName);
-                costumeErrorHandling(monsterName)
+                btn.classList.add('active-tab'); loadFromTab(monsterName); costumeErrorHandling(monsterName)
             });
-
             if (index === 0) btn.classList.add('active-tab');
-            tabsContainer.appendChild(btn);
-            costumeErrorHandling(monsterName);
+            tabsContainer.appendChild(btn); costumeErrorHandling(monsterName);
         });
-
-        showMonsterUI(true);
-        loadFromTab(result[0]);
-
+        showMonsterUI(true); loadFromTab(result[0]);
     } else {
-        const name = result[0];
-        const trueName = findTrueName(name);
-
-        if (/^rare/i.test(trueName)) currentRarity = "Rare";
-        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
-        else currentRarity = "Common";
-
-        monsterImage.setAttribute('data-name', normalizeName(trueName));
-        showMonsterUI(false);
-        updateActiveTab();
-        loadMonsterImage(trueName);
-        loadStats(trueName);
+        const name = result[0]; const trueName = findTrueName(name);
+        if (/^rare/i.test(trueName)) currentRarity = "Rare"; else if (/^epic/i.test(trueName)) currentRarity = "Epic"; else currentRarity = "Common";
+        monsterImage.setAttribute('data-name', normalizeName(trueName)); showMonsterUI(false);
+        updateActiveTab(); loadMonsterImage(trueName); loadStats(trueName);
     }
 }
 
 function loadFromTab(monsterName) {
-    const trueName = findTrueName(monsterName);
-    searchInput.value = trueName;
-
-    if (/^rare/i.test(trueName)) currentRarity = "Rare";
-    else if (/^epic/i.test(trueName)) currentRarity = "Epic";
-    else currentRarity = "Common";
-
-    monsterImage.setAttribute('data-name', normalizeName(trueName));
-    loadMonsterImage(trueName);
-    loadStats(trueName);
+    const trueName = findTrueName(monsterName); searchInput.value = trueName;
+    if (/^rare/i.test(trueName)) currentRarity = "Rare"; else if (/^epic/i.test(trueName)) currentRarity = "Epic"; else currentRarity = "Common";
+    monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
 // --- STATS & UTILS ---
 async function loadStats(forceName) {
-    const rawInput = forceName || searchInput.value.trim();
-    if (!rawInput) return;
+    const rawInput = forceName || searchInput.value.trim(); if (!rawInput) return;
     const trueName = findTrueName(rawInput);
-
     try {
-        const baseName = normalizeName(trueName);
-        const monster = MSM[trueName];
-
+        const baseName = normalizeName(trueName); const monster = MSM[trueName];
         if (!monster) throw new Error("Monster not found");
+        const [times, combos] = await Promise.all([ monster.getBreedingTime(), monster.getBreedingCombos() ]);
 
-        const [times, combos] = await Promise.all([
-            monster.getBreedingTime(),
-            monster.getBreedingCombos()
-        ]);
+        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; } 
+        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; } 
+        else { majorMinorButton.style.display = "none"; }
 
-        if (baseName.includes("(Major)")) {
-            majorMinorButton.textContent = "Switch To Minor";
-            majorMinorButton.style.display = "revert";
-        } else if (baseName.includes("(Minor)")) {
-            majorMinorButton.textContent = "Switch To Major";
-            majorMinorButton.style.display = "revert";
-        } else {
-            majorMinorButton.style.display = "none";
-        }
+        const displayName = toDisplayCase(baseName); const statsBox = document.getElementById('statsBox');
+        const nameHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name </span><h3>${currentRarity || "Common"} ${displayName}</h3></div>`;
+        const timeContent = (times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
+        const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
+        const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
+        const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
-        const displayName = toDisplayCase(baseName);
-        const statsBox = document.getElementById('statsBox');
-
-        const nameHtml = `
-            <div class="stats-bubble">
-                <span class="label-text"><i class="fas fa-dna"></i> Monster Name </span>
-                <h3>${currentRarity || "Common"} ${displayName}</h3>
-            </div>
-        `;
-
-        const timeContent = (times.breedingTime === "Unknown")
-            ? "Not Breedable"
-            : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
-
-        const timeHtml = `
-            <div class="stats-bubble">
-                <span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span>
-                <p style="margin:0; text-align: center;">${timeContent}</p>
-            </div>
-        `;
-
-        const comboList = (!combos || combos.length === 0)
-            ? "• Special Combination Required"
-            : combos.map(c => `• ${c}`).join("<br>");
-
-        const comboHtml = `
-            <div class="stats-bubble">
-                <span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span>
-                <p style="margin:0; font-size: 0.9rem;">${comboList}</p>
-            </div>
-        `;
-
-        statsBox.innerHTML = nameHtml + timeHtml + comboHtml;
-        statsBox.style.display = 'flex';
-
-    } catch (err) {
-        console.error("Stats failed:", err);
-        showNoMonsterError();
-    }
+        statsBox.innerHTML = nameHtml + timeHtml + comboHtml; statsBox.style.display = 'flex';
+    } catch (err) { console.error("Stats failed:", err); showNoMonsterError(); }
 }
-
-function lockInput() {
-    setInterval(() => {
-        if (firstInput.value || secondInput.value) {
-            searchInput.disabled = true;
-            firstInput.disabled = false;
-            secondInput.disabled = false;
-        } else if (searchInput.value) {
-            searchInput.disabled = false;
-            firstInput.disabled = true;
-            secondInput.disabled = true;
-        } else {
-            searchInput.disabled = false;
-            firstInput.disabled = false;
-            secondInput.disabled = false;
-        }
-    }, 300);
-}
-lockInput();
 
 function showNoMonsterError() {
-    monsterImage.style.display = 'none';
-    if (loadingSpinner) loadingSpinner.style.display = 'none';
-
-    if (tabsContainer) {
-        tabsContainer.innerHTML = '';
-        tabsContainer.style.display = 'none';
-    }
-
-    [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton].forEach(el => {
-        if (el) el.style.display = 'none';
-    });
-
-    noMonsterImage.style.display = 'revert';
-    noMonsterImage.src = `images/important/Nomonsterfound.png`;
+    monsterImage.style.display = 'none'; if (loadingSpinner) loadingSpinner.style.display = 'none';
+    if (tabsContainer) { tabsContainer.innerHTML = ''; tabsContainer.style.display = 'none'; }
+    [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton].forEach(el => { if (el) el.style.display = 'none'; });
+    noMonsterImage.style.display = 'revert'; noMonsterImage.src = `images/important/Nomonsterfound.png`;
 }
 
 async function playSound() {
-    const raw = searchInput.value.trim();
-    if (!raw) return;
-    try {
-        const trueName = findTrueName(raw);
-        await MSM[trueName].playSound();
-    }
+    const raw = searchInput.value.trim(); if (!raw) return;
+    try { const trueName = findTrueName(raw); await MSM[trueName].playSound(); }
     catch (err) { console.warn("Sound failed:", err); }
 }
 
@@ -632,28 +541,35 @@ async function playSound() {
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
-
     function loadScript(src) {
         return new Promise((resolve, reject) => {
-            const script = document.createElement("script");
-            script.src = src;
-            script.defer = true;
-            script.onload = () => resolve(src);
-            script.onerror = () => reject(src);
-            document.head.appendChild(script);
+            const script = document.createElement("script"); script.src = src; script.defer = true;
+            script.onload = () => resolve(src); script.onerror = () => reject(src); document.head.appendChild(script);
         });
     }
-
     loadScript(PRIMARY_API)
         .then(src => console.log("MSM API loaded:", src))
-        .catch(() => {
-            console.warn("Primary failed, loading CDN fallback...");
-            return loadScript(FALLBACK_API);
-        })
+        .catch(() => { console.warn("Primary failed, loading CDN fallback..."); return loadScript(FALLBACK_API); })
         .then(src => console.log("MSM API ready:", src))
-        .catch(() => {
-            console.error("All MSM API sources failed");
-            alert("Failed to load MSM API. Network may be blocking scripts.");
-        });
+        .catch(() => { console.error("All MSM API sources failed"); });
 })();
 
+// --- SILENT IMAGE PRELOADER ---
+function silentlyPreloadImages() {
+    if (typeof MSM === 'undefined' || monsterRegistry.length === 0) { setTimeout(silentlyPreloadImages, 500); return; }
+    const cacheBucket = document.createElement('div'); cacheBucket.style.display = 'none'; document.body.appendChild(cacheBucket);
+    let index = 0;
+    function loadNextBatch() {
+        const batchSize = 5;
+        for (let i = 0; i < batchSize && index < monsterRegistry.length; i++, index++) {
+            const trueName = findTrueName(monsterRegistry[index]);
+            if (trueName && MSM[trueName] && !trueName.toLowerCase().startsWith("rare ") && !trueName.toLowerCase().startsWith("epic ")) {
+                const img = document.createElement('img'); img.id = `preload-${trueName.replace(/[^a-zA-Z0-9]/g, '')}`; cacheBucket.appendChild(img);
+                try { MSM[trueName].loadImage(img.id); } catch(e) {}
+            }
+        }
+        if (index < monsterRegistry.length) setTimeout(loadNextBatch, 300);
+    }
+    setTimeout(loadNextBatch, 1500);
+}
+silentlyPreloadImages();
