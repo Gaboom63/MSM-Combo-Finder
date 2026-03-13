@@ -18,7 +18,7 @@
     <div id="iconContainer">
         <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
         <div id="textContainer">
-            <div id="hoverText">This Is Still In Progress <br> Please Share Your Thoughts <br> On The <a
+            <div id="hoverText">This Tool Is Updated Frequently! :)<br> Please Share Your Thoughts <br> On The <a
                     href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a
                     href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
         </div>
@@ -26,32 +26,51 @@
     <b>
         <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
     </b>
+    <div id="particles-container"></div>
+
     <div id="inputContainer">
-        <button id="openBreedUI" class="main-menu-btn">🎶 Breed Two Monsters</button><br><br>
+        <button id="openBreedUI" class="theme-btn">Breed Two Monsters</button><br>
+
+        <button id="randomComboBtn" class="theme-btn surprise-variant">
+            <i class="fas fa-dice"></i> Surprise Me!
+        </button><br>
 
         <div class="divider">
             <span>OR</span>
         </div><br>
 
-        <input id="Search_Monster" autocomplete="off" placeholder="🔍 Search any monster..." style="color: black;"><br><br>
+        <input id="Search_Monster" class="theme-search" autocomplete="off"
+            placeholder="🔍 Search any monster..."><br><br>
+
+        <div id="recent-discoveries" class="recent-container">
+            <h3>- Recent Discoveries -</h3>
+            <div id="recent-grid" class="recent-grid">
+            </div>
+        </div>
+    </div>
+
+    <div id="monster-spotlight" style="display: none;">
+        <div class="spotlight-title">Monster of the Day</div>
+        <img id="spotlight-img" class="spotlight-img">
+        <b><div id="spotlight-name" class="spotlight-name">Loading...</div></b>
     </div>
 
     <div id="breedSplitView">
         <button id="closeBreedUI" title="Close"><i class="fas fa-times"></i></button>
-        
+
         <div class="split-half">
             <h2>Parent 1</h2>
             <div id="placeholder-1" class="empty-slot"><i class="fas fa-egg"></i></div>
             <img id="parent-img-1" class="parent-img" style="display: none;">
-            
+
             <input id="First_Monster" autocomplete="off" placeholder="Choose First Monster...">
-            <div id="grid1" class="local-grid"></div> 
+            <div id="grid1" class="local-grid"></div>
         </div>
-        
+
         <div class="split-divider">
             <div class="fusion-badge"><i class="fas fa-plus"></i></div>
         </div>
-        
+
         <div class="split-half">
             <h2>Parent 2</h2>
             <div id="placeholder-2" class="empty-slot"><i class="fas fa-egg"></i></div>
