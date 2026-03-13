@@ -1,124 +1,468 @@
-/* --- Variables --- */
+/* =========================================
+   1. VARIABLES & GLOBALS
+   ========================================= */
 :root {
+    --pure-pink: #ff4d6d;
+    --pure-pink-hover: #ff2a55;
+    --pink-glass: rgba(100, 15, 40, 0.85);
+    --pink-glass-hover: rgba(130, 20, 50, 0.95);
+    --delicate-border: rgba(255, 77, 109, 0.6);
     --main-red: rgb(255, 109, 109);
-    --border-pink: #f7b7b7;
     --float-speed: 4.5s;
     --entrance-speed: 0.5s;
 }
 
-/* --- Global & Fonts --- */
-* { font-family: 'Monster Font'; }
+* {
+    font-family: 'Monster Font';
+}
 
 body {
     text-align: center;
-    position: relative;
     background-color: #E9E2D3;
     color: rgb(33, 35, 146);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
+    margin: 0;
 }
 
 @font-face {
     font-family: 'Monster Font';
     src: url('fonts/OpenDyslexic-Bold.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;
 }
 
-/* --- Title --- */
 #title {
     text-align: center;
     background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
+    margin-top: 20px;
 }
 
-/* --- UI Refresh: Pink Theme Inputs --- */
-#First_Monster, #Second_Monster, #Search_Monster {
-    width: 260px; 
-    height: 42px; 
+/* =========================================
+   2. MAIN DASHBOARD UI (Buttons & Search)
+   ========================================= */
+.theme-btn {
+    width: 280px;
+    height: 45px;
     padding: 0 20px;
-    margin-bottom: 15px;
-    background: var(--main-red); 
-    border: 2px solid var(--border-pink); 
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    font-size: 15px;
-    color: #333333; 
-    box-sizing: border-box; 
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
-    z-index: 98;
-    text-align: center; 
+    margin-bottom: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
 }
 
-input::placeholder {
+/* Breed Button */
+#openBreedUI {
+    background: var(--pink-glass);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#openBreedUI:hover {
+    background: var(--pink-glass-hover);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Surprise Button */
+.surprise-variant {
+    background: var(--pink-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--delicate-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.surprise-variant:hover {
+    background: var(--pink-glass-hover);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Search Bar */
+.theme-search {
+    width: 280px;
+    height: 48px;
+    padding: 0 20px;
+    background: var(--pink-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--delicate-border);
+    border-radius: 30px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    color: #ffffff;
     text-align: center;
-    color: rgba(0, 0, 0, 0.5); 
+    transition: all 0.3s ease;
+}
+
+.theme-search::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.theme-search:focus {
+    outline: none;
+    background: var(--pink-glass-hover);
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    margin: 5px auto 15px auto;
+    color: #ffffff;
     font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+/* =========================================
+   3. WIDGETS (Recent & Spotlight)
+   ========================================= */
+.recent-container {
+    margin: 25px auto 0 auto;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--pink-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--delicate-border);
+    border-radius: 30px;
+    padding: 15px 20px 20px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.recent-container h3 {
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    margin: 0 0 12px 0;
+}
+
+.recent-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recent-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 5px;
+    cursor: pointer;
+    background: rgba(255, 77, 109, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateX(30px) scale(0.8);
+}
+
+.recent-avatar.loaded {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.recent-avatar.loaded:hover {
+    transform: scale(1.15) translateY(-5px);
+    border-color: #ffffff;
+    background: var(--pure-pink);
+    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
+}
+
+#monster-spotlight {
+    position: fixed;
+    /* This keeps it relative to the center of the screen instead of the edge */
+    left: calc(50% + 320px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: var(--pink-glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--delicate-border);
+    border-radius: 24px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    z-index: 50;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fadeIn 1s ease-in forwards;
+}
+
+#monster-spotlight:hover {
+    transform: translateY(-52%);
+    background: var(--pink-glass-hover);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.5);
+}
+
+.spotlight-title {
+    color: #ff9fb3;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #fff,
+    /* 0px horizontal, 0px vertical, 10px blur, white color */
+    0 0 10px #fff,
+    0 0 10px #e60073,
+    /* Add more shadows with increasing blur for a wider glow */
+    0 0 10px #e60073;
+}
+
+.spotlight-img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.6));
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+#monster-spotlight:hover .spotlight-img {
+    transform: scale(1.15) translateY(-5px);
+}
+
+.spotlight-name {
+    font-size: 18px;
+    font-weight: bold;
     letter-spacing: 1px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1050px) {
+    #monster-spotlight {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   4. BREEDING SPLIT VIEW & SEARCH INPUTS
+   ========================================= */
+#breedSplitView {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(15px);
+    display: none;
+    z-index: 800;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#breedSplitView.active {
     opacity: 1;
 }
 
-input:focus::placeholder { color: #555555; font-style: normal; }
-#First_Monster:focus, #Second_Monster:focus, #Search_Monster:focus { outline: none; }
-input:disabled { background-color: #d3d3d3; color: #a0a0a0; cursor: not-allowed; border-color: #a0a0a0; }
+.split-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-/* --- UI Refresh: Expanded Search State --- */
+.split-half h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.split-half h2.active-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+#First_Monster,
+#Second_Monster {
+    width: 260px;
+    height: 42px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    background: rgba(30, 30, 30, 0.65);
+    backdrop-filter: blur(10px);
+    border: 2px solid #555555;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 98;
+}
+
+#First_Monster:focus,
+#Second_Monster:focus {
+    outline: none;
+    border-color: var(--main-red);
+    box-shadow: 0 0 15px rgba(255, 109, 109, 0.4);
+}
+
 .expanded-search {
-    height: 52px !important; 
-    border-radius: 50px !important; 
+    height: 52px !important;
+    border-radius: 50px !important;
     font-size: 18px !important;
-    background: #222222 !important; 
-    color: #ffffff !important;
+    background: #222222 !important;
     border: 2px solid #888888 !important;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15), 0 15px 30px rgba(0,0,0,0.8) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15), 0 15px 30px rgba(0, 0, 0, 0.8) !important;
     z-index: 1000 !important;
     text-align: left !important;
     padding-left: 30px !important;
 }
 
-/* --- UI Refresh: "OR" Divider --- */
-.divider {
+.split-divider {
+    width: 2px;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: auto 0;
+    position: relative;
     display: flex;
     align-items: center;
-    text-align: center;
-    width: 260px; 
-    margin: -5px auto 10px auto; 
-    color: #ffffff; 
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); 
+    justify-content: center;
 }
-.divider::before, .divider::after { content: ''; flex: 1; border-bottom: 2px solid rgba(255, 255, 255, 0.4); }
-.divider span { padding: 0 15px; }
 
-/* --- UI Refresh: Dynamic API Image Grid --- */
-#dynamicMonsterGrid {
+.fusion-badge {
+    position: absolute;
+    background: var(--main-red);
+    border: 3px solid #222222;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.empty-slot {
+    width: 150px;
+    height: 150px;
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.parent-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    animation: popIn 0.5s ease forwards;
+    filter: drop-shadow(0 0 25px rgba(255, 109, 109, 0.3)) drop-shadow(0 10px 15px rgba(0, 0, 0, 0.8));
+}
+
+#closeBreedUI {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#closeBreedUI:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --- Grid Displays --- */
+#dynamicMonsterGrid,
+.local-grid {
     position: fixed;
     top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90vw;
-    max-width: 1000px;
     max-height: 65vh;
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    z-index: 1000;
+    gap: 15px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
+    z-index: 1000;
 }
 
-#dynamicMonsterGrid.active { opacity: 1; pointer-events: all; }
+#dynamicMonsterGrid {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 1000px;
+}
+
+.local-grid {
+    width: 45vw;
+    max-width: 600px;
+    transform: translateX(-50%);
+    z-index: 850;
+}
+
+#grid1 {
+    left: 25%;
+}
+
+#grid2 {
+    left: 75%;
+}
+
+#dynamicMonsterGrid.active,
+.local-grid.active {
+    opacity: 1;
+    pointer-events: all;
+}
 
 .grid-monster-item {
     display: flex;
@@ -130,14 +474,15 @@ input:disabled { background-color: #d3d3d3; color: #a0a0a0; cursor: not-allowed;
     border-radius: 15px;
     padding: 12px;
     width: 120px;
-    transition: all 0.2s cubic-bezier(0.25, 1, 0.3, 1);
+    transition: all 0.2s ease;
 }
 
-.grid-monster-item:hover, .keyboard-selected {
+.grid-monster-item:hover,
+.keyboard-selected {
     transform: scale(1.1) translateY(-5px);
     background: #222222;
     border-color: #888888;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .grid-monster-item img {
@@ -145,102 +490,107 @@ input:disabled { background-color: #d3d3d3; color: #a0a0a0; cursor: not-allowed;
     height: 90px;
     object-fit: contain;
     margin-bottom: 8px;
-    animation: fadeIn 0.3s ease-in; 
+    animation: fadeIn 0.3s ease-in;
 }
-.grid-monster-item span { color: #e0e0e0; font-size: 14px; text-align: center; font-weight: bold; }
 
-/* Custom Scrollbars */
-#dynamicMonsterGrid::-webkit-scrollbar { width: 10px; }
-#dynamicMonsterGrid::-webkit-scrollbar-track { background: rgba(20, 20, 20, 0.4); border-radius: 10px; }
-#dynamicMonsterGrid::-webkit-scrollbar-thumb { background: rgba(80, 80, 80, 0.8); border-radius: 10px; border: 2px solid rgba(20, 20, 20, 0.4); }
-#dynamicMonsterGrid::-webkit-scrollbar-thumb:hover { background: #aaaaaa; }
-
-/* --- UI Refresh: Darkened Blur Overlay --- */
-#blurOverlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(20, 20, 20, 0.8); 
-    backdrop-filter: blur(8px);
-    display: none;
-    opacity: 0; 
-    transition: opacity 0.5s ease;
-    z-index: 100; 
-}
-#blurOverlay.active { opacity: 1; }
-
-/* --- UI Refresh: Dark Theme Result Buttons --- */
-button {
-    padding: 8px 16px;
-    margin: 5px;
-    font-size: 12px;
+.grid-monster-item span {
+    color: #e0e0e0;
+    font-size: 14px;
+    text-align: center;
     font-weight: bold;
-    color: #e0e0e0; 
-    background: rgba(40, 40, 40, 0.85); 
-    border: 1px solid #555555; 
-    border-radius: 20px; 
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.3, 1);
-    position: relative;
-    z-index: 98;
 }
 
-button:hover { 
-    background: #222222; 
-    border-color: #888888;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
-    color: white;
-}
-button:active { transform: translateY(1px); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
-button:focus { outline: none; }
-
-.active-tab {
-    background: rgba(80, 80, 80, 0.9) !important; 
-    color: #ffffff !important; 
-    border-color: #e0e0e0 !important; 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important; 
-    transform: scale(1.1) !important;
-    z-index: 130 !important;
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* --- THE RESPONSIVE FIX: Result Layout & Containers --- */
+::-webkit-scrollbar-track {
+    background: rgba(20, 20, 20, 0.4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.8);
+    border-radius: 10px;
+}
+
+/* =========================================
+   5. RESULTS UI & STATS
+   ========================================= */
 #resultContainer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; 
-    gap: 50px; 
+    flex-wrap: wrap;
+    gap: 50px;
     margin: 40px auto 0;
     width: 95%;
-    max-width: 1000px; 
+    max-width: 1000px;
     position: relative;
     z-index: 120;
 }
 
-#leftPanel { display: flex; flex-direction: column; align-items: center; gap: 15px; max-width: 550px; }
-#utilityButtons { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 8px; width: 100%; }
-#utilityButtons button { white-space: nowrap; }
+#leftPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 550px;
+}
 
-#imageContainer { position: relative; text-align: center; }
+#utilityButtons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
 
-/* --- Monster Image --- */
+button:not(.theme-btn) {
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #e0e0e0;
+    background: rgba(40, 40, 40, 0.85);
+    border: 1px solid #555555;
+    border-radius: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+button:not(.theme-btn):hover {
+    background: #222222;
+    border-color: #888888;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.active-tab {
+    background: rgba(80, 80, 80, 0.9) !important;
+    color: #ffffff !important;
+    border-color: #e0e0e0 !important;
+    transform: scale(1.1) !important;
+}
+
+#imageContainer {
+    position: relative;
+    text-align: center;
+}
+
 .monster-image {
     width: 100%;
     max-width: 320px;
     height: auto;
-    opacity: 0;
     display: none;
+}
+
+.animate-enter {
     animation: slide-up 0.5s forwards;
 }
-#monsterImage { opacity: 0; transition: opacity 0.1s; }
 
-/* --- Tabs (Breeding Results) --- */
-.tabs-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; width: 100%; z-index: 150; }
-#common, #rare, #epic, #volume-button, #costumeButton, #majorMinorButton { display: none; position: static; margin: 0; }
-
-/* --- Stats Box --- */
 #statsBox {
     width: 100%;
     max-width: 300px;
@@ -248,340 +598,387 @@ button:focus { outline: none; }
     flex-direction: column;
     gap: 12px;
     z-index: 102;
-    background: none !important;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
-/* --- UI Refresh: Smoked Glass Stats Bubbles --- */
 .stats-bubble {
-    background: rgba(30, 30, 30, 0.65); 
+    background: rgba(30, 30, 30, 0.65);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid #444444; 
+    border: 1px solid #444444;
     border-radius: 20px;
     padding: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); 
-    color: #ffffff; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    cursor: default;
-    transform: translateZ(0); 
-    animation: revealIn var(--entrance-speed) ease-out forwards, globalFloat var(--float-speed) cubic-bezier(.45,.05,.55,.95) var(--entrance-speed) infinite;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, border-color 0.3s ease;
+    animation: revealIn var(--entrance-speed) ease-out forwards, globalFloat var(--float-speed) ease-in-out var(--entrance-speed) infinite;
+    transition: 0.3s;
 }
 
-.stats-bubble::before {
-    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 50%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
-    border-radius: 20px 20px 100% 100%; pointer-events: none;
-}
-.stats-bubble:hover { transform: scale(1.05) translateZ(0) !important; animation-play-state: paused; background: rgba(50, 50, 50, 0.85); border-color: #888888; }
-.stats-bubble h3 { margin: 0; font-size: 1.2rem; color: #fff; text-align: center; }
-.label-text { font-size: 0.75rem; text-transform: uppercase; font-weight: bold; color: #aaaaaa; margin-bottom: 4px; display: block; text-align: center; letter-spacing: 1px; }
-
-/* --- No Monster Image --- */
-#noMonsterImage {
-    position: fixed; width: 90vw; max-width: 600px; height: auto;
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-    display: none; opacity: 0; animation: fadeInCenter 0.8s ease-out forwards; z-index: 110;
+.stats-bubble:hover {
+    transform: scale(1.05) !important;
+    animation-play-state: paused;
+    background: rgba(50, 50, 50, 0.85);
 }
 
-.spinner {
-    display: none; width: 50px; height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.1); border-radius: 50%;
-    border-top-color: #ffffff; animation: spin 1s ease-in-out infinite;
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 105;
+.stats-bubble h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-/* --- Icons & Blur Message --- */
-#iconContainer { position: absolute; top: 10px; left: 10px; display: flex; align-items: center; }
-#icon { width: 50px; height: 50px; cursor: pointer; }
-#textContainer { display: none; margin-left: 10px; padding: 5px; background: var(--main-red); border: 2px solid #ccc; border-radius: 5px; position: relative; z-index: 10; max-width: 300px; color: black; }
-#iconContainer:hover #textContainer { display: block; animation: slideIn 0.5s forwards; }
-#blurMessage { position: fixed; top: 20px; left: 20px; color: white; background-color: rgba(80, 80, 80, 0.3); padding: 10px; border-radius: 5px; display: none; z-index: 122; animation: slideIn 0.5s forwards; }
-
-/* --- UI Refresh: Step 2 Main Menu Button --- */
-.main-menu-btn {
-    width: 260px; height: 42px; padding: 0 20px; background: var(--main-red); border: 2px solid var(--border-pink);
-    border-radius: 25px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); font-size: 15px; font-weight: normal; 
-    color: #333333; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 1, 0.3, 1);
-    z-index: 98; margin-bottom: 15px; display: inline-flex; align-items: center; justify-content: center;
-}
-.main-menu-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); background: rgb(255, 120, 120); color: #333333; }
-
-/* --- UI Refresh: Step 2 Split View --- */
-#breedSplitView {
-    position: fixed; inset: 0; background: rgba(20, 20, 20, 0.85); 
-    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-    display: none; z-index: 800; opacity: 0; transition: opacity 0.4s ease;
-}
-#breedSplitView.active { opacity: 1; }
-.split-half { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
-
-/* Parent Label Animations */
-.split-half h2 {
-    color: white; margin-bottom: 25px; font-size: 24px; letter-spacing: 2px;
-    text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-    transition: all 0.3s ease;
-}
-/* --- UI Refresh: Selected Monster Nameplate --- */
-
-.split-half h2.active-label {     font-size: 20px;     color: #ffffff;     margin-bottom: 10px;     text-shadow: 0 2px 5px rgba(0,0,0,0.8);    letter-spacing: 1px;}
-
-/* Centerpiece Divider & Fusion Badge */
-.split-divider {
-    width: 2px; height: 70%; background: rgba(255, 255, 255, 0.2); margin: auto 0; border-radius: 2px;
-    position: relative; display: flex; align-items: center; justify-content: center;
-}
-.fusion-badge {
-    position: absolute; background: var(--main-red); border: 3px solid #E9E2D3; color: #333;
-    width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 10;
+.label-text {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 
-/* Empty Egg Slots & Glowing Images */
-.empty-slot {
-    width: 150px; height: 150px; border: 3px dashed rgba(255, 255, 255, 0.3); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.3); font-size: 40px; background: rgba(0, 0, 0, 0.2); transition: all 0.3s ease;
+/* =========================================
+   6. UTILITIES & ANIMATIONS
+   ========================================= */
+#blurOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(8px);
+    display: none;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 100;
 }
-.parent-img {
-    width: 180px; height: 180px; object-fit: contain; margin-bottom: 15px;
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    filter: drop-shadow(0 0 25px rgba(255, 109, 109, 0.3)) drop-shadow(0 10px 15px rgba(0,0,0,0.8));
+
+#blurOverlay.active {
+    opacity: 1;
 }
 
-#closeBreedUI { position: absolute; top: 30px; right: 40px; background: none; border: none; box-shadow: none; color: rgba(255,255,255,0.5); font-size: 35px; width: auto; z-index: 810; }
-#closeBreedUI:hover { color: white; transform: scale(1.1); background: none; box-shadow: none; }
-
-/* --- UI Refresh: Local Grids for Split View --- */
-.local-grid {
-    position: fixed; top: 25%; transform: translateX(-50%); width: 45vw; max-width: 600px; max-height: 65vh;
-    overflow-y: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;
-    opacity: 0; pointer-events: none; transition: opacity 0.4s ease; z-index: 850;
+#particles-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
 }
-.local-grid.active { opacity: 1; pointer-events: all; }
-#grid1 { left: 25%; }
-#grid2 { left: 75%; }
-.local-grid::-webkit-scrollbar { width: 8px; }
-.local-grid::-webkit-scrollbar-thumb { background: rgba(255,109,109,0.8); border-radius: 4px; }
 
-/* Glow States */
-.ready-glow { border-color: #4ade80 !important; box-shadow: 0 0 15px rgba(74, 222, 128, 0.4), 0 4px 15px rgba(0, 0, 0, 0.15) !important; }
+.particle {
+    position: absolute;
+    bottom: -50px;
+    color: rgba(255, 255, 255, 0.2);
+    animation: floatUp linear forwards;
+}
 
-/* Animations */
-@keyframes slide-up { to { opacity: 1; transform: translateY(0); } }
-@keyframes slideIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-@keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-100%); opacity: 0; } }
-@keyframes fadeInCenter { 0% { opacity: 0; transform: translate(-50%, -40%); } 100% { opacity: 1; transform: translate(-50%, -50%); } }
-@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes popIn { 0% { opacity: 0; transform: scale(0.5) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
-@keyframes slideUpFade { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-@keyframes revealIn { from { opacity: 0; transform: translateX(40px) translateZ(0); } to { opacity: 1; transform: translateX(0) translateZ(0); } }
-@keyframes globalFloat { 0% { transform: translateY(0px) rotate(0deg) translateZ(0); } 25% { transform: translateY(-3px) rotate(-0.3deg) translateZ(0); } 50% { transform: translateY(-6px) rotate(0deg) translateZ(0); } 75% { transform: translateY(-3px) rotate(0.3deg) translateZ(0); } 100% { transform: translateY(0px) rotate(0deg) translateZ(0); } }
-
-/* --- UI Refresh: Breeding Fusion Animation --- */
 .fusion-badge.breeding {
     background: #ff4d4d;
-    color: white;
     border-color: white;
-    box-shadow: 0 0 40px rgba(255, 77, 77, 0.9), 0 0 80px rgba(255, 77, 77, 0.6);
     animation: heartBeatPulse 0.8s infinite;
-    z-index: 1000;
+    box-shadow: 0 0 40px rgba(255, 77, 77, 0.9);
 }
 
-@keyframes heartBeatPulse {
-    0% { transform: scale(1); }
-    15% { transform: scale(1.5); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-
-.breeding-glow {
-    animation: fusionSuckIn 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
-}
-
-@keyframes fusionSuckIn {
-    0% { 
-        filter: drop-shadow(0 0 10px transparent); 
-        transform: scale(1); 
-    }
-    40% { 
-        filter: drop-shadow(0 0 40px white) drop-shadow(0 0 30px #ff4d4d); 
-        transform: scale(1.15); 
-    }
-    85% { 
-        filter: drop-shadow(0 0 100px white) drop-shadow(0 0 60px #ff4d4d); 
-        transform: scale(0.2); 
-        opacity: 1; 
-    }
-    100% { 
-        filter: drop-shadow(0 0 100px white); 
-        transform: scale(0); 
-        opacity: 0; 
-    }
-}
-
-/* --- UI Refresh: Breeding Fusion Animation --- */
-.fusion-badge.breeding {
-    background: #ff4d4d;
-    color: white;
-    border-color: white;
-    box-shadow: 0 0 40px rgba(255, 77, 77, 0.9), 0 0 80px rgba(255, 77, 77, 0.6);
-    animation: heartBeatPulse 0.8s infinite;
-    z-index: 1000;
-}
-
-@keyframes heartBeatPulse {
-    0% { transform: scale(1); }
-    15% { transform: scale(1.5); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-
-/* Left Monster (Moves Right) */
 .breeding-glow-left {
     animation: fusionShootLeft 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
 }
 
-@keyframes fusionShootLeft {
-    0% { 
-        filter: drop-shadow(0 0 10px transparent) brightness(1); 
-        transform: translate(0, 0) scale(1); 
-    }
-    40% { 
-        /* Powers up in place */
-        filter: drop-shadow(0 0 40px white) brightness(2); 
-        transform: translate(0, 0) scale(1.15); 
-    }
-    60% {
-        /* Turns into a pure white glowing ball */
-        filter: drop-shadow(0 0 60px white) brightness(20) grayscale(100%);
-        transform: translate(0, 0) scale(0.8);
-    }
-    85% { 
-        /* Shoots 25vw to the exact center of the screen */
-        filter: drop-shadow(0 0 100px white) brightness(20) grayscale(100%); 
-        transform: translate(25vw, 0) scale(0.2); 
-        opacity: 1; 
-    }
-    100% { 
-        filter: drop-shadow(0 0 100px white) brightness(20) grayscale(100%); 
-        transform: translate(25vw, 0) scale(0); 
-        opacity: 0; 
-    }
-}
-
-/* Right Monster (Moves Left) */
 .breeding-glow-right {
     animation: fusionShootRight 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
 }
 
-@keyframes fusionShootRight {
-    0% { 
-        filter: drop-shadow(0 0 10px transparent) brightness(1); 
-        transform: translate(0, 0) scale(1); 
+.ready-glow {
+    border-color: #4ade80 !important;
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.4) !important;
+}
+
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 105;
+}
+
+#noMonsterImage {
+    position: fixed;
+    width: 90vw;
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 110;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    40% { 
-        filter: drop-shadow(0 0 40px white) brightness(2); 
-        transform: translate(0, 0) scale(1.15); 
-    }
-    60% {
-        filter: drop-shadow(0 0 60px white) brightness(20) grayscale(100%);
-        transform: translate(0, 0) scale(0.8);
-    }
-    85% { 
-        /* Shoots -25vw to the exact center of the screen */
-        filter: drop-shadow(0 0 100px white) brightness(20) grayscale(100%); 
-        transform: translate(-25vw, 0) scale(0.2); 
-        opacity: 1; 
-    }
-    100% { 
-        filter: drop-shadow(0 0 100px white) brightness(20) grayscale(100%); 
-        transform: translate(-25vw, 0) scale(0); 
-        opacity: 0; 
+
+    to {
+        opacity: 1;
     }
 }
 
-/* --- UI Refresh: Clean Search Backgrounds --- */
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes revealIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartBeatPulse {
+
+    0%,
+    30%,
+    100% {
+        transform: scale(1);
+    }
+
+    15%,
+    45% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes globalFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes fusionShootLeft {
+    0% {
+        filter: drop-shadow(0 0 10px transparent);
+        transform: scale(1);
+    }
+
+    40% {
+        filter: drop-shadow(0 0 40px white) brightness(2);
+        transform: scale(1.15);
+    }
+
+    60% {
+        filter: drop-shadow(0 0 60px white) brightness(20);
+        transform: scale(0.8);
+    }
+
+    85% {
+        filter: drop-shadow(0 0 100px white) brightness(20);
+        transform: translate(25vw, 0) scale(0.2);
+        opacity: 1;
+    }
+
+    100% {
+        filter: drop-shadow(0 0 100px white);
+        transform: translate(25vw, 0) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fusionShootRight {
+    0% {
+        filter: drop-shadow(0 0 10px transparent);
+        transform: scale(1);
+    }
+
+    40% {
+        filter: drop-shadow(0 0 40px white) brightness(2);
+        transform: scale(1.15);
+    }
+
+    60% {
+        filter: drop-shadow(0 0 60px white) brightness(20);
+        transform: scale(0.8);
+    }
+
+    85% {
+        filter: drop-shadow(0 0 100px white) brightness(20);
+        transform: translate(-25vw, 0) scale(0.2);
+        opacity: 1;
+    }
+
+    100% {
+        filter: drop-shadow(0 0 100px white);
+        transform: translate(-25vw, 0) scale(0);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   7. UTILITY ICONS & OVERLAYS (RESTORED)
+   ========================================= */
+
+#iconContainer {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.2s ease;
+}
+
+#icon:hover {
+    transform: scale(1.1);
+}
+
+#textContainer {
+    display: none;
+    margin-left: 15px;
+    padding: 10px 15px;
+    /* Updated to match the new pink glass theme! */
+    background: var(--pink-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--delicate-border);
+    border-radius: 12px;
+    position: relative;
+    max-width: 300px;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#textContainer a {
+    color: #ff9fb3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#textContainer a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+#iconContainer:hover #textContainer {
+    display: block;
+    animation: slideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+#blurMessage {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    animation: slideIn 0.3s ease forwards;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    z-index: 150;
+}
+
+#common,
+#rare,
+#epic,
+#volume-button,
+#costumeButton,
+#majorMinorButton {
+    display: none;
+    position: static;
+    margin: 0;
+}
+
+/* --- UI FIX: Hide labels and egg slots when active searching --- */
 .split-half.searching h2,
 .split-half.searching .empty-slot,
 .split-half.searching .parent-img {
-    opacity: 0 !important;
+    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
 }
-
-/* Centerpiece Divider & Fusion Badge */
-.split-divider {
-    width: 2px; height: 70%; background: rgba(255, 255, 255, 0.2); margin: auto 0; border-radius: 2px;
-    position: relative; display: flex; align-items: center; justify-content: center;
-}
-.fusion-badge {
-    position: absolute; 
-    background: var(--main-red); 
-    border: 3px solid #222222; /* Darker border anchors it better */
-    color: #ffffff; /* White plus sign */
-    width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-size: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.6); z-index: 10;
-}
-
-/* Brightened Empty Egg Slots & Glowing Images */
-.empty-slot {
-    width: 150px; height: 150px; 
-    border: 3px dashed rgba(255, 255, 255, 0.5); /* Brighter white dashes */
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.6); /* Brighter white egg icon */
-    font-size: 40px; 
-    background: rgba(0, 0, 0, 0.3); 
-    transition: all 0.3s ease;
-}
-.parent-img {
-    width: 180px; height: 180px; object-fit: contain; margin-bottom: 15px;
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    filter: drop-shadow(0 0 25px rgba(255, 109, 109, 0.3)) drop-shadow(0 10px 15px rgba(0,0,0,0.8));
-}
-
-/* --- UI Refresh: Dark Glass Inputs --- */
-#First_Monster, #Second_Monster {
-    width: 260px; 
-    height: 42px; 
-    padding: 0 20px;
-    margin-bottom: 15px;
-    background: rgba(30, 30, 30, 0.65); /* Dark frosted glass */
-    backdrop-filter: blur(10px);
-    border: 2px solid #555555; /* Neutral dark border */
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    font-size: 15px;
-    color: #ffffff; /* White text instead of dark */
-    box-sizing: border-box; 
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.3, 1);
-    z-index: 98;
-    text-align: center; 
-}
-
-/* Light gray italic placeholder text */
-input::placeholder {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5); 
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
-    letter-spacing: 1px;
-    opacity: 1;
-}
-
-/* When the user clicks the box, it glows pink! */
-input:focus::placeholder { color: #aaaaaa; font-style: normal; }
-
-#First_Monster:focus, #Second_Monster:focus { 
-    outline: none; 
-    border-color: var(--main-red);
-    box-shadow: 0 0 15px rgba(255, 109, 109, 0.4);
-}
-
-input:disabled { background-color: rgba(50, 50, 50, 0.5); color: #888888; cursor: not-allowed; border-color: #444444; }

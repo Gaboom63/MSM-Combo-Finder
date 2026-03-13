@@ -19,11 +19,11 @@ const dynamicGrid = document.getElementById('dynamicMonsterGrid');
 const openBreedBtn = document.getElementById('openBreedUI');
 const breedSplitView = document.getElementById('breedSplitView');
 const closeBreedBtn = document.getElementById('closeBreedUI');
-
 const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
 
 let currentRarity = "";
 let monsterRegistry = [];
+let validBreedingCombos = []; // NEW: Stores guaranteed valid combos!
 let currentMonster = null;
 
 // --- 1. BUILD REGISTRY ---
@@ -38,6 +38,7 @@ async function buildMonsterRegistry() {
 
         Object.keys(data).forEach(key => {
             if (key.includes("+")) {
+                validBreedingCombos.push(key); // NEW: Save the exact valid combo string
                 const parents = key.split("+");
                 parents.forEach(p => uniqueNames.add(clean(p)));
             } else {
@@ -55,10 +56,15 @@ async function buildMonsterRegistry() {
         }).sort();
 
         console.log(`Registry ready: ${monsterRegistry.length} monsters.`);
+
+        // NEW: Trigger the Monster of the Day now that the registry is built!
+        updateMonsterOfTheDay();
+
     } catch (err) {
         console.error("Registry failed:", err);
     }
 }
+
 buildMonsterRegistry();
 
 // --- 2. CORE FUNCTIONS ---
@@ -106,7 +112,7 @@ function loadMonsterImage(name) {
         monsterImage.classList.add('animate-enter');
     };
     currentMonster = monster;
-    try { MSM[name].loadImage("monsterImage"); } 
+    try { MSM[name].loadImage("monsterImage"); }
     catch (e) { if (loadingSpinner) loadingSpinner.style.display = 'none'; }
 }
 
@@ -159,14 +165,14 @@ function reset() {
     searchInput.value = ""; firstInput.value = ""; secondInput.value = ""; currentRarity = "";
 
     // Reset UI Refresh Splity View State
-    document.querySelectorAll('.parent-img').forEach(img => { 
-        img.style.display = 'none'; 
-        img.src = ''; 
+    document.querySelectorAll('.parent-img').forEach(img => {
+        img.style.display = 'none';
+        img.src = '';
         img.classList.remove('breeding-glow-left', 'breeding-glow-right');
     });
     document.querySelectorAll('.empty-slot').forEach(slot => { slot.style.display = 'flex'; });
-    document.querySelectorAll('.split-half h2').forEach((h2, index) => { 
-        h2.classList.remove('active-label'); 
+    document.querySelectorAll('.split-half h2').forEach((h2, index) => {
+        h2.classList.remove('active-label');
         h2.textContent = index === 0 ? 'Parent 1' : 'Parent 2'; // Restores default text
     });
     // Stop the breeding animation if ESC is pressed midway
@@ -240,13 +246,13 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
             const parentRect = inputElement.parentElement.getBoundingClientRect();
             targetWidth = Math.min(parentRect.width * 0.85, 600);
             targetLeft = parentRect.left + (parentRect.width - targetWidth) / 2;
-            targetTop = window.innerHeight * 0.12; 
+            targetTop = window.innerHeight * 0.12;
         }
 
         inputElement.style.top = targetTop + 'px';
         inputElement.style.left = targetLeft + 'px';
         inputElement.style.width = targetWidth + 'px';
-        
+
         inputElement.classList.add('expanded-search');
         checkInputGlows(); // <-- FIX: Turn off the green glow while expanded
 
@@ -298,7 +304,7 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
             item.addEventListener('click', async () => {
                 inputElement.value = match;
                 closeExpandedInput();
-                checkInputGlows(); 
+                checkInputGlows();
 
                 const trueName = findTrueName(match);
 
@@ -306,7 +312,7 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
                     label.classList.add('active-label');
                     label.textContent = match; // NEW: Swap the text to the chosen monster's name!
                     placeholder.style.display = 'none';
-                    imgElement.style.display = 'block';                    try { if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(imgElement.id); } 
+                    imgElement.style.display = 'block'; try { if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(imgElement.id); }
                     catch (e) { imgElement.src = GRID_FALLBACK_IMAGE; }
                 }
 
@@ -334,9 +340,9 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
                         if (img1) img1.classList.add('breeding-glow-left');
                         if (img2) img2.classList.add('breeding-glow-right');
 
-                        setTimeout(async () => { 
-                            closeSplitView(); 
-                            await comboFinder(); 
+                        setTimeout(async () => {
+                            closeSplitView();
+                            await comboFinder();
                             setTimeout(() => {
                                 badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
                                 firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
@@ -354,17 +360,17 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
                 if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(safeId);
             } catch (e) { img.onerror(); }
         });
-});
+    });
 
-inputElement.addEventListener('keydown', (e) => {
+    inputElement.addEventListener('keydown', (e) => {
         const items = targetGrid.querySelectorAll('.grid-monster-item');
         if (items.length === 0) return;
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); selectedIndex = (selectedIndex + 1) % items.length; updateSelection(items); } 
-        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); selectedIndex = (selectedIndex - 1 + items.length) % items.length; updateSelection(items); } 
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); selectedIndex = (selectedIndex + 1) % items.length; updateSelection(items); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); selectedIndex = (selectedIndex - 1 + items.length) % items.length; updateSelection(items); }
         else if (e.key === 'Enter' && selectedIndex >= 0) { e.preventDefault(); items[selectedIndex].click(); }
-});
+    });
 
-function updateSelection(items) {
+    function updateSelection(items) {
         items.forEach(item => item.classList.remove('keyboard-selected'));
         if (selectedIndex >= 0) {
             items[selectedIndex].classList.add('keyboard-selected');
@@ -378,7 +384,7 @@ function closeExpandedInput() {
     const currentInput = activeInput; const currentGrid = activeGrid;
     activeInput = null; activeGrid = null;
     currentInput.blur();
-    
+
     if (currentGrid) currentGrid.classList.remove('active');
     currentInput.classList.remove('expanded-search');
 
@@ -507,10 +513,10 @@ async function loadStats(forceName) {
     try {
         const baseName = normalizeName(trueName); const monster = MSM[trueName];
         if (!monster) throw new Error("Monster not found");
-        const [times, combos] = await Promise.all([ monster.getBreedingTime(), monster.getBreedingCombos() ]);
+        const [times, combos] = await Promise.all([monster.getBreedingTime(), monster.getBreedingCombos()]);
 
-        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; } 
-        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; } 
+        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; }
+        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; }
         else { majorMinorButton.style.display = "none"; }
 
         const displayName = toDisplayCase(baseName); const statsBox = document.getElementById('statsBox');
@@ -521,6 +527,7 @@ async function loadStats(forceName) {
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
         statsBox.innerHTML = nameHtml + timeHtml + comboHtml; statsBox.style.display = 'flex';
+        saveToHistory(trueName);
     } catch (err) { console.error("Stats failed:", err); showNoMonsterError(); }
 }
 
@@ -565,7 +572,7 @@ function silentlyPreloadImages() {
             const trueName = findTrueName(monsterRegistry[index]);
             if (trueName && MSM[trueName] && !trueName.toLowerCase().startsWith("rare ") && !trueName.toLowerCase().startsWith("epic ")) {
                 const img = document.createElement('img'); img.id = `preload-${trueName.replace(/[^a-zA-Z0-9]/g, '')}`; cacheBucket.appendChild(img);
-                try { MSM[trueName].loadImage(img.id); } catch(e) {}
+                try { MSM[trueName].loadImage(img.id); } catch (e) { }
             }
         }
         if (index < monsterRegistry.length) setTimeout(loadNextBatch, 300);
@@ -573,3 +580,208 @@ function silentlyPreloadImages() {
     setTimeout(loadNextBatch, 1500);
 }
 silentlyPreloadImages();
+
+// =========================================
+// NEW FEATURES: Particles, Random & History
+// =========================================
+
+// --- FEATURE 1: Ambient Musical Particles ---
+function createParticles() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+    const symbols = ['♪', '♫', '♩', '♬', '✧', '⋆'];
+
+    setInterval(() => {
+        const el = document.createElement('div');
+        el.className = 'particle';
+        el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.fontSize = (Math.random() * 15 + 15) + 'px';
+        el.style.animationDuration = (Math.random() * 5 + 7) + 's';
+
+        container.appendChild(el);
+        setTimeout(() => el.remove(), 12000);
+    }, 1500);
+}
+createParticles();
+
+// --- FEATURE 2: Random Combo "Surprise Me" (Valid Combos Only) ---
+const randomComboBtn = document.getElementById('randomComboBtn');
+if (randomComboBtn) {
+    randomComboBtn.addEventListener('click', () => {
+        if (validBreedingCombos.length === 0) return;
+
+        // 1. Pick a guaranteed VALID combo string from the API database
+        const randomComboStr = validBreedingCombos[Math.floor(Math.random() * validBreedingCombos.length)];
+
+        // 2. Split it into Parent 1 and Parent 2, and capitalize them nicely
+        const [raw1, raw2] = randomComboStr.split("+").map(s => s.trim());
+        const m1 = findTrueName(raw1) || toDisplayCase(raw1);
+        const m2 = findTrueName(raw2) || toDisplayCase(raw2);
+
+        firstInput.value = m1;
+        secondInput.value = m2;
+
+        breedSplitView.style.display = 'flex';
+        requestAnimationFrame(() => breedSplitView.classList.add('active'));
+
+        const img1 = document.getElementById('parent-img-1');
+        const img2 = document.getElementById('parent-img-2');
+        const label1 = document.getElementById('grid1').parentElement.querySelector('h2');
+        const label2 = document.getElementById('grid2').parentElement.querySelector('h2');
+        const slot1 = document.querySelector('#placeholder-1');
+        const slot2 = document.querySelector('#placeholder-2');
+
+        if (label1 && img1 && slot1) { label1.textContent = m1; label1.classList.add('active-label'); img1.style.display = 'block'; slot1.style.display = 'none'; try { MSM[findTrueName(m1)].loadImage(img1.id); } catch (e) { } }
+        if (label2 && img2 && slot2) { label2.textContent = m2; label2.classList.add('active-label'); img2.style.display = 'block'; slot2.style.display = 'none'; try { MSM[findTrueName(m2)].loadImage(img2.id); } catch (e) { } }
+
+        setTimeout(() => {
+            const badge = document.querySelector('.fusion-badge');
+            const badgeIcon = badge.querySelector('i');
+            firstInput.style.opacity = '0'; secondInput.style.opacity = '0';
+            badgeIcon.className = 'fas fa-heart'; badge.classList.add('breeding');
+            if (img1) img1.classList.add('breeding-glow-left');
+            if (img2) img2.classList.add('breeding-glow-right');
+
+            setTimeout(async () => {
+                closeSplitView();
+                await comboFinder();
+                setTimeout(() => {
+                    badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
+                    firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
+                    if (img1) img1.classList.remove('breeding-glow-left');
+                    if (img2) img2.classList.remove('breeding-glow-right');
+                }, 500);
+            }, 1800);
+        }, 1500);
+    });
+}
+
+// --- FEATURE 3: Recent Discoveries History (Max 3, Right-to-Left) ---
+function saveToHistory(monsterName) {
+    if (!monsterName) return;
+    const trueName = findTrueName(monsterName);
+
+    // THE FIX: We removed the rule that blocked "Rare" and "Epic" monsters!
+    if (!trueName) return;
+
+    let history = JSON.parse(localStorage.getItem('msmRecentHistory')) || [];
+
+    // Remove duplicate if it already exists so we can bump it back to the "newest" slot
+    history = history.filter(name => name !== trueName);
+
+    // Add to the END of the line (Right side / Newest)
+    history.push(trueName);
+
+    // STRICT MAX OF 3: If there are more than 3, push the oldest one out from the FRONT (Left side)
+    while (history.length > 3) {
+        history.shift();
+    }
+
+    localStorage.setItem('msmRecentHistory', JSON.stringify(history));
+    updateRecentHistoryUI();
+}
+
+function updateRecentHistoryUI() {
+    const grid = document.getElementById('recent-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    let history = JSON.parse(localStorage.getItem('msmRecentHistory')) || [];
+    if (history.length === 0) {
+        grid.innerHTML = '<span style="color: rgba(255,255,255,0.4); font-size: 14px; font-style: italic;">No monsters discovered yet...</span>';
+        return;
+    }
+
+    history.forEach(monsterName => {
+        const img = document.createElement('img');
+        img.className = 'recent-avatar';
+        img.id = `history-img-${monsterName.replace(/[^a-zA-Z0-9]/g, '')}`;
+        img.title = monsterName;
+
+        // BUG FIX 1: Keep invisible until fully loaded to prevent the broken image flash
+        img.onload = () => {
+            img.classList.add('loaded'); // Triggers the slide-in CSS animation!
+        };
+
+        img.onerror = () => { img.onerror = null; img.src = GRID_FALLBACK_IMAGE; };
+
+        img.addEventListener('click', () => {
+            searchInput.value = monsterName;
+            const trueName = findTrueName(monsterName);
+            if (/^rare/i.test(trueName)) currentRarity = "Rare";
+            else if (/^epic/i.test(trueName)) currentRarity = "Epic";
+            else currentRarity = "Common";
+
+            monsterImage.setAttribute('data-name', normalizeName(trueName));
+            tabsContainer.innerHTML = '';
+            showMonsterUI(false); updateActiveTab(); loadMonsterImage(trueName);
+            costumeErrorHandling(trueName); loadStats(trueName);
+        });
+
+        grid.appendChild(img);
+
+        // BUG FIX 2: Polite retry loop waits for the API to load before fetching
+        const attemptImageLoad = () => {
+            if (typeof MSM !== 'undefined' && MSM[monsterName]) {
+                try { MSM[monsterName].loadImage(img.id); } catch (e) { }
+            } else {
+                setTimeout(attemptImageLoad, 200);
+            }
+        };
+        attemptImageLoad();
+    });
+}
+
+// --- FEATURE 4: Monster of the Day ---
+function updateMonsterOfTheDay() {
+    const spotlight = document.getElementById('monster-spotlight');
+    if (!spotlight || monsterRegistry.length === 0) return;
+
+    // 1. Get today's date to create a unique math seed (e.g., 20260312)
+    const today = new Date();
+    const dateSeed = (today.getFullYear() * 10000) + ((today.getMonth() + 1) * 100) + today.getDate();
+
+    // 2. Use the seed to reliably pick the exact same monster all day!
+    const index = dateSeed % monsterRegistry.length;
+    const motd = monsterRegistry[index];
+    const trueName = findTrueName(motd);
+
+    // 3. Update the UI
+    const nameEl = document.getElementById('spotlight-name');
+    const imgEl = document.getElementById('spotlight-img');
+
+    if (nameEl) nameEl.textContent = trueName;
+
+    if (imgEl) {
+        imgEl.id = `spotlight-img-${trueName.replace(/[^a-zA-Z0-9]/g, '')}`; // Unique ID for API
+        imgEl.onerror = () => { imgEl.onerror = null; imgEl.src = GRID_FALLBACK_IMAGE; };
+
+        const attemptImageLoad = () => {
+            if (typeof MSM !== 'undefined' && MSM[trueName]) {
+                try { MSM[trueName].loadImage(imgEl.id); } catch (e) { }
+            } else {
+                setTimeout(attemptImageLoad, 200);
+            }
+        };
+        attemptImageLoad();
+    }
+
+    spotlight.style.display = 'flex'; // Un-hide it once loaded
+
+    // 4. Clicking the spotlight acts just like searching for it!
+    spotlight.addEventListener('click', () => {
+        searchInput.value = trueName;
+        if (/^rare/i.test(trueName)) currentRarity = "Rare";
+        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
+        else currentRarity = "Common";
+
+        monsterImage.setAttribute('data-name', normalizeName(trueName));
+        tabsContainer.innerHTML = '';
+        showMonsterUI(false); updateActiveTab(); loadMonsterImage(trueName);
+        costumeErrorHandling(trueName); loadStats(trueName);
+    });
+}
+
+// Ensure history loads when page starts
+document.addEventListener("DOMContentLoaded", updateRecentHistoryUI);
