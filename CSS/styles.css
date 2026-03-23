@@ -982,3 +982,26 @@ button:not(.theme-btn):hover {
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
+
+/* --- 5.1 Elemental Icons Display --- */
+.elements-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.element-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.element-icon:hover {
+    transform: scale(1.25) translateY(-3px);
+    filter: drop-shadow(0 0 10px var(--pure-pink)); /* Glows pink on hover! */
+}
