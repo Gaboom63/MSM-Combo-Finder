@@ -506,28 +506,53 @@ function loadFromTab(monsterName) {
     monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
-// --- STATS & UTILS ---
+// --- UPDATED STATS: Now with Elemental Icons ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim(); if (!rawInput) return;
     const trueName = findTrueName(rawInput);
     try {
-        const baseName = normalizeName(trueName); const monster = MSM[trueName];
+        const baseName = normalizeName(trueName); 
+        const monster = await MSM[trueName]; // Ensure the monster object is fully loaded
         if (!monster) throw new Error("Monster not found");
-        const [times, combos] = await Promise.all([monster.getBreedingTime(), monster.getBreedingCombos()]);
 
-        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; }
-        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; }
+        const [times, combos, elements] = await Promise.all([ 
+            monster.getBreedingTime(), 
+            monster.getBreedingCombos(),
+            monster.getElementImages() // NEW: Pulls the element names and image URLs from the API
+        ]);
+
+        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; } 
+        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; } 
         else { majorMinorButton.style.display = "none"; }
 
-        const displayName = toDisplayCase(baseName); const statsBox = document.getElementById('statsBox');
+        const displayName = toDisplayCase(baseName); 
+        const statsBox = document.getElementById('statsBox');
+
+        // 1. Name Bubble
         const nameHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name </span><h3>${currentRarity || "Common"} ${displayName}</h3></div>`;
+        
+        // 2. Elements Bubble (NEW!)
+        const elementIcons = elements.length > 0 
+            ? elements.map(el => `<img src="${el.image}" class="element-icon" title="${el.name}">`).join("")
+            : `<span style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">Elements Loading...</span>`;
+        const elementsHtml = `
+            <div class="stats-bubble">
+                <span class="label-text"><i class="fas fa-atom"></i> Elements </span>
+                <div class="elements-display">${elementIcons}</div>
+            </div>`;
+        // 3. Time Bubble
         const timeContent = (times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
         const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
+        
+        // 4. Combo Bubble
         const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
-        statsBox.innerHTML = nameHtml + timeHtml + comboHtml; statsBox.style.display = 'flex';
-        saveToHistory(trueName);
+        // Combine and display
+        statsBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml; 
+        statsBox.style.display = 'flex';
+        
+        if (typeof saveToHistory === 'function') saveToHistory(trueName);
     } catch (err) { console.error("Stats failed:", err); showNoMonsterError(); }
 }
 
@@ -544,40 +569,30 @@ async function playSound() {
     catch (err) { console.warn("Sound failed:", err); }
 }
 
-// --- MSM API INJECTION ---
-(function loadMSMAPI() {
-    const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
-    const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
-    function loadScript(src) {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement("script"); script.src = src; script.defer = true;
-            script.onload = () => resolve(src); script.onerror = () => reject(src); document.head.appendChild(script);
-        });
-    }
-    loadScript(PRIMARY_API)
-        .then(src => console.log("MSM API loaded:", src))
-        .catch(() => { console.warn("Primary failed, loading CDN fallback..."); return loadScript(FALLBACK_API); })
-        .then(src => console.log("MSM API ready:", src))
-        .catch(() => { console.error("All MSM API sources failed"); });
-})();
-
 // --- SILENT IMAGE PRELOADER ---
+// --- HIGH-SPEED PRELOADER ---
 function silentlyPreloadImages() {
-    if (typeof MSM === 'undefined' || monsterRegistry.length === 0) { setTimeout(silentlyPreloadImages, 500); return; }
-    const cacheBucket = document.createElement('div'); cacheBucket.style.display = 'none'; document.body.appendChild(cacheBucket);
+    if (typeof MSM === 'undefined' || monsterRegistry.length === 0) { 
+        setTimeout(silentlyPreloadImages, 300); 
+        return; 
+    }
+
+    // 1. Immediately preload the 'Spotlight' and 'Recent' items
+    const history = JSON.parse(localStorage.getItem('msmRecentHistory')) || [];
+    history.forEach(name => { try { MSM[name]; } catch(e){} });
+
+    // 2. Preload the rest of the registry in batches
     let index = 0;
     function loadNextBatch() {
-        const batchSize = 5;
+        const batchSize = 10; // Increased batch size
         for (let i = 0; i < batchSize && index < monsterRegistry.length; i++, index++) {
             const trueName = findTrueName(monsterRegistry[index]);
-            if (trueName && MSM[trueName] && !trueName.toLowerCase().startsWith("rare ") && !trueName.toLowerCase().startsWith("epic ")) {
-                const img = document.createElement('img'); img.id = `preload-${trueName.replace(/[^a-zA-Z0-9]/g, '')}`; cacheBucket.appendChild(img);
-                try { MSM[trueName].loadImage(img.id); } catch (e) { }
-            }
+            // This 'touches' the MSM object, triggering the new fetchWithCache!
+            if (trueName) { try { MSM[trueName]; } catch(e){} }
         }
-        if (index < monsterRegistry.length) setTimeout(loadNextBatch, 300);
+        if (index < monsterRegistry.length) setTimeout(loadNextBatch, 100); // Faster batching
     }
-    setTimeout(loadNextBatch, 1500);
+    setTimeout(loadNextBatch, 500);
 }
 silentlyPreloadImages();
 
@@ -782,6 +797,24 @@ function updateMonsterOfTheDay() {
         costumeErrorHandling(trueName); loadStats(trueName);
     });
 }
+
+
+// --- MSM API INJECTION ---
+(function loadMSMAPI() {
+    const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
+    const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
+    function loadScript(src) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement("script"); script.src = src; script.defer = true;
+            script.onload = () => resolve(src); script.onerror = () => reject(src); document.head.appendChild(script);
+        });
+    }
+    loadScript(PRIMARY_API)
+        .then(src => console.log("MSM API loaded:", src))
+        .catch(() => { console.warn("Primary failed, loading CDN fallback..."); return loadScript(FALLBACK_API); })
+        .then(src => console.log("MSM API ready:", src))
+        .catch(() => { console.error("All MSM API sources failed"); });
+})();
 
 // Ensure history loads when page starts
 document.addEventListener("DOMContentLoaded", updateRecentHistoryUI);
