@@ -117,23 +117,30 @@ function loadMonsterImage(name) {
 }
 
 function showMonsterUI(isBreedingResult = false) {
-    monsterImage.style.display = 'revert';
-    blurMessage.style.display = 'revert';
+    monsterImage.style.display = 'block';
+    blurMessage.style.display = 'block';
     blurOverlay.style.display = 'block';
     requestAnimationFrame(() => blurOverlay.classList.add('active'));
 
-    statBox.style.display = 'revert';
-    volumeButton.style.display = 'revert';
     inputContainer.style.display = 'none';
     noMonsterImage.style.display = 'none';
 
     if (isBreedingResult) {
-        commonButton.style.display = 'none'; rareButton.style.display = 'none'; epicButton.style.display = 'none';
+        commonButton.style.display = 'none';
+        rareButton.style.display = 'none';
+        epicButton.style.display = 'none';
         volumeButton.style.display = 'none';
-        tabsContainer.style.display = 'flex'; tabsContainer.style.justifyContent = 'center'; tabsContainer.style.gap = '10px';
+
+        tabsContainer.style.display = 'flex';
+        tabsContainer.style.justifyContent = 'center';
+        tabsContainer.style.gap = '10px';
     } else {
-        commonButton.style.display = 'revert'; rareButton.style.display = 'revert'; epicButton.style.display = 'revert';
-        volumeButton.style.display = 'revert'; tabsContainer.style.display = 'none';
+        commonButton.style.display = 'inline-flex';
+        rareButton.style.display = 'inline-flex';
+        epicButton.style.display = 'inline-flex';
+        volumeButton.style.display = 'inline-flex';
+
+        tabsContainer.style.display = 'none';
     }
 }
 
@@ -213,53 +220,60 @@ const grid2 = document.getElementById('grid2');
 function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities = true, animMode = 'full') {
     let selectedIndex = -1;
 
+    // --- 1. Focus Event: Handle UI Expansion ---
     inputElement.addEventListener('focus', () => {
         if (activeInput && activeInput !== inputElement) closeExpandedInput();
 
         activeInput = inputElement;
         activeGrid = targetGrid;
 
-        // --- FIX: Hide the Parent text and egg while actively searching ---
+        // Hide the Parent text and egg while actively searching
         const splitHalf = inputElement.closest('.split-half');
         if (splitHalf) splitHalf.classList.add('searching');
-        // ------------------------------------------------------------------
 
         activeOriginalRect = inputElement.getBoundingClientRect();
-        inputElement.style.transition = 'none';
-        inputElement.style.position = 'fixed';
-        inputElement.style.top = activeOriginalRect.top + 'px';
-        inputElement.style.left = activeOriginalRect.left + 'px';
-        inputElement.style.width = activeOriginalRect.width + 'px';
-        inputElement.style.margin = '0';
-        void inputElement.offsetWidth;
+
+        // Use Object.assign for cleaner multi-style application
+        Object.assign(inputElement.style, {
+            transition: 'none',
+            position: 'fixed',
+            top: `${activeOriginalRect.top}px`,
+            left: `${activeOriginalRect.left}px`,
+            width: `${activeOriginalRect.width}px`,
+            margin: '0'
+        });
+
+        void inputElement.offsetWidth; // Force DOM reflow
 
         inputElement.style.transition = 'all 0.5s cubic-bezier(0.25, 1, 0.3, 1)';
-        let targetWidth, targetLeft, targetTop;
+
+        let targetWidth, targetLeft, targetTop = window.innerHeight * 0.12;
 
         if (animMode === 'full') {
             targetWidth = Math.min(window.innerWidth * 0.9, 1300);
             targetLeft = (window.innerWidth - targetWidth) / 2;
-            targetTop = window.innerHeight * 0.12;
             blurOverlay.style.display = 'block';
             requestAnimationFrame(() => blurOverlay.classList.add('active'));
         } else {
             const parentRect = inputElement.parentElement.getBoundingClientRect();
             targetWidth = Math.min(parentRect.width * 0.85, 600);
             targetLeft = parentRect.left + (parentRect.width - targetWidth) / 2;
-            targetTop = window.innerHeight * 0.12;
         }
 
-        inputElement.style.top = targetTop + 'px';
-        inputElement.style.left = targetLeft + 'px';
-        inputElement.style.width = targetWidth + 'px';
+        Object.assign(inputElement.style, {
+            top: `${targetTop}px`,
+            left: `${targetLeft}px`,
+            width: `${targetWidth}px`
+        });
 
         inputElement.classList.add('expanded-search');
-        checkInputGlows(); // <-- FIX: Turn off the green glow while expanded
+        checkInputGlows(); // Turn off the green glow while expanded
 
         targetGrid.classList.add('active');
         inputElement.dispatchEvent(new Event('input'));
     });
 
+    // --- 2. Input Event: Handle Search & Grid Population ---
     inputElement.addEventListener('input', () => {
         if (activeInput !== inputElement) return;
         selectedIndex = -1;
@@ -267,15 +281,17 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
         const label = inputElement.parentElement.querySelector('h2');
         const imgElement = inputElement.parentElement.querySelector('.parent-img');
         const placeholder = inputElement.parentElement.querySelector('.empty-slot');
+
         if (label && imgElement && placeholder) {
             label.classList.remove('active-label');
-            // NEW: Restore the correct Parent text
             label.textContent = inputElement.id === 'First_Monster' ? 'Parent 1' : 'Parent 2';
-            imgElement.style.display = 'none';
-            placeholder.style.display = 'flex';
         }
+
         const query = inputElement.value.toLowerCase().trim();
-        if (!query) { targetGrid.innerHTML = ''; return; }
+        if (!query) {
+            targetGrid.innerHTML = '';
+            return;
+        }
 
         const matches = monsterRegistry.filter(name => {
             const lowerName = name.toLowerCase();
@@ -291,15 +307,17 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
             const item = document.createElement('div');
             item.className = 'grid-monster-item';
 
+            const safeId = `grid-img-${match.replace(/[^a-zA-Z0-9]/g, '')}`;
+
             const img = document.createElement('img');
-            const safeId = 'grid-img-' + match.replace(/[^a-zA-Z0-9]/g, '');
             img.id = safeId;
             img.onerror = () => { img.onerror = null; img.src = GRID_FALLBACK_IMAGE; };
 
             const labelTxt = document.createElement('span');
             labelTxt.textContent = match;
 
-            item.appendChild(img); item.appendChild(labelTxt);
+            // Use .append() to attach multiple elements at once
+            item.append(img, labelTxt);
 
             item.addEventListener('click', async () => {
                 inputElement.value = match;
@@ -310,10 +328,14 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
 
                 if (label && imgElement && placeholder) {
                     label.classList.add('active-label');
-                    label.textContent = match; // NEW: Swap the text to the chosen monster's name!
+                    label.textContent = match;
                     placeholder.style.display = 'none';
-                    imgElement.style.display = 'block'; try { if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(imgElement.id); }
-                    catch (e) { imgElement.src = GRID_FALLBACK_IMAGE; }
+                    imgElement.style.display = 'block';
+                    try {
+                        if (typeof MSM !== 'undefined' && MSM[trueName]) MSM[trueName].loadImage(imgElement.id);
+                    } catch (e) {
+                        imgElement.src = GRID_FALLBACK_IMAGE;
+                    }
                 }
 
                 if (inputElement === searchInput) {
@@ -323,33 +345,18 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
 
                     monsterImage.setAttribute('data-name', normalizeName(trueName));
                     tabsContainer.innerHTML = '';
-                    showMonsterUI(false); updateActiveTab(); loadMonsterImage(trueName);
-                    costumeErrorHandling(trueName); loadStats(trueName);
+                    showMonsterUI(false);
+                    updateActiveTab();
+                    loadMonsterImage(trueName);
+
+                    // Correctly awaited costume handling!
+                    await costumeErrorHandling(trueName);
+                    loadStats(trueName);
                 }
                 else if (inputElement === firstInput || inputElement === secondInput) {
                     if (firstInput.value.trim() !== "" && secondInput.value.trim() !== "") {
-                        const badge = document.querySelector('.fusion-badge');
-                        const badgeIcon = badge.querySelector('i');
-                        const img1 = document.getElementById('parent-img-1');
-                        const img2 = document.getElementById('parent-img-2');
-
-                        firstInput.style.opacity = '0'; secondInput.style.opacity = '0';
-                        if (grid1) grid1.classList.remove('active'); if (grid2) grid2.classList.remove('active');
-
-                        badgeIcon.className = 'fas fa-heart'; badge.classList.add('breeding');
-                        if (img1) img1.classList.add('breeding-glow-left');
-                        if (img2) img2.classList.add('breeding-glow-right');
-
-                        setTimeout(async () => {
-                            closeSplitView();
-                            await comboFinder();
-                            setTimeout(() => {
-                                badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
-                                firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
-                                if (img1) img1.classList.remove('breeding-glow-left');
-                                if (img2) img2.classList.remove('breeding-glow-right');
-                            }, 500);
-                        }, 1800);
+                        // Extracted this massive block into a helper function below
+                        triggerBreedingAnimation();
                     }
                 }
             });
@@ -362,12 +369,24 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
         });
     });
 
+    // --- 3. Keydown Event: Handle Keyboard Navigation ---
     inputElement.addEventListener('keydown', (e) => {
         const items = targetGrid.querySelectorAll('.grid-monster-item');
         if (items.length === 0) return;
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); selectedIndex = (selectedIndex + 1) % items.length; updateSelection(items); }
-        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); selectedIndex = (selectedIndex - 1 + items.length) % items.length; updateSelection(items); }
-        else if (e.key === 'Enter' && selectedIndex >= 0) { e.preventDefault(); items[selectedIndex].click(); }
+
+        // Cleaned up the conditional logic for readability
+        if (['ArrowRight', 'ArrowDown'].includes(e.key)) {
+            e.preventDefault();
+            selectedIndex = (selectedIndex + 1) % items.length;
+            updateSelection(items);
+        } else if (['ArrowLeft', 'ArrowUp'].includes(e.key)) {
+            e.preventDefault();
+            selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+            updateSelection(items);
+        } else if (e.key === 'Enter' && selectedIndex >= 0) {
+            e.preventDefault();
+            items[selectedIndex].click();
+        }
     });
 
     function updateSelection(items) {
@@ -377,6 +396,40 @@ function setupSmoothExpansionAndGrid(inputElement, targetGrid, includeRarities =
             items[selectedIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
     }
+}
+
+// --- NEW HELPER FUNCTION ---
+function triggerBreedingAnimation() {
+    const badge = document.querySelector('.fusion-badge');
+    const badgeIcon = badge.querySelector('i');
+    const img1 = document.getElementById('parent-img-1');
+    const img2 = document.getElementById('parent-img-2');
+
+    firstInput.style.opacity = '0';
+    secondInput.style.opacity = '0';
+
+    if (grid1) grid1.classList.remove('active');
+    if (grid2) grid2.classList.remove('active');
+
+    badgeIcon.className = 'fas fa-heart';
+    badge.classList.add('breeding');
+
+    if (img1) img1.classList.add('breeding-glow-left');
+    if (img2) img2.classList.add('breeding-glow-right');
+
+    setTimeout(async () => {
+        closeSplitView();
+        await comboFinder();
+        setTimeout(() => {
+            badgeIcon.className = 'fas fa-plus';
+            badge.classList.remove('breeding');
+            firstInput.style.opacity = '1';
+            secondInput.style.opacity = '1';
+
+            if (img1) img1.classList.remove('breeding-glow-left');
+            if (img2) img2.classList.remove('breeding-glow-right');
+        }, 500);
+    }, 1800);
 }
 
 function closeExpandedInput() {
@@ -436,13 +489,17 @@ commonButton.addEventListener("click", () => {
     updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
 });
 
-rareButton.addEventListener("click", () => {
+rareButton.addEventListener("click", async () => {
     const base = monsterImage.getAttribute('data-name'); if (!base) return;
     const name = `Rare ${base}`; const trueName = findTrueName(name);
-    let isEmpty = MSM[trueName].costumes;
-    if (isEmpty && isEmpty.length === 0) costumeButton.style.display = 'none'; else costumeButton.style.display = 'revert';
+
     searchInput.value = trueName; currentRarity = "Rare";
-    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
+    updateActiveTab();
+
+    // Add 'await' to ensure the button only appears if costumes exist
+    await costumeErrorHandling(trueName);
+    loadMonsterImage(trueName);
+    loadStats(trueName);
 });
 
 epicButton.addEventListener("click", () => {
@@ -476,27 +533,55 @@ async function comboFinder() {
     const result = await MSM.twoMonsterCombo(combo);
 
     if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI(false); showNoMonsterError(); return;
+        showMonsterUI(false);
+        showNoMonsterError();
+        return;
     }
 
     tabsContainer.innerHTML = '';
+
     if (result.length > 1) {
         result.sort((a, b) => b.length - a.length);
+
         result.forEach((monsterName, index) => {
-            const btn = document.createElement('button'); btn.className = 'tab-button'; btn.textContent = monsterName;
-            btn.addEventListener('click', () => {
+            const btn = document.createElement('button');
+            btn.className = 'tab-button';
+            btn.textContent = monsterName;
+
+            // FIX: Added async/await to the click listener
+            btn.addEventListener('click', async () => {
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
-                btn.classList.add('active-tab'); loadFromTab(monsterName); costumeErrorHandling(monsterName)
+                btn.classList.add('active-tab');
+                loadFromTab(monsterName);
+                await costumeErrorHandling(monsterName);
             });
+
             if (index === 0) btn.classList.add('active-tab');
-            tabsContainer.appendChild(btn); costumeErrorHandling(monsterName);
+            tabsContainer.appendChild(btn);
         });
-        showMonsterUI(true); loadFromTab(result[0]);
+
+        showMonsterUI(true);
+        loadFromTab(result[0]);
+
+        // FIX: Only check the costume for the active (first) tab on initial load
+        await costumeErrorHandling(result[0]);
+
     } else {
-        const name = result[0]; const trueName = findTrueName(name);
-        if (/^rare/i.test(trueName)) currentRarity = "Rare"; else if (/^epic/i.test(trueName)) currentRarity = "Epic"; else currentRarity = "Common";
-        monsterImage.setAttribute('data-name', normalizeName(trueName)); showMonsterUI(false);
-        updateActiveTab(); loadMonsterImage(trueName); loadStats(trueName);
+        const name = result[0];
+        const trueName = findTrueName(name);
+
+        if (/^rare/i.test(trueName)) currentRarity = "Rare";
+        else if (/^epic/i.test(trueName)) currentRarity = "Epic";
+        else currentRarity = "Common";
+
+        searchInput.value = trueName;
+
+        monsterImage.setAttribute('data-name', normalizeName(trueName));
+        showMonsterUI(false);
+        updateActiveTab();
+        loadMonsterImage(trueName);
+        loadStats(trueName);
+        await costumeErrorHandling(trueName);
     }
 }
 
@@ -508,52 +593,68 @@ function loadFromTab(monsterName) {
 
 // --- UPDATED STATS: Now with Elemental Icons ---
 async function loadStats(forceName) {
-    const rawInput = forceName || searchInput.value.trim(); if (!rawInput) return;
+    const rawInput = forceName || searchInput.value.trim();
+    if (!rawInput) return;
     const trueName = findTrueName(rawInput);
+
+    // 1. Show the box immediately with a loading state
+    statBox.style.display = 'flex';
+    statBox.innerHTML = `
+        <div class="stats-bubble" style="display: flex; justify-content: center; align-items: center; min-height: 150px; width: 100%;">
+            <div class="spinner" style="display: block; position: relative; top: auto; left: auto; transform: none; width: 35px; height: 35px;"></div>
+        </div>`;
+
     try {
-        const baseName = normalizeName(trueName); 
-        const monster = await MSM[trueName]; // Ensure the monster object is fully loaded
+        const baseName = normalizeName(trueName);
+        const monster = await MSM[trueName];
         if (!monster) throw new Error("Monster not found");
 
-        const [times, combos, elements] = await Promise.all([ 
-            monster.getBreedingTime(), 
+        // Fetch all data in parallel
+        const [times, combos, elements] = await Promise.all([
+            monster.getBreedingTime(),
             monster.getBreedingCombos(),
-            monster.getElementImages() // NEW: Pulls the element names and image URLs from the API
+            monster.getElementImages()
         ]);
 
-        if (baseName.includes("(Major)")) { majorMinorButton.textContent = "Switch To Minor"; majorMinorButton.style.display = "revert"; } 
-        else if (baseName.includes("(Minor)")) { majorMinorButton.textContent = "Switch To Major"; majorMinorButton.style.display = "revert"; } 
-        else { majorMinorButton.style.display = "none"; }
+        if (baseName.includes("(Major)")) {
+            majorMinorButton.textContent = "Switch To Minor";
+            majorMinorButton.style.display = "inline-flex";
+        } else if (baseName.includes("(Minor)")) {
+            majorMinorButton.textContent = "Switch To Major";
+            majorMinorButton.style.display = "inline-flex";
+        } else {
+            majorMinorButton.style.display = "none";
+        }
 
-        const displayName = toDisplayCase(baseName); 
-        const statsBox = document.getElementById('statsBox');
+        const displayName = toDisplayCase(baseName);
 
-        // 1. Name Bubble
+        // 2. Build the UI Pieces
         const nameHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name </span><h3>${currentRarity || "Common"} ${displayName}</h3></div>`;
-        
-        // 2. Elements Bubble (NEW!)
-        const elementIcons = elements.length > 0 
+
+        const elementIcons = elements.length > 0
             ? elements.map(el => `<img src="${el.image}" class="element-icon" title="${el.name}">`).join("")
-            : `<span style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">Elements Loading...</span>`;
+            : `<span style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">No Elements</span>`;
+
         const elementsHtml = `
             <div class="stats-bubble">
                 <span class="label-text"><i class="fas fa-atom"></i> Elements </span>
                 <div class="elements-display">${elementIcons}</div>
             </div>`;
-        // 3. Time Bubble
+
         const timeContent = (times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
         const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
-        
-        // 4. Combo Bubble
+
         const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
-        // Combine and display
-        statsBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml; 
-        statsBox.style.display = 'flex';
-        
+        // 3. Final Render (Replacing the spinner)
+        statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
+
         if (typeof saveToHistory === 'function') saveToHistory(trueName);
-    } catch (err) { console.error("Stats failed:", err); showNoMonsterError(); }
+    } catch (err) {
+        console.error("Stats failed:", err);
+        showNoMonsterError();
+    }
 }
 
 function showNoMonsterError() {
@@ -569,33 +670,70 @@ async function playSound() {
     catch (err) { console.warn("Sound failed:", err); }
 }
 
-// --- SILENT IMAGE PRELOADER ---
-// --- HIGH-SPEED PRELOADER ---
+// --- POLITE & EFFICIENT PRELOADER ---
+
+let preloaderPaused = false;
+let pauseTimeout = null;
+
+function requestPriority(trueName) {
+    // 1. Pause the background preloader
+    preloaderPaused = true;
+    if (pauseTimeout) clearTimeout(pauseTimeout);
+    
+    // 2. Set a timeout to resume background preloading after 3 seconds of inactivity
+    pauseTimeout = setTimeout(() => { preloaderPaused = false; }, 3000);
+
+    // 3. Immediately trigger the UI updates for the requested monster
+    loadMonsterImage(trueName);
+    loadStats(trueName);
+    costumeErrorHandling(trueName);
+}
+
 function silentlyPreloadImages() {
     if (typeof MSM === 'undefined' || monsterRegistry.length === 0) { 
-        setTimeout(silentlyPreloadImages, 300); 
+        setTimeout(silentlyPreloadImages, 500); 
         return; 
     }
 
-    // 1. Immediately preload the 'Spotlight' and 'Recent' items
-    const history = JSON.parse(localStorage.getItem('msmRecentHistory')) || [];
-    history.forEach(name => { try { MSM[name]; } catch(e){} });
-
-    // 2. Preload the rest of the registry in batches
     let index = 0;
     function loadNextBatch() {
-        const batchSize = 10; // Increased batch size
+        // SKIP BATCH if the user is currently searching/breeding
+        if (preloaderPaused) {
+            setTimeout(loadNextBatch, 1000); 
+            return;
+        }
+
+        const batchSize = 3; 
         for (let i = 0; i < batchSize && index < monsterRegistry.length; i++, index++) {
             const trueName = findTrueName(monsterRegistry[index]);
-            // This 'touches' the MSM object, triggering the new fetchWithCache!
-            if (trueName) { try { MSM[trueName]; } catch(e){} }
+            if (trueName) { 
+                try { 
+                    const monsterData = MSM[trueName]; 
+                    if (monsterData && monsterData.getElementImages) {
+                        monsterData.getElementImages().then(elements => {
+                            // FIX: Added '&& Array.isArray(elements)' to prevent the "Broken" script error
+                            if (elements && Array.isArray(elements)) {
+                                elements.forEach(el => {
+                                    if (el.image) { const img = new Image(); img.src = el.image; }
+                                });
+                            }
+                        }).catch(e => console.warn("Element preload failed", e));
+                    }
+                } catch(e){} 
+            }
         }
-        if (index < monsterRegistry.length) setTimeout(loadNextBatch, 100); // Faster batching
+        
+        if (index < monsterRegistry.length) {
+            setTimeout(() => {
+                if ('requestIdleCallback' in window) requestIdleCallback(loadNextBatch);
+                else loadNextBatch();
+            }, 250); 
+        }
     }
-    setTimeout(loadNextBatch, 500);
+    setTimeout(loadNextBatch, 2000); 
 }
-silentlyPreloadImages();
 
+silentlyPreloadImages();
 // =========================================
 // NEW FEATURES: Particles, Random & History
 // =========================================
@@ -736,11 +874,12 @@ function updateRecentHistoryUI() {
 
         grid.appendChild(img);
 
-        // BUG FIX 2: Polite retry loop waits for the API to load before fetching
+        let historyAttempts = 0; // Create a counter
         const attemptImageLoad = () => {
             if (typeof MSM !== 'undefined' && MSM[monsterName]) {
                 try { MSM[monsterName].loadImage(img.id); } catch (e) { }
-            } else {
+            } else if (historyAttempts < 25) { // Stop after 25 tries
+                historyAttempts++;
                 setTimeout(attemptImageLoad, 200);
             }
         };
@@ -772,10 +911,12 @@ function updateMonsterOfTheDay() {
         imgEl.id = `spotlight-img-${trueName.replace(/[^a-zA-Z0-9]/g, '')}`; // Unique ID for API
         imgEl.onerror = () => { imgEl.onerror = null; imgEl.src = GRID_FALLBACK_IMAGE; };
 
+        let spotlightAttempts = 0;
         const attemptImageLoad = () => {
             if (typeof MSM !== 'undefined' && MSM[trueName]) {
                 try { MSM[trueName].loadImage(imgEl.id); } catch (e) { }
-            } else {
+            } else if (spotlightAttempts < 25) { // Stop after 25 tries
+                spotlightAttempts++;
                 setTimeout(attemptImageLoad, 200);
             }
         };
