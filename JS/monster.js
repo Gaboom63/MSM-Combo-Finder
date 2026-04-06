@@ -25,6 +25,7 @@ let currentRarity = "";
 let monsterRegistry = [];
 let validBreedingCombos = []; // NEW: Stores guaranteed valid combos!
 let currentMonster = null;
+let imageLoadTimeout;
 
 // --- 1. BUILD REGISTRY ---
 async function buildMonsterRegistry() {
@@ -105,15 +106,32 @@ function loadMonsterImage(name) {
     monsterImage.style.opacity = '0';
     if (loadingSpinner) loadingSpinner.style.display = 'block';
 
-    const monster = MSM[name];
+    // Clear old listeners to prevent weird crossover bugs
+    monsterImage.onload = null;
+    monsterImage.onerror = null;
+
+    // Success
     monsterImage.onload = () => {
         if (loadingSpinner) loadingSpinner.style.display = 'none';
         monsterImage.style.opacity = '1';
         monsterImage.classList.add('animate-enter');
     };
-    currentMonster = monster;
-    try { MSM[name].loadImage("monsterImage"); }
-    catch (e) { if (loadingSpinner) loadingSpinner.style.display = 'none'; }
+
+    // Failure (Prevents the infinite loading spinner)
+    monsterImage.onerror = () => {
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+    };
+
+    try {
+        if (typeof MSM !== 'undefined' && MSM[name]) {
+            currentMonster = MSM[name];
+            MSM[name].loadImage("monsterImage");
+        } else {
+            throw new Error("Monster not found in API");
+        }
+    } catch (e) {
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+    }
 }
 
 function showMonsterUI(isBreedingResult = false) {
@@ -147,9 +165,26 @@ function showMonsterUI(isBreedingResult = false) {
 document.addEventListener('keydown', e => { if (e.key === "Escape") reset(); });
 
 async function costumeErrorHandling(name) {
-    const costumes = await MSM[name].getCostumes();
-    if (!costumes || costumes.length === 0) costumeButton.style.display = 'none';
-    else costumeButton.style.display = 'revert';
+    if (!isValidMonster(name)) {
+        costumeButton.style.display = 'none';
+        return;
+    }
+
+    try {
+        // Race the costume fetch against a 3 second timeout
+        const costumePromise = MSM[name].getCostumes();
+        const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve([]), 3000));
+        
+        const costumes = await Promise.race([costumePromise, timeoutPromise]);
+        
+        if (!costumes || costumes.length === 0) {
+            costumeButton.style.display = 'none';
+        } else {
+            costumeButton.style.display = 'revert';
+        }
+    } catch (e) {
+        costumeButton.style.display = 'none';
+    }
 }
 
 function reset() {
@@ -483,31 +518,9 @@ setupSmoothExpansionAndGrid(searchInput, dynamicGrid, true, 'full');
 setupSmoothExpansionAndGrid(firstInput, grid1, false, 'local');
 setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 
-commonButton.addEventListener("click", () => {
-    const base = monsterImage.getAttribute('data-name'); if (!base) return;
-    const trueName = findTrueName(base); searchInput.value = trueName; currentRarity = "Common";
-    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
-});
-
-rareButton.addEventListener("click", async () => {
-    const base = monsterImage.getAttribute('data-name'); if (!base) return;
-    const name = `Rare ${base}`; const trueName = findTrueName(name);
-
-    searchInput.value = trueName; currentRarity = "Rare";
-    updateActiveTab();
-
-    // Add 'await' to ensure the button only appears if costumes exist
-    await costumeErrorHandling(trueName);
-    loadMonsterImage(trueName);
-    loadStats(trueName);
-});
-
-epicButton.addEventListener("click", () => {
-    const base = monsterImage.getAttribute('data-name'); if (!base) return;
-    const name = `Epic ${base}`; const trueName = findTrueName(name);
-    searchInput.value = trueName; currentRarity = "Epic";
-    updateActiveTab(); costumeErrorHandling(trueName); loadMonsterImage(trueName); loadStats(trueName);
-});
+commonButton.addEventListener("click", () => handleRaritySwitch("Common"));
+rareButton.addEventListener("click", () => handleRaritySwitch("Rare"));
+epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 
 costumeButton.addEventListener("click", async () => {
     if (!currentMonster) return;
@@ -532,8 +545,9 @@ async function comboFinder() {
     const combo = `${firstInput.value} + ${secondInput.value}`;
     const result = await MSM.twoMonsterCombo(combo);
 
-    if (!result || result.length === 0 || result[0].includes("Invalid") || result[0].includes("No combination")) {
-        showMonsterUI(false);
+    // FIX: More robust checking for empty, null, or invalid results
+    if (!result || result.length === 0 || 
+        (typeof result[0] === 'string' && (result[0].includes("Invalid") || result[0].includes("No combination")))) {
         showNoMonsterError();
         return;
     }
@@ -548,7 +562,6 @@ async function comboFinder() {
             btn.className = 'tab-button';
             btn.textContent = monsterName;
 
-            // FIX: Added async/await to the click listener
             btn.addEventListener('click', async () => {
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab'));
                 btn.classList.add('active-tab');
@@ -562,8 +575,6 @@ async function comboFinder() {
 
         showMonsterUI(true);
         loadFromTab(result[0]);
-
-        // FIX: Only check the costume for the active (first) tab on initial load
         await costumeErrorHandling(result[0]);
 
     } else {
@@ -591,7 +602,8 @@ function loadFromTab(monsterName) {
     monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
-// --- UPDATED STATS: Now with Elemental Icons ---
+// --- UPDATED STATS: Now with Elemental Icons & Strict Error Checking ---
+// --- UPDATED STATS: Now with Auto-Retry Logic ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
@@ -606,16 +618,42 @@ async function loadStats(forceName) {
 
     try {
         const baseName = normalizeName(trueName);
-        const monster = await MSM[trueName];
-        if (!monster) throw new Error("Monster not found");
+        
+        // Ensure the monster actually exists in the API object before proceeding
+        if (typeof MSM === 'undefined' || !MSM[trueName]) {
+             throw new Error("Monster not found in API");
+        }
+        
+        const monster = MSM[trueName];
 
-        // Fetch all data in parallel
-        const [times, combos, elements] = await Promise.all([
-            monster.getBreedingTime(),
-            monster.getBreedingCombos(),
-            monster.getElementImages()
-        ]);
+        // 2. THE AUTO-RETRY SYSTEM
+        // This acts exactly like you "clicking the button a second time" if the API hangs
+        const fetchWithRetry = async (retries = 3) => {
+            for (let attempt = 1; attempt <= retries; attempt++) {
+                try {
+                    const statsPromise = Promise.all([
+                        monster.getBreedingTime(),
+                        monster.getBreedingCombos(),
+                        monster.getElementImages()
+                    ]);
+                    
+                    // Give the API 1.5 seconds to answer before considering it "stuck"
+                    const timeoutPromise = new Promise((_, reject) => 
+                        setTimeout(() => reject(new Error("API Stalled")), 1500)
+                    );
+                    
+                    return await Promise.race([statsPromise, timeoutPromise]);
+                } catch (err) {
+                    if (attempt === retries) throw err; // If it fails 3 times, give up
+                    await new Promise(res => setTimeout(res, 100)); // Wait 100ms before retrying
+                }
+            }
+        };
 
+        // Fetch the data using our new bulletproof retrier
+        const [times, combos, elements] = await fetchWithRetry(3);
+
+        // 3. Build UI elements
         if (baseName.includes("(Major)")) {
             majorMinorButton.textContent = "Switch To Minor";
             majorMinorButton.style.display = "inline-flex";
@@ -628,10 +666,9 @@ async function loadStats(forceName) {
 
         const displayName = toDisplayCase(baseName);
 
-        // 2. Build the UI Pieces
         const nameHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name </span><h3>${currentRarity || "Common"} ${displayName}</h3></div>`;
 
-        const elementIcons = elements.length > 0
+        const elementIcons = (elements && elements.length > 0)
             ? elements.map(el => `<img src="${el.image}" class="element-icon" title="${el.name}">`).join("")
             : `<span style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">No Elements</span>`;
 
@@ -641,27 +678,41 @@ async function loadStats(forceName) {
                 <div class="elements-display">${elementIcons}</div>
             </div>`;
 
-        const timeContent = (times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
+        const timeContent = (!times || times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
         const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
 
         const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
-        // 3. Final Render (Replacing the spinner)
+        // 4. Final Render
         statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
-
         if (typeof saveToHistory === 'function') saveToHistory(trueName);
+
     } catch (err) {
-        console.error("Stats failed:", err);
-        showNoMonsterError();
+        console.warn("Stats fetch failed after all retries:", err);
+        showNoMonsterError(); // Finally triggers the true error state!
     }
 }
-
 function showNoMonsterError() {
-    monsterImage.style.display = 'none'; if (loadingSpinner) loadingSpinner.style.display = 'none';
-    if (tabsContainer) { tabsContainer.innerHTML = ''; tabsContainer.style.display = 'none'; }
-    [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton].forEach(el => { if (el) el.style.display = 'none'; });
-    noMonsterImage.style.display = 'revert'; noMonsterImage.src = `images/important/Nomonsterfound.png`;
+    // FIX: Ensure main images and overlay messages are completely hidden
+    monsterImage.style.display = 'none'; 
+    blurMessage.style.display = 'none'; 
+    
+    if (loadingSpinner) loadingSpinner.style.display = 'none';
+    
+    if (tabsContainer) { 
+        tabsContainer.innerHTML = ''; 
+        tabsContainer.style.display = 'none'; 
+    }
+    
+    // Hide all action buttons and stats (added costumeButton for completeness)
+    [commonButton, rareButton, epicButton, statBox, volumeButton, majorMinorButton, costumeButton].forEach(el => { 
+        if (el) el.style.display = 'none'; 
+    });
+    
+    // Show the fallback image
+    noMonsterImage.style.display = 'revert'; 
+    noMonsterImage.src = `images/important/Nomonsterfound.png`;
 }
 
 async function playSound() {
@@ -939,6 +990,88 @@ function updateMonsterOfTheDay() {
     });
 }
 
+// --- UNIFIED RARITY BUTTON LOGIC ---
+function handleRaritySwitch(rarityType) {
+    const base = monsterImage.getAttribute('data-name'); 
+    if (!base) return;
+
+    const name = rarityType === "Common" ? base : `${rarityType} ${base}`; 
+    const trueName = findTrueName(name);
+
+    searchInput.value = trueName; 
+    currentRarity = rarityType;
+    updateActiveTab();
+
+    // 1. Trigger the image load first
+    loadMonsterImage(trueName); 
+
+    // 2. Wait 50ms to let the API stabilize, then fetch stats & costumes
+    setTimeout(() => {
+        loadStats(trueName);
+        costumeErrorHandling(trueName);
+    }, 50);
+}
+
+// Attach the unified function to the buttons
+commonButton.addEventListener("click", () => handleRaritySwitch("Common"));
+rareButton.addEventListener("click", () => handleRaritySwitch("Rare"));
+epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
+
+function isValidMonster(name) {
+    if (!name) return false;
+    const lowerName = name.toLowerCase();
+    // Check if it exists in our registry or the loaded MSM object keys
+    const inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
+    const inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === lowerName);
+    return inRegistry || inMSM;
+}
+
+function loadMonsterImage(name) {
+    if (!name) return;
+    monsterImage.classList.remove('animate-enter');
+    monsterImage.style.opacity = '0';
+    if (loadingSpinner) loadingSpinner.style.display = 'block';
+
+    // 1. Clear any stuck timeouts from previous clicks
+    clearTimeout(imageLoadTimeout);
+
+    // 2. Strict frontend validation
+    if (!isValidMonster(name)) {
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+        showNoMonsterError();
+        return;
+    }
+
+    const cleanup = () => {
+        if (loadingSpinner) loadingSpinner.style.display = 'none';
+        clearTimeout(imageLoadTimeout);
+    };
+
+    monsterImage.onload = () => {
+        cleanup();
+        monsterImage.style.opacity = '1';
+        monsterImage.classList.add('animate-enter');
+    };
+
+    monsterImage.onerror = () => {
+        cleanup();
+        showNoMonsterError();
+    };
+
+    // 3. The Kill Switch: If it takes longer than 4 seconds, force it to stop loading
+    imageLoadTimeout = setTimeout(() => {
+        cleanup();
+        showNoMonsterError();
+    }, 4000);
+
+    try {
+        currentMonster = MSM[name];
+        MSM[name].loadImage("monsterImage");
+    } catch (e) {
+        cleanup();
+        showNoMonsterError();
+    }
+}
 
 // --- MSM API INJECTION ---
 (function loadMSMAPI() {
@@ -956,6 +1089,8 @@ function updateMonsterOfTheDay() {
         .then(src => console.log("MSM API ready:", src))
         .catch(() => { console.error("All MSM API sources failed"); });
 })();
+
+
 
 // Ensure history loads when page starts
 document.addEventListener("DOMContentLoaded", updateRecentHistoryUI);
