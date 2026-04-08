@@ -29,17 +29,47 @@ let imageLoadTimeout;
 
 // --- 1. BUILD REGISTRY ---
 async function buildMonsterRegistry() {
+    // 1. New endpoint to scan the repository's folders
+    const repoTreeUrl = "https://api.github.com/repos/Gaboom63/MSM-API/git/trees/main?recursive=1";
     const breedingUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/monsters/Extras/breedingCombos.json";
+    
     try {
-        const response = await fetch(breedingUrl, { credentials: 'omit' });
-        const data = await response.json();
         const uniqueNames = new Set();
         const clean = (name) => name ? name.trim() : "";
         const ignoreList = ["any", "invalid", "no combination", "unknown"];
 
+        // 2. Fetch the folder structure from GitHub
+        const treeResponse = await fetch(repoTreeUrl);
+        if (treeResponse.ok) {
+            const treeData = await treeResponse.json();
+            
+            // Loop through all files in the repository
+            treeData.tree.forEach(item => {
+                // Match files only inside Common, Rare, and Epic folders
+                const match = item.path.match(/^data\/monsters\/(Common|Rare|Epic)\/(.+)\.json$/);
+                if (match) {
+                    const folder = match[1];
+                    const fileName = match[2]; // e.g., "Noggin"
+                    
+                    let fullName = fileName;
+                    // Prepend the rarity prefix just like your API expects
+                    if (folder === "Rare") fullName = "Rare " + fileName;
+                    if (folder === "Epic") fullName = "Epic " + fileName;
+                    
+                    uniqueNames.add(clean(fullName));
+                }
+            });
+        } else {
+            console.warn("Failed to fetch folder tree. Falling back to breeding combos only.");
+        }
+
+        // 3. Keep your existing logic for breeding combos
+        const response = await fetch(breedingUrl, { credentials: 'omit' });
+        const data = await response.json();
+
         Object.keys(data).forEach(key => {
             if (key.includes("+")) {
-                validBreedingCombos.push(key); // NEW: Save the exact valid combo string
+                validBreedingCombos.push(key); // Assumes validBreedingCombos is globally defined
                 const parents = key.split("+");
                 parents.forEach(p => uniqueNames.add(clean(p)));
             } else {
@@ -51,6 +81,7 @@ async function buildMonsterRegistry() {
             }
         });
 
+        // 4. Filter, sort, and assign to your global registry
         monsterRegistry = Array.from(uniqueNames).filter(n => {
             const lowerName = n.toLowerCase();
             return n !== "" && !ignoreList.some(ignoreWord => lowerName.includes(ignoreWord));
@@ -530,13 +561,51 @@ costumeButton.addEventListener("click", async () => {
 });
 
 majorMinorButton.addEventListener("click", () => {
-    const currentName = monsterImage.getAttribute('data-name'); if (!currentName) return;
-    let newName = "";
-    if (currentName.includes("(Major)")) newName = currentName.replace("(Major)", "(Minor)");
-    else if (currentName.includes("(Minor)")) newName = currentName.replace("(Minor)", "(Major)");
-    if (newName) {
-        const trueName = findTrueName(newName); searchInput.value = trueName; monsterImage.setAttribute('data-name', trueName);
-        loadMonsterImage(trueName); loadStats(trueName);
+    const currentBase = monsterImage.getAttribute('data-name'); 
+    if (!currentBase) return;
+
+    let newBase = "";
+    if (currentBase.includes("(Major)")) {
+        newBase = currentBase.replace("(Major)", "(Minor)");
+    } else if (currentBase.includes("(Minor)")) {
+        newBase = currentBase.replace("(Minor)", "(Major)");
+    }
+
+    if (newBase) {
+        // Construct the full name with the current rarity
+        const prefix = (currentRarity && currentRarity !== "Common") ? `${currentRarity} ` : "";
+        const fullName = prefix + newBase;
+
+        // 1. Try to find the exact rarity match (e.g., "Rare Wubbox (Minor)")
+        let trueName = findTrueName(fullName);
+
+        // 2. THE FALLBACK: If the rarity version doesn't exist in the API, 
+        // strip the rarity and search for the base version (e.g., "Wubbox (Minor)")
+        if (typeof MSM !== 'undefined' && !MSM[trueName]) {
+            console.log(`[Major/Minor Check] ${trueName} not found. Falling back to base: ${newBase}`);
+            trueName = findTrueName(newBase);
+            currentRarity = "Common"; // Reset the rarity state since we fell back
+            updateActiveTab();        // Visually reset the tabs
+        }
+
+        // 3. THE SAFETY NET: If neither exist, stop completely to prevent the error screen
+        if (typeof MSM !== 'undefined' && !MSM[trueName]) {
+            console.error(`[Major/Minor Error] Neither ${fullName} nor ${newBase} exist in the API!`);
+            return; 
+        }
+
+        // Update tracking attributes with the safe, validated name
+        searchInput.value = trueName; 
+        monsterImage.setAttribute('data-name', normalizeName(trueName));
+
+        // Bypass the bouncer and load
+        loadMonsterImage(trueName);
+        
+        // Wait 50ms to let the API stabilize, then fetch stats & costumes
+        setTimeout(() => {
+            loadStats(trueName);
+            costumeErrorHandling(trueName);
+        }, 50);
     }
 });
 
@@ -1033,19 +1102,30 @@ epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 function isValidMonster(name) {
     if (!name) return false;
     let lowerName = name.toLowerCase().trim();
-    
-    // 1. Check for an exact match first
-    let inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
-    let inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === lowerName);
-    
-    if (inRegistry || inMSM) return true;
 
-    // 2. THE VIP PASS: If it's a Major/Minor variant, check if the base monster exists!
+    // Debug: This proves to you the string is formatted correctly and not (Major)(Minor)
+    console.log(`[Validation Check] Attempting to validate: "${name}"`);
+
+    // 1. THE FIX: Direct API Check! 
+    // If typing MSM[name] works in the console, this catches it instantly and approves it.
+    if (typeof MSM !== 'undefined' && MSM[name]) {
+        return true; 
+    }
+
+    // 2. Case-insensitive API check (for safety)
+    const inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === lowerName);
+    if (inMSM) return true;
+
+    // 3. Registry check
+    let inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
+    if (inRegistry) return true;
+
+    // 4. Fallback for Major/Minor variations
     if (lowerName.includes("(major)") || lowerName.includes("(minor)")) {
         const baseOnly = lowerName.replace(/\s*\((major|minor)\)/i, '').trim();
-        inRegistry = monsterRegistry.some(n => n.toLowerCase() === baseOnly);
-        inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === baseOnly);
-        return inRegistry || inMSM;
+        const baseInRegistry = monsterRegistry.some(n => n.toLowerCase() === baseOnly);
+        const baseInMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === baseOnly);
+        return baseInRegistry || baseInMSM;
     }
 
     return false;
