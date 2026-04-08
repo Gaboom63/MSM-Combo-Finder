@@ -602,12 +602,20 @@ function loadFromTab(monsterName) {
     monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
-// --- UPDATED STATS: Now with Elemental Icons & Strict Error Checking ---
-// --- UPDATED STATS: Now with Auto-Retry Logic ---
+// --- UPDATED STATS: Now with Strict Dummy Data Checking ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
     const trueName = findTrueName(rawInput);
+
+    // STRICT VALIDATION: Catch fake monsters immediately
+    if (!isValidMonster(trueName)) {
+        showNoMonsterError();
+        return;
+    }
+
+    // FIX: Immediately hide the error background if a valid search starts
+    noMonsterImage.style.display = 'none';
 
     // 1. Show the box immediately with a loading state
     statBox.style.display = 'flex';
@@ -617,17 +625,13 @@ async function loadStats(forceName) {
         </div>`;
 
     try {
-        const baseName = normalizeName(trueName);
-        
-        // Ensure the monster actually exists in the API object before proceeding
+        const baseName = normalizeName(trueName);        
         if (typeof MSM === 'undefined' || !MSM[trueName]) {
              throw new Error("Monster not found in API");
         }
         
         const monster = MSM[trueName];
 
-        // 2. THE AUTO-RETRY SYSTEM
-        // This acts exactly like you "clicking the button a second time" if the API hangs
         const fetchWithRetry = async (retries = 3) => {
             for (let attempt = 1; attempt <= retries; attempt++) {
                 try {
@@ -637,23 +641,32 @@ async function loadStats(forceName) {
                         monster.getElementImages()
                     ]);
                     
-                    // Give the API 1.5 seconds to answer before considering it "stuck"
                     const timeoutPromise = new Promise((_, reject) => 
                         setTimeout(() => reject(new Error("API Stalled")), 1500)
                     );
                     
                     return await Promise.race([statsPromise, timeoutPromise]);
                 } catch (err) {
-                    if (attempt === retries) throw err; // If it fails 3 times, give up
-                    await new Promise(res => setTimeout(res, 100)); // Wait 100ms before retrying
+                    if (attempt === retries) throw err;
+                    await new Promise(res => setTimeout(res, 100));
                 }
             }
         };
 
-        // Fetch the data using our new bulletproof retrier
         const [times, combos, elements] = await fetchWithRetry(3);
 
-        // 3. Build UI elements
+        // --- THE FIX: STRICT DUMMY CHECK ---
+        // Every real monster in MSM has at least an element or a time. 
+        // If all of these are completely empty, the API handed us a ghost.
+        const hasRealTime = times && times.breedingTime && times.breedingTime !== "Unknown";
+        const hasCombos = combos && combos.length > 0;
+        const hasElements = elements && elements.length > 0;
+
+        if (!hasRealTime && !hasCombos && !hasElements) {
+            throw new Error("API returned a dummy/empty monster object.");
+        }
+        // ------------------------------------
+
         if (baseName.includes("(Major)")) {
             majorMinorButton.textContent = "Switch To Minor";
             majorMinorButton.style.display = "inline-flex";
@@ -684,15 +697,15 @@ async function loadStats(forceName) {
         const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
-        // 4. Final Render
         statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
         if (typeof saveToHistory === 'function') saveToHistory(trueName);
 
     } catch (err) {
         console.warn("Stats fetch failed after all retries:", err);
-        showNoMonsterError(); // Finally triggers the true error state!
+        showNoMonsterError(); // This triggers your error function, hiding the statBox entirely
     }
 }
+
 function showNoMonsterError() {
     // FIX: Ensure main images and overlay messages are completely hidden
     monsterImage.style.display = 'none'; 
@@ -1019,11 +1032,23 @@ epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 
 function isValidMonster(name) {
     if (!name) return false;
-    const lowerName = name.toLowerCase();
-    // Check if it exists in our registry or the loaded MSM object keys
-    const inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
-    const inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === lowerName);
-    return inRegistry || inMSM;
+    let lowerName = name.toLowerCase().trim();
+    
+    // 1. Check for an exact match first
+    let inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
+    let inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === lowerName);
+    
+    if (inRegistry || inMSM) return true;
+
+    // 2. THE VIP PASS: If it's a Major/Minor variant, check if the base monster exists!
+    if (lowerName.includes("(major)") || lowerName.includes("(minor)")) {
+        const baseOnly = lowerName.replace(/\s*\((major|minor)\)/i, '').trim();
+        inRegistry = monsterRegistry.some(n => n.toLowerCase() === baseOnly);
+        inMSM = typeof MSM !== 'undefined' && Object.keys(MSM).some(k => k.toLowerCase() === baseOnly);
+        return inRegistry || inMSM;
+    }
+
+    return false;
 }
 
 function loadMonsterImage(name) {
@@ -1032,10 +1057,8 @@ function loadMonsterImage(name) {
     monsterImage.style.opacity = '0';
     if (loadingSpinner) loadingSpinner.style.display = 'block';
 
-    // 1. Clear any stuck timeouts from previous clicks
     clearTimeout(imageLoadTimeout);
 
-    // 2. Strict frontend validation
     if (!isValidMonster(name)) {
         if (loadingSpinner) loadingSpinner.style.display = 'none';
         showNoMonsterError();
@@ -1053,15 +1076,22 @@ function loadMonsterImage(name) {
         monsterImage.classList.add('animate-enter');
     };
 
+    // FIX: If the image fails, just show the fallback icon, don't break the UI!
     monsterImage.onerror = () => {
         cleanup();
-        showNoMonsterError();
+        monsterImage.onerror = null; // Prevent infinite loops
+        monsterImage.src = GRID_FALLBACK_IMAGE; 
+        monsterImage.style.opacity = '1';
+        monsterImage.classList.add('animate-enter');
     };
 
-    // 3. The Kill Switch: If it takes longer than 4 seconds, force it to stop loading
+    // FIX: If the image times out, do the same fallback
     imageLoadTimeout = setTimeout(() => {
         cleanup();
-        showNoMonsterError();
+        monsterImage.onerror = null;
+        monsterImage.src = GRID_FALLBACK_IMAGE;
+        monsterImage.style.opacity = '1';
+        monsterImage.classList.add('animate-enter');
     }, 4000);
 
     try {
@@ -1069,10 +1099,13 @@ function loadMonsterImage(name) {
         MSM[name].loadImage("monsterImage");
     } catch (e) {
         cleanup();
-        showNoMonsterError();
+        // If it critically fails here, fallback
+        monsterImage.onerror = null;
+        monsterImage.src = GRID_FALLBACK_IMAGE;
+        monsterImage.style.opacity = '1';
+        monsterImage.classList.add('animate-enter');
     }
 }
-
 // --- MSM API INJECTION ---
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
