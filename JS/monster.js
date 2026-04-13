@@ -219,7 +219,7 @@ async function costumeErrorHandling(name) {
 }
 
 function reset() {
-    inputContainer.style.display = 'block';
+    inputContainer.style.display = 'inline-block';
     monsterImage.style.display = 'none';
     blurMessage.style.display = 'none';
 
@@ -259,7 +259,7 @@ function reset() {
     secondInput.style.opacity = '1';
 
     closeExpandedInput();
-    checkInputGlows(); // <-- FIX: Clears the green glows immediately on reset
+    checkInputGlows(); 
 }
 
 // --- STEP 2: Split View Logic ---
@@ -1202,8 +1202,6 @@ function loadMonsterImage(name) {
         .then(src => console.log("MSM API ready:", src))
         .catch(() => { console.error("All MSM API sources failed"); });
 })();
-
-
 
 // Ensure history loads when page starts
 document.addEventListener("DOMContentLoaded", updateRecentHistoryUI);
