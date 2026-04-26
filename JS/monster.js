@@ -633,7 +633,6 @@ async function loadStats(forceName) {
         const hasRealTime = times && times.Standard && times.Standard !== "Unknown";
         const hasCombos = combos && combos.length > 0;
 
-        // FIX: Replaced direct .then() calls with Promise.resolve() safely handling cached/plain objects!
         if (tabsContainer.style.display === 'none' || tabsContainer.children.length === 0) {
             Promise.resolve(MSM[`Rare ${baseName}`]).then(res => {
                 if (res) rareButton.style.display = 'inline-flex';
