@@ -41,8 +41,12 @@ async function buildMonsterRegistry() {
             if (masterRes.ok) {
                 const masterDb = await masterRes.json();
                 
+                // Only add monsters that actually have data backing them up
                 if (masterDb['Descriptions']) {
                     Object.keys(masterDb['Descriptions']).forEach(name => uniqueNames.add(clean(name)));
+                }
+                if (masterDb['Costs']) {
+                    Object.keys(masterDb['Costs']).forEach(name => uniqueNames.add(clean(name)));
                 }
                 
                 if (masterDb['Image Manifest']) {
@@ -67,14 +71,8 @@ async function buildMonsterRegistry() {
                 Object.keys(data).forEach(key => {
                     if (key.includes("+")) {
                         validBreedingCombos.push(key);
-                        const parents = key.split("+");
-                        parents.forEach(p => uniqueNames.add(clean(p)));
-                    } else {
-                        uniqueNames.add(clean(key));
-                    }
-                    const results = data[key];
-                    if (Array.isArray(results)) {
-                        results.forEach(r => uniqueNames.add(clean(r)));
+                        // FIX: We no longer push breeding parents or results into uniqueNames. 
+                        // The breeding file shouldn't dictate what monsters exist.
                     }
                 });
             }
@@ -94,7 +92,6 @@ async function buildMonsterRegistry() {
         console.error("Registry failed:", err);
     }
 }
-
 buildMonsterRegistry();
 
 function findTrueName(input) {
