@@ -28,7 +28,6 @@ let currentMonster = null;
 let imageLoadTimeout;
 
 async function buildMonsterRegistry() {
-    const masterUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/master_database.json";
     const breedingUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/JSONS/breedingCombos.json";
     
     try {
@@ -37,39 +36,20 @@ async function buildMonsterRegistry() {
         const ignoreList = ["any", "invalid", "no combination", "unknown"];
 
         try {
-            const masterRes = await fetch(masterUrl);
-            if (masterRes.ok) {
-                const masterDb = await masterRes.json();
-                
-                if (masterDb['Descriptions']) {
-                    Object.keys(masterDb['Descriptions']).forEach(name => uniqueNames.add(clean(name)));
-                }
-                if (masterDb['Costs']) {
-                    Object.keys(masterDb['Costs']).forEach(name => uniqueNames.add(clean(name)));
-                }
-                
-                if (masterDb['Image Manifest']) {
-                    Object.keys(masterDb['Image Manifest']).forEach(base => {
-                        Object.keys(masterDb['Image Manifest'][base]).forEach(rarity => {
-                            const fullName = rarity === "Common" ? base : `${rarity} ${base}`;
-                            uniqueNames.add(clean(fullName));
-                        });
-                    });
-                }
-            } else {
-                console.warn("Failed to fetch Master Database. Using fallbacks.");
-            }
-        } catch (err) {
-            console.warn("Error fetching Master DB:", err);
-        }
-
-        try {
             const response = await fetch(breedingUrl, { credentials: 'omit' });
             if (response.ok) {
                 const data = await response.json();
+                
+                // Exclusively map from the verified JSON files
                 Object.keys(data).forEach(key => {
                     if (key.includes("+")) {
                         validBreedingCombos.push(key);
+                        key.split("+").forEach(p => uniqueNames.add(clean(p)));
+                    } else {
+                        uniqueNames.add(clean(key));
+                    }
+                    if (Array.isArray(data[key])) {
+                        data[key].forEach(child => uniqueNames.add(clean(child)));
                     }
                 });
             }
@@ -82,7 +62,7 @@ async function buildMonsterRegistry() {
             return n !== "" && !ignoreList.some(ignoreWord => lowerName.includes(ignoreWord));
         }).sort();
 
-        console.log(`Registry ready: ${monsterRegistry.length} monsters.`);
+        console.log(`Registry ready: ${monsterRegistry.length} monsters loaded from custom JSON.`);
         updateMonsterOfTheDay();
 
     } catch (err) {
@@ -426,7 +406,6 @@ function triggerBreedingAnimation() {
     setTimeout(async () => {
         closeSplitView();
         
-        // FIX: Ensure UI resets if the combo logic fails or network drops
         try {
             await comboFinder();
         } catch (err) {
@@ -529,6 +508,7 @@ majorMinorButton.addEventListener("click", () => {
         searchInput.value = trueName; 
         monsterImage.setAttribute('data-name', normalizeName(trueName));
 
+        showMonsterUI(false);
         loadMonsterImage(trueName);
         
         setTimeout(() => {
@@ -595,7 +575,10 @@ async function comboFinder() {
 function loadFromTab(monsterName) {
     const trueName = findTrueName(monsterName); searchInput.value = trueName;
     if (/^rare/i.test(trueName)) currentRarity = "Rare"; else if (/^epic/i.test(trueName)) currentRarity = "Epic"; else currentRarity = "Common";
-    monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
+    monsterImage.setAttribute('data-name', normalizeName(trueName)); 
+    showMonsterUI(false); 
+    loadMonsterImage(trueName); 
+    loadStats(trueName);
 }
 
 async function loadStats(forceName) {
@@ -649,11 +632,6 @@ async function loadStats(forceName) {
 
         const hasRealTime = times && times.Standard && times.Standard !== "Unknown";
         const hasCombos = combos && combos.length > 0;
-        const hasElements = elements && elements.length > 0;
-
-        if (!hasRealTime && !hasCombos && !hasElements) {
-            throw new Error("API returned a dummy/empty monster object.");
-        }
 
         if (tabsContainer.style.display === 'none' || tabsContainer.children.length === 0) {
             MSM[`Rare ${baseName}`].then(res => {
@@ -842,7 +820,6 @@ if (randomComboBtn) {
             setTimeout(async () => {
                 closeSplitView();
                 
-                // FIX: Ensure UI resets if combo generation fails
                 try {
                     await comboFinder();
                 } catch(err) {
@@ -979,7 +956,6 @@ function updateMonsterOfTheDay() {
     });
 }
 
-// FIX: Gracefully decline rarity switches if the variant does not exist so UI doesn't nuke itself
 async function handleRaritySwitch(rarityType) {
     const base = monsterImage.getAttribute('data-name'); 
     if (!base) return;
@@ -999,6 +975,8 @@ async function handleRaritySwitch(rarityType) {
 
     searchInput.value = trueName; 
     currentRarity = rarityType;
+    
+    showMonsterUI(false); 
     updateActiveTab();
 
     loadMonsterImage(trueName); 
@@ -1082,7 +1060,6 @@ function loadMonsterImage(name) {
     }
 }
 
-// FIX: Wait for MSM API load before triggering methods that rely on the MSM object
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
@@ -1097,7 +1074,6 @@ function loadMonsterImage(name) {
         .catch(() => { console.warn("Primary failed, loading CDN fallback..."); return loadScript(FALLBACK_API); })
         .then(src => { 
             console.log("MSM API ready:", src);
-            // Safe to load dependent logic now
             buildMonsterRegistry();
             updateRecentHistoryUI();
         })
