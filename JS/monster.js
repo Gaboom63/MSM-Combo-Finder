@@ -41,7 +41,6 @@ async function buildMonsterRegistry() {
             if (masterRes.ok) {
                 const masterDb = await masterRes.json();
                 
-                // Only add monsters that actually have data backing them up
                 if (masterDb['Descriptions']) {
                     Object.keys(masterDb['Descriptions']).forEach(name => uniqueNames.add(clean(name)));
                 }
@@ -71,8 +70,6 @@ async function buildMonsterRegistry() {
                 Object.keys(data).forEach(key => {
                     if (key.includes("+")) {
                         validBreedingCombos.push(key);
-                        // FIX: We no longer push breeding parents or results into uniqueNames. 
-                        // The breeding file shouldn't dictate what monsters exist.
                     }
                 });
             }
@@ -92,7 +89,6 @@ async function buildMonsterRegistry() {
         console.error("Registry failed:", err);
     }
 }
-buildMonsterRegistry();
 
 function findTrueName(input) {
     if (!input) return null;
@@ -143,8 +139,6 @@ function showMonsterUI(isBreedingResult = false) {
         tabsContainer.style.gap = '10px';
     } else {
         commonButton.style.display = 'inline-flex';
-        
-        // Hide by default to prevent Fake Monster generation! 
         rareButton.style.display = 'none';
         epicButton.style.display = 'none';
         volumeButton.style.display = 'inline-flex';
@@ -431,16 +425,24 @@ function triggerBreedingAnimation() {
 
     setTimeout(async () => {
         closeSplitView();
-        await comboFinder();
-        setTimeout(() => {
-            badgeIcon.className = 'fas fa-plus';
-            badge.classList.remove('breeding');
-            firstInput.style.opacity = '1';
-            secondInput.style.opacity = '1';
+        
+        // FIX: Ensure UI resets if the combo logic fails or network drops
+        try {
+            await comboFinder();
+        } catch (err) {
+            console.error("Breeding failed:", err);
+            showNoMonsterError();
+        } finally {
+            setTimeout(() => {
+                badgeIcon.className = 'fas fa-plus';
+                badge.classList.remove('breeding');
+                firstInput.style.opacity = '1';
+                secondInput.style.opacity = '1';
 
-            if (img1) img1.classList.remove('breeding-glow-left');
-            if (img2) img2.classList.remove('breeding-glow-right');
-        }, 500);
+                if (img1) img1.classList.remove('breeding-glow-left');
+                if (img2) img2.classList.remove('breeding-glow-right');
+            }, 500);
+        }
     }, 1800);
 }
 
@@ -491,10 +493,6 @@ function checkInputGlows() {
 setupSmoothExpansionAndGrid(searchInput, dynamicGrid, true, 'full');
 setupSmoothExpansionAndGrid(firstInput, grid1, false, 'local');
 setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
-
-commonButton.addEventListener("click", () => handleRaritySwitch("Common"));
-rareButton.addEventListener("click", () => handleRaritySwitch("Rare"));
-epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 
 costumeButton.addEventListener("click", async () => {
     if (!currentMonster) return;
@@ -657,7 +655,6 @@ async function loadStats(forceName) {
             throw new Error("API returned a dummy/empty monster object.");
         }
 
-        // DYNAMIC BUTTON LOGIC: Let's check the API to see if the Rares actually exist!
         if (tabsContainer.style.display === 'none' || tabsContainer.children.length === 0) {
             MSM[`Rare ${baseName}`].then(res => {
                 if (res) rareButton.style.display = 'inline-flex';
@@ -844,13 +841,21 @@ if (randomComboBtn) {
 
             setTimeout(async () => {
                 closeSplitView();
-                await comboFinder();
-                setTimeout(() => {
-                    badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
-                    firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
-                    if (img1) img1.classList.remove('breeding-glow-left');
-                    if (img2) img2.classList.remove('breeding-glow-right');
-                }, 500);
+                
+                // FIX: Ensure UI resets if combo generation fails
+                try {
+                    await comboFinder();
+                } catch(err) {
+                    console.error("Random breed failed:", err);
+                    showNoMonsterError();
+                } finally {
+                    setTimeout(() => {
+                        badgeIcon.className = 'fas fa-plus'; badge.classList.remove('breeding');
+                        firstInput.style.opacity = '1'; secondInput.style.opacity = '1';
+                        if (img1) img1.classList.remove('breeding-glow-left');
+                        if (img2) img2.classList.remove('breeding-glow-right');
+                    }, 500);
+                }
             }, 1800);
         }, 1500);
     });
@@ -974,12 +979,23 @@ function updateMonsterOfTheDay() {
     });
 }
 
-function handleRaritySwitch(rarityType) {
+// FIX: Gracefully decline rarity switches if the variant does not exist so UI doesn't nuke itself
+async function handleRaritySwitch(rarityType) {
     const base = monsterImage.getAttribute('data-name'); 
     if (!base) return;
 
     const name = rarityType === "Common" ? base : `${rarityType} ${base}`; 
     const trueName = findTrueName(name);
+
+    if (typeof MSM !== 'undefined') {
+        try {
+            const exists = await MSM[trueName];
+            if (!exists) {
+                console.warn(`${trueName} variant does not exist.`);
+                return; 
+            }
+        } catch (e) { return; }
+    }
 
     searchInput.value = trueName; 
     currentRarity = rarityType;
@@ -1066,6 +1082,7 @@ function loadMonsterImage(name) {
     }
 }
 
+// FIX: Wait for MSM API load before triggering methods that rely on the MSM object
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
@@ -1075,11 +1092,14 @@ function loadMonsterImage(name) {
             script.onload = () => resolve(src); script.onerror = () => reject(src); document.head.appendChild(script);
         });
     }
+    
     loadScript(PRIMARY_API)
-        .then(src => console.log("MSM API loaded:", src))
         .catch(() => { console.warn("Primary failed, loading CDN fallback..."); return loadScript(FALLBACK_API); })
-        .then(src => console.log("MSM API ready:", src))
+        .then(src => { 
+            console.log("MSM API ready:", src);
+            // Safe to load dependent logic now
+            buildMonsterRegistry();
+            updateRecentHistoryUI();
+        })
         .catch(() => { console.error("All MSM API sources failed"); });
 })();
-
-document.addEventListener("DOMContentLoaded", updateRecentHistoryUI);
