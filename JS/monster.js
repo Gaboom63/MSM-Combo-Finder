@@ -40,7 +40,6 @@ async function buildMonsterRegistry() {
             if (response.ok) {
                 const data = await response.json();
                 
-                // Exclusively map from the verified JSON files
                 Object.keys(data).forEach(key => {
                     if (key.includes("+")) {
                         validBreedingCombos.push(key);
@@ -587,6 +586,7 @@ async function loadStats(forceName) {
     const trueName = findTrueName(rawInput);
 
     if (!isValidMonster(trueName)) {
+        console.error(`loadStats aborted: "${trueName}" is not recognized in the registry.`);
         showNoMonsterError();
         return;
     }
@@ -616,8 +616,9 @@ async function loadStats(forceName) {
                         monster.getElementImages()
                     ]);
                     
+                    // FIX: Timeout extended from 1.5s to 10s to accommodate heavy DB parsing on slow connections
                     const timeoutPromise = new Promise((_, reject) => 
-                        setTimeout(() => reject(new Error("API Stalled")), 1500)
+                        setTimeout(() => reject(new Error("API Stalled or Took Too Long")), 10000)
                     );
                     
                     return await Promise.race([statsPromise, timeoutPromise]);
@@ -673,9 +674,15 @@ async function loadStats(forceName) {
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
         statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
-        if (typeof saveToHistory === 'function') saveToHistory(trueName);
+        
+        try {
+            if (typeof saveToHistory === 'function') saveToHistory(trueName);
+        } catch (historyErr) {
+            console.warn("Could not save to history:", historyErr);
+        }
 
     } catch (err) {
+        console.error(`Fatal error in loadStats for "${trueName}":`, err);
         showNoMonsterError(); 
     }
 }
