@@ -27,7 +27,6 @@ let validBreedingCombos = [];
 let currentMonster = null;
 let imageLoadTimeout;
 
-// --- 1. BUILD REGISTRY (Updated for Master Database) ---
 async function buildMonsterRegistry() {
     const masterUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/master_database.json";
     const breedingUrl = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/JSONS/breedingCombos.json";
@@ -37,18 +36,15 @@ async function buildMonsterRegistry() {
         const clean = (name) => name ? name.trim() : "";
         const ignoreList = ["any", "invalid", "no combination", "unknown"];
 
-        // 1. Fetch the new Master Database instead of checking folders
         try {
             const masterRes = await fetch(masterUrl);
             if (masterRes.ok) {
                 const masterDb = await masterRes.json();
                 
-                // Pull from Descriptions
                 if (masterDb['Descriptions']) {
                     Object.keys(masterDb['Descriptions']).forEach(name => uniqueNames.add(clean(name)));
                 }
                 
-                // Pull from Image Manifest
                 if (masterDb['Image Manifest']) {
                     Object.keys(masterDb['Image Manifest']).forEach(base => {
                         Object.keys(masterDb['Image Manifest'][base]).forEach(rarity => {
@@ -64,7 +60,6 @@ async function buildMonsterRegistry() {
             console.warn("Error fetching Master DB:", err);
         }
 
-        // 2. Keep Breeding Combos logic to ensure parents/children are added
         try {
             const response = await fetch(breedingUrl, { credentials: 'omit' });
             if (response.ok) {
@@ -87,7 +82,6 @@ async function buildMonsterRegistry() {
             console.warn("Error fetching breeding combos:", err);
         }
 
-        // 3. Filter, sort, and assign to your global registry
         monsterRegistry = Array.from(uniqueNames).filter(n => {
             const lowerName = n.toLowerCase();
             return n !== "" && !ignoreList.some(ignoreWord => lowerName.includes(ignoreWord));
@@ -103,12 +97,10 @@ async function buildMonsterRegistry() {
 
 buildMonsterRegistry();
 
-// --- 2. CORE FUNCTIONS ---
 function findTrueName(input) {
     if (!input) return null;
     const cleanInput = input.trim().toLowerCase();
     
-    // Removed Object.keys(MSM) since MSM is now a Proxy without keys
     const registryKey = monsterRegistry.find(key => key.toLowerCase() === cleanInput);
     if (registryKey) return registryKey;
     
@@ -134,37 +126,6 @@ function updateActiveTab() {
     }
 }
 
-function loadMonsterImage(name) {
-    if (!name) return;
-    monsterImage.classList.remove('animate-enter');
-    monsterImage.style.opacity = '0';
-    if (loadingSpinner) loadingSpinner.style.display = 'block';
-
-    monsterImage.onload = null;
-    monsterImage.onerror = null;
-
-    monsterImage.onload = () => {
-        if (loadingSpinner) loadingSpinner.style.display = 'none';
-        monsterImage.style.opacity = '1';
-        monsterImage.classList.add('animate-enter');
-    };
-
-    monsterImage.onerror = () => {
-        if (loadingSpinner) loadingSpinner.style.display = 'none';
-    };
-
-    try {
-        if (typeof MSM !== 'undefined' && MSM[name]) {
-            currentMonster = MSM[name];
-            MSM[name].loadImage("monsterImage");
-        } else {
-            throw new Error("Monster not found in API");
-        }
-    } catch (e) {
-        if (loadingSpinner) loadingSpinner.style.display = 'none';
-    }
-}
-
 function showMonsterUI(isBreedingResult = false) {
     monsterImage.style.display = 'block';
     blurMessage.style.display = 'block';
@@ -185,8 +146,10 @@ function showMonsterUI(isBreedingResult = false) {
         tabsContainer.style.gap = '10px';
     } else {
         commonButton.style.display = 'inline-flex';
-        rareButton.style.display = 'inline-flex';
-        epicButton.style.display = 'inline-flex';
+        
+        // Hide by default to prevent Fake Monster generation! 
+        rareButton.style.display = 'none';
+        epicButton.style.display = 'none';
         volumeButton.style.display = 'inline-flex';
 
         tabsContainer.style.display = 'none';
@@ -260,7 +223,6 @@ function reset() {
     checkInputGlows(); 
 }
 
-// --- STEP 2: Split View Logic ---
 openBreedBtn.addEventListener('click', () => {
     breedSplitView.style.display = 'flex';
     requestAnimationFrame(() => breedSplitView.classList.add('active'));
@@ -274,7 +236,6 @@ function closeSplitView() {
     setTimeout(() => { breedSplitView.style.display = 'none'; }, 400);
 }
 
-// --- 3. UI REFRESH: Smooth Expansion & Dynamic API Grid ---
 let activeInput = null;
 let activeOriginalRect = null;
 let activeGrid = null;
@@ -563,16 +524,12 @@ majorMinorButton.addEventListener("click", () => {
         let trueName = findTrueName(fullName);
 
         if (typeof MSM !== 'undefined' && !MSM[trueName]) {
-            console.log(`[Major/Minor Check] ${trueName} not found. Falling back to base: ${newBase}`);
             trueName = findTrueName(newBase);
             currentRarity = "Common"; 
             updateActiveTab();        
         }
 
-        if (typeof MSM !== 'undefined' && !MSM[trueName]) {
-            console.error(`[Major/Minor Error] Neither ${fullName} nor ${newBase} exist in the API!`);
-            return; 
-        }
+        if (typeof MSM !== 'undefined' && !MSM[trueName]) return; 
 
         searchInput.value = trueName; 
         monsterImage.setAttribute('data-name', normalizeName(trueName));
@@ -586,7 +543,6 @@ majorMinorButton.addEventListener("click", () => {
     }
 });
 
-// --- COMBO FINDER ---
 async function comboFinder() {
     const combo = `${firstInput.value} + ${secondInput.value}`;
     const result = await MSM.twoMonsterCombo(combo);
@@ -647,7 +603,6 @@ function loadFromTab(monsterName) {
     monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
-// --- UPDATED STATS: Synchronized with the new Master Database Keys ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
@@ -697,13 +652,22 @@ async function loadStats(forceName) {
 
         const [times, combos, elements] = await fetchWithRetry(3);
 
-        // FIX: Switch validation to look for the "Standard" key instead of "breedingTime"
         const hasRealTime = times && times.Standard && times.Standard !== "Unknown";
         const hasCombos = combos && combos.length > 0;
         const hasElements = elements && elements.length > 0;
 
         if (!hasRealTime && !hasCombos && !hasElements) {
             throw new Error("API returned a dummy/empty monster object.");
+        }
+
+        // DYNAMIC BUTTON LOGIC: Let's check the API to see if the Rares actually exist!
+        if (tabsContainer.style.display === 'none' || tabsContainer.children.length === 0) {
+            MSM[`Rare ${baseName}`].then(res => {
+                if (res) rareButton.style.display = 'inline-flex';
+            });
+            MSM[`Epic ${baseName}`].then(res => {
+                if (res) epicButton.style.display = 'inline-flex';
+            });
         }
 
         if (baseName.includes("(Major)")) {
@@ -730,7 +694,6 @@ async function loadStats(forceName) {
                 <div class="elements-display">${elementIcons}</div>
             </div>`;
 
-        // FIX: Output the new Standard and Enhanced keys to the user
         const timeContent = (!hasRealTime) ? "Not Breedable" : `Default: <b>${times.Standard}</b><br>Enhanced: <b>${times.Enhanced}</b>`;
         const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
 
@@ -741,7 +704,6 @@ async function loadStats(forceName) {
         if (typeof saveToHistory === 'function') saveToHistory(trueName);
 
     } catch (err) {
-        console.warn("Stats fetch failed after all retries:", err);
         showNoMonsterError(); 
     }
 }
@@ -771,7 +733,6 @@ async function playSound() {
     catch (err) { console.warn("Sound failed:", err); }
 }
 
-// --- POLITE & EFFICIENT PRELOADER ---
 let preloaderPaused = false;
 let pauseTimeout = null;
 
@@ -829,10 +790,6 @@ function silentlyPreloadImages() {
 }
 
 silentlyPreloadImages();
-
-// =========================================
-// NEW FEATURES: Particles, Random & History
-// =========================================
 
 function createParticles() {
     const container = document.getElementById('particles-container');
@@ -1047,11 +1004,9 @@ function isValidMonster(name) {
     if (!name) return false;
     let lowerName = name.toLowerCase().trim();
 
-    // 1. Registry check (Primary Source of Truth)
     let inRegistry = monsterRegistry.some(n => n.toLowerCase() === lowerName);
     if (inRegistry) return true;
 
-    // 2. Fallback for Major/Minor variations
     if (lowerName.includes("(major)") || lowerName.includes("(minor)")) {
         const baseOnly = lowerName.replace(/\s*\((major|minor)\)/i, '').trim();
         const baseInRegistry = monsterRegistry.some(n => n.toLowerCase() === baseOnly);
@@ -1113,7 +1068,7 @@ function loadMonsterImage(name) {
         monsterImage.classList.add('animate-enter');
     }
 }
-// --- MSM API INJECTION ---
+
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
