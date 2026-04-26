@@ -647,7 +647,7 @@ function loadFromTab(monsterName) {
     monsterImage.setAttribute('data-name', normalizeName(trueName)); loadMonsterImage(trueName); loadStats(trueName);
 }
 
-// --- UPDATED STATS: Now with Strict Dummy Data Checking ---
+// --- UPDATED STATS: Synchronized with the new Master Database Keys ---
 async function loadStats(forceName) {
     const rawInput = forceName || searchInput.value.trim();
     if (!rawInput) return;
@@ -677,7 +677,6 @@ async function loadStats(forceName) {
         const fetchWithRetry = async (retries = 3) => {
             for (let attempt = 1; attempt <= retries; attempt++) {
                 try {
-                    // Safe method call for combos to prevent TypeError
                     const statsPromise = Promise.all([
                         monster.getBreedingTime(),
                         typeof monster.getBreedingCombos === 'function' ? monster.getBreedingCombos() : Promise.resolve([]),
@@ -698,7 +697,8 @@ async function loadStats(forceName) {
 
         const [times, combos, elements] = await fetchWithRetry(3);
 
-        const hasRealTime = times && times.breedingTime && times.breedingTime !== "Unknown";
+        // FIX: Switch validation to look for the "Standard" key instead of "breedingTime"
+        const hasRealTime = times && times.Standard && times.Standard !== "Unknown";
         const hasCombos = combos && combos.length > 0;
         const hasElements = elements && elements.length > 0;
 
@@ -730,10 +730,11 @@ async function loadStats(forceName) {
                 <div class="elements-display">${elementIcons}</div>
             </div>`;
 
-        const timeContent = (!times || times.breedingTime === "Unknown") ? "Not Breedable" : `Default: <b>${times.breedingTime}</b><br>Enhanced: <b>${times.enhancedTime}</b>`;
+        // FIX: Output the new Standard and Enhanced keys to the user
+        const timeContent = (!hasRealTime) ? "Not Breedable" : `Default: <b>${times.Standard}</b><br>Enhanced: <b>${times.Enhanced}</b>`;
         const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
 
-        const comboList = (!combos || combos.length === 0) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
+        const comboList = (!hasCombos) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
         const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
 
         statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
