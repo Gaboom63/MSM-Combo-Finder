@@ -616,7 +616,6 @@ async function loadStats(forceName) {
                         monster.getElementImages()
                     ]);
                     
-                    // FIX: Timeout extended from 1.5s to 10s to accommodate heavy DB parsing on slow connections
                     const timeoutPromise = new Promise((_, reject) => 
                         setTimeout(() => reject(new Error("API Stalled or Took Too Long")), 10000)
                     );
@@ -634,13 +633,15 @@ async function loadStats(forceName) {
         const hasRealTime = times && times.Standard && times.Standard !== "Unknown";
         const hasCombos = combos && combos.length > 0;
 
+        // FIX: Replaced direct .then() calls with Promise.resolve() safely handling cached/plain objects!
         if (tabsContainer.style.display === 'none' || tabsContainer.children.length === 0) {
-            MSM[`Rare ${baseName}`].then(res => {
+            Promise.resolve(MSM[`Rare ${baseName}`]).then(res => {
                 if (res) rareButton.style.display = 'inline-flex';
-            });
-            MSM[`Epic ${baseName}`].then(res => {
+            }).catch(() => {});
+            
+            Promise.resolve(MSM[`Epic ${baseName}`]).then(res => {
                 if (res) epicButton.style.display = 'inline-flex';
-            });
+            }).catch(() => {});
         }
 
         if (baseName.includes("(Major)")) {
