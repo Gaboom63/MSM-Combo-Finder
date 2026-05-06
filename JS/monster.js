@@ -33,7 +33,7 @@ async function buildMonsterRegistry() {
     try {
         const uniqueNames = new Set();
         const clean = (name) => name ? name.trim() : "";
-        const ignoreList = ["any", "invalid", "no combination", "unknown"];
+        const ignoreList = ["any", "invalid", "no combination", "unknown", "exclusive"];
 
         try {
             const response = await fetch(breedingUrl, { credentials: 'omit' });
