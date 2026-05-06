@@ -572,10 +572,19 @@ async function comboFinder() {
 }
 
 function loadFromTab(monsterName) {
-    const trueName = findTrueName(monsterName); searchInput.value = trueName;
-    if (/^rare/i.test(trueName)) currentRarity = "Rare"; else if (/^epic/i.test(trueName)) currentRarity = "Epic"; else currentRarity = "Common";
+    const trueName = findTrueName(monsterName); 
+    searchInput.value = trueName;
+    
+    if (/^rare/i.test(trueName)) currentRarity = "Rare"; 
+    else if (/^epic/i.test(trueName)) currentRarity = "Epic"; 
+    else currentRarity = "Common";
+    
     monsterImage.setAttribute('data-name', normalizeName(trueName)); 
-    showMonsterUI(false); 
+    
+    // CHANGED: Pass 'true' so the UI stays in Breeding Result mode
+    // This keeps tabs visible and hides the Common/Rare/Epic buttons
+    showMonsterUI(true); 
+    
     loadMonsterImage(trueName); 
     loadStats(trueName);
 }
@@ -685,6 +694,7 @@ async function loadStats(forceName) {
         console.error(`Fatal error in loadStats for "${trueName}":`, err);
         showNoMonsterError(); 
     }
+    dynamicSoundIcon(trueName); 
 }
 
 function showNoMonsterError() {
@@ -914,6 +924,14 @@ function updateRecentHistoryUI() {
         };
         attemptImageLoad();
     });
+}
+
+function dynamicSoundIcon(monsterName) {
+    if(MSM[monsterName].sounds[0] !== undefined){
+        volumeButton.style.display = 'inline-flex'; 
+    } else if (MSM[monsterName].sounds[0] === undefined) {
+        volumeButton.style.display = 'none';
+    }
 }
 
 function updateMonsterOfTheDay() {
