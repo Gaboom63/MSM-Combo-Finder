@@ -737,45 +737,126 @@ function requestPriority(trueName) {
 }
 
 function silentlyPreloadImages() {
-    if (typeof MSM === 'undefined' || monsterRegistry.length === 0) { 
-        setTimeout(silentlyPreloadImages, 500); 
-        return; 
+    if (typeof MSM === 'undefined' || !Array.isArray(monsterRegistry) || monsterRegistry.length === 0) {
+        setTimeout(silentlyPreloadImages, 500);
+        return;
     }
 
     let index = 0;
-    function loadNextBatch() {
-        if (preloaderPaused) {
-            setTimeout(loadNextBatch, 1000); 
-            return;
-        }
 
-        const batchSize = 3; 
-        for (let i = 0; i < batchSize && index < monsterRegistry.length; i++, index++) {
-            const trueName = findTrueName(monsterRegistry[index]);
-            if (trueName) { 
-                try { 
-                    const monsterData = MSM[trueName]; 
-                    if (monsterData && monsterData.getElementImages) {
-                        monsterData.getElementImages().then(elements => {
-                            if (elements && Array.isArray(elements)) {
-                                elements.forEach(el => {
-                                    if (el.image) { const img = new Image(); img.src = el.image; }
-                                });
-                            }
-                        }).catch(e => console.warn("Element preload failed", e));
-                    }
-                } catch(e){} 
+    async function loadNextBatch() {
+
+        try {
+
+            if (preloaderPaused) {
+                setTimeout(loadNextBatch, 1000);
+                return;
             }
-        }
-        
-        if (index < monsterRegistry.length) {
-            setTimeout(() => {
-                if ('requestIdleCallback' in window) requestIdleCallback(loadNextBatch);
-                else loadNextBatch();
-            }, 250); 
+
+            if (index >= monsterRegistry.length) {
+                return;
+            }
+
+            const batchSize = 3;
+
+            for (
+                let i = 0;
+                i < batchSize && index < monsterRegistry.length;
+                i++, index++
+            ) {
+
+                try {
+
+                    const registryEntry = monsterRegistry[index];
+
+                    if (!registryEntry) continue;
+
+                    const trueName = findTrueName(registryEntry);
+
+                    if (!trueName) continue;
+
+                    // IMPORTANT: await the proxy
+                    const monsterData = await MSM[trueName];
+
+                    if (!monsterData) {
+                        console.warn(`Preloader skipped invalid monster: ${trueName}`);
+                        continue;
+                    }
+
+                    // Safely get elements
+                    let elements = [];
+
+                    try {
+                        elements = await monsterData.getElementImages();
+                    } catch (e) {
+                        console.warn(`Failed loading element images for ${trueName}`, e);
+                        continue;
+                    }
+
+                    if (!Array.isArray(elements)) continue;
+
+                    // Preload element images
+                    elements.forEach(el => {
+
+                        if (!el || !el.image) return;
+
+                        try {
+                            const img = new Image();
+                            img.src = el.image;
+                        } catch (imgErr) {
+                            console.warn("Image preload failed:", imgErr);
+                        }
+
+                    });
+
+                    // OPTIONAL: preload monster image too
+                    if (monsterData.imageUrl) {
+                        try {
+                            const monsterImg = new Image();
+                            monsterImg.src = monsterData.imageUrl;
+                        } catch (imgErr) {
+                            console.warn(`Monster image preload failed for ${trueName}`, imgErr);
+                        }
+                    }
+
+                } catch (monsterErr) {
+
+                    console.error(
+                        `Monster preload failed at index ${index}:`,
+                        monsterErr
+                    );
+
+                }
+            }
+
+            // Continue batching
+            if (index < monsterRegistry.length) {
+
+                setTimeout(() => {
+
+                    try {
+
+                        if ('requestIdleCallback' in window) {
+                            requestIdleCallback(loadNextBatch);
+                        } else {
+                            loadNextBatch();
+                        }
+
+                    } catch (idleErr) {
+                        console.error("Idle callback failed:", idleErr);
+                    }
+
+                }, 250);
+            }
+
+        } catch (fatalErr) {
+
+            console.error("Fatal preload batch failure:", fatalErr);
+
         }
     }
-    setTimeout(loadNextBatch, 2000); 
+
+    setTimeout(loadNextBatch, 2000);
 }
 
 silentlyPreloadImages();
