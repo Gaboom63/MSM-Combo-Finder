@@ -20,6 +20,12 @@ const openBreedBtn = document.getElementById('openBreedUI');
 const breedSplitView = document.getElementById('breedSplitView');
 const closeBreedBtn = document.getElementById('closeBreedUI');
 const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
+const spotlight = document.getElementById('monster-spotlight');
+const sideMenu = document.getElementById('sideMenu'); 
+const iconContainer = document.getElementById('iconContainer'); 
+let sideMenuB = document.getElementById('sideMenuButton'); 
+let isSideMenuOpen = 0; 
+let closeBreedUI = document.getElementById('closeBreedUI'); 
 
 let currentRarity = "";
 let monsterRegistry = [];
@@ -106,6 +112,7 @@ function showMonsterUI(isBreedingResult = false) {
 
     inputContainer.style.display = 'none';
     noMonsterImage.style.display = 'none';
+    sideMenu.style.display = 'none';
 
     if (isBreedingResult) {
         commonButton.style.display = 'none';
@@ -126,7 +133,21 @@ function showMonsterUI(isBreedingResult = false) {
     }
 }
 
-document.addEventListener('keydown', e => { if (e.key === "Escape") reset(); });
+document.addEventListener('keydown', e => { if (e.key === "Escape") 
+
+if (isSideMenuOpen === 1) {
+    blurOverlay.classList.remove('active');
+    blurOverlay.style.display = 'none';
+    islandContainer.classList.add('slide-from-right');
+    mainStatBox.style.display = 'none';
+    title.style.display = 'block'; 
+    sideMenuB.style.display = "flex";
+    isSideMenuOpen = 0; 
+} else if (menuOpen === 0) {
+    reset();
+}
+
+});
 
 async function costumeErrorHandling(name) {
     if (!isValidMonster(name)) {
@@ -186,11 +207,16 @@ function reset() {
         const icon = badge.querySelector('i');
         if (icon) icon.className = 'fas fa-plus';
     }
+
     firstInput.style.opacity = '1';
     secondInput.style.opacity = '1';
-
+    spotlight.style.display = 'flex'; 
     closeExpandedInput();
     checkInputGlows(); 
+    sideMenu.style.display = 'flex';
+    document.getElementById('statsSection').style.display = 'none';
+    document.getElementById('inventorySection').style.display = 'none';
+    document.getElementById('costSection').style.display = 'none';
 }
 
 openBreedBtn.addEventListener('click', () => {
@@ -602,11 +628,24 @@ async function loadStats(forceName) {
 
     noMonsterImage.style.display = 'none';
 
+    // THE BASE FRAMEWORK: Instantly map the column structure so elements stay side-by-side
     statBox.style.display = 'flex';
     statBox.innerHTML = `
-        <div class="stats-bubble" style="display: flex; justify-content: center; align-items: center; min-height: 150px; width: 100%;">
-            <div class="spinner" style="display: block; position: relative; top: auto; left: auto; transform: none; width: 35px; height: 35px;"></div>
-        </div>`;
+        <div class="stats-left-column">
+            <div class="stats-bubble" style="display: flex; justify-content: center; align-items: center; min-height: 120px;">
+                <div class="spinner" style="width: 30px; height: 30px; position: relative;"></div>
+            </div>
+            <div class="stats-bubble" style="display: flex; justify-content: center; align-items: center; min-height: 120px;">
+                <div class="spinner" style="width: 30px; height: 30px; position: relative;"></div>
+            </div>
+        </div>
+        
+        <div class="stats-bubble" id="breeding-combo-container" style="display: flex; justify-content: center; align-items: center;">
+            <div class="combo-loader-frame" id="combo-inline-loader">
+                <i class="fas fa-circle-notch fa-spin"></i> Loading parent eggs...
+            </div>
+        </div>
+    `;
 
     try {
         const baseName = normalizeName(trueName);        
@@ -664,6 +703,7 @@ async function loadStats(forceName) {
 
         const displayName = toDisplayCase(baseName);
 
+        // 1. Generate left-side data strings
         const nameHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name </span><h3>${currentRarity || "Common"} ${displayName}</h3></div>`;
 
         const elementIcons = (elements && elements.length > 0)
@@ -676,13 +716,96 @@ async function loadStats(forceName) {
                 <div class="elements-display">${elementIcons}</div>
             </div>`;
 
-        const timeContent = (!hasRealTime) ? "Not Breedable" : `Default: <b>${times.Standard}</b><br>Enhanced: <b>${times.Enhanced}</b>`;
-        const timeHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><p style="margin:0; text-align: center;">${timeContent}</p></div>`;
+        const timeHtml = `
+            <div class="stats-bubble layout-hatch-time">
+                <span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span>
+                <div class="hatch-time-split-container">
+                    
+                    <div class="hatch-card default-tier">
+                        <div class="hatch-badge"><i class="fas fa-hourglass-start"></i></div>
+                        <div class="hatch-data-labels">
+                            <span class="hatch-tier-title">Default</span>
+                            <p class="hatch-time-string">${!hasRealTime ? "Not Breedable" : times.Standard}</p>
+                        </div>
+                    </div>
 
-        const comboList = (!hasCombos) ? "• Special Combination Required" : combos.map(c => `• ${c}`).join("<br>");
-        const comboHtml = `<div class="stats-bubble"><span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="margin:0; font-size: 0.9rem;">${comboList}</p></div>`;
+                    ${hasRealTime ? `
+                    <div class="hatch-card enhanced-tier">
+                        <div class="hatch-badge"><i class="fas fa-bolt"></i></div>
+                        <div class="hatch-data-labels">
+                            <span class="hatch-tier-title">Enhanced</span>
+                            <p class="hatch-time-string">${times.Enhanced}</p>
+                        </div>
+                    </div>
+                    ` : ''}
 
-        statBox.innerHTML = nameHtml + elementsHtml + timeHtml + comboHtml;
+                </div>
+            </div>`;
+
+        // THE FIXED INJECTION: Update the left column elements without touching the parent or right containers!
+        const leftColumn = statBox.querySelector('.stats-left-column');
+        if (leftColumn) {
+            leftColumn.innerHTML = nameHtml + elementsHtml + timeHtml;
+        }
+
+        // 2. Handle the right-side Breeding Combo logic independently
+        const liveComboContainer = document.getElementById('breeding-combo-container');
+        
+        if (!hasCombos) {
+            if (liveComboContainer) {
+                liveComboContainer.innerHTML = `
+                    <span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span>
+                    <p style="margin:0; font-size: 0.9rem; text-align: center; margin-top: 15px;">• Special Combination Required</p>
+                `;
+            }
+        } else {
+            // Keep inline loader spinning while executing background image fetches
+            (async () => {
+                try {
+                    const processedComboRows = await Promise.all(combos.map(async (comboString) => {
+                        const parents = comboString.split(/\s\+\s|\sand\s/i).map(p => p.trim());
+                        
+                        if (parents.length >= 2) {
+                            const parsedParentChips = await Promise.all(parents.map(async (parentName) => {
+                                let eggUrl = "images/important/mammoticon.png";
+                                
+                                const parentData = await MSM.get(parentName).catch(() => null);
+                                if (parentData && typeof parentData.eggUrl === 'string') {
+                                    eggUrl = parentData.eggUrl;
+                                }
+
+                                return `
+                                    <div class="combo-parent-chip">
+                                        <img src="${eggUrl}" alt="${parentName}" class="combo-egg-icon">
+                                        <span class="combo-parent-name">${parentName}</span>
+                                    </div>
+                                `;
+                            }));
+
+                            return `
+                                <div class="combo-row-item">
+                                    ${parsedParentChips.join('<div class="combo-operator-plus"><i class="fas fa-plus"></i></div>')}
+                                </div>
+                            `;
+                        }
+                        return `<div class="combo-row-item-raw">• ${comboString}</div>`;
+                    }));
+
+                    // Safely replace just the spinner inside the combo container
+                    const dynamicComboTarget = document.getElementById('breeding-combo-container');
+                    if (dynamicComboTarget) {
+                        dynamicComboTarget.innerHTML = `
+                            <span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span>
+                            <div class="combo-matrix-display-box">
+                                ${processedComboRows.join("")}
+                            </div>
+                        `;
+                    }
+                } catch (innerLoaderErr) {
+                    console.error("Failed to load inline combo matrix eggs:", innerLoaderErr);
+                }
+            })();
+        }
         
         try {
             if (typeof saveToHistory === 'function') saveToHistory(trueName);
@@ -1016,7 +1139,6 @@ function dynamicSoundIcon(monsterName) {
 }
 
 function updateMonsterOfTheDay() {
-    const spotlight = document.getElementById('monster-spotlight');
     if (!spotlight || monsterRegistry.length === 0) return;
 
     const today = new Date();

@@ -58,7 +58,7 @@
 
 
     <div id="breedSplitView">
-        <button id="closeBreedUI" title="Close"><i class="fas fa-times"></i></button>
+        <button id="closeBreedUI" title="Close"><i class="fas fa-times" onclick="reset()"></i></button>
 
         <div class="split-half">
             <h2>Parent 1</h2>
@@ -114,8 +114,53 @@
 
     </div>
 
+  <div id="sideMenu">
+      <button id="sideMenuButton" onclick="setupSideMenu()">
+        <b><i id="menuArrow" class="fas fa-arrow-left"></i></b>
+      </button>
+      <div id="mainStatBox">
+          <div class="purple-sketch-bg-main"></div>
+          <div id="statsSection">
+              <div class="tracker-controls">
+                <input type="text" id="tracker-mini-search" placeholder="🔍 Filter rows..." autocomplete="off">
+                  <button id="previous-island" class="nav-btn"><i class="fas fa-chevron-left"></i> Left</button>
+                  <button id="next-island" class="nav-btn">Right <i class="fas fa-chevron-right"></i></button>
+                <button id="closeStatMenu" title="Close" onclick="hideStatBox()"><i class="fas fa-times"></i></button>
+              </div>
+
+              <div id="stats"></div>
+          </div>
+          <div id="inventorySection"></div>
+        <div id="costSection"></div>
+      </div>
+
+      <div class="island-container" id="island-container">
+
+          <div class="island-card" onclick="loadStatBox()">
+              <div class="purple-sketch-bg"></div>
+              <div class="island-img" id="island-img"></div>
+              <div class="island-img-text-box">Islands Stats</div>
+          </div>
+
+          <div class="island-card" onclick="loadInventoryBox()">
+              <div class="purple-sketch-bg"></div>
+              <div id="inventory-img"></div>
+              <div class="inventories-text-box">Inventories</div>
+          </div>
+
+          <div class="island-card" onclick="loadCostBox()">
+              <div class="purple-sketch-bg"></div>
+              <div id="cost-img"></div>
+              <div class="island-img-text-box">Costs</div>
+          </div> 
+
+      </div>
+  </div>
+
     <img id="noMonsterImage">
+
     <script src="JS/monster.js"></script>
+    <script src="JS/side_menu.js"></script>
 </body>
 
 </html>
