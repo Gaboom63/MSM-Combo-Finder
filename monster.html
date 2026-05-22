@@ -1,83 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" href="ideas/favicon.txt" type="image/png">
     <link rel="icon" type="image/x-icon" href="images/important/mammoticon.png">
     <title>MSM Combo Finder</title>
 </head>
 
-<body style="background-image: url(CSS/images/backgrounds/NoEventShellbeat.jpg); background-size: cover;">
-
+<body>
     <div id="blurOverlay"></div>
     <div id="blurMessage" onclick="reset()">Press ESC to go back</div>
+    
     <div id="iconContainer">
-        <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon" />
+        <img id="icon" src="images/important/Speedy_deletion.png" alt="Icon">
         <div id="textContainer">
-            <div id="hoverText">This Tool Is Updated Frequently! :)<br> Please Share Your Thoughts <br> On The <a
-                    href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a
-                    href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
+            <div id="hoverText">This Tool Is Updated Frequently! :)<br> Please Share Your Thoughts <br> On The <a href="https://github.com/Fighterhen63/MSM-Combo-Finder">Github</a> Or <a href="https://mysingingmonsters.fandom.com/f/p/4400000000000256505">Fandom!</a></div>
         </div>
     </div>
-    <b>
-        <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
-    </b>
+    
+    <h1 id="title">My Singing Monsters <br> Combo Finder</h1>
     <div id="particles-container"></div>
 
-   <div id="inputContainer">
-    <button id="openBreedUI" class="theme-btn">Breed Two Monsters</button><br>
+    <div id="inputContainer">
+        <button id="openBreedUI" class="theme-btn">Breed Two Monsters</button>
+        <button id="randomComboBtn" class="theme-btn surprise-variant"><i class="fas fa-dice"></i> Surprise Me!</button>
 
-    <button id="randomComboBtn" class="theme-btn surprise-variant">
-        <i class="fas fa-dice"></i> Surprise Me!
-    </button><br>
+        <div class="divider"><span>OR</span></div>
 
-    <div class="divider">
-        <span>OR</span>
-    </div><br>
+        <input id="Search_Monster" class="theme-search" autocomplete="off" placeholder="🔍 Search any monster...">
 
-    <input id="Search_Monster" class="theme-search" autocomplete="off"
-        placeholder="🔍 Search any monster..."><br><br>
+        <div id="recent-discoveries" class="recent-container">
+            <h3>- Recent Discoveries -</h3>
+            <div id="recent-grid" class="recent-grid"></div>
+        </div>
 
-    <div id="recent-discoveries" class="recent-container">
-        <h3>- Recent Discoveries -</h3>
-        <div id="recent-grid" class="recent-grid">
+        <div id="monster-spotlight">
+            <div class="spotlight-title">Monster of the Day</div>
+            <img id="spotlight-img" class="spotlight-img" alt="Monster">
+            <div id="spotlight-name" class="spotlight-name">Loading...</div>
         </div>
     </div>
 
-    <div id="monster-spotlight">
-        <div class="spotlight-title">Monster of the Day</div>
-        <img id="spotlight-img" class="spotlight-img" alt="Monster">
-        <b><div id="spotlight-name" class="spotlight-name">Loading...</div></b>
-    </div>
-
-</div>
-
-
     <div id="breedSplitView">
-        <button id="closeBreedUI" title="Close"><i class="fas fa-times" onclick="reset()"></i></button>
+        <button id="closeBreedUI" class="menu-close-btn" title="Close" onclick="reset()"><i class="fas fa-times"></i></button>
 
         <div class="split-half">
             <h2>Parent 1</h2>
             <div id="placeholder-1" class="empty-slot"><i class="fas fa-egg"></i></div>
             <img id="parent-img-1" class="parent-img" style="display: none;">
-
             <input id="First_Monster" autocomplete="off" placeholder="Choose First Monster...">
             <div id="grid1" class="local-grid"></div>
         </div>
 
-        <div class="split-divider">
-            <div class="fusion-badge"><i class="fas fa-plus"></i></div>
-        </div>
+        <div class="split-divider"><div class="fusion-badge"><i class="fas fa-plus"></i></div></div>
 
         <div class="split-half">
             <h2>Parent 2</h2>
             <div id="placeholder-2" class="empty-slot"><i class="fas fa-egg"></i></div>
             <img id="parent-img-2" class="parent-img" style="display: none;">
-
             <input id="Second_Monster" autocomplete="off" placeholder="Choose Second Monster...">
             <div id="grid2" class="local-grid"></div>
         </div>
@@ -86,81 +68,68 @@
     <div id="dynamicMonsterGrid"></div>
 
     <div id="resultContainer">
-
         <div id="leftPanel">
             <div id="tabsContainer" class="tabs-container"></div>
-
             <div id="utilityButtons">
                 <button id="costumeButton">Switch Costume</button>
                 <button id="majorMinorButton">Switch</button>
                 <button id="common">Common</button>
                 <button id="rare">Rare</button>
                 <button id="epic">Epic</button>
-                <button id="volume-button" title="Play Sound" onclick="playSound()"><i
-                        class="fas fa-volume-up"></i></button>
+                <button id="volume-button" title="Play Sound" onclick="playSound()"><i class="fas fa-volume-up"></i></button>
             </div>
-
             <div id="imageContainer">
                 <div id="loadingSpinner" class="spinner"></div>
                 <img id="monsterImage" class="monster-image">
             </div>
         </div>
-
-        <div id="statsBox">
-            <h3 id="name"></h3>
-            <p id="breedingTime"></p>
-            <p id="breedingCombo"></p>
-        </div>
-
+        <div id="statsBox"></div>
     </div>
 
-  <div id="sideMenu">
-      <button id="sideMenuButton" onclick="setupSideMenu()">
-        <b><i id="menuArrow" class="fas fa-arrow-left"></i></b>
-      </button>
-      <div id="mainStatBox">
-          <div class="purple-sketch-bg-main"></div>
-          <div id="statsSection">
-              <div class="tracker-controls">
-                <input type="text" id="tracker-mini-search" placeholder="🔍 Filter rows..." autocomplete="off">
-                  <button id="previous-island" class="nav-btn"><i class="fas fa-chevron-left"></i> Left</button>
-                  <button id="next-island" class="nav-btn">Right <i class="fas fa-chevron-right"></i></button>
-                <button id="closeStatMenu" title="Close" onclick="hideStatBox()"><i class="fas fa-times"></i></button>
-              </div>
+    <div id="sideMenu">
+        <button id="sideMenuButton" onclick="setupSideMenu()">
+            <i id="menuArrow" class="fas fa-arrow-left"></i>
+        </button>
+        
+        <div id="mainStatBox">
+            <div class="purple-sketch-bg-main"></div>
+            
+            <div id="statsSection">
+                <div class="tracker-controls">
+                    <input type="text" id="tracker-mini-search" class="menu-mini-search" placeholder="🔍 Filter rows..." autocomplete="off">
+                    <button id="previous-island" class="nav-btn"><i class="fas fa-chevron-left"></i> Left</button>
+                    <button id="next-island" class="nav-btn">Right <i class="fas fa-chevron-right"></i></button>
+                    <button id="closeStatMenu" class="menu-close-btn" title="Close" onclick="hideStatBox()"><i class="fas fa-times"></i></button>
+                </div>
+                <div id="stats" class="custom-scroll-container"></div>
+            </div>
+            
+            <div id="inventorySection"></div>
+            <div id="costSection"></div>
+        </div>
 
-              <div id="stats"></div>
-          </div>
-          <div id="inventorySection"></div>
-        <div id="costSection"></div>
-      </div>
-
-      <div class="island-container" id="island-container">
-
-          <div class="island-card" onclick="loadStatBox()">
-              <div class="purple-sketch-bg"></div>
-              <div class="island-img" id="island-img"></div>
-              <div class="island-img-text-box">Islands Stats</div>
-          </div>
-
-          <div class="island-card" onclick="loadInventoryBox()">
-              <div class="purple-sketch-bg"></div>
-              <div id="inventory-img"></div>
-              <div class="inventories-text-box">Inventories</div>
-          </div>
-
-          <div class="island-card" onclick="loadCostBox()">
-              <div class="purple-sketch-bg"></div>
-              <div id="cost-img"></div>
-              <div class="island-img-text-box">Costs</div>
-          </div> 
-
-      </div>
-  </div>
+        <div class="island-container" id="island-container">
+            <div class="island-card" onclick="loadStatBox()">
+                <div class="purple-sketch-bg"></div>
+                <div class="island-img" id="island-img"></div>
+                <div class="island-img-text-box">Islands Stats</div>
+            </div>
+            <div class="island-card" onclick="loadInventoryBox()">
+                <div class="purple-sketch-bg"></div>
+                <div id="inventory-img" class="island-float-img"></div>
+                <div class="inventories-text-box">Inventories</div>
+            </div>
+            <div class="island-card" onclick="loadCostBox()">
+                <div class="purple-sketch-bg"></div>
+                <div id="cost-img" class="island-float-img"></div>
+                <div class="island-img-text-box">Costs</div>
+            </div> 
+        </div>
+    </div>
 
     <img id="noMonsterImage">
 
     <script src="JS/monster.js"></script>
     <script src="JS/side_menu.js"></script>
 </body>
-
 </html>
