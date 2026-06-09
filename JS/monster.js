@@ -18,27 +18,45 @@ let isSideMenuOpen = 0, disableEscape = false, disabledButton = false;
 let currentRarity = "", monsterRegistry = [], validBreedingCombos = [], currentMonster = null, imageLoadTimeout;
 let preloaderPaused = false, pauseTimeout = null;
 
+const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 async function buildMonsterRegistry() {
     try {
         const uniqueNames = new Set(), clean = n => n ? n.trim() : "", ignores = ["any", "invalid", "no combination", "unknown", "exclusive"];
-        const res = await fetch("https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/JSONS/breedingCombos.json", { credentials: 'omit' });
+        
+        // --- PRODUCTION: Load directly from GitHub CDN ---
+        const indexRes = await fetch(`https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/monster_index.json?v=${Date.now()}`, { credentials: 'omit' });
+        if (indexRes.ok) {
+            const imageNames = await indexRes.json();
+            imageNames.forEach(name => uniqueNames.add(clean(name)));
+        }
+
+        const res = await fetch(`https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/data/JSONS/breedingCombos.json?v=${Date.now()}`, { credentials: 'omit' });
         if (res.ok) {
             const data = await res.json();
             Object.entries(data).forEach(([key, val]) => {
-                if (key.includes("+")) {
-                    validBreedingCombos.push(key);
-                    key.split("+").forEach(p => uniqueNames.add(clean(p)));
-                } else uniqueNames.add(clean(key));
-                if (Array.isArray(val)) val.forEach(child => uniqueNames.add(clean(child)));
+                if (key.includes("+")) validBreedingCombos.push(key);
             });
         }
+
         monsterRegistry = [...uniqueNames].filter(n => n && !ignores.some(i => n.toLowerCase().includes(i))).sort();
-        console.log(`Registry ready: ${monsterRegistry.length} monsters loaded.`);
+        console.log(`Registry ready: ${monsterRegistry.length} exact monster forms loaded.`);
         updateMonsterOfTheDay();
     } catch (err) { console.error("Registry failed:", err); }
 }
 
-const findTrueName = input => input ? (monsterRegistry.find(k => k.toLowerCase() === input.trim().toLowerCase()) || input.trim()) : null;
+const findTrueName = input => {
+    if (!input) return null;
+    const cleanIn = removeAccents(input.trim().toLowerCase());
+    
+    let match = monsterRegistry.find(k => removeAccents(k.toLowerCase()) === cleanIn);
+    if (!match) match = monsterRegistry.find(k => removeAccents(k.toLowerCase()) === `${cleanIn} (major)`);
+    if (!match) match = monsterRegistry.find(k => removeAccents(k.toLowerCase()).includes(cleanIn));
+
+    return match || input.trim();
+};
+
+
 const toDisplayCase = str => str ? str.toLowerCase().replace(/(?:^|[\s\-\(\)])[a-z]/g, l => l.toUpperCase()) : "";
 const normalizeName = name => name ? name.replace(/^(common|rare|epic|legendary)\s+/i, "").trim() : "";
 
@@ -164,7 +182,7 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
         const p = inputEl.parentElement, lbl = p.querySelector('h2'), imgE = p.querySelector('.parent-img'), ph = p.querySelector('.empty-slot');
         if (lbl && imgE && ph) { lbl.classList.remove('active-label'); lbl.textContent = inputEl.id === 'First_Monster' ? 'Parent 1' : 'Parent 2'; }
 
-        const q = inputEl.value.toLowerCase().trim();
+        const q = removeAccents(inputEl.value.toLowerCase().trim());
         let m = [];
 
         if (inputEl === firstInput) {
@@ -177,7 +195,7 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
             m = monsterRegistry.filter(n => incRarity || (!n.toLowerCase().startsWith("rare ") && !n.toLowerCase().startsWith("epic ")));
         }
 
-        if (q) m = m.filter(n => n.toLowerCase().includes(q));
+        if (q) m = m.filter(n => removeAccents(n.toLowerCase()).includes(q));
         if (!q && inputEl === searchInput) return targetGrid.innerHTML = '';
 
         targetGrid.innerHTML = '';
@@ -267,14 +285,28 @@ setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 
 costumeButton.addEventListener("click", async () => { const n = await currentMonster?.nextCostume(); n ? monsterImage.src = n : alert("No costumes available!"); });
 majorMinorButton.addEventListener("click", () => {
-    const b = monsterImage.getAttribute('data-name'); if (!b) return;
-    const nb = b.includes("(Major)") ? b.replace("(Major)", "(Minor)") : b.includes("(Minor)") ? b.replace("(Minor)", "(Major)") : "";
+    // Get full name with (Major)/(Minor) tag
+    const b = monsterImage.getAttribute('data-name'); 
+    if (!b) return;
+    
+    let nb = "";
+    if (b.includes("(Major)")) nb = b.replace("(Major)", "(Minor)");
+    else if (b.includes("(Minor)")) nb = b.replace("(Minor)", "(Major)");
+    
     if (nb) {
-        let tn = findTrueName((currentRarity && currentRarity !== "Common" ? `${currentRarity} ` : "") + nb);
-        if (typeof MSM !== 'undefined' && !MSM[tn]) { tn = findTrueName(nb); currentRarity = "Common"; updateActiveTab(); }
-        if (!MSM[tn]) return;
-        searchInput.value = tn; monsterImage.setAttribute('data-name', normalizeName(tn));
-        showMonsterUI(false); loadMonsterImage(tn); setTimeout(() => { loadStats(tn); costumeErrorHandling(tn); }, 50);
+        let tn = findTrueName(nb); 
+        if (!tn || !MSM[tn]) return;
+        
+        searchInput.value = tn; 
+        // IMPORTANT: Store the full name here so it doesn't get stripped later
+        monsterImage.setAttribute('data-name', tn); 
+        
+        showMonsterUI(false); 
+        loadMonsterImage(tn); 
+        setTimeout(() => { 
+            loadStats(tn); 
+            costumeErrorHandling(tn); 
+        }, 50);
     }
 });
 
@@ -307,20 +339,48 @@ function loadFromTab(name) {
 async function loadStats(name) {
     const tn = findTrueName(name || searchInput.value.trim());
     if (!tn || !isValidMonster(tn)) return showNoMonsterError();
-    noMonsterImage.style.display = 'none'; statBox.style.display = 'flex';
+    
+    noMonsterImage.style.display = 'none'; 
+    statBox.style.display = 'flex';
+    
+    // Spinner UI
     statBox.innerHTML = `<div class="stats-left-column"><div class="stats-bubble" style="min-height:120px;display:flex;justify-content:center;align-items:center;"><div class="spinner" style="width:30px;height:30px;position:relative;"></div></div><div class="stats-bubble" style="min-height:120px;display:flex;justify-content:center;align-items:center;"><div class="spinner" style="width:30px;height:30px;position:relative;"></div></div></div><div class="stats-bubble" id="breeding-combo-container" style="display:flex;justify-content:center;align-items:center;"><div class="combo-loader-frame"><i class="fas fa-circle-notch fa-spin"></i> Loading parent eggs...</div></div>`;
     
     try {
-        const bn = normalizeName(tn), m = MSM[tn]; if (!m) throw new Error("Not found");
+        const bn = normalizeName(tn);
+        const m = MSM[tn]; 
+        
+        if (!m) throw new Error("Not found");
+        
         const fetchWRetry = async (r = 3) => { for(let i=1;i<=r;i++) try { return await Promise.race([Promise.all([m.getBreedingTime(), m.getBreedingCombos?.()||[], m.getElementImages()]), new Promise((_, rj) => setTimeout(() => rj(new Error("Timeout")), 10000))]); } catch(e) { if(i===r) throw e; await new Promise(rs=>setTimeout(rs,100)); } };
         const [times, combos, elements] = await fetchWRetry(3);
         const hasTime = times?.Standard && times.Standard !== "Unknown", hasCombos = combos?.length > 0;
 
-        if (!tabsContainer.children.length) { Promise.resolve(MSM[`Rare ${bn}`]).then(r => rareButton.style.display = r ? 'inline-flex' : 'none').catch(()=>{}); Promise.resolve(MSM[`Epic ${bn}`]).then(r => epicButton.style.display = r ? 'inline-flex' : 'none').catch(()=>{}); }
-        majorMinorButton.textContent = bn.includes("(Major)") ? "Switch To Minor" : "Switch To Major"; majorMinorButton.style.display = bn.includes("(Major)") || bn.includes("(Minor)") ? "inline-flex" : "none";
+        const paironormalBtn = $('paironormal-toggle'); 
+        if (paironormalBtn) {
+            const hasPaironormal = (elements || []).some(e => e.name.toLowerCase().includes("paironormal"));
+            paironormalBtn.style.display = hasPaironormal ? 'inline-flex' : 'none';
+        }
+
+        // --- FIXED MAJOR/MINOR LOGIC ---
+        const isVariant = tn.includes("(Major)") || tn.includes("(Minor)");
+        majorMinorButton.style.display = isVariant ? "inline-flex" : "none";
+        majorMinorButton.textContent = tn.includes("(Major)") ? "Switch To Minor" : "Switch To Major";
+
+        // --- FIXED RARITY BUTTON LOGIC ---
+        if (!tabsContainer.children.length) { 
+            const baseNameClean = tn.replace(/^(Rare|Epic)\s+/i, '').replace(/\s*\((Major|Minor)\)/i, '').trim();
+            
+            rareButton.style.display = isValidMonster(`Rare ${baseNameClean}`) ? 'inline-flex' : 'none'; 
+            epicButton.style.display = isValidMonster(`Epic ${baseNameClean}`) ? 'inline-flex' : 'none'; 
+        }
+
+        // --- FIXED "RARE RARE" TEXT LOGIC ---
+        // If the true name already has the rarity in it, we don't prepend it again.
+        const displayName = currentRarity === "Common" ? `Common ${toDisplayCase(tn)}` : toDisplayCase(tn);
 
         statBox.querySelector('.stats-left-column').innerHTML = `
-            <div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name</span><h3>${currentRarity || "Common"} ${toDisplayCase(bn)}</h3></div>
+            <div class="stats-bubble"><span class="label-text"><i class="fas fa-dna"></i> Monster Name</span><h3>${displayName}</h3></div>
             <div class="stats-bubble"><span class="label-text"><i class="fas fa-atom"></i> Elements</span><div class="elements-display">${elements?.length ? elements.map(e => `<img src="${e.image}" class="element-icon" title="${e.name}">`).join("") : `<span style="color:rgba(255,255,255,0.5);font-size:0.8rem;">No Elements</span>`}</div></div>
             <div class="stats-bubble layout-hatch-time"><span class="label-text"><i class="fas fa-clock"></i> Hatch Time</span><div class="hatch-time-split-container"><div class="hatch-card default-tier"><div class="hatch-badge"><i class="fas fa-hourglass-start"></i></div><div class="hatch-data-labels"><span class="hatch-tier-title">Default</span><p class="hatch-time-string">${hasTime ? times.Standard : "Not Breedable"}</p></div></div>${hasTime ? `<div class="hatch-card enhanced-tier"><div class="hatch-badge"><i class="fas fa-bolt"></i></div><div class="hatch-data-labels"><span class="hatch-tier-title">Enhanced</span><p class="hatch-time-string">${times.Enhanced}</p></div></div>` : ''}</div></div>`;
 
@@ -420,14 +480,33 @@ function updateMonsterOfTheDay() {
 }
 
 async function handleRaritySwitch(r) {
-    const b = monsterImage.getAttribute('data-name'); if (!b) return;
-    const tn = findTrueName(r === "Common" ? b : `${r} ${b}`);
-    try { if (window.MSM && !await MSM[tn]) return; } catch { return; }
-    searchInput.value = tn; currentRarity = r; showMonsterUI(false); updateActiveTab(); loadMonsterImage(tn); setTimeout(() => { loadStats(tn); costumeErrorHandling(tn); }, 50);
+    const b = monsterImage.getAttribute('data-name'); 
+    if (!b) return;
+    
+    // Strip existing rarity tags cleanly
+    const baseName = b.replace(/^(Rare|Epic)\s+/i, '').trim();
+    
+    const targetName = r === "Common" ? baseName : `${r} ${baseName}`;
+    const tn = findTrueName(targetName);
+    
+    // Ensure the form actually exists in the registry before switching
+    if (!isValidMonster(tn)) return; 
+
+    searchInput.value = tn; 
+    currentRarity = r; 
+    showMonsterUI(false); 
+    updateActiveTab(); 
+    loadMonsterImage(tn); 
+    setTimeout(() => { loadStats(tn); costumeErrorHandling(tn); }, 50);
 }
 commonButton.addEventListener("click", () => handleRaritySwitch("Common")); rareButton.addEventListener("click", () => handleRaritySwitch("Rare")); epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 
-function isValidMonster(n) { return n ? monsterRegistry.some(x => x.toLowerCase() === n.toLowerCase().trim() || x.toLowerCase() === n.toLowerCase().replace(/\s*\((major|minor)\)/i, '').trim()) : false; }
+function isValidMonster(n) {
+    if (!n) return false;
+    // Check against our perfect registry
+    const cleanInput = n.toLowerCase().trim();
+    return monsterRegistry.some(x => x.toLowerCase() === cleanInput);
+}
 
 function loadMonsterImage(name, retries = 2) {
     if (!name) return; haltPreloaderForUserAction();
@@ -444,6 +523,22 @@ function loadMonsterImage(name, retries = 2) {
 }
 
 (function loadMSMAPI() {
-    const load = s => new Promise((rs, rj) => { const sc = document.createElement("script"); sc.src = s; sc.defer = true; sc.onload = () => rs(s); sc.onerror = () => rj(s); document.head.appendChild(sc); });
-    load("https://msm-api.pages.dev/msm.js").catch(() => load("https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js")).then(s => { console.log("MSM API ready:", s); buildMonsterRegistry(); updateRecentHistoryUI(); }).catch(() => console.error("API failed"));
+    const load = s => new Promise((rs, rj) => { 
+        const sc = document.createElement("script"); 
+        sc.src = s; sc.defer = true; 
+        sc.onload = () => rs(s); 
+        sc.onerror = () => rj(s); 
+        document.head.appendChild(sc); 
+    });
+    
+    // PRODUCTION: Load the API directly from GitHub
+    load("https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js")
+    .then(s => { 
+        console.log("✅ MSM API ready (PRODUCTION CDN LOADED):", s); 
+        buildMonsterRegistry(); 
+        updateRecentHistoryUI(); 
+    })
+    .catch((err) => {
+        console.error("🚨 API FAILED TO LOAD!");
+    });
 })();
