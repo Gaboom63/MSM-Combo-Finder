@@ -523,22 +523,37 @@ function loadMonsterImage(name, retries = 2) {
 }
 
 (function loadMSMAPI() {
-    const load = s => new Promise((rs, rj) => { 
-        const sc = document.createElement("script"); 
-        sc.src = s; sc.defer = true; 
-        sc.onload = () => rs(s); 
-        sc.onerror = () => rj(s); 
-        document.head.appendChild(sc); 
-    });
+    const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
+    const FALLBACK_API = "https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js";
+    const LOCAL_API = "../MSM-API/dist/msm.js"; // Your fast local link
+
+    function loadScript(src) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = src;
+            script.defer = true;
+            script.onload = () => resolve(src);
+            script.onerror = () => reject(src);
+            document.head.appendChild(script);
+        });
+    }
     
-    // PRODUCTION: Load the API directly from GitHub
-    load("https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@main/dist/msm.js")
-    .then(s => { 
-        console.log("✅ MSM API ready (PRODUCTION CDN LOADED):", s); 
-        buildMonsterRegistry(); 
-        updateRecentHistoryUI(); 
-    })
-    .catch((err) => {
-        console.error("🚨 API FAILED TO LOAD!");
-    });
+    // Logic: Try Local first, then Primary, then Fallback
+    loadScript(LOCAL_API)
+        .catch(() => {
+            console.warn("Local API not found, trying Primary...");
+            return loadScript(PRIMARY_API);
+        })
+        .catch(() => {
+            console.warn("Primary failed, loading CDN fallback...");
+            return loadScript(FALLBACK_API);
+        })
+        .then(src => { 
+            console.log("✅ MSM API ready:", src);
+            buildMonsterRegistry();
+            updateRecentHistoryUI();
+        })
+        .catch(() => {
+            console.error("🚨 All MSM API sources failed");
+        });
 })();
