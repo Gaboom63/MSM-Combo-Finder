@@ -252,10 +252,8 @@ function updateActiveTab() {
 }
 
 function showMonsterUI(isBreedingResult = false) {
-    // 1. Grab the DOF container
     const islandCont = $('island-container');
     
-    // 2. Remove the stubborn animation classes that contain !important
     if (islandCont) {
         islandCont.classList.remove('slide-from-right', 'slide-to-right');
     }
@@ -263,28 +261,64 @@ function showMonsterUI(isBreedingResult = false) {
     toggleEls([monsterImage, blurMessage, blurOverlay], 'block');
     requestAnimationFrame(() => blurOverlay.classList.add('active'));
     
-    // 3. Hide all the main screen elements (including our now-obedient islandCont)
     toggleEls([inputContainer, noMonsterImage, sideMenu, islandCont], 'none');
 
     if (isBreedingResult) {
-        toggleEls([commonButton, rareButton, epicButton, volumeButton], 'none');
+        // Hide all extra buttons during breed results
+        toggleEls([commonButton, rareButton, epicButton, volumeButton, majorMinorButton], 'none');
         Object.assign(tabsContainer.style, { display: 'flex', justifyContent: 'center', gap: '10px' });
     } else {
-        toggleEls([commonButton, volumeButton], 'inline-flex');
-        toggleEls([rareButton, epicButton, tabsContainer], 'none');
+        toggleEls([volumeButton], 'inline-flex');
+        Object.assign(tabsContainer.style, { display: 'none' });
+
+        if (!isDOF()) {
+            const baseName = monsterImage.getAttribute('data-name');
+            
+            if (baseName) {
+                // --- 1. RARITY BUTTON LOGIC ---
+                const hasRare = isValidMonster(findTrueName(`Rare ${baseName}`));
+                const hasEpic = isValidMonster(findTrueName(`Epic ${baseName}`));
+
+                if (hasRare || hasEpic) {
+                    commonButton.style.display = 'inline-flex';
+                    rareButton.style.display = hasRare ? 'inline-flex' : 'none';
+                    epicButton.style.display = hasEpic ? 'inline-flex' : 'none';
+                } else {
+                    toggleEls([commonButton, rareButton, epicButton], 'none');
+                }
+
+                // --- 2. PAIRINORMAL (MAJOR/MINOR) LOGIC ---
+                // If the root name contains Major/Minor, show the button and dynamically set its text
+                if (baseName.includes('(Major)') || baseName.includes('(Minor)')) {
+                    majorMinorButton.style.display = 'inline-flex';
+                    majorMinorButton.textContent = baseName.includes('(Major)') ? 'Switch to Minor' : 'Switch to Major';
+                } else {
+                    majorMinorButton.style.display = 'none';
+                }
+
+            } else {
+                toggleEls([commonButton, rareButton, epicButton, majorMinorButton], 'none');
+            }
+        } else {
+            toggleEls([commonButton, rareButton, epicButton, majorMinorButton], 'none');
+        }
     }
 }
 
 document.addEventListener('keydown', e => { 
     if (e.key === "Escape" && !disableEscape) {
         if (isSideMenuOpen) {
+            
+            // --- FIX: Instantly hide contents so they don't linger during the close animation ---
+            toggleEls([$('statsSection'), $('inventorySection'), $('costSection'), $('mainStatBox')], 'none');
+
             if(typeof hideStatBox === 'function') hideStatBox();
             if($('inventorySection') && $('inventorySection').style.display === 'block' && typeof hideInventoryBox === 'function') hideInventoryBox();
             isSideMenuOpen = 0;
+            
         } else if (breedSplitView && breedSplitView.style.display === 'flex') {
             closeSplitView();
         } else {
-            // Just clear the screen. Since reset() checks isDOF(), it won't switch games!
             reset();
         }
     }
