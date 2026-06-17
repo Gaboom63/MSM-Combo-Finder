@@ -1,12 +1,12 @@
 # MSM-Combo-Finder
-UPDATE V8
+UPDATE V9: DAWN OF FIRE SUPPORT!
 -
 ADDED:
 <br>
 * New Sidemenu (Fully reworked from an older verison of this tool!)
 - **Features in the sidemenu include:**
-- Ability to check the islands a monster is on.
-- Ability to check the costs of a monster (across every island)
-- Ability to see inventories of Wublin's and Celesitals!
+- All Dawn Of Fire Content!
+- Ability to check the breeding combos and times of any and all DOF monsters!
+- Ability to breed any DOF monster!
 -------
 Powered By My MSM API :)
