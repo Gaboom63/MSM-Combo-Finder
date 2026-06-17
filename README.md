@@ -3,8 +3,8 @@ UPDATE V9: DAWN OF FIRE SUPPORT!
 -
 ADDED:
 <br>
-* New Sidemenu (Fully reworked from an older verison of this tool!)
-- **Features in the sidemenu include:**
+* New Side Menu (Fully reworked from an older verison of this tool!)
+- **Features in the side menu include:**
 - All Dawn Of Fire Content!
 - Ability to check the breeding combos and times of any and all DOF monsters!
 - Ability to breed any DOF monster!
