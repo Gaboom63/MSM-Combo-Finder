@@ -712,13 +712,14 @@ async function loadStats(name) {
     noMonsterImage.style.display = 'none';
     statBox.style.display = 'flex';
 
+    // Desktop/Web version loading state
     statBox.innerHTML = `
         <div class="stats-left-column">
             <div class="stats-bubble" style="min-height:120px;display:flex;justify-content:center;align-items:center;">
-                <div class="spinner"></div>
+                <div class="spinner" style="display:block;"></div>
             </div>
             <div class="stats-bubble" style="min-height:120px;display:flex;justify-content:center;align-items:center;">
-                <div class="spinner"></div>
+                <div class="spinner" style="display:block;"></div>
             </div>
         </div>
         <div class="stats-bubble" id="breeding-combo-container" style="display:flex;justify-content:center;align-items:center;">
@@ -757,6 +758,74 @@ async function loadStats(name) {
         const hasPrismatics = isDOF() && m.prismatics && m.prismatics.length > 0;
         const displayName = (isDOF() || currentRarity !== "Common") ? toDisplayCase(tn) : `${toDisplayCase(tn)}`;
         
+        // --- 🆕 INVENTORY CHECK & HTML GENERATION ---
+        let inventoryHTML = '';
+        let isLargeInventory = false; // Tracking size for layout swaps
+        
+        let invData = m.inventory || m['Wublin Inventory'] || m['Celestial Inventory'];
+        
+        if (!invData) {
+            const raw = m.data || m.rawData || m._data || m.raw || m.json || {};
+            invData = raw.inventory || raw['Wublin Inventory'] || raw['Celestial Inventory'];
+        }
+
+        if (!invData && !isDOF()) {
+            try {
+                const fallbackUrl = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/Monsters/${encodeURIComponent(tn)}/${encodeURIComponent(tn)}.json`;
+                const res = await fetch(fallbackUrl);
+                if (res.ok) {
+                    const rawJson = await res.json();
+                    invData = rawJson.inventory || rawJson['Wublin Inventory'] || rawJson['Celestial Inventory'];
+                }
+            } catch (e) {
+                console.warn("Raw JSON fetch fallback failed:", e);
+            }
+        }
+        
+        if (invData && invData.Inventory) {
+            // Check if there are more than 9 unique egg types!
+            isLargeInventory = Object.keys(invData.Inventory).length > 9;
+
+            const eggPromises = Object.entries(invData.Inventory).map(async ([eggName, count]) => {
+                let imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
+                if (eggName.toLowerCase() === 'flex') {
+                    imgUrl = 'images/important/Flex-egg.jpg'; 
+                } else {
+                    imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
+                    if (!imgUrl || imgUrl === 'undefined' || imgUrl === 'null' || imgUrl.includes('mammoticon')) {
+                        const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
+                        const eggData = await MSM.get(trueEName).catch(()=>null);
+                        imgUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
+                        if (imgUrl && !imgUrl.includes('undefined')) localStorage.setItem(`cached_egg_${eggName}`, imgUrl);
+                    }
+                }
+                                
+                return `
+                    <div class="inventory-egg-chip" style="width: 60px; margin-bottom: 8px;">
+                        <span class="inventory-egg-badge" style="font-size:12px;">x${count}</span>
+                        <img src="${imgUrl}" class="inventory-egg-sprite-render" style="width:45px; height:45px;" onerror="this.src='images/important/mammoticon.png'">
+                        <span class="inventory-egg-label-text" style="font-size:10px;">${eggName}</span>
+                    </div>
+                `;
+            });
+            
+            const eggChips = await Promise.all(eggPromises);
+            
+            inventoryHTML = `
+                <div class="stats-bubble" style="${isLargeInventory ? 'flex: 1 1 auto; max-width: 450px;' : ''}">
+                    <span class="label-text"><i class="fas fa-box-open"></i> Required Inventory</span>
+                    <div class="inventory-items-container-box" style="border-radius:12px; margin-top:8px; padding:15px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; background: rgba(0,0,0,0.25);">
+                        ${eggChips.join('')}
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-top:12px; font-size:11px; color:rgba(255,255,255,0.7); font-weight:bold; border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
+                        <span><i class="fas fa-egg"></i> Total: ${invData['Total Eggs'] || Object.values(invData.Inventory).reduce((a,b)=>a+b,0)}</span>
+                        <span><i class="fas fa-hourglass-half"></i> ${invData['Time Limit'] || 'None'}</span>
+                    </div>
+                </div>
+            `;
+        }
+        // ----------------------------------------------
+
         // --- Prismatic Button Logic ---
         const pBtn = $('prismaticButton');
         if (pBtn) {
@@ -768,7 +837,6 @@ async function loadStats(name) {
                     currentIndex++;
                     if (currentIndex >= m.prismatics.length) {
                         currentIndex = -1;
-                        // Determine base image path dynamically based on age mode
                         const suffix = dofAgeMode === 'adult' ? ' (Adult).png' : ' (Young).png';
                         monsterImage.src = `${MSM.getDofBaseUrl()}${encodeURIComponent(m.name)}/${encodeURIComponent(m.name + suffix)}`;
                         pBtn.textContent = "Cycle Prismatic";
@@ -783,42 +851,68 @@ async function loadStats(name) {
             }
         }
 
-        statBox.querySelector('.stats-left-column').innerHTML = `
-            <div class="stats-bubble">
-                <span class="label-text"><i class="fas fa-dna"></i> Monster Name</span>
-                <h3>${displayName}</h3>
-            </div>
-            <div class="stats-bubble">
-                <span class="label-text"><i class="fas fa-atom"></i> Elements</span>
-                <div class="elements-display">
-                    ${elements.length ? elements.map(e => `<img src="${e.image}" class="element-icon" title="${e.name}">`).join("") : 'No Elements'}
-                </div>
-            </div>
-            <div class="stats-bubble layout-hatch-time">
-                <span class="label-text"><i class="fas fa-clock"></i> Breeding Time</span>
-                <div class="hatch-time-split-container">
-                    <div class="hatch-card default-tier" style="${isDOF() ? 'width: 100%;' : ''}">
-                        <div class="hatch-badge"><i class="fas fa-hourglass-start"></i></div>
-                        <div class="hatch-data-labels">
-                            <span class="hatch-tier-title">${isDOF() ? 'Breeding Time' : 'Standard'}</span>
-                            <p class="hatch-time-string">${hasTime ? times.Standard : "Unknown"}</p>
-                        </div>
-                    </div>
-                    ${(!isDOF() && times?.Enhanced) ? `
-                    <div class="hatch-card enhanced-tier">
-                        <div class="hatch-badge"><i class="fas fa-bolt"></i></div>
-                        <div class="hatch-data-labels">
-                            <span class="hatch-tier-title">Enhanced</span>
-                            <p class="hatch-time-string">${times.Enhanced}</p>
-                        </div>
-                    </div>` : ''}
-                </div>
-            </div>
-        `;
+        // --- DYNAMIC DESKTOP LAYOUT SHIFT ---
+        let leftColumnExtra = '';
+        let rightColumnContent = '';
 
+        if (inventoryHTML) {
+            if (isLargeInventory) {
+                // FORCE: Combo box matches Elements bubble width, minimal margin
+                leftColumnExtra = '<div class="stats-bubble" id="breeding-combo-container" style="margin: 10px 0 10 0 !important; width: 1100%; box-sizing: border-box;"></div>';
+                // PUSH: Added margin-left to the inventory container
+                rightColumnContent = `<div style="margin-left: 20px; flex: 1 1 auto;">${inventoryHTML}</div>`;
+            } else {
+                leftColumnExtra = inventoryHTML;
+                rightColumnContent = '<div class="stats-bubble" id="breeding-combo-container"></div>';
+            }
+        } else {
+            // Standard Monster Setup
+            leftColumnExtra = `
+                <div class="stats-bubble layout-hatch-time">
+                    <span class="label-text"><i class="fas fa-clock"></i> Breeding Time</span>
+                    <div class="hatch-time-split-container">
+                        <div class="hatch-card default-tier" style="${isDOF() ? 'width: 100%;' : ''}">
+                            <div class="hatch-badge"><i class="fas fa-hourglass-start"></i></div>
+                            <div class="hatch-data-labels">
+                                <span class="hatch-tier-title">${isDOF() ? 'Breeding Time' : 'Standard'}</span>
+                                <p class="hatch-time-string">${hasTime ? times.Standard : "Unknown"}</p>
+                            </div>
+                        </div>
+                        ${(!isDOF() && times?.Enhanced) ? `
+                        <div class="hatch-card enhanced-tier">
+                            <div class="hatch-badge"><i class="fas fa-bolt"></i></div>
+                            <div class="hatch-data-labels">
+                                <span class="hatch-tier-title">Enhanced</span>
+                                <p class="hatch-time-string">${times.Enhanced}</p>
+                            </div>
+                        </div>` : ''}
+                    </div>
+                </div>
+            `;
+            rightColumnContent = '<div class="stats-bubble" id="breeding-combo-container"></div>';
+        }
+
+        // BUILD THE DESKTOP UI
+        statBox.innerHTML = `
+            <div class="stats-left-column" style="flex: 0 0 350px;">
+                <div class="stats-bubble">
+                    <span class="label-text"><i class="fas fa-dna"></i> Monster Name</span>
+                    <h3>${displayName}</h3>
+                </div>
+                <div class="stats-bubble">
+                    <span class="label-text"><i class="fas fa-atom"></i> Elements</span>
+                    <div class="elements-display">
+                        ${elements.length ? elements.map(e => `<img src="${e.image}" class="element-icon" title="${e.name}">`).join("") : 'No Elements'}
+                    </div>
+                </div>
+                ${leftColumnExtra}
+            </div>
+            ${isLargeInventory ? rightColumnContent : `<div style="flex: 1 1 auto; margin-left: 20px;">${rightColumnContent}</div>`}
+        `;
+        // Render Combos inside whatever pane we put the '#breeding-combo-container' in
         const bc = $('breeding-combo-container');
         if (!hasCombos) {
-            bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p>• Special Combination Required</p>`;
+            bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="text-align:center; padding-top: 20px;">• Special Combination Required</p>`;
         } else {
             const rows = await Promise.all(combos.map(async c => {
                 const ps = c.split(/\s\+\s|\sand\s/i).map(p => p.trim());
@@ -833,6 +927,7 @@ async function loadStats(name) {
             }));
             bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><div class="combo-matrix-display-box">${rows.join("")}</div>`;
         }
+
     } catch (e) {
         console.error(e);
         showNoMonsterError();

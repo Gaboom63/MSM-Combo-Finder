@@ -125,7 +125,7 @@ button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff
 
 #statBox { display: flex; flex: 1 1 auto; min-width: 0; gap: 15px; padding: 10px; box-sizing: border-box; overflow: hidden; align-items: stretch; }
 .stats-left-column { display: flex; flex-direction: column; flex: 0 0 auto; width: 300px; gap: 12px; }
-#breeding-combo-container { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 220px; max-width: 320px; margin: 0 0 0 25px !important; gap: 13px; }
+#breeding-combo-container { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 220px; max-width: 350px; margin: 1 0 0 25px !important; gap: 13px; }
 
 .stats-bubble { background: rgba(30,30,30,0.65); backdrop-filter: blur(12px); border: 1px solid #444; border-radius: 20px; padding: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.6); color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); animation: revealIn var(--entrance-speed) ease-out forwards, globalFloat var(--float-speed) ease-in-out var(--entrance-speed) infinite; transition: 0.3s; }
 .stats-bubble:hover { transform: scale(1.05) !important; animation-play-state: paused; background: rgba(50,50,50,0.85); }
