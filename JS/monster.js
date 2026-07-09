@@ -755,7 +755,7 @@ async function loadStats(name) {
         const hasTime = times?.Standard && times.Standard !== "Unknown";
         const hasCombos = combos?.length > 0;
         const hasPrismatics = isDOF() && m.prismatics && m.prismatics.length > 0;
-        const displayName = (isDOF() || currentRarity !== "Common") ? toDisplayCase(tn) : `Common ${toDisplayCase(tn)}`;
+        const displayName = (isDOF() || currentRarity !== "Common") ? toDisplayCase(tn) : `${toDisplayCase(tn)}`;
         
         // --- Prismatic Button Logic ---
         const pBtn = $('prismaticButton');
