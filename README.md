@@ -9,4 +9,4 @@ ADDED:
 - Ability to check the breeding combos and times of any and all DOF monsters!
 - Ability to breed any DOF monster!
 -------
-Powered By My MSM API :)
+Powered By My <a href="https://github.com/Gaboom63/MSM-API">MSM API</a> :)
