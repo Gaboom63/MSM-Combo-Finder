@@ -79,7 +79,7 @@ apiWorker.onmessage = (e) => {
         dofValidBreedingCombos = payload.dofCombos;
         window.dofCombosData = payload.dofCombosData;
         
-        console.log(`Worker complete: ${monsterRegistry.length} MSM | ${dofMonsterRegistry.length} DOF loaded.`);
+        //console.log(`Worker complete: ${monsterRegistry.length} MSM | ${dofMonsterRegistry.length} DOF loaded.`);
         updateMonsterOfTheDay();
     }
     
@@ -94,7 +94,7 @@ apiWorker.onmessage = (e) => {
 
 // Replaces the giant fetch function
 function buildMonsterRegistry() {
-    console.log("Delegating registry build to background worker...");
+    //console.log("Delegating registry build to background worker...");
     apiWorker.postMessage({ action: 'INIT', data: { currentHash } });
 }
 
@@ -697,6 +697,7 @@ async function loadStats(name) {
 
     noMonsterImage.style.display = 'none';
     statBox.style.display = 'flex';
+    statBox.style.pointerEvents = 'none';
 
     // Desktop/Web version loading state
     statBox.innerHTML = `
@@ -769,42 +770,35 @@ async function loadStats(name) {
         }
         
         if (invData && invData.Inventory) {
-            // Check if there are more than 9 unique egg types!
             isLargeInventory = Object.keys(invData.Inventory).length > 9;
 
-            const eggPromises = Object.entries(invData.Inventory).map(async ([eggName, count]) => {
-                            // 1. Check blazing-fast memory first
-                            let imgUrl = memoryEggCache[eggName]; 
-                            
-                            if (eggName.toLowerCase() === 'flex') {
-                                imgUrl = 'images/important/Flex-egg.jpg'; 
-                            } else if (!imgUrl) {
-                                // 2. Fallback to slow local storage only if not in memory
-                                imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
-                                
-                                if (!imgUrl || imgUrl === 'undefined' || imgUrl === 'null' || imgUrl.includes('mammoticon')) {
-                                    const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
-                                    const eggData = await MSM.get(trueEName).catch(()=>null);
-                                    imgUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
-                                    
-                                    if (imgUrl && !imgUrl.includes('undefined')) {
-                                        localStorage.setItem(`cached_egg_${eggName}`, imgUrl);
-                                    }
-                                }
-                                // 3. Save to memory so we never hit localStorage for this egg again
-                                memoryEggCache[eggName] = imgUrl;
-                            }
-                                            
-                            return `
-                                <div class="inventory-egg-chip" style="width: 60px; margin-bottom: 8px;">
-                                    <span class="inventory-egg-badge" style="font-size:12px;">x${count}</span>
-                                    <img src="${imgUrl}" class="inventory-egg-sprite-render" style="width:45px; height:45px;" onerror="this.src='images/important/mammoticon.png'">
-                                    <span class="inventory-egg-label-text" style="font-size:10px;">${eggName}</span>
-                                </div>
-                            `;
-                        });
-            
-            const eggChips = await Promise.all(eggPromises);
+            // 1. Render instantly (Synchronous mapping)
+            const eggChips = Object.entries(invData.Inventory).map(([eggName, count]) => {
+                let imgUrl = memoryEggCache[eggName]; 
+                
+                if (eggName.toLowerCase() === 'flex') {
+                    imgUrl = 'images/important/Flex-egg.jpg'; 
+                } else if (!imgUrl) {
+                    imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
+                    // Ensure valid cached URL exists
+                    if (imgUrl && imgUrl !== 'undefined' && imgUrl !== 'null' && !imgUrl.includes('mammoticon')) {
+                        memoryEggCache[eggName] = imgUrl;
+                    } else {
+                        imgUrl = null; // Forces background fetch
+                    }
+                }
+                
+                const finalSrc = imgUrl || 'images/important/mammoticon.png';
+                const fetchAttr = !imgUrl ? `data-missing-egg="${eggName}"` : '';
+
+                return `
+                    <div class="inventory-egg-chip" style="width: 60px; margin-bottom: 8px;">
+                        <span class="inventory-egg-badge" style="font-size:12px;">x${count}</span>
+                        <img src="${finalSrc}" ${fetchAttr} class="inventory-egg-sprite-render" style="width:45px; height:45px;" onerror="this.src='images/important/mammoticon.png'">
+                        <span class="inventory-egg-label-text" style="font-size:10px;">${eggName}</span>
+                    </div>
+                `;
+            });
             
             inventoryHTML = `
                 <div class="stats-bubble" style="${isLargeInventory ? 'flex: 1 1 auto; max-width: 450px;' : ''}">
@@ -852,18 +846,17 @@ async function loadStats(name) {
 
         if (inventoryHTML) {
             if (isLargeInventory) {
-                // FORCE: Combo box matches Elements bubble width, minimal margin
-                leftColumnExtra = '<div class="stats-bubble" id="breeding-combo-container" style="margin: 10px 0 10 0 !important; width: 1100%; box-sizing: border-box;"></div>';
-                // PUSH: Added margin-left to the inventory container
+                // PUSH: Added height: max-content so it doesn't stretch vertically, fixed 1100% typo to 100%
+                leftColumnExtra = '<div class="stats-bubble" id="breeding-combo-container" style="margin: 10px 0 0 0 !important; width: 100%; box-sizing: border-box; height: max-content; margin-bottom: auto;"></div>';
                 rightColumnContent = `<div style="margin-left: 20px; flex: 1 1 auto;">${inventoryHTML}</div>`;
             } else {
                 leftColumnExtra = inventoryHTML;
-                rightColumnContent = '<div class="stats-bubble" id="breeding-combo-container"></div>';
+                rightColumnContent = '<div class="stats-bubble" id="breeding-combo-container" style="height: max-content; margin-bottom: auto;"></div>';
             }
         } else {
             // Standard Monster Setup
             leftColumnExtra = `
-                <div class="stats-bubble layout-hatch-time">
+                <div class="stats-bubble layout-hatch-time" style="height: max-content; margin-bottom: auto; position: relative; z-index: 10; transform: translateZ(0); transition: none !important;">
                     <span class="label-text"><i class="fas fa-clock"></i> Breeding Time</span>
                     <div class="hatch-time-split-container">
                         <div class="hatch-card default-tier" style="${isDOF() ? 'width: 100%;' : ''}">
@@ -889,7 +882,7 @@ async function loadStats(name) {
 
         // BUILD THE DESKTOP UI
         statBox.innerHTML = `
-            <div class="stats-left-column" style="flex: 0 0 350px;">
+            <div class="stats-left-column" style="flex: 0 0 350px; height: max-content; display: flex; flex-direction: column;">
                 <div class="stats-bubble">
                     <span class="label-text"><i class="fas fa-dna"></i> Monster Name</span>
                     <h3>${displayName}</h3>
@@ -928,9 +921,34 @@ async function loadStats(name) {
         showNoMonsterError();
     }
     dynamicSoundIcon(tn);
+
+    setTimeout(() => { if (statBox) statBox.style.pointerEvents = ''; }, 400);
+
+    setTimeout(async () => {
+        const missingEggs = statBox.querySelectorAll('[data-missing-egg]');
+        for (const imgEl of missingEggs) {
+            const eggName = imgEl.getAttribute('data-missing-egg');
+            try {
+                const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
+                const eggData = await MSM.get(trueEName).catch(()=>null);
+                const fetchedUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
+                
+                if (fetchedUrl && !fetchedUrl.includes('undefined')) {
+                    localStorage.setItem(`cached_egg_${eggName}`, fetchedUrl);
+                    memoryEggCache[eggName] = fetchedUrl;
+                    imgEl.src = fetchedUrl; // Updates visually in the DOM
+                }
+            } catch(e) {}
+            
+            // Wait for 1 frame before parsing the next API request to keep scrolling smooth
+            await new Promise(r => requestAnimationFrame(r));
+        }
+    }, 150);
 }
 
 function showNoMonsterError() {
+    if (statBox) statBox.style.pointerEvents = '';
+
     toggleEls([
         monsterImage,
         blurMessage,
@@ -1013,14 +1031,14 @@ function saveToHistory(n) {
 }
 
 function updateRecentHistoryUI() {
-    console.log("Updating Recent History UI...");
+    //console.log("Updating Recent History UI...");
     const renderGrid = (g, historyArray, isDof = false) => {
         if (!g) {
             console.warn("Grid element not found!");
             return;
         }
         if (!historyArray.length) {
-            console.log("History array is empty.");
+            //console.log("History array is empty.");
             g.innerHTML = '<span style="color:rgba(255,255,255,0.4);font-size:14px;font-style:italic;">No monsters discovered yet...</span>';
             return;
         }
@@ -1063,7 +1081,7 @@ function updateRecentHistoryUI() {
     const msmHistory = JSON.parse(localStorage.getItem('msmRecentHistory')) || [];
     const dofHistory = JSON.parse(localStorage.getItem('dofRecentHistory')) || [];
     
-    console.log(`Rendering ${msmHistory.length} MSM items and ${dofHistory.length} DOF items.`);
+    //console.log(`Rendering ${msmHistory.length} MSM items and ${dofHistory.length} DOF items.`);
     renderGrid($('recent-grid'), msmHistory, false);
     renderGrid($('recent-grid-DOF'), dofHistory, true);
 }
@@ -1243,8 +1261,8 @@ function loadMonsterImage(name, retries = 2) {
     const FALLBACK_API = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/dist/msm.js`;
     const LOCAL_API = "../MSM-API/MSM/dist/msm.js"; 
 
-    console.log(FALLBACK_API);
-    console.log(LOCAL_API)
+    //console.log(FALLBACK_API);
+    //console.log(LOCAL_API)
 
     function loadScript(src) {
         return new Promise((resolve, reject) => {
@@ -1267,7 +1285,7 @@ function loadMonsterImage(name, retries = 2) {
             return loadScript(FALLBACK_API);
         })
         .then(src => { 
-            console.log("✅ MSM API ready:", src);
+            //console.log("✅ MSM API ready:", src);
             buildMonsterRegistry();
             updateRecentHistoryUI();
         })
