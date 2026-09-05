@@ -1,6 +1,13 @@
 // --- DOM HELPER ---
 const $ = id => document.getElementById(id);
 const toggleEls = (els, display) => els.forEach(el => { if(el) el.style.display = display; });
+const debounce = (func, wait) => {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+};
 
 const firstInput = $('First_Monster'), secondInput = $('Second_Monster');
 const searchInput = $('Search_Monster'), searchInputDof = $('Search_Monster_DOF');
@@ -20,6 +27,7 @@ const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
 let isSideMenuOpen = 0, disableEscape = false, disabledButton = false;
 let currentRarity = "", monsterRegistry = [], validBreedingCombos = [], currentMonster = null, imageLoadTimeout;
 let preloaderPaused = false, pauseTimeout = null;
+const memoryEggCache = {};
 
 // --- DOF GLOBALS & STATE HELPERS ---
 let dofMonsterRegistry = [], dofValidBreedingCombos = [];
@@ -52,81 +60,51 @@ dofAgeToggle?.addEventListener('click', () => {
     }
 });
 
-async function buildMonsterRegistry() {
-    try {
-        const uniqueNames = new Set(), clean = n => n ? n.trim() : "", ignores = ["any", "invalid", "no combination", "unknown", "exclusive"];
+// Spawn the background worker
+const apiWorker = new Worker('JS/msm-worker.js');
+
+// Request Tracking for Async Searches
+let searchIdCounter = 0;
+const pendingSearches = new Map();
+
+// Listen for messages coming back from the worker
+apiWorker.onmessage = (e) => {
+    const { action, payload, msgId, matches } = e.data;
+    
+    if (action === 'READY') {
+        // Worker finished the heavy JSON parsing. Save to local variables for synchronous lookups (like isValidMonster)
+        monsterRegistry = payload.msmRegistry;
+        dofMonsterRegistry = payload.dofRegistry;
+        validBreedingCombos = payload.msmCombos;
+        dofValidBreedingCombos = payload.dofCombos;
+        window.dofCombosData = payload.dofCombosData;
         
-        // Dynamic detection of current commit hash or local testing status
-        
-        let indexPath, combosPath, dofIndexPath, dofCombosPath;
-        if (currentHash === 'local-testing') {
-            // Local path configuration with cache busting
-            indexPath = `../MSM-API/MSM/data/monster_index.json?v=${Date.now()}`;
-            combosPath = `../MSM-API/MSM/data/breedingCombos.json?v=${Date.now()}`;
-            dofIndexPath = `../MSM-API/MSM-DOF/data/dof_monster_index.json?v=${Date.now()}`;
-            dofCombosPath = `../MSM-API/MSM-DOF/data/dofBreedingCombos.json?v=${Date.now()}`;
-        } else {
-            // Production path configuration utilizing the exact GitHub commit hash
-            indexPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/monster_index.json`;
-            combosPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/breedingCombos.json`;
-            dofIndexPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/dof_monster_index.json`;
-            dofCombosPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/dofBreedingCombos.json`;
-            
-            // Append cache busting parameters only if pinned directly to the 'main' branch
-            if (currentHash === 'main') {
-                indexPath += `?v=${Date.now()}`;
-                combosPath += `?v=${Date.now()}`;
-                dofIndexPath += `?v=${Date.now()}`;
-                dofCombosPath += `?v=${Date.now()}`;
-            }
-        }
-        
-        // 1. Fetch exact names from the main game monster index
-        const indexRes = await fetch(indexPath, { credentials: 'omit' }).catch(() => null);
-        if (indexRes && indexRes.ok) {
-            const imageNames = await indexRes.json();
-            imageNames.forEach(name => uniqueNames.add(clean(name)));
-        }
-
-        // 2. Fetch main game breeding combos from the data root directory
-        const res = await fetch(combosPath, { credentials: 'omit' }).catch(() => null);
-        if (res && res.ok) {
-            const data = await res.json();
-            Object.entries(data).forEach(([key, val]) => { if (key.includes("+")) validBreedingCombos.push(key); });
-        }
-
-        monsterRegistry = [...uniqueNames].filter(n => n && !ignores.some(i => n.toLowerCase().includes(i))).sort();
-        console.log(`MSM Registry ready: ${monsterRegistry.length} exact monster forms loaded.`);
-
-        // 3. --- DOF API FETCHING ---
-        const dofUniqueNames = new Set();
-        const dofIndexRes = await fetch(dofIndexPath, { credentials: 'omit' }).catch(() => null);
-        if (dofIndexRes && dofIndexRes.ok) {
-            const dofImageNames = await dofIndexRes.json();
-            dofImageNames.forEach(name => dofUniqueNames.add(clean(name)));
-            dofMonsterRegistry = [...dofUniqueNames].filter(n => n && !ignores.some(i => n.toLowerCase().includes(i))).sort();
-        } else {
-            // Safe hardcoded local fallback if the script fails or 404s
-            dofMonsterRegistry = ["Kayna", "Mammott", "Potbelly", "Tweedle", "Noggin", "Toe Jammer"];
-        }
-
-        // 4. Fetch Dawn of Fire breeding combos from the data root directory
-        const dofRes = await fetch(dofCombosPath, { credentials: 'omit' }).catch(() => null);
-
-        window.dofCombosData = {}; 
-
-        if (dofRes && dofRes.ok) {
-            const dofData = await dofRes.json();
-            window.dofCombosData = dofData; // <-- NEW: Store it here
-            Object.entries(dofData).forEach(([key, val]) => { if (key.includes("+")) dofValidBreedingCombos.push(key); });
-        } else {
-            // Safe hardcoded local fallback if the script fails or 404s
-            dofValidBreedingCombos = ["Kayna + Mammott", "Potbelly + Noggin"]; 
-        }
-        
-        console.log(`DOF Registry ready: ${dofMonsterRegistry.length} forms loaded.`);
+        console.log(`Worker complete: ${monsterRegistry.length} MSM | ${dofMonsterRegistry.length} DOF loaded.`);
         updateMonsterOfTheDay();
-    } catch (err) { console.error("Registry failed to build completely:", err); }
+    }
+    
+    if (action === 'SEARCH_RESULTS') {
+        // Resolve the specific search promise that requested this data
+        if (pendingSearches.has(msgId)) {
+            pendingSearches.get(msgId)(matches);
+            pendingSearches.delete(msgId);
+        }
+    }
+};
+
+// Replaces the giant fetch function
+function buildMonsterRegistry() {
+    console.log("Delegating registry build to background worker...");
+    apiWorker.postMessage({ action: 'INIT', data: { currentHash } });
+}
+
+// Wrapper to turn postMessage into an awaitable Promise
+function runWorkerSearch(data) {
+    return new Promise(resolve => {
+        const msgId = ++searchIdCounter;
+        pendingSearches.set(msgId, resolve);
+        apiWorker.postMessage({ action: 'SEARCH', data: { ...data, msgId } });
+    });
 }
 
 // --- DOF IMAGE HELPERS ---
@@ -197,22 +175,20 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
 
         imgEl.src = sources[0];
     } else {
-        // Standard MSM API logic
-        let attempts = 0;
-
-        const load = () => {
-            if (window.MSM?.[monsterName]) {
-                try {
-                    MSM[monsterName].loadImage(imgEl.id);
-                } catch {
-                    imgEl.src = GRID_FALLBACK_IMAGE;
-                }
-            } else if (attempts++ < 25) {
-                setTimeout(load, 200);
+        // Standard MSM API logic - NO MORE POLLING OR DOM ID SEARCHING
+        MSM.get(monsterName).then(m => {
+            if (m && m.imageUrl) {
+                // Apply the speed attributes directly to the element in memory
+                imgEl.decoding = "async";
+                // Use 'low' priority for grid items so they don't steal bandwidth from the main UI
+                imgEl.fetchPriority = "low"; 
+                imgEl.src = m.imageUrl;
+            } else {
+                imgEl.src = GRID_FALLBACK_IMAGE;
             }
-        };
-
-        load();
+        }).catch(() => {
+            imgEl.src = GRID_FALLBACK_IMAGE;
+        });
     }
 }
 
@@ -232,11 +208,13 @@ const findTrueName = input => {
     const cleanIn = removeAccents(input.trim().toLowerCase());
     const reg = getActiveRegistry();
     
-    let match = reg.find(k => removeAccents(k.toLowerCase()) === cleanIn);
-    if (!match) match = reg.find(k => removeAccents(k.toLowerCase()) === `${cleanIn} (major)`);
-    if (!match) match = reg.find(k => removeAccents(k.toLowerCase()).includes(cleanIn));
+    // Check the pre-computed searchKey instead of running regex loops
+    let match = reg.find(obj => obj.searchKey === cleanIn);
+    if (!match) match = reg.find(obj => obj.searchKey === `${cleanIn} (major)`);
+    if (!match) match = reg.find(obj => obj.searchKey.includes(cleanIn));
 
-    return match || input.trim();
+    // Return the raw string if found
+    return match ? match.raw : input.trim();
 };
 
 const toDisplayCase = str => str ? str.toLowerCase().replace(/(?:^|[\s\-\(\)])[a-z]/g, l => l.toUpperCase()) : "";
@@ -485,30 +463,37 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
 
     inputEl.addEventListener('blur', () => setTimeout(() => { if (!inputEl.classList.contains('expanded-search')) targetGrid.innerHTML = ''; }, 300));
 
-    inputEl.addEventListener('input', () => {
+    inputEl.addEventListener('input', debounce(async () => {
         if (activeInput !== inputEl) return;
         selIdx = -1; haltPreloaderForUserAction();
+        
         const p = inputEl.parentElement, lbl = p.querySelector('h2'), imgE = p.querySelector('.parent-img'), ph = p.querySelector('.empty-slot');
-        if (lbl && imgE && ph) { lbl.classList.remove('active-label'); lbl.textContent = inputEl.id === 'First_Monster' ? 'Parent 1' : 'Parent 2'; }
-
-        const q = removeAccents(inputEl.value.toLowerCase().trim());
-        let m = [];
-
-        if (inputEl === firstInput) {
-            const vp = new Set(getActiveCombos().flatMap(c => c.split('+').map(p => p.trim().toLowerCase())));
-            m = getActiveRegistry().filter(n => vp.has(n.toLowerCase()));
-        } else if (inputEl === secondInput) {
-            const v1 = firstInput.value.trim().toLowerCase();
-            if (v1) m = getActiveRegistry().filter(n => getActiveCombos().some(c => { const p = c.split('+').map(x=>x.trim().toLowerCase()); return (p[0]===v1 && p[1]===n.toLowerCase()) || (p[1]===v1 && p[0]===n.toLowerCase()); }));
-        } else {
-            m = getActiveRegistry().filter(n => incRarity || (!n.toLowerCase().startsWith("rare ") && !n.toLowerCase().startsWith("epic ")));
+        if (lbl && imgE && ph) { 
+            lbl.classList.remove('active-label'); 
+            lbl.textContent = inputEl.id === 'First_Monster' ? 'Parent 1' : 'Parent 2'; 
         }
 
-        if (q) m = m.filter(n => removeAccents(n.toLowerCase()).includes(q));
-        if (!q && (inputEl === searchInput || inputEl === searchInputDof)) return targetGrid.innerHTML = '';
+        const q = removeAccents(inputEl.value.toLowerCase().trim());
+        let inputContext = 'main';
+        let v1 = null;
 
+        if (inputEl === firstInput) inputContext = 'first';
+        else if (inputEl === secondInput) {
+            inputContext = 'second';
+            v1 = removeAccents(firstInput.value.trim().toLowerCase());
+        }
+
+        // Fire the worker and wait for the results (Main thread stays perfectly 60fps)
+        const matches = await runWorkerSearch({
+            q, inputContext, isDof: isDOF(), incRarity, v1
+        });
+
+        if (!q && (inputEl === searchInput || inputEl === searchInputDof)) return targetGrid.innerHTML = '';
+        
         targetGrid.innerHTML = '';
-        m.slice(0, 12).forEach(match => {
+        const fragment = document.createDocumentFragment();
+
+        matches.forEach(match => {
             const item = document.createElement('div'); item.className = 'grid-monster-item';
             const safeId = `grid-img-${match.replace(/[^a-zA-Z0-9]/g, '')}`;
             const img = document.createElement('img'); img.id = safeId; img.onerror = () => { img.onerror = null; img.src = GRID_FALLBACK_IMAGE; };
@@ -526,9 +511,7 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
                     currentRarity = /^rare/i.test(tName) ? "Rare" : /^epic/i.test(tName) ? "Epic" : "Common";
                     monsterImage.setAttribute('data-name', normalizeName(tName));
                     tabsContainer.innerHTML = ''; showMonsterUI(false); updateActiveTab(); 
-                    if (isDOF()) {
-                        dofAgeMode = 'young';
-                    }
+                    if (isDOF()) dofAgeMode = 'young';
                     loadMonsterImage(tName);
                     await costumeErrorHandling(tName); loadStats(tName);
                 } else if (inputEl === firstInput || inputEl === secondInput) {
@@ -546,10 +529,13 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
                     if (firstInput.value.trim() && secondInput.value.trim()) triggerBreedingAnimation();
                 }
             });
-            targetGrid.appendChild(item);
+            fragment.appendChild(item);
             applyMonsterImage(img, findTrueName(match), 'avatar');
         });
-    });
+        
+        targetGrid.appendChild(fragment);
+
+    }, 150));
 
     inputEl.addEventListener('keydown', e => {
         const items = targetGrid.querySelectorAll('.grid-monster-item');
@@ -787,27 +773,36 @@ async function loadStats(name) {
             isLargeInventory = Object.keys(invData.Inventory).length > 9;
 
             const eggPromises = Object.entries(invData.Inventory).map(async ([eggName, count]) => {
-                let imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
-                if (eggName.toLowerCase() === 'flex') {
-                    imgUrl = 'images/important/Flex-egg.jpg'; 
-                } else {
-                    imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
-                    if (!imgUrl || imgUrl === 'undefined' || imgUrl === 'null' || imgUrl.includes('mammoticon')) {
-                        const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
-                        const eggData = await MSM.get(trueEName).catch(()=>null);
-                        imgUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
-                        if (imgUrl && !imgUrl.includes('undefined')) localStorage.setItem(`cached_egg_${eggName}`, imgUrl);
-                    }
-                }
+                            // 1. Check blazing-fast memory first
+                            let imgUrl = memoryEggCache[eggName]; 
+                            
+                            if (eggName.toLowerCase() === 'flex') {
+                                imgUrl = 'images/important/Flex-egg.jpg'; 
+                            } else if (!imgUrl) {
+                                // 2. Fallback to slow local storage only if not in memory
+                                imgUrl = localStorage.getItem(`cached_egg_${eggName}`);
                                 
-                return `
-                    <div class="inventory-egg-chip" style="width: 60px; margin-bottom: 8px;">
-                        <span class="inventory-egg-badge" style="font-size:12px;">x${count}</span>
-                        <img src="${imgUrl}" class="inventory-egg-sprite-render" style="width:45px; height:45px;" onerror="this.src='images/important/mammoticon.png'">
-                        <span class="inventory-egg-label-text" style="font-size:10px;">${eggName}</span>
-                    </div>
-                `;
-            });
+                                if (!imgUrl || imgUrl === 'undefined' || imgUrl === 'null' || imgUrl.includes('mammoticon')) {
+                                    const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
+                                    const eggData = await MSM.get(trueEName).catch(()=>null);
+                                    imgUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
+                                    
+                                    if (imgUrl && !imgUrl.includes('undefined')) {
+                                        localStorage.setItem(`cached_egg_${eggName}`, imgUrl);
+                                    }
+                                }
+                                // 3. Save to memory so we never hit localStorage for this egg again
+                                memoryEggCache[eggName] = imgUrl;
+                            }
+                                            
+                            return `
+                                <div class="inventory-egg-chip" style="width: 60px; margin-bottom: 8px;">
+                                    <span class="inventory-egg-badge" style="font-size:12px;">x${count}</span>
+                                    <img src="${imgUrl}" class="inventory-egg-sprite-render" style="width:45px; height:45px;" onerror="this.src='images/important/mammoticon.png'">
+                                    <span class="inventory-egg-label-text" style="font-size:10px;">${eggName}</span>
+                                </div>
+                            `;
+                        });
             
             const eggChips = await Promise.all(eggPromises);
             
@@ -971,7 +966,7 @@ function silentlyPreloadImages() {
         if (preloaderPaused) return setTimeout(n, 1000);
         const reg = getActiveRegistry();
         for(let j=0; j<3 && i<reg.length; j++, i++) {
-            try { const m = await MSM[findTrueName(reg[i])]; if(m) { (await m.getElementImages?.()||[]).forEach(e => { if(e?.image) new Image().src = e.image; }); if(m.imageUrl) new Image().src = m.imageUrl; } } catch {}
+            try { const m = await MSM[findTrueName(reg[i].raw)]; if(m) { (await m.getElementImages?.()||[]).forEach(e => { if(e?.image) new Image().src = e.image; }); if(m.imageUrl) new Image().src = m.imageUrl; } } catch {}
         }
         if (i < reg.length) setTimeout(() => window.requestIdleCallback ? requestIdleCallback(n) : n(), 250);
     }; setTimeout(n, 2000);
@@ -1077,7 +1072,7 @@ function dynamicSoundIcon(n) { volumeButton.style.display = MSM[n]?.sounds[0] ? 
 
 function updateMonsterOfTheDay() {
     if (!spotlight || !getActiveRegistry().length) return;
-    const d = new Date(), reg = getActiveRegistry(), tn = findTrueName(reg[((d.getFullYear()*10000)+((d.getMonth()+1)*100)+d.getDate()) % reg.length]);
+    const d = new Date(), reg = getActiveRegistry(), tn = findTrueName(reg[((d.getFullYear()*10000)+((d.getMonth()+1)*100)+d.getDate()) % reg.length].raw);
     if ($('spotlight-name')) $('spotlight-name').textContent = tn;
     if ($('spotlight-img')) {
         const i = $('spotlight-img'); i.id = `spotlight-img-${tn.replace(/[^a-zA-Z0-9]/g, '')}`; i.onerror = () => { i.onerror = null; i.src = GRID_FALLBACK_IMAGE; };
@@ -1108,8 +1103,8 @@ commonButton.addEventListener("click", () => handleRaritySwitch("Common")); rare
 
 function isValidMonster(n) {
     if (!n) return false;
-    const cleanInput = n.toLowerCase().trim();
-    return getActiveRegistry().some(x => x.toLowerCase() === cleanInput);
+    const cleanInput = removeAccents(n.toLowerCase().trim());
+    return getActiveRegistry().some(obj => obj.searchKey === cleanInput);
 }
 
 function loadMonsterImage(name, retries = 2) {
@@ -1247,6 +1242,9 @@ function loadMonsterImage(name, retries = 2) {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
     const FALLBACK_API = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/dist/msm.js`;
     const LOCAL_API = "../MSM-API/MSM/dist/msm.js"; 
+
+    console.log(FALLBACK_API);
+    console.log(LOCAL_API)
 
     function loadScript(src) {
         return new Promise((resolve, reject) => {
