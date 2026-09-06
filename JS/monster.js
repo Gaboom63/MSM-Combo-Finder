@@ -23,6 +23,8 @@ const spotlight = $('monster-spotlight'), sideMenu = $('sideMenu'), iconContaine
 let sideMenuB = $('sideMenuButton');
 let dofAgeMode = 'young';
 
+let date = new Date().getMonth(); 
+
 const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
 let isSideMenuOpen = 0, disableEscape = false, disabledButton = false;
 let currentRarity = "", monsterRegistry = [], validBreedingCombos = [], currentMonster = null, imageLoadTimeout;
@@ -38,6 +40,8 @@ const getActiveCombos = () => isDOF() ? dofValidBreedingCombos : validBreedingCo
 const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 const currentHash = localStorage.getItem('msm_api_hash') || 'main';
+
+let body = document.body; 
 
 const dofAgeToggle = $('dofAgeToggle');
 
@@ -1255,6 +1259,336 @@ function loadMonsterImage(name, retries = 2) {
         }
     }
 }
+
+// 1. Array with embedded UI color themes
+const background = [
+    {
+        eventName: "Crescendo Moon",
+        img: "../CSS/images/backgrounds/Crescendo Moon Sky.jpg",
+        startMonth: 0, startWednesday: 2, endMonth: 1, endWednesday: 2,
+        colors: {
+            '--pure-pink': '#e11d48', // Crimson Red
+            '--pure-pink-hover': '#be123c',
+            '--pink-glass': 'rgba(60, 10, 20, 0.85)',
+            '--pink-glass-hover': 'rgba(80, 15, 30, 0.95)',
+            '--delicate-border': 'rgba(225, 29, 72, 0.6)',
+            '--main-red': 'rgb(225, 29, 72)'
+        }
+    },
+    {
+        eventName: "Season of Love",
+        img: "../CSS/images/backgrounds/Season of Love Sky.jpg",
+        startMonth: 0, startWednesday: 4, endMonth: 1, endWednesday: 4,
+        colors: {
+            '--pure-pink': '#f43f5e', // Valentine Rose
+            '--pure-pink-hover': '#e11d48',
+            '--pink-glass': 'rgba(70, 15, 35, 0.85)',
+            '--pink-glass-hover': 'rgba(90, 20, 45, 0.95)',
+            '--delicate-border': 'rgba(244, 63, 94, 0.6)',
+            '--main-red': 'rgb(244, 63, 94)'
+        }
+    },
+    {
+        eventName: "Cloverspell",
+        img: "../CSS/images/backgrounds/Cloverspell Sky.jpg",
+        startMonth: 2, startWednesday: 1, endMonth: 2, endWednesday: 3,
+        colors: {
+            '--pure-pink': '#10b981', // Shamrock Emerald
+            '--pure-pink-hover': '#059669',
+            '--pink-glass': 'rgba(10, 50, 30, 0.85)',
+            '--pink-glass-hover': 'rgba(15, 70, 40, 0.95)',
+            '--delicate-border': 'rgba(16, 185, 129, 0.6)',
+            '--main-red': 'rgb(16, 185, 129)'
+        }
+    },
+    {
+        eventName: "Eggs-Travaganza",
+        img: "../CSS/images/backgrounds/Eggs-Travaganza Sky.jpg",
+        startMonth: 2, startWednesday: 4, endMonth: 3, endWednesday: 2,
+        colors: {
+            '--pure-pink': '#38bdf8', // Easter Water Teal
+            '--pure-pink-hover': '#0ea5e9',
+            '--pink-glass': 'rgba(15, 45, 60, 0.85)',
+            '--pink-glass-hover': 'rgba(20, 60, 80, 0.95)',
+            '--delicate-border': 'rgba(56, 189, 248, 0.6)',
+            '--main-red': 'rgb(56, 189, 248)'
+        }
+    },
+    {
+        eventName: "Echoes of Eco",
+        img: "../CSS/images/backgrounds/Echoes of Eco Sky.jpg",
+        startMonth: 3, startWednesday: 3, endMonth: 4, endWednesday: 1,
+        colors: {
+            '--pure-pink': '#4ade80', // Vibrant Leaf Green
+            '--pure-pink-hover': '#22c55e',
+            '--pink-glass': 'rgba(15, 50, 25, 0.85)',
+            '--pink-glass-hover': 'rgba(20, 70, 35, 0.95)',
+            '--delicate-border': 'rgba(74, 222, 128, 0.6)',
+            '--main-red': 'rgb(74, 222, 128)'
+        }
+    },
+    {
+        eventName: "Perplexplore",
+        img: "../CSS/images/backgrounds/Perplexplore Sky.jpg",
+        startMonth: 4, startWednesday: 3, endMonth: 4, endWednesday: 5,
+        colors: {
+            '--pure-pink': '#d97706', // Oasis Amber
+            '--pure-pink-hover': '#b45309',
+            '--pink-glass': 'rgba(60, 30, 10, 0.85)',
+            '--pink-glass-hover': 'rgba(80, 40, 15, 0.95)',
+            '--delicate-border': 'rgba(217, 119, 6, 0.6)',
+            '--main-red': 'rgb(217, 119, 6)'
+        }
+    },
+    {
+        eventName: "Life-Formula",
+        img: "../CSS/images/backgrounds/Ethereal Island Sky.jpg",
+        startMonth: 5, startWednesday: 1, endMonth: 5, endWednesday: 4,
+        colors: {
+            '--pure-pink': '#2dd4bf', // Ethereal Cyan
+            '--pure-pink-hover': '#14b8a6',
+            '--pink-glass': 'rgba(15, 45, 50, 0.85)',
+            '--pink-glass-hover': 'rgba(20, 60, 65, 0.95)',
+            '--delicate-border': 'rgba(45, 212, 191, 0.6)',
+            '--main-red': 'rgb(45, 212, 191)'
+        }
+    },
+    {
+        eventName: "SkyPainting",
+        img: "../CSS/images/backgrounds/SkyPainting Sky.jpg",
+        startMonth: 5, startWednesday: 4, endMonth: 6, endWednesday: 2,
+        colors: {
+            '--pure-pink': '#d946ef', // Bright Fuchsia
+            '--pure-pink-hover': '#c026d3',
+            '--pink-glass': 'rgba(50, 15, 60, 0.85)',
+            '--pink-glass-hover': 'rgba(70, 20, 80, 0.95)',
+            '--delicate-border': 'rgba(217, 70, 239, 0.6)',
+            '--main-red': 'rgb(217, 70, 239)'
+        }
+    },
+    {
+        eventName: "SummerSong",
+        img: "../CSS/images/backgrounds/SummerSong Sky.jpg",
+        startMonth: 6, startWednesday: 2, endMonth: 7, endWednesday: 1,
+        colors: {
+            '--pure-pink': '#facc15', // Summer Yellow
+            '--pure-pink-hover': '#eab308',
+            '--pink-glass': 'rgba(60, 45, 10, 0.85)',
+            '--pink-glass-hover': 'rgba(80, 60, 15, 0.95)',
+            '--delicate-border': 'rgba(250, 204, 21, 0.6)',
+            '--main-red': 'rgb(250, 204, 21)'
+        }
+    },
+    {
+        eventName: "MindBoggle", 
+        img: "../CSS/images/backgrounds/Psychic Island Sky.jpg",
+        startMonth: 7, startWednesday: 1, endMonth: 7, endWednesday: 4,
+        colors: {
+            '--pure-pink': '#8b5cf6', // Psychic Purple
+            '--pure-pink-hover': '#7c3aed',
+            '--pink-glass': 'rgba(35, 15, 60, 0.85)',
+            '--pink-glass-hover': 'rgba(50, 20, 80, 0.95)',
+            '--delicate-border': 'rgba(139, 92, 246, 0.6)',
+            '--main-red': 'rgb(139, 92, 246)'
+        }
+    },
+    {
+        eventName: "Anniversary Month",
+        img: "../CSS/images/backgrounds/Anniversary Month Sky.jpg",
+        startMonth: 7, startWednesday: 4, endMonth: 9, endWednesday: 1,
+        colors: {
+            '--pure-pink': '#fbbf24', // Gold Island Gold
+            '--pure-pink-hover': '#f59e0b',
+            '--pink-glass': 'rgba(60, 50, 10, 0.85)',
+            '--pink-glass-hover': 'rgba(80, 65, 15, 0.95)',
+            '--delicate-border': 'rgba(251, 191, 36, 0.6)',
+            '--main-red': 'rgb(251, 191, 36)'
+        }
+    },
+    {
+        eventName: "Spooktacle",
+        img: "../CSS/images/backgrounds/Spooktacle Sky.jpg",
+        startMonth: 9, startWednesday: 2, endMonth: 10, endWednesday: 1,
+        colors: {
+            '--pure-pink': '#06b6d4', // Bone Island Cerulean/Aqua
+            '--pure-pink-hover': '#0891b2',
+            '--pink-glass': 'rgba(10, 45, 55, 0.85)',
+            '--pink-glass-hover': 'rgba(15, 60, 70, 0.95)',
+            '--delicate-border': 'rgba(6, 182, 212, 0.6)',
+            '--main-red': 'rgb(6, 182, 212)'
+        }
+    },
+    {
+        eventName: "Beat Hereafter",
+        img: "../CSS/images/backgrounds/Beat Hereafter Sky.jpg",
+        startMonth: 9, startWednesday: 4, endMonth: 10, endWednesday: 2,
+        colors: {
+            '--pure-pink': '#f97316', // Pumpkin Orange
+            '--pure-pink-hover': '#ea580c',
+            '--pink-glass': 'rgba(50, 25, 10, 0.85)',
+            '--pink-glass-hover': 'rgba(70, 35, 15, 0.95)',
+            '--delicate-border': 'rgba(249, 115, 22, 0.6)',
+            '--main-red': 'rgb(249, 115, 22)'
+        }
+    },
+    {
+        eventName: "Feast-Ember",
+        img: "../CSS/images/backgrounds/Feast-Ember Sky.jpg",
+        startMonth: 10, startWednesday: 3, endMonth: 10, endWednesday: 5,
+        colors: {
+            '--pure-pink': '#ef4444', // Autumn Red
+            '--pure-pink-hover': '#dc2626',
+            '--pink-glass': 'rgba(60, 15, 15, 0.85)',
+            '--pink-glass-hover': 'rgba(80, 20, 20, 0.95)',
+            '--delicate-border': 'rgba(239, 68, 68, 0.6)',
+            '--main-red': 'rgb(239, 68, 68)'
+        }
+    },
+    {
+        eventName: "Festival of Yay",
+        img: "../CSS/images/backgrounds/Cold Island Sky.jpg",
+        startMonth: 11, startWednesday: 1, endMonth: 0, endWednesday: 1,
+        colors: {
+            '--pure-pink': '#60a5fa', // Frosty Ice Blue
+            '--pure-pink-hover': '#3b82f6',
+            '--pink-glass': 'rgba(15, 35, 60, 0.85)',
+            '--pink-glass-hover': 'rgba(20, 50, 80, 0.95)',
+            '--delicate-border': 'rgba(96, 165, 250, 0.6)',
+            '--main-red': 'rgb(96, 165, 250)'
+        }
+    }
+];
+
+// Fallback theme colors (Your original pink CSS variables)
+const defaultThemeColors = {
+    '--pure-pink': '#ff4d6d',
+    '--pure-pink-hover': '#ff2a55',
+    '--pink-glass': 'rgba(100, 15, 40, 0.85)',
+    '--pink-glass-hover': 'rgba(130, 20, 50, 0.95)',
+    '--delicate-border': 'rgba(255, 77, 109, 0.6)',
+    '--main-red': 'rgb(255, 109, 109)'
+};
+
+const defaultBackground = {
+    eventName: "None",
+    img: "../CSS/images/backgrounds/NoEventShellbeat.jpg",
+    colors: defaultThemeColors
+};
+
+// 2. Function to inject CSS variables into the root
+function applyThemeColors(colorsObj) {
+    const root = document.documentElement;
+    const themeToApply = colorsObj || defaultThemeColors;
+    
+    for (const [cssVar, colorValue] of Object.entries(themeToApply)) {
+        root.style.setProperty(cssVar, colorValue);
+    }
+}
+
+// 3. Central UI updater
+// Central UI updater
+function setEventUI(eventObj) {
+    console.log(`Setting UI for: ${eventObj.eventName}`);
+    
+    // 1. Set Background
+    document.body.style.backgroundImage = `url('${eventObj.img}')`;
+    document.getElementById('title').innerHTML = `MSM Combo Finder <br> ${eventObj.eventName} Edition!`
+    
+    // 2. Set Theme Colors
+    applyThemeColors(eventObj.colors);
+
+    // 3. Set Favicon
+    let faviconPath = `../images/important/Favicons/${eventObj.eventName}.png`;
+    if (eventObj.eventName === "None") {
+        faviconPath = "../images/important/Favicons/mammoticon.png";
+    }
+
+    // Find the existing favicon tag, or create a new one
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+    }
+    link.href = faviconPath;
+}
+// 4. Testing Function for Developer Console
+// Open your console and type: testEvent("Echoes of Eco")
+function testEvent(eventName) {
+    if (eventName.toLowerCase() === "none") {
+        setEventUI(defaultBackground);
+        return;
+    }
+
+    const foundEvent = background.find(e => e.eventName.toLowerCase() === eventName.toLowerCase());
+    if (foundEvent) {
+        setEventUI(foundEvent);
+    } else {
+        console.warn(`Event "${eventName}" not found! Check your spelling.`);
+    }
+}
+
+// 5. Normal Initialization (Run on page load)
+// This uses your date calculation function to find the right event
+function initSeasonalUI() {
+    const currentEvent = getCurrentBackground(); // (Your date-checking function)
+    setEventUI(currentEvent);
+}
+
+// Start the script
+initSeasonalUI();
+
+// 2. Helper function to find the Nth Wednesday
+function getNthWednesday(year, month, nth) {
+    const date = new Date(year, month, 1);
+    const day = date.getDay(); // 0 (Sun) to 6 (Sat)
+    
+    // Find the first Wednesday (3 represents Wednesday)
+    const daysUntilWednesday = (3 - day + 7) % 7;
+    date.setDate(1 + daysUntilWednesday);
+    
+    // Add weeks to reach the requested Nth Wednesday
+    date.setDate(date.getDate() + (nth - 1) * 7);
+    return date;
+}
+
+// 3. Main function to determine the current background
+function getCurrentBackground() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+
+    for (let i = 0; i < background.length; i++) {
+        const event = background[i];
+        
+        let startDate = getNthWednesday(currentYear, event.startMonth, event.startWednesday);
+        let endDate = getNthWednesday(currentYear, event.endMonth, event.endWednesday);
+        
+        // Handle events that cross over into the new year (like Festival of Yay: Dec -> Jan)
+        if (event.endMonth < event.startMonth) {
+            if (now.getMonth() <= event.endMonth) {
+                // If it's currently January, the event started last year
+                startDate = getNthWednesday(currentYear - 1, event.startMonth, event.startWednesday);
+            } else {
+                // If it's currently December, the event ends next year
+                endDate = getNthWednesday(currentYear + 1, event.endMonth, event.endWednesday);
+            }
+        }
+        
+        // Check if today falls between the start and end dates
+        if (now >= startDate && now < endDate) {
+            return event;
+        }
+    }
+
+    // If the loop finishes and no date matches, return the default
+    return defaultBackground;
+}
+
+// 4. Apply it to your page
+const currentEvent = getCurrentBackground();
+console.log(`Current Event: ${currentEvent.eventName}`);
+document.body.style.backgroundImage = `url('${currentEvent.img}')`;
+
 
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";

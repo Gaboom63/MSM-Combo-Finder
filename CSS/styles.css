@@ -17,7 +17,7 @@
 
 * { font-family: 'Monster Font'; }
 
-body { text-align: center; background: url(images/backgrounds/NoEventShellbeat.jpg) no-repeat center center fixed; background-size: cover; color: rgb(33, 35, 146); overflow-x: hidden; margin: 0; }
+body { text-align: center; background-size: cover; color: rgb(33, 35, 146); overflow-x: hidden; margin: 0; }
 
 #title { text-align: center; background: linear-gradient(to bottom, lightgreen, rgb(245, 189, 84)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px black; margin-top: 20px; font-weight: bold; }
 
@@ -210,7 +210,7 @@ button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff
 #icon { width: 50px; height: 50px; cursor: pointer; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transition: 0.2s ease; }
 #icon:hover { transform: scale(1.1); }
 #textContainer { display: none; margin-left: 15px; padding: 10px 15px; background: var(--pink-glass); backdrop-filter: blur(10px); border: 1px solid var(--delicate-border); border-radius: 12px; position: relative; max-width: 300px; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); font-size: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-#textContainer a { color: #ff9fb3; font-weight: bold; text-decoration: none; }
+#textContainer a { color: lightgreen; font-weight: bold; text-decoration: none; }
 #textContainer a:hover { text-decoration: underline; color: #fff; }
 #iconContainer:hover #textContainer { display: block; animation: slideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 

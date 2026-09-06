@@ -56,7 +56,7 @@ function setupSideMenu() {
         menuOpen = 0; 
         
         $('title').innerHTML = `My Singing Monsters <br> Combo Finder`; 
-        document.body.style.backgroundImage = 'url("CSS/images/backgrounds/NoEventShellbeat.jpg")';
+        document.body.style.backgroundImage = `url('${currentEvent.img}')`;
         be.style.background = `linear-gradient(to bottom, lightgreen, rgb(245, 189, 84))`;
         be.style.webkitBackgroundClip = "text";
         be.style.webkitTextFillColor = "transparent";

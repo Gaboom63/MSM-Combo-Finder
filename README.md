@@ -1,12 +1,11 @@
 # MSM-Combo-Finder
-UPDATE V9: DAWN OF FIRE SUPPORT!
--
-ADDED:
-<br>
-* New Side Menu (Fully reworked from an older verison of this tool!)
-- **Features in the side menu include:**
-- All Dawn Of Fire Content!
-- Ability to check the breeding combos and times of any and all DOF monsters!
-- Ability to breed any DOF monster!
+UPDATE V10: SEASONAL CHANGES!
+-----
+<br> 
+- **Features in this update include:**
+- New title for every seasonal update!
+- New backgrounds for every seasonal event!
+- Different UI colors for every seasonal event!
+- On non seasonal times, the tool reverts to the original UI colors, and backgrounds!
 -------
 Powered By My <a href="https://github.com/Gaboom63/MSM-API">MSM API</a> :)
