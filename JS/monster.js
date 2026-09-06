@@ -1264,7 +1264,7 @@ function loadMonsterImage(name, retries = 2) {
 const background = [
     {
         eventName: "Crescendo Moon",
-        img: "/CSS/images/backgrounds/Crescendo Moon Sky.jpg",
+        img: "CSS/images/backgrounds/Crescendo Moon Sky.jpg",
         startMonth: 0, startWednesday: 2, endMonth: 1, endWednesday: 2,
         colors: {
             '--pure-pink': '#e11d48', // Crimson Red
@@ -1277,7 +1277,7 @@ const background = [
     },
     {
         eventName: "Season of Love",
-        img: "/CSS/images/backgrounds/Season of Love Sky.jpg",
+        img: "CSS/images/backgrounds/Season of Love Sky.jpg",
         startMonth: 0, startWednesday: 4, endMonth: 1, endWednesday: 4,
         colors: {
             '--pure-pink': '#f43f5e', // Valentine Rose
@@ -1290,7 +1290,7 @@ const background = [
     },
     {
         eventName: "Cloverspell",
-        img: "/CSS/images/backgrounds/Cloverspell Sky.jpg",
+        img: "CSS/images/backgrounds/Cloverspell Sky.jpg",
         startMonth: 2, startWednesday: 1, endMonth: 2, endWednesday: 3,
         colors: {
             '--pure-pink': '#10b981', // Shamrock Emerald
@@ -1303,7 +1303,7 @@ const background = [
     },
     {
         eventName: "Eggs-Travaganza",
-        img: "/CSS/images/backgrounds/Eggs-Travaganza Sky.jpg",
+        img: "CSS/images/backgrounds/Eggs-Travaganza Sky.jpg",
         startMonth: 2, startWednesday: 4, endMonth: 3, endWednesday: 2,
         colors: {
             '--pure-pink': '#38bdf8', // Easter Water Teal
@@ -1316,7 +1316,7 @@ const background = [
     },
     {
         eventName: "Echoes of Eco",
-        img: "/CSS/images/backgrounds/Echoes of Eco Sky.jpg",
+        img: "CSS/images/backgrounds/Echoes of Eco Sky.jpg",
         startMonth: 3, startWednesday: 3, endMonth: 4, endWednesday: 1,
         colors: {
             '--pure-pink': '#4ade80', // Vibrant Leaf Green
@@ -1329,7 +1329,7 @@ const background = [
     },
     {
         eventName: "Perplexplore",
-        img: "/CSS/images/backgrounds/Perplexplore Sky.jpg",
+        img: "CSS/images/backgrounds/Perplexplore Sky.jpg",
         startMonth: 4, startWednesday: 3, endMonth: 4, endWednesday: 5,
         colors: {
             '--pure-pink': '#d97706', // Oasis Amber
@@ -1342,7 +1342,7 @@ const background = [
     },
     {
         eventName: "Life-Formula",
-        img: "/CSS/images/backgrounds/Ethereal Island Sky.jpg",
+        img: "CSS/images/backgrounds/Ethereal Island Sky.jpg",
         startMonth: 5, startWednesday: 1, endMonth: 5, endWednesday: 4,
         colors: {
             '--pure-pink': '#2dd4bf', // Ethereal Cyan
@@ -1355,7 +1355,7 @@ const background = [
     },
     {
         eventName: "SkyPainting",
-        img: "/CSS/images/backgrounds/SkyPainting Sky.jpg",
+        img: "CSS/images/backgrounds/SkyPainting Sky.jpg",
         startMonth: 5, startWednesday: 4, endMonth: 6, endWednesday: 2,
         colors: {
             '--pure-pink': '#d946ef', // Bright Fuchsia
@@ -1368,7 +1368,7 @@ const background = [
     },
     {
         eventName: "SummerSong",
-        img: "/CSS/images/backgrounds/SummerSong Sky.jpg",
+        img: "CSS/images/backgrounds/SummerSong Sky.jpg",
         startMonth: 6, startWednesday: 2, endMonth: 7, endWednesday: 1,
         colors: {
             '--pure-pink': '#facc15', // Summer Yellow
@@ -1381,7 +1381,7 @@ const background = [
     },
     {
         eventName: "MindBoggle", 
-        img: "/CSS/images/backgrounds/Psychic Island Sky.jpg",
+        img: "CSS/images/backgrounds/Psychic Island Sky.jpg",
         startMonth: 7, startWednesday: 1, endMonth: 7, endWednesday: 4,
         colors: {
             '--pure-pink': '#8b5cf6', // Psychic Purple
@@ -1394,7 +1394,7 @@ const background = [
     },
     {
         eventName: "Anniversary Month",
-        img: "/CSS/images/backgrounds/Anniversary Month Sky.jpg",
+        img: "CSS/images/backgrounds/Anniversary Month Sky.jpg",
         startMonth: 7, startWednesday: 4, endMonth: 9, endWednesday: 1,
         colors: {
             '--pure-pink': '#fbbf24', // Gold Island Gold
@@ -1407,7 +1407,7 @@ const background = [
     },
     {
         eventName: "Spooktacle",
-        img: "/CSS/images/backgrounds/Spooktacle Sky.jpg",
+        img: "CSS/images/backgrounds/Spooktacle Sky.jpg",
         startMonth: 9, startWednesday: 2, endMonth: 10, endWednesday: 1,
         colors: {
             '--pure-pink': '#06b6d4', // Bone Island Cerulean/Aqua
@@ -1420,7 +1420,7 @@ const background = [
     },
     {
         eventName: "Beat Hereafter",
-        img: "/CSS/images/backgrounds/Beat Hereafter Sky.jpg",
+        img: "CSS/images/backgrounds/Beat Hereafter Sky.jpg",
         startMonth: 9, startWednesday: 4, endMonth: 10, endWednesday: 2,
         colors: {
             '--pure-pink': '#f97316', // Pumpkin Orange
@@ -1433,7 +1433,7 @@ const background = [
     },
     {
         eventName: "Feast-Ember",
-        img: "/CSS/images/backgrounds/Feast-Ember Sky.jpg",
+        img: "CSS/images/backgrounds/Feast-Ember Sky.jpg",
         startMonth: 10, startWednesday: 3, endMonth: 10, endWednesday: 5,
         colors: {
             '--pure-pink': '#ef4444', // Autumn Red
@@ -1446,7 +1446,7 @@ const background = [
     },
     {
         eventName: "Festival of Yay",
-        img: "/CSS/images/backgrounds/Cold Island Sky.jpg",
+        img: "CSS/images/backgrounds/Cold Island Sky.jpg",
         startMonth: 11, startWednesday: 1, endMonth: 0, endWednesday: 1,
         colors: {
             '--pure-pink': '#60a5fa', // Frosty Ice Blue
@@ -1471,7 +1471,7 @@ const defaultThemeColors = {
 
 const defaultBackground = {
     eventName: "None",
-    img: "/CSS/images/backgrounds/NoEventShellbeat.jpg",
+    img: "CSS/images/backgrounds/NoEventShellbeat.jpg",
     colors: defaultThemeColors
 };
 
@@ -1498,9 +1498,9 @@ function setEventUI(eventObj) {
     applyThemeColors(eventObj.colors);
 
     // 3. Set Favicon
-    let faviconPath = `/images/important/Favicons/${eventObj.eventName}.png`;
+    let faviconPath = `images/important/Favicons/${eventObj.eventName}.png`;
     if (eventObj.eventName === "None") {
-        faviconPath = "/images/important/Favicons/mammoticon.png";
+        faviconPath = "images/important/Favicons/mammoticon.png";
     }
 
     // Find the existing favicon tag, or create a new one
