@@ -1,8 +1,7 @@
 # MSM-Combo-Finder
 UPDATE V10: SEASONAL CHANGES!
 -----
-<br> 
-- **Features in this update include:**
+**Changes in this update:**
 - New title for every seasonal update!
 - New backgrounds for every seasonal event!
 - Different UI colors for every seasonal event!
