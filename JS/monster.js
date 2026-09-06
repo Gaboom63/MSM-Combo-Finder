@@ -1498,9 +1498,9 @@ function setEventUI(eventObj) {
     applyThemeColors(eventObj.colors);
 
     // 3. Set Favicon
-    let faviconPath = `../images/important/Favicons/${eventObj.eventName}.png`;
+    let faviconPath = `/images/important/Favicons/${eventObj.eventName}.png`;
     if (eventObj.eventName === "None") {
-        faviconPath = "../images/important/Favicons/mammoticon.png";
+        faviconPath = "/images/important/Favicons/mammoticon.png";
     }
 
     // Find the existing favicon tag, or create a new one
