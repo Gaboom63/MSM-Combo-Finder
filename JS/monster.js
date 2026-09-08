@@ -1492,7 +1492,7 @@ function setEventUI(eventObj) {
     
     // 1. Set Background
     document.body.style.backgroundImage = `url('${eventObj.img}')`;
-    document.getElementById('title').innerHTML = `MSM Combo Finder <br> ${eventObj.eventName} Edition!`
+    document.getElementById('title').innerHTML = `MSM Combo Finder <br> ❖ ${eventObj.eventName} ❖`
     
     // 2. Set Theme Colors
     applyThemeColors(eventObj.colors);
