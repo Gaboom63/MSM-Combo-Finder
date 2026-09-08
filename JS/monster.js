@@ -25,7 +25,7 @@ let dofAgeMode = 'young';
 
 let date = new Date().getMonth(); 
 
-const GRID_FALLBACK_IMAGE = "images/important/mammoticon.png";
+const GRID_FALLBACK_IMAGE = "images/important/Favicons/mammoticon.png";
 let isSideMenuOpen = 0, disableEscape = false, disabledButton = false;
 let currentRarity = "", monsterRegistry = [], validBreedingCombos = [], currentMonster = null, imageLoadTimeout;
 let preloaderPaused = false, pauseTimeout = null;
@@ -1488,7 +1488,7 @@ function applyThemeColors(colorsObj) {
 // 3. Central UI updater
 // Central UI updater
 function setEventUI(eventObj) {
-    console.log(`Setting UI for: ${eventObj.eventName}`);
+    // console.log(`Setting UI for: ${eventObj.eventName}`);
     
     // 1. Set Background
     document.body.style.backgroundImage = `url('${eventObj.img}')`;
@@ -1586,7 +1586,7 @@ function getCurrentBackground() {
 
 // 4. Apply it to your page
 const currentEvent = getCurrentBackground();
-console.log(`Current Event: ${currentEvent.eventName}`);
+// console.log(`Current Event: ${currentEvent.eventName}`);
 document.body.style.backgroundImage = `url('${currentEvent.img}')`;
 
 
