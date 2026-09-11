@@ -40,6 +40,7 @@ const getActiveCombos = () => isDOF() ? dofValidBreedingCombos : validBreedingCo
 const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 const currentHash = localStorage.getItem('msm_api_hash') || 'main';
+// const currentHash = 'local-testing'
 
 let body = document.body; 
 
@@ -118,7 +119,7 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
     const useDof = forceDof !== null ? forceDof : isDOF();
 
     if (useDof) {
-        const loc = `../MSM-API/MSM-DOF/data/Monsters/${monsterName}`;
+        const loc = `../../../MSM-API/MSM-DOF/data/Monsters/${monsterName}`;
         const rem = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/Monsters/${monsterName}`;
 
         let sources = [];
@@ -197,15 +198,115 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
 }
 
 const getDofEggHTML = (pName) => {
-    const loc = `../MSM-API/MSM-DOF/data/Monsters/${pName}`;
-    const rem = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/Monsters/${pName}`;
-    
-    const s1 = `${loc}/Adult_Egg_${pName}.png`, s2 = `${loc}/Young_Egg_${pName}.png`, s3 = `${loc}/Egg_${pName}.png`;
-    const s4 = `${rem}/Adult_Egg_${pName}.png`, s5 = `${rem}/Young_Egg_${pName}.png`, s6 = `${rem}/Egg_${pName}.png`;
-    
-    // Inlines the waterfall logic so HTML strings can handle error fallback instantly
-    return `<img src="${s1}" onerror="this.onerror=function(){this.src='${s2}';this.onerror=function(){this.src='${s3}';this.onerror=function(){this.src='${s4}';this.onerror=function(){this.src='${s5}';this.onerror=function(){this.src='${s6}';this.onerror=function(){this.src='${GRID_FALLBACK_IMAGE}'};};};};};};" alt="${pName}" class="combo-egg-icon">`;
+    if (!pName) {
+        return `
+            <img
+                src="${GRID_FALLBACK_IMAGE}"
+                class="combo-egg-icon"
+                alt="Unknown Egg"
+            >
+        `;
+    }
+
+    // LOCAL DEVELOPMENT
+    if (currentHash === 'local-testing') {
+        const localSrc =
+            `../../../MSM-API/MSM-DOF/images/monster_eggs/${encodeURIComponent(pName)}.png`;
+
+        return `
+            <img
+                src="${localSrc}"
+                class="combo-egg-icon"
+                alt="${pName}"
+                onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';"
+            >
+        `;
+    }
+
+    // PRODUCTION
+    const rem =
+        `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/Monsters/${encodeURIComponent(pName)}`;
+
+    const sources = [
+        `${rem}/Adult_Egg_${encodeURIComponent(pName)}.png`,
+        `${rem}/Young_Egg_${encodeURIComponent(pName)}.png`,
+        `${rem}/Egg_${encodeURIComponent(pName)}.png`
+    ];
+
+    return `
+        <img
+            src="${sources[0]}"
+            class="combo-egg-icon"
+            alt="${pName}"
+            onerror="
+                this.onerror=function(){
+                    this.src='${sources[1]}';
+                    this.onerror=function(){
+                        this.src='${sources[2]}';
+                        this.onerror=function(){
+                            this.src='${GRID_FALLBACK_IMAGE}';
+                        };
+                    };
+                };
+            "
+        >
+    `;
 };
+
+
+async function getMsmEggHTML(eggName) {
+    if (!eggName) {
+        return `
+            <img
+                src="${GRID_FALLBACK_IMAGE}"
+                class="combo-egg-icon"
+                alt="Unknown Egg"
+            >
+        `;
+    }
+
+    if (currentHash === 'local-testing') {
+        const localSrc =
+            `../../../MSM-API/MSM/images/monster_eggs/${encodeURIComponent(eggName)}.png`;
+
+        return `
+            <img
+                src="${localSrc}"
+                class="combo-egg-icon"
+                alt="${eggName}"
+                onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';"
+            >
+        `;
+    }
+
+    try {
+        const eggData = await MSM.get(eggName).catch(() => null);
+
+        const eggUrl =
+            eggData?.eggUrl ||
+            eggData?.image ||
+            eggData?.imageUrl ||
+            GRID_FALLBACK_IMAGE;
+
+        return `
+            <img
+                src="${eggUrl}"
+                class="combo-egg-icon"
+                alt="${eggName}"
+                onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';"
+            >
+        `;
+    } catch {
+        return `
+            <img
+                src="${GRID_FALLBACK_IMAGE}"
+                class="combo-egg-icon"
+                alt="${eggName}"
+            >
+        `;
+    }
+}
+
 
 const findTrueName = input => {
     if (!input) return null;
@@ -760,18 +861,26 @@ async function loadStats(name) {
             invData = raw.inventory || raw['Wublin Inventory'] || raw['Celestial Inventory'];
         }
 
-        if (!invData && !isDOF()) {
-            try {
-                const fallbackUrl = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/Monsters/${encodeURIComponent(tn)}/${encodeURIComponent(tn)}.json`;
-                const res = await fetch(fallbackUrl);
-                if (res.ok) {
-                    const rawJson = await res.json();
-                    invData = rawJson.inventory || rawJson['Wublin Inventory'] || rawJson['Celestial Inventory'];
-                }
-            } catch (e) {
-                console.warn("Raw JSON fetch fallback failed:", e);
-            }
-        }
+       if (!invData && !isDOF()) {
+           try {
+               const fallbackBase = currentHash === 'local-testing'
+                   ? '../../../MSM-API/MSM/data/Monsters'
+                   : `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/Monsters`;
+
+               const fallbackUrl = `${fallbackBase}/${encodeURIComponent(tn)}/data.json`;
+
+               const res = await fetch(fallbackUrl);
+               if (res.ok) {
+                   const rawJson = await res.json();
+                   invData = rawJson.inventory
+                       || rawJson['Wublin Inventory']
+                       || rawJson['Celestial Inventory'];
+               }
+           } catch (e) {
+               console.warn("Raw JSON fetch fallback failed:", e);
+           }
+       }
+
         
         if (invData && invData.Inventory) {
             isLargeInventory = Object.keys(invData.Inventory).length > 9;
@@ -911,7 +1020,10 @@ async function loadStats(name) {
                 if (ps.length >= 2) {
                     return `<div class="combo-row-item">${(await Promise.all(ps.map(async p => `
                         <div class="combo-parent-chip">
-                            ${isDOF() ? getDofEggHTML(p) : `<img src="${(await MSM.get(p).catch(()=>null))?.eggUrl || ''}" class="combo-egg-icon">`}
+                            ${isDOF()
+                                ? getDofEggHTML(p)
+                                : await getMsmEggHTML(p)
+                            }
                             <span class="combo-parent-name">${p}</span>
                         </div>`))).join('<div class="combo-operator-plus"><i class="fas fa-plus"></i></div>')}</div>`;
                 }
@@ -1595,8 +1707,7 @@ document.body.style.backgroundImage = `url('${currentEvent.img}')`;
     const FALLBACK_API = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/dist/msm.js`;
     const LOCAL_API = "../MSM-API/MSM/dist/msm.js"; 
 
-    //console.log(FALLBACK_API);
-    //console.log(LOCAL_API)
+    // console.log(LOCAL_API)
 
     function loadScript(src) {
         return new Promise((resolve, reject) => {
@@ -1619,7 +1730,7 @@ document.body.style.backgroundImage = `url('${currentEvent.img}')`;
             return loadScript(FALLBACK_API);
         })
         .then(src => { 
-            //console.log("✅ MSM API ready:", src);
+            console.log("✅ MSM API ready:", src);
             buildMonsterRegistry();
             updateRecentHistoryUI();
         })

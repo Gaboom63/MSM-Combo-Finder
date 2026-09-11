@@ -1,5 +1,3 @@
-// msm-worker.js
-
 const removeAccents = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const clean = n => n ? n.trim() : "";
 const ignores = ["any", "invalid", "no combination", "unknown", "exclusive"];
@@ -18,10 +16,11 @@ self.onmessage = async (e) => {
         let indexPath, combosPath, dofIndexPath, dofCombosPath;
         
         if (currentHash === 'local-testing') {
-            indexPath = `../MSM-API/MSM/data/monster_index.json?v=${Date.now()}`;
-            combosPath = `../MSM-API/MSM/data/breedingCombos.json?v=${Date.now()}`;
-            dofIndexPath = `../MSM-API/MSM-DOF/data/dof_monster_index.json?v=${Date.now()}`;
-            dofCombosPath = `../MSM-API/MSM-DOF/data/dofBreedingCombos.json?v=${Date.now()}`;
+            console.log("msm-worker.js IS USING LOCAL MODE")
+            indexPath = `../../../MSM-API/MSM/data/monster_index.json?v=${Date.now()}`;
+            combosPath = `../../../MSM-API/MSM/data/breedingCombos.json?v=${Date.now()}`;
+            dofIndexPath = `../../../MSM-API/MSM-DOF/data/dof_monster_index.json?v=${Date.now()}`;
+            dofCombosPath = `../../../MSM-API/MSM-DOF/data/dofBreedingCombos.json?v=${Date.now()}`;
         } else {
             indexPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/monster_index.json`;
             combosPath = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/breedingCombos.json`;
