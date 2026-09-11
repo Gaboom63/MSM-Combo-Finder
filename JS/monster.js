@@ -19,7 +19,7 @@ const majorMinorButton = $('majorMinorButton'), tabsContainer = $('tabsContainer
 const costumeButton = $('costumeButton'), dynamicGrid = $('dynamicMonsterGrid');
 const openBreedBtn = $('openBreedUI'), openBreedBtnDof = $('openBreedUI_DOF');
 const breedSplitView = $('breedSplitView'), closeBreedBtn = $('closeBreedUI');
-const spotlight = $('monster-spotlight'), sideMenu = $('sideMenu'), iconContainer = $('iconContainer');
+const sideMenu = $('sideMenu'), iconContainer = $('iconContainer');
 let sideMenuB = $('sideMenuButton');
 let dofAgeMode = 'young';
 
@@ -85,7 +85,7 @@ apiWorker.onmessage = (e) => {
         window.dofCombosData = payload.dofCombosData;
         
         //console.log(`Worker complete: ${monsterRegistry.length} MSM | ${dofMonsterRegistry.length} DOF loaded.`);
-        updateMonsterOfTheDay();
+        // updateMonsterOfTheDay();
     }
     
     if (action === 'SEARCH_RESULTS') {
@@ -501,7 +501,6 @@ function reset() {
     if (firstInput) firstInput.style.opacity = '1';
     if (secondInput) secondInput.style.opacity = '1';
     
-    spotlight.style.display = isDOF() ? 'none' : 'flex';
     sideMenu.style.display = 'flex';
     
     const recentContainers = [$('recent-discoveries'), $('recent-discoveries-DOF')];
@@ -1203,18 +1202,6 @@ function updateRecentHistoryUI() {
 }
 
 function dynamicSoundIcon(n) { volumeButton.style.display = MSM[n]?.sounds[0] ? 'inline-flex' : 'none'; }
-
-function updateMonsterOfTheDay() {
-    if (!spotlight || !getActiveRegistry().length) return;
-    const d = new Date(), reg = getActiveRegistry(), tn = findTrueName(reg[((d.getFullYear()*10000)+((d.getMonth()+1)*100)+d.getDate()) % reg.length].raw);
-    if ($('spotlight-name')) $('spotlight-name').textContent = tn;
-    if ($('spotlight-img')) {
-        const i = $('spotlight-img'); i.id = `spotlight-img-${tn.replace(/[^a-zA-Z0-9]/g, '')}`; i.onerror = () => { i.onerror = null; i.src = GRID_FALLBACK_IMAGE; };
-        applyMonsterImage(i, tn, 'avatar'); // <-- Fixed variable here
-    }
-    spotlight.style.display = 'flex';
-    spotlight.addEventListener('click', () => { searchInput.value = tn; if (searchInputDof) searchInputDof.value = tn; currentRarity = /^rare/i.test(tn) ? "Rare" : /^epic/i.test(tn) ? "Epic" : "Common"; monsterImage.setAttribute('data-name', normalizeName(tn)); tabsContainer.innerHTML = ''; showMonsterUI(false); updateActiveTab(); loadMonsterImage(tn); costumeErrorHandling(tn); loadStats(tn); });
-}
 
 async function handleRaritySwitch(r) {
     const b = monsterImage.getAttribute('data-name'); 

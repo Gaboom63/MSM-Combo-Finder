@@ -22,10 +22,15 @@ function sortMonstersCustom(arr, pIsland) {
     });
 }
 
+let menuTimeout = null;
+
 function setupSideMenu() {
     const ar = $('menuArrow'), ib = $('sideMenuButton'), ic = $('island-container'), bd = $('menuArrow'), be = $('title');
+    const inputContainer = $('inputContainer');
     
     if (typeof reset === 'function') reset();
+
+    clearTimeout(menuTimeout);
 
     if (!menuOpen) {
         menuOpen = 1;
@@ -40,11 +45,14 @@ function setupSideMenu() {
         be.style.fontWeight = "bold";
         ib.style.backgroundColor = "var(--pure-sky-blue)"; 
         
-        $('monster-spotlight').style.display = $('inputContainer').style.display = 'none';
+        // Hide main container instantly
+        inputContainer.style.display = 'none';
         
-        ic.classList.remove('slide-to-right');
+        // Show and animate DOF menu from right
         ic.style.display = 'flex'; 
-        void ic.offsetWidth;       
+        ic.style.animation = ''; 
+        ic.classList.remove('slide-to-right', 'slide-from-right');
+        void ic.offsetWidth; 
         ic.classList.add('slide-from-right');
 
         ib.classList.add("menu-open"); 
@@ -65,24 +73,27 @@ function setupSideMenu() {
         be.style.fontWeight = "bold";
         ib.style.backgroundColor = "var(--pink-glass-hover)";
         
-        $('inputContainer').style.display = 'flex';
-        $('monster-spotlight').style.display = 'flex';
-        
-        ic.classList.remove('slide-from-right'); 
-        void ic.offsetWidth; 
-        ic.classList.add('slide-to-right');
+        // Instantly hide DOF menu with no closing animation
+        ic.style.display = 'none';
+        ic.classList.remove('slide-to-right', 'slide-from-right');
+        ic.style.animation = '';
+
+        // Slide main UI back in cleanly and clean up class after completion to fix search UI
+        inputContainer.style.display = 'flex';
+        inputContainer.classList.remove('main-ui-slide-in');
+        void inputContainer.offsetWidth;
+        inputContainer.classList.add('main-ui-slide-in');
+
+        const handleMainEnd = () => {
+            inputContainer.classList.remove('main-ui-slide-in');
+            inputContainer.removeEventListener('animationend', handleMainEnd);
+        };
+        inputContainer.addEventListener('animationend', handleMainEnd);
 
         ib.classList.remove("menu-open"); 
         ar.classList.replace("fa-arrow-right", "fa-arrow-left"); 
         $('iconContainer').style.display = 'flex';
         bd.style.color = "white";
-        
-        setTimeout(() => { 
-            if (!menuOpen) { 
-                ic.classList.remove('slide-to-right'); 
-                ic.style.display = 'none'; 
-            } 
-        }, 500); 
     }
     
     if (typeof updateMonsterOfTheDay === 'function') updateMonsterOfTheDay();

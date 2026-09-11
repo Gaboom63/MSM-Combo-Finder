@@ -265,3 +265,19 @@ button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff
 @keyframes fusionShootLeft { 0% { filter: drop-shadow(0 0 10px transparent); transform: scale(1); } 40% { filter: drop-shadow(0 0 40px white) brightness(2); transform: scale(1.15); } 60% { filter: drop-shadow(0 0 60px white) brightness(20); transform: scale(0.8); } 85% { filter: drop-shadow(0 0 100px white) brightness(20); transform: translate(25vw, 0) scale(0.2); opacity: 1; } 100% { filter: drop-shadow(0 0 100px white); transform: translate(25vw, 0) scale(0); opacity: 0; } }
 @keyframes fusionShootRight { 0% { filter: drop-shadow(0 0 10px transparent); transform: scale(1); } 40% { filter: drop-shadow(0 0 40px white) brightness(2); transform: scale(1.15); } 60% { filter: drop-shadow(0 0 60px white) brightness(20); transform: scale(0.8); } 85% { filter: drop-shadow(0 0 100px white) brightness(20); transform: translate(-25vw, 0) scale(0.2); opacity: 1; } 100% { filter: drop-shadow(0 0 100px white); transform: translate(-25vw, 0) scale(0); opacity: 0; } }
 @keyframes slideIn { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+.main-ui-slide-in {
+    animation: mainUISlideIn 0.5s ease-out forwards;
+}
+
+@keyframes mainUISlideIn {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
