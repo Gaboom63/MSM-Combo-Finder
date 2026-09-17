@@ -334,6 +334,18 @@ function updateActiveTab() {
     }
 }
 
+function blur(STATE) {
+    if(STATE === "OFF") {
+        blurOverlay.style.display = "block"
+        requestAnimationFrame(() => blurOverlay.classList.add('active'));
+    } else if (STATE === "ON") {
+        blurOverlay.style.display = "none"
+        requestAnimationFrame(() => blurOverlay.classList.remove('active'));
+    } else {
+        console.log("ERROR: blur() takes in OFF & ON");
+    }
+}
+
 function showMonsterUI(isBreedingResult = false) {
     const islandCont = $('island-container');
     
@@ -446,6 +458,7 @@ function reset() {
     toggleEls([monsterImage, blurMessage], 'none');
     sideMenuB.style.display = 'flex';
     blurOverlay.classList.remove('active');
+    newsBoard.style.display = 'none';
     
     // --- RESET PRISMATIC BUTTON TEXT ---
     const pBtn = $('prismaticButton');
@@ -1720,6 +1733,7 @@ document.body.style.backgroundImage = `url('${currentEvent.img}')`;
             console.log("✅ MSM API ready:", src);
             buildMonsterRegistry();
             updateRecentHistoryUI();
+            loadNewsImages();
         })
         .catch(() => {
             console.error("🚨 All MSM API sources failed");
