@@ -78,6 +78,16 @@ function createNewsBoard() {
     mainContainer.id = 'articleMainContainer';
     const articleMain = document.createElement('p');
     articleMain.id = 'articleMain';
+    
+    // const moveBackButton = document.createElement('button');
+    // moveBackButton.id = 'moveBackButton';
+
+    // const forwardButton = document.createElement('button');
+    // forwardButton.id = 'forwardButton'; 
+
+    // mainArticle.appendChild(backButton);
+    // mainArticle.appendChild(forwardButton);
+
     mainContainer.appendChild(articleMain);
     mainArticle.appendChild(mainContainer);
 

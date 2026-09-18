@@ -279,7 +279,7 @@ to{transform:translateX(0);opacity:1}
 }
 #mailBox{position:absolute;top:88%;left:0;width:70px;height:70px;object-fit:contain;transition:all .3s ease}
 #mailBox:hover{width:80px;height:80px;content:none;background:radial-gradient(circle at center,#ffffff4d 0%,transparent 70%)}
-#news_board{position:absolute;width:80%;height:90%;border:2px solid #444;background-color:#2a2927cc;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1000;border-radius:10px; overflow: hidden; overflow-y: auto;}
+#news_board{position:absolute;width:80%;height:90%;border:2px solid #444;background-color:#2a2927cc;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1000;border-radius:10px; overflow: hidden;}
 #backArrow{position:absolute;color:#fff;top:10px;left:10px}
 .vl{border-left:2px solid #444;height:100%;transform:translateX(350px)}
 #newsBoard{display:flex;flex-direction:row;flex-wrap:wrap;gap:20px;padding:60px 30px 30px}
@@ -287,20 +287,80 @@ to{transform:translateX(0);opacity:1}
 .top-text{position:absolute;top:0;left:250px;margin:0}
 .name-of-doc{position:absolute;left:10px;top:10px;margin:0;font-size:15px}
 .bottom-text{position:absolute;left:10px;top:55px;margin:0}
-#news_sidebar{position:fixed;top:70px;width:338px;z-index:1000}
 .collapsible_first,.collapsible_second{display:block;width:100%;background-color:#eee;color:#444;cursor:pointer;border:none;outline:none;font-size:15px;text-align:center;border-radius:0!important}
 .collapsible_second{top:120px}
 .active,.collapsible:hover{background-color:#ccc}
 .content{color:#444;cursor:pointer;width:315px;border:2px solid #444;text-align:left;outline:none;font-size:15px;text-align:center;border-radius:0!important;display:none;transform:translate(15px)}
-#articleTitleContainer,#articleDateContainer,#articleMainContainer{position:absolute;width:60%;height:8%;top:2%;left:35%;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding-left:20px;padding-right:20px}
-#articleMainContainer{font-size:1.125rem;line-height:1.6;max-width:65ch;text-wrap:pretty;color:grey;margin-bottom:1.5rem}
-#articleDateContainer{width:15%;height:8%;top:7%;left:58%;color:grey}
-#articleMainContainer{top:15%;height:80%;align-items:normal;z-index:1000;color:#F8F9FA}
+
+/* --- Your Remaining Styles (Unchanged) --- */
 @keyframes slideDown {
-from{transform:translateY(-100%);opacity:0}
-to{transform:translateY(0);opacity:1}
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
-#contentDiv2{font-size:10px}
-#imgContainer{position:fixed;top:25%;left:42%;opacity:0}
-.article:hover{background:linear-gradient(90deg,#f5be2733,#f5be270d);border-color:#f5be27;box-shadow:inset 3px 0 #f5be27}
-code{background-color:#000;color:#d3d3d3;padding:2px 6px;border-radius:4px;font-family:monospace}
+#contentDiv2 { height: auto; font-size: 10px; }
+.article:hover { background: linear-gradient(90deg,#f5be2733,#f5be270d); border-color: #f5be27; box-shadow: inset 3px 0 #f5be27; }
+code { background-color: #000; color: #d3d3d3; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+#news_sidebar { position: fixed; top: 70px; width: 338px; z-index: 1000; max-height: calc(100vh - 150px); overflow-y: auto; box-sizing: border-box; overflow-x: hidden; }
+
+
+/* 1. Set the shared layout rules */
+#articleTitleContainer,
+#articleDateContainer,
+#articleMainContainer {
+  position: absolute;        
+  left: 420px;               /* Stays anchored right past your sidebar */
+  box-sizing: border-box;
+  display: flex;
+  
+  /* CHANGE HERE: Pulls the text content to the left edge of the container */
+  justify-content: flex-start; 
+  text-align: left;            
+  
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* 2. Individual sizing and vertical positions */
+#articleTitleContainer {
+  top: 2%;
+  height: 8%;
+  width: calc(100% - 400px); 
+  align-items: center;
+  left: 580px;               /* Stays anchored right past your sidebar */
+
+}
+
+#articleDateContainer {
+  top: 8%;                  
+  height: auto;              
+  color: grey;
+  width: calc(100% - 400px);
+  align-items: center;
+  left: 670px;               /* Stays anchored right past your sidebar */
+}
+
+#articleMainContainer {
+  top: 18%;                  
+  height: 75%;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 55ch;           /* Limits text width so it remains easy to read */
+  text-wrap: pretty;
+  color: #F8F9FA;
+  z-index: 1000;
+  
+  /* CHANGE HERE: Top-aligns long paragraphs cleanly */
+  align-items: flex-start;   
+  width: calc(100% - 400px);
+}
+
+#imgContainer {
+  position: fixed;
+  top: 25%;
+  /* Locks the image exactly 360px from the left, aligning it with your text container */
+  left: 460px; 
+  opacity: 0;
+  
+  /* Optional: Ensures the image container doesn't overflow the screen width when zooming out */
+  max-width: calc(100% - 400px); 
+}
