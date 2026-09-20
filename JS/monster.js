@@ -1046,11 +1046,12 @@ async function loadStats(name) {
             bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><div class="combo-matrix-display-box">${rows.join("")}</div>`;
         }
 
+        dynamicSoundIcon(m);
+
     } catch (e) {
         console.error(e);
         showNoMonsterError();
     }
-    dynamicSoundIcon(m);
 
     setTimeout(() => { if (statBox) statBox.style.pointerEvents = ''; }, 400);
 
