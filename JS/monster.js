@@ -420,24 +420,20 @@ document.addEventListener('keydown', e => {
 });
 
 async function costumeErrorHandling(name) {
-    // 1. Force hide if we are in DOF mode
     if (isDOF()) {
         costumeButton.style.display = 'none';
         return;
     }
 
-    // 2. Original logic for main game monsters
     if (!isValidMonster(name)) {
         costumeButton.style.display = 'none'; 
         return;
     }
 
     try {
-        const costumes = await Promise.race([
-            MSM[name].getCostumes(), 
-            new Promise(r => setTimeout(() => r([]), 3000))
-        ]);
-        costumeButton.style.display = (!costumes || !costumes.length) ? 'none' : 'revert';
+        const monster = await MSM.get(name);
+        const costumes = monster ? await monster.getCostumes() : [];
+        costumeButton.style.display = (!costumes || costumes.length === 0) ? 'none' : 'inline-flex';
     } catch { 
         costumeButton.style.display = 'none'; 
     }
@@ -712,7 +708,16 @@ setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 
 volumeButton?.addEventListener('click', playSound);
 
-costumeButton.addEventListener("click", async () => { const n = await currentMonster?.nextCostume(); n ? monsterImage.src = n : alert("No costumes available!"); });
+costumeButton.addEventListener("click", async () => { 
+    if (!currentMonster) return;
+    const n = await currentMonster.nextCostume(); 
+    if (n) {
+        monsterImage.decoding = "async";
+        monsterImage.src = n; 
+    } else {
+        alert("No costumes available!"); 
+    }
+});
 
 majorMinorButton.addEventListener("click", () => {
     const b = monsterImage.getAttribute('data-name'); 
@@ -1413,6 +1418,7 @@ function loadMonsterImage(name, retries = 2) {
 
         try {
             currentMonster = MSM[name];
+            MSM[name].resetCostumes();
             MSM[name].loadImage("monsterImage");
         } catch {
             if (monsterImage.dataset.loadId == id) {
