@@ -363,7 +363,7 @@ function showMonsterUI(isBreedingResult = false) {
         toggleEls([commonButton, rareButton, epicButton, volumeButton, majorMinorButton], 'none');
         Object.assign(tabsContainer.style, { display: 'flex', justifyContent: 'center', gap: '10px' });
     } else {
-        toggleEls([volumeButton], 'inline-flex');
+        toggleEls([volumeButton], 'none');
         Object.assign(tabsContainer.style, { display: 'none' });
 
         if (!isDOF()) {
@@ -699,6 +699,8 @@ setupSmoothExpansionAndGrid(searchInput, dynamicGrid, true, 'full');
 if (searchInputDof) setupSmoothExpansionAndGrid(searchInputDof, dynamicGrid, true, 'full');
 setupSmoothExpansionAndGrid(firstInput, grid1, false, 'local');
 setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
+
+volumeButton?.addEventListener('click', playSound);
 
 costumeButton.addEventListener("click", async () => { const n = await currentMonster?.nextCostume(); n ? monsterImage.src = n : alert("No costumes available!"); });
 majorMinorButton.addEventListener("click", () => {
@@ -1048,7 +1050,7 @@ async function loadStats(name) {
         console.error(e);
         showNoMonsterError();
     }
-    dynamicSoundIcon(tn);
+    dynamicSoundIcon(m);
 
     setTimeout(() => { if (statBox) statBox.style.pointerEvents = ''; }, 400);
 
@@ -1101,7 +1103,26 @@ function showNoMonsterError() {
     noMonsterImage.src = `images/important/Nomonsterfound.png`;
 }
 
-async function playSound() { const r = searchInput.value.trim(); if(r) try { await MSM[findTrueName(r)]?.playSound(); } catch{} }
+async function playSound() { 
+    if (isDOF()) return;
+
+    // Grab the name from the search input, or fall back to the currently active image
+    const r = searchInput?.value.trim() || monsterImage?.getAttribute('data-name'); 
+    if (!r) return;
+
+    try { 
+        const tn = findTrueName(r);
+        if (!tn) return;
+
+        const m = await MSM.get(tn);
+        if (m && typeof m.playSound === 'function') {
+            await m.playSound(); 
+        }
+    } catch (err) {
+        console.warn(`[MSM Sound] Playback failed for: ${r}`, err);
+    } 
+}
+
 function haltPreloaderForUserAction() { preloaderPaused = true; clearTimeout(pauseTimeout); pauseTimeout = setTimeout(() => preloaderPaused = false, 5000); }
 function requestPriority(n) { preloaderPaused = true; clearTimeout(pauseTimeout); pauseTimeout = setTimeout(() => preloaderPaused = false, 3000); loadMonsterImage(n); loadStats(n); costumeErrorHandling(n); }
 
@@ -1214,7 +1235,19 @@ function updateRecentHistoryUI() {
     renderGrid($('recent-grid-DOF'), dofHistory, true);
 }
 
-function dynamicSoundIcon(n) { volumeButton.style.display = MSM[n]?.sounds[0] ? 'inline-flex' : 'none'; }
+function dynamicSoundIcon(monster) {
+    // Hide completely if in DOF mode or if monster data is missing
+    if (isDOF() || !monster) {
+        if (volumeButton) volumeButton.style.display = 'none';
+        return;
+    }
+    
+    // Check if sounds array has at least one valid audio file
+    const hasSound = Array.isArray(monster.sounds) && monster.sounds.length > 0;
+    if (volumeButton) {
+        volumeButton.style.display = hasSound ? 'inline-flex' : 'none';
+    }
+}
 
 async function handleRaritySwitch(r) {
     const b = monsterImage.getAttribute('data-name'); 
