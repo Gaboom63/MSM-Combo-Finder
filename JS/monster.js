@@ -614,15 +614,25 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
             const item = document.createElement('div'); item.className = 'grid-monster-item';
             const safeId = `grid-img-${match.replace(/[^a-zA-Z0-9]/g, '')}`;
             const img = document.createElement('img'); img.id = safeId; img.onerror = () => { img.onerror = null; img.src = GRID_FALLBACK_IMAGE; };
-            const span = document.createElement('span'); span.textContent = match;
+            
+            // Format dropdown text cleanly
+            const span = document.createElement('span'); span.textContent = toDisplayCase(match);
             item.append(img, span);
 
             item.addEventListener('click', async () => {
-                inputEl.value = match; targetGrid.innerHTML = ''; targetGrid.classList.remove('active');
+                // Set the input cleanly when clicked
+                inputEl.value = toDisplayCase(match); 
+                targetGrid.innerHTML = ''; targetGrid.classList.remove('active');
                 closeExpandedInput(); checkInputGlows();
                 const tName = findTrueName(match);
 
-                if (lbl && imgE && ph) { lbl.classList.add('active-label'); lbl.textContent = match; ph.style.display = 'none'; imgE.style.display = 'block'; applyMonsterImage(imgE, tName, 'avatar'); }
+                if (lbl && imgE && ph) { 
+                    lbl.classList.add('active-label'); 
+                    lbl.textContent = toDisplayCase(match); 
+                    ph.style.display = 'none'; 
+                    imgE.style.display = 'block'; 
+                    applyMonsterImage(imgE, tName, 'avatar'); 
+                }
 
                 if (inputEl === searchInput || inputEl === searchInputDof) {
                     currentRarity = /^rare/i.test(tName) ? "Rare" : /^epic/i.test(tName) ? "Epic" : "Common";
@@ -631,7 +641,7 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
                     if (isDOF()) dofAgeMode = 'young';
                     loadMonsterImage(tName);
                     await costumeErrorHandling(tName); loadStats(tName);
-                } else if (inputEl === firstInput || inputEl === secondInput) {
+        } else if (inputEl === firstInput || inputEl === secondInput) {
                     if (inputEl === firstInput && secondInput.value.trim()) {
                         const v2 = secondInput.value.trim().toLowerCase();
                         if (!getActiveCombos().some(c => { const p = c.split('+').map(x=>x.trim().toLowerCase()); return (p[0]===tName.toLowerCase() && p[1]===v2) || (p[1]===tName.toLowerCase() && p[0]===v2); })) {
@@ -703,6 +713,7 @@ setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 volumeButton?.addEventListener('click', playSound);
 
 costumeButton.addEventListener("click", async () => { const n = await currentMonster?.nextCostume(); n ? monsterImage.src = n : alert("No costumes available!"); });
+
 majorMinorButton.addEventListener("click", () => {
     const b = monsterImage.getAttribute('data-name'); 
     if (!b) return;
@@ -715,8 +726,10 @@ majorMinorButton.addEventListener("click", () => {
         let tn = findTrueName(nb); 
         if (!tn || !MSM[tn]) return;
         
-        searchInput.value = tn; 
-        if (searchInputDof) searchInputDof.value = tn;
+        const displayName = toDisplayCase(tn);
+        searchInput.value = displayName; 
+        if (searchInputDof) searchInputDof.value = displayName;
+        
         monsterImage.setAttribute('data-name', tn); 
         
         showMonsterUI(false); 
@@ -787,16 +800,17 @@ async function comboFinder() {
 function loadFromTab(name) {
     const tn = findTrueName(name);
     saveToHistory(tn);
-    searchInput.value = tn;
-    if (searchInputDof) searchInputDof.value = tn;
 
-    currentRarity =
-        /^rare/i.test(tn) ? "Rare" :
-        /^epic/i.test(tn) ? "Epic" :
-        "Common";
+    b.textContent = toDisplayCase(m);
+    
+    // Force Title Case for the search boxes
+    const displayName = toDisplayCase(tn);
+    searchInput.value = displayName;
+    if (searchInputDof) searchInputDof.value = displayName;
+
+    currentRarity = /^rare/i.test(tn) ? "Rare" : /^epic/i.test(tn) ? "Epic" : "Common";
 
     monsterImage.setAttribute('data-name', normalizeName(tn));
-
     showMonsterUI(true);
 
     if (isDOF()) {
@@ -1260,13 +1274,17 @@ async function handleRaritySwitch(r) {
     
     if (!isValidMonster(tn)) return; 
 
-    searchInput.value = tn; if (searchInputDof) searchInputDof.value = tn;
+    const displayName = toDisplayCase(tn);
+    searchInput.value = displayName; 
+    if (searchInputDof) searchInputDof.value = displayName;
+    
     currentRarity = r; 
     showMonsterUI(false); 
     updateActiveTab(); 
     loadMonsterImage(tn); 
     setTimeout(() => { loadStats(tn); costumeErrorHandling(tn); }, 50);
 }
+
 commonButton.addEventListener("click", () => handleRaritySwitch("Common")); rareButton.addEventListener("click", () => handleRaritySwitch("Rare")); epicButton.addEventListener("click", () => handleRaritySwitch("Epic"));
 
 function isValidMonster(n) {
