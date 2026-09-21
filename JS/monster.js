@@ -371,8 +371,14 @@ function showMonsterUI(isBreedingResult = false) {
             
             if (baseName) {
                 // --- 1. RARITY BUTTON LOGIC ---
-                const hasRare = isValidMonster(findTrueName(`Rare ${baseName}`));
-                const hasEpic = isValidMonster(findTrueName(`Epic ${baseName}`));
+                let checkName = baseName;
+                if (checkName.toLowerCase().includes("wubbox")) {
+                    checkName = "Wubbox";
+                }
+
+                // FIXED: Use checkName here instead of baseName
+                const hasRare = isValidMonster(findTrueName(`Rare ${checkName}`));
+                const hasEpic = isValidMonster(findTrueName(`Epic ${checkName}`));
 
                 if (hasRare || hasEpic) {
                     commonButton.style.display = 'inline-flex';
@@ -776,7 +782,9 @@ async function comboFinder() {
         res.sort((a, b) => b.length - a.length).forEach((m, i) => {
             const b = document.createElement('button'); 
             b.className = `tab-button ${i === 0 ? 'active-tab' : ''}`; 
-            b.textContent = m;
+           
+            b.textContent = toDisplayCase(m);
+           
             b.addEventListener('click', async () => { 
                 Array.from(tabsContainer.children).forEach(c => c.classList.remove('active-tab')); 
                 b.classList.add('active-tab'); 
@@ -805,8 +813,6 @@ async function comboFinder() {
 function loadFromTab(name) {
     const tn = findTrueName(name);
     saveToHistory(tn);
-
-    b.textContent = toDisplayCase(m);
     
     // Force Title Case for the search boxes
     const displayName = toDisplayCase(tn);
@@ -1273,7 +1279,16 @@ async function handleRaritySwitch(r) {
     const b = monsterImage.getAttribute('data-name'); 
     if (!b) return;
     
-    const baseName = b.replace(/^(Rare|Epic)\s+/i, '').trim();
+    let baseName = b.replace(/^(Rare|Epic)\s+/i, '').trim();
+    
+    // --- NEW WUBBOX FIX ---
+    // If we are switching back to Common or Rare from an Epic Wubbox (which has an island name), 
+    // we must strip the island name so it resolves correctly to the universal Wubbox.
+    if (baseName.toLowerCase().includes("wubbox") && (r === "Common" || r === "Rare")) {
+        baseName = "Wubbox";
+    }
+    // ----------------------
+    
     const targetName = r === "Common" ? baseName : `${r} ${baseName}`;
     const tn = findTrueName(targetName);
     
