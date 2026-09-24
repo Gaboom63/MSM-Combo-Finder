@@ -97,61 +97,40 @@ apiWorker.onmessage = (e) => {
     }
 };
 
-const FastImageCache = {
-    maxSize: 10 * 1024 * 1024, // 10 MB strict limit
-    registryKey: 'msm_img_cache_registry',
-    cacheName: 'msm-fast-images',
+const SmartImageCache = {
+    cacheName: 'msm-dynamic-images-v1',
 
     async get(url) {
-        if (!this.cache) this.cache = await caches.open(this.cacheName);
-        let registry = JSON.parse(localStorage.getItem(this.registryKey) || '[]');
+        // Open the browser's native background cache directly
+        const cache = await caches.open(this.cacheName);
 
         try {
-            // 1. Check if we already have it
-            const response = await this.cache.match(url);
-            if (response) {
-                // Move this image to the "most recently used" end of the list
-                registry = registry.filter(item => item.url !== url);
-                registry.push({ url, size: Number(response.headers.get('content-length')) || 0 });
-                localStorage.setItem(this.registryKey, JSON.stringify(registry));
-                
-                return URL.createObjectURL(await response.blob());
+            // 1. Instant Return: Do we already have it locally?
+            const cachedResponse = await cache.match(url);
+            if (cachedResponse) {
+                return URL.createObjectURL(await cachedResponse.blob());
             }
 
-            // 2. Not cached? Fetch it and check its size
-            const fetchRes = await fetch(url);
-            const blob = await fetchRes.clone().blob();
-            const size = blob.size;
-
-            // 3. Evict oldest images until we are under the 10MB limit
-            let currentSize = registry.reduce((sum, item) => sum + item.size, 0);
-            while (currentSize + size > this.maxSize && registry.length > 0) {
-                const oldest = registry.shift();
-                await this.cache.delete(oldest.url);
-                currentSize -= oldest.size;
+            // 2. Fetch and Cache: It's new, so grab it and save a clone for next time
+            const networkResponse = await fetch(url);
+            if (networkResponse.ok) {
+                // Put a clone in the cache so the original can be returned to the UI
+                cache.put(url, networkResponse.clone());
             }
-
-            // 4. Save to cache if the individual image isn't absurdly large
-            if (size <= this.maxSize) {
-                await this.cache.put(url, fetchRes);
-                registry.push({ url, size });
-                localStorage.setItem(this.registryKey, JSON.stringify(registry));
-            }
-
-            return URL.createObjectURL(blob);
             
+            return URL.createObjectURL(await networkResponse.blob());
+
         } catch (err) {
-            ErrorLogger.log("Cache Fetch Error", err, { url });
-            return url; // Fallback to live URL if something goes wrong
+            ErrorLogger.log("Cache Miss/Fail", err, { url });
+            return url; // Fallback to raw network request if things break
         }
     },
 
-    // Wrap your imgEl.src assignments in this to prevent memory leaks from blob URLs
     async applyToElement(imgEl, url) {
         const cachedUrl = await this.get(url);
         imgEl.src = cachedUrl;
         
-        // Browsers leak memory with blob URLs unless you explicitly revoke them
+        // Clean up the blob string to prevent memory leaks
         if (cachedUrl.startsWith('blob:')) {
             imgEl.onload = () => URL.revokeObjectURL(cachedUrl);
         }
