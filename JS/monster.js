@@ -97,6 +97,99 @@ apiWorker.onmessage = (e) => {
     }
 };
 
+const FastImageCache = {
+    maxSize: 10 * 1024 * 1024, // 10 MB strict limit
+    registryKey: 'msm_img_cache_registry',
+    cacheName: 'msm-fast-images',
+
+    async get(url) {
+        if (!this.cache) this.cache = await caches.open(this.cacheName);
+        let registry = JSON.parse(localStorage.getItem(this.registryKey) || '[]');
+
+        try {
+            // 1. Check if we already have it
+            const response = await this.cache.match(url);
+            if (response) {
+                // Move this image to the "most recently used" end of the list
+                registry = registry.filter(item => item.url !== url);
+                registry.push({ url, size: Number(response.headers.get('content-length')) || 0 });
+                localStorage.setItem(this.registryKey, JSON.stringify(registry));
+                
+                return URL.createObjectURL(await response.blob());
+            }
+
+            // 2. Not cached? Fetch it and check its size
+            const fetchRes = await fetch(url);
+            const blob = await fetchRes.clone().blob();
+            const size = blob.size;
+
+            // 3. Evict oldest images until we are under the 10MB limit
+            let currentSize = registry.reduce((sum, item) => sum + item.size, 0);
+            while (currentSize + size > this.maxSize && registry.length > 0) {
+                const oldest = registry.shift();
+                await this.cache.delete(oldest.url);
+                currentSize -= oldest.size;
+            }
+
+            // 4. Save to cache if the individual image isn't absurdly large
+            if (size <= this.maxSize) {
+                await this.cache.put(url, fetchRes);
+                registry.push({ url, size });
+                localStorage.setItem(this.registryKey, JSON.stringify(registry));
+            }
+
+            return URL.createObjectURL(blob);
+            
+        } catch (err) {
+            ErrorLogger.log("Cache Fetch Error", err, { url });
+            return url; // Fallback to live URL if something goes wrong
+        }
+    },
+
+    // Wrap your imgEl.src assignments in this to prevent memory leaks from blob URLs
+    async applyToElement(imgEl, url) {
+        const cachedUrl = await this.get(url);
+        imgEl.src = cachedUrl;
+        
+        // Browsers leak memory with blob URLs unless you explicitly revoke them
+        if (cachedUrl.startsWith('blob:')) {
+            imgEl.onload = () => URL.revokeObjectURL(cachedUrl);
+        }
+    }
+};
+
+const ErrorLogger = {
+    logs: [],
+    
+    // Call this manually: ErrorLogger.log('API Fetch', error, { monster: 'Mammott' })
+    log(context, error, details = {}) {
+        this.logs.push({
+            Time: new Date().toLocaleTimeString(),
+            Context: context,
+            Error: error?.message || error || "Unknown Error",
+            Details: JSON.stringify(details)
+        });
+        
+        // Keep it lightweight: only store the last 50 errors
+        if (this.logs.length > 50) this.logs.shift();
+    },
+    
+    // Type ErrorLogger.table() in console to view
+    table() {
+        if (this.logs.length === 0) return console.log("%cNo errors! 🎉", "color: lime");
+        console.table(this.logs);
+    },
+    
+    clear() {
+        this.logs = [];
+        console.log("Error table cleared.");
+    }
+};
+
+// Auto-catch unexpected global crashes
+window.addEventListener('error', e => ErrorLogger.log("Global Exception", e.message, { file: e.filename, line: e.lineno }));
+window.addEventListener('unhandledrejection', e => ErrorLogger.log("Unhandled Promise", e.reason));
+
 // Replaces the giant fetch function
 function buildMonsterRegistry() {
     //console.log("Delegating registry build to background worker...");

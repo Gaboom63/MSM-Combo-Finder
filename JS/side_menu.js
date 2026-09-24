@@ -1,3 +1,5 @@
+// This is scraped content, I should remove it, but it might come back to life later. 
+
 let allIslandsCached = [], currentIslandIndex = 0, activeSearchQuery = "", MASTER_STATUE_LIST = [], isInventoryShellBuilt = false, isCostShellBuilt = false, menuOpen = 0;
 const ISLANDS_PER_PAGE = 5, ISLAND_ORDER = ["plant", "cold", "air", "water", "earth", "haven", "gold"];
 
