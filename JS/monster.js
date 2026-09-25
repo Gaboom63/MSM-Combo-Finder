@@ -491,6 +491,9 @@ document.addEventListener('keydown', e => {
             
         } else if (breedSplitView && breedSplitView.style.display === 'flex') {
             closeSplitView();
+        } else if (triptychOverlay && triptychOverlay.classList.contains('active')) {
+            // --- NEW: Safely close only the costume triptych if it is open ---
+            $('close-triptych-btn').click();
         } else {
             reset();
         }
@@ -529,6 +532,15 @@ function reset() {
 
     breedSplitView.classList.remove('active'); 
     breedSplitView.style.display = 'none';
+
+    if (triptychOverlay) {
+            triptychOverlay.classList.remove('active');
+            triptychOverlay.style.display = 'none';
+            triptychTrack.innerHTML = '';
+            triptychCostumes = [];
+            triptychPanels = [];
+    }
+
     toggleEls([monsterImage, blurMessage], 'none');
     sideMenuB.style.display = 'flex';
     blurOverlay.classList.remove('active');
@@ -786,15 +798,169 @@ setupSmoothExpansionAndGrid(secondInput, grid2, false, 'local');
 
 volumeButton?.addEventListener('click', playSound);
 
-costumeButton.addEventListener("click", async () => { 
-    if (!currentMonster) return;
-    const n = await currentMonster.nextCostume(); 
-    if (n) {
+// --- TRIPTYCH COSTUME STATE ---
+let triptychCostumes = [];
+let triptychPanels = [];
+let triptychCurrentIndex = 0;
+let originalCostumeCount = 0;
+
+const triptychOverlay = $('costume-triptych-overlay');
+const triptychTrack = document.querySelector('.triptych-track');
+const triptychIndicator = $('triptych-indicator');
+const triptychPrev = $('triptych-prev');
+const triptychNext = $('triptych-next');
+
+function updateTriptychView() {
+    if (triptychPanels.length === 0) return;
+
+    const total = triptychPanels.length;
+    const centerIdx = triptychCurrentIndex;
+    
+    // Calculate wheel positions
+    const leftIdx = (centerIdx - 1 + total) % total;
+    const rightIdx = (centerIdx + 1) % total;
+
+    // Apply physical classes to trigger the CSS 3D animation
+    triptychPanels.forEach((panel, index) => {
+        panel.className = 'triptych-panel'; // Reset
+        
+        if (index === centerIdx) {
+            panel.classList.add('center-panel');
+        } else if (index === leftIdx) {
+            // FIXED: Added 'side-panel' here
+            panel.classList.add('side-panel', 'left-panel');
+        } else if (index === rightIdx) {
+            // FIXED: Added 'side-panel' here
+            panel.classList.add('side-panel', 'right-panel');
+        } else {
+            panel.classList.add('hidden-panel');
+        }
+    });
+
+    // Handle math for the indicator in case we duplicated arrays for a 2-costume monster
+    const realIndex = centerIdx % originalCostumeCount;
+    triptychIndicator.textContent = `${realIndex + 1} / ${originalCostumeCount}`;
+}
+
+// Navigation Listeners
+triptychPrev.addEventListener('click', () => {
+    triptychCurrentIndex = (triptychCurrentIndex - 1 + triptychPanels.length) % triptychPanels.length;
+    updateTriptychView();
+});
+
+triptychNext.addEventListener('click', () => {
+    triptychCurrentIndex = (triptychCurrentIndex + 1) % triptychPanels.length;
+    updateTriptychView();
+});
+
+$('close-triptych-btn').addEventListener('click', () => {
+    // Apply the selected costume to the base UI when closing
+    if (triptychCostumes.length > 0 && originalCostumeCount > 0) {
+        const realIndex = triptychCurrentIndex % originalCostumeCount;
         monsterImage.decoding = "async";
-        monsterImage.src = n; 
-    } else {
-        alert("No costumes available!"); 
+        monsterImage.src = triptychCostumes[realIndex];
     }
+    
+    triptychOverlay.classList.remove('active');
+    setTimeout(() => triptychOverlay.style.display = 'none', 300);
+});
+
+// Overwrite the original costume button logic
+costumeButton.addEventListener("click", async () => { 
+    const baseName = monsterImage.getAttribute('data-name');
+    if (!baseName || isDOF()) return;
+
+    // --- FIX: Apply the current rarity back to the base name ---
+    let targetName = baseName;
+    if (targetName.toLowerCase().includes("wubbox") && (currentRarity === "Common" || currentRarity === "Rare")) {
+        targetName = "Wubbox";
+    }
+
+    if (currentRarity === "Rare") targetName = `Rare ${targetName}`;
+    else if (currentRarity === "Epic") targetName = `Epic ${targetName}`;
+    
+    const tn = findTrueName(targetName);
+    const monster = await MSM.get(tn);
+    // -----------------------------------------------------------
+    
+    if (!monster) return;
+
+    const costumes = await monster.getCostumes();
+    if (!costumes || costumes.length === 0) {
+        alert("No costumes available!"); 
+        return;
+    }
+
+    triptychCostumes = [monster.imageUrl, ...costumes];
+    originalCostumeCount = triptychCostumes.length;
+
+    // --- NEW: OPEN OVERLAY IMMEDIATELY WITH SPINNER ---
+    window.isTriptychLoading = true;      // Locks the egg loader
+    preloaderPaused = true;               // Locks the silent preloader
+    clearTimeout(pauseTimeout);
+    
+    // Drop a centered spinner directly into the empty track
+    triptychTrack.innerHTML = '<div class="spinner" style="display:block; position:relative; transform:none; top:0; left:0; width:60px; height:60px; border-color:rgba(255,255,255,0.1); border-top-color:#fff;"></div>';
+    triptychPrev.style.display = 'none';
+    triptychNext.style.display = 'none';
+    triptychIndicator.textContent = "Loading...";
+
+    triptychOverlay.style.display = 'flex';
+    requestAnimationFrame(() => triptychOverlay.classList.add('active'));
+
+    // Wait for all costume images to download into the browser cache
+    await Promise.all(triptychCostumes.map(url => {
+        return new Promise(resolve => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = resolve;
+            img.src = url;
+        });
+    }));
+
+    // Unlock the background queues
+    window.isTriptychLoading = false;
+    pauseTimeout = setTimeout(() => preloaderPaused = false, 1500);
+    // --------------------------------------------------
+
+    // If there are exactly 2 costumes, duplicate the array so the 3D wheel math works cleanly
+    let renderArray = triptychCostumes;
+    if (renderArray.length === 2) {
+        renderArray = [...triptychCostumes, ...triptychCostumes];
+    }
+
+    // Build the DOM panels fresh for this monster
+    triptychTrack.innerHTML = '';
+    triptychPanels = [];
+
+    renderArray.forEach((url, idx) => {
+        const panel = document.createElement('div');
+        panel.className = 'triptych-panel hidden-panel';
+        
+        const img = document.createElement('img');
+        img.src = url;
+        panel.appendChild(img);
+
+        // Allow clicking the side panels directly
+        panel.addEventListener('click', () => {
+            if (panel.classList.contains('left-panel')) triptychPrev.click();
+            if (panel.classList.contains('right-panel')) triptychNext.click();
+        });
+
+        triptychTrack.appendChild(panel);
+        triptychPanels.push(panel);
+    });
+    
+    // Find the currently active image to set the starting index
+    const currentSrc = monsterImage.src;
+    const foundIndex = triptychCostumes.findIndex(url => currentSrc.includes(url));
+    triptychCurrentIndex = foundIndex !== -1 ? foundIndex : 0;
+
+    // Lock navigation buttons if there is only 1 total item
+    triptychPrev.style.display = originalCostumeCount === 1 ? 'none' : 'flex';
+    triptychNext.style.display = originalCostumeCount === 1 ? 'none' : 'flex';
+
+    updateTriptychView();
 });
 
 majorMinorButton.addEventListener("click", () => {
@@ -1155,6 +1321,13 @@ async function loadStats(name) {
     setTimeout(async () => {
         const missingEggs = statBox.querySelectorAll('[data-missing-egg]');
         for (const imgEl of missingEggs) {
+            
+            // --- NEW: PAUSE BACKGROUND QUEUE IF COSTUMES ARE LOADING ---
+            while (window.isTriptychLoading) {
+                await new Promise(r => setTimeout(r, 200));
+            }
+            // -----------------------------------------------------------
+
             const eggName = imgEl.getAttribute('data-missing-egg');
             try {
                 const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
@@ -1846,6 +2019,42 @@ const currentEvent = getCurrentBackground();
 // console.log(`Current Event: ${currentEvent.eventName}`);
 document.body.style.backgroundImage = `url('${currentEvent.img}')`;
 
+// --- DOUBLE CLICK EGGS TO LOAD MONSTER ---
+statBox.addEventListener('dblclick', async (e) => {
+    // Check if the click happened inside an egg chip
+    const eggChip = e.target.closest('.inventory-egg-chip, .combo-parent-chip');
+    if (!eggChip) return;
+
+    // Extract the text label from the chip
+    const labelEl = eggChip.querySelector('.inventory-egg-label-text, .combo-parent-name');
+    if (!labelEl) return;
+
+    const monsterName = labelEl.textContent.trim();
+    const tn = findTrueName(monsterName);
+    
+    if (!isValidMonster(tn)) return;
+
+    // Scroll to top so the user sees the UI change
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Standard UI update sequence
+    const displayName = toDisplayCase(tn);
+    searchInput.value = displayName;
+    if (searchInputDof) searchInputDof.value = displayName;
+
+    currentRarity = /^rare/i.test(tn) ? "Rare" : /^epic/i.test(tn) ? "Epic" : "Common";
+    monsterImage.setAttribute('data-name', normalizeName(tn));
+    
+    tabsContainer.innerHTML = '';
+    showMonsterUI(false);
+    updateActiveTab();
+
+    if (isDOF()) dofAgeMode = 'young';
+
+    loadMonsterImage(tn);
+    await costumeErrorHandling(tn);
+    loadStats(tn);
+});
 
 (function loadMSMAPI() {
     const PRIMARY_API = "https://msm-api.pages.dev/msm.js";

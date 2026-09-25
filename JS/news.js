@@ -114,6 +114,11 @@ const news = [
     name: "WEEKLY MAIL!",
     date: "Sep 16/26",
     mainText: `This is a huge addition for me. I've always wanted a way to directly funnel the weekly mail from in game to this tool! The problem was, I didn't want to manually download them every single week/sometimes day! So I came up with a solution. Why not make an extension that checks for updates in the official MSM Discord, then automatically upload it to my API, then call the <code>fetchNewsImages()</code> method from my API to then funnel all the images into here! I am very proud of this, and I hope you find uses for this :)`
+  },
+  {
+    name: "🌟 NEW COSTUME MENU!",
+    date: "Sep 24/26",
+    mainText: `This feature was made because I didn't really like the old design of the costume switcher. It was literally clicking a button and then sitting there without any validation that it was loading at all, until it eventually loaded. So I though I would create a trifold looking menu for costumes! I got inspiration from the old island selector! Enjoy :)`
   }
 ]
 
