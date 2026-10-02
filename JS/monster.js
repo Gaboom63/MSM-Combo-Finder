@@ -1131,11 +1131,11 @@ async function loadStats(name) {
         let inventoryHTML = '';
         let isLargeInventory = false; // Tracking size for layout swaps
         
-        let invData = m.inventory || m['Wublin Inventory'] || m['Celestial Inventory'];
+        let invData = m.inventory || m['Wublin Inventory'] || m['Celestial Inventory'] || m['Wubbox Inventory'];
         
         if (!invData) {
             const raw = m.data || m.rawData || m._data || m.raw || m.json || {};
-            invData = raw.inventory || raw['Wublin Inventory'] || raw['Celestial Inventory'];
+            invData = raw.inventory || raw['Wublin Inventory'] || raw['Celestial Inventory'] || raw['Wubbox Inventory'];
         }
 
        if (!invData && !isDOF()) {
@@ -1151,7 +1151,8 @@ async function loadStats(name) {
                    const rawJson = await res.json();
                    invData = rawJson.inventory
                        || rawJson['Wublin Inventory']
-                       || rawJson['Celestial Inventory'];
+                       || rawJson['Celestial Inventory']
+                       || rawJson['Wubbox Inventory'];
                }
            } catch (e) {
                console.warn("Raw JSON fetch fallback failed:", e);
