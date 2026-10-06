@@ -104,7 +104,7 @@ body { text-align: center; background-size: cover; color: rgb(33, 35, 146); over
 #dynamicMonsterGrid, .local-grid { position: fixed; top: 25%; max-height: 65vh; overflow-y: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; z-index: 1000; background-color: rgba(0,0,0,0); }
 #dynamicMonsterGrid { left: 50%; transform: translateX(-50%); width: 90vw; max-width: 1000px; }
 .local-grid { width: 45vw; max-width: 600px; transform: translateX(-50%); z-index: 850; }
-#grid1 { left: 25%; background: none; } #grid2 { left: 75%; background: none; }
+#grid1 { left: 25%; } #grid2 { left: 75%; }
 #dynamicMonsterGrid.active, .local-grid.active { opacity: 1; pointer-events: all; }
 
 .grid-monster-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; background: rgba(40,40,40,0.85); border: 1px solid #3a3a3a; border-radius: 15px; padding: 12px; width: 120px; transition: 0.2s ease; }
@@ -121,20 +121,8 @@ button:not(.theme-btn) { padding: 8px 16px; margin: 5px; font-size: 12px; font-w
 button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff; transform: translateY(-2px); }
 .active-tab { background: rgba(80,80,80,0.9) !important; color: #fff !important; border-color: #e0e0e0 !important; transform: scale(1.1) !important; }
 
-#imageContainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px; /* Prevents height collapse while image loads */
-}
-
-/* Ensure images fit nicely within container */
-.monster-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+#imageContainer { position: relative; text-align: center; }
+.monster-image { width: 100%; max-width: 320px; height: auto; display: none; }
 .animate-enter { animation: slide-up 0.5s forwards; }
 
 #statBox { display: flex; flex: 1 1 auto; min-width: 0; gap: 15px; padding: 10px; box-sizing: border-box; overflow: hidden; align-items: stretch; }
@@ -217,23 +205,7 @@ button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff
 .breeding-glow-left { animation: fusionShootLeft 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important; }
 .breeding-glow-right { animation: fusionShootRight 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards !important; }
 .ready-glow { border-color: #4ade80 !important; box-shadow: 0 0 15px rgba(74,222,128,0.4) !important; }
-
-.spinner {
-    display: none; /* Toggled to 'block' via JS during loads */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 48px;
-    height: 48px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    z-index: 10;
-    pointer-events: none;
-}
-
+.spinner { display: none; width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: #fff; border-radius: 50%; animation: spin 1s infinite; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 105; }
 #noMonsterImage { position: fixed; width: 90vw; max-width: 600px; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; z-index: 110; }
 
 #iconContainer { position: absolute; top: 15px; left: 15px; display: flex; align-items: center; }
@@ -286,10 +258,7 @@ button:not(.theme-btn):hover { background: #222; border-color: #888; color: #fff
 @keyframes slideOutRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slide-up { to { opacity: 1; transform: translateY(0); } }
-@keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 @keyframes popIn { 0% { opacity: 0; transform: scale(0.5) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
 @keyframes revealIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes floatUp { 0% { transform: translateY(0) rotate(0deg); opacity: 0; } 10%, 90% { opacity: 1; } 100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } }
@@ -492,10 +461,11 @@ code { background-color: #000; color: #d3d3d3; padding: 2px 6px; border-radius: 
 }
 
 .triptych-panel {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.3, 1); /* Smooth spin */
 }
 
 .triptych-panel img {
