@@ -104,7 +104,7 @@ body { text-align: center; background-size: cover; color: rgb(33, 35, 146); over
 #dynamicMonsterGrid, .local-grid { position: fixed; top: 25%; max-height: 65vh; overflow-y: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; z-index: 1000; background-color: rgba(0,0,0,0); }
 #dynamicMonsterGrid { left: 50%; transform: translateX(-50%); width: 90vw; max-width: 1000px; }
 .local-grid { width: 45vw; max-width: 600px; transform: translateX(-50%); z-index: 850; }
-#grid1 { left: 25%; } #grid2 { left: 75%; }
+#grid1 { left: 25%; background: none; } #grid2 { left: 75%; background: none; }
 #dynamicMonsterGrid.active, .local-grid.active { opacity: 1; pointer-events: all; }
 
 .grid-monster-item { display: flex; flex-direction: column; align-items: center; cursor: pointer; background: rgba(40,40,40,0.85); border: 1px solid #3a3a3a; border-radius: 15px; padding: 12px; width: 120px; transition: 0.2s ease; }
