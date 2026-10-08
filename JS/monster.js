@@ -1901,7 +1901,7 @@ const defaultThemeColors = {
 };
 
 const defaultBackground = {
-    eventName: "None",
+    eventName: "No Event",
     img: "CSS/images/backgrounds/NoEventShellbeat.jpg",
     colors: defaultThemeColors
 };
@@ -1921,27 +1921,31 @@ function applyThemeColors(colorsObj) {
 function setEventUI(eventObj) {
     // console.log(`Setting UI for: ${eventObj.eventName}`);
     
-    // 1. Set Background
-    document.body.style.backgroundImage = `url('${eventObj.img}')`;
-    document.getElementById('title').innerHTML = `MSM Combo Finder <br> ❖ ${eventObj.eventName} ❖`
-    
-    // 2. Set Theme Colors
-    applyThemeColors(eventObj.colors);
+    if(eventObj === defaultBackground) {
+        
+    } else {
+        // 1. Set Background
+        document.body.style.backgroundImage = `url('${eventObj.img}')`;
+        document.getElementById('title').innerHTML = `MSM Combo Finder <br> ❖ ${eventObj.eventName} ❖`
+        
+        // 2. Set Theme Colors
+        applyThemeColors(eventObj.colors);
 
-    // 3. Set Favicon
-    let faviconPath = `images/important/Favicons/${eventObj.eventName}.png`;
-    if (eventObj.eventName === "None") {
-        faviconPath = "images/important/Favicons/mammoticon.png";
-    }
+        // 3. Set Favicon
+        let faviconPath = `images/important/Favicons/${eventObj.eventName}.png`;
+        if (eventObj.eventName === "None") {
+            faviconPath = "images/important/Favicons/mammoticon.png";
+        }
 
-    // Find the existing favicon tag, or create a new one
-    let link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-        link = document.createElement('link');
-        link.rel = 'icon';
-        document.head.appendChild(link);
+        // Find the existing favicon tag, or create a new one
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.head.appendChild(link);
+        }
+        link.href = faviconPath;
     }
-    link.href = faviconPath;
 }
 // 4. Testing Function for Developer Console
 // Open your console and type: testEvent("Echoes of Eco")
