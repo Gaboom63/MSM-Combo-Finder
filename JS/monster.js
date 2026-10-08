@@ -1922,7 +1922,18 @@ function setEventUI(eventObj) {
     // console.log(`Setting UI for: ${eventObj.eventName}`);
     
     if(eventObj === defaultBackground) {
-        
+        let faviconPath = `images/important/Favicons/${eventObj.eventName}.png`;
+        faviconPath = "images/important/Favicons/mammoticon.png";
+
+        // Find the existing favicon tag, or create a new one
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.head.appendChild(link);
+        }
+        link.href = faviconPath;
+
     } else {
         // 1. Set Background
         document.body.style.backgroundImage = `url('${eventObj.img}')`;
