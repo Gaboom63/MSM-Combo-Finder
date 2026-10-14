@@ -118,7 +118,7 @@ const news = [
   {
     name: "🌟 NEW COSTUME MENU!",
     date: "Sep 24/26",
-    mainText: `This feature was made because I didn't really like the old design of the costume switcher. It was literally clicking a button and then sitting there without any validation that it was loading at all, until it eventually loaded. So I though I would create a trifold looking menu for costumes! I got inspiration from the old island selector! Enjoy :)`
+    mainText: `This feature was made because I didn't really like the old design of the costume switcher. It was literally clicking a button and then sitting there without any validation that it was loading at all, until it eventually loaded. So I thought I would create a trifold looking menu for costumes! I got inspiration from the old island selector! Enjoy :)`
   }
 ]
 
