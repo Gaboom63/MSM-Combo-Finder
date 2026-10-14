@@ -30,6 +30,10 @@ let isSideMenuOpen = 0, disableEscape = false, disabledButton = false;
 let currentRarity = "", monsterRegistry = [], validBreedingCombos = [], currentMonster = null, imageLoadTimeout;
 let preloaderPaused = false, pauseTimeout = null;
 const memoryEggCache = {};
+const monsterDataCache = new Map();
+const eggRequestCache = new Map();
+let statsSelectionId = 0;
+let preloaderAbortController = null; 
 
 // --- DOF GLOBALS & STATE HELPERS ---
 let dofMonsterRegistry = [], dofValidBreedingCombos = [];
@@ -101,42 +105,26 @@ const SmartImageCache = {
     cacheName: 'msm-dynamic-images-v1',
 
     async get(url) {
-        // Open the browser's native background cache directly
+        if (!('caches' in window)) return url;
         const cache = await caches.open(this.cacheName);
 
         try {
-            // 1. Instant Return: Do we already have it locally?
-            const cachedResponse = await cache.match(url);
+            let cachedResponse = await cache.match(url);
             if (cachedResponse) {
-                return URL.createObjectURL(await cachedResponse.blob());
+                return cachedResponse;
             }
 
-            // 2. Fetch and Cache: It's new, so grab it and save a clone for next time
-            const networkResponse = await fetch(url);
+            const networkResponse = await fetch(url, { mode: 'cors' });
             if (networkResponse.ok) {
-                // Put a clone in the cache so the original can be returned to the UI
                 cache.put(url, networkResponse.clone());
             }
-            
-            return URL.createObjectURL(await networkResponse.blob());
-
+            return networkResponse;
         } catch (err) {
-            ErrorLogger.log("Cache Miss/Fail", err, { url });
-            return url; // Fallback to raw network request if things break
-        }
-    },
-
-    async applyToElement(imgEl, url) {
-        const cachedUrl = await this.get(url);
-        imgEl.src = cachedUrl;
-        
-        // Clean up the blob string to prevent memory leaks
-        if (cachedUrl.startsWith('blob:')) {
-            imgEl.onload = () => URL.revokeObjectURL(cachedUrl);
+            ErrorLogger.log("Cache Fail", err, { url });
+            return null;
         }
     }
 };
-
 const ErrorLogger = {
     logs: [],
     
@@ -185,55 +173,54 @@ function runWorkerSearch(data) {
 }
 
 // --- DOF IMAGE HELPERS ---
+// --- OPTIMIZED DOF IMAGE HELPER ---
 function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
     if (!imgEl || !monsterName) return;
 
     const useDof = forceDof !== null ? forceDof : isDOF();
 
     if (useDof) {
-        const loc = `../../../MSM-API/MSM-DOF/data/Monsters/${monsterName}`;
-        const rem = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM-DOF/data/Monsters/${monsterName}`;
+        // Enforce proper URI encoding for folder paths with spaces (e.g., Flum Ox -> Flum%20Ox)
+        const encodedName = encodeURIComponent(monsterName);
+        const loc = `../../../MSM-API/MSM-DOF/data/Monsters/${encodedName}`;
+        const rem = `https://jsdelivr.net{currentHash}/MSM-DOF/data/Monsters/${encodedName}`;
 
         let sources = [];
 
+        // Strict mapping that matches your actual storage naming structures precisely
         if (type === 'full') {
-            // Young → Adult → Default
             sources = [
-                `${loc}/${monsterName} (Young).png`,
-                `${loc}/${monsterName} (Adult).png`,
-                `${loc}/${monsterName}.png`,
-
-                `${rem}/${monsterName} (Young).png`,
-                `${rem}/${monsterName} (Adult).png`,
-                `${rem}/${monsterName}.png`
+                `${loc}/${encodeURIComponent(monsterName + " (Young)")}.png`,
+                `${loc}/${encodeURIComponent(monsterName + " (Adult)")}.png`,
+                `${loc}/${encodedName}.png`,
+                `${rem}/${encodeURIComponent(monsterName + " (Young)")}.png`,
+                `${rem}/${encodeURIComponent(monsterName + " (Adult)")}.png`,
+                `${rem}/${encodedName}.png`
             ];
         }
 
         else if (type === 'avatar') {
-            // Young avatar variants first
+            // Updated to handle the exact spacing patterns around hyphens
             sources = [
-                `${loc}/Young_Avatar_${monsterName} - young.png`,
-                `${loc}/Avatar_${monsterName} - young.png`,
-                `${loc}/Adult_Avatar_${monsterName} - adult.png`,
-                `${loc}/Avatar_${monsterName}.png`,
-
-                `${rem}/Young_Avatar_${monsterName} - young.png`,
-                `${rem}/Avatar_${monsterName} - young.png`,
-                `${rem}/Adult_Avatar_${monsterName} - adult.png`,
-                `${rem}/Avatar_${monsterName}.png`
+                `${loc}/Young_Avatar_${encodedName}%20-%20young.png`,
+                `${loc}/Avatar_${encodedName}%20-%20young.png`,
+                `${loc}/Adult_Avatar_${encodedName}%20-%20adult.png`,
+                `${loc}/Avatar_${encodedName}.png`,
+                `${rem}/Young_Avatar_${encodedName}%20-%20young.png`,
+                `${rem}/Avatar_${encodedName}%20-%20young.png`,
+                `${rem}/Adult_Avatar_${encodedName}%20-%20adult.png`,
+                `${rem}/Avatar_${encodedName}.png`
             ];
         }
 
         else if (type === 'egg') {
-            // Young egg first
             sources = [
-                `${loc}/Young_Egg_${monsterName}.png`,
-                `${loc}/Adult_Egg_${monsterName}.png`,
-                `${loc}/Egg_${monsterName}.png`,
-
-                `${rem}/Young_Egg_${monsterName}.png`,
-                `${rem}/Adult_Egg_${monsterName}.png`,
-                `${rem}/Egg_${monsterName}.png`
+                `${loc}/Young_Egg_${encodedName}.png`,
+                `${loc}/Adult_Egg_${encodedName}.png`,
+                `${loc}/Egg_${encodedName}.png`,
+                `${rem}/Young_Egg_${encodedName}.png`,
+                `${rem}/Adult_Egg_${encodedName}.png`,
+                `${rem}/Egg_${encodedName}.png`
             ];
         }
 
@@ -241,23 +228,20 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
 
         imgEl.onerror = () => {
             idx++;
-
             if (idx < sources.length) {
                 imgEl.src = sources[idx];
             } else {
                 imgEl.onerror = null;
-                imgEl.src = GRID_FALLBACK_IMAGE;
+                imgEl.src = GRID_FALLBACK_IMAGE; // Drop to default gracefully without hanging
             }
         };
 
         imgEl.src = sources[0];
     } else {
-        // Standard MSM API logic - NO MORE POLLING OR DOM ID SEARCHING
+        // Standard MSM API fallback
         MSM.get(monsterName).then(m => {
             if (m && m.imageUrl) {
-                // Apply the speed attributes directly to the element in memory
                 imgEl.decoding = "async";
-                // Use 'low' priority for grid items so they don't steal bandwidth from the main UI
                 imgEl.fetchPriority = "low"; 
                 imgEl.src = m.imageUrl;
             } else {
@@ -268,6 +252,7 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
         });
     }
 }
+
 
 const getDofEggHTML = (pName) => {
     if (!pName) {
@@ -327,58 +312,49 @@ const getDofEggHTML = (pName) => {
 
 
 async function getMsmEggHTML(eggName) {
-    if (!eggName) {
-        return `
-            <img
-                src="${GRID_FALLBACK_IMAGE}"
-                class="combo-egg-icon"
-                alt="Unknown Egg"
-            >
-        `;
-    }
-
+    if (!eggName) return `<img src="${GRID_FALLBACK_IMAGE}" class="combo-egg-icon" alt="Unknown Egg">`;
     if (currentHash === 'local-testing') {
-        const localSrc =
-            `../../../MSM-API/MSM/images/monster_eggs/${encodeURIComponent(eggName)}.png`;
-
-        return `
-            <img
-                src="${localSrc}"
-                class="combo-egg-icon"
-                alt="${eggName}"
-                onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';"
-            >
-        `;
+        const localSrc = `../../../MSM-API/MSM/images/monster_eggs/${encodeURIComponent(eggName)}.png`;
+        return `<img src="${localSrc}" class="combo-egg-icon" alt="${eggName}" onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';">`;
     }
-
+    let cached = memoryEggCache[eggName];
+    if (!cached) { try { cached = localStorage.getItem(`cached_egg_${eggName}`); } catch {} }
+    if (cached && cached !== 'undefined' && cached !== 'null' && !cached.includes('mammoticon')) {
+        memoryEggCache[eggName] = cached;
+        return `<img src="${cached}" class="combo-egg-icon" alt="${eggName}" onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';">`;
+    }
     try {
-        const eggData = await MSM.get(eggName).catch(() => null);
-
-        const eggUrl =
-            eggData?.eggUrl ||
-            eggData?.image ||
-            eggData?.imageUrl ||
-            GRID_FALLBACK_IMAGE;
-
-        return `
-            <img
-                src="${eggUrl}"
-                class="combo-egg-icon"
-                alt="${eggName}"
-                onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';"
-            >
-        `;
+        const key = eggName.toLowerCase();
+        let request = eggRequestCache.get(key);
+        if (!request) {
+            request = (async () => {
+                const data = await getCachedMonsterData(eggName);
+                const url = data?.eggUrl || data?.image || data?.imageUrl || null;
+                if (url && !url.includes('undefined')) {
+                    memoryEggCache[eggName] = url;
+                    try { localStorage.setItem(`cached_egg_${eggName}`, url); } catch {}
+                }
+                return url;
+            })();
+            eggRequestCache.set(key, request);
+            request.then(() => { if (eggRequestCache.get(key) === request) eggRequestCache.delete(key); }, () => { if (eggRequestCache.get(key) === request) eggRequestCache.delete(key); });
+        }
+        const url = await request;
+        return `<img src="${url || GRID_FALLBACK_IMAGE}" class="combo-egg-icon" alt="${eggName}" onerror="this.onerror=null; this.src='${GRID_FALLBACK_IMAGE}';">`;
     } catch {
-        return `
-            <img
-                src="${GRID_FALLBACK_IMAGE}"
-                class="combo-egg-icon"
-                alt="${eggName}"
-            >
-        `;
+        return `<img src="${GRID_FALLBACK_IMAGE}" class="combo-egg-icon" alt="${eggName}">`;
     }
 }
 
+function getCachedMonsterData(name, dof = false) {
+    const key = `${dof ? 'dof' : 'msm'}:${String(name).toLowerCase()}`;
+    if (!monsterDataCache.has(key)) {
+        const request = Promise.resolve().then(() => dof ? MSM.getDofMonster(name) : MSM.get(name));
+        monsterDataCache.set(key, request);
+        request.catch(() => { if (monsterDataCache.get(key) === request) monsterDataCache.delete(key); });
+    }
+    return monsterDataCache.get(key);
+}
 
 const findTrueName = input => {
     if (!input) return null;
@@ -521,6 +497,7 @@ async function costumeErrorHandling(name) {
 }
 
 function reset() {
+    haltPreloaderForUserAction();
     // 1. Conditionally display the correct container based on the active game mode
     if (isDOF()) {
         inputContainer.style.display = 'none';
@@ -631,6 +608,10 @@ const grid1 = $('grid1'), grid2 = $('grid2');
 function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, animMode = 'full') {
     let selIdx = -1;
     inputEl.addEventListener('focus', () => {
+
+        haltPreloaderForUserAction();
+        preloaderPaused = true;
+
         if (activeInput && activeInput !== inputEl) closeExpandedInput();
         activeInput = inputEl; activeGrid = targetGrid; sideMenuB.style.display = 'none';
         inputEl.closest('.split-half')?.classList.add('searching');
@@ -725,8 +706,15 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
                     monsterImage.setAttribute('data-name', normalizeName(tName));
                     tabsContainer.innerHTML = ''; showMonsterUI(false); updateActiveTab(); 
                     if (isDOF()) dofAgeMode = 'young';
+                    
                     loadMonsterImage(tName);
-                    await costumeErrorHandling(tName); loadStats(tName);
+
+                    // Start stats immediately instead of waiting for costumes.
+                    loadStats(tName);
+
+                    // Check costumes in the background.
+                    void costumeErrorHandling(tName);
+
         } else if (inputEl === firstInput || inputEl === secondInput) {
                     if (inputEl === firstInput && secondInput.value.trim()) {
                         const v2 = secondInput.value.trim().toLowerCase();
@@ -1049,6 +1037,7 @@ async function comboFinder() {
 }
 
 function loadFromTab(name) {
+    haltPreloaderForUserAction();
     const tn = findTrueName(name);
     saveToHistory(tn);
     
@@ -1071,6 +1060,8 @@ function loadFromTab(name) {
 }
 
 async function loadStats(name) {
+    const selectionId = ++statsSelectionId;
+    const isCurrentSelection = () => selectionId === statsSelectionId;
     const tn = findTrueName(name || searchInput.value.trim());
     if (!tn || !isValidMonster(tn)) return showNoMonsterError();
 
@@ -1097,7 +1088,9 @@ async function loadStats(name) {
     `;
 
     try {
-        const m = isDOF() ? await MSM.getDofMonster(tn) : await MSM.get(tn);
+        const dofMode = isDOF();
+        const m = await getCachedMonsterData(tn, dofMode);
+        if (!isCurrentSelection()) return;
         if (!m) throw new Error("Monster not found");
 
         let times = { Standard: "Unknown" }, combos = [], elements = [];
@@ -1110,8 +1103,10 @@ async function loadStats(name) {
                     .filter(([k, v]) => v.map(x => x.toLowerCase()).includes(tn.toLowerCase()))
                     .map(([k]) => k);
             }
-            const baseM = await MSM.get(tn).catch(() => null);
+            const baseM = await getCachedMonsterData(tn, false).catch(() => null);
+            if (!isCurrentSelection()) return;
             elements = baseM?.getElementImages ? await baseM.getElementImages() : [];
+            if (!isCurrentSelection()) return;
         } else {
             const fetchWRetry = async (retries = 3) => {
                 for (let i = 1; i <= retries; i++) {
@@ -1120,6 +1115,7 @@ async function loadStats(name) {
                 }
             };
             [times, combos, elements] = await fetchWRetry();
+            if (!isCurrentSelection()) return;
         }
 
         const hasTime = times?.Standard && times.Standard !== "Unknown";
@@ -1147,8 +1143,10 @@ async function loadStats(name) {
                const fallbackUrl = `${fallbackBase}/${encodeURIComponent(tn)}/data.json`;
 
                const res = await fetch(fallbackUrl);
+               if (!isCurrentSelection()) return;
                if (res.ok) {
                    const rawJson = await res.json();
+                   if (!isCurrentSelection()) return;
                    invData = rawJson.inventory
                        || rawJson['Wublin Inventory']
                        || rawJson['Celestial Inventory']
@@ -1288,64 +1286,72 @@ async function loadStats(name) {
             </div>
             ${isLargeInventory ? rightColumnContent : `<div style="flex: 1 1 auto; margin-left: 20px;">${rightColumnContent}</div>`}
         `;
-        // Render Combos inside whatever pane we put the '#breeding-combo-container' in
-        const bc = $('breeding-combo-container');
-        if (!hasCombos) {
-            bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="text-align:center; padding-top: 20px;">• Special Combination Required</p>`;
-        } else {
+        // Render combos asynchronously: core stats do not wait for egg API calls.
+        (async () => {
+            const comboBox = $('breeding-combo-container');
+            if (!comboBox || !isCurrentSelection()) return;
+            if (!hasCombos) {
+                comboBox.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><p style="text-align:center; padding-top: 20px;">• Special Combination Required</p>`;
+                return;
+            }
+            comboBox.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><div class="combo-matrix-display-box"><span class="combo-loader-frame">Loading combinations…</span></div>`;
             const rows = await Promise.all(combos.map(async c => {
                 const ps = c.split(/\s\+\s|\sand\s/i).map(p => p.trim());
                 if (ps.length >= 2) {
-                    return `<div class="combo-row-item">${(await Promise.all(ps.map(async p => `
+                    const chips = await Promise.all(ps.map(async p => `
                         <div class="combo-parent-chip">
-                            ${isDOF()
-                                ? getDofEggHTML(p)
-                                : await getMsmEggHTML(p)
-                            }
+                            ${dofMode ? getDofEggHTML(p) : await getMsmEggHTML(p)}
                             <span class="combo-parent-name">${p}</span>
-                        </div>`))).join('<div class="combo-operator-plus"><i class="fas fa-plus"></i></div>')}</div>`;
+                        </div>`));
+                    return `<div class="combo-row-item">${chips.join('<div class="combo-operator-plus"><i class="fas fa-plus"></i></div>')}</div>`;
                 }
                 return `<div class="combo-row-item-raw">• ${c}</div>`;
             }));
-            bc.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><div class="combo-matrix-display-box">${rows.join("")}</div>`;
-        }
+            if (!isCurrentSelection()) return;
+            const liveBox = $('breeding-combo-container');
+            if (liveBox) liveBox.innerHTML = `<span class="label-text"><i class="fas fa-heart"></i> Breeding Combo</span><div class="combo-matrix-display-box">${rows.join("")}</div>`;
+        })().catch(err => console.warn('Breeding combo rendering failed:', err));
 
         dynamicSoundIcon(m);
 
     } catch (e) {
+        if (!isCurrentSelection()) return;
         console.error(e);
         showNoMonsterError();
     }
 
-    setTimeout(() => { if (statBox) statBox.style.pointerEvents = ''; }, 400);
+    if (!isCurrentSelection()) return;
+    setTimeout(() => { if (isCurrentSelection() && statBox) statBox.style.pointerEvents = ''; }, 0);
 
     setTimeout(async () => {
-        const missingEggs = statBox.querySelectorAll('[data-missing-egg]');
-        for (const imgEl of missingEggs) {
-            
-            // --- NEW: PAUSE BACKGROUND QUEUE IF COSTUMES ARE LOADING ---
+        const missingEggs = Array.from(statBox.querySelectorAll('[data-missing-egg]'));
+        if (missingEggs.length === 0) return;
+
+        // Process in parallel batches of 3 to prevent network bottlenecks
+        const batchSize = 3;
+        for (let i = 0; i < missingEggs.length; i += batchSize) {
+            if (!isCurrentSelection()) return;
             while (window.isTriptychLoading) {
                 await new Promise(r => setTimeout(r, 200));
             }
-            // -----------------------------------------------------------
 
-            const eggName = imgEl.getAttribute('data-missing-egg');
-            try {
-                const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
-                const eggData = await MSM.get(trueEName).catch(()=>null);
-                const fetchedUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl || 'images/important/mammoticon.png';
-                
-                if (fetchedUrl && !fetchedUrl.includes('undefined')) {
-                    localStorage.setItem(`cached_egg_${eggName}`, fetchedUrl);
-                    memoryEggCache[eggName] = fetchedUrl;
-                    imgEl.src = fetchedUrl; // Updates visually in the DOM
-                }
-            } catch(e) {}
-            
-            // Wait for 1 frame before parsing the next API request to keep scrolling smooth
-            await new Promise(r => requestAnimationFrame(r));
+            const currentBatch = missingEggs.slice(i, i + batchSize);
+            await Promise.all(currentBatch.map(async imgEl => {
+                const eggName = imgEl.getAttribute('data-missing-egg');
+                try {
+                    const trueEName = typeof findTrueName === 'function' ? findTrueName(eggName) || eggName : eggName;
+                    const eggData = await getCachedMonsterData(trueEName).catch(() => null);
+                    const fetchedUrl = eggData?.eggUrl || eggData?.image || eggData?.imageUrl;
+                    
+                    if (fetchedUrl && !fetchedUrl.includes('undefined') && isCurrentSelection() && imgEl.isConnected) {
+                        try { localStorage.setItem(`cached_egg_${eggName}`, fetchedUrl); } catch {}
+                        memoryEggCache[eggName] = fetchedUrl;
+                        imgEl.src = fetchedUrl;
+                    }
+                } catch (e) {}
+            }));
         }
-    }, 150);
+    }, 250);
 }
 
 function showNoMonsterError() {
@@ -1395,21 +1401,74 @@ async function playSound() {
     } 
 }
 
-function haltPreloaderForUserAction() { preloaderPaused = true; clearTimeout(pauseTimeout); pauseTimeout = setTimeout(() => preloaderPaused = false, 5000); }
+function haltPreloaderForUserAction() { 
+    preloaderPaused = true; 
+    clearTimeout(pauseTimeout); 
+    
+    if (preloaderAbortController) {
+        preloaderAbortController.abort();
+        preloaderAbortController = null;
+    }
+    
+    // Extend the peace and quiet to 10 seconds so the user can navigate menus freely
+    pauseTimeout = setTimeout(() => preloaderPaused = false, 10000); 
+}
+
+
 function requestPriority(n) { preloaderPaused = true; clearTimeout(pauseTimeout); pauseTimeout = setTimeout(() => preloaderPaused = false, 3000); loadMonsterImage(n); loadStats(n); costumeErrorHandling(n); }
 
 function silentlyPreloadImages() {
-    if (!window.MSM || !getActiveRegistry()?.length) return setTimeout(silentlyPreloadImages, 500);
-    let i = 0;
-    const n = async () => {
-        if (preloaderPaused) return setTimeout(n, 1000);
-        const reg = getActiveRegistry();
-        for(let j=0; j<3 && i<reg.length; j++, i++) {
-            try { const m = await MSM[findTrueName(reg[i].raw)]; if(m) { (await m.getElementImages?.()||[]).forEach(e => { if(e?.image) new Image().src = e.image; }); if(m.imageUrl) new Image().src = m.imageUrl; } } catch {}
+    if (!window.MSM || !getActiveRegistry()?.length) {
+        return setTimeout(silentlyPreloadImages, 1000);
+    }
+    
+    const reg = getActiveRegistry();
+    let index = 0;
+
+    const preloadNextBatch = async () => {
+        if (preloaderPaused) {
+            return setTimeout(preloadNextBatch, 3000);
         }
-        if (i < reg.length) setTimeout(() => window.requestIdleCallback ? requestIdleCallback(n) : n(), 250);
-    }; setTimeout(n, 2000);
-} silentlyPreloadImages();
+
+        // Initialize a new abort controller for this specific background file
+        if (!preloaderAbortController) {
+            preloaderAbortController = new AbortController();
+        }
+        const currentSignal = preloaderAbortController.signal;
+
+        const item = reg[index];
+        index++;
+
+        if (item) {
+            try {
+                const trueName = findTrueName(item.raw);
+                const m = await MSM[trueName];
+                
+                // ✨ FIX 3: Fetch using native fetch options with low priority and abort capability
+                if (m && m.imageUrl && !currentSignal.aborted) {
+                    await fetch(m.imageUrl, {
+                        signal: currentSignal,
+                        priority: 'low',
+                        importance: 'low',
+                        cache: 'force-cache'
+                    }).catch(() => {/* silence aborted requests fetch errors */});
+                }
+            } catch {}
+        }
+
+        if (index < reg.length) {
+            if (window.requestIdleCallback) {
+                window.requestIdleCallback(() => setTimeout(preloadNextBatch, 1000));
+            } else {
+                setTimeout(preloadNextBatch, 1000);
+            }
+        }
+    };
+
+    setTimeout(preloadNextBatch, 5000);
+}
+
+silentlyPreloadImages();
 
 function createParticles() {
     const c = $('particles-container'), s = ['♪', '♫', '♩', '♬', '✧', '⋆'];
@@ -1680,6 +1739,10 @@ function loadMonsterImage(name, retries = 2) {
         try {
             currentMonster = MSM[name];
             MSM[name].resetCostumes();
+
+            monsterImage.fetchPriority = "high";
+            monsterImage.decoding = "sync";
+
             MSM[name].loadImage("monsterImage");
         } catch {
             if (monsterImage.dataset.loadId == id) {
@@ -2073,7 +2136,7 @@ statBox.addEventListener('dblclick', async (e) => {
 });
 
 (function loadMSMAPI() {
-    const PRIMARY_API = "https://msm-api.pages.dev/msm.js";
+    const PRIMARY_API = `https://msm-api.pages.dev/msm.js`;
     const FALLBACK_API = `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/dist/msm.js`;
     const LOCAL_API = "../MSM-API/MSM/dist/msm.js"; 
 
