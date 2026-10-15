@@ -110,4 +110,12 @@ self.onmessage = async (e) => {
         const matches = mObj.map(obj => obj.raw).slice(0, 12);
         self.postMessage({ action: 'SEARCH_RESULTS', msgId, matches });
     }
+
+    if (action === 'GET_COMBOS') {
+        const { monsterName, isDof } = data;
+        const combos = (isDof ? dofValidBreedingCombos : validBreedingCombos)
+            .filter(combo => combo.result.toLowerCase() === monsterName.toLowerCase());
+        
+        postMessage({ action: 'COMBO_RESULTS', payload: combos, msgId });
+    }
 };

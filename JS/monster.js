@@ -22,6 +22,7 @@ const breedSplitView = $('breedSplitView'), closeBreedBtn = $('closeBreedUI');
 const sideMenu = $('sideMenu'), iconContainer = $('iconContainer');
 let sideMenuB = $('sideMenuButton');
 let dofAgeMode = 'young';
+let isGridItemProcessing = false;
 
 let date = new Date().getMonth(); 
 
@@ -360,6 +361,20 @@ function getCachedMonsterData(name, dof = false) {
     return monsterDataCache.get(key);
 }
 
+const activeMonsterStore = {
+    data: null,
+    name: null,
+    async get(name) {
+        const cleanName = findTrueName(name);
+        if (this.name === cleanName && this.data) return this.data;
+        
+        this.name = cleanName;
+        // Fetch from your worker or local cache cleanly in one shot
+        this.data = await getCachedMonsterData(cleanName, isDOF());
+        return this.data;
+    }
+};
+
 const findTrueName = input => {
     if (!input) return null;
     const cleanIn = removeAccents(input.trim().toLowerCase());
@@ -607,7 +622,7 @@ function closeSplitView() {
 }
 
 let activeInput = null, activeOriginalRect = null, activeGrid = null;
-const grid1 = $('grid1'), grid2 = $('grid2');
+const grid1 = $('grid1'), grid2 =$('grid2');
 
 function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, animMode = 'full') {
     let selIdx = -1;
@@ -691,49 +706,64 @@ function setupSmoothExpansionAndGrid(inputEl, targetGrid, incRarity = true, anim
             item.append(img, span);
 
             item.addEventListener('click', async () => {
-                // Set the input cleanly when clicked
-                inputEl.value = toDisplayCase(match); 
-                targetGrid.innerHTML = ''; targetGrid.classList.remove('active');
-                closeExpandedInput(); checkInputGlows();
-                const tName = findTrueName(match);
+                if (isGridItemProcessing) return; // Prevent overlapping queue locks
+                isGridItemProcessing = true;
 
-                if (lbl && imgE && ph) { 
-                    lbl.classList.add('active-label'); 
-                    lbl.textContent = toDisplayCase(match); 
-                    ph.style.display = 'none'; 
-                    imgE.style.display = 'block'; 
-                    applyMonsterImage(imgE, tName, 'avatar'); 
-                }
-
-                if (inputEl === searchInput || inputEl === searchInputDof) {
-                    currentRarity = /^rare/i.test(tName) ? "Rare" : /^epic/i.test(tName) ? "Epic" : "Common";
-                    monsterImage.setAttribute('data-name', normalizeName(tName));
-                    tabsContainer.innerHTML = ''; showMonsterUI(false); updateActiveTab(); 
-                    if (isDOF()) dofAgeMode = 'young';
+                try {
+                    inputEl.value = toDisplayCase(match); 
+                    targetGrid.innerHTML = ''; 
+                    targetGrid.classList.remove('active');
+                    closeExpandedInput(); 
+                    checkInputGlows();
                     
-                    loadMonsterImage(tName);
+                    const tName = findTrueName(match);
 
-                    // Start stats immediately instead of waiting for costumes.
-                    loadStats(tName);
-
-                    // Check costumes in the background.
-                    void costumeErrorHandling(tName);
-
-        } else if (inputEl === firstInput || inputEl === secondInput) {
-                    if (inputEl === firstInput && secondInput.value.trim()) {
-                        const v2 = secondInput.value.trim().toLowerCase();
-                        if (!getActiveCombos().some(c => { const p = c.split('+').map(x=>x.trim().toLowerCase()); return (p[0]===tName.toLowerCase() && p[1]===v2) || (p[1]===tName.toLowerCase() && p[0]===v2); })) {
-                            secondInput.value = ''; const p2 = $('grid2').parentElement;
-                            p2.querySelector('h2')?.classList.remove('active-label'); p2.querySelector('h2').textContent = 'Parent 2';
-                            if (p2.querySelector('.parent-img')) { p2.querySelector('.parent-img').style.display = 'none'; p2.querySelector('.parent-img').src = ''; }
-                            if (p2.querySelector('.empty-slot')) p2.querySelector('.empty-slot').style.display = 'flex';
-                            if ($('grid2')) { $('grid2').innerHTML = ''; $('grid2').classList.remove('active'); }
-                            checkInputGlows();
-                        }
+                    if (lbl && imgE && ph) { 
+                        lbl.classList.add('active-label'); 
+                        lbl.textContent = toDisplayCase(match); 
+                        ph.style.display = 'none'; 
+                        imgE.style.display = 'block'; 
+                        applyMonsterImage(imgE, tName, 'avatar'); 
                     }
-                    if (firstInput.value.trim() && secondInput.value.trim()) triggerBreedingAnimation();
+
+                    if (inputEl === searchInput || inputEl === searchInputDof) {
+                        currentRarity = /^rare/i.test(tName) ? "Rare" : /^epic/i.test(tName) ? "Epic" : "Common";
+                        monsterImage.setAttribute('data-name', normalizeName(tName));
+                        tabsContainer.innerHTML = ''; 
+                        showMonsterUI(false); 
+                        updateActiveTab(); 
+                        if (isDOF()) dofAgeMode = 'young';
+                        
+                        // 1. Apply image immediately (instant)
+                        loadMonsterImage(tName);
+
+                        // 2. Fetch monster data ONCE and feed all subsystems in parallel
+                        const monsterData = await activeMonsterStore.get(tName);
+
+                        // 3. Fire stats and costumes concurrently without blocking main thread
+                        await Promise.allSettled([
+                            loadStats(tName, monsterData),
+                            costumeErrorHandling(tName, monsterData),
+                        ]);
+                    } else if (inputEl === firstInput || inputEl === secondInput) {
+                        if (inputEl === firstInput && secondInput.value.trim()) {
+                            const v2 = secondInput.value.trim().toLowerCase();
+                            if (!getActiveCombos().some(c => { const p = c.split('+').map(x=>x.trim().toLowerCase()); return (p[0]===tName.toLowerCase() && p[1]===v2) || (p[1]===tName.toLowerCase() && p[0]===v2); })) {
+                                secondInput.value = ''; const p2 = $('grid2').parentElement;
+                                p2.querySelector('h2')?.classList.remove('active-label'); p2.querySelector('h2').textContent = 'Parent 2';
+                                if (p2.querySelector('.parent-img')) { p2.querySelector('.parent-img').style.display = 'none'; p2.querySelector('.parent-img').src = ''; }
+                                if (p2.querySelector('.empty-slot')) p2.querySelector('.empty-slot').style.display = 'flex';
+                                if ($('grid2')) { $('grid2').innerHTML = '';$('grid2').classList.remove('active'); }
+                                checkInputGlows();
+                            }
+                        }
+                        if (firstInput.value.trim() && secondInput.value.trim()) triggerBreedingAnimation();
+                    }
+                } finally {
+                    isGridItemProcessing = false; // Always unlock when done
                 }
             });
+
             fragment.appendChild(item);
             applyMonsterImage(img, findTrueName(match), 'avatar');
         });
@@ -1327,12 +1357,12 @@ async function loadStats(name) {
     if (!isCurrentSelection()) return;
     setTimeout(() => { if (isCurrentSelection() && statBox) statBox.style.pointerEvents = ''; }, 0);
 
-    setTimeout(async () => {
+    // Defer secondary inventory egg lookups entirely so the main stats box renders instantly
+    const loadMissingEggsAsync = async () => {
         const missingEggs = Array.from(statBox.querySelectorAll('[data-missing-egg]'));
         if (missingEggs.length === 0) return;
 
-        // Process in parallel batches of 3 to prevent network bottlenecks
-        const batchSize = 3;
+        const batchSize = 4;
         for (let i = 0; i < missingEggs.length; i += batchSize) {
             if (!isCurrentSelection()) return;
             while (window.isTriptychLoading) {
@@ -1355,7 +1385,13 @@ async function loadStats(name) {
                 } catch (e) {}
             }));
         }
-    }, 250);
+    };
+
+    if (window.requestIdleCallback) {
+        window.requestIdleCallback(loadMissingEggsAsync);
+    } else {
+        setTimeout(loadMissingEggsAsync, 100);
+    }
 }
 
 function showNoMonsterError() {
@@ -1409,13 +1445,17 @@ function haltPreloaderForUserAction() {
     preloaderPaused = true; 
     clearTimeout(pauseTimeout); 
     
+    // Immediately abort any active background preloader fetches
     if (preloaderAbortController) {
         preloaderAbortController.abort();
         preloaderAbortController = null;
     }
     
-    // Extend the peace and quiet to 10 seconds so the user can navigate menus freely
-    pauseTimeout = setTimeout(() => preloaderPaused = false, 10000); 
+    // Give the user plenty of breathing room (15 seconds) before background preloading resumes
+    pauseTimeout = setTimeout(() => {
+        preloaderPaused = false;
+        preloaderAbortController = new AbortController(); // Fresh controller for next batch
+    }, 15000); 
 }
 
 
@@ -1429,16 +1469,21 @@ function silentlyPreloadImages() {
     const reg = getActiveRegistry();
     let index = 0;
 
+    // Ensure initial controller exists
+    if (!preloaderAbortController) {
+        preloaderAbortController = new AbortController();
+    }
+
     const preloadNextBatch = async () => {
         if (preloaderPaused) {
             return setTimeout(preloadNextBatch, 3000);
         }
 
-        // Initialize a new abort controller for this specific background file
-        if (!preloaderAbortController) {
-            preloaderAbortController = new AbortController();
-        }
         const currentSignal = preloaderAbortController.signal;
+        if (currentSignal.aborted) {
+            // Wait until unpaused and a new controller is assigned
+            return setTimeout(preloadNextBatch, 2000);
+        }
 
         const item = reg[index];
         index++;
@@ -1454,19 +1499,17 @@ function silentlyPreloadImages() {
                     await fetch(imgUrl, {
                         signal: currentSignal,
                         priority: 'low',
-                        importance: 'low',
                         cache: 'force-cache'
-                    }).catch(() => {/* silence aborted requests fetch errors */});
+                    }).catch(() => {});
                 }
             } catch {}
         }
 
-        if (index < reg.length) {
-            if (window.requestIdleCallback) {
-                window.requestIdleCallback(() => setTimeout(preloadNextBatch, 250));
-            } else {
-                setTimeout(preloadNextBatch, 250);
-            }
+        if (index < reg.length && !currentSignal.aborted) {
+            setTimeout(preloadNextBatch, 250);
+        } else if (index >= reg.length) {
+            index = 0; // Loop or finish
+            setTimeout(preloadNextBatch, 5000);
         }
     };
 
@@ -2184,3 +2227,60 @@ statBox.addEventListener('dblclick', async (e) => {
             console.error("🚨 All MSM API sources failed");
         });
 })();
+
+window.testSubsystemSpeeds = async function(monsterName) {
+    const tn = findTrueName(monsterName);
+    console.group(`🔍 [Subsystem Trace] Testing: "${tn}"`);
+    
+    const tStart = performance.now();
+
+    // 1. Core Data Fetch
+    const t1 = performance.now();
+    const m = await getCachedMonsterData(tn, isDOF());
+    console.log(`[1] getCachedMonsterData: ${(performance.now() - t1).toFixed(2)}ms`);
+
+    // 2. Breeding Times & Elements
+    const t2 = performance.now();
+    const [times, combos, elements] = await Promise.all([
+        m.getBreedingTime(),
+        m.getBreedingCombos?.() || [],
+        m.getElementImages()
+    ]);
+    console.log(`[2] Times/Combos/Elements (${combos.length} combos): ${(performance.now() - t2).toFixed(2)}ms`);
+
+    // 3. Inventory Detection Check
+    const t3 = performance.now();
+    let invData = m.inventory || m['Wublin Inventory'] || m['Celestial Inventory'] || m['Wubbox Inventory'];
+    if (!invData && !isDOF()) {
+        try {
+            const fallbackBase = currentHash === 'local-testing'
+                ? '../../../MSM-API/MSM/data/Monsters'
+                : `https://cdn.jsdelivr.net/gh/Gaboom63/MSM-API@${currentHash}/MSM/data/Monsters`;
+            const res = await fetch(`${fallbackBase}/${encodeURIComponent(tn)}/data.json`);
+            if (res.ok) {
+                const rawJson = await res.json();
+                invData = rawJson.inventory || rawJson['Wublin Inventory'] || rawJson['Celestial Inventory'];
+            }
+        } catch (e) {}
+    }
+    console.log(`[3] Inventory Data Resolution: ${(performance.now() - t3).toFixed(2)}ms (Has Inventory: ${!!invData})`);
+
+    // 4. Combo HTML & Egg Mapping
+    const t4 = performance.now();
+    const rows = await Promise.all(combos.map(async c => {
+        const ps = c.split(/\s\+\s|\sand\s/i).map(p => p.trim());
+        if (ps.length >= 2) {
+            const chips = await Promise.all(ps.map(async p => `
+                <div class="combo-parent-chip">
+                    ${isDOF() ? getDofEggHTML(p) : await getMsmEggHTML(p)}
+                    <span class="combo-parent-name">${p}</span>
+                </div>`));
+            return `<div class="combo-row-item">${chips.join('<div class="combo-operator-plus"><i class="fas fa-plus"></i></div>')}</div>`;
+        }
+        return `<div class="combo-row-item-raw">• ${c}</div>`;
+    }));
+    console.log(`[4] Combo Chip Egg Generation: ${(performance.now() - t4).toFixed(2)}ms`);
+
+    console.log(`%c✨ TOTAL PIPELINE TIME: ${(performance.now() - tStart).toFixed(2)}ms`, "color: lime; font-weight: bold;");
+    console.groupEnd();
+};
