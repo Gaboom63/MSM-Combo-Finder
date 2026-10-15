@@ -239,11 +239,15 @@ function applyMonsterImage(imgEl, monsterName, type = 'full', forceDof = null) {
         imgEl.src = sources[0];
     } else {
         // Standard MSM API fallback
-        MSM.get(monsterName).then(m => {
-            if (m && m.imageUrl) {
+        // Fast path: build the URL directly instead of downloading the monster's data.json first
+        const urlPromise = typeof MSM.getImageUrl === 'function'
+            ? MSM.getImageUrl(monsterName)
+            : MSM.get(monsterName).then(m => m && m.imageUrl);
+        urlPromise.then(url => {
+            if (url) {
                 imgEl.decoding = "async";
-                imgEl.fetchPriority = "low"; 
-                imgEl.src = m.imageUrl;
+                imgEl.fetchPriority = "low";
+                imgEl.src = url;
             } else {
                 imgEl.src = GRID_FALLBACK_IMAGE;
             }
@@ -1442,11 +1446,12 @@ function silentlyPreloadImages() {
         if (item) {
             try {
                 const trueName = findTrueName(item.raw);
-                const m = await MSM[trueName];
-                
-                // ✨ FIX 3: Fetch using native fetch options with low priority and abort capability
-                if (m && m.imageUrl && !currentSignal.aborted) {
-                    await fetch(m.imageUrl, {
+                const imgUrl = typeof MSM.getImageUrl === 'function'
+                    ? await MSM.getImageUrl(trueName, { verify: false })
+                    : (await MSM[trueName])?.imageUrl;
+
+                if (imgUrl && !currentSignal.aborted) {
+                    await fetch(imgUrl, {
                         signal: currentSignal,
                         priority: 'low',
                         importance: 'low',
@@ -1458,14 +1463,14 @@ function silentlyPreloadImages() {
 
         if (index < reg.length) {
             if (window.requestIdleCallback) {
-                window.requestIdleCallback(() => setTimeout(preloadNextBatch, 1000));
+                window.requestIdleCallback(() => setTimeout(preloadNextBatch, 250));
             } else {
-                setTimeout(preloadNextBatch, 1000);
+                setTimeout(preloadNextBatch, 250);
             }
         }
     };
 
-    setTimeout(preloadNextBatch, 5000);
+    setTimeout(preloadNextBatch, 1500);
 }
 
 silentlyPreloadImages();
@@ -1741,9 +1746,16 @@ function loadMonsterImage(name, retries = 2) {
             MSM[name].resetCostumes();
 
             monsterImage.fetchPriority = "high";
-            monsterImage.decoding = "sync";
+            monsterImage.decoding = "async"; // "sync" blocks the main thread while the image decodes
 
-            MSM[name].loadImage("monsterImage");
+            if (typeof MSM.getImageUrl === 'function') {
+                // Don't wait for data.json + databases just to learn a URL we can build directly
+                MSM.getImageUrl(name).then(url => {
+                    if (url && monsterImage.dataset.loadId == id) monsterImage.src = url;
+                });
+            } else {
+                MSM[name].loadImage("monsterImage");
+            }
         } catch {
             if (monsterImage.dataset.loadId == id) {
                 monsterImage.onerror = null;
@@ -2172,4 +2184,3 @@ statBox.addEventListener('dblclick', async (e) => {
             console.error("🚨 All MSM API sources failed");
         });
 })();
-
